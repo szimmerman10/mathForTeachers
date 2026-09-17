@@ -1,0 +1,861 @@
+\documentclass{ximera}
+
+\input{../preamble.tex}
+
+\title{Definitions}
+\author{Jenny Sheldon}
+
+\begin{document}
+
+\begin{abstract}
+We define various shapes.
+\end{abstract}
+\maketitle
+
+\section{Activities for this section:} 
+\link[Shaping up]{https://ximera.osu.edu/m4t/elementaryActivities/SemesterTwoPacket/elementaryActivities/ComparingShapes/ShapingUp}, 
+\link[The fab four]{https://ximera.osu.edu/m4t/elementaryActivities/SemesterTwoPacket/elementaryActivities/ComparingShapes/FabFour}, 
+\link[Solid shapes]{https://ximera.osu.edu/m4t/elementaryActivities/SemesterTwoPacket/elementaryActivities/ComparingShapes/SolidShapes}, 
+\link[Fighting crime]{https://ximera.osu.edu/m4t/elementaryActivities/SemesterTwoPacket/elementaryActivities/ComparingShapes/FightingCrime}
+
+
+
+\section{The purpose of definitions}
+
+Our goal in this chapter is to compare and contrast shapes. But before we can do that, we need to understand what we mean when we use different terminology for shapes. In other words, we need to have good definitions.
+
+Definitions play a very important role in mathematics: they tell us specifically what we are working with. It can be hard to understand why this is important, but here are two examples that could possibly help.
+
+First, here's an example from our previous course. I could make a statement like ``$8$ is a factor of $40$'', but to verify whether or not my statement is correct, you would first need to know what it means to be a ``factor''. We used the definition of a factor in this instance: $A$ is a factor of $B$ if we can write $B = A \times N$ for some whole number $N$. So, in this case, you can say that $8$ is indeed a factor of $40$ because $40 = 8 \times 5$, and that $5$ is a whole number playing the role of $N$. At this point, we don't have any questions or doubts about whether my statement is correct, because our definition was satisfied.
+
+Second, here's an example that we'll expand on in a moment. I could make a statement like ``the figure below is a square''.
+\begin{image}
+	\begin{tikzpicture}
+		\draw[thick] (0,0)--(1.1,-0.01)--(1,1.01)--(-0.01,1)--(0,0);
+	\end{tikzpicture}
+\end{image}
+But is it? It looks a little square-like, but that's not enough for me to be certain. Am I saying that this object is definitely a square and I am bad at drawing? Am I trying to check whether this object is a square? I have lots of questions. We need a definition!
+
+Children as young as \link[preschool and kindergarten]{https://education.ohio.gov/getattachment/Topics/Learning-in-Ohio/Mathematics/Ohio-s-Learning-Standards-in-Mathematics/MATH-Standards-Kindergarten.pdf.aspx?lang=en-US} learn to identify shapes by their names, using their experiences and a collection of examples and non-examples that they remember. But as children progress through school, they should learn to be more and more specific about how and why they are classifying shapes, including learning to use precise definitions. As teachers, we want you to know and understand the definitions so that you can help children move towards using those definitions.
+
+Good definitions are specific and actionable. When we use them, we know exactly what we are working with.
+
+Good definitions are also easy to use. Since we want to use them a lot, we don't want to include extra items in our definitions, because that would leave us with more things to check when we check the definition.
+
+Good definitions are a habit in good mathematical work. Any time you are working with an object, its definition should be nearby!
+
+
+
+\section{Shapes}
+We are going to discuss together in class how and why we have chosen these definitions, and why they are good definitions. If you weren't able to be in class for that session, it's important for you to stop and look through the \link[Shaping Up]{https://ximera.osu.edu/m4t/elementaryActivities/SemesterTwoPacket/elementaryActivities/ComparingShapes/ShapingUp} activity before you continue reading.
+
+We hope you will use the rest of this section as a reference guide. Return to it frequently as you need these definitions!
+
+In this section, we'll discuss 2D shapes. Keep in mind, however, our discussion about dimension: when we talk about a 2D shape, in order for the shape to actually be two-dimensional, we need to include both the line or lines that draw the shape as well as the inside of that shape. 
+\begin{question}
+What dimension are the line or lines that we use to draw the shape?
+\begin{multipleChoice}
+\choice[correct]{one dimensional} 
+\choice{two dimensional} 
+\choice{three dimensional}
+\end{multipleChoice}
+\end{question}
+
+\begin{definition}
+	An \dfn{edge} of a shape is a straight line segment that we use to draw a shape. For example, the shape below has $5$ edges. We will sometimes use the word ``sides'' instead of edges. In 3-dimensional space, the term ``sides'' can be confusing for many students, so we will prefer edges in that context. 
+	\begin{image}
+		\begin{tikzpicture}
+			\draw[thick] (-2,2)--(3,5)--(4,2)--(5,6)--(3,7)--(-2,2);
+		\end{tikzpicture}
+	\end{image}
+\end{definition}
+
+
+\begin{definition}
+	A \dfn{vertex} of a shape is a point where two edges meet. (If you have more than one vertex, they are called \dfn{vertices}.) For example, the shape above has $5$ vertices, which in this image are labeled with dots.
+	\begin{image}
+		\begin{tikzpicture}
+			\draw[thick] (-2,2)--(3,5)--(4,2)--(5,6)--(3,7)--(-2,2);
+			\draw[fill=black] (-2,2) circle (2pt);
+			\draw[fill=black] (3,5) circle (2pt);
+			\draw[fill=black] (4,2) circle (2pt);
+			\draw[fill=black] (5,6) circle (2pt);
+			\draw[fill=black] (3,7) circle (2pt);
+		\end{tikzpicture}
+	\end{image}
+\end{definition}
+
+Notice that a vertex doesn't have to be labeled with a dot in order to be a vertex.
+
+\begin{definition}
+	A shape is called \dfn{closed} if all of its vertices are found where at least two of the edges meet. The examples we have seen so far are closed, and here is an example of a shape that is not closed.
+	\begin{image}
+	\begin{tikzpicture}
+		\draw[thick] (0,0)--(0,4)--(3,3);
+		\draw[fill=black] (0,0) circle (2pt);
+		\draw[fill=black] (0,4) circle (2pt);
+		\draw[fill=black] (3,3) circle (2pt);
+	\end{tikzpicture}
+	\end{image}
+\end{definition}
+Another way that some people like to think about a shape being closed is that it might hold water or that we have an inside and an outside of the shape.
+
+
+\begin{definition}
+	A shape is called \dfn{simple} if we could draw all of the edges without crossing over other edges that we have already drawn. The examples we have seen so far are simple (even the shape that isn't closed), and here is an example of a shape that is not simple.
+	\begin{image}
+	\begin{tikzpicture}
+		\draw[thick] (0,0)--(0,4)--(3,3)--(-2,1)--(0,0);
+		\draw[fill=black] (0,0) circle (2pt);
+		\draw[fill=black] (0,4) circle (2pt);
+		\draw[fill=black] (3,3) circle (2pt);
+		\draw[fill=black] (-2,1) circle (2pt);
+	\end{tikzpicture}
+	\end{image}
+\end{definition}
+
+
+
+\begin{definition}
+	A \dfn{polygon} is a 2D shape which is closed and simple and has $n$ edges (or straight sides). Here is an example of a polygon.
+	\begin{image}
+	\begin{tikzpicture}
+		\draw[thick] (0,0)--(2,-1)--(3,0)--(5,2)--(4,3)--(2,1)--(0.5, 0.5)--(0,0);
+	\end{tikzpicture}
+	\end{image}
+\end{definition}
+
+We have special kinds of polygons that we will talk about frequently.
+
+\begin{definition}
+	\begin{itemize}
+		\item A \dfn{triangle} is a polygon with $3$ edges.
+		\item A \dfn{quadrilateral} is a polygon with $4$ edges.
+		\item A \dfn{pentagon} is a polygon with $5$ edges.
+		\item A \dfn{hexagon} is a polygon with $6$ edges.
+		\item An \dfn{octagon} is a polygon with $8$ edges.
+	\end{itemize}
+\end{definition}
+
+Often, it can be easier to write out the definition of a polygon and substitute the specific number of edges you are working with. For example, here is the definition of a triangle again.
+\begin{definition}
+A \dfn{triangle} is a 2D shape which is closed and simple and has $3$ straight sides. Here is an example of a triangle.
+	\begin{image}
+	\begin{tikzpicture}
+		\draw[thick] (0,0)--(2,-1)--(3,0)--(0,0);
+	\end{tikzpicture}
+	\end{image}
+\end{definition}
+
+We also have other special quadrilaterals whose names mostly come from using Greek prefixes for numbers. For instance, ``hexa-'' means $6$ in Greek, so a ``hexagon'' is a polygon with 6 straight sides. Similarly, ``nona-'' means $9$ in Greek, so a ``nonagon'' would be a $9$-sided polygon.
+
+\begin{question}
+	Here is a polygon with $6$ sides.
+	\begin{image}
+	\begin{tikzpicture}
+		\draw[thick] (0,0)--(2,-3)--(3,-1)--(4,1)--(5,2)--(2.5,2)--(1.75,1)--(0,0);
+	\end{tikzpicture}
+	\end{image}
+Select all true statements below about the shape.
+\begin{selectAll}
+	\choice[correct]{The shape is closed.}
+	\choice[correct]{The shape is simple.}
+	%\choice[correct]{The shape is a polygon.}
+	\choice{The shape is a triangle.}
+	\choice{The shape is a quadrilateral.}
+	\choice[correct]{The shape is a hexagon.}
+\end{selectAll}
+\end{question}
+
+Here is one very confusing point. We have defined all of our polygons as two-dimensional shapes, meaning that we have included the boundary and the inside of the shape. However, we will use the word ``triangle'' to sometimes refer to the 2D triangle we just described, and sometimes we will use the word ``triangle'' to refer to the 1D boundary of the triangle. Some textbooks use language like ``triangular region'' to refer to the 2D shape and save ``triangle'' for only the 1D shape. You can use this language if you find it helpful to bring clarity to your explanations. The main point here is to be sure that you are paying attention to dimension.
+
+Next, we have special vocabulary to talk about the side lengths of triangles.
+
+\begin{definition}
+	An \dfn{equilateral triangle} is a triangle whose sides are all the same length. Here is an example of an equilateral triangle.
+	\begin{image}
+\begin{tikzpicture}
+% Coordinates of the vertices
+\coordinate (A) at (0,0);
+\coordinate (B) at (60:2);
+\coordinate (C) at (2,0);
+
+% Draw the triangle
+\draw[thick] (A) -- (B) -- (C) -- cycle;
+
+\end{tikzpicture}
+	\end{image}
+\end{definition}
+Notice here that we said ``sides'' for the equilateral triangle instead of edges. We could have used the word edges, but ``sides'' feels a little bit like more everyday language when we start talking about triangles. Since a triangle is a polygon, we know that these sides have to be straight sides. Watch out for these ideas as we move forward!
+
+
+\begin{definition}
+	An \dfn{isosceles triangle} is a triangle with at least two sides which sides are the same length. Here is an example of an isosceles triangle.
+	\begin{image}
+\begin{tikzpicture}
+% Coordinates of the vertices
+\coordinate (A) at (0,0);
+\coordinate (B) at (1,4);
+\coordinate (C) at (2,0);
+
+% Draw the triangle
+\draw[thick] (A) -- (B) -- (C) -- cycle;
+
+\end{tikzpicture}
+	\end{image}
+\end{definition}
+Notice that the definition for an isosceles triangle says ``at least'' two sides. That means that an equilateral triangle also meets the definition for an isosceles triangle! The idea that a shape can satisfy more than one definition at once is the beginning of thinking about how to compare and contrast shapes.
+
+\begin{definition}
+	A \dfn{scalene triangle} is a triangle where none of its sides are the same length. Here is an example of a scalene triangle.
+	\begin{image}
+\begin{tikzpicture}
+% Coordinates of the vertices
+\coordinate (A) at (0,0);
+\coordinate (B) at (0.75,3);
+\coordinate (C) at (2,1.3);
+
+% Draw the triangle
+\draw[thick] (A) -- (B) -- (C) -- cycle;
+
+\end{tikzpicture}
+	\end{image}
+\end{definition}
+
+When we work with triangles, we often designate one of its edges as the \dfn{base} of the triangle. We are usually most accustomed to seeing the bottom edge labeled as the base, but any of the three edges of the triangle can be chosen as the base. Once we choose the segment called the base, we can also find a segment called the \dfn{height} of the triangle.
+\begin{definition}
+The \dfn{height} of a triangle is a segment which makes a right angle with the chosen base of the triangle (or an extension of that base) and also passes through the vertex of the triangle which is not on the base.
+\end{definition}
+
+There is quite a bit of terminology to describe what we are discussing here, so in your future classroom we encourage you to look at your textbook closely. For example, some books use the term \dfn{baseline} to describe the extension of the base into a line. Other books will use \dfn{altitude} for what we just described as the height (the segment connecting the base to the opposite vertex), and will use \dfn{height} to refer to the length of the altitude. If these distinctions help you to write more clear explanations, we encourage you to use them!
+
+
+This definition is a bit easier to understand with a picture, so let's take a look.
+\begin{example}
+Let's find the height of the triangle below in two different ways.
+\begin{image}
+\begin{tikzpicture}
+\draw[thick] (0,0)--(3,0)--(5,2)--(0,0);
+\node[below] at (0,0) {$A$};
+\node[below] at (3,0) {$B$};
+\node[above] at (5,2) {$C$};
+\end{tikzpicture}
+\end{image}
+First, let's choose the bottom side $AB$ of this triangle as the base. If we do so, we should first notice that the vertex which is not on the base (labeled $C$ in the image above) is not directly above the base, so we will extend the base using a dashed line.
+\begin{image}
+\begin{tikzpicture}
+\draw[thick] (0,0)--(3,0)--(5,2)--(0,0);
+\node[below] at (0,0) {$A$};
+\node[below] at (3,0) {$B$};
+\node[above] at (5,2) {$C$};
+\draw[dashed] (3,0)--(6,0);
+\node[right] at (6,0) {baseline};
+\end{tikzpicture}
+\end{image}
+Next, we need to draw a segment which makes a \wordChoice{\choice{straight} \choice[correct]{right} \choice{$45\degree$}} angle with $AB$ and passes through $C$. Try doing this with your protractor on your own!
+\begin{image}
+\begin{tikzpicture}
+\draw[thick] (0,0)--(3,0)--(5,2)--(0,0);
+\node[below] at (0,0) {$A$};
+\node[below] at (3,0) {$B$};
+\node[above] at (5,2) {$C$};
+\draw[dashed] (3,0)--(6,0);
+\draw[dashed] (5,0)--(5,2);
+\node[below] at (1.5, 0) {base};
+\node[right] at (6,0) {baseline};
+\node[right] at (5,1) {height or altitude};
+\draw[fill=black] (5,0) circle (2pt) node[below]{$D$};
+\end{tikzpicture}
+\end{image}
+We have labeled the intersection of the extension of the base and the perpendicular line as $D$, and our height in this case is the segment $CD$. We have marked the baseline and altitude in this example so that you can see how this terminology works, but we'll move forward with just the base and height.
+
+Next, let's choose the segment $BC$ as our base. Now we need to draw a segment which makes a right angle with segment $BC$ and passes through point $\answer[given]{A}$. We will first draw a dashed line extending the base.
+\begin{image}
+\begin{tikzpicture}
+\draw[thick] (0,0)--(3,0)--(5,2)--(0,0);
+\node[below] at (0,0) {$A$};
+\node[below] at (3,0) {$B$};
+\node[above] at (5,2) {$C$};
+\draw[dashed] (3,0)--(1,-2);
+\node[right] at (4,1) {base};
+\end{tikzpicture}
+\end{image}
+Finally, we draw the segment making a right angle with the extension of the base and passing through vertex $A$. Again, try doing this with your protractor on your own!
+\begin{image}
+\begin{tikzpicture}
+\draw[thick] (0,0)--(3,0)--(5,2)--(0,0);
+\node[below] at (0,0) {$A$};
+\node[below] at (3,0) {$B$};
+\node[above] at (5,2) {$C$};
+\draw[dashed] (3,0)--(1,-2);
+\draw[dashed] (0,0)--(1.5, -1.5);
+\node[right] at (4,1) {base};
+\node[below left] at (1, -1) {height};
+\draw[fill=black] (1.5, -1.5) circle (2pt) node[below right] {$E$};
+\end{tikzpicture}
+\end{image}
+We have labeled the intersection of the extension of the base and the perpendicular line as $E$, and our height in this case is the segment $AE$.
+\end{example}
+\begin{question}
+Pause and think: how could you draw the height if you chose the third side of the triangle as its base? If you aren't sure how to answer this question, please stop by office hours!
+\begin{freeResponse}
+Draw your answer in your notes, and make a record here of how to find your drawings later.
+\end{freeResponse}
+\end{question}
+
+The next type of definitions we have tell us about triangles whose angles have specific characteristics. Notice that when we talk about the angles in a shape, we are talking about the \dfn{interior angles}, or the ones made on the interior of the shape. There are also \dfn{exterior angles}, but you typically have to draw extra lines in order to see the exterior angles.
+
+\begin{definition}
+	An \dfn{acute triangle} is a triangle where each of its angles measure less than a quarter turn ($90^{\circ}$). Here is an example of an acute triangle.
+	\begin{image}
+\begin{tikzpicture}
+% Coordinates of the vertices
+\coordinate (A) at (0,0);
+\coordinate (B) at (3,0);
+\coordinate (C) at (1,2.5);
+
+% Draw the triangle
+\draw[thick] (A) -- (B) -- (C) -- cycle;
+
+\end{tikzpicture}
+	\end{image}
+\end{definition}
+
+
+\begin{definition}
+	An \dfn{obtuse triangle} is a triangle where one of its angles measures more than a quarter turn ($90^{\circ}$). Here is an example of an obtuse triangle.
+	\begin{image}
+\begin{tikzpicture}
+% Coordinates of the vertices
+\coordinate (A) at (0,0);
+\coordinate (B) at (3,0);
+\coordinate (C) at (5,3);
+
+% Draw the triangle
+\draw[thick] (A) -- (B) -- (C) -- cycle;
+
+\end{tikzpicture}
+	\end{image}
+\end{definition}
+
+\begin{definition}
+	A \dfn{right triangle} is a triangle where one of its angles measures exactly a quarter turn ($90^{\circ}$). Here is an example of a right triangle.
+	\begin{image}
+\begin{tikzpicture}
+% Coordinates of the vertices
+\coordinate (A) at (0,0);
+\coordinate (B) at (0,2);
+\coordinate (C) at (4,0);
+
+% Draw the triangle
+\draw[thick] (A) -- (B) -- (C) -- cycle;
+
+\end{tikzpicture}
+	\end{image}
+\end{definition}
+
+Our next definitions are about special kinds of quadrilaterals. Pay close attention to the details in these definitions!
+
+\begin{definition}
+	A \dfn{rectangle} is a quadrilateral where all of its angles are right angles. Here is an example of a rectangle.
+	\begin{image}
+\begin{tikzpicture}
+% Coordinates of the vertices
+\coordinate (A) at (0,0);
+\coordinate (B) at (0,2);
+\coordinate (C) at (4,2);
+\coordinate (D) at (4,0);
+
+% Draw the shape
+\draw[thick] (A) -- (B) -- (C) -- (D) -- cycle;
+
+\end{tikzpicture}
+	\end{image}
+\end{definition}
+
+
+\begin{definition}
+	A \dfn{square} is a quadrilateral where all of its angles are right angles and all of its sides have equal length. Here is an example of a square.
+	\begin{image}
+\begin{tikzpicture}
+% Coordinates of the vertices
+\coordinate (A) at (0,0);
+\coordinate (B) at (0,2);
+\coordinate (C) at (2,2);
+\coordinate (D) at (2,0);
+
+% Draw the shape
+\draw[thick] (A) -- (B) -- (C) -- (D) -- cycle;
+
+\end{tikzpicture}
+	\end{image}
+\end{definition}
+Remember that quadrilaterals are still polygons, so when we talk about the ``sides'' here, we are still talking about edges or straight sides!
+
+\begin{definition}
+	A \dfn{rhombus} is a quadrilateral where all of its sides have the same length. Here is an example of a rhombus.
+	\begin{image}
+\begin{tikzpicture}
+% Coordinates of the vertices
+\coordinate (A) at (0,0);
+\coordinate (B) at (1.5,1);
+\coordinate (C) at (3,0);
+\coordinate (D) at (1.5,-1);
+
+% Draw the shape
+\draw[thick] (A) -- (B) -- (C) -- (D) -- cycle;
+
+\end{tikzpicture}
+	\end{image}
+\end{definition}
+
+
+\begin{definition}
+	A \dfn{parallelogram} is a quadrilateral where both pairs of opposite sides are parallel. Here is an example of a parallelogram.
+	\begin{image}
+\begin{tikzpicture}
+% Coordinates of the vertices
+\coordinate (A) at (0,0);
+\coordinate (B) at (3,0);
+\coordinate (C) at (4,2);
+\coordinate (D) at (1,2);
+
+% Draw the shape
+\draw[thick] (A) -- (B) -- (C) -- (D) -- cycle;
+
+\end{tikzpicture}
+	\end{image}
+\end{definition}
+
+
+\begin{definition}
+	A \dfn{kite} is a quadrilateral with two separate pairs of equal sides where the equal sides are next to each other (also called \dfn{adjacent}). Here is an example of a kite.
+	\begin{image}
+\begin{tikzpicture}
+% Coordinates of the vertices
+\coordinate (A) at (0,0);
+\coordinate (B) at (1,1);
+\coordinate (C) at (2,0);
+\coordinate (D) at (1,-3);
+
+% Draw the shape
+\draw[thick] (A) -- (B) -- (C) -- (D) -- cycle;
+
+\end{tikzpicture}
+	\end{image}
+\end{definition}
+
+
+\begin{definition}
+	A \dfn{trapezoid} is a quadrilateral with at least one pair of parallel sides. Here is an example of a trapezoid.
+	\begin{image}
+\begin{tikzpicture}
+% Coordinates of the vertices
+\coordinate (A) at (0,0);
+\coordinate (B) at (5,0);
+\coordinate (C) at (4,2);
+\coordinate (D) at (3,2);
+
+% Draw the shape
+\draw[thick] (A) -- (B) -- (C) -- (D) -- cycle;
+
+\end{tikzpicture}
+	\end{image}
+\end{definition}
+
+
+\begin{definition}
+	An \dfn{isosceles trapezoid} is a quadrilateral with at least one pair of parallel sides and two pairs of equal adjacent angles. Here is an example of an isosceles trapezoid.
+	\begin{image}
+\begin{tikzpicture}
+% Coordinates of the vertices
+\coordinate (A) at (0,0);
+\coordinate (B) at (4,0);
+\coordinate (C) at (3,1);
+\coordinate (D) at (1,1);
+
+% Draw the shape
+\draw[thick] (A) -- (B) -- (C) -- (D) -- cycle;
+
+\end{tikzpicture}
+	\end{image}
+\end{definition}
+Notice that we could also say that an isosceles trapezoid is a trapezoid with two pairs of equal adjacent angles.
+
+
+
+
+
+Finally, we have one special kind of polygon that we would like to be able to recognize.
+\begin{definition}
+	A polygon is called \dfn{regular} if all of its edges are the same length and all of its angles have the same measure. Here is an example of a regular polygon.
+	\begin{image}
+\begin{tikzpicture}
+% Number of sides
+\def\n{5}
+% Radius of the circle
+\def\radius{2}
+
+% Draw the vertices of the regular polygon
+\foreach \i in {1,...,\n}
+{
+  \coordinate (P\i) at ({360/\n * (\i - 1)}:\radius);
+}
+
+% Draw the regular polygon
+\draw[thick] (P1) \foreach \i in {2,...,\n} { -- (P\i) } -- cycle;
+\end{tikzpicture}
+	\end{image}
+\end{definition}
+
+\begin{question}
+Which of the following are regular polygons? Select all that apply.
+\begin{selectAll}
+	\choice{Isosceles triangles}
+	\choice[correct]{Equilateral triangles}
+	\choice[correct]{Squares}
+	\choice{Rhombuses}
+	\choice{Parallelograms}
+	\choice{Trapezoids}
+\end{selectAll}
+\end{question}
+
+We also have shapes that have round sides instead of straight sides.
+\begin{definition}
+A \dfn{circle} is formed by first selecting a point $O$, called the \dfn{center} of the circle and a distance $r$, called the \dfn{radius}. Then, to form the circle, we draw all points in 2D space which are at a distance of $r$ from the point $O$.
+\end{definition}
+
+\begin{question}
+	What dimension is the circle defined above?
+	\begin{prompt}
+		\begin{multipleChoice}
+			\choice[correct]{one-dimensional}
+			\choice{two-dimensional}
+			\choice{three-dimensional}
+			\choice{something else}
+		\end{multipleChoice}
+	\end{prompt}
+\end{question}
+Did the answer to the dimension question surprise you? In English, we usually use the word ``circle'' in two different ways: first to refer to both the ``outside edge'' as in our definition above and second to refer to all of the 2D space inside the ``outside edge''. In mathematics, we usually use the word \dfn{disk} to refer to the 2D space inside a circle so that we have different words for these two objects. You can choose which terminology you like, but please also use definitions in your explanations so that they are clear!
+
+There are many other types of shapes as well, such as ellipses, ovals, and so on. If you run in to a type of shape and you aren't sure what the definition of that shape should be, please ask us or look it up!
+
+
+\section{Solids}
+
+Now, let's talk about 3D shapes.
+
+Returning to our ideas about dimension, we usually draw lines to sketch 3D shapes on the page, but the lines themselves are only one dimensional. We can also imagine the sides of our shapes, perhaps made out of paper.
+\begin{question}
+What dimension are the paper sides of a 3D shape?
+\begin{multipleChoice} 
+\choice{one dimensional} 
+\choice[correct]{two dimensional} 
+\choice{three dimensional}
+\end{multipleChoice}
+\end{question}
+ When we refer to the 3D shape, often called a \dfn{solid}, we are referring to the lines, the sides, and all of the space inside as well. Our friend the little bug could fly around in there!
+
+Our 3D solids still have vertices and edges, just like our 2D shapes, but now we also have \dfn{faces}, which refer to the ``paper sides'' of the solid. Each piece of paper that you might cut out and use to build the shape would be a face.
+
+When we think of our solid as made out of paper or another material, we may find it helpful to draw that pattern out.
+\begin{definition}
+A \dfn{net} for a solid is a 2D pattern made out of shapes that we could cut out and fold up to form the solid in question. Here is an example of a net for a cube.
+\begin{image}
+\begin{tikzpicture}
+% Define coordinates for the vertices of the net
+\coordinate (A) at (0,0);
+\coordinate (B) at (1,0);
+\coordinate (C) at (1,1);
+\coordinate (D) at (0,1);
+\coordinate (E) at (2,0);
+\coordinate (F) at (3,0);
+\coordinate (G) at (3,1);
+\coordinate (H) at (2,1);
+\coordinate (I) at (0,-1);
+\coordinate (J) at (1,-1);
+\coordinate (K) at (2,2);
+\coordinate (L) at (3,2);
+\coordinate (M) at (4,0);
+\coordinate (N) at (4,1);
+
+% Draw the net edges
+\draw (A) -- (M) -- (N) -- (D) -- cycle;
+\draw (E) -- (K) -- (L) -- (F);
+\draw (C) -- (J);
+\draw (H) -- (E);
+\draw (D) -- (I);
+\draw (I) -- (J);
+
+\end{tikzpicture}
+\end{image}
+\end{definition}
+
+\begin{question}
+How many vertices, edges, and faces does the cube below have? You might want to draw the net above on a piece of paper, cut it out, and fold it up to help you visualize what's going on here!
+\begin{image}
+\begin{tikzpicture}[scale=1.5]
+% Define coordinates for the vertices of the cube
+\coordinate (A) at (0,0,0);
+\coordinate (B) at (1,0,0);
+\coordinate (C) at (1,1,0);
+\coordinate (D) at (0,1,0);
+\coordinate (E) at (0,0,1);
+\coordinate (F) at (1,0,1);
+\coordinate (G) at (1,1,1);
+\coordinate (H) at (0,1,1);
+
+% Draw the front face of the cube
+\draw (A) -- (B) -- (C) -- (D) -- cycle;
+% Draw the back face of the cube
+\draw (E) -- (F) -- (G) -- (H) -- cycle;
+% Draw the connecting edges of the cube
+\draw (A) -- (E);
+\draw (B) -- (F);
+\draw (C) -- (G);
+\draw (D) -- (H);
+
+\end{tikzpicture}
+
+Vertices: $\answer[given]{8}$
+
+Edges: $\answer[given]{12}$
+
+Faces: $\answer[given]{6}$
+\end{image}
+\end{question}
+
+We have been using the example of a cube, but we haven't defined that yet. Let's be a bit more specific.
+
+\begin{definition}
+A \dfn{prism} is a 3D solid which is made by taking two copies of a polygon, lifting one up above the other while keeping the original shapes parallel and not twisting the lifting shape. Next, we connect the corresponding vertices on the two copies of the shape with edges. The prism is the 3D solid enclosed by this construction. The prism is called \dfn{right} if the lifted copy sits directly over the original copy, and the prism is called \dfn{oblique} if we shifted the lifted copy to the left or right.
+
+Here is an example of a right prism with the pentagons forming the base drawn with thicker lines than the height. The pentagons are also shaded gray to help you see that these are the top and bottom of the prism.
+\begin{image}
+\begin{tikzpicture}
+% Define coordinates for the vertices of the base pentagon
+\coordinate (A) at (0,0);
+\coordinate (B) at (1,0);
+\coordinate (C) at (1.5,{sqrt(3)/2});
+\coordinate (D) at (0.5,0.5);
+\coordinate (E) at (-0.5,{sqrt(3)/2});
+
+% Define the height of the prism
+\def\height{30}
+
+% Draw the base pentagon
+\draw[very thick, fill = gray] (A) -- (B) -- (C) -- (D) -- (E) -- cycle;
+
+% Draw the top pentagon shifted upwards to form the prism
+\draw[very thick, fill = gray] ([yshift=\height]A) -- ([yshift=\height]B) -- ([yshift=\height]C) -- ([yshift=\height]D) -- ([yshift=\height]E) -- cycle;
+
+% Draw the vertical edges of the prism
+\draw (A) -- ([yshift=\height]A);
+\draw (B) -- ([yshift=\height]B);
+\draw (C) -- ([yshift=\height]C);
+\draw (D) -- ([yshift=\height]D);
+\draw (E) -- ([yshift=\height]E);
+
+\end{tikzpicture}
+\end{image}
+
+Here is an example of an oblique prism. Here, the rectangles forming the base are drawn with thicker lines and shaded gray to help you see what happened. The shaded rectangles are the top and bottom of the prism. Note that the top copy of the rectangle has been shifted over so that the faces of the prism are now parallelograms.
+\begin{image}
+\begin{tikzpicture}[ x={(1cm,0cm)}, y={(0cm,1cm)}, z={(0cm,0.25cm)}]
+% Define coordinates for the vertices of the base rectangle
+\coordinate (A) at (0,0,0);
+\coordinate (B) at (2,0,0);
+\coordinate (C) at (2,1,0);
+\coordinate (D) at (0,1,0);
+\coordinate (E) at (2,2,0.5);
+\coordinate (F) at (4,2,0.5);
+\coordinate (G) at (4,3,0.5);
+\coordinate (H) at (2,3,0.5);
+
+
+% Draw the base rectangle
+\draw[very thick, fill = gray] (A) -- (B) -- (C) -- (D) -- cycle;
+
+% Draw the top rectangle shifted for perspective
+\draw[very thick, fill = gray] (E) -- (F) -- (G) -- (H) -- cycle;
+
+% Draw the vertical edges of the prism
+\draw (A) -- (E);
+\draw (B) -- (F);
+\draw (C) -- (G);
+\draw (D) -- (H);
+
+
+%\node[below] at (E) {$E$};
+\end{tikzpicture}
+\end{image}
+\end{definition}
+
+Typically, we name the prism using the name of its base. So, the right prism above could also be called a right pentagonal prism, because it is a right prism with pentagons for bases. And the oblique prism could also be called an oblique rectangular prism, because it is an oblique prism with rectangles for bases.
+
+Here is one special kind of prism.
+\begin{definition}
+A \dfn{cube} is a right square prism where the height is equal in length to the length of the sides of the square base.
+\end{definition}
+
+\begin{question}
+	A right prism has its base as a square with side lengths $2$ centimeters on each side. If this prism is a cube, what is its height?
+	\begin{prompt}
+		$\answer[given]{2}$ centimeters
+	\end{prompt}
+\end{question}
+
+
+A \dfn{cylinder} is like a prism, except instead of a polygon for the base, we can use any other shape. We use the same process for building: take two copies of your shape and lift one above the other without twisting so that the two copies are parallel. Connect corresponding points on the two shapes, though in this case you might have to think about connecting each point rather than connecting vertices. You may also think about wrapping a piece of fabric or flexible paper around the outside of the solid so that you can see the solid.
+
+If we make a cylinder with a circular base, we get what you typically think about as a cylinder.
+\begin{image}
+\begin{tikzpicture}
+% Define dimensions
+\def\radius{1.5}
+\def\height{3}
+
+% Draw the top ellipse
+\draw (0,\height) ellipse (\radius cm and 0.5*\radius cm);
+
+% Draw the bottom ellipse
+\draw (0,0) ellipse (\radius cm and 0.5*\radius cm);
+
+
+% Draw the side lines
+\draw (-\radius,0) -- (-\radius,\height);
+\draw (\radius,0) -- (\radius,\height);
+
+\end{tikzpicture}
+\end{image}
+
+However, we can make a cylinder with many other shapes for the base, and we can make both right cylinders and oblique cylinders.
+
+\begin{question}
+Pause and think: can you draw an oblique cylinder with a bean-shaped base? Add your sketch to your notes.
+\end{question}
+
+
+\begin{definition}
+A \dfn{pyramid} is formed when we start with a polygon as a base, then choose a point above the polygon. We connect each vertex of the polygon to that point, and then consider the 3D space inside the edges we have drawn. The point at the top is called the \dfn{apex}. The pyramid is a \dfn{right pyramid} if the apex is directly above the center of the base, and it is called an \dfn{oblique pyramid} if the apex is not above the center of the base.
+
+Here is an example of a right pyramid with a trapezoid base. The trapezoid is outlined with a thicker line and shaded gray to help you see what is happening.
+\begin{image}
+\begin{tikzpicture}[scale=1.5]
+% Define coordinates for the vertices of the base trapezoid
+\coordinate (A) at (0,0);
+\coordinate (B) at (1.5,0);
+\coordinate (C) at (1,1);
+\coordinate (D) at (0.5,1);
+
+% Define the apex of the pyramid
+\coordinate (Apex) at (0.75,2);
+
+% Draw the base trapezoid
+\draw[very thick, fill=gray] (A) -- (B) -- (C) -- (D) -- cycle;
+
+% Draw the triangle faces of the pyramid
+\draw (A) -- (Apex);
+\draw (B) -- (Apex);
+\draw (C) -- (Apex);
+\draw (D) -- (Apex);
+
+\end{tikzpicture}
+\end{image}
+
+Here is an example of an oblique pyramid with a triangle base. The triangle base is outlined with a thicker line and shaded gray to help you see what is happening.
+\begin{image}
+\begin{tikzpicture}[scale=1.5]
+% Define coordinates for the vertices of the base trapezoid
+\coordinate (A) at (0,0);
+\coordinate (B) at (2,0);
+\coordinate (C) at (1,1);
+
+% Define the apex of the pyramid
+\coordinate (Apex) at (3,2);
+
+% Draw the base trapezoid
+\draw[very thick, fill=gray] (A) -- (B) -- (C) -- cycle;
+
+% Draw the triangle faces of the pyramid
+\draw (A) -- (Apex);
+\draw (B) -- (Apex);
+\draw (C) -- (Apex);
+
+
+\end{tikzpicture}
+\end{image}
+
+\end{definition}
+
+Pyramids are usually named for the 2D shape used as the base. For instance, our right pyramid above is a trapezoidal pyramid, because its base is a trapezoid. Our oblique pyramid is a triangular pyramid because its base is a triangle.
+
+A \dfn{cone} is like a pyramid, except we don't have to use a polygon for its base and can instead use any shape. In terms of an analogy, a cone is to a pyramid as a cylinder is to a prism. If we use a circle as the base and draw a right cone, we get the shape that most frequently comes to mind when we imagine a cone.
+\begin{image}
+\begin{tikzpicture}
+% Define dimensions
+\def\radius{1.5}
+\def\height{3}
+
+% Draw the oval base
+\draw (0,0) ellipse[x radius=2*\radius, y radius=0.5*\radius];
+
+% Draw lines to the apex
+\draw (-3,0)--(0,\height);
+\draw (2.8,0.27)--(0,\height);
+\draw (1,-0.7)--(0,\height);
+\draw (2.8, -0.27)--(0,\height);
+\draw (-1,-0.7)--(0,\height);
+
+\end{tikzpicture}
+\end{image}
+
+
+However, we could draw many other shapes for the base. Here is an example of an oblique cone with an oval base.
+\begin{image}
+\begin{tikzpicture}
+% Define dimensions
+\def\radius{1.5}
+\def\height{3}
+
+% Draw the oval base
+\draw (0,0) ellipse[x radius=3*\radius, y radius=0.2*\radius];
+
+
+
+% Draw lines to the apex
+\draw (-4.5,0)--(-5.5,\height);
+\draw (2.8,0.25)--(-5.5,\height);
+\draw (0,-0.31)--(-5.5,\height);
+\draw (2.8, -0.25)--(-5.5,\height);
+\draw (4.4,0.08)--(-5.5,\height);
+\end{tikzpicture}
+\end{image}
+
+\begin{question}
+True or false: we can draw a right pyramid with an octagon as its base.
+\begin{multipleChoice}
+\choice[correct]{True}
+\choice{False}
+\end{multipleChoice}
+\end{question}
+
+
+We also have a 3D analogue of circles and disks. 
+\begin{definition}
+	A \dfn{sphere} is the set of all points in 3D space that are at a distance of $r$, called the radius, from a chosen point $O$, called the \dfn{center}. Just like with circles, we first choose $O$ and $r$, and then form the sphere.
+\end{definition}
+Again, we have the trouble that the sphere itself is actually two dimensional, but we also use the word ``sphere'' to refer to the 3D space inside the object we just defined. Unlike with circles, we don't have another word in mathematics to solve this problem. Maybe you can come up with a good one -- but as always, practice writing the definitions in your explanations!
+
+
+
+
+\begin{question}
+Pause and think: we've described a lot of different 3D solids. Which ones have nets which are easy to draw? Which ones have nets which are difficult to draw?
+\begin{freeResponse}
+Enter your thoughts here!
+\end{freeResponse}
+\end{question}
+
+
+\end{document}

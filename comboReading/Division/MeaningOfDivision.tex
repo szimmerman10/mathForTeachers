@@ -1,0 +1,617 @@
+\documentclass{ximera}
+
+\input{../preamble.tex}
+
+
+\title{The meaning of division}
+\author{Jenny Sheldon}
+
+\begin{document}
+
+\begin{abstract}
+We discuss how to recognize division.
+\end{abstract}
+\maketitle
+
+
+
+
+
+
+\section{Recognizing and using division}
+We have made it to the last of our four \link[operations]{https://ximera.osu.edu/m4t/elementaryTeachersOne/elementaryReading/AdditionSubtraction/Operations}: division. Like we did with our other operations, we want to recognize the physical actions that we take while solving problems which tell us that we're using the operation of division. 
+
+It may come as a surprise, but children begin to recognize ideas of division around the age of two, which is three years earlier than they begin to understand multiplication. Children begin to model division by sorting out objects to be shared among friends. At first children will distribute amounts of objects, without regard to the idea that the shared amounts must be equal. As children progress in their understanding, they ``deal out" objects to friends, one at a time, ensuring each friend ends up with an equal amount. Let's look at an example.
+
+A child has 6 blocks that will be shared among three friends. The child starts by setting one block in front of each friend. Next, the child looks at how many blocks are left. There are enough blocks to continue giving them out, so the child sets one more block in front of each friend. At this point all of the blocks have been used. The child counts that each friend has three blocks, and each friend has the same amount. The child also sees that there are no blocks leftover. If we draw the result of passing out the blocks, we will have a spot in the picture for each friend, and each spot will have two squares representing the blocks.
+\begin{image}
+\begin{tikzpicture}
+\node at (0, 1) {Friend $1$};
+\node at (3, 1) {Friend $2$};
+\node at (6,1) {Friend $3$};
+\foreach \x in {-0.5, 0.5, 2.5, 3.5, 5.5, 6.5} \draw[thick] (\x, 0) rectangle (\x+0.25, 0.25);
+\end{tikzpicture}
+\end{image}
+
+Notice in the picture that we have $3$ groups (one group is one friend) and $2$ objects in each group (one object is one block). We knew the total starting amount of objects and the number of groups, but not the number of objects in each group. Let's draw circles around the groups in our picture.
+\begin{image}
+\begin{tikzpicture}
+\node at (0, 1) {Friend $1$};
+\node at (3, 1) {Friend $2$};
+\node at (6,1) {Friend $3$};
+\foreach \x in {-0.5, 0.5, 2.5, 3.5, 5.5, 6.5} \draw[thick] (\x, 0) rectangle (\x+0.25, 0.25);
+\foreach \x in {0, 3, 6} \draw[thick, orange] (\x, 0.5) circle (1cm);
+\end{tikzpicture}
+\end{image}
+
+
+Since we ended up with groups and objects like we have in our meaning of multiplication, we can see a relationship between multiplication and division that we'll use to form our definition of division.
+
+\begin{definition}
+When we \dfn{divide} two numbers $C$ and $B$ where $B$ is not zero, we are trying to ``undo'' a multiplication problem. The value of $C \div B$ is the number $A$ which makes $A \times B = C$ a true statement. When we write $C \div B = A$, the number $C$ is referred to as the \dfn{dividend}, the number $B$ is referred to as the \dfn{divisor}, and the number $A$ is referred to as the \dfn{quotient}. 
+
+\begin{image}
+\begin{tikzpicture}
+\node at (0, 0) {$C$};
+\node at (0.5, 0) {$\div$};
+\node at (1, 0) {$B$};
+\node at (1.5, 0) {$=$};
+\node at (2, 0) {$A$};
+\node at (-0.75, -1) {dividend};
+\node at (1,-1) {divisor};
+\node at (2.8, -1) {quotient};
+\draw[->] (-0.75, -0.75)--(0, -0.25);
+\draw[->] (1, -0.75)--(1, -0.25);
+\draw[->] (2.75, -0.75)--(2, -0.25);
+\end{tikzpicture}
+\end{image}
+\end{definition}
+Notice that in our definition of division, we said that the number we divide by (also called the divisor) cannot be zero. We'll discuss why this makes sense with an in-class activity.
+
+Since we are thinking about division as the opposite of multiplication, it will be useful for us to write division using the same structures we used for multiplication. Recall that we gave the following definition of multiplication.
+
+\begin{image}
+\begin{tikzpicture}
+\node at (0, 0) {$A$};
+\node at (0.5, 0) {$\times$};
+\node at (1, 0) {$B$};
+\node at (1.5, 0) {$=$};
+\node at (2, 0) {$C$};
+\node at (-0.75, -1) {\# of };
+\node at (-0.75, -1.35) {groups}; 
+\node at (1,-1) {\# of objects};
+\node at (1, -1.35) { per group}; 
+\node at (3, -1) {\# of total};
+\node at (3, -1.35) {objects};
+\draw[->] (-0.75, -0.75)--(0, -0.25);
+\draw[->] (1, -0.75)--(1, -0.25);
+\draw[->] (2.75, -0.75)--(2, -0.25);
+\end{tikzpicture}
+\end{image}
+
+When we were solving multiplication problems, we were looking for the value of $C$ in $A \times B = C$.
+
+\begin{image}
+\begin{tikzpicture}
+\node at (1, 1) {multiplication};
+\node at (0, 0) {$A$};
+\node at (0.5, 0) {$\times$};
+\node at (1, 0) {$B$};
+\node at (1.5, 0) {$=$};
+\node at (2, 0) {$?$};
+\node at (-0.75, -1) {\# of };
+\node at (-0.75, -1.35) {groups}; 
+\node at (1,-1) {\# of objects};
+\node at (1, -1.35) { per group}; 
+\node at (3, -1) {\# of total};
+\node at (3, -1.35) {objects};
+\draw[->] (-0.75, -0.75)--(0, -0.25);
+\draw[->] (1, -0.75)--(1, -0.25);
+\draw[->] (2.75, -0.75)--(2, -0.25);
+\end{tikzpicture}
+\end{image}
+
+When we consider division, we will be looking for either the value of $A$ or the value of $B$ in our definition of multiplication. We'll give these two different situations different names, so that we can refer to them when solving problems. In the example above with the friends and the blocks, we are looking for $B$, the number of objects in each group, and so we will call this a ``how many in each group'' division problem.
+
+\begin{definition}
+In \dfn{how many in each group} division, we know the total number of objects and the number of groups, and we are trying to find the number of objects in one full group. In the language of our definition of multiplication, we know $C$ and $A$ and we are trying to find $B$, so the division expression might be written as $C \div A$.
+\begin{image}
+\begin{tikzpicture}
+\node at (2, 1) {how many in each group?};
+\node at (0, 0) {$A$};
+\node at (0.5, 0) {$\times$};
+\node at (1, 0) {$?$};
+\node at (1.5, 0) {$=$};
+\node at (2, 0) {$C$};
+\node at (-0.75, -1) {\# of };
+\node at (-0.75, -1.35) {groups}; 
+\node at (1,-1) {\# of objects};
+\node at (1, -1.35) { per group}; 
+\node at (3, -1) {\# of total};
+\node at (3, -1.35) {objects};
+\draw[->] (-0.75, -0.75)--(0, -0.25);
+\draw[->] (1, -0.75)--(1, -0.25);
+\draw[->] (2.75, -0.75)--(2, -0.25);
+\draw[thick, <->] (2.5,0)--(3,0);
+\node at (4, 0) {$C \div A = ?$};
+\end{tikzpicture}
+\end{image}
+
+This type of division is also called \dfn{partitive} or \dfn{sharing division}.
+\end{definition}
+
+At age 7, children learn the second type of division, measurement division. Let's look at an example. A child has $6$ blocks and wants to give them out two per person. How many people can get blocks? 
+
+The child around skip count by two, holding up a finger for each time they count. They could say ``2" (holding up one finger), ``4" (holding up a second finger), ``6" (holding up a third finger). Each time they skip count, they are also considering whether or not they have counted far enough. For instance, when we count to $2$, we aren't yet to the total of $6$, so we need to keep going. When we reach $6$, we know that we can stop, and there aren't any blocks left over. The result is the number of fingers they have raised, or we can see that three people can get $2$ blocks each. If we draw the result of passing out the blocks, we will have a spot in the picture for each friend, and each spot will have two squares representing the blocks.
+\begin{image}
+\begin{tikzpicture}
+\node at (0, 1) {Friend $1$};
+\node at (3, 1) {Friend $2$};
+\node at (6,1) {Friend $3$};
+\foreach \x in {-0.5, 0.5, 2.5, 3.5, 5.5, 6.5} \draw[thick] (\x, 0) rectangle (\x+0.25, 0.25);
+\end{tikzpicture}
+\end{image}
+
+ Notice that just like the first example, we have $3$ groups (one group is one friend) and $2$ objects in each group (one object is one block). In this problem, we knew a total starting amount of objects,  the number of objects in each group, but not the number of groups. 
+
+When we pass the blocks out two at a time, the number we are looking for is $A$, the number of groups, and so we we will cal this a ``how many groups'' division problem. 
+
+\begin{definition}
+In \dfn{how many groups} division, we know the total number of objects and the number of objects per group, and we are trying to find the number of groups. In the language of our definition of multiplication, we know $C$ and $B$ and we are trying to find $A$, so the division expression might be written as $C \div B$.
+\begin{image}
+\begin{tikzpicture}
+\node at (2, 1) {how many groups?};
+\node at (0, 0) {$?$};
+\node at (0.5, 0) {$\times$};
+\node at (1, 0) {$B$};
+\node at (1.5, 0) {$=$};
+\node at (2, 0) {$C$};
+\node at (-0.75, -1) {\# of };
+\node at (-0.75, -1.35) {groups}; 
+\node at (1,-1) {\# of objects};
+\node at (1, -1.35) { per group}; 
+\node at (3, -1) {\# of total};
+\node at (3, -1.35) {objects};
+\draw[->] (-0.75, -0.75)--(0, -0.25);
+\draw[->] (1, -0.75)--(1, -0.25);
+\draw[->] (2.75, -0.75)--(2, -0.25);
+\draw[thick, <->] (2.5,0)--(3,0);
+\node at (4, 0) {$C \div B = ?$};
+\end{tikzpicture}
+\end{image}
+
+This type of division is also called \dfn{quotative} or \dfn{measurement division}.
+\end{definition}
+
+
+Let's take a moment to compare the relationship between addition and subtraction with the relationship between multiplication and division. We can think of addition and subtraction as opposite operations in a similar way that multiplication and division are opposite operations. If we start with one set, combine it with another set, and then want to get back to the original set, we will have to take away (or subtract) the set we added. Similarly, if we start with one number and multiply it by another number, we would divide to get back to that first number again. 
+
+Another similarity comes from our algebraic expressions. If we look at the equation
+\[
+A + B = C
+\]
+we can think about the location of what we're looking for in a story problem to tell us something about which operation we might use to solve it. For instance, if we know $A$ and $B$ and are looking for $C$, we have
+\[
+A + B = ?
+\]
+and we would typically use addition to solve this problem. But if we placed the question mark on the other side, for instance if we know $A$ and $C$ and are looking for $B$
+\[
+A + ? = B
+\]
+we might rewrite this as 
+\[
+B - A = ?
+\]
+and use subtraction to solve this problem. Similarly, with multiplication and division, we have already discussed how we are working with our groups and objects per group structure with both operations, and the location of the question mark tells us which operation we are using. If we know $A$ and $B$ and are looking for $C$, then
+\[
+A \times B = ?
+\]
+is a multiplication problem, but if we know $A$ and $C$ and are looking for $B$, then
+\[
+A \times ? = C \rightarrow C \div A = ?
+\]
+is a division problem. Similarly if we know $B$ and $C$ and are looking for $A$, we also get the division problem
+\[
+? \times B = C \rightarrow C \div B = ?
+\]
+
+There is one important difference that we want to point out, however. With addition and subtraction, we needed all three of the numbers to have the same units. We added cups with cups to get cups, or we added apples (fruit) to oranges (fruit) to get fruit. However, with multiplication and division, all three of the units on $A$, $B$, and $C$ are different. For instance, when we think about a problem like having baskets full of apples, the units for the groups are baskets, the units for the objects per group are a combined unit of apples per basket, and the units for the answer are apples. Paying attention to what we are doing with units has already been helping us to solve problems. It's time for examples!
+
+\begin{example}
+Explain how the following problem can be seen as a division problem, then solve it using a picture. 
+
+\emph{Isobel has $24$ stickers and wants to give $3$ stickers to each of her friends. How many friends can Isobel give stickers to?}
+
+First, we would like to see why this is a division problem, so we need to identify the groups and objects per group in this situation. The things being placed in groups in this example are the stickers, so we will use one object as one \wordChoice{\choice{friend} \choice{Isobel} \choice[correct]{sticker} \choice{24} \choice{3}}. This means we need to look at how the stickers are grouped in this problem, and the stickers are being given in groups to the friends, so we will take one group to be one \wordChoice{\choice[correct]{friend} \choice{Isobel} \choice{sticker} \choice{24} \choice{3}}. Next, we remember the general structure of our grouping problems, which we also called the definition of multiplication.
+\begin{image}
+\begin{tikzpicture}
+\node at (0, 0) {$A$};
+\node at (0.5, 0) {$\times$};
+\node at (1, 0) {$B$};
+\node at (1.5, 0) {$=$};
+\node at (2, 0) {$C$};
+\node at (-0.75, -1) {\# of };
+\node at (-0.75, -1.35) {groups}; 
+\node at (1,-1) {\# of objects};
+\node at (1, -1.35) { per group}; 
+\node at (3, -1) {\# of total};
+\node at (3, -1.35) {objects};
+\draw[->] (-0.75, -0.75)--(0, -0.25);
+\draw[->] (1, -0.75)--(1, -0.25);
+\draw[->] (2.75, -0.75)--(2, -0.25);
+\end{tikzpicture}
+\end{image}
+
+Which of these numbers do we already know, and which are we looking for? The problem tells us that Isobel has $\answer[given]{24}$ stickers, and so this will be our total or \wordChoice{\choice{$A$} \choice{$B$} \choice[correct]{$C$}} in the equation. We also know that each friend gets $\answer[given]{3}$ stickers. Since one group is one friend, and we know there are $3$ objects or stickers in each group, this is the number of objects per group or  \wordChoice{\choice{$A$} \choice[correct]{$B$} \choice{$C$}} in the equation. This means that the thing we are looking for must be the number of groups or \wordChoice{\choice[correct]{$A$} \choice{$B$} \choice{$C$}} in the equation. We can record all of this information in the equation.
+\begin{image}
+\begin{tikzpicture}
+\node at (0, 0) {$?$};
+\node at (0.5, 0) {$\times$};
+\node at (1, 0) {$3$};
+\node at (1.5, 0) {$=$};
+\node at (2, 0) {$24$};
+\node at (-0.75, -1) {\# of };
+\node at (-0.75, -1.35) {friends}; 
+\node at (1,-1) {\# of stickers};
+\node at (1, -1.35) { per friend}; 
+\node at (2.8, -1) {total};
+\node at (2.8, -1.35) {stickers};
+\draw[->] (-0.75, -0.75)--(0, -0.25);
+\draw[->] (1, -0.75)--(1, -0.25);
+\draw[->] (2.75, -0.75)--(2, -0.25);
+\end{tikzpicture}
+\end{image}
+
+In other words, this problem fits the ``how many groups'' interpretation of division for $24 \div 3$. Let's now see how we could solve this problem with a picture.
+
+We will start by drawing $24$ circles to represent the $24$ stickers.
+
+\begin{image}
+\begin{tikzpicture}
+\foreach \x in {0, 0.5, 1, ..., 11.5} \draw[thick, fill=violet] (\x, 0) circle (3pt);
+\end{tikzpicture}
+\end{image}
+
+Now, Isobel is giving $3$ stickers to each friend, so we will circle groups of $3$ stickers one at a time. We will count each group of $3$ stickers until we don't have any stickers left. For instance, let's circle the first group in the picture below.
+
+\begin{image}
+\begin{tikzpicture}
+\foreach \x in {0, 0.5, 1, ..., 11.5} \draw[thick, fill=violet] (\x, 0) circle (3pt);
+\foreach \x in {0.5} \draw[thick] (\x, 0) ellipse (0.75cm and 0.25cm);
+\node at (0.5, 0.5) {$1$};
+\end{tikzpicture}
+\end{image}
+
+At this point, Isobel takes a look at the stickers and realizes that there are still some left. So she can make another group of $3$, look at her leftovers, and repeat this process until we have used up all of the stickers.
+
+\begin{image}
+\begin{tikzpicture}
+\foreach \x in {0, 0.5, 1, ..., 11.5} \draw[thick, fill=violet] (\x, 0) circle (3pt);
+\foreach \x in {0.5, 2, 3.5, 5, 6.5, 8, 9.5, 11} \draw[thick] (\x, 0) ellipse (0.75cm and 0.25cm);
+\node at (0.5, 0.5) {$1$};
+\node at (2, 0.5) {$2$};
+\node at (3.5, 0.5) {$3$};
+\node at (5, 0.5) {$4$};
+\node at (6.5, 0.5) {$5$};
+\node at (8, 0.5) {$6$};
+\node at (9.5, 0.5) {$7$};
+\node at (11, 0.5) {$8$};
+\end{tikzpicture}
+\end{image}
+
+\end{example}
+
+If we wanted to write down algebraically what Isobel was doing at each stage of the division, we might start by recognizing that she made $1$ group of stickers with $3$ stickers in it, and then had $21$ stickers left over. We would write this as an equation using the following.
+\[
+1 \times 3 + 21 = 24
+\]
+All $24$ of the stickers are accounted for in this equation, and we have made the one group of three. After a second group, we could write the following equation.
+\[
+2 \times 3 + 18 = 24
+\]
+This process would continue as Isobel keeps circling groups of stickers until she has none left over, giving us the following equation.
+\[
+8 \times 3 + 0 = 24
+\]
+We have a theorem that tells us that when we are working with whole numbers, there is exactly one way to use this algebraic thinking to write the final answer for a division problem. It's called the Division theorem.
+\begin{theorem}[The division theorem]
+Given any integer $n$ and a nonzero integer $d$, we have unique integers $q$ and $r$ such that 
+\[
+d \times q + r = n
+\]
+In the language we used earlier, $n$ is the divisor, $d$ is the dividend, $q$ is the quotient, and $r$ is the remainder.
+\end{theorem}
+We have used different letters in this theorem so that you can apply it to both how many groups and how many in each group division problems without worrying where the $A$, $B$, and $C$ are located. Remember that the commutative property of multiplication tells us that we can also write 
+\[q \times d + r = n
+\]
+in the case that the quotient we are looking for is the number of groups. In the case of Isobel and her stickers, the final answer could be represented by 
+\[
+8 \times 3 + 0 = n
+\]
+telling us that quotient is $8$, the dividend is $3$, the divisor is $24$, and the remainder is $0$. We divided $24$ by $3$ and got $8$ remainder zero. The Division theorem both helps us to think about how we passed out the objects as we physically performed the division and it tells us that this is the only answer to this division problem as long as we are working with whole numbers. (Of course, we stated the theorem with integers, but since we haven't talked about those yet you can keep whole numbers in mind.)
+
+
+\begin{example}
+Explain how the following problem can be seen as a division problem, then solve it using a picture. 
+
+\emph{Jeremiah has $24$ stickers and wants to give the stickers to $3$ of his friends, making sure that everyone has the same amount of stickers. How many stickers will each friend get?}
+
+First, we would like to see why this is a division problem, so we need to identify the groups and objects per group in this situation. The things being placed in groups in this example are still the stickers, so we will use one object as one \wordChoice{\choice{friend} \choice{Jeremiah} \choice[correct]{sticker} \choice{24} \choice{3}}. This means we need to look at how the stickers are grouped in this problem, and the stickers are being given in groups to the friends, so we will again take one group to be one \wordChoice{\choice[correct]{friend} \choice{Jeremiah} \choice{sticker} \choice{24} \choice{3}}. We are working on fitting these groups and objects into our definition of multiplication, so that we can decide what type of problem this is.
+
+The problem tells us that Jeremiah has $\answer[given]{24}$ stickers, and so this will be our total or \wordChoice{\choice{$A$} \choice{$B$} \choice[correct]{$C$}} in the equation. We also know there are $\answer[given]{3}$ friends getting stickers. Since one group is one friend, this is the number of groups \wordChoice{\choice[correct]{$A$} \choice{$B$} \choice{$C$}} in the equation. This means that the thing we are looking for must be the number of objects in one group or \wordChoice{\choice{$A$} \choice[correct]{$B$} \choice{$C$}} in the equation. We can record all of this information in the equation.
+\begin{image}
+\begin{tikzpicture}
+\node at (0, 0) {$3$};
+\node at (0.5, 0) {$\times$};
+\node at (1, 0) {$?$};
+\node at (1.5, 0) {$=$};
+\node at (2, 0) {$24$};
+\node at (-0.75, -1) {\# of };
+\node at (-0.75, -1.35) {friends}; 
+\node at (1,-1) {\# of stickers};
+\node at (1, -1.35) { per friend}; 
+\node at (2.8, -1) {total};
+\node at (2.8, -1.35) {stickers};
+\draw[->] (-0.75, -0.75)--(0, -0.25);
+\draw[->] (1, -0.75)--(1, -0.25);
+\draw[->] (2.75, -0.75)--(2, -0.25);
+\end{tikzpicture}
+\end{image}
+
+In other words, this problem fits the ``how many in each group'' interpretation of division for $24 \div 3$. Let's now see how we could solve this problem with a picture.
+
+We will start by drawing $24$ circles to represent the $24$ stickers.
+
+\begin{image}
+\begin{tikzpicture}
+\foreach \x in {0, 0.5, 1, ..., 11.5} \draw[thick, fill=green] (\x, 0) circle (3pt);
+\end{tikzpicture}
+\end{image}
+
+Now, Jeremiah is giving the stickers to three friends, so we can think of this as passing out the stickers to the friends. Jeremiah starts by giving one sticker to each friend.  Let's pass out the first three stickers in the image below.
+
+\begin{image}
+\begin{tikzpicture}
+\foreach \x in {0, 0.5, 1, ..., 11.5} \draw[thick, fill=green] (\x, 0) circle (3pt);
+\foreach \x in {0} \node at (\x, 0.5) {$1$};
+\foreach \x in {0.5} \node at (\x, 0.5) {$2$};
+\foreach \x in {1} \node at (\x, 0.5) {$3$};
+\end{tikzpicture}
+\end{image}
+
+He now needs to look at whether he has enough stickers to give more to his friends, and since there are $21$ stickers left he, he can repeat this process. So Jeremiah gives each friend another sticker and then checks to see whether he still has enough stickers to continue. He will keep repeating this process of giving out three stickers and then checking to see if he has enough leftovers until he has used up all of the stickers. We'll draw all of the stickers below with numbers above them indicating which friend got each sticker.
+
+\begin{image}
+\begin{tikzpicture}
+\foreach \x in {0, 0.5, 1, ..., 11.5} \draw[thick, fill=green] (\x, 0) circle (3pt);
+\foreach \x in {0, 1.5, 3, 4.5, 6, 7.5, 9, 10.5} \node at (\x, 0.5) {$1$};
+\foreach \x in {0.5, 2, 3.5, 5, 6.5, 8, 9.5, 11} \node at (\x, 0.5) {$2$};
+\foreach \x in {1, 2.5, 4, 5.5, 7, 8.5, 10, 11.5} \node at (\x, 0.5) {$3$};
+\end{tikzpicture}
+\end{image}
+
+We need to count how many stickers were given to each friend, or how many $1$'s, $2$'s, $3$'s there are above the stickers in the image. Luckily each of the groups is equal so we can just count the $1$'s. We see that each friend gets a total of $\answer[given]{8}$ stickers.
+
+
+\end{example}
+
+Notice that we can write down Jeremiah's work using equations as well. He starts out by giving one sticker to each friend and could write the following equation.
+\[
+3 \times 1 + 21 = 24
+\]
+All $24$ stickers are accounted for, and he has recorded his three groups and the one sticker in each group. He has also recorded that there are still $21$ stickers to be given out, so he can repeat this process.
+\[
+3 \times 2 + 18  = 24
+\]
+Jeremiah can keep going in this way until he can't give out any more stickers, and that's the situation where the Division theorem applies. In its final state, Jeremiah's equation will look like the following.
+\[
+3 \times 8 + 0 = 24
+\]
+This equation tells us that with the divisor of  $24$ and the dividend of $3$, the quotient is $8$ and the remainder is $0$. We divided $24$ by $8$ and again got $3$ remainder $0$. The Division theorem tells us that this is the only answer to this problem as long as we are working with whole numbers, and gives us a convenient way to record our answer.
+
+\begin{question}
+Compare and contrast the problems in the previous examples. How can you tell the difference between a ``how many groups?'' problem and a ``how many in each group?'' problem?
+\begin{freeResponse}
+Write some advice for yourself.
+\end{freeResponse}
+\end{question}
+
+
+There is one other big idea we need to discuss with division, and that is what to do if not all of the objects will fit neatly into the groups. In other words, what if we have a remainder? For instance, suppose that Isobel had $25$ stickers in the previous example, but was still trying to give $3$ stickers to each friend. We would draw the same picture, but there would be one sticker left over after we placed all of the stickers in groups. 
+
+\begin{image}
+\begin{tikzpicture}
+\foreach \x in {0, 0.5, 1, ..., 11.5, 12} \draw[thick, fill=violet] (\x, 0) circle (3pt);
+\foreach \x in {0.5, 2, 3.5, 5, 6.5, 8, 9.5, 11} \draw[thick] (\x, 0) ellipse (0.75cm and 0.25cm);
+\node at (0.5, 0.5) {$1$};
+\node at (2, 0.5) {$2$};
+\node at (3.5, 0.5) {$3$};
+\node at (5, 0.5) {$4$};
+\node at (6.5, 0.5) {$5$};
+\node at (8, 0.5) {$6$};
+\node at (9.5, 0.5) {$7$};
+\node at (11, 0.5) {$8$};
+\end{tikzpicture}
+\end{image}
+In this case, it doesn't make sense to tear up the sticker into pieces to give it to the friends, so Isobel could keep this sticker for herself. She still gives stickers to $8$ friends, and there is one sticker left over. We could use the notation of the division theorem to record this answer as 
+\[
+8 \times 3 + 1 = 25
+\]
+showing that when we divide $25$ by $3$, we get $8$ with a remainder of $1$.
+
+However, if we change the situation a little bit, we could get a different answer.
+
+\begin{question}
+Karli has $25$ ounces of lemonade and wants to share the lemonade equally between herself and two friends (so there are three people in total). How many ounces of lemonade will each friend get?
+
+\begin{explanation}
+This situation is still a division situation, where we take one group to be one friend and one object to be one \wordChoice{\choice{friend} \choice{Karli} \choice[correct]{ounce of lemonade} \choice{25}}. Since we know the number of groups and the number of total objects, this is a \wordChoice{\choice{multiplication} \choice{how many groups} \choice[correct]{how many in each group}} type of division problem. Let's draw a picture to solve it and see what we could do with the last ounce. We will start by drawing the $25$ ounces as $25$ rectangles.
+\begin{image} \begin{tikzpicture}
+\foreach \y in {0, 1, 2, 3, 4} \foreach \x in {0, 1, 2, 3, 4} \draw[thick, fill=yellow] (\x, \y) rectangle (\x+0.75, \y+0.5);
+\end{tikzpicture} \end{image}
+
+
+We will label the ounces as we give them to each person, like we did in Jeremiah's problem.
+\begin{image} \begin{tikzpicture}
+\foreach \y in {0, 1, 2, 3, 4} \foreach \x in {0, 1, 2, 3, 4} \draw[thick, fill=yellow] (\x, \y) rectangle (\x+0.75, \y+0.5);
+\foreach \a in {(0.375,0.25), (3.375, 0.25), (1.375, 1.25), (4.375, 1.25), (2.375, 2.25), (0.375, 3.25), (3.375, 3.25), (1.375, 4.25)} \node at \a {$1$};
+\foreach \b in {(1.375,0.25), (4.375, 0.25), (2.375, 1.25), (0.375, 2.25), (3.375, 2.25), (1.375, 3.25), (4.375, 3.25), (2.375, 4.25)} \node at \b {$2$};
+\foreach \c in {(2.375, 0.25), (0.375, 1.25), (3.375, 1.25), (1.375, 2.25), (4.375, 2.25), (2.375, 3.25), (0.375, 4.25), (3.375, 4.25)} \node at \c {$3$};
+\end{tikzpicture} \end{image}
+Now the last ounce can be shared equally amongst the three people. We divide the ounce into $3$ equal pieces, and give one of the pieces to each of the friends. Using our meaning of fractions, this means that each friend gets an additional $\answer[given]{\frac{1}{3}}$ of an ounce from that last ounce.
+
+
+
+We will label the ounces as we give them to each person, like we did in Jeremiah's problem.
+\begin{image} \begin{tikzpicture}
+\foreach \y in {0, 1, 2, 3, 4} \foreach \x in {0, 1, 2, 3, 4} \draw[thick, fill=yellow] (\x, \y) rectangle (\x+0.75, \y+0.5);
+\foreach \a in {(0.375,0.25), (3.375, 0.25), (1.375, 1.25), (4.375, 1.25), (2.375, 2.25), (0.375, 3.25), (3.375, 3.25), (1.375, 4.25)} \node at \a {$1$};
+\foreach \b in {(1.375,0.25), (4.375, 0.25), (2.375, 1.25), (0.375, 2.25), (3.375, 2.25), (1.375, 3.25), (4.375, 3.25), (2.375, 4.25)} \node at \b {$2$};
+\foreach \c in {(2.375, 0.25), (0.375, 1.25), (3.375, 1.25), (1.375, 2.25), (4.375, 2.25), (2.375, 3.25), (0.375, 4.25), (3.375, 4.25)} \node at \c {$3$};
+\foreach \x in {4.25, 4.5} \draw[thick] (\x, 4)--(\x, 4.5);
+\node[above] at (4.125, 4.5) {$1$};
+\node[above] at (4.375, 4.5) {$2$};
+\node[above] at (4.625, 4.5) {$3$};
+\end{tikzpicture} \end{image}
+Now, each friend gets a total of $8 \frac{1}{3}$ ounces of lemonade.
+
+\end{explanation}
+\end{question}
+In Karli's lemonade question, we do not want to write our answer using the division theorem, because we are working with fractions instead of whole numbers. If we left the extra ounce of lemonade as a leftover and did not distribute it to the friends, we could write
+\[
+3 \times 8 + 1 = 25
+\]
+but since we split up this remainder into pieces we are no longer in a situation where the Division theorem applies. Instead we could simply write the multiplication expression
+\[
+3 \times \left ( 8 \frac{1}{3} \right ) = 25.
+\]
+
+
+Let's consider two other questions. Practice identifying which type of division they are as well as drawing pictures to solve each of them!
+\begin{question}
+Mr. Miller needs to arrange transportation to an after school picnic for $25$ students. If each car will hold $3$ students, how many cars will Mr. Miller need in order to transport all of the students?
+\begin{multipleChoice}
+\choice{$8$ cars}
+\choice{$8$ cars with a remainder of $1$ student}
+\choice{$8 \frac{1}{3}$ cars}
+\choice[correct]{$9$ cars}
+\end{multipleChoice}
+\end{question}
+
+
+\begin{question}
+Lenore is pouring paint into jars. If she has $25$ ounces of paint, and each jar holds $3$ ounces of paint, how many of these jars will be completely full when she is done?
+\begin{multipleChoice}
+\choice[correct]{$8$ jars}
+\choice{$8$ jars with a remainder of $1$ ounce}
+\choice{$8 \frac{1}{3}$ jars}
+\choice{$9$ jars}
+\end{multipleChoice}
+\end{question}
+
+Each of the four problems we have just considered has a different answer, even though each of them was a division problem for $25 \div 3$. This is a complication that we have with division that we don't have with other operations because of the fact that physical objects behave very differently than abstract numbers. Our definition of division above as the opposite of multiplication is true for abstract numbers, but sometimes the physical situation requires us to report a remainder or to round our answer in one way or another. Using the Division theorem to write an algebraic expression for our answer can help us explain how the practical answer is related to the actual division. For instance, in Mr. Miller's transportation problem, we could use the division theorem to write
+\[
+8 \times 3 + 1 = 25.
+\]
+When we do the division $25 \div 3$, we would usually get an answer of $8$ remainder $1$. But in this case since the remainder of $1$ represents a student who still needs transportation, we will need $9$ cars in total, or we round up.
+
+
+
+\section{Division and decimals}
+
+Let's apply our meaning of division to an example with decimal numbers. 
+\begin{example}
+Explain how the following problem can be seen as a division problem, then solve it using a picture. 
+
+\emph{Nalani has a total of $12.3$ ounces of sand that she is placing in jars. Each jar holds $0.4$ ounces of sand. How many full jars will Nalani be able to make, and how many ounces of sand will be left over?}
+
+First, we will identify the groups, objects, and what type of division problem this is. We are placing the sand into the jars, so it makes sense to take one group to be one \wordChoice{\choice[correct]{jar} \choice{sand} \choice{ounce} \choice{bin}}. The sand is measured in ounces, so it makes sense to take one object to be one  \wordChoice{\choice{jar} \choice{sand} \choice[correct]{ounce} \choice{bin}}. When we look at the numbers in the problem, we know the total number of ounces and the number of ounces per jar, and we are looking for the number of jars needed. That means this is a \wordChoice{\choice{multiplication} \choice[correct]{how many groups} \choice{how many in each group}} type problem, because the unknown is the number of groups. Writing this with our definition of multiplication we have the following. 
+\begin{image}
+\begin{tikzpicture}
+\node at (0, 0) {$?$};
+\node at (0.5, 0) {$\times$};
+\node at (1, 0) {$0.4$};
+\node at (1.5, 0) {$=$};
+\node at (2, 0) {$12.3$};
+\node at (-0.75, -1) {\# of };
+\node at (-0.75, -1.35) {jars}; 
+\node at (1,-1) {\# of ounces};
+\node at (1, -1.35) { per jar}; 
+\node at (2.8, -1) {total};
+\node at (2.8, -1.35) {ounces};
+\draw[->] (-0.75, -0.75)--(0, -0.25);
+\draw[->] (1, -0.75)--(1, -0.25);
+\draw[->] (2.75, -0.75)--(2, -0.25);
+\end{tikzpicture}
+\end{image}
+In other words, this is a how many groups problem for $12.3 \div 0.4$. Let's solve it with a picture. We will represent these ounces of sand using base ten blocks, so we will let the value of one individual cube be $\answer[given]{0.1}$ since this is the smallest place value we have in each of our numbers. Next, we will represent the $12.3$ total ounces using $\answer[given]{3}$ individual blocks, $\answer[given]{2}$ bundles, and $\answer[given]{1}$ superbundle. Let's draw this.
+\begin{image}
+\begin{tikzpicture}
+\draw[thick, step=0.1] (0,0) grid (1,1);
+\foreach \x in {1.2, 1.4} \draw[thick, step=0.1] (\x,0) grid (\x+-0.1, 1);
+\foreach \x in {1.6, 1.8, 2.0} \draw[thick] (\x, 0) rectangle (\x+0.1, 0.1);
+\end{tikzpicture}
+\end{image}
+Each jar holds $0.4$ ounces, which we would represent in our base ten blocks using $\answer[given]{4}$ individual blocks.
+\begin{image}
+\begin{tikzpicture}
+\draw[thick, step=0.1] (0,0) grid (0.4, 0.1);
+\end{tikzpicture}
+\end{image}
+We would like to know how many copies of these four blocks fit into our picture of $12.3$, since every four blocks represents one jar. This picture will get pretty crowded if we circle them all, so you will want to draw a picture in your notes and think about color coding it or using a similar strategy to find groups of four. We'll circle the first one, and then leave the rest of the counting up to you. Remember that after circling each new group, we are checking to see whether or not we have enough blocks to circle another full group.
+\begin{image}
+\begin{tikzpicture}
+\draw[thick, step=0.1] (0,0) grid (1,1);
+\foreach \x in {1.2, 1.4} \draw[thick, step=0.1] (\x,0) grid (\x+-0.1, 1);
+\foreach \x in {1.6, 1.8, 2.0} \draw[thick] (\x, 0) rectangle (\x+0.1, 0.1);
+\draw[thick, orange] (0.05, 0.2) ellipse (0.05cm and 0.2cm);
+\end{tikzpicture}
+\end{image}
+Inside just the superbundle, we count $\answer[given]{25}$ groups of four blocks. Inside the two bundles we count another $\answer[given]{5}$ groups of four blocks, and then the three individual blocks are not enough to make another group of four. In other words, Nalani can make a total of $\answer[given]{30}$ full jars, and there are $0.3$ ounces left over.
+
+\end{example}
+
+Let's notice one very important thing about the picture we just drew. We represented $12.3$ and $0.4$ using our base ten blocks, but this could have also been a picture for $123$ and $4$. If Nalani started out with $123$ ounces of sand and placed them in jars holding $4$ ounces each, we would draw the same picture to solve this problem, and we would get the same number of full jars. We would only have to adjust the units on the remainder, since the remainder is telling us about how many blocks are left over. In other words, $12.3 \div 0.4$ and $123 \div 4$ have the same answer. 
+\begin{question}
+What other division problems have the same answer as $12.3 \div 0.4$? Select all that apply.
+\begin{selectAll}
+\choice[correct]{$1230 \div 40$}
+\choice{$12.3 \div 4$}
+\choice{$0.123 \div 0.4$}
+\choice[correct]{$0.00123 \div 0.00004$}
+\end{selectAll}
+\end{question}
+
+We will use this fact to think about why we divide decimals the way we do. Stay tuned!
+
+
+\section{The decimal multiplication algorithm}
+Let's wrap up by using the connection between multiplication and division to explain why the decimal multiplication algorithm makes sense. When we multiplied decimals using the standard algorithm, our first step was to remove the decimal points from both numbers. So, for instance, if we want to multiply $0.34 \times 8.5$, we would instead multiply $34 \times 85$, and then figure out where to place the decimal point. We are now ready to notice that $34 = 0.34 \times 100$ and $85 = 8.5 \times 10$, or in other words that
+\[
+34 \times 85 = (0.34 \times 100) \times (8.5 \times 10).
+\]
+If we use the commutative and associative properties to rearrange the right hand side of this equation, we see that 
+\[
+34 \times 85 = (0.34 \times 8.5) \times (100 \times 10)
+\]
+or in other words
+\[
+34 \times 85 = (0.34 \times 8.5) \times 1000.
+\]
+Since the expression $0.34 \times 8.5$ represents the total we get by doing this multiplication, we have taken the total and multiplied it by $1000$ when we removed the decimal places. Since division is the opposite of multiplication, we can see that in order to get back to $0.34 \times 8.5$ from $34 \times 85$, we need to divide by $1000$. Writing this in symbols, 
+\[
+(34 \times 85) \div 1000 = 0.34 \times 8.5.
+\]
+We know that multiplying by $10$ moves the decimal point one place value to the right, so dividing by $10$ will do the opposite and move the decimal point one place value to the left. We moved the place values $3$ places right in order to remove them from the multiplication, so our definition of division is telling us we need to move the decimal point of the answer $3$ places left in order to compensate.
+
+While it's possible that this procedure made sense to you before we defined division, we hope that you now have more language to talk about why it makes sense, and we hope you are feeling prepared to talk about why the algorithm for dividing decimals is so different!
+
+
+
+\end{document}
+
+
+
+
+
+

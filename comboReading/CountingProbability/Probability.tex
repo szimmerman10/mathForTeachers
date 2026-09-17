@@ -1,0 +1,203 @@
+\documentclass{ximera}
+
+\input{../preamble.tex}
+
+\title{Probability}
+\author{Jenny Sheldon}
+
+\begin{document}
+
+\begin{abstract}
+We extend our ideas about counting to compute some probabilities.
+\end{abstract}
+\maketitle
+
+\section{Activities for this section:} 
+\link[High rollers]{https://ximera.osu.edu/m4t/elementaryActivities/SemesterTwoPacket/elementaryActivities/CountingProbability/HighRollers}, 
+\link[How likely]{https://ximera.osu.edu/m4t/elementaryActivities/SemesterTwoPacket/elementaryActivities/CountingProbability/HowLikely}, 
+\link[Go climb a tree]{https://ximera.osu.edu/m4t/elementaryActivities/SemesterTwoPacket/elementaryActivities/CountingProbability/GoClimbATree}
+
+
+
+
+
+
+
+\section{Experimental and theoretical probability}
+One of the applications we see of counting problems is using counting to evaluate probabilities. Probability is a deep mathematical subject, and so there is much, much more to probability than we will discuss here. But in this section, we hope to give enough of an introduction to the topic that you can see the application of counting as well as find it easier to understand probabilities that you encounter in your everyday life. 
+
+
+Let's start by asking, ``what is probability?" 
+\begin{definition}
+The \dfn{probability} of an event is a numerical measure of how likely the event is to occur. 
+\end{definition}
+The values of probabilities fall between $0$ and $1$, with $0$ meaning that an event will not occur, and $1$ meaning that an event is certain to occur. In between $0$ and $1$, the higher the value of the probability, the more likely the event is to occur. We also sometimes represent probabilities using percentages, so if the probability of an event is $0.56$ we might say that the event has a $56\%$ chance of occurring.
+
+\begin{example}
+To illustrate these ideas, let's start by thinking about a coin. When you flip a coin, the coin lands on one of its two faces, which we typically call either heads or tails. The coin should be equally likely to land on either side, so we might say that there's a $50\%$ chance of landing on heads and a $50\%$ chance of landing on tails. We would then say that the probability of landing on heads is (as a percentage) $\answer[given]{50}\%$ or (as a decimal) $\answer[given]{0.5}$ or (as a fraction) $\frac{1}{2}$.
+\end{example}
+
+How do we find these probabilities? We need to start by specifying the thing whose probability we are trying to compute, and we call this an \dfn{event}. We will also use the terminology \dfn{event space} to refer to the collection of all the ways that the event can occur. The event should also be part of a collection of things, sometimes including events that we don't want to consider in our probability. We will call this overarching space the \dfn{sample space}. Let's clarify this with another example.
+
+\begin{example}
+Suppose we are considering a regular deck of cards, which has $52$ different cards in it. The deck has four types of cards, called suits, and the names of the suits are hearts and diamonds (which are red cards), as well as spades and clubs (which are black cards). There are $13$ cards from each suit. So, if we pick a single card from the deck and we want to discuss the probability a card which is a diamond, then ``picking a diamond'' could describe the \wordChoice{\choice[correct]{event space} \choice{sample space}}. This is the outcome we are looking for. Then we would have ``picking any card'' as the \wordChoice{\choice{event space} \choice[correct]{sample space}} because this is the collection of both the things we want and the things we don't want.
+\end{example}
+
+Once we know what we are using for our sample space, the events we are considering, and all of their probabilities, we have a \dfn{probability model}. 
+
+
+When we start calculating probabilities, there are two different ways that we can think about making these calculations: using experimental data or using theoretical data. Let's investigate both types.
+
+\begin{definition}
+The \dfn{experimental probability} of an event is a probability calculated by performing an experiment. The sample space is given by all of the outcomes of the experiment, and the event space is given by all of the desired outcomes. The experimental probability is calculated by 
+\[
+\frac{\textrm{number of outcomes in the event space}}{\textrm{number of outcomes in the sample space}}.
+\]
+\end{definition}
+Let's look at an example.
+\begin{example}
+Let's say that you are using the same coin from before, with two sides called heads and tails. You flip the coin $30$ times, and get the following data. $H$ stands for tossing heads, and $T$ stands for tossing tails.
+\[
+H, H, T, T, H, T, T, H, H, H,
+\]
+\[
+T, H, T, T, T, T, H, H, H, T,
+\]
+\[
+H, T, T, H, H, H, T, T, H, H
+\]
+
+The sample space here is all of the tosses of the coin, and so we have a total of $\answer[given]{30}$ options. For the event space, let's choose ``the result of the toss is heads'', so to find the number of outcomes in the event space, we count the number of $H$ tosses and get $16$. Now, to calculate the experimental probability, we create our fraction as follows. (Below, enter the numbers we've calculated; don't simplify your answer. You can simplify your final answer later, but to enter the numbers here use the ones we calculated.)
+\[
+\frac{\textrm{number of outcomes in the event space}}{\textrm{number of outcomes in the sample space}} = \frac{\answer[given]{16}}{\answer[given]{30}}
+\]
+
+The rest of our tosses are tails, so we could also compute the experimental probability of ``the result of the toss is tails'' using the following.
+\[
+\frac{\textrm{number of tails}}{\textrm{number of total tosses}} = \frac{\answer[given]{14}}{\answer[given]{30}}
+\]
+In this case, we could express our entire probability model by saying that the probability of tossing heads was $\frac{16}{30}$ and the probability of tossing tails was $\frac{14}{30}$.
+\end{example}
+
+Notice that the experimental probability we got in this case is different than what we expected from our answer earlier, and this is the main difference between experimental probability and theoretical probability. The experimental probability is based only on what we see in an experiment, and could be different than what we would get with our reasoning. We are going to move into calculating theoretical probability next, but for now you should think of it as probability that we would get by reasoning instead of probability that we get via experiments.
+
+Even though we can get two different answers with the two ways of calculating probability, there is an important result in probability called the Law of Large Numbers, which tells us that the more data we collect in our experiments, the closer our experimental probability should get to our theoretical probability. In other words, if our experiment is large enough, we expect the experimental probability to be very close to the theoretical probability.
+
+
+
+\section{Equal likelihood}
+Before we actually calculate theoretical probabilities, we need to understand what it means for outcomes to be equally likely. Our plan, as with experimental probability, will be to count the number of outcomes in the event space and the sample space. However, before we start counting these outcomes, we need to make sure we are counting things which are equally likely to happen. Let's use two examples to illustrate what we mean.
+
+\begin{example}
+First, let's look at outcomes which are equally likely. Let's consider the coin that we've been flipping with two sides called heads and tails. With most coins, when we flip, we assume that the coin is just as likely to land on one side or on the other. This is a good example to keep in mind for when the outcomes are \wordChoice{\choice[correct]{equally likely} \choice{not equally likely}}.
+
+However, some magicians performing tricks could have a coin that is extra heavy on one side so that when you flip it, it always lands on one of the sides. In this case, the coin doesn't have the same chance to land on either side because of the heavier side. It's more likely to land on that heavier side. This is a good example to keep in mind for when the outcomes are \wordChoice{\choice{equally likely} \choice[correct]{not equally likely}}.
+\end{example}
+
+Here's another example to think about.
+\begin{example}
+Let's think about an example where kids are picking teams in gym class. There are $20$ kids waiting to be chosen. If Sara is one of the kids waiting to be chosen, we could try to find the probability that Sara is chosen. The event space then would be ``Sara is chosen" and this has $1$ outcome in it (the one where Sara gets chosen). You could try to count the sample space by just counting the total number of kids that are waiting to be chosen, which is $\answer[given]{20}$. In this case, you might guess that the probability that Sara is chosen next could be $\frac{1}{20}$ but this isn't really true. Typically when kids are picked in gym class, the kids are picked in order of their perceived athletic ability, so each kid is  \wordChoice{\choice{equally likely} \choice[correct]{not equally likely}} be chosen next. If we wanted to calculate the probability that Sara would be chosen next, we would have to take into account her perceived athletic ability when we calculate the probability.
+\end{example}
+
+The idea of equally likelihood of the outcomes is one of the most common mistakes that people make when calculating and interpreting probability. Be sure to carefully think through whether the outcomes you're counting are equally likely!
+
+
+\section{Finding theoretical probabilities}
+Once we have our outcomes set up in our sample space so that they are equally likely, calculating the theoretical probability is the same as calculating the experimental probability, except we use the ideal or abstract reasoning instead of the results of an experiment.
+\begin{theorem}
+When all of the events in the sample space are equally likely, we calculate the \dfn{theoretical probability} as follows.
+\[
+\frac{\textrm{number of outcomes in the event space}}{\textrm{number of outcomes in the sample space}}
+\]
+\end{theorem}
+
+Let's work through two more example to make sure this formula makes sense.
+\begin{example}
+Let's return to our deck of cards which has $52$ cards with $13$ of them from each suit. The cards also have numbers, so let's calculate the probability that when we draw one card from the deck, we draw either a red card with number $4$ or a black card with number $6$. 
+
+First, we need to decide whether the outcomes are equally likely. If we just draw a card from the deck at random, we don't have any reason to pick any one card over any other card, so we are equally likely to pick any of the cards. This means to count the sample space, we count each one of the equally likely cards. There are $\answer[given]{52}$ total cards in the sample space.
+
+The event space is ``draw a red $4$ or a black $6$'', so to count the number of items in the event space we can list all of the possible outcomes. We have the following.
+
+\begin{center}
+$4$ of hearts, $4$ of diamonds, $6$ of spades, and $6$ of clubs
+\end{center}
+There are a total of $\answer[given]{4}$ outcomes in the event space, so we can now calculate the probability. (Below, enter the numbers we've calculated; don't simplify your answer. You can simplify your final answer later, but to enter the numbers here use the ones we calculated.)
+\[
+\frac{\textrm{number of outcomes in the event space}}{\textrm{number of outcomes in the sample space}} = \frac{\answer[given]{4}}{\answer[given]{52}}
+\]
+\end{example}
+Let's now look at an example to highlight how our counting work can help us with probability.
+\begin{example}
+Let's return to the dice-rolling problem. Remember that Raj had a die with four equal sides, and he rolled it three times. Let's calculate the probability that Raj rolls an even number on each of the three rolls.
+
+First, Raj's die is equally likely to come up with each of the four sides, so the four outcomes $1$, $2$, $3$, and $4$ are all equally likely. When he rolls the die three times, no combination of numbers is more likely than any other combination of numbers, so we can count the total number of three-dice rolls in order to count the sample space. You can look back at your notes from that section or re-calculate: there are $\answer[given]{64}$ total three-dice rolls.
+
+The event space is ``each roll of the dice is even''. So, we need to count the number of rolls where all three are even. On the first roll, there are $2$ even numbers ($2$ and $4$) that could come up. On the second roll, there are still two even numbers, and the same is true for the third roll. You might consider drawing a tree diagram to count the number of such rolls, and we get
+\[
+\answer[given]{2} \times \left ( \answer[given]{2} \times 2 \right ) = 8 \textrm{ rolls where all three are even}.
+\]
+Remember to use the techniques we developed in the previous two sections to explain why we calculate this way, including what you are seeing as the groups and objects.
+
+Now, we are ready to calculate the probability of rolling three even numbers. (Below, enter the numbers we've calculated; don't simplify your answer. You can simplify your final answer later, but to enter the numbers here use the ones we calculated.)
+\[
+\frac{\textrm{number of outcomes in the event space}}{\textrm{number of outcomes in the sample space}} = \frac{\answer[given]{8}}{\answer[given]{64}}
+\]
+
+\end{example}
+
+When we calculate probabilities, we are using our counting skills as well as our meaning of fractions. You can imagine the sample space as a large rectangle. The number of equally likely outcomes in the sample space tells us how many equal pieces to cut the rectangle into (and since they are equally likely, the pieces are all equal sized). Then we shade in the pieces that represent the event space. We use our counting skills to count both the total number of equal pieces (the denominator of the probability) and we use our counting skills again to count the number of shaded pieces (the numerator of our probability).
+
+\section{Multi-stage problems}
+When we calculate probabilities, sometimes we come across situations that are modeled in several stages. It can be very convenient to use a tree diagram to keep track of the various stages. In this case, we record the probabilities on the branches of the tree diagram, and then to calculate the overall probability we multiply the probabilities on each branch. This is a lot like fraction multiplication: when we branch and branch again, we are calculating a fractional group of the original probability. 
+
+\begin{example}
+Let's calculate the probability that Raj rolls three even numbers on his three-dice roll, where the die still has four sides. However, this time, let's separate the rolls into three stages: the first roll, the second roll, and the third roll. 
+
+On the first roll, there are four equally likely sides on the die, and there are two sides that are even. So the probability of rolling an even die is $\answer[given]{\frac{2}{4}}$. Similarly there are two odd sides, so the probability of rolling an odd number is also $\answer[given]{\frac{2}{4}}$. The same is true for each of the other two rolls, so we can now build a tree diagram.
+\begin{image}
+\begin{tikzpicture}
+\draw (0,0)--(3,4) node[right, fill=yellow]{even};
+\draw (0,0)--(3, -4) node[right]{odd};
+\node at (1.5, 2.5) {$\frac{2}{4}$};
+\node at (1.5, -2.5) {$\frac{2}{4}$};
+\draw (4, 4)--(6,6) node[right, fill=yellow]{even};
+\draw (4, 4)--(6, 2) node[right]{odd};
+\draw (4, -4)--(6, -2) node[right]{even};
+\draw (4, -4)--(6, -6) node[right]{odd};
+\node at (4.5, 5.2) {$\frac{2}{4}$};
+\node at (4.5, 2.8) {$\frac{2}{4}$};
+\node at (4.5, -2.8) {$\frac{2}{4}$};
+\node at (4.5, -5.2) {$\frac{2}{4}$};
+\draw (7, 6)--(9,7) node[right, fill=yellow]{even};
+\draw (7, 6)--(9, 5) node[right]{odd};
+\draw (7, -6)--(9, -7) node[right]{even};
+\draw (7, -6)--(9, -5) node[right]{odd};
+\draw (7, 2)--(9,3) node[right]{even};
+\draw (7, 2)--(9, 1) node[right]{odd};
+\draw (7, -2)--(9, -1) node[right]{even};
+\draw (7, -2)--(9, -3) node[right]{odd};
+\node at (8, 7.2) {$\frac{2}{4}$};
+\node at (8, 4.9) {$\frac{2}{4}$};
+\node at (8, 3.2) {$\frac{2}{4}$};
+\node at (8, 0.8) {$\frac{2}{4}$};
+\node at (8, -0.8) {$\frac{2}{4}$};
+\node at (8, -3.2) {$\frac{2}{4}$};
+\node at (8, -4.9) {$\frac{2}{4}$};
+\node at (8, -7.2) {$\frac{2}{4}$};
+\end{tikzpicture}
+\end{image}
+We highlighted the branches where the rolls are all even in the diagram above. We multiply these probabilities together to find the final answer.
+\[
+\answer[given]{\frac{2}{4}} \times \answer[given]{\frac{2}{4}} \times \frac{2}{4} = \frac{8}{64}
+\]
+Happily, we got the same answer as when we directly counted the outcomes!
+
+
+
+\end{example}
+In our previous example, the probabilities on each branch were the same. This isn't always the case! Calculate the probabilities individually at each stage, and then multiply together the ones you want.
+
+
+
+\end{document}

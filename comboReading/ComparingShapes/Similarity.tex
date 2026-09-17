@@ -1,0 +1,189 @@
+\documentclass{ximera}
+
+\input{../preamble.tex}
+
+\title{Similarity}
+\author{Jenny Sheldon}
+
+\begin{document}
+
+\begin{abstract}
+We discuss what it means for two figures to be similar.
+\end{abstract}
+\maketitle
+
+\section{Activities for this section:} 
+\link[Eerily similar]{https://ximera.osu.edu/m4t/elementaryActivities/SemesterTwoPacket/elementaryActivities/ComparingShapes/EerilySimilar}, 
+\link[How tall?]{https://ximera.osu.edu/m4t/elementaryActivities/SemesterTwoPacket/elementaryActivities/ComparingShapes/HowTall}
+
+
+\section{Similarity}
+
+We've arrived at the last stage of this part of our work with comparing and contrasting shapes. Our work started with comparing and contrasting shapes using their properties, which as we've said is very important work in grades K-5. We then worked on comparing and contrasting shapes by talking about when they were the same shape using congruence based on transformations. This work was more related to middle school and high school geometry. Our final stage is to compare and contrast shapes by talking about when they might be the same shape but different sizes, and we'll use the idea of dilations and similarity to talk about these ideas. This work really takes off in middle school and continues into high school. We hope you can see how the K-5 ideas really lay the foundation for this later work!
+
+We talked about reflections, rotations, and translations so that we could use these ideas to define what it meant for two shapes to be congruent to one another. In asking whether two shapes were congruent, we only used basic rigid motions that don't change distances, so dilations were not on the table. We then introduced dilations, and we will use them to define what it means for two shapes to be similar to one another.
+\begin{definition}
+We say that two shapes are \dfn{similar} if we can find a sequence of transformations, including reflections, rotations, translations, and/or dilations, taking the first shape to the second shape.
+\end{definition}
+Informally, we say that two objects are \dfn{similar} if they are the same shape, but (possibly) different sizes. We also refer to one shape as a \dfn{scaled version} of the other, and we often refer interchangeably to similarity and \dfn{scaling}. Mathematically, because we are using a dilation when we consider similar figures, we have that element $r$ that's changing the distances.
+\begin{definition}
+When two objects are similar, each of the lengths in the first figure are multiplied by some factor $r$ to get the corresponding length in the scaled version. We call this factor $r$ the \dfn{linear scale factor}.
+\end{definition}
+When it's clear we are only scaling lengths, we typically call the linear scale factor just a scale factor. Later, we will also scale areas and volumes, and then we will want to distinguish between what's happening with lengths, areas, and volumes.
+
+\begin{example}
+The two quadrilaterals in the example below are similar. Answer the following questions based on the figures' measurements. (The figures are not necessarily drawn to scale; use the measurements given.)
+\begin{image}
+\begin{tikzpicture}
+% First quadrilateral
+\draw[thick] (0,0) -- (3,0) -- (4,2) -- (1,3) -- cycle;
+
+% Second quadrilateral (scaled and translated version of the first one)
+\draw[thick] (5,0) -- (9.5,0) -- (11,3) -- (6.5,4.5) -- cycle;
+
+% Adding labels to the vertices
+\node at (0,0) [below left] {A};
+\node at (3,0) [below right] {B};
+\node at (4,2) [above right] {C};
+\node at (1,3) [above left] {D};
+
+\node at (5,0) [below left] {A'};
+\node at (9.5,0) [below right] {B'};
+\node at (11,3) [above right] {C'};
+\node at (6.5,4.5) [above left] {D'};
+
+%add measurements
+\node at (3.6, 1.8) {$74\degree$};
+\node at (10.8, 1.5) {$9$ cm};
+\node at (1.5, -0.2) {$7$cm};
+\node at (7.5, -0.2) {$10.5$cm};
+
+\end{tikzpicture}
+\end{image}
+Angle $BCD$ measures $74\degree$, side $AB$ measures $7$cm, side $A'B'$ measures $10.5$cm, and side $B'C'$ measures $9$cm.
+
+\begin{question}
+What are the values of each of the following?
+\begin{enumerate}
+\item What is the measure of angle $D'C'B'$? $\answer[given]{74}\degree$
+\item What is the scale factor from the smaller figure to the larger figure? $\answer[given]{1.5}$
+\item What is the length of side $BC$? $\answer[given]{6}$cm
+
+\end{enumerate}
+\end{question}
+Notice in the previous question that the scale factor doesn't have units the way that angles and side lengths do. One way to think about this is that the scale factor is scaling \emph{any} length, no matter the units. Another way to think about it is that the scale factor is the number of groups or copies that we use in multiplication, so that the units are the objects per group and the total objects.
+
+\begin{question}
+If a shape has a wiggly line drawn on it with length $14$ inches, and then we scale this shape using a scale factor of 3, what is the length of the scaled version of the wiggly line?
+\begin{prompt}
+$\answer[given]{42}$ inches
+\end{prompt}
+\end{question}
+
+\end{example}
+
+The fact that all of the lengths in similar figures are scaled by the same scale factor has another consequence. Let's check out another example.
+
+\begin{example}
+Let's start with a rectangle which is $3$cm wide and $5$cm tall, and scale that quadrilateral using a scale factor of $\frac{3}{4}$. Here is a picture of the original and the scaled version.
+
+\begin{image}
+\begin{tikzpicture}
+\draw[thick] (0,0)--(3,0)--(3,5)--(0,5)--(0,0);
+\node[rotate=90] at (-0.2, 2.5) {5cm};
+\node at (1.5, -0.2) {3cm};
+\draw[thick] (5,0)--(7.25,0)--(7.25, 3.75)--(5,3.75)--(5,0);
+\end{tikzpicture}
+\end{image}
+
+
+
+What is the width of the scaled figure? \begin{prompt}$\answer[given]{2.25}$cm\end{prompt}
+
+What is the height of the scaled figure? \begin{prompt}$\answer[given]{3.75}$cm \end{prompt}
+
+
+
+Now, notice that we could also consider the ratio of width to height in this rectangle, and this ratio is $3:5$, or the height is $\frac53$ as much as the width. In terms of a unit rate, we could say that for every unit of the width, there is $\frac53$ of a unit of height. Let's look at the same unit rate, but on the scaled version. How many inches of height do we have on the scaled version per inch of width? Remember that we can calculate this unit rate using ``how many in each group?" division, and since the answer to a division problem can be written as a fraction, we can write the ratio as a fraction to get the unit rate.
+\[
+\frac{\texttt{new height}}{\texttt{new width}} = \frac{\texttt{scale factor * original height}}{\texttt{scale factor * original width}} = \frac{\answer{0.75}\times 5}{\answer{0.75} \times 3} = \frac{5}{3}
+\]
+The scale factor cancels, and we are left with the same ratio of height to width as we had in the original.
+
+\end{example}
+When we calculate the ratio of two parts of the same figure, and then use this ratio to find corresponding parts of a similar figure, we will also call this ratio an \dfn{internal factor}. Notice that the internal factor doesn't have to only refer to height and width; any two lengths can be used. Most problems about similar figures can be solved using either the scale factor or an internal factor. Practice solving problems using both methods!
+
+
+
+
+
+\section{The case of triangles}
+As part of the Congruence section, we said the following. 
+\begin{quote}
+\dots we like to use the fact that triangles have some special properties that make it easier for us to talk about when triangles are congruent. The special thing about triangles is that they are the same \emph{shape} when they have the same \emph{angles}.
+\end{quote}
+I hope that you can see now that this is actually a statement about when two triangles are \emph{similar}: they have the same shape (but perhaps different sizes) when they have the same angles. Here is a more formal way of saying the same thing.
+\begin{theorem}
+Two triangles are similar when two of their angle measurements are congruent. We refer to this as the angle-angle criterion (and sometimes abbreviate it as AA). %note 1166 proves this theorem
+\end{theorem}
+As a reminder, this is a theorem for triangles only; in general it is not enough to just look at the angles of a pair of shapes to determine whether or not they are similar. 
+\begin{question}
+Why do we only need to look at two of the angles of a triangle? 
+\begin{explanation} 
+Remember that we know that the interior angles of any triangle add to $\answer[given]{180}\degree$, so once we know two of the angles we also know the third angle. Once two of the angles are equal, the third angle must also be equal. Algebraically, we are saying that if one triangle has angles with measures $a$, $b$, and $c$ and another triangle has angles with measures $A$, $B$, and $C$, and we know that $a=A$ and $b=B$, we have
+\[
+c = \answer[given]{180} - a - b
+\]
+as well as
+\[
+C = 180 - \answer[given]{A} - B
+\]
+and we also know because $a=A$ and $b=B$ that
+\[
+180 - a - b = 180 - A - B
+\]
+then we must also have $c=C$ as we wanted.
+\end{explanation}
+\end{question}
+
+Identifying similar triangles in the wild can sometimes help us answer questions about the world around us. For instance, there is a legend that an Ancient Greek philosopher, \link[Thales of Miletus]{https://en.wikipedia.org/wiki/Thales_of_Miletus} used the ideas of similar triangles to find the height of Pyramids in Egypt. Here is an example of reasoning that Thales could have used.
+\begin{example}
+Thales took a look at the pyramids and their shadows. He reasoned that the height of the pyramid and the shadow of the pyramid made a right triangle.
+\begin{image}
+\begin{tikzpicture}
+\draw[thick] (0,5)--(0,0)--(3,0);
+\draw (0,0.2)--(0.2,0.2)--(0.2,0);
+\node[rotate=90] at (-0.2, 2.5) {pyramid height};
+\node at (1.5, -0.2) {pyramid shadow};
+\end{tikzpicture}
+\end{image}
+Thales then set up a stick in the ground, perpendicular to the ground, and considered both the stick and the stick's shadow. We'll draw this as well as connect the dots forming two triangles.
+\begin{image}
+\begin{tikzpicture}
+\draw[thick] (0,5)--(0,0)--(3,0);
+\draw (0,0.2)--(0.2,0.2)--(0.2,0);
+\draw[dashed](0,5)--(3,0);
+\node[rotate=90] at (-0.2, 2.5) {pyramid height};
+\node at (1.5, -0.2) {pyramid shadow};
+\draw[thick] (5,2.5)--(5,0)--(6.5,0);
+\draw[dashed](5,2.5)--(6.5,0);
+\draw (5,0.2)--(5.2, 0.2)--(5.2,0);
+\node[rotate=90] at (4.8, 1) {stick height};
+\node at (5.75, -0.2) {stick shadow};
+\end{tikzpicture}
+\end{image}
+Next, Thales reasoned that the sun rays forming the shadow of each object were roughly \wordChoice{\choice{perpendicular} \choice[correct]{parallel}} to one another, so the angles formed by the object and the sun rays in each triangle must be equal. In the figure, these are the angles at the top of each triangle. We also have a right angle in each triangle, so we can use the \wordChoice{\choice{SAS}\choice{AAS}\choice[correct]{AA}} criterion to say that these two triangles are similar, because two of their angles have equal measure.
+
+Now, Thales could measure the length of the stick and the length of the shadow as well as the pyramid's shadow, and use this information to calculate the height of the pyramid.
+
+\end{example}
+Most people actually think that Thales measured the length of the pyramid's shadow when the height of the stick was equal to the stick's shadow length, or in other words when Thales knew that the triangles were congruent. In fact, in some versions of the story, Thales uses his own height instead of a stick. However, we chose to use similar triangles to illustrate a more general argument.
+
+\begin{question}
+Pause and think: where do you see similar triangles in your every-day life?
+\begin{freeResponse}
+Write some thoughts here!
+\end{freeResponse}
+\end{question}
+
+\end{document}

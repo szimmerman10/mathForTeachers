@@ -1,0 +1,257 @@
+\documentclass{ximera}
+
+\input{../preamble.tex}
+
+\title{The Pythagorean Theorem}
+\author{Jenny Sheldon}
+
+\begin{document}
+
+\begin{abstract}
+We discuss the Pythagorean Theorem.
+\end{abstract}
+\maketitle
+
+\section{Activities for this section:} 
+\link[The Pythagorean Theorem]{https://ximera.osu.edu/m4t/elementaryActivities/SemesterTwoPacket/elementaryActivities/Measurement/PythagoreanTheorem}
+
+
+
+\section{The theorem}
+Now that we understand why length, area, and volume formulas make sense using our four-step process of measurement, we want to investigate a theorem that can help us apply these formulas in more complicated cases.
+
+
+Let's just dive in. We need a little bit of terminology to get started, so here is a right triangle.
+\begin{image}
+\begin{tikzpicture}
+    % Draw the triangle
+    \draw[thick] (0,0) -- (4,0) -- (0,3) -- cycle;
+    
+    % Label the sides
+    \node at (2, -0.3) {\( a \)};
+    \node at (-0.3, 1.5) {\( b \)};
+    \node at (2, 1.8) {\( c \)};
+    
+    % Label the angles
+    \node at (-0.2,-0.2) {C};
+    \node at (4.2, -0.2) {B};
+    \node at (-0.2, 3.2) {A};
+    
+    % Draw the right angle box
+    \draw (0,0) rectangle (0.3,0.3);
+\end{tikzpicture}
+\end{image}
+\begin{definition}
+When working with a right triangle, we call the longest side of the triangle, which is across from the right angle, the \dfn{hypotenuse}. In the image above, the hypotenuse is side $AB$ with length $c$.
+
+When working with a right triangle, we call the two shorter sides of the triangle, or the two sides which are not the hypotenuse, the \dfn{legs} of the triangle. In the image above, the legs are sides $AC$ and $CB$ with lengths $b$ and $a$, respectively.
+\end{definition}
+
+\begin{theorem}
+[The Pythagorean Theorem] In a right triangle which has legs of lengths $a$ and $b$ and hypotenuse of length $c$, it's true that
+\[
+a^2 + b^2 = c^2.
+\]
+\end{theorem}
+
+We will look at one proof of this theorem, but before we do so, it's very important to notice a few things. They are so important we'll put them in a bulleted list.
+\begin{itemize}
+	\item The Pythagorean Theorem is only true for right triangles. In your explanations, it's important to be clear that you are using a right triangle before you use this theorem.
+	\item The legs in the Pythagorean Theorem can be listed in any order, but the hypotenuse length has to go on the other side of the equals sign from the legs. We can't mix up where the $a$, $b$, and $c$ go in the theorem! In your explanations, it's important to point out which side is the hypotenuse and how you are calculating with it.
+\end{itemize}
+
+So why is the theorem true? We will look at one explanation in class, so here is a different one.
+\begin{explanation}
+We start with a right triangle whose legs have lengths $a$ and $b$ and whose hypotenuse has length $c$.
+\begin{image}
+\begin{tikzpicture}
+\draw[thick] (0,0)--(0,2.4)--(1,0)--(0,0);
+\node[below] at (0.5,0) {$a$};
+\node[left] at (0,1.2){$b$};
+\node[right] at (0.5, 1.3) {$c$};
+\draw (0,0.2)--(0.2,0.2)--(0.2,0);
+\node at (0.1, 1.9) {$1$};
+\node at (0.75, 0.2) {$2$};
+\end{tikzpicture}
+\end{image}
+We have also labeled the angles $1$ and $2$ in the picture which are not the right angle. We are going to need the fact that
+\[
+1 + 2 = \answer[given]{90}\degree
+\]
+which we got in a previous section from the fact that
+\[
+1 + 2 + 90\degree = 180\degree
+\]
+because the interior angles in a triangle add up to $180\degree$.
+
+Next, we will draw a square whose side length is $c$.
+\begin{image}
+\begin{tikzpicture}
+\draw[thick] (0,0)--(2.6,0)--(2.6,2.6)--(0,2.6)--(0,0);
+\node[below] at (1.3,0) {$c$};
+\end{tikzpicture}
+\end{image}
+Since the side length of the square is $c$, we can fit the triangle inside the square by matching the hypotenuse of the triangle with the side of the square. Here is what one triangle looks like inside the square.
+\begin{image}
+\begin{tikzpicture}
+\draw[thick] (0,0)--(2.6,0)--(2.6,2.6)--(0,2.6)--(0,0);
+\draw (0,0)--(2.2154, 0.923)--(2.6,0);
+\node[below] at (1.3,0) {$c$};
+\node at (1.4,0.4) {$b$};
+\node at (2.3, 0.4) {$a$};
+\begin{scope}[shift={(2.2154,0.923)},rotate=22.62]
+        \draw (0,0) -- ++(-0.1,0) -- ++(0,-0.1) -- ++(0.1,0) -- cycle;
+    \end{scope}
+\end{tikzpicture}
+\end{image}
+Now let's put all four triangles there. There will be one triangle attached by its hypotenuse to each of the four sides of the square.
+\begin{image}
+\begin{tikzpicture}
+\draw[thick] (0,0)--(2.6,0)--(2.6,2.6)--(0,2.6)--(0,0);
+\draw (0,0)--(2.2154, 0.923);
+\draw (2.6,0)--(1.677, 2.2154);
+\draw (2.6, 2.6)--(0.3846, 1.677);
+\draw (0, 2.6)--(0.923, 0.3846);
+\node[below] at (1.3,0) {$c$};
+
+\begin{scope}[shift={(0.923, 0.3846)},rotate=292.62]
+        \draw (0,0) -- ++(-0.1,0) -- ++(0,-0.1) -- ++(0.1,0) -- cycle;
+    \end{scope}
+\begin{scope}[shift={(2.2154,0.923)},rotate=22.62]
+        \draw (0,0) -- ++(-0.1,0) -- ++(0,-0.1) -- ++(0.1,0) -- cycle;
+    \end{scope}
+\begin{scope}[shift={(0.3846, 1.677)},rotate=202.62]
+        \draw (0,0) -- ++(-0.1,0) -- ++(0,-0.1) -- ++(0.1,0) -- cycle;
+    \end{scope}
+\begin{scope}[shift={(1.677, 2.2154)},rotate=112.62]
+        \draw (0,0) -- ++(-0.1,0) -- ++(0,-0.1) -- ++(0.1,0) -- cycle;
+    \end{scope}
+\end{tikzpicture}
+\end{image}
+We know that the triangles fit into the square exactly like this because each corner of the big square is formed by angle $1$ and angle $2$ from above. We know that angles $1$ and $2$ add up to $90\degree$, so we can fit the triangles inside this square exactly.
+
+Next, we see the piece in the center looks like a square. The definition of a square is that it is 
+a quadrilateral with four sides of equal length and four right angles. We can see that it has four sides, 
+and the fact that it has four right angles we can also see in the figure. Each side of the central figure 
+is made from a straight side of one triangle by cutting off a piece using the right angle of another triangle. 
+In other words, we are taking away a right angle from a 
+\wordChoice{\choice[correct]{straight} \choice{right} \choice{supplementary} \choice{complementary}} angle, 
+leaving us with a right angle for the central figure's corner. All four angles are formed this way, so all four 
+angles are right angles.
+
+We now need to take a look at the sides of the central figure to determine their length. As we said before, 
+the central figure's side is made by taking one side of the right triangle (the side of length $b$) and 
+cutting off a piece of that side using the other leg of the triangle. In other words, the piece we cut off is 
+length $\answer[given]{a}$. Let's label one of the 
+triangles in the figure to help us see what's happening.
+\begin{image}
+\begin{tikzpicture}
+\draw[thick] (0,0)--(2.6,0)--(2.6,2.6)--(0,2.6)--(0,0);
+\draw (0,0)--(2.2154, 0.923);
+\draw (2.6,0)--(1.677, 2.2154);
+\draw (2.6, 2.6)--(0.3846, 1.677);
+\draw (0, 2.6)--(0.923, 0.3846);
+\node[below] at (1.3,0) {$c$};
+\node[rotate=22] at (1.4,0.4) {$b$};
+\node[rotate=22] at (0.4, 0.3) {$a$};
+\node[rotate=22] at (1.5, 0.8) {$b-a$};
+
+\begin{scope}[shift={(0.923, 0.3846)},rotate=292.62]
+        \draw (0,0) -- ++(-0.1,0) -- ++(0,-0.1) -- ++(0.1,0) -- cycle;
+    \end{scope}
+\begin{scope}[shift={(2.2154,0.923)},rotate=22.62]
+        \draw (0,0) -- ++(-0.1,0) -- ++(0,-0.1) -- ++(0.1,0) -- cycle;
+    \end{scope}
+\begin{scope}[shift={(0.3846, 1.677)},rotate=202.62]
+        \draw (0,0) -- ++(-0.1,0) -- ++(0,-0.1) -- ++(0.1,0) -- cycle;
+    \end{scope}
+\begin{scope}[shift={(1.677, 2.2154)},rotate=112.62]
+        \draw (0,0) -- ++(-0.1,0) -- ++(0,-0.1) -- ++(0.1,0) -- cycle;
+    \end{scope}
+\end{tikzpicture}
+\end{image}
+When we take away a length of $a$ from a length of $b$, we get the length $\answer[given]{b-a}$.
+
+
+Check for yourself: is each side of the square formed in the same way?
+\begin{multipleChoice}
+\choice[correct]{Yes}
+\choice{No}
+\end{multipleChoice}
+
+
+So, each side has the same length and all four corners are right angles, so the figure in the middle is, by definition, a square.
+
+Now that we know what figures we are dealing with, let's remember that we started with a big square with all sides of length $c$. Since a square is a rectangle, we can use the area formula for rectangles to find the area of this square, and we get $\answer[given]{c^2}$.
+
+But we also formed the square using four triangles and a little square. The triangles each have a base length of $a$ and a height of $b$, so the area of each triangle is $\answer[given]{\frac{1}{2}ab}$. The little square in the middle is also a rectangle with side lengths $b-a$, so we can use the rectangle area formula to see that the area of the central square is $(b-a)\times (b-a) = (b-a)^2$. Let's put this together in an equation using our additivity principle, which says that when we put together pieces of area without gaps or overlaps, we add those pieces of area together.
+\[
+\textrm{big square's area} = \textrm{four triangles of area} + \textrm{central square's area}
+\]
+Now substituting our formulas for each piece of area, we get the following.
+\[
+c^2 = 4 \times \left (\frac12 a b \right) + (b-a)(b-a)
+\]
+We multiply out both pieces on the right hand side of this equation.
+\[
+c^2 = 2ab + (b^2 - 2ab + a^2)
+\]
+We have a $+2ab$ and a $-2ab$ on the right hand side, so those will cancel.
+\[
+c^2 = b^2 + \answer{a^2}
+\]
+Since addition is commutative, this is the formula we wanted for the Pythagorean Theorem. Great work!
+\end{explanation}
+This is only one proof of the Pythagorean Theorem; there are many more. In fact, the \link[Guinness Book of World Records]{https://www.guinnessworldrecords.com/world-records/66189-most-proofs-of-pythagoras-theorem-published} mentions a textbook published in 1940 that contained 370 different proofs of this theorem! Some people think it's silly to have more than one proof of a theorem, but having many different kinds of proofs gives us different kinds of insights into the theorem and the broader field of mathematics. Plus, some people think that coming up with new proofs is fun!
+
+
+
+Kids learn about the Pythagorean Theorem in middle school, but we like to talk about it here because it helps us to really think about moving and additivity in a different way than we have previously, and it gives us more interesting length and area problems to solve.
+
+\section{The converse}
+
+Another interesting fact about the Pythagorean Theorem is that its converse is also true. (Remember: we talked about what it means to be a ``converse'' when we talked about the Parallel Postulate.) As we said before, just because a theorem is true doesn't necessarily mean that its converse or opposite is true, but it is in this case.
+
+
+\begin{theorem}[Converse of the Pythagorean Theorem]
+If a triangle has side lengths $a$, $b$, and $c$ for which it's also true that
+\[
+a^2 + b^2 = c^2,
+\]
+then that triangle must be a right triangle.
+\end{theorem}
+
+\begin{question}
+Is a triangle whose side lengths are 12 inches, 37 inches, and 35 inches a right triangle?
+\begin{multipleChoice}
+\choice[correct]{Yes}
+\choice{No}
+\end{multipleChoice}
+\begin{feedback}[correct] Notice that we had to rearrange the side lengths to make these make sense. The hypotenuse should always be the longest side of a right triangle, so we have to have 37 inches as the ``$c$'' value here. We see that $12^2 + 35^2 = 37^2$ so the converse of the Pythagorean theorem says this is a right triangle.
+\end{feedback}
+\end{question}
+
+\begin{question}
+Is a triangle whose side lengths are 15 inches, 9 inches, and 8 inches a right triangle?
+\begin{multipleChoice}
+\choice{Yes}
+\choice[correct]{No}
+\end{multipleChoice}
+\begin{feedback}[correct] Notice that we again had to rearrange the side lengths to make these make sense. The hypotenuse should always be the longest side of a right triangle, so we have to have 15 inches as the ``$c$'' value here. We see that $8^2 + 9^2 \neq 15^2$ so the converse of the Pythagorean theorem says this is not a right triangle.
+\end{feedback}
+\end{question}
+We won't prove the converse of the Pythagorean theorem here, but you can try to do this on your own if you'd like. A pretty famous proof actually uses the Pythagorean theorem to prove its converse (along with side-side-side congruence of triangles).
+
+A set of three numbers which form the sides of a right triangle are often called a \dfn{Pythagorean triple}. So, for instance, $(12, 35, 37)$ would be such an example, along with the famous $(3, 4, 5)$. Knowing a few basic Pythagorean triples is useful for creating problems for your future students when you know you want them to be working with a right triangle. It's the converse of the Pythagorean theorem that makes this work!
+
+
+\section{A little history}
+One thing you might notice about the Pythagorean theorem is that we typically think about it as relating some lengths: the side lengths of a right triangle. But our proof of the theorem was actually about some \emph{areas} that are equal. In fact, this is the way that Euclid and other Ancient Greek mathematicians would have thought about the theorem!
+
+The Pythagorean Theorem is named for an Ancient Greek philosopher and mathematician named \link[Pythagoras]{https://en.wikipedia.org/wiki/Pythagoras} who lived around 500 BCE. However, most people think that it wasn't actually Pythagoras who proved this theorem! Pythagoras ran a school of mathematics which appears to modern eyes a bit more like a cult of mathematics, and so sometimes mathematics that came from his school was credited to him even though it was probably one of his students who actually did the mathematical work of proving the theorem. In fact, women and men were both part of the Pythagorean school, and so it's possible that a female mathematician played a part in proving this theorem. We'll never know for sure!
+
+Another interesting historical point about this theorem is the fact that the theorem was actually well known before the Pythagorean school ever worked on proving it. There are some legends that the Ancient Egyptians used the converse of the Pythagorean theorem to make sure the corners of the pyramids were exactly square, and the Ancient Babylonian mathematicians also likely knew the theorem. So, if you've ever had someone else take credit for some work that was yours, you have something in common with people other than Pythagoras who worked hard thinking about this theorem!
+
+
+
+\end{document}

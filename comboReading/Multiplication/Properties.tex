@@ -1,0 +1,449 @@
+\documentclass{ximera}
+
+\input{../preamble.tex}
+
+
+\title{Properties}
+\author{Jenny Sheldon}
+
+\begin{document}
+
+\begin{abstract}
+We investigate properties of arithmetic.
+\end{abstract}
+\maketitle
+
+
+
+
+
+\section{The equals sign}
+
+Before we get started with the properties of arithmetic, it's important to understand the role of the equals sign in mathematics as well as one way the equals sign is frequently misunderstood by children. 
+
+When we are doing arithmetic and algebra, we use the equals sign to mean that the two quantities on either side of the symbol are the same. For instance, we could write
+\[
+5 = 5
+\]
+because the quantity on the left hand side is the same as the quantity on the right hand side. However, the two quantities don't have to look the same as long as they have the same value. For instance, 
+\[
+10 + 2 = 15 - 3
+\]
+is a true statement because the two things on either side of the equals sign are the same value. Notice that we said that the previous statement was true. It's helpful to work with even very young children on whether statements about the equals sign are true or false, since this kind of thinking helps when we start including variables in these equations. For instance, we could say that 
+\[
+7 = 9
+\]
+is a false statement, because the two sides of the equals sign do not have the same value here. On the other hand, if I write an equation like
+\[
+9 + \square = 11
+\]
+this statement is true if the square shape is equal to $2$, but false if the square shape is not equal to $2$. Another very helpful way to think about the equals sign is to think about the two sides as balanced. In our previous example, we can think about how to find the value of the square shape by thinking about what value $9$ needs to balance out $11$. There are more interesting problems we can ask where balancing is helpful for solving, like this one.
+\[
+46 + \square + 1 = 47 + 12 
+\]
+In this case, the $46 + 1$ on the left hand side exactly balances the $47$ on the right hand side, so the square shape must exactly balance the $12$. In other words, $\square = 12$ would solve this problem. Kids who are learning to conceptualize the equals sign as balancing the two sides can draw a picture of a pan balance like this one.
+\begin{image}
+\begin{tikzpicture}
+\draw[thick] (0,0)--(4,0);
+\draw[thick] (6,0)--(10,0);
+\draw[thick] (2,0)--(2, -0.5)--(8, -0.5)--(8,0);
+\draw[thick] (2,-2)--(5,-0.5)--(8,-2);
+\foreach \x in {0.5, 0.7, 0.9, 1.1, 1.3, 1.5, 1.7, 1.9, 2.1, 8.4} \draw[thick] (\x, 0.1)--(\x+0.1, 0.1)--(\x+0.1, 0.2)--(\x, 0.2)--(\x, 0.1);
+\draw[step=0.1, thick] (7.5, 0.1) grid (7.601, 1.1);
+\draw[thick] (3, 0.1)--(3.8, 0.1)--(3.8, 0.6)--(3, 0.6)--(3, 0.1);
+\node at (3.4, 0.35) {$x$};
+\end{tikzpicture}
+\end{image}
+In the picture, we see a balance with two sides. On the left hand side we have $9$ small boxes and a bigger box labeled $x$, and on the right hand side we have one bundle of small boxes and one individual small box. So this balance could represent the equation $9 + x = 11$ or $9 + \square = 11$, and then we could think about replacing the $x$ with two little squares to exactly balance the two sides.
+
+Talking about the equals sign as balancing the two sides of an equation is helpful to counteract the most common misconception that children have about the equals sign, which is that the equals sign tells us to calculate the answer to an arithmetic problem. For instance, with the equation
+\[
+18 + 3 = \square + 18
+\]
+some children might answer that we would fill in the box with the number $21$, because that's what we get when we add $18 + 3$. However, if we fill in the square with $21$, then the right hand side of the equals sign would have $21 + 18$, which does not balance with $18 + 3$. It's important to pay attention to the way that you write the equals sign to help children avoid this misconception. Another tool to help children with these ideas is to place the box in different positions in the equation, both on the right and the left hand side at different times.
+
+
+
+
+\section{The commutative property}
+
+The equals sign is important when it comes to properties of arithmetic because the properties are statements about two things that are equal to one another. It's easy to focus on what's happening with the letters or numbers when we state the properties, but we would like to encourage you to try to pay attention to the equals sign the most. That's what the properties are really all about. Let's see how this works by looking again at the commutative property of addition, which we stated in the section about addition and subtraction.
+
+\begin{definition}
+The \dfn{commutative property of addition} says that we can add two numbers in either order and get the same total. In mathematical symbols, this means that for any two numbers $A$ and $B$, we have
+\[
+A + B = B + A.
+\]
+\end{definition}
+
+The commutative property of addition is telling us that $A+B$ balances with $B+A$: we get the same quantity either way. Let's use a story problem to see why this makes sense. 
+
+\begin{example}
+Compare and contrast the two story problems below.
+
+Story $1$: \emph{Tyler is making a design in art class using $8$ rubber bands. His friend Omar is making a different design using $11$ rubber bands. How many rubber bands are Tyler and Omar using all together?}
+
+Story $2$: \emph{Omar is making a design in art class using $11$ rubber bands. His friend Tyler is making a different design using $8$ rubber bands. How many rubber bands are Omar and Tyler using all together?}
+
+First, pay attention to the fact that while these two stories seem very similar at the start, they are actually different. Tyler and Omar are making different designs in each of the stories, because they don't have the same number of rubber bands. However, both stories are asking us to combine two sets together: Tyler's rubber bands and Omar's rubber bands, and asking for the total number of rubber bands. That means that we should use \wordChoice{\choice[correct]{addition} \choice{subtraction} \choice{multiplication} \choice{something else}} to solve each problem. The meaning of addition is to combine two quantities, and that's what we are doing here. 
+
+Remembering that the first number in our expression should be the first quantity we use to solve, we can see that Story $1$ could be solved by the expression
+\[
+\answer[given]{8} + \answer[given]{11}
+\]
+while Story $2$ could be solved by the expression
+\[
+\answer[given]{11} + \answer[given]{8}.
+\]
+The two different stories have different expressions corresponding to how we might think about solving them. But let's take a look at a picture that might help us solve these stories. We will start with Story $1$ and draw $8$ circles to represent Tyler's rubber bands, and then $11$ larger circles to represent Omar's rubber bands.
+
+\begin{image}
+\begin{tikzpicture}
+\foreach \x in {0, 1, 2, 3} \foreach \y in {0, 1} \draw[thick, purple] (\x, \y) circle (2pt);
+\foreach \x in {7, 8, 9, 10, 11} \foreach \y in {0, 1} \draw[very thick, pink] (\x, \y) circle (5pt);
+\draw[very thick, pink] (12, 0) circle (5pt);
+\node[below] at (1.5, -0.2) {Tyler's rubber bands};
+\node[below] at (9, -0.2) {Omar's rubber bands};
+\end{tikzpicture}
+\end{image}
+To solve this story, we put together all of the rubber bands into one pile, and count the total. However, we could use this exact same picture to model Story $2$, if we simply swapped the positions of Tyler's rubber bands and Omar's rubber bands.
+\begin{image}
+\begin{tikzpicture}
+\foreach \x in {7, 8, 9, 10} \foreach \y in {0, 1} \draw[thick, purple] (\x, \y) circle (2pt);
+\foreach \x in {-2, -1, 0, 1, 2, 3} \foreach \y in {0, 1} \draw[very thick, pink] (\x, \y) circle (5pt);
+\draw[very thick, pink] (4, 0) circle (5pt);
+\node[below] at (9, -0.2) {Tyler's rubber bands};
+\node[below] at (1.5, -0.2) {Omar's rubber bands};
+\end{tikzpicture}
+\end{image}
+We didn't gain any rubber bands or lose any rubber bands by just swapping the positions of them in our picture, so even though we have two different expressions for the two stories, we are convinced that the totals should be equal. Since we can write the total for Story $1$ as $8+11$ and the total for Story $2$ as $11+8$, our picture shows us that
+\[
+8+11 \answer[given]{=} 11 + 8.
+\]
+
+\end{example}
+While we worked through this example with specific numbers, we hope that you can see that we could make a similar story for any other numbers, and just swapping the rubber bands isn't going to change the total. No matter what numbers we use, $A+B$ will always be equal to $B+A$. 
+
+We also have a commutative property for multiplication.
+
+\begin{definition}
+The \dfn{commutative property of multiplication} says that we can multiply two numbers in either order and get the same total. In mathematical symbols, this means that for any two numbers $A$ and $B$, we have
+\[
+A \times B = B \times A.
+\]
+\end{definition}
+
+
+
+We'll use another example to explain why this property makes sense with our meaning of multiplication. Again, the main thing that we need to show is that these two expressions are equal to one another.
+
+\begin{example}
+Penelope drew an array of stars which is $7$ stars wide and $2$ stars tall. We would like to count the number of stars in her array. First, we draw a picture of the stars.
+
+\begin{image} \begin{tikzpicture}
+\foreach \i in {0, 1, 2, 3, ..., 6} \foreach \y in {0, 1} 
+			 \node[draw, star, star points=5, star point ratio=0.5] at (\i, \y) {};
+\end{tikzpicture}\end{image}
+
+We would like to use multiplication in order to count the number of stars in Penelope's array, so we need to think in terms of groups and objects per group. Since we are trying to count the total number of stars, we will let one object be \wordChoice{\choice{one row} \choice{one column} \choice[correct]{one star} \choice{one array}}. To organize the stars into equal groups, let's use one group as one row. Let's draw the array again with the groups circled.
+
+\begin{image} \begin{tikzpicture}
+\foreach \i in {0, 1, 2, 3, ..., 6} \foreach \y in {0, 1} 
+			 \node[draw, star, star points=5, star point ratio=0.5] at (\i, \y) {};
+\foreach \y in {0, 1} \draw[thick, cyan] (3, \y) ellipse (5cm and 0.5cm);
+\end{tikzpicture}\end{image}
+
+We can now use our meaning of multiplication to count the total number of stars. We know we have $\answer[given]{2}$ groups or rows, with $\answer[given]{7}$ objects or stars in each group, so the total number of stars is
+\[
+2 \times \answer[given]{7}.
+\]
+However, this is not the only way that we can count the total number of stars. We still want to count the stars, so we will keep one object as one star. But now we want to use one group as one column. Let's draw the array again, but with the columns circled as the groups.
+
+\begin{image} \begin{tikzpicture}
+\foreach \i in {0, 1, 2, 3, ..., 6} \foreach \y in {0, 1} 
+			 \node[draw, star, star points=5, star point ratio=0.5] at (\i, \y) {};
+\foreach \x in {0, 1, 2, ..., 6} \draw[thick, orange] (\x, 0.5) ellipse (0.5cm and 1cm);
+\end{tikzpicture}\end{image}
+With this arrangement of groups, we have a total of $\answer[given]{7}$ groups or columns with $\answer[given]{2}$ objects or stars per group. So the total number of stars is 
+\[
+7 \times \answer[given]{2}.
+\]
+However, both of these expressions count the exact same array. We didn't leave out any stars, and we didn't add any stars. No matter how we count all of the stars in the array, we have to be getting the same answer. This tells us that the two expressions we used to count the total number of stars must be equal, or in symbols we have
+\[
+7 \times 2 \answer[given]{=} 2 \times 7.
+\]
+\end{example}
+
+As with our example for the commutative property of addition, we have used specific numbers to work through this example. Practice this same explanation with at least one other pair of numbers so that you feel convinced that a similar argument will work for any two numbers $A$ and $B$. In other words, the equals sign in the commutative property makes sense and agrees with our meaning of multiplication.
+
+Before we move on to the next property, notice that we have given very specific names to these properties: the commutative property of addition and the commutative property of multiplication. The names of the properties are designed to help you to understand what the property is telling you. For instance, the commutative property of addition tells you that when you are using addition, the numbers are allowed to commute, or change places. As we go through the rest of the properties, pay attention to what their names are telling you! Because the full names of the properties can be long, you can write just ``the commutative property'' if the operation you are using is clear.
+
+
+\section{The associative property}
+
+For our next property, we again have one version for addition and one version for multiplication.
+
+\begin{definition}
+The \dfn{associative property of addition} says that we can regroup numbers in different pairs (without changing the order of the numbers) and get the same sum when we add. In mathematical symbols, this means that for any three numbers $A$, $B$, and $C$, we have
+\[
+(A + B) + C = A + (B+C)
+\]
+\end{definition}
+
+\begin{definition}
+The \dfn{associative property of multiplication} says that we can regroup numbers in different pairs (without changing the order of the numbers) and get the same total when we multiply. In mathematical symbols, this means that for any three numbers $A$, $B$, and $C$, we have
+\[
+(A \times B) \times C = A \times (B\times C)
+\]
+\end{definition}
+
+The name of the associative property is again reminding you what the property is telling you. For instance, the associative property of multiplication tells us that it doesn't matter which two numbers we associate first when we multiply, we will still get the same answer at the end of our calculation. Also notice that the numbers $A$, $B$, and $C$ are written in the same order on both sides of the equals sign in the associative property. That is, we didn't exchange the order of the numbers in our calculation but we did exchange the order of the calculations.
+
+We discussed the associative property of addition in the addition section, and we encourage you to stop here and draw a picture in your notes like we did for the commutative property of addition above to explain why this property makes sense. Don't forget to write a story problem to help you justify your work with a picture. Now, let's take a look at how we might justify the associative property of multiplication.
+
+\begin{example}
+Quinn has drawn a design of stars. This design is made out of squares of four stars. The squares are then arranged in a $3$-by-$5$ array. Here is a picture of the full design.
+\begin{image}
+\begin{tikzpicture}
+\foreach \x in {0, 1, 3, 4, 6, 7, 9, 10, 12, 13} \foreach \y in {0, 1, 3, 4, 6, 7} \node[draw, star, star points=5, star point ratio=0.5] at (\x, \y) {};
+\end{tikzpicture}
+\end{image}
+
+Here we would like to count the number of stars in the array in two different ways which are designed to illustrate the associative property. The first way will correspond with the expression $(3 \times 5) \times 4$ and the second way will correspond with the expression $3 \times (5 \times 4)$. In order to do this, we have to pay attention to the meaning of the parenthesis in the expression. Mathematicians have decided that when we use parentheses in an expression, the expression inside the parentheses needs to be evaluated first. (This is actually a convention, which means it's a choice we made to help us interpret expressions in the same way as any other person who looks at the same expression.) So, when we look at $(3 \times 5) \times 4$, we need to evaluate the $3 \times 5$ and then multiply that by $4$. Aligning with our meaning of multiplication, the $3 \times 5$ in parentheses means that we will consider $3 \times 5$ to be the number of groups, and $4$ to be the number of objects in one group. 
+
+Let's start with the objects. We are trying to count the number of stars in the design, so one object should be \wordChoice{\choice{one row} \choice{one column} \choice[correct]{one star} \choice{one array}}. We need to arrange the stars so that there are four stars per group, and so it makes sense to use the squares of four stars each for these groups. Let's draw boxes around these groups of four.
+\begin{image}
+\begin{tikzpicture}
+\foreach \x in {0, 1, 3, 4, 6, 7, 9, 10, 12, 13} \foreach \y in {0, 1, 3, 4, 6, 7} \node[draw, star, star points=5, star point ratio=0.5] at (\x, \y) {};
+\foreach \x in {0, 3, 6, 9, 12} \foreach \y in {0, 3, 6} \draw[thick, blue] (\x-0.2, \y-0.2)--(\x+1.2, \y-0.2)--(\x+1.2, \y+1.2)--(\x-0.2, \y+1.2)--(\x-0.2, \y-0.2);
+\end{tikzpicture}
+\end{image}
+
+Now, how many of these square groups do we count? We could count them individually and see that there are $\answer[given]{15}$ total groups. But we want to write this as $3 \times 5$, so we need to organize our groups into equal sets. Let's use the rows as groups, and circle them in our picture.
+
+\begin{image}
+\begin{tikzpicture}
+\foreach \x in {0, 1, 3, 4, 6, 7, 9, 10, 12, 13} \foreach \y in {0, 1, 3, 4, 6, 7} \node[draw, star, star points=5, star point ratio=0.5] at (\x, \y) {};
+\foreach \x in {0, 3, 6, 9, 12} \foreach \y in {0, 3, 6} \draw[thick, blue] (\x-0.2, \y-0.2)--(\x+1.2, \y-0.2)--(\x+1.2, \y+1.2)--(\x-0.2, \y+1.2)--(\x-0.2, \y-0.2);
+\foreach \y in {0.5, 3.5, 6.5} \draw[thick, olive] (6.5, \y) ellipse (8cm and 1.5cm);
+\end{tikzpicture}
+\end{image}
+We see $\answer[given]{3}$ rows with $\answer[given]{5}$ square groups in each row. In other words, we are thinking of one group as one row and one object as one square group. Notice that the square groups have two roles in this problem: one as groups of stars and one as objects in the rows. So, the total number of square groups is 
+\[
+3 \times \answer[given]{5}
+\]
+meaning that our total number of stars is 
+\[
+\left ( 3 \times \answer[given]{5} \right ) \times \answer[given]{4}.
+\]
+There are three rows of square groups, with five square groups in each row. Each of the square groups contains four stars, and we use multiplication to count the total number of stars in the picture.
+
+To see that we can also count the stars using the expression $3 \times (5 \times 4)$, according to the parentheses we need to interpret this expression as $3$ groups with $(5 \times 4)$ stars in each group. In this case, then, let's start by identifying the three groups. We can use the rows like we did in our last picture, so that one row is one group.
+
+\begin{image}
+\begin{tikzpicture}
+\foreach \x in {0, 1, 3, 4, 6, 7, 9, 10, 12, 13} \foreach \y in {0, 1, 3, 4, 6, 7} \node[draw, star, star points=5, star point ratio=0.5] at (\x, \y) {};
+%\foreach \x in {0, 3, 6, 9, 12} \foreach \y in {0, 3, 6} \draw[thick, blue] (\x-0.2, \y-0.2)--(\x+1.2, \y-0.2)--(\x+1.2, \y+1.2)--(\x-0.2, \y+1.2)--(\x-0.2, \y-0.2);
+\foreach \y in {0.5, 3.5, 6.5} \draw[thick, olive] (6.5, \y) ellipse (8cm and 1.5cm);
+\end{tikzpicture}
+\end{image}
+Next, we need to count the number of stars in each group. We could just count them and see that there are $\answer[given]{20}$ stars per group, but in order to match the expression we are trying to find we need to organize these $20$ stars into $5$ subgroups with $4$ stars per subgroup. Let's isolate just one of the groups for now to see if we can organize the stars as we're describing.
+\begin{image}
+\begin{tikzpicture}
+\foreach \x in {0, 1, 3, 4, 6, 7, 9, 10, 12, 13} \foreach \y in {0, 1}  \node[draw, star, star points=5, star point ratio=0.5] at (\x, \y) {};
+%\foreach \x in {0, 3, 6, 9, 12} \foreach \y in {0, 3, 6} \draw[thick, blue] (\x-0.2, \y-0.2)--(\x+1.2, \y-0.2)--(\x+1.2, \y+1.2)--(\x-0.2, \y+1.2)--(\x-0.2, \y-0.2);
+\foreach \y in {0.5} \draw[thick, olive] (6.5, \y) ellipse (8cm and 1.5cm);
+\end{tikzpicture}
+\end{image}
+The stars inside this group are still organized into the squares of four stars each, so we can put a square around the four stars that we want to group together.
+
+\begin{image}
+\begin{tikzpicture}
+\foreach \x in {0, 1, 3, 4, 6, 7, 9, 10, 12, 13} \foreach \y in {0, 1}  \node[draw, star, star points=5, star point ratio=0.5] at (\x, \y) {};
+\foreach \x in {0, 3, 6, 9, 12} \foreach \y in {0} \draw[thick, blue] (\x-0.2, \y-0.2)--(\x+1.2, \y-0.2)--(\x+1.2, \y+1.2)--(\x-0.2, \y+1.2)--(\x-0.2, \y-0.2);
+\foreach \y in {0.5} \draw[thick, olive] (6.5, \y) ellipse (8cm and 1.5cm);
+\end{tikzpicture}
+\end{image}
+This group inside the circle has $\answer[given]{5}$ subgroups, with $\answer[given]{4}$ stars in each subgroup. So we can count the number of stars just inside this circle using one group as one subgroup and one object as one star, and we see the total number of stars in this circle is $5 \times 4$. All of the original groups (circles) can be organized in this way.
+
+\begin{image}
+\begin{tikzpicture}
+\foreach \x in {0, 1, 3, 4, 6, 7, 9, 10, 12, 13} \foreach \y in {0, 1, 3, 4, 6, 7} \node[draw, star, star points=5, star point ratio=0.5] at (\x, \y) {};
+\foreach \x in {0, 3, 6, 9, 12} \foreach \y in {0, 3, 6} \draw[thick, blue] (\x-0.2, \y-0.2)--(\x+1.2, \y-0.2)--(\x+1.2, \y+1.2)--(\x-0.2, \y+1.2)--(\x-0.2, \y-0.2);
+\foreach \y in {0.5, 3.5, 6.5} \draw[thick, olive] (6.5, \y) ellipse (8cm and 1.5cm);
+\end{tikzpicture}
+\end{image}
+All together then, we have $\answer[given]{3}$ groups (one group is one circle in the picture), and each group has $5 \times 4$ stars in it (one object is one star). In other words, we can count the total number of stars in the design using the expression
+\[
+\answer[given]{3} \times \left ( 5 \times \answer[given]{4} \right ).
+\]
+
+Both of the expressions $(3 \times 5) \times 4$ and $3 \times (5 \times 4)$ count the number of stars in the entire diagram. The diagram didn't change at all when we changed how we thought about the grouping of the stars, so the two expressions must be equal. In other words, 
+\[
+(3 \times 5) \times 4 \answer[given]{=} 3 \times (5 \times 4).
+\]
+\end{example}
+
+As usual, we have worked through one example with specific numbers. Practice with another set of numbers until you are convinced that this property makes sense for any numbers $A$, $B$, and $C$. As with the commutative property, you don't need to write the operation you are using in the name of the property if it's clear from your work. 
+
+
+\section{The distributive property}
+
+The last property that we would like to consider is a little different than the others we have considered. First, its name includes more than one operation, and second, this property has several versions that we can consider.
+
+\begin{definition}
+The \dfn{distributive property of multiplication over addition} tells us that when we have a number multiplied by a sum of numbers, we can instead add the product of the first number with each of the numbers inside the parenthesis. This property is easier to describe with symbols. For any three numbers $A$, $B$, and $C$, the following is a true statement.
+\[
+A \times (B+C) = A \times B + A \times C
+\]
+\end{definition}
+
+Since ``the distributive property of multiplication over addition'' is very long, we often call this simply ``the distributive property''. However, we encourage you to use the longer name of the property to help you remember what you are distributing! Before we look at more versions of this property, let's look at an example to explain why this property makes sense.
+
+\begin{example}
+Jin has drawn a design of shapes. The design is made out of circles and stars in sets. Each set has $4$ circles and $2$ stars, and there are $3$ of these sets. We would like to count how many shapes Jin used to make the entire design.
+
+Let's take a look at the design.
+\begin{image}
+\begin{tikzpicture}
+\foreach \x in {0, 1, 2, 3, 5, 6, 7, 8, 10, 11, 12, 13} \draw[thick] (\x, 0) circle (3pt);
+\foreach \x in {1, 2, 6, 7, 11, 12} \node[draw, star, star points=5, star point ratio=0.5] at (\x, 0.5) {};
+\end{tikzpicture}
+\end{image}
+
+We would like to use some multiplication to count the number of shapes, so the first thing we can do is identify our objects. In this case, one object is \wordChoice{\choice{one star} \choice{one circle} \choice[correct]{one shape} \choice{one design}}. Notice that both the circles and the stars are shapes. Let's first organize the shapes into the three sets. In this case, one group will be one set. Let's draw a circle around each set in the picture.
+
+\begin{image}
+\begin{tikzpicture}
+\foreach \x in {0, 1, 2, 3, 5, 6, 7, 8, 10, 11, 12, 13} \draw[thick] (\x, 0) circle (3pt);
+\foreach \x in {1, 2, 6, 7, 11, 12} \node[draw, star, star points=5, star point ratio=0.5] at (\x, 0.5) {};
+\foreach \x in {1.5, 6.5, 11.5} \draw[thick, magenta] (\x, 0.25) ellipse (2cm and 1cm);
+\end{tikzpicture}
+\end{image}
+
+Now we can see that we have a total of $\answer[given]{3}$ of these groups or sets. Inside each set are $\answer[given]{6}$ shapes, but if we write these shapes as a combination of circles and stars, we might write the expression
+\[
+4 + 2
+\]
+to combine the $4$ circles with the $2$ stars to get $4+2$ shapes in each group. This means that we can write the total number of shapes as
+\[
+\answer[given]{3} \times \left (4 + \answer[given]{2} \right ).
+\]
+
+But this is not the only way we can count the total number of shapes in the picture. We could first count all of the stars, and then combine that with all of the circles. Looking at just the stars, we can use the same three sets as our groups (so that one set is one group), but now there are $\answer[given]{2}$ stars in each group.
+
+\begin{image}
+\begin{tikzpicture}
+\foreach \x in {0, 1, 2, 3, 5, 6, 7, 8, 10, 11, 12, 13} \draw[thick] (\x, 0) circle (3pt);
+\foreach \x in {1, 2, 6, 7, 11, 12} \node[draw, star, star points=5, star point ratio=0.5] at (\x, 0.5) {};
+\foreach \x in {1.5, 6.5, 11.5} \draw[thick, brown] (\x, 0.5) ellipse (1cm and 0.25cm);
+\end{tikzpicture}
+\end{image}
+In other words, the total number of stars is given by $\answer[given]{3} \times 2$. We can also count the circles using these three sets (one group is still one set) and see that there are $\answer[given]{4}$ circles per set.
+
+\begin{image}
+\begin{tikzpicture}
+\foreach \x in {0, 1, 2, 3, 5, 6, 7, 8, 10, 11, 12, 13} \draw[thick] (\x, 0) circle (3pt);
+\foreach \x in {1, 2, 6, 7, 11, 12} \node[draw, star, star points=5, star point ratio=0.5] at (\x, 0.5) {};
+\foreach \x in {1.5, 6.5, 11.5} \draw[thick, brown] (\x, 0.5) ellipse (1cm and 0.25cm);
+\foreach \x in {1.5, 6.5, 11.5} \draw[thick, red] (\x, 0) ellipse (2cm and 0.25cm);
+\end{tikzpicture}
+\end{image}
+In other words, the total number of circles is given by $3 \times \answer[given]{4}$. We can combine the circles together with the stars  to get the total number of shapes in the design, since both circles and stars are shapes. The meaning of addition is combining two quantities to find the total, so we'll add the two expressions we just found for the total number of circles and stars. We can write the total number of shapes using the following expression.
+\[
+3 \times 4 + 3 \times 2
+\]
+
+Finally, both expressions for the total number of shapes count all the shapes in the design without losing or gaining any shapes. In other words, the two expressions must be the same. Using symbols, we would write
+\[
+3 \times (4 + 2) \answer[given]{=} 3 \times 4 + 3 \times 2.
+\]
+
+\end{example}
+
+As usual, practice justifying this property with different numbers until you feel convinced that the property will hold for any three numbers $A$, $B$, and $C$. Make a note of the pattern here as well: when we are explaining why a particular property holds, we first explain how we see both expressions in the figure, and then we use the diagram to explain why those expressions must be equal to one another. Make sure your explanations include this same pattern!
+
+We mentioned that this property is called the distributive property of multiplication over addition, because we are distributing the multiplication over the addition. Some teachers like to write arrows to show how the multiplication distributes.
+\begin{image}
+\begin{tikzpicture}[every node/.style={font=\large}]
+    % Expression A(B + C)
+    \node (A) at (0,0) {$A$};
+    \node at (0.35,0) {$\times$};
+    \node at (0.6,0) {$($};
+    \node (B) at (1,0) {$B$};
+    \node at (1.6,0) {$+$};
+    \node (C) at (2.2,0) {$C$};
+    \node at (2.6,0) {$)$};
+
+    % Equal sign and result
+    \node at (3.2,0) {$=$};
+    \node at (5,0) {$A \times B + A \times C$};
+
+    % Arrows
+    \draw[->, thick, red] (A) .. controls +(up:7mm) and +(up:7mm) .. (B);
+    \draw[->, thick, red] (A) .. controls +(down:7mm) and +(down:7mm) .. (C);
+\end{tikzpicture}
+\end{image}
+
+Another version of the distributive property that you might have seen before is where the multiplication is on the opposite side of the addition.
+\[
+(A + B) \times C = A \times C + B \times C
+\]
+This is the same as the original distributive property, but we've also applied the commutative property. It's very common to use more than one property at once.
+
+
+It's very common for students to mix up the operation that is being distributed. For instance, we don't distribute addition over multiplication: $A + (B \times C)$ does not distribute. But we can distribute multiplication over subtraction.
+\[
+A \times (B-C) = A \times B - A \times C
+\]
+However, making sense of why we can distribute multiplication over subtraction requires knowledge about the relationship between negative numbers and subtraction. Since we aren't going to talk about negative numbers for a bit yet, we won't elaborate on this.
+
+
+
+A final version of the distributive property that you might have seen before looks a bit like this.
+\[
+(A + B) \times (C + D) = A\times C + A \times D + B \times C + B \times D
+\]
+How is this one the same as the original distributive property? Think of the first $(A+B)$ as its own quantity that's being distributed over addition.
+\[
+(A+B) \times (C+D) = (A+B) \times C + (A+B) \times D
+\]
+Now, distribute the multiplication on the right hand side of each of the products: distribute the $C$ to $A+B$ and then distribute the $D$ to $A+B$ as well. Rearrange the terms as you need to (using the commutative property of addition) in order to match the rule we stated.
+\begin{align*}
+(A+B) \times (C+D) &= (A+B) \times C + (A+B) \times D \\
+& = A \times C + B \times C + A \times D + B \times D \\
+& = A\times C + A \times D + B \times C + B \times D
+\end{align*}
+Some people call this last version of the distributive property ``FOIL'' (which stands for ``first'', ``outside'', ``inside'', ``last'' as an acronym to help you remember how to multiply all of the terms), but it's more important to recognize that this is another version of the distributive property.
+
+We hope that you now feel confident extending the distributive property to other situations. The most important thing to remember is that we distribute the multiplication over the addition!
+
+
+
+
+\section{Mental math}
+As we mentioned in the section about addition and subtraction, one of the most important reasons that we want to learn and use the properties of arithmetic is to help us make calculations in flexible ways. It's important for children to develop mental strategies for carrying out calculations for many reasons, including having fewer facts to memorize, building their skills with estimation, and preparing their thinking to study algebra later in their mathematical career. Let's finish up with one more example showcasing the kind of flexible calculation strategies that you should practice throughout this course.
+
+\begin{example}
+Camille calculates $261 \times 75$ using the following mental strategy.
+
+First I split up the $261$ into $260 + 1$. I'm going to add on that extra $75$ at the end. Now to do $260$ times $75$, I'm going to think of $75$ as $25$ times $3$. Now to multiply by $25$ I think of quarters: there are $4$ quarters in a dollar, so there are $4$ $25$'s in $100$. Every time I hit $4$ $25$'s, I get another hundred (which is really a thousand because I'm multiplying by $26$ tens, not $26$. Okay, so I count. $4$, $8$, $12$, $16$, $20$, $24$, that's $6000$ already. I have twenty more $25$'s left to make all $260$, so that's another $500$. That means I know $260$ times $25$ is $6500$ and so I just need to multiply that by $3$ and add the extra $75$. $65$ times $3$ is $195$, so $6500$ times $3$ is $19500$. With my extra $75$ that makes $19575$.
+\end{example}
+
+\begin{question}
+Where can you identify each of the commutative, associative, and distributive properties in Camille's work?
+\begin{freeResponse}
+This is a great question for office hours if you aren't sure!
+\end{freeResponse}
+\end{question}
+
+
+
+
+\end{document}
+
+
+
+
+
+

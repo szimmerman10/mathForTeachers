@@ -1,0 +1,220 @@
+\documentclass{ximera}
+
+\input{../preamble.tex}
+
+
+\title{Comparing Fractions}
+\author{Jenny Sheldon}
+
+\begin{document}
+
+\begin{abstract}
+We use the meaning of fractions to compare fractions.
+\end{abstract}
+\maketitle
+
+\section{Activities for this section:}
+\link[Comparing fractions]{https://ximera.osu.edu/m4t/elementaryActivities/SemesterOnePacket/elementaryActivities/Numbers/ComparingFractions}
+
+
+\section{Comparing fractions}
+
+Now that we can tell when two fractions are equal to one another, we would also like to use our meaning of fractions to tell when one fraction is larger or smaller than another. Let's start with unit fractions.
+
+\begin{question}
+Say that we have two pizzas which are exactly the same. Which is larger: $\frac{1}{8}$ of the pizza, or $\frac{1}{9}$ of the pizza?
+
+\begin{explanation}
+It's always a good idea to start by drawing a picture, so let's take a look at our two pizzas. Even though pizza is typically round, we'll draw a rectangle to represent the whole pizza. (Rectangular wholes can be less confusing for children because it's easier to draw roughly equal pieces.)
+
+\begin{image} \begin{tikzpicture}
+\draw[thick] (0,0)--(3,0)--(3,2)--(0,2)--(0,0);
+\node[below] at (1.5, 0) {one pizza};
+\draw[thick] (5,0)--(8,0)--(8,2)--(5,2)--(5,0);
+\node[below] at (6.5, 0) {one pizza};
+\end{tikzpicture} \end{image}
+
+
+Using our meaning of fractions, let's draw $\frac{1}{9}$ of the first pizza and $\frac{1}{8}$ of the second pizza. For the first pizza, the denominator tells us that we should cut it into $\answer[given]{9}$ equal pieces. For the second pizza, the denominator tells us that we should cut it into $\answer[given]{8}$ equal pieces. For each pizza, the numerator tells us that we should shade $\answer[given]{1}$ piece.
+
+\begin{image} \begin{tikzpicture}
+\draw[fill=red] (0,0)--(0.333, 0)--(0.333,2)--(0,2)--(0,0);
+\draw[thick] (0,0)--(3,0)--(3,2)--(0,2)--(0,0);
+\node[below] at (1.5, 0) {one pizza};
+\draw[fill=red] (5,0)--(5.375, 0)--(5.375, 2)--(5,2)--(5,0);
+\draw[thick] (5,0)--(8,0)--(8,2)--(5,2)--(5,0);
+\node[below] at (6.5, 0) {one pizza};
+\foreach \x in {0.333, 0.666, 1, 1.333, 1.666, 2, 2.333, 2.666} \draw[thick] (\x, 0)--(\x, 2);
+\foreach \a in {5.375, 5.75, 6.125, 6.5, 6.875, 7.25, 7.625} \draw[thick] (\a, 0)--(\a, 2);
+\end{tikzpicture} \end{image}
+
+Now, which piece is larger? It's a little hard to tell just by looking at the picture, but we can use our reasoning for this. Since we have taken only one piece in each case, we can think about which of these pieces should be bigger. The first pizza was cut into $9$ equal parts, while the second was cut into only $8$ equal parts. Since the two pizzas are exactly the same, the one that got cut into more pieces will have smaller pieces. Think about it as if you are hungry and want to eat this pizza: would you rather share your pizza with $8$ other people ($9$ people total), or would you rather share your pizza with $7$ other people ($8$ people total)? Fewer people to share with means that everyone gets a larger piece. So we see in this case that
+\[
+\frac{1}{8} > \frac{1}{9}.
+\]
+\end{explanation}
+\end{question}
+
+There were a few important points to remember from the previous question, and I hope you'll take some notes for your future explanations. First, we used the symbol $>$ to indicate which of the fractions is greater. The bigger, open end of the symbol always points towards the larger number, while the smaller, pointy end of the symbol always points towards the smaller number. We could have also written the answer above as
+\[
+\frac{1}{9} < \frac{1}{8}.
+\]
+Some teachers help students to remember how to point the symbol by drawing teeth on it or pretending it's an alligator's mouth. The alligator is always hungry and eats the bigger number.
+
+The second thing to keep in mind is that this strategy only makes sense because the two pizzas are exactly the same. This is important when comparing any fractions. If the wholes aren't the same, the comparison doesn't really make sense. It would be hard to make sense of comparing $\frac{1}{8}$ of a gallon of water to $\frac{1}{9}$ of a pizza. If we wanted to compare water and pizza, we would have to convert those wholes into another common unit of measure like ounces, so that  we are using the same whole. 
+
+Finally, we want to keep in mind that when using a strategy like this one, we not only pay attention to the denominator but also to the numerator. This is different from one-to-one correspondence! We had the same number of pieces of each pizza, so we only needed to consider the size of those pieces. If we were trying to compare $\frac{4}{9}$ of the pizza to $\frac{5}{8}$ of the pizza, we don't have the same number of pieces any more. But in this particular case we can still use our reasoning. Each of the $\frac{1}{8}$-sized pieces of pizza is still larger than each of the $\frac{1}{9}$-sized pieces of pizza. Also, we have more of those bigger slices, since our meaning of the numerator tells us we have 5 pieces of the $\frac{1}{8}$-sized slices  but only $4$ pieces of the $\frac{1}{9}$-sized slices. Since we have more of the bigger pieces of pizza, we have more pizza overall. In other words, 
+\[
+\frac{4}{9} < \frac{5}{8}.
+\]
+
+Let's try a challenge. Use a new (but similar!) strategy to compare the following fractions.
+
+\begin{question}
+Which of $\frac{11}{34}$ and $\frac{15}{29}$ is the larger fraction? Be sure to jot down notes about your thoughts!
+
+Select the larger fraction below.
+\begin{multipleChoice}
+\choice{$\frac{11}{34}$}
+\choice[correct]{$\frac{15}{29}$}
+\choice{The fractions are equivalent.}
+\end{multipleChoice}
+\end{question}
+
+
+\begin{question}
+Use a similar strategy as we used in the previous example to decide which of $\frac{89}{90}$ and $\frac{79}{80}$ is the larger fraction. Be sure to jot down notes about your thoughts!
+
+Select the larger fraction below.
+\begin{multipleChoice}
+\choice[correct]{$\frac{89}{90}$}
+\choice{$\frac{79}{80}$}
+\choice{The fractions are equivalent.}
+\end{multipleChoice}
+\begin{hint}
+Notice that each fraction is missing one piece of the whole, so we can reason about the size of that missing piece.
+\end{hint}
+\end{question}
+
+
+Another strategy we can use to compare fractions and help us practice with the meaning of fractions is to estimate the values of the fractions.
+
+\begin{question}
+Which is larger: $\frac{7}{15}$ of a gallon of punch or $\frac{6}{11}$ of a gallon of punch?
+
+\begin{explanation}
+
+We want to estimate the fractions $\frac{7}{15}$ and $\frac{6}{11}$. We could draw a picture of these fractions, but it's going to be tough to get a picture that's accurate enough to give us good information in this case. We don't want to eyeball things here or have to guess. Let's just use our reasoning instead.
+
+Maybe you noticed that $\frac{7}{15}$ of the gallon of punch is pretty close to $\frac{1}{2}$ of the gallon of punch. How could we justify this fact? We have a few options. One would be to use an equivalent fraction like $\frac{1}{2} = \frac{7}{14}$ (how would you cut each piece of the gallon to show that these fractions are equivalent?). Another option would be to think about having $15$ cookies and splitting them up equally between $2$ friends. Most kids are pretty good at sharing things equally, and will know or be able to model that each friend would get $7$ cookies, and there would be another cookie left over. A third option would be to draw a picture of the fraction and noticed that about half of the gallon of punch was shaded.
+
+Similarly, maybe you could also notice that $\frac{6}{11}$ of the gallon of punch is also close to $\frac{1}{2}$ of the gallon of punch.
+
+Now that we know both of these fractions are close to $\frac{1}{2}$, we can see if that helps us to determine which fraction is the larger one. We can see that
+\[
+\frac{7}{15} < \frac{7}{14} = \frac{1}{2}
+\]
+and that 
+\[
+\frac{6}{11} > \frac{6}{12} = \frac{1}{2}
+\]
+using the idea of the size of the pieces. Notice that we have the same numerators here so we only need to think about which pieces are larger!
+
+Now, we can put these inequalities together in a string with all of them pointing the same way, putting our $\frac{1}{2}$ in the middle.
+\[
+\frac{7}{15} < \frac{1}{2} < \frac{6}{11}
+\]
+Since the $\frac{1}{2}$ of a gallon of punch wasn't part of our initial question, we can remove it from the middle.
+\[
+\frac{7}{15} < \frac{6}{11}
+\]
+So we found our answer by realizing that one of our fractions was less than $\frac{1}{2}$ of a gallon of punch, and the other fraction was more than $\frac{1}{2}$ of a gallon of punch. The fraction that's bigger than the half gallon is the bigger fraction overall.
+
+
+\end{explanation}
+\end{question}
+
+Let's notice a few important ideas about this example as well. First, we should pay attention to the fact that the larger fraction in this case actually has the smaller numerator. It's tempting to think that a larger numerator means a larger fraction, but we have to consider both the numerator and the denominator when we compare fractions. Remember that the meaning of the denominator is about the size of the pieces, and the meaning of the numerator is about how many pieces we have. Both how many and what size they are need to be considered when we are comparing fractions.
+
+Second, this strategy of estimating and comparing to other fractions that are easier for us to understand is called \dfn{using a benchmark}. The benchmark we used in the example was the fraction $\frac{1}{2}$ of our whole, but you can use other fractions as well. For instance $\frac{1}{4}$, $\frac{2}{3}$, or even something like $\frac{5}{2}$ make great benchmarks to use. Kids in Grade 3 start working with fractions, but the denominators they work with are primarily restricted to $2$, $3$, $4$, $6$, and $8$,  so these denominators are the ones that children should have the most practice with and make great denominators to use for benchmarks as children expand their experience with fractions.
+
+\begin{question}
+Use a benchmark strategy to decide which is larger: $\frac{8}{33}$ of a bowl of soup or $\frac{11}{39}$ of the same bowl of soup. Be sure to write some notes about your thinking!
+
+Select the larger fraction below.
+\begin{multipleChoice}
+\choice{$\frac{8}{33}$}
+\choice[correct]{$\frac{11}{39}$}
+\choice{The fractions are equivalent.}
+\end{multipleChoice}
+\end{question}
+
+The strategies we've used so far don't work for every pair of fractions that we might like to compare. For instance, if we wanted to compare $\frac{3}{11}$ and $\frac{4}{15}$, we can't think about the size and number of the pieces because we have more of the smaller pieces in this case and there's not really a clear benchmark fraction to use. So, we will need a more reliable method for comparing fractions, and luckily we have two methods based on making equivalent fractions. Even though the previous methods don't always tell us which fraction is larger, they are still important for children to learn because they are such good practice for thinking about the meaning of fractions. Eventually we will expect children to move towards the methods using equivalent fractions, but estimating and reasoning are two key \link[mathematical skills we want to develop]{https://education.ohio.gov/getattachment/Topics/Learning-in-Ohio/Mathematics/Model-Curricula-in-Mathematics/Standards-for-Mathematical-Practice/Standards-for-Mathematical-Practice.pdf.aspx}.
+
+
+As we work through methods using equivalent fractions, don't forget to practice using a picture to explain why our equivalent fractions are actually equivalent!
+
+\begin{example}
+Let's show that $\frac{4}{25} > \frac{2}{15}$.
+
+Start by drawing two pictures, using the same rectangle as the whole in each. One way to figure out which fraction is larger is by making all of the pieces in both pictures exactly the same size. Since the wholes are exactly the same, that's the same as making the two denominators the same.
+
+One way to do this would be to split each of the 25 pieces into 15 more equal pieces, and to split each of the 15 pieces into $25$ more equal pieces, leaving us with $375$ total equal pieces in each diagram. That sounds like a lot to count, but we could absolutely do it. However, there's an easier way: in our picture we can change the $25$ pieces into $75$ pieces by splitting each of the $25$ pieces into $\answer[given]{3}$ equal pieces. We can also split the 15 pieces into $75$ equal pieces by cutting each of the $15$ pieces into $\answer[given]{5}$ equal pieces. 
+
+When we do this, we see in our picture that each of the $4$ original pieces from the $\frac{4}{25}$ of our rectangle is split into $\answer[given]{3}$ equal pieces as well, so we end up with $\answer[given]{12}$ equal pieces, meaning that
+\[
+\frac{4}{25} = \frac{12}{75}.
+\]
+Similarly, each of the $2$ original pieces from the $\frac{2}{15}$ of our rectangle is split into $\answer[given]{5}$ equal pieces as well, so we end up with $\answer[given]{10}$ equal pieces. This means that
+\[
+\frac{2}{15} = \frac{10}{75}.
+\]
+The whole didn't change and the part didn't change, so these fractions have the same value and are equivalent. Now, since all of our pieces are the same size and from the same whole, we can figure out which rectangle has the greater shaded region by comparing which one has more pieces shaded. The $\frac{4}{25}$ has $12$ pieces shaded while the $\frac{2}{15}$ only has $10$ pieces shaded, so we see that 
+\[
+\frac{12}{75} = \frac{4}{25} \answer[given]{>} \frac{2}{15} = \frac{10}{75}
+\]
+which is just what we wanted to show.
+\end{example}
+
+Let's practice noticing things about our solution again. We needed to have the same whole to compare our fractions, which is hopefully starting to feel like a habit. Our goal was to make all the pieces the same size so that we could just compare how many pieces we have. In other words, we made the denominators the same, and then just compared the numerators. Remember that this only works because the denominators are the same. Most of the time we still need to consider both the size of the pieces as well as how many there are.
+
+\begin{definition}
+The method where we change the fractions into equivalent fractions with the same denominator is called \dfn{making a common denominator}, and we use this strategy when we would like all of our pieces to be the same size using the same whole.
+\end{definition}
+
+However, there is actually an easier method we could use for the fractions in the previous example.
+
+\begin{example}
+We will show that $\frac{4}{25} > \frac{2}{15}$ using a different method.
+
+Draw your rectangles again to be the wholes for these fractions. But this time, let's leave $\frac{4}{25}$ as it is, and change $\frac{2}{15}$ into an equivalent fraction that has the same numerator as the other fraction. In this case, we want the numerator to be $4$, so we are going to cut each of our pieces into $\answer[given]{2}$ equal pieces. This will turn our $2$ shaded pieces into $4$ shaded pieces, and when we cut the rest of the pieces in the whole in the same way it will turn the $15$ equal pieces in our whole into $\answer[given]{30}$ total equal pieces. So we see that
+\[
+\frac{2}{15} = \frac{4}{\answer[given]{30}}.
+\]
+Now, since the fractions have the same numerator or the same number of pieces, we can compare these fractions by thinking only about the size of the pieces. Using the same thinking that we used earlier in this section, we see that the \wordChoice{\choice[correct]{$\frac{1}{25}$-sized pieces} \choice{$\frac{1}{30}$-sized pieces}} are the larger ones, or in other words that
+\[
+\frac{4}{25} \answer[given]{>} \frac{4}{30} = \frac{2}{15}.
+\]
+And that's exactly what we wanted to show!
+\end{example}
+
+In this example, instead of making common denominators, we ended up making \dfn{common numerators}. Hopefully you agree that this made our calculations a little bit easier (and it certainly made our pictures a little easier to draw!) Instead of making the pieces all the same size, we made the total number of shaded pieces the same. 
+
+Choosing which of the methods in this section to use when comparing fractions depends on the fractions you are trying to compare. As you practice, be sure to write down notes about your thinking in each case so that you can describe how you selected the method you thought would be easiest in each case. There's not really one right answer for which method will be easiest, and we hope that by the time you are finished practicing this section that you have many methods you feel comfortable using.
+
+
+\begin{question}
+How has the definition of fractions helped us to solve problems in this section?
+\begin{freeResponse}
+Write your thoughts here!
+\end{freeResponse}
+\end{question}
+
+
+\end{document}
+
+
+
+
+
+

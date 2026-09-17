@@ -1,0 +1,311 @@
+\documentclass{ximera}
+
+\input{../preamble.tex}
+
+
+\title{Adding and subtracting with fractions and decimals}
+\author{Jenny Sheldon}
+
+\begin{document}
+
+\begin{abstract}
+We look at the meaning of addition and subtraction applied to fractions and decimals.
+\end{abstract}
+\maketitle
+
+
+
+
+
+\section{Adding and subtracting fractions}
+
+The main point that we would like for you to see in this section is that the meaning of addition and the meaning of subtraction fit with any kinds of numbers we would like to add or subtract, not just whole numbers. We don't need to change the way we think about these operations just because the kind of numbers we are working with change. We think this is an advantage, meaning that as the difficulty of problems we consider goes up, we don't need to rethink the meaning of the operation. 
+
+\begin{question}
+Gino is baking some brownies. Starting with an empty bowl, he places $\frac{3}{4}$ of a cup of water and $1 \frac{1}{4}$ of a cup of oil into the bowl. How much liquid (how many cups of water and oil together) are now in the bowl?
+
+\begin{explanation}
+Let's draw a picture to solve this problem, and use our picture to think about what operation we could use to solve this problem.
+
+First, we'll use the meaning of fractions to draw a picture of $\frac{3}{4}$ of a cup of water. In this case our whole is \wordChoice{\choice{3} \choice{4} \choice{water} \choice[correct]{one cup of liquid}}. The whole is cut into $\answer[given]{4}$ equal pieces, because the denominator tells us how many equal pieces to cut our whole into, and then we want to shade $\answer[given]{3}$ of those pieces, because the numerator tells us how many pieces to shade.
+
+\begin{image}
+\begin{tikzpicture}
+\draw[fill=cyan] (0,0)--(3,0)--(3,2)--(0,2)--(0,0);
+\draw[thick] (0,0)--(4,0)--(4,2)--(0,2)--(0,0);
+\foreach \x in {1, 2, 3} \draw[thick] (\x, 0)--(\x, 2);
+\node[below] at (2, 0) {one cup of water};
+\end{tikzpicture}
+\end{image}
+
+Next, we want to represent $1 \frac{1}{4}$ cups of oil. This is one full cup of oil and $\frac{1}{4}$ of a second cup. In this case our whole is \wordChoice{\choice{4} \choice{water} \choice{one cup of water} \choice{oil} \choice[correct]{one cup of liquid}}, and this whole will be cut into $\answer[given]{4}$ equal pieces. We need to shade one full cup, and then $\answer[given]{1}$ piece out of the second cup.
+
+\begin{image}
+\begin{tikzpicture}
+\draw[fill=brown] (0,0)--(4,0)--(4,2)--(0,2)--(0,0);
+\draw[fill=brown, thick] (5,0)--(6,0)--(6,2)--(5,2)--(5,0);
+\draw[thick] (6,0)--(9,0)--(9,2)--(6,2);
+\foreach \x in {1, 2, 3, 6, 7, 8} \draw[thick] (\x, 0)--(\x, 2);
+\node[below] at (2, 0) {one cup of oil};
+\end{tikzpicture}
+\end{image}
+
+Now, Gino takes all of the shaded pieces and puts them together in a bowl. We want to combine these pieces together, and that means we are going to use the operation \wordChoice{\choice[correct]{addition} \choice{subtraction} \choice{something else}} because the definition of addition is to combine things together. In this case, since the story problem mentions the water first, we will write the amount of water before the amount of oil in our expression. So the total amount of liquid in the bowl is
+\[
+\answer[given]{\frac{3}{4}} + \answer[given]{\frac{5}{4}} \textrm{ cups of liquid. }
+\]
+
+We could stop here, because this expression is the total amount of liquid in the bowl. However, most of the time we want to simplify this expression, or in other words find the total as a single number. So let's continue working with our picture by putting together all of the shaded pieces that we had. Notice that each cup of liquid is cut into the same number of pieces so that all the pieces are the same size. We'll mark the water ones with a small $w$ and the oil ones with a small $o$ to make them easier to see in the picture.
+
+\begin{image}
+\begin{tikzpicture}
+	\draw[thick, fill=cyan] (0,0)--(3,0)--(3,2)--(0,2)--(0,0);
+	\draw[fill=brown, thick] (3,0)--(8,0)--(8,2)--(3,2)--(3,0);
+	\foreach \x in {1, 2, 3, 4, 5, 6, 7} \draw[thick] (\x, 0)--(\x, 2);
+	\foreach \a in {0.5, 1.5, 2.5} \node at (\a, 1) {$w$};
+	\foreach \b in {3.5, 4.5, 5.5, 6.5, 7.5} \node at (\b, 1) {$o$};
+\end{tikzpicture}
+\end{image}
+In order to see how much liquid this is, we need to think about what size each of these pieces are. Each of the original fractions had a denominator of $\answer[given]{4}$, so both the cup of water and the cup of oil were cut into $4$ equal pieces. This means that each of the pieces in our picture is $\frac{1}{4}$ of a cup of liquid. 
+
+\begin{image}
+\begin{tikzpicture}
+	\draw[thick, fill=cyan] (0,0)--(3,0)--(3,2)--(0,2)--(0,0);
+	\draw[fill=brown, thick] (3,0) rectangle (4,2);
+	\draw[fill=brown, thick] (5,0) rectangle (9,2);
+	\foreach \x in {1, 2, 3, 5, 6, 7, 8} \draw[thick] (\x, 0)--(\x, 2);
+	\foreach \a in {0.5, 1.5, 2.5} \node at (\a, 1) {$w$};
+	\foreach \b in {3.5, 5.5, 6.5, 7.5, 8.5} \node at (\b, 1) {$o$};
+	\draw[ultra thick] (0,0)--(4,0)--(4,2)--(0,2)--(0,0);
+	\node[below] at (2,0) {one cup of liquid};
+\end{tikzpicture}
+\end{image}
+
+There are a total of $\answer[given]{8}$ shaded pieces in the picture when we consider the water and oil together, and our whole cup of liquid is cut into $\answer[given]{4}$ equal pieces, so we could write our answer as 
+\[
+\frac{\answer[given]{8}}{\answer[given]{4}} \textrm{ cups of liquid, }
+\]
+or if we simplify this fraction we can see that it's the same as $2$ cups of liquid in total.
+
+\end{explanation}
+\end{question}
+
+
+We hope that felt similar to the problems we solved in the previous section, but there are two big ideas to watch out for when we work with fraction problems. The first is that we need to be particularly careful with how we ask the question when we are working with fractions. Let's consider a series of questions all referring to Gino and these brownies.
+
+\begin{question}
+Gino is baking some brownies. Starting with an empty bowl, he places $\frac{3}{4}$ of a cup of water and $1 \frac{1}{4}$ of a cup of oil into the bowl. How much water is in the bowl?
+
+\begin{multipleChoice}
+\choice[correct]{$\frac{3}{4}$ of a cup}
+\choice{$1 \frac{1}{4}$ of a cup}
+\choice{$2$ cups}
+\choice{Some other number}
+\choice{We cannot answer the question from this information.}
+\end{multipleChoice}
+\end{question}
+
+
+\begin{question}
+Gino is baking some brownies. Starting with an empty bowl, he places $\frac{3}{4}$ of a cup of water and $1 \frac{1}{4}$ of a cup of oil into the bowl. How full is the bowl?
+
+\begin{multipleChoice}
+\choice{$\frac{3}{4}$ of a cup}
+\choice{$1 \frac{1}{4}$ of a cup}
+\choice{$2$ cups}
+\choice{Some other number}
+\choice[correct]{We cannot answer the question from this information.}
+\end{multipleChoice}
+\end{question}
+
+
+\begin{question}
+Gino is baking some brownies. Starting with an empty bowl, he places $\frac{3}{4}$ of a cup of water and $1 \frac{1}{4}$ of a cup of oil into the bowl. How much more oil is in the bowl than water?
+
+\begin{multipleChoice}
+\choice{$\frac{3}{4}$ of a cup}
+\choice{$1 \frac{1}{4}$ of a cup}
+\choice{$2$ cups}
+\choice[correct]{Some other number}
+\choice{We cannot answer the question from this information.}
+\end{multipleChoice}
+\end{question}
+
+Yikes. Even with the same setup, how we ask the question makes a big difference in what we get for our answer -- and there are some questions we can ask that we can't answer without more information! When we add and subtract fractions, it's important for each of the fractions to have the same whole, and for the question to also be asking for the same whole. That might seem a little surprising since we just worked with a problem where we added water and oil, but notice that each of the water and the oil can be considered liquid. So, we added $\frac{3}{4}$ of a cup of liquid to $1 \frac{1}{4}$ cup of liquid, and the answer was also in cups of liquid. 
+
+If we asked something like ``how full is the bowl?'', we are taking $\frac{3}{4}$ of a cup of liquid and putting it together with $1 \frac{1}{4}$ of a cup of liquid, but asking for our answer in terms of a different whole, the bowl. Addition or subtraction can't answer this question because the wholes aren't the same. 
+
+The question ``how much more oil is in the bowl than water?" is a comparison question, and so it's not asking us to add $\frac{3}{4} + 1 \frac{1}{4}$. We could solve this problem, but our picture and our actions would both be different from Gino's original problem. Pay close attention to the wording any time you are writing or considering a word problem, and try to anticipate things that might be confusing. This takes practice!
+
+The second idea to keep in mind when we are working with fractions is that if we would like to simplify a number like $\frac{5}{8} - \frac{1}{3}$, it's much easier to tell what fraction we are working with if all of our pieces are the same size and out of the same whole. 
+
+\begin{question}
+Shonda ran $\frac{5}{8}$ of a mile on Monday, but only ran $\frac{1}{3}$ of a mile on Tuesday. How much farther did Shonda run on Monday than on Tuesday?
+
+\begin{explanation}
+
+We want to see how we could write the answer to this question as a subtraction expression, and then simplify our answer into a single fraction. We'll use a number line to represent our fractions this time. First, let's draw our whole, which in this problem is \wordChoice{\choice{8} \choice{3} \choice[correct]{one mile} \choice{distance}}. We'll draw two different number lines, one on top of the other, so that we can compare Monday's distance and Tuesday's distance.
+
+\begin{image}
+\begin{tikzpicture}
+\draw[thick, <->] (-0.2,0)--(12.2,0);
+\node[left] at (-0.5, 0) {Tuesday};
+\node[left] at (-0.5, 2) {Monday};
+\draw[thick, <->] (-0.2, 2)--(12.2,2);
+\foreach \x/\y in {0/0, 0/2, 12/0, 12/2} {\draw[thick] (\x, \y-0.3)--(\x, \y+0.3);}
+\node[below] at (0, -0.3) {$0$};
+\node[below] at (12, -0.3) {$1$ mile};
+\node[below] at (0, 1.7) {$0$};
+\node[below] at (12, 1.7) {$1$ mile};
+\end{tikzpicture}
+\end{image}
+
+Because Shonda ran $\frac{5}{8}$ of a mile on Monday, the denominator tells us that we need to cut the mile on Monday's line into $\answer[given]{8}$ equal pieces, and the numerator tells us that we need to shade $\answer[given]{5}$ of them. Because Shonda ran $\frac{1}{3}$ of a mile on Tuesday, the denominator tells us that we need to cut the mile on Tuesday's line into $\answer[given]{3}$ equal pieces, and the numerator tells us that we need to shade $\answer[given]{1}$ of them. Let's do that on our picture. %5/8 = 15/24 = 7.5/12 and 1/3=8/24=4/12
+
+\begin{image}
+\begin{tikzpicture}
+\draw[fill=green] (0, 1.9)--(7.5,1.9)--(7.5,2.1)--(0,2.1)--(0,1.9);
+\draw[fill=teal] (0, -0.1)--(4,-0.1)--(4,0.1)--(0,0.1)--(0,-0.1);
+\draw[thick, <->] (-0.2,0)--(12.2,0);
+\node[left] at (-0.5, 0) {Tuesday};
+\node[left] at (-0.5, 2) {Monday};
+\draw[thick, <->] (-0.2, 2)--(12.2,2);
+\foreach \x/\y in {0/0, 0/2, 12/0, 12/2} {\draw[thick] (\x, \y-0.4)--(\x, \y+0.4);}
+\foreach \a in {1.5, 3, 4.5, 6, 7.5, 9, 10.5} \draw[thick] (\a, 1.7)--(\a, 2.3);
+\foreach \b in {4, 8} \draw[thick] (\b, -0.3)--(\b, 0.3);
+\node[below] at (0, -0.3) {$0$};
+\node[below] at (12, -0.3) {$1$ mile};
+\node[below] at (0, 1.7) {$0$};
+\node[below] at (12, 1.7) {$1$ mile};
+\node[below] at (4, -0.3) {$\frac{1}{3}$ mi};
+\node[above] at (7.5, 2.3) {$\frac{5}{8}$ mi};
+\end{tikzpicture}
+\end{image}
+We want to find out how much farther Shonda ran on Monday, so we want to take away Tuesday's distance from Monday's distance. In a sense, we want to line up the end of Tuesday with the Monday line, and then cross off Tuesday's distance. Let's show that in our picture.
+
+\begin{image}
+\begin{tikzpicture}
+\draw[fill=green] (0, 1.9)--(7.5,1.9)--(7.5,2.1)--(0,2.1)--(0,1.9);
+\draw[fill=teal] (0, -0.1)--(4,-0.1)--(4,0.1)--(0,0.1)--(0,-0.1);
+\draw[thick, <->] (-0.2,0)--(12.2,0);
+\node[left] at (-0.5, 0) {Tuesday};
+\node[left] at (-0.5, 2) {Monday};
+\draw[thick, <->] (-0.2, 2)--(12.2,2);
+\foreach \x/\y in {0/0, 0/2, 12/0, 12/2} {\draw[thick] (\x, \y-0.4)--(\x, \y+0.4);}
+\foreach \a in {1.5, 3, 4.5, 6, 7.5, 9, 10.5} \draw[thick] (\a, 1.7)--(\a, 2.3);
+\foreach \b in {4, 8} \draw[thick] (\b, -0.3)--(\b, 0.3);
+\node[below] at (0, -0.3) {$0$};
+\node[below] at (12, -0.3) {$1$ mile};
+\node[below] at (0, 1.7) {$0$};
+\node[below] at (12, 1.7) {$1$ mile};
+\node[below] at (4, -0.3) {$\frac{1}{3}$ mi};
+\node[above] at (7.5, 2.3) {$\frac{5}{8}$ mi};
+\draw[thick, dashed] (4, 0.3)--(4, 2.5);
+\draw[thick] (0, 2.5)--(4, 1.5);
+\draw[thick] (0, 1.5)--(4, 2.5);
+\end{tikzpicture}
+\end{image}
+
+This picture shows us taking away $\frac{1}{3}$ of a mile from $\frac{5}{8}$ of a mile, so the operation we are using here is \wordChoice{\choice{addition} \choice[correct]{subtraction} \choice{something else}}. As an expression, we could write our answer as
+\[
+\answer[given]{\frac{5}{8}} - \answer[given]{\frac{1}{3}}.
+\]
+
+We would also like to be able to simplify this answer, but right now that's difficult because we don't know exactly where the $\frac{1}{3}$ of a mile crosses Monday's number line. Because our pieces are not all the same size, let's cut all of these pieces some more. If we cut Monday's eight equal pieces into $\answer[given]{3}$ equal pieces each, and if we cut Tuesday's $3$ equal pieces into $\answer[given]{8}$ equal pieces each, we will have the one mile made out of $24$ equal pieces of both Monday's number line and Tuesday's number line. In other words, we are making equivalent fractions whose denominators are $24$. Let's go ahead and do that in our picture.
+
+\begin{image}
+\begin{tikzpicture}
+\draw[fill=green] (0, 1.9)--(7.5,1.9)--(7.5,2.1)--(0,2.1)--(0,1.9);
+\draw[fill=teal] (0, -0.1)--(4,-0.1)--(4,0.1)--(0,0.1)--(0,-0.1);
+\draw[thick, <->] (-0.2,0)--(12.2,0);
+\node[left] at (-0.5, 0) {Tuesday};
+\node[left] at (-0.5, 2) {Monday};
+\draw[thick, <->] (-0.2, 2)--(12.2,2);
+\foreach \x/\y in {0/0, 0/2, 12/0, 12/2} {\draw[thick] (\x, \y-0.4)--(\x, \y+0.4);}
+\foreach \a in {1.5, 3, 4.5, 6, 7.5, 9, 10.5} \draw[thick] (\a, 1.7)--(\a, 2.3);
+\foreach \b in {4, 8} \draw[thick] (\b, -0.3)--(\b, 0.3);
+\foreach \x/\y in {0.5/0, 0.5/2, 1/0, 1/2, 1.5/0, 1.5/2, 2/0, 2/2, 2.5/0, 2.5/2, 3/0, 3/2, 3.5/0, 3.5/2, 4/0, 4/2, 4.5/0, 4.5/2, 5/0, 5/2, 5.5/0, 5.5/2, 6/0, 6/2, 6.5/0, 6.5/2, 7/0, 7/2, 7.5/0, 7.5/2, 8/0, 8/2, 8.5/0, 8.5/2, 9/0, 9/2, 9.5/0, 9.5/2, 10/0, 10/2, 10.5/0, 10.5/2, 11/0, 11/2, 11.5/0, 11.5/2} {\draw[thick] (\x, \y-0.2)--(\x, \y+0.2);}
+\node[below] at (0, -0.3) {$0$};
+\node[below] at (12, -0.3) {$1$ mile};
+\node[below] at (0, 1.7) {$0$};
+\node[below] at (12, 1.7) {$1$ mile};
+\node[below] at (4, -0.3) {$\frac{1}{3} = \frac{8}{24}$ mi};
+\node[above] at (7.5, 2.3) {$\frac{5}{8} = \frac{15}{24}$ mi};
+\draw[thick, dashed] (4, 0.3)--(4, 2.5);
+\draw[thick] (0, 2.5)--(4, 1.5);
+\draw[thick] (0, 1.5)--(4, 2.5);
+\end{tikzpicture}
+\end{image}
+
+Now we can see that the $\frac{1}{3}$ mile mark is at the $8$th mark after zero, so it is equivalent to $\frac{8}{24}$ of a mile. We can also see that $\frac{5}{8}$ is at the $15$th mark after zero, so it is equivalent to $\frac{15}{24}$ of a mile. And now that both lines are marked in units of $\frac{1}{24}$ of a mile, we can take away the $8$ copies of $\frac{1}{24}$ of a mile from the $15$ copies of $\frac{1}{24}$ of a mile to see that we have $\answer[given]{7}$ copies of $\frac{1}{24}$ of a mile left. Using our meaning of fractions, we see that the answer to this problem is
+\[
+\frac{\answer[given]{7}}{24} \textrm{ of a mile.}
+\]
+
+\end{explanation}
+
+\end{question}
+
+You might remember that we have a rule for adding and subtracting fractions which says that we first make a common denominator and then add or subtract just the numerators. For instance, if we want to add
+\[
+\frac{5}{6} + \frac{4}{9}, 
+\]
+first we would exchange these fractions for ones with a common denominator. Frequently, we multiply the denominators together to get a common denominator, but any common denominator will do. In this case we'll use the denominator of $18$, which will keep our numbers a little bit smaller. So, we exchange these fractions for equivalent ones which have denominator $18$.
+\[
+\frac{15}{18} + \frac{8}{18}
+\]
+Notice that this step is the same thing we did in the previous example when we made all of the pieces of our mile the same size. Once the pieces are the same size and from the same whole, it's easy to combine the pieces or take away pieces and know how many pieces you have in total. In other words, now that we have a common denominator, we only need to add the numerators.
+\begin{align*}
+\frac{5}{6} + \frac{4}{9} &= \frac{15}{18} + \frac{8}{18} \\
+&= \frac{15+8}{18} \\
+&= \frac{23}{18}
+\end{align*}
+We hope that you see how this algorithm for adding and subtracting fractions makes sense with both our meaning of addition and subtraction as well as our meaning of fractions. Children reason about fraction addition and subtraction using pictures well before they learn the short cut algorithm. Reasoning using the meaning of operations is much more powerful than simply memorizing rules.
+
+Notice also that some students say things like ``in order to subtract fractions, we have to make a common denominator''. This is a little bit misleading. In our example about Shonda's running, we subtracted the fractions once we took away $\frac{1}{3}$ of a mile and got $\frac{5}{8} - \frac{1}{3}$. We didn't need to go any farther, because this expression is the answer to the problem. The reason we made common denominators is that we wanted to \emph{simplify} that answer into something that's easier for us to work with. And for simplifying the answer, we definitely needed equally-sized pieces, or common denominators.
+
+
+To wrap up our thinking about addition and fractions, let's return to something we said about mixed numbers. We said that a mixed number like $2 \frac{3}{7}$ could also be written as $2 + \frac{3}{7}$. Notice how this makes sense with our meaning of addition. The number $2 + \frac{3}{7}$ is the total amount that we get from combining together $2$ whole units and $\frac{3}{7}$ of another unit. And that's the same thing that we mean when we write $2 \frac{3}{7}$ next to each other. In other words, we can think about $2 + \frac{3}{7}$ using a picture like we did for addition. We will draw two wholes and $\frac{3}{7}$ of another whole, and then use arrows to show the result after combining all of that together. The result is $2 \frac{3}{7}$ of the same whole.
+
+\begin{image}
+\begin{tikzpicture}
+\draw[thick, fill=lime] (0,0)--(3.5,0)--(3.5,1)--(0,1)--(0,0);
+\node[below] at (1.75, 0) {one whole};
+\draw[thick, fill=lime] (4,0)--(7.5,0)--(7.5,1)--(4,1)--(4,0);
+\node[below] at (5.75, 0) {one whole};
+\draw[thick, fill=lime] (10,0)--(11.5, 0)--(11.5, 1)--(10,1)--(10,0);
+\draw[thick] (11.5,0)--(13.5, 0)--(13.5,1)--(11.5,1);
+\foreach \x in {10.5, 11, 12, 12.5, 13} \draw[thick] (\x, 0)--(\x, 1);
+\node[below] at (11.75, 0) {one whole};
+\node[above] at (10.75, 1) {$\frac{3}{7}$ of a whole};
+\draw[thick, ->] (4, -0.5)--(6, -1.5);
+\draw[thick, ->] (11.75, -0.5)--(9.5,-1.5);
+\node at (7.75, -1.3) {combine};
+\draw[thick, fill=lime] (1.5,-3)--(10, -3)--(10,-2)--(1.5,-2)--(1.5,-3);
+\draw[thick, dashed] (10, -3)--(12, -3)--(12, -2)--(10, -2);
+\draw[ultra thick] (1.5, -3)--(5,-3)--(5,-2)--(1.5,-2)--(1.5,-3);
+\node[below] at (3.25, -3) {one whole};
+\draw[ultra thick] (5,-3)--(8.5, -3)--(8.5, -2)--(5,-2);
+\node[below] at (6.75, -3) {one whole};
+\foreach \x in {9, 9.5} \draw[thick] (\x, -3)--(\x, -2);
+\foreach \x in {10.5, 11, 11.5} \draw[thick, dashed] (\x, -3)--(\x, -2);
+\node[below] at (10.25, -3) {one whole};
+\end{tikzpicture}
+\end{image}
+
+
+
+
+
+
+
+
+
+
+\end{document}
+
+
+
+
+
+

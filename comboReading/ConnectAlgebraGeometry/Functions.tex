@@ -1,0 +1,334 @@
+\documentclass{ximera}
+
+\input{../preamble.tex}
+
+\title{Functions}
+\author{Jenny Sheldon}
+
+\begin{document}
+
+\begin{abstract}
+We discuss mathematical functions.
+\end{abstract}
+\maketitle
+
+\section{Activities for this section:} 
+\link[I walk the line]{https://ximera.osu.edu/m4t/elementaryActivities/SemesterTwoPacket/elementaryActivities/ConnectAlgebraGeometry/WalkTheLine}
+
+\section{Functions}
+
+Sequences help us to see patterns in the world around us, but sequences are only really useful when we have a first item, a second item, a third item, and so forth. What if we want \emph{more} items than that? For example, say that we are measuring the temperature in Columbus, Ohio. We could make a sequence out of the high temperature (in degrees Fahrenheit) each day, and have a sequence like
+\[
+\dots, 87, 88, 87, 89, 92, 83, \dots.
+\]
+But what if we wanted to measure the temperature each hour? We would need temperatures in between the ones we've recorded, or entries between the entries of our sequence. We could go ahead and do that, by rewriting our sequence, and perhaps get something like
+\[
+\dots, 79, 77, 76, 74, 74, 73, \dots.
+\]
+However, if we were really trying to be precise here, we might start measuring minute-by-minute or second-by-second or even millisecond-by-millisecond. At any given time, we can find a corresponding temperature. And now, we've moved from sequences to functions.
+\begin{definition}
+We start with a set of input values, called the \dfn{domain}. Then, a \dfn{function} is a relationship which assigns to each element of the domain exactly one output value. We often use the letter $f$ to represent a function. For an element $x$ of the domain, we use $f(x)$ to represent the output value associated with $x$.
+\end{definition}
+That definition feels a little complicated, so let's see it in action. In fact, let's see how a sequence is a special case of a function.
+\begin{example}
+Let's use the language of functions to describe an arithmetic sequence whose first term is $8$ and whose common difference is $-2$. We can write the first few terms of the sequence as follows.
+\[
+8, 6, 4, \answer[given]{2}, \answer[given]{0}, \answer[given]{-2}, \dots
+\]
+If we think of the first term $8$ as corresponding to $N=1$, we can write an equation to describe this sequence using the methods of the previous section.
+\[
+N\textrm{-th entry of the sequence } = (N-1)\times(-2) + 8
+\]
+You should check that you agree with the equation above!
+
+How is this related to a function? We need to start with a set of inputs. In the case of a sequence, we want the inputs to be the element numbers, so that our input set is the counting numbers.
+\[
+1, 2, 3, \answer[given]{4}, \answer[given]{5}, \answer[given]{6}, \dots
+\]
+(Note that some sequences start with a $0$-th term, and in that case we would need $0$ in our set of inputs as well!)
+
+The outputs of this function are going to be the elements of the sequence. Let's organize them in a chart.
+\begin{image}
+\begin{tabular}{c|c}
+Input $x$ & Output $f(x)$ \\ \hline
+1 & $f(1) = 8$ \\ \hline
+2 & $f(2) = 6$ \\ \hline
+3 & $f(3) = 4$ \\ \hline
+4 & $f(4) = \answer[given]{2}$ \\ \hline
+5 & $f(5) = \answer[given]{0}$ \\ \hline
+6 & $f(6) = \answer[given]{-2}$ \\ \hline
+\dots & \dots \\ \hline
+N & $f(N) = (N-1) \times (-2) + 8$ \\ \hline
+\end{tabular}
+\end{image}
+The sequence is an example of a relationship between the inputs $1, 2, \dots$ and the elements of the sequence. Each input has exactly one output associated with it, so this is an example of a function.
+\end{example}
+
+Notice that with sequences, we always have exactly one output for every input. This type of relationship isn't only for sequences, but makes sense in a lot of real-life examples. For instance, we can't be in more than one location at a time, so our location could be described as a function of time. A child has one particular height on each of their birthdays, so the child's height on their birthday could be a function of how old they are. Lots of things in life happen one at a time!
+
+In our example with the sequence, we encountered the function $f$ and its relationship described as 
+\[
+f(N) = (N-1) \times (-2) + 8.
+\]
+You might have seen functions described this way before. The $f$ is the name of the function, and the $f(N)$ is describing the output in this case. The other side of the equation is telling us the relationship between the input and the output: if you use an input of $N$, you will get an output of $(N-1) \times (-2) + 8$.
+
+Some people find it helpful to model a function like a machine. They might draw a diagram like the following.
+\begin{image}
+\begin{tikzpicture}
+
+    % Draw the function machine
+    %\draw[thick] (0,0) rectangle (4,2);
+    \draw[thick] (-0.5, 0.3)--(-0.5, 0.7)--(0,0.6)--(0,2)--(5,2)--(5,0.6)--(5.5, 0.7)--(5.5, 0.3)--(5, 0.4)--(5,-1)--(0,-1)--(0,0.4)--(-0.5, 0.3);
+    \node at (2.5,0.5) {$f$};
+
+    % Draw the input arrow and label
+    \draw[->, thick] (-2,0.5) -- (-0.6,0.5);
+    \node[left] at (-2,0.5) {Input $N$};
+
+    % Draw the output arrow and label
+    \draw[->, thick] (5.6,0.5) -- (6.5,0.5);
+    \node[right] at (6.5,0.5) {Output $f(N) = (N-1)\times(-2)+8$};
+
+    % Draw an example input and output
+    \node[above] at (-1.25, 0.5) {2};
+    \node[above] at (6,0.5) {6};
+
+\end{tikzpicture}
+\end{image} 
+In the picture, we have a box representing the function as a ``machine'' where we load in inputs and we get out outputs at the other end. The image shows us putting the number $2$ into the machine. The $f$ does its work, and out comes the number $6$, which is what we get when we evaluate $f(2) = (2-1)\times(-2)+8$. A good mental image might be a \link[souvenir penny machine]{https://www.youtube.com/watch?v=tXbUDCfreqE}: you input two quarters and a penny, you turn the crank a bunch of times, and you get out a souvenir penny. The function is what changes the input into the output.
+
+\begin{question}
+What are some of the outputs for the function $f(x) = 3x-1$?
+
+\begin{prompt}
+\begin{tabular}{c|c}
+Input $x$ & Output $f(x)$ \\ \hline
+-5 & $f(-5) = -16$ \\ \hline
+-3.2 & $f(-3.2) = -10.6$ \\ \hline
+0 & $f(0) = \answer[given]{-1}$ \\ \hline
+1.4 & $f(1.4) = \answer[given]{3.2}$ \\ \hline
+2 & $f(2) = \answer[given]{5}$ \\ \hline
+5.5 & $f(5.5) = \answer[given]{15.5}$ \\ \hline
+\end{tabular}
+\end{prompt}
+\end{question}
+
+Kids typically start learning about functions around 8th grade. We would like you to see how some of the ideas of functions connect to things that kids learn in earlier grades, and we would like to use the idea of functions to build up to one of the best connections between geometry and algebra: graphing! We'll do that in the next section. For now, let's take a look at some types of functions.
+
+
+\section{Linear functions}
+
+The first type of function we would like to investigate is a linear function. There are two ways we can think about what it means for a function to be a linear function.
+\begin{definition}
+A \dfn{linear function} is a function whose graph is on a straight line.
+\end{definition}
+This is a very good definition for higher mathematics (and a very good definition for picturing what we are working with), but since we won't talk about graphs until the next section, let's give a different definition instead.
+\begin{definition}
+A \dfn{linear function} is a function $f$ which can be put in the form
+\[
+f(x) = mx + b
+\]
+where $x$ denotes the input from a set of numbers (usually all real numbers), $m$ is a constant value called the \dfn{slope}, and $b$ is another constant value called the \dfn{y-intercept}.
+\end{definition}
+We'll work with this second definition for now, and in the next section we'll explain why they are actually defining the same thing. Notice also that the definition says ``can be put in the form''. This means that sometimes you might see a linear function in disguise, and you might have to do a little algebra to remove that disguise.
+\begin{question}
+Which of the following are linear functions? Select all that apply.
+\begin{selectAll}
+\choice[correct]{$a(x) = 19$}
+\choice[correct]{$b(x) = 4x - 8 + 2x - 2$}
+\choice{$c(M) = M\times M + M + 1$}
+\choice{$f(x) = x^2+3$}
+\choice[correct]{$g(x) = x^2-x^2-8x$}
+\choice[correct]{$h(N) = 3N+2$}
+\end{selectAll}
+\begin{feedback}
+Remember to simplify the function's equation as much as possible before checking its form. Remember also that $m$ and $b$ could be zero in the form above.
+\end{feedback}
+\end{question}
+
+Linear functions have a property that we will call a ``constant rate of change''. In order to see what this means, let's consider an example.
+\begin{example}
+Let's consider the function $f(x) = 9x-5$. We know that this is a function because for each input there is exactly one output. The domain of this function isn't specified, so we'll assume that it's all real numbers. We also know that this function is a linear function because it is in the form $f(x) = mx+b$ with $m=\answer[given]{9}$ and $b=\answer[given]{-5}$. Let's take a look at a table of values for this function.
+\begin{image}
+\begin{tabular}{c|c}
+Input $x$ & Output $f(x)$ \\ \hline
+-3 & $f(-3) = -32$ \\ \hline
+-2 & $f(-2) = -23$ \\ \hline
+-1 & $f(-1) = \answer[given]{-14}$ \\ \hline
+0 & $f(0) = \answer[given]{-5}$ \\ \hline
+1 & $f(1) = \answer[given]{4}$ \\ \hline
+2 & $f(2) = \answer[given]{13}$ \\ \hline
+3 & $f(3) = \answer[given]{22}$ \\ \hline
+\end{tabular}
+\end{image}
+It's very important to remember here that we could also plug in values of $x$ that are between the integer values we have in the table. This function is \emph{not} a sequence! However, for the purposes of what we want to observe it's good to start with just integers.
+
+We are trying to understand what we mean by a ``constant rate of change'', so let's investigate what is happening when the input values are changing. 
+\begin{itemize}
+\item When we change from $x=-3$ to $x=-2$, the input value changes by $1$, and the output value changes by $\answer[given]{9}$. 
+\item When we change from $x=1$ to $x=2$, the input value changes by $1$, and the output value changes by $\answer[given]{9}$.
+\item When we change from $x=11$ to $x=12$, the input value changes by $1$, and the output value changes by $\answer[given]{9}$. (You may have to do some extra calculating here, or you might have observed a pattern.)
+\end{itemize}
+What about when the input value changes by some number other than $1$?
+\begin{itemize}
+\item When we change from $x=-3$ to $x=-1$, the input value changes by $2$, and the output value changes by $\answer[given]{18}$. 
+\item When we change from $x=1$ to $x=3$, the input value changes by $2$, and the output value changes by $\answer[given]{18}$.
+\item When we change from $x=0$ to $x=3$, the input value changes by $3$, and the output value changes by $\answer[given]{27}$. 
+\item When we change from $x=-2$ to $x=2$, the input value changes by $4$, and the output value changes by $\answer[given]{36}$. 
+\end{itemize}
+Now we are hopefully really seeing a pattern: if the input value changes by $N$, the output value should change by $\answer[given]{9} \times N$. This pattern should work even for fractional or decimal changes. If we plug in $x=0.1$ we get $f(x) = 9(0.1)-5 = -4.1$ and if we compare this value to $f(0)$ we have changed the input by $0.1$ and we see that this changes the output by $9(0.1) = 0.9$.
+
+In fact, if we make a ratio of the change in input to the change in output, we see that this ratio is $1:9$ no matter what inputs and outputs we use.
+
+\end{example}
+From our observations here, let's define what we mean by a constant rate of change.
+\begin{definition}
+A function has a constant rate of change on a set $S$ of inputs if for every pair of inputs in $S$ the ratio of the change in inputs to the corresponding change in outputs is constant (or always the same value). This ratio, expressed as a fraction 
+\[
+\frac{\textrm{change in outputs}}{\textrm{change in inputs}}
+\]
+is called the \dfn{constant rate of change}.
+\end{definition}
+Here are a few notes to keep in mind about constant rate of change. First, we see that the constant rate of change from our previous example is $\frac{9}{1}$ since we put the change in outputs in the numerator of this ratio. You might also notice that this number is the same as the $m$ number (the slope) from the form of a linear function. Every linear function has a constant rate of change on its entire domain. However, the definition of constant rate of change also allows for functions to have constant rates of change on just part of their domain. We could piece together a function that had a constant rate of change of $\frac{3}{1}$ from $x=1$ to $x=3$ and then a constant rate of change of $\frac{3}{4}$ from $x=3$ to $x=8$. This function overall would not be linear, but it has pieces that have a constant rate of change.
+
+When you explain whether or not a function has a constant rate of change, generally we are expecting you to argue using various points in the domain like in the previous example. However, you might be feeling a little suspicious at this point: how can we say that a linear function has a constant rate of change anywhere on its domain? We can prove it using algebra, but this is a bit more than we are looking for you to explain in general. Let's use our function $f(x) = 9x-5$ as an example. Say that we have some input $x$ and then we change the input by some value $N$ so that our new input is $x+N$. We are looking at the ratio of change of outputs to change of inputs, so we need to plug in our inputs to our function.
+\[
+\frac{\textrm{change in outputs}}{\textrm{change in inputs}} = \frac{f(x+N)-f(x)}{x+N-x} = \frac{(9(x+N)-5)-(9x-5)}{x+N-x}
+\]
+Let's notice that the denominator simplifies to just $N$ and let's expand the numerator as much as we can. Notice that we have to distribute that minus sign in the numerator!
+\[
+\frac{9x+9N-5-9x+5}{N}
+\]
+Let's simplify the numerator as much as we can, combining like terms.
+\[
+\frac{9N}{N}
+\]
+Now the $N$ in the numerator and denominator can cancel, leaving us with the ratio we wanted.
+\[
+\frac{\textrm{change in outputs}}{\textrm{change in inputs}} = \frac{9}{1}
+\]
+This ratio is the same no matter what values of $x$ and $N$ we started with, because the $x$ and $N$ both canceled as we did algebra. So, we get the same, constant ratio for every pair of inputs in the domain.
+
+Perhaps at this point you are feeling like we have seen linear functions before, and we have!
+\begin{example}
+Let's see how an arithmetic sequence is an example of a linear function. Kyle is cutting pieces of fabric to make a quilt. The first piece they cut is $2$ inches long, and every piece after that is $3$ inches longer than the previous piece. 
+
+Let's start by making a table of values for this sequence.
+\begin{image}
+\begin{tabular}{c|c}
+Piece number & Length \\ \hline
+1 & 2 \\ \hline
+2 & $2+3(1)=5$ \\ \hline
+3 & $2+3(2) = \answer[given]{8}$ \\ \hline
+4 & $2+3(3) = \answer[given]{11}$ \\ \hline
+5 & $2+3(4) = \answer[given]{14}$ \\ \hline
+\dots & \dots \\ \hline
+N & $2+3\left( \answer[given]{N-1}\right )$ \\ \hline
+\end{tabular}
+\end{image}
+From our table of values, we can see that the $N$-th element of the sequence is given by the formula $2+3(N-1)$. To move towards a function, first we need a set of inputs, which in this case will be the counting numbers $\{1, 2, \dots \}$. Next, we need the relationship $f$, which we could write as
+\[
+f(N) = 2+3\left ( \answer[given]{N-1} \right ).
+\]
+Right now this isn't exactly in the form of a linear function, but we can use a little algebra. Let's distribute the $3$ outside of the parenthesis.
+\[
+f(N) = 2+3N - 3
+\]
+Now we can simplify our answer.
+\[
+f(N) = -1 + 3N
+\]
+This function is in the $f(x) = mx+b$ format with $m=\answer[given]{3}$ and $b=\answer[given]{-1}$, so we indeed have a linear function. Since the function is linear, it will have a constant rate of change. The constant rate of change for this function is given by the ratio of change in outputs over change in inputs, and since the rate is constant we can pick any two outputs to use. Let's use the first two terms of the sequence.
+\[
+\frac{\textrm{change in outputs}}{\textrm{change in inputs}} = \frac{f(2)-f(1)}{2-1}
+\]
+Plugging in the values we have for the first two terms and simplifying the denominator, we have
+\[
+\frac{\answer[given]{5} - 2}{1} = \frac{3}{1}.
+\]
+So, the constant rate of change for this arithmetic sequence is the common difference in the terms.
+
+\end{example}
+Our last observation here about the constant rate of change for this arithmetic sequence being the same as the common difference should make sense. If we increase two more terms in the sequence, we'll add the common difference twice. If we increase five terms in the sequence, we would use the common difference five times. In other words, that common ratio is the same thing as the common difference.
+
+
+Linear functions are one of my favorite types of functions because they are easy to work with and do a good job representing a lot of different things we might like to model with a function. In fact, one of the biggest ideas in calculus, should you ever study it, is to replace complicated functions with estimates that are linear functions in order to make them easier to work with. We won't do that here; instead we'll move on to polynomial functions.
+
+\section{Polynomial functions}
+Polynomial functions, or polynomials for short, are a natural extension of linear functions. To write this definition in its most efficient form, we'll need to remember that exponents tell us how many copies of that number or variable to multiply together. For instance, 
+\[
+x^4 = x \times x \times x \times x.
+\]
+The exponent $4$ tells us there are $4$ copies of $x$ all multiplied together. You can always write this out long hand if you aren't comfortable with exponents.
+\begin{definition}
+A \dfn{polynomial} is a function $f$ which can be put in the form
+\[
+f(x) = a_nx^n+a_{n-1}x^{n-1} + \dots + a_2x^2 + a_1 x + a_0
+\]
+for some whole number $n$. The numbers $a_0, a_1, a_2, \dots, a_n$ are called the \dfn{coefficients} of the polynomial, and the pieces $a_0, a_1x, a_2x^2, \dots, a_nx^n$ are called the \dfn{terms} of the polynomial. The term $a_0$ is called the \dfn{constant term} and the term $a_nx^n$ is called the \dfn{leading term}.
+\end{definition}
+
+That was a lot of letters. Let's see if we can look at an example to make things a bit more clear.
+\begin{example}
+Let's investigate why $x^5 + 3x^4 -2x-10$ is a polynomial.
+
+First, notice that if we plug in some input to this relationship (like $x=1$) we'll get exactly one output.
+\[
+(1)^5 + 3(1)^4 - 2(1)-10 = \answer[given]{-8}
+\]
+So, this relationship is a function whose domain is all real numbers. 
+
+Next, let's investigate the form of this function. The highest exponent we see is $\answer[given]{5}$, so the $n$ in our definition above would be $5$ in this case. So we are trying to identify the values of $a_5, a_4, \dots, a_0$ in
+\[
+a_5x^5 + a_4 x^4 + a_3x^3 + a_2x^2 + a_1x+a_0.
+\]
+Let's start out by matching the term that doesn't have any $x$'s in it. In the definition of the polynomial, that's $a_0$, and in our example that's $\answer[given]{-10}$. So in this case $a_0 = -10$. (This would be the constant term of this polynomial - the term with no $x$'s in it.) Next, what about the terms that have just $x$ in them? In the definition of the polynomial, that would be $a_1$ and in our example it would be $\answer[given]{-2}$. Next, we have the terms with $x^2$ in them. In the definition we have $a_2$ but in our example that term is missing. This means we can let $a_2 = 0$ and we could even write $0x^2$ in place of writing nothing. Next up is the $x^3$ terms, and we see again that $a_3 = \answer[given]{0}$. We also have $a_4 = \answer[given]{3}$. For the $x^5$ term, we don't have a number written next to $x^5$, but we remember that we can always multiply by $1$ without changing the number, so instead of $x^5$ we could write $1x^5$ and so we see that $a_5 = \answer[given]{1}$. In other words, we could write our polynomial as 
+\[
+f(x) = 1x^5 + 3x^4 + 0x^3 + 0x^2 + (-2)x + (-10)
+\]
+and this is now in the form we wanted to write our function as a polynomial.
+\end{example}
+Here's another interesting connection between polynomials and numbers. We can think about our place value system using polynomials!
+\begin{example}
+Let's write a polynomial that can help us express the number $786$.
+
+First, let's remember that $786$ means $7$ superbundles of sticks, $8$ bundles of sticks, and $6$ individual sticks in our system where we bundle after we hit $9$ sticks (or a bundle has $10$ sticks in it). We might also remember writing that number in expanded form, like
+\[
+7 \times 100 + 8 \times 10 + 6 \times 1.
+\]
+But, we can also think of $100$ sticks, our superbundle, as $10 \times 10$ sticks or a bundle of bundles. This can also be written as $10^2$ sticks, meaning that we can rewrite our expanded form as follows.
+\[
+7 \times 10^2 + 8 \times 10^1 + 6
+\]
+Now that's looking more like a polynomial! If we write $x$ instead of $10$ we are looking at 
+\[
+7x^2 + 8 x + 6
+\]
+so that if we let $f(x) = 7x^2 + 8x + 6$ and plug in $x=10$ we have
+\[
+f(10) = 7 \times 10^2 + 8 \times 10 + 6 = 786.
+\]
+Maybe this seems a little bit like overkill, but you might also remember that we worked a little bit with other bases as well. If we bundled in groups of $12$ instead of $10$, then $786$ would mean
+\[
+7 \times 12^2 + 8 \times 12 + 6 = f(12).
+\]
+The idea of bundles and superbundles is very much connected to the idea of polynomials!
+\end{example}
+
+
+
+\section{Other functions}
+While polynomial functions are fairly common in math, there are plenty of other functions as well. You might have heard about functions like $f(x) = e^x$ or $g(x) = \sin(x)$. There are functions which are pieced together from other functions in lots of interesting ways. There are even functions whose relationship we can't write down nicely, just like there are sequences that don't have any particular pattern. We won't work with these functions in this course, but we want you to finish up this section remembering that such things do exist, and when kids start working with them in high school and beyond, they are building on the foundations you have been setting throughout the early grades.
+
+\begin{question}
+Pause and think: where are some examples of functions you have seen in your every-day life?
+\begin{freeResponse}
+Write your thoughts here!
+\end{freeResponse}
+\end{question}
+
+
+
+
+
+\end{document}

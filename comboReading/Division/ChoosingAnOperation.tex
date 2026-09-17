@@ -1,0 +1,127 @@
+\documentclass{ximera}
+
+\input{../preamble.tex}
+
+
+\title{Choosing an operation}
+\author{Jenny Sheldon}
+
+\begin{document}
+
+\begin{abstract}
+We discuss how to choose an operation to solve a story problem.
+\end{abstract}
+\maketitle
+
+
+
+\section{Choosing an operation}
+
+In the section where we introduced the idea of operations and structure, we began with the following problem. 
+
+\begin{question}
+Alastair has $5$ pencils in his pencil box, and Blake has $8$ pencils in her pencil box. How many pencils do Alastair and Blake have all together?
+
+\begin{multipleChoice}
+\choice[correct]{We solve this problem by calculating $8+5$}.
+\choice{We solve this problem by calculating $8-5$}.
+\choice{We solve this problem by calculating $8 \times 5$}.
+\choice{We solve this problem by calculating $8 \div 5$}.
+\end{multipleChoice}
+\end{question}
+
+We then discussed in our section on addition and subtraction why this problem could be solved with addition. But we would like to also discuss why we wouldn't solve this problem with any other operation.
+
+\begin{question}
+Why don't we solve Alastair and Blake's pencil problem by subtracting?
+
+\begin{explanation}
+We discussed the meaning of subtraction as \wordChoice{\choice{combining} \choice[correct]{taking away} \choice{grouping} \choice{ungrouping}}, and we identified subtraction in our solutions when we took things away in order to solve the problem. When we solved this particular problem, we didn't take anything away, so subtraction isn't the right operation here.
+\end{explanation}
+\end{question}
+
+
+\begin{question}
+Why don't we solve Alastair and Blake's pencil problem by multiplying or dividing?
+
+\begin{explanation}
+We discussed the meaning of multiplication as essentially \wordChoice{\choice{combining} \choice{taking away} \choice[correct]{grouping} \choice{ungrouping}}. When we use either multiplication or division, we are looking for something in the problem that we can use as one group and then we are looking to find an equal number of objects in each of those groups. In Alastair and Blake's situation, we could think about Alastair's pencils as one group and Blake's pencils as another group, but these groups aren't equal and so neither multiplication nor division makes sense for that arrangement. We could make a single group with all of the pencils in it, but we would still need to combine all the pencils together and count them in order to find the answer. In that case the grouping structure didn't help us to find the answer, and so again neither multiplication nor division makes sense for this problem.
+\end{explanation}
+\end{question}
+
+Notice that we put multiplication and division together in the same category when we asked the previous questions. Since we defined division as the opposite of multiplication, we use the same groups and objects structure for both operations, but we ask a different question depending on whether we have multiplication, how many in each group division, or how many groups division. In other words, when you are faced with an unfamiliar story problem, a good first question to ask is: are there any natural ways to make equal groups here? If so, start looking for what would make sense as one group or one object, then decide which of the three pieces (groups, objects per group, or total objects) you have and which you are trying to find. If the problem does not have any natural ways to make groups, then start drawing a picture to represent the objects in the story and see whether you are combining these objects or taking some away in order to solve it.
+
+\begin{example}
+Consider the following story problem.
+
+\emph{Mackenzie is at a farmer's market stall where they sell spices by the gram. She is looking at one particular spice which costs $\$0.40$ per gram. How many grams could Mackenzie buy with $\$5$?}
+
+Let's identify which operation would be most helpful for solving this problem and then write an expression for the solution.
+
+The first thing we want to consider is whether this problem has any sense of grouping that could be helpful for solving the problem.
+\begin{question}
+Are things being grouped in a natural way in this problem?
+\begin{multipleChoice}
+\choice[correct]{Yes}
+\choice{No}
+\end{multipleChoice} 
+\end{question}
+The grouping might seem a little hidden in this problem, which is why it's important to keep notes on problems we have solved and what operations were helpful for solving them. That way, we get a wide range of experience and can perhaps identify grouping more easily. In this particular case, the grouping is coming from the idea that each gram of spices has a certain cost in dollars. In other words, we can choose one group to be \wordChoice{\choice{Mackenzie} \choice{spice} \choice{dollar} \choice[correct]{gram}} and one object to be one \wordChoice{\choice{Mackenzie} \choice{spice} \choice[correct]{dollar} \choice{gram}}. Another way to think about what's happening in this problem is to identify that we have a combined unit, or a ``per'' quantity: Mackenzie is spending some number of dollars per gram for these spices. The ``per'' quantity can often help us identify objects per group, and ``dollars per gram'' is consistent with what we wrote for our groups and objects per group. Finally, we'll verity that this makes sense by using our meaning of multiplication. We will start by filling in the groups and objects per group to make sure that what we have chosen makes sense with the definition.
+
+\begin{image}
+\begin{tikzpicture}
+\node at (-1.5, 0) {\# groups};
+\node at (-0.5, 0) {$\times$};
+\node at (1, 0) {\# objects/group};
+\node at (2.5, 0) {$=$};
+\node[right] at (2.75, 0) {total objects};
+\node at (-0.75, -1) {\# of };
+\node at (-0.75, -1.35) {grams}; 
+\node at (1,-1) {\# of dollars};
+\node at (1, -1.35) { per gram}; 
+\node at (2.8, -1) {total};
+\node at (2.8, -1.35) {dollars};
+\draw[->] (-0.75, -0.75)--(-1.3, -0.25);
+\draw[->] (1, -0.75)--(1, -0.4);
+\draw[->] (2.75, -0.75)--(3, -0.4);
+\end{tikzpicture}
+\end{image}
+
+Now that we know the units in this problem fit the definition of multiplication, we can look at the numbers in the problem to see whether we are looking at multiplication or division. The $\$0.40$ is the number of dollars per gram, or \wordChoice{\choice{the number of groups} \choice[correct]{the number of objects in one group} \choice{the total objects}}. The $\$5$ is the total amount Mackenzie will spend, or \wordChoice{\choice{the number of groups} \choice{the number of objects in one group} \choice[correct]{the total objects}}. The question is asking us how many grams can be purchased, which would be \wordChoice{\choice[correct]{the number of groups} \choice{the number of objects in one group} \choice{the total objects}}. We can then place all of this information into our definition of multiplication.
+\begin{image}
+\begin{tikzpicture}
+\node at (0, 0) {$?$};
+\node at (0.5, 0) {$\times$};
+\node at (1, 0) {$0.40$};
+\node at (1.5, 0) {$=$};
+\node at (2, 0) {$5$};
+\node at (-0.75, -1) {\# of };
+\node at (-0.75, -1.35) {grams}; 
+\node at (1,-1) {\# of dollars};
+\node at (1, -1.35) { per gram}; 
+\node at (2.8, -1) {total};
+\node at (2.8, -1.35) {dollars};
+\draw[->] (-0.75, -0.75)--(0, -0.25);
+\draw[->] (1, -0.75)--(1, -0.4);
+\draw[->] (2.75, -0.75)--(2, -0.4);
+\end{tikzpicture}
+\end{image}
+In other words, we are looking at a how many groups division problem, and the expression that will solve it is 
+\[
+\answer[given]{5} \div \answer[given]{0.40}.
+\]
+
+\end{example}
+
+As a final note, some story problems can be correctly solved with more than one operation, so sometimes there is not one right answer for which operation we should use. And as children get older and word problems get more in depth, sometimes problems will have multiple stages that require different operations at each stage. However, when kids learn the strategy of looking for structure and comparing with other problems they have successfully solved in the past, they are building problem-solving strategies that will benefit them well beyond the mathematics classroom. After all, that's what we want our standards for mathematical practice to really do: help build successful lifetime problem solvers.
+
+
+
+
+\end{document}
+
+
+
+
+
+

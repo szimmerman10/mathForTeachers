@@ -1,0 +1,880 @@
+\documentclass{ximera}
+
+\input{../preamble.tex}
+
+
+\title{Addition and subtraction algorithms}
+\author{Jenny Sheldon}
+
+\begin{document}
+
+\begin{abstract}
+We discuss why addition and subtraction algorithms make sense.
+\end{abstract}
+\maketitle
+
+
+
+\section{What is an algorithm?}
+
+So far, we have been drawing pictures and counting to help us solve addition and subtraction problems. This has really helped us to understand the meaning of these operations, but drawing and counting is not very fast. Sometimes, we want a fast method to find the correct answer, and that's where algorithms step in.
+
+An \dfn{algorithm} is a recipe for carrying out a calculation. You memorize a sequence of steps, and as long as you perform the steps correctly and in the right order, you get the correct answer. Think of algorithms like recipes: if you follow the steps of a recipe in the same way that the recipe writer did, you will make the same food that the recipe writer made.
+
+However, as we work through this section, we want you to notice the trade-off involved with algorithms. When we use an algorithm, we get the answer quickly, but we give up our thinking about the meaning behind it. When we think about the meaning of things and draw pictures, we give up the speed that an algorithm provides. There are times in our every-day lives that we want speed, and times where we want understanding. That's why it's important for children to practice both. Besides, when we memorize a bunch of steps without meaning, it can be really easy for people to forget which step comes where or how to do the steps. When we proceed with our understanding, we can be confident we've gotten the right thing.
+
+With all of that being said, our aim in this section is to understand \emph{why} the steps in the algorithms produce the correct answers. We'll work through the subtraction algorithm first, using whole numbers, and then the addition algorithm using decimals.
+
+\section{The standard subtraction algorithm}
+
+We will start out by describing the steps of the algorithm, using the subtraction problem $1527 - 854$ as an example. Here is what our finished work would look like. 
+
+\begin{image} \begin{tikzpicture}[every node/.style={font=\large}]
+
+    % Original top number (minuend)
+    \node at (0, 2.2) {1};
+    \node at (1, 2.2) {5};
+    \node at (2, 2.2) {2};
+    \node at (3, 2.2) {7};
+
+    % Adjusted digits after regrouping
+    \node at (0, 2.6) {\scriptsize 0};
+    \node at (1, 2.6) {\scriptsize 14};
+    \node at (2, 2.6) {\scriptsize 12};
+
+    % Bottom number (subtrahend)
+    \node at (0, 1.4) { };
+    \node at (1, 1.4) {8};
+    \node at (2, 1.4) {5};
+    \node at (3, 1.4) {4};
+
+    % Minus sign
+    \node at (-0.5, 1.6) {$-$};
+
+    % Horizontal line
+    \draw[thick] (-0.5, 1) -- (3.5, 1);
+
+    % Result digits
+    \node at (0, 0.7) { };
+    \node at (1, 0.7) {6};
+    \node at (2, 0.7) {7};
+    \node at (3, 0.7) {3};
+
+    % regrouping arrows and annotations
+    \draw[thick, red] (1.2, 2.4)--(0.8, 2);
+    \draw[thick, red] (-0.2, 2)--(0.2, 2.5);
+    \draw[thick, red] (1.8, 2)--(2.2, 2.5);
+\end{tikzpicture} \end{image}
+
+What steps did we use? First, we started from the ones place with the $7$ and the $4$. We subtracted $4$ from $7$ and wrote the result, $3$, below the line and under the ones place. Next, we looked at the tens place, with the $2$ and the $5$. We can try to subtract $5$ from $2$, but the answer would be negative. Instead, we are going to regroup. So, we take the $5$ in the hundreds place of $1527$ and cross it out. We marked that in our example with a red line. We change this $5$ to be one less, so we write a $4$ above that $5$. (Notice it looks like there's a $14$ there, because we've done more steps. At first, we just place a $4$.) We also mark off the $2$ in the tens place of $1527$ and write $12$ above it. This step, when we subtract one from the next highest place and add ten to the place we are working with, is called \dfn{regrouping}. (You may also have learned to call this step \dfn{borrowing}.) So we can say that we regrouped $10$ from the hundreds place and moved it to the tens place. Now we can subtract $12-5$ and place the resulting $7$ below the line in the tens place of our answer. Next, we investigate the hundreds place. We have $4$ hundreds left in $1527$ because of the one we regrouped, and we need to subtract $8$ hundreds from that. We don't have enough hundreds, so we regroup again. We cross off the $1$ in the thousands place of $1527$ and reduce it by $1$, so it is now zero. We add ten to the place we are working with, so the $4$ becomes $14$. Now we can subtract, and $14-8 = 6$, so we write the $6$ below the line in the hundreds place. Since we don't have any more thousands, we are finished calculating, and we read off our answer from below the line: $1527 - 854 = 673$.
+
+But why does this work? Let's go through another example, drawing pictures of what's going on behind the scenes.
+
+\begin{example}
+We will subtract $305 - 127$ using the standard subtraction algorithm, explaining our steps as we go.
+
+Remember our goal according to the definition of subtraction: we want to take away the quantity $127$ from the quantity $305$. We could do this with a picture, similarly to what we have done in previous sections. We encourage you to stop here and practice drawing such a picture in your notes, and then compare and contrast with the steps we take in order to illustrate what is happening with the algorithm.
+
+First, we will set up for our calculation on the left hand side of our picture, and draw the quantity  $305$ using base ten blocks on the right. Since we are working with whole numbers, the value of one little block will be $\answer[given]{1}$, which means the value of one bundle will be one place value to the left or $\answer[given]{10}$ and the value of one superbundle will be two place values to the left of the individual blocks or $\answer[given]{100}$. In order to draw $305$, we will need $\answer[given]{3}$ superbundles, $\answer[given]{0}$ bundles, and $\answer[given]{5}$ individual blocks.
+
+\begin{image}
+\begin{tikzpicture}[every node/.style={font=\large}]
+
+    % Original top number (minuend)
+    \node at (0, 2.2) {$3$};
+    \node at (1, 2.2) {$0$};
+    \node at (2, 2.2) {$5$};
+
+    % Adjusted digits after regrouping
+   % \node at (0, 2.6) {\scriptsize 2};
+   % \node at (1, 2.6) {\scriptsize 9};
+   % \node at (2, 2.6) {\scriptsize 15};
+
+    % Bottom number (subtrahend)
+    \node at (0, 1.4) {$1$};
+    \node at (1, 1.4) {$2$};
+    \node at (2, 1.4) {$7$};
+
+    % Minus sign
+    \node at (-0.5, 1.6) {$-$};
+
+    % Horizontal line
+    \draw[thick] (-0.5, 1) -- (2.5, 1);
+
+    % Result digits
+   % \node at (0, 0.7) {1};
+   % \node at (1, 0.7) {7};
+   % \node at (2, 0.7) {8};
+
+    % regrouping arrows
+   % \draw[thick, red] (0.8, 2)--(0.4, 2.5); 
+
+	%base ten blocks
+	\foreach \x in {4, 5.2, 6.4} \draw[thick, step=0.1] (\x, 0) grid (\x+1.01,1);
+	\foreach \a in {7.6, 7.8, 8} \draw[thick] (\a, 0)--(\a+0.1, 0)--(\a+0.1, 0.1)--(\a, 0.1)--(\a, 0);
+	\foreach \a in {7.7, 7.9} \draw[thick] (\a, 0.2)--(\a+0.1, 0.2)--(\a+0.1, 0.3)--(\a, 0.3)--(\a, 0.2);
+
+\end{tikzpicture} \end{image}
+
+Our first step is to look at the tens place. In our algorithm, we want to subtract $5-7$, which would give us a negative number. Using our blocks, we want to remove $7$ individual blocks (because we are working in the ones place) from the $5$ individual blocks that we have drawn. In order to get more blocks, we are going to have to break something down. It would be natural for us to break down a bundle, but we don't have any of those, so let's first break down one of our superbundles into $\answer[given]{10}$ bundles. In our picture we will draw one of the superbundles crossed out in purple, and then draw the corresponding bundles with a purple box around them so we can see where they came from.
+
+\begin{image}
+\begin{tikzpicture}[every node/.style={font=\large}]
+
+    % Original top number (minuend)
+    \node at (0, 2.2) {$3$};
+    \node at (1, 2.2) {$0$};
+    \node at (2, 2.2) {$5$};
+
+    % Adjusted digits after regrouping
+   % \node at (0, 2.6) {\scriptsize 2};
+   % \node at (1, 2.6) {\scriptsize 9};
+   % \node at (2, 2.6) {\scriptsize 15};
+
+    % Bottom number (subtrahend)
+    \node at (0, 1.4) {$1$};
+    \node at (1, 1.4) {$2$};
+    \node at (2, 1.4) {$7$};
+
+    % Minus sign
+    \node at (-0.5, 1.6) {$-$};
+
+    % Horizontal line
+    \draw[thick] (-0.5, 1) -- (2.5, 1);
+
+    % Result digits
+   % \node at (0, 0.7) {1};
+   % \node at (1, 0.7) {7};
+   % \node at (2, 0.7) {8};
+
+    % regrouping arrows
+
+	%base ten blocks
+	\foreach \x in {4, 5.2, 6.4} \draw[thick, step=0.1] (\x, 0) grid (\x+1.01,1);
+	\draw[thick, violet] (6.3, -0.1)--(7.5, 1.1);
+	\foreach \b in {7.6, 7.8, 8, 8.2, 8.4, 8.6, 8.8, 9, 9.2, 9.4} \draw[thick, step=0.1] (\b, 0) grid (\b+0.101, 1);
+	\draw[thick, violet] (7.5, -0.1)--(9.55, -0.1)--(9.55, 1.1)--(7.5, 1.1)--(7.5, -0.1);
+	\foreach \a in {9.6, 9.8, 10} \draw[thick] (\a, 0)--(\a+0.1, 0)--(\a+0.1, 0.1)--(\a, 0.1)--(\a, 0);
+	\foreach \a in {9.7, 9.9} \draw[thick] (\a, 0.2)--(\a+0.1, 0.2)--(\a+0.1, 0.3)--(\a, 0.3)--(\a, 0.2);
+
+\end{tikzpicture} \end{image}
+
+To record what we've done in our algorithm, notice that we crossed off one superbundle and we have two superbundles left. So, let's cross off the $3$ in $305$ and replace it with a $2$. (Remember this is the regrouping step.) We now have $10$ bundles, so let's cross off the $0$ in $305$ and replace it with a $10$.
+
+\begin{image}
+\begin{tikzpicture}[every node/.style={font=\large}]
+
+    % Original top number (minuend)
+    \node at (0, 2.2) {$3$};
+    \node at (1, 2.2) {$0$};
+    \node at (2, 2.2) {$5$};
+
+    % Adjusted digits after regrouping
+    \node at (0, 2.6) {\scriptsize $2$};
+    \node at (1, 2.6) {\scriptsize $10$};
+   % \node at (2, 2.6) {\scriptsize $15$};
+
+    % Bottom number (subtrahend)
+    \node at (0, 1.4) {$1$};
+    \node at (1, 1.4) {$2$};
+    \node at (2, 1.4) {$7$};
+
+    % Minus sign
+    \node at (-0.5, 1.6) {$-$};
+
+    % Horizontal line
+    \draw[thick] (-0.5, 1) -- (2.5, 1);
+
+    % Result digits
+   % \node at (0, 0.7) {1};
+   % \node at (1, 0.7) {7};
+   % \node at (2, 0.7) {8};
+
+    % regrouping arrows
+    \draw[thick, violet] (-0.2, 2)--(0.2, 2.5);  
+    \draw[thick, violet] (0.8, 2)--(1.2, 2.5);  
+
+	%base ten blocks
+	\foreach \x in {4, 5.2, 6.4} \draw[thick, step=0.1] (\x, 0) grid (\x+1.01,1);
+	\draw[thick, violet] (6.3, -0.1)--(7.5, 1.1);
+	\foreach \b in {7.6, 7.8, 8, 8.2, 8.4, 8.6, 8.8, 9, 9.2, 9.4} \draw[thick, step=0.1] (\b, 0) grid (\b+0.101, 1);
+	\draw[thick, violet] (7.5, -0.1)--(9.55, -0.1)--(9.55, 1.1)--(7.5, 1.1)--(7.5, -0.1);
+	\foreach \a in {9.6, 9.8, 10} \draw[thick] (\a, 0)--(\a+0.1, 0)--(\a+0.1, 0.1)--(\a, 0.1)--(\a, 0);
+	\foreach \a in {9.7, 9.9} \draw[thick] (\a, 0.2)--(\a+0.1, 0.2)--(\a+0.1, 0.3)--(\a, 0.3)--(\a, 0.2);
+
+\end{tikzpicture} \end{image}
+
+Now, we have some bundles to unbundle. Remember, our goal was to get some more individual blocks! We will unbundle that last bundle into $\answer[given]{10}$ individual blocks. We will delete the purple box around all of the bundles, cross out one of the bundles in a green color, and then show the $10$ new individual blocks with a green box around them so you can see where they came from.
+
+\begin{image}
+\begin{tikzpicture}[every node/.style={font=\large}]
+
+    % Original top number (minuend)
+    \node at (0, 2.2) {$3$};
+    \node at (1, 2.2) {$0$};
+    \node at (2, 2.2) {$5$};
+
+    % Adjusted digits after regrouping
+    \node at (0, 2.6) {\scriptsize $2$};
+    \node at (1, 2.6) {\scriptsize $10$};
+   % \node at (2, 2.6) {\scriptsize $15$};
+
+    % Bottom number (subtrahend)
+    \node at (0, 1.4) {$1$};
+    \node at (1, 1.4) {$2$};
+    \node at (2, 1.4) {$7$};
+
+    % Minus sign
+    \node at (-0.5, 1.6) {$-$};
+
+    % Horizontal line
+    \draw[thick] (-0.5, 1) -- (2.5, 1);
+
+    % Result digits
+   % \node at (0, 0.7) {1};
+   % \node at (1, 0.7) {7};
+   % \node at (2, 0.7) {8};
+
+    % regrouping arrows
+    \draw[thick, violet] (-0.2, 2)--(0.2, 2.5);  
+    \draw[thick, violet] (0.8, 2)--(1.2, 2.5);  
+
+	%base ten blocks
+	\foreach \x in {4, 5.2, 6.4} \draw[thick, step=0.1] (\x, 0) grid (\x+1.01,1);
+	\draw[thick, violet] (6.3, -0.1)--(7.5, 1.1);
+	\foreach \b in {7.6, 7.8, 8, 8.2, 8.4, 8.6, 8.8, 9, 9.2, 9.4} \draw[thick, step=0.1] (\b, 0) grid (\b+0.101, 1);
+	\draw[thick, olive] (9.3, -0.1)--(9.5, 1.1);
+	\foreach \a in {9.6, 9.8, 10, 10.2, 10.4} \draw[thick] (\a, 0.6)--(\a+0.1, 0.6)--(\a+0.1, 0.7)--(\a, 0.7)--(\a, 0.6);
+	\foreach \a in {9.6, 9.8, 10, 10.2, 10.4} \draw[thick] (\a, 0.8)--(\a+0.1, 0.8)--(\a+0.1, 0.9)--(\a, 0.9)--(\a, 0.8);
+	\draw[thick, olive] (9.55, 0.5)--(10.55, 0.5)--(10.55, 1)--(9.55,1)--(9.55, 0.5);
+	\foreach \a in {9.6, 9.8, 10} \draw[thick] (\a, 0)--(\a+0.1, 0)--(\a+0.1, 0.1)--(\a, 0.1)--(\a, 0);
+	\foreach \a in {9.7, 9.9} \draw[thick] (\a, 0.2)--(\a+0.1, 0.2)--(\a+0.1, 0.3)--(\a, 0.3)--(\a, 0.2);
+
+\end{tikzpicture} \end{image}
+
+To record this step in the algorithm, we took away one bundle from our $10$ bundles, so let's cross off the $10$ that we made in the previous step. We have $9$ bundles remaining, so we'll write a $9$ above that $10$. Finally, we now have $\answer[given]{15}$ individual blocks, so we'll cross off the $5$ in $305$ and write $15$ above it. 
+
+\begin{image}
+\begin{tikzpicture}[every node/.style={font=\large}]
+
+    % Original top number (minuend)
+    \node at (0, 2.2) {$3$};
+    \node at (1, 2.2) {$0$};
+    \node at (2, 2.2) {$5$};
+
+    % Adjusted digits after regrouping
+    \node at (0, 2.6) {\scriptsize $2$};
+    \node at (1, 2.6) {\scriptsize $10$};
+    \node at (1, 2.9) {\scriptsize $9$};
+    \node at (2, 2.6) {\scriptsize $15$};
+
+    % Bottom number (subtrahend)
+    \node at (0, 1.4) {$1$};
+    \node at (1, 1.4) {$2$};
+    \node at (2, 1.4) {$7$};
+
+    % Minus sign
+    \node at (-0.5, 1.6) {$-$};
+
+    % Horizontal line
+    \draw[thick] (-0.5, 1) -- (2.5, 1);
+
+    % Result digits
+   % \node at (0, 0.7) {1};
+   % \node at (1, 0.7) {7};
+   % \node at (2, 0.7) {8};
+
+    % regrouping arrows
+    \draw[thick, violet] (-0.2, 2)--(0.2, 2.5);  %  from 3 to fix tens
+    \draw[thick, violet] (0.8, 2)--(1.2, 2.5);  % adjust tens
+    \draw[thick, olive] (0.8, 2.5)--(1.2, 2.8); % from tens 
+    \draw[thick, olive] (1.8, 2)--(2.2, 2.5); %adjust ones
+
+	%base ten blocks
+	\foreach \x in {4, 5.2, 6.4} \draw[thick, step=0.1] (\x, 0) grid (\x+1.01,1);
+	\draw[thick, violet] (6.3, -0.1)--(7.5, 1.1);
+	\foreach \b in {7.6, 7.8, 8, 8.2, 8.4, 8.6, 8.8, 9, 9.2, 9.4} \draw[thick, step=0.1] (\b, 0) grid (\b+0.101, 1);
+	\draw[thick, olive] (9.3, -0.1)--(9.5, 1.1);
+	\foreach \a in {9.6, 9.8, 10, 10.2, 10.4} \draw[thick] (\a, 0.6)--(\a+0.1, 0.6)--(\a+0.1, 0.7)--(\a, 0.7)--(\a, 0.6);
+	\foreach \a in {9.6, 9.8, 10, 10.2, 10.4} \draw[thick] (\a, 0.8)--(\a+0.1, 0.8)--(\a+0.1, 0.9)--(\a, 0.9)--(\a, 0.8);
+	\draw[thick, olive] (9.55, 0.5)--(10.55, 0.5)--(10.55, 1)--(9.55,1)--(9.55, 0.5);
+	\foreach \a in {9.6, 9.8, 10} \draw[thick] (\a, 0)--(\a+0.1, 0)--(\a+0.1, 0.1)--(\a, 0.1)--(\a, 0);
+	\foreach \a in {9.7, 9.9} \draw[thick] (\a, 0.2)--(\a+0.1, 0.2)--(\a+0.1, 0.3)--(\a, 0.3)--(\a, 0.2);
+
+\end{tikzpicture} \end{image}
+
+Notice how the small numbers above the $305$ in the algorithm represent the way that we've rearranged our base ten blocks. We have $2$ superbundles remaining, $9$ bundles, and $15$ individual blocks. We still have the same amount of blocks that we started with, but we've rearranged them to make our job of taking away some blocks a lot easier. We will start by taking away the individual blocks in $127$, so we'll remove the green colored box around the unbundled ones. 
+
+The problem tells us to take away $\answer[given]{7}$ individual blocks since there is a $7$ in the ones place of $127$, so we will cross off $7$ individual blocks using a red marker. This will leave us with $8$ individual blocks total, which we will record in the algorithm underneath the line. Since they are individual blocks and the value of each block is $1$, this will go in the ones place in our answer.
+
+\begin{image}
+\begin{tikzpicture}[every node/.style={font=\large}]
+
+    % Original top number (minuend)
+    \node at (0, 2.2) {$3$};
+    \node at (1, 2.2) {$0$};
+    \node at (2, 2.2) {$5$};
+
+    % Adjusted digits after regrouping
+    \node at (0, 2.6) {\scriptsize $2$};
+    \node at (1, 2.6) {\scriptsize $10$};
+    \node at (1, 2.9) {\scriptsize $9$};
+    \node at (2, 2.6) {\scriptsize $15$};
+
+    % Bottom number (subtrahend)
+    \node at (0, 1.4) {$1$};
+    \node at (1, 1.4) {$2$};
+    \node at (2, 1.4) {$7$};
+
+    % Minus sign
+    \node at (-0.5, 1.6) {$-$};
+
+    % Horizontal line
+    \draw[thick] (-0.5, 1) -- (2.5, 1);
+
+    % Result digits
+   % \node at (0, 0.7) {$1$};
+   % \node at (1, 0.7) {$7$};
+    \node at (2, 0.7) {$8$};
+
+    % regropuing arrows
+    \draw[thick, violet] (-0.2, 2)--(0.2, 2.5);  %  from 3 to fix tens
+    \draw[thick, violet] (0.8, 2)--(1.2, 2.5);  % adjust tens
+    \draw[thick, olive] (0.8, 2.5)--(1.2, 2.8); % from tens 
+    \draw[thick, olive] (1.8, 2)--(2.2, 2.5); %adjust ones
+
+	%base ten blocks
+	\foreach \x in {4, 5.2, 6.4} \draw[thick, step=0.1] (\x, 0) grid (\x+1.01,1);
+	\draw[thick, violet] (6.3, -0.1)--(7.5, 1.1);
+	\foreach \b in {7.6, 7.8, 8, 8.2, 8.4, 8.6, 8.8, 9, 9.2, 9.4} \draw[thick, step=0.1] (\b, 0) grid (\b+0.101, 1);
+	\draw[thick, olive] (9.3, -0.1)--(9.5, 1.1);
+	\foreach \a in {9.6, 9.8, 10, 10.2, 10.4} \draw[thick] (\a, 0.6)--(\a+0.1, 0.6)--(\a+0.1, 0.7)--(\a, 0.7)--(\a, 0.6);
+	\foreach \a in {9.6, 9.8, 10, 10.2, 10.4} \draw[thick] (\a, 0.8)--(\a+0.1, 0.8)--(\a+0.1, 0.9)--(\a, 0.9)--(\a, 0.8);
+	\foreach \a in {9.6, 9.8, 10} \draw[thick] (\a, 0)--(\a+0.1, 0)--(\a+0.1, 0.1)--(\a, 0.1)--(\a, 0);
+	\foreach \a in {9.7, 9.9} \draw[thick] (\a, 0.2)--(\a+0.1, 0.2)--(\a+0.1, 0.3)--(\a, 0.3)--(\a, 0.2);
+	\foreach \a in {9.6, 9.8, 10, 10.2, 10.4} \draw[thick, red] (\a-0.05, 0.75)--(\a+0.15, 0.95);
+	\foreach \a in {9.6, 9.8} \draw[thick, red] (\a-0.05, 0.55)--(\a+0.15, 0.75);
+
+\end{tikzpicture} \end{image}
+
+Next, the $2$ in $127$ tells us we need to take away $\answer[given]{2}$ tens, which are bundles in our picture. We have enough bundles to do this, so we don't need to unbundle again. We will mark these bundles off with our red marker again, and record that we have $\answer[given]{7}$ bundles or tens remaining underneath the line in the tens place.
+
+\begin{image}
+\begin{tikzpicture}[every node/.style={font=\large}]
+
+    % Original top number (minuend)
+    \node at (0, 2.2) {$3$};
+    \node at (1, 2.2) {$0$};
+    \node at (2, 2.2) {$5$};
+
+    % Adjusted digits after regrouping
+    \node at (0, 2.6) {\scriptsize $2$};
+    \node at (1, 2.6) {\scriptsize $10$};
+    \node at (1, 2.9) {\scriptsize $9$};
+    \node at (2, 2.6) {\scriptsize $15$};
+
+    % Bottom number (subtrahend)
+    \node at (0, 1.4) {$1$};
+    \node at (1, 1.4) {$2$};
+    \node at (2, 1.4) {$7$};
+
+    % Minus sign
+    \node at (-0.5, 1.6) {$-$};
+
+    % Horizontal line
+    \draw[thick] (-0.5, 1) -- (2.5, 1);
+
+    % Result digits
+   % \node at (0, 0.7) {$1$};
+    \node at (1, 0.7) {$7$};
+    \node at (2, 0.7) {$8$};
+
+    % regroup arrows
+    \draw[thick, violet] (-0.2, 2)--(0.2, 2.5);  %  from 3 to fix tens
+    \draw[thick, violet] (0.8, 2)--(1.2, 2.5);  % adjust tens
+    \draw[thick, olive] (0.8, 2.5)--(1.2, 2.8); % from tens 
+    \draw[thick, olive] (1.8, 2)--(2.2, 2.5); %adjust ones
+
+	%base ten blocks
+	\foreach \x in {4, 5.2, 6.4} \draw[thick, step=0.1] (\x, 0) grid (\x+1.01,1);
+	\draw[thick, violet] (6.3, -0.1)--(7.5, 1.1);
+	\foreach \b in {7.6, 7.8, 8, 8.2, 8.4, 8.6, 8.8, 9, 9.2, 9.4} \draw[thick, step=0.1] (\b, 0) grid (\b+0.101, 1);
+	\draw[thick, olive] (9.3, -0.1)--(9.5, 1.1);
+	\foreach \a in {9.6, 9.8, 10, 10.2, 10.4} \draw[thick] (\a, 0.6)--(\a+0.1, 0.6)--(\a+0.1, 0.7)--(\a, 0.7)--(\a, 0.6);
+	\foreach \a in {9.6, 9.8, 10, 10.2, 10.4} \draw[thick] (\a, 0.8)--(\a+0.1, 0.8)--(\a+0.1, 0.9)--(\a, 0.9)--(\a, 0.8);
+	\foreach \a in {9.6, 9.8, 10} \draw[thick] (\a, 0)--(\a+0.1, 0)--(\a+0.1, 0.1)--(\a, 0.1)--(\a, 0);
+	\foreach \a in {9.7, 9.9} \draw[thick] (\a, 0.2)--(\a+0.1, 0.2)--(\a+0.1, 0.3)--(\a, 0.3)--(\a, 0.2);
+	\foreach \a in {9.6, 9.8, 10, 10.2, 10.4} \draw[thick, red] (\a-0.05, 0.75)--(\a+0.15, 0.95);
+	\foreach \a in {9.6, 9.8} \draw[thick, red] (\a-0.05, 0.55)--(\a+0.15, 0.75);
+	\foreach \b in {9.2, 9} \draw[thick, red] (\b-0.05, -0.05)--(\b+0.15, 1.05);
+
+\end{tikzpicture} \end{image}
+
+Last but not least, we need to take away $\answer[given]{1}$ superbundle for the one hundred in $127$. Again, we have enough superbundles, so we don't need to unbundle. We can mark off one of the superbundles and record the remaining one superbundle or hundred underneath the line.
+
+\begin{image}
+\begin{tikzpicture}[every node/.style={font=\large}]
+
+    % Original top number (minuend)
+    \node at (0, 2.2) {$3$};
+    \node at (1, 2.2) {$0$};
+    \node at (2, 2.2) {$5$};
+
+    % Adjusted digits after regrouping
+    \node at (0, 2.6) {\scriptsize $2$};
+    \node at (1, 2.6) {\scriptsize $10$};
+    \node at (1, 2.9) {\scriptsize $9$};
+    \node at (2, 2.6) {\scriptsize $15$};
+
+    % Bottom number (subtrahend)
+    \node at (0, 1.4) {$1$};
+    \node at (1, 1.4) {$2$};
+    \node at (2, 1.4) {$7$};
+
+    % Minus sign
+    \node at (-0.5, 1.6) {$-$};
+
+    % Horizontal line
+    \draw[thick] (-0.5, 1) -- (2.5, 1);
+
+    % Result digits
+    \node at (0, 0.7) {$1$};
+    \node at (1, 0.7) {$7$};
+    \node at (2, 0.7) {$8$};
+
+    % regrouping arrows
+    \draw[thick, violet] (-0.2, 2)--(0.2, 2.5);  %  from 3 to fix tens
+    \draw[thick, violet] (0.8, 2)--(1.2, 2.5);  % adjust tens
+    \draw[thick, olive] (0.8, 2.5)--(1.2, 2.8); % from tens 
+    \draw[thick, olive] (1.8, 2)--(2.2, 2.5); %adjust ones
+
+	%base ten blocks
+	\foreach \x in {4, 5.2, 6.4} \draw[thick, step=0.1] (\x, 0) grid (\x+1.01,1);
+	\draw[thick, violet] (6.3, -0.1)--(7.5, 1.1);
+	\foreach \b in {7.6, 7.8, 8, 8.2, 8.4, 8.6, 8.8, 9, 9.2, 9.4} \draw[thick, step=0.1] (\b, 0) grid (\b+0.101, 1);
+	\draw[thick, olive] (9.3, -0.1)--(9.5, 1.1);
+	\foreach \a in {9.6, 9.8, 10, 10.2, 10.4} \draw[thick] (\a, 0.6)--(\a+0.1, 0.6)--(\a+0.1, 0.7)--(\a, 0.7)--(\a, 0.6);
+	\foreach \a in {9.6, 9.8, 10, 10.2, 10.4} \draw[thick] (\a, 0.8)--(\a+0.1, 0.8)--(\a+0.1, 0.9)--(\a, 0.9)--(\a, 0.8);
+	\foreach \a in {9.6, 9.8, 10} \draw[thick] (\a, 0)--(\a+0.1, 0)--(\a+0.1, 0.1)--(\a, 0.1)--(\a, 0);
+	\foreach \a in {9.7, 9.9} \draw[thick] (\a, 0.2)--(\a+0.1, 0.2)--(\a+0.1, 0.3)--(\a, 0.3)--(\a, 0.2);
+	\foreach \a in {9.6, 9.8, 10, 10.2, 10.4} \draw[thick, red] (\a-0.05, 0.75)--(\a+0.15, 0.95);
+	\foreach \a in {9.6, 9.8} \draw[thick, red] (\a-0.05, 0.55)--(\a+0.15, 0.75);
+	\foreach \b in {9.2, 9} \draw[thick, red] (\b-0.05, -0.05)--(\b+0.15, 1.05);
+	\draw[thick, red] (5.15, -0.05)--(6.25, 1.05);
+
+\end{tikzpicture} \end{image}
+
+For our answer, we can either read beneath the line or count how many superbundles, bundles, and individual blocks we have left. We have $\answer[given]{1}$ superbundle, $\answer[given]{7}$ bundles, and $\answer[given]{8}$ individual blocks, which corresponds exactly to the $178$ underneath the line. And notice that we also did the right operation (subtraction), because we \wordChoice{\choice[correct]{took away} \choice{combined}} all of the requested blocks (a total value of $127$, though we split that up into steps). That's the meaning of subtraction. So, we are confident that our answer is correct and that this algorithm produced the correct answer to this subtraction problem.
+
+
+\end{example}
+
+While we've worked through the reasoning for the subtraction algorithm with this specific example, we hope that you can work through more examples, drawing pictures of each step in the algorithm, until you feel confident that these steps make sense. In particular, pay attention to the regrouping steps, since these can seem the most mysterious when we are first learning the algorithm. But, the regrouping isn't so mysterious when we recognize that we're just unbundling and rearranging the blocks in our picture.
+
+
+\section{The standard addition algorithm}
+
+Now, let's turn our attention to the standard addition algorithm. Like we did with the standard subtraction algorithm, we will look at an example to talk through how to make the calculation, and then work through another example where we explain why the algorithm works to give us the correct answer.
+
+First, let's show how to perform the calculations with the example of $58.7 + 6.59$.
+
+\begin{image} \begin{tikzpicture}[every node/.style={font=\large}]
+
+    % Carrying digits
+    \node at (0, 2.8) {\scriptsize 1};
+    \node at (1, 2.8) {\scriptsize 1};
+
+    % Top number (augend)
+    \node at (0, 2.2) {5};
+    \node at (1, 2.2) {8};
+    \node at (1.5, 2.05) {.}; % lower decimal
+    \node at (2, 2.2) {7};
+    \node at (3, 2.2) {0};
+
+    % Bottom number (addend)
+    \node at (0, 1.4) { };
+    \node at (1, 1.4) {6};
+    \node at (1.5, 1.25) {.}; % lower decimal
+    \node at (2, 1.4) {5};
+    \node at (3, 1.4) {9};
+
+    % Plus sign
+    \node at (-0.5, 1.6) {$+$};
+
+    % Horizontal line
+    \draw[thick] (-0.5, 1) -- (4.5, 1);
+
+    % Result digits
+    \node at (0, 0.7) {6};
+    \node at (1, 0.7) {5};
+    \node at (1.5, 0.55) {.}; % lower decimal
+    \node at (2, 0.7) {2};
+    \node at (3, 0.7) {9};
+
+\end{tikzpicture} \end{image}
+
+What were the steps we took? First, since we are using decimal numbers in this case, our first step was to add the numbers by lining up the decimal places. Since $58.7$ didn't have anything in the hundredths place we can place a zero to the end of that number, making it $58.70$.
+
+Next, like with the subtraction algorithm, we start with the smallest place value we have, which in this case is the hundredths place. We add the $0$ hundredths from $58.70$ to the $9$ hundredths from $6.59$, and the answer is $9$ hundredths, which we write below the line in the hundredths place. We move one place value left, and add the tenths places. $7$ tenths plus $5$ tenths will give us $12$ tenths, which is too many to fit just in the tenths place. So, we write the $2$ from that $12$ below the line in the tenths place, and place the $1$ above the next place to the left (the ones place). That's where we see the small $1$ above the $8$. This step is called \dfn{regrouping}, when we place a small number over the next place value to the left. (You may have learned to call this step ``carrying''.) Moving to the ones place, we add the $8$ ones from $58.70$, the $6$ ones from $6.59$, and the extra small $1$ above the $8$. All together that give us $15$ ones, so we break that apart like we did with the $12$ tenths: the $5$ goes in the ones place below the line, and the $1$ gets carried above the $5$ in the next place value to the left. Finally, we add all the tens, which is the $5$ tens from $58.70$ and the extra $1$ ten we just wrote, giving us $6$ tens to write below the line. Our answer is written below the line: $58.7+6.59=65.29$.
+
+Hopefully, you are already imagining how we can justify this with our base ten blocks. Let's take a look at how this works, using a different example.
+
+
+\begin{example}
+We will add $18.6 + 4.7$ using the standard addition algorithm, explaining our steps as we go.
+
+Remember our goal according to the definition of addition: we want to combine together the quantity $18.6$ with the quantity $4.7$. We could do this with a picture, similarly to what we have done in previous sections. We encourage you to stop here and practice drawing such a picture in your notes, and then compare and contrast with the steps we take in order to illustrate what is happening with the algorithm.
+
+First, we will set up our calculation on the left hand side of our picture and again draw our base ten blocks on the right. In this case, the smallest place value we have is the tenths place, so we will let the value of one individual block be $\answer[given]{0.1}$, meaning the value of one bundle is one place to the left or $\answer[given]{1}$ and the value of the superbundle is one more place to the right or $\answer[given]{10}$. To represent our first number, $18.6$, we will need $\answer[given]{1}$ superbundle, $\answer[given]{8}$ bundles, and $\answer[given]{6}$ individual blocks.
+
+\begin{image}
+\begin{tikzpicture}[every node/.style={font=\large}]
+
+    % Carrying digits
+%    \node at (0, 2.8) {\scriptsize 1};
+%    \node at (1, 2.8) {\scriptsize 1};
+
+    % Top number (augend)
+    \node at (0, 2.2) {$1$};
+    \node at (1, 2.2) {$8$};
+    \node at (1.5, 2.05) {.}; % lower decimal
+    \node at (2, 2.2) {$6$};
+
+    % Bottom number (addend)
+    \node at (0, 1.4) { };
+    \node at (1, 1.4) {$4$};
+    \node at (1.5, 1.25) {.}; % lower decimal
+    \node at (2, 1.4) {$7$};
+
+    % Plus sign
+    \node at (-0.5, 1.6) {$+$};
+
+    % Horizontal line
+    \draw[thick] (-0.5, 1) -- (2.5, 1);
+
+    % Result digits
+%    \node at (0, 0.7) {$2$};
+%    \node at (1, 0.7) {$3$};
+%    \node at (1.5, 0.55) {.}; % lower decimal
+%    \node at (2, 0.7) {$3$};
+
+
+%base ten blocks
+\draw[thick, step=0.1] (4,0) grid (5,1);
+\foreach \x in {5.2, 5.4, 5.6, 5.8, 6, 6.2, 6.4, 6.6} \draw[thick, step=0.1] (\x, 0) grid (\x+0.101, 1);
+\foreach \a in {7, 7.2, 7.4} \draw[thick] (\a, 0)--(\a+0.1, 0)--(\a+0.1, 0.1)--(\a, 0.1)--(\a, 0);
+\foreach \a in {7, 7.2, 7.4} \draw[thick] (\a, 0.2)--(\a+0.1, 0.2)--(\a+0.1, 0.3)--(\a, 0.3)--(\a, 0.2);
+
+\end{tikzpicture}
+\end{image}
+
+We start with our smallest place value, which in this case is the tenths. We have $6$ tenths already from $18.6$ and we need to combine that together with $7$ more tenths from $4.7$. Let's draw $7$ more individual blocks filled in blue.
+
+\begin{image}
+\begin{tikzpicture}[every node/.style={font=\large}]
+
+    % Carrying digits
+%    \node at (0, 2.8) {\scriptsize 1};
+%    \node at (1, 2.8) {\scriptsize 1};
+
+    % Top number (augend)
+    \node at (0, 2.2) {$1$};
+    \node at (1, 2.2) {$8$};
+    \node at (1.5, 2.05) {.}; % lower decimal
+    \node at (2, 2.2) {$6$};
+
+    % Bottom number (addend)
+    \node at (0, 1.4) { };
+    \node at (1, 1.4) {$4$};
+    \node at (1.5, 1.25) {.}; % lower decimal
+    \node at (2, 1.4) {$7$};
+
+    % Plus sign
+    \node at (-0.5, 1.6) {$+$};
+
+    % Horizontal line
+    \draw[thick] (-0.5, 1) -- (2.5, 1);
+
+    % Result digits
+%    \node at (0, 0.7) {$2$};
+%    \node at (1, 0.7) {$3$};
+%    \node at (1.5, 0.55) {.}; % lower decimal
+%    \node at (2, 0.7) {$3$};
+
+
+%base ten blocks
+\draw[thick, step=0.1] (4,0) grid (5,1);
+\foreach \x in {5.2, 5.4, 5.6, 5.8, 6, 6.2, 6.4, 6.6} \draw[thick, step=0.1] (\x, 0) grid (\x+0.101, 1);
+\foreach \a in {7, 7.2, 7.4} \draw[thick] (\a, 0)--(\a+0.1, 0)--(\a+0.1, 0.1)--(\a, 0.1)--(\a, 0);
+\foreach \a in {7, 7.2, 7.4} \draw[thick] (\a, 0.2)--(\a+0.1, 0.2)--(\a+0.1, 0.3)--(\a, 0.3)--(\a, 0.2);
+\foreach \a in {7, 7.2, 7.4} \draw[thick, fill=blue] (\a, 0.4)--(\a+0.1, 0.4)--(\a+0.1, 0.5)--(\a, 0.5)--(\a, 0.4);
+\foreach \a in {7, 7.2} \draw[thick, fill=blue] (\a, 0.6)--(\a+0.1, 0.6)--(\a+0.1, 0.7)--(\a, 0.7)--(\a, 0.6);
+\foreach \a in {7, 7.2} \draw[thick, fill=blue] (\a, 0.8)--(\a+0.1, 0.8)--(\a+0.1, 0.9)--(\a, 0.9)--(\a, 0.8);
+\end{tikzpicture}
+\end{image}
+
+Looking at our picture, we now see $13$ individual blocks. We can make a bundle out of $\answer[given]{10}$ of them, so let's do that with a red box.
+
+\begin{image}
+\begin{tikzpicture}[every node/.style={font=\large}]
+
+    % Carrying digits
+%    \node at (0, 2.8) {\scriptsize 1};
+%    \node at (1, 2.8) {\scriptsize 1};
+
+    % Top number (augend)
+    \node at (0, 2.2) {$1$};
+    \node at (1, 2.2) {$8$};
+    \node at (1.5, 2.05) {.}; % lower decimal
+    \node at (2, 2.2) {$6$};
+
+    % Bottom number (addend)
+    \node at (0, 1.4) { };
+    \node at (1, 1.4) {$4$};
+    \node at (1.5, 1.25) {.}; % lower decimal
+    \node at (2, 1.4) {$7$};
+
+    % Plus sign
+    \node at (-0.5, 1.6) {$+$};
+
+    % Horizontal line
+    \draw[thick] (-0.5, 1) -- (2.5, 1);
+
+    % Result digits
+%    \node at (0, 0.7) {$2$};
+%    \node at (1, 0.7) {$3$};
+%    \node at (1.5, 0.55) {.}; % lower decimal
+%    \node at (2, 0.7) {$3$};
+
+
+%base ten blocks
+\draw[thick, step=0.1] (4,0) grid (5,1);
+\foreach \x in {5.2, 5.4, 5.6, 5.8, 6, 6.2, 6.4, 6.6} \draw[thick, step=0.1] (\x, 0) grid (\x+0.101, 1);
+\foreach \a in {7, 7.2, 7.4} \draw[thick] (\a, 0)--(\a+0.1, 0)--(\a+0.1, 0.1)--(\a, 0.1)--(\a, 0);
+\foreach \a in {7, 7.2, 7.4} \draw[thick] (\a, 0.2)--(\a+0.1, 0.2)--(\a+0.1, 0.3)--(\a, 0.3)--(\a, 0.2);
+\foreach \a in {7, 7.2, 7.4} \draw[thick, fill=blue] (\a, 0.4)--(\a+0.1, 0.4)--(\a+0.1, 0.5)--(\a, 0.5)--(\a, 0.4);
+\foreach \a in {7, 7.2} \draw[thick, fill=blue] (\a, 0.6)--(\a+0.1, 0.6)--(\a+0.1, 0.7)--(\a, 0.7)--(\a, 0.6);
+\foreach \a in {7, 7.2} \draw[thick, fill=blue] (\a, 0.8)--(\a+0.1, 0.8)--(\a+0.1, 0.9)--(\a, 0.9)--(\a, 0.8);
+\draw[thick, red] (6.9, -0.1)--(7.35, -0.1)--(7.35, 1.1)--(6.9, 1.1)--(6.9,-0.1);
+\end{tikzpicture}
+\end{image}
+
+The ten individual blocks together make up a new bundle, and there are $\answer[given]{3}$ individual blocks left. We'll record the result of this work in our algorithm by writing the $3$ individual blocks below the tenths place, and placing our new bundle in the bundles place. But since we haven't added the bundles place yet, we'll record it as a small $1$ above the bundles place. (Remember that this is the regrouping step.)
+
+\begin{image}
+\begin{tikzpicture}[every node/.style={font=\large}]
+
+    % Carrying digits
+%    \node at (0, 2.8) {\scriptsize $1$};
+    \node at (1, 2.8) {\scriptsize $1$};
+
+    % Top number (augend)
+    \node at (0, 2.2) {$1$};
+    \node at (1, 2.2) {$8$};
+    \node at (1.5, 2.05) {.}; % lower decimal
+    \node at (2, 2.2) {$6$};
+
+    % Bottom number (addend)
+    \node at (0, 1.4) { };
+    \node at (1, 1.4) {$4$};
+    \node at (1.5, 1.25) {.}; % lower decimal
+    \node at (2, 1.4) {$7$};
+
+    % Plus sign
+    \node at (-0.5, 1.6) {$+$};
+
+    % Horizontal line
+    \draw[thick] (-0.5, 1) -- (2.5, 1);
+
+    % Result digits
+%    \node at (0, 0.7) {$2$};
+%    \node at (1, 0.7) {$3$};
+    \node at (1.5, 0.55) {.}; % lower decimal
+    \node at (2, 0.7) {$3$};
+
+
+%base ten blocks
+\draw[thick, step=0.1] (4,0) grid (5,1);
+\foreach \x in {5.2, 5.4, 5.6, 5.8, 6, 6.2, 6.4, 6.6} \draw[thick, step=0.1] (\x, 0) grid (\x+0.101, 1);
+\foreach \a in {7, 7.2, 7.4} \draw[thick] (\a, 0)--(\a+0.1, 0)--(\a+0.1, 0.1)--(\a, 0.1)--(\a, 0);
+\foreach \a in {7, 7.2, 7.4} \draw[thick] (\a, 0.2)--(\a+0.1, 0.2)--(\a+0.1, 0.3)--(\a, 0.3)--(\a, 0.2);
+\foreach \a in {7, 7.2, 7.4} \draw[thick, fill=blue] (\a, 0.4)--(\a+0.1, 0.4)--(\a+0.1, 0.5)--(\a, 0.5)--(\a, 0.4);
+\foreach \a in {7, 7.2} \draw[thick, fill=blue] (\a, 0.6)--(\a+0.1, 0.6)--(\a+0.1, 0.7)--(\a, 0.7)--(\a, 0.6);
+\foreach \a in {7, 7.2} \draw[thick, fill=blue] (\a, 0.8)--(\a+0.1, 0.8)--(\a+0.1, 0.9)--(\a, 0.9)--(\a, 0.8);
+\draw[thick, red] (6.9, -0.1)--(7.35, -0.1)--(7.35, 1.1)--(6.9, 1.1)--(6.9,-0.1);
+\end{tikzpicture}
+\end{image}
+
+Now, we move on to the ones place. We have $8$ ones and an additional one that we got from bundling $10$ individual blocks, and we will also have $\answer[given]{4}$ more ones, or bundles, from $4.7$. Let's rewrite our red boxed bundle as an extra bundle in the middle, and then put down the four more bundles that we need. The new bundles will be filled in blue.
+
+\begin{image}
+\begin{tikzpicture}[every node/.style={font=\large}]
+
+    % Carrying digits
+%    \node at (0, 2.8) {\scriptsize $1$};
+    \node at (1, 2.8) {\scriptsize $1$};
+
+    % Top number (augend)
+    \node at (0, 2.2) {$1$};
+    \node at (1, 2.2) {$8$};
+    \node at (1.5, 2.05) {.}; % lower decimal
+    \node at (2, 2.2) {$6$};
+
+    % Bottom number (addend)
+    \node at (0, 1.4) { };
+    \node at (1, 1.4) {$4$};
+    \node at (1.5, 1.25) {.}; % lower decimal
+    \node at (2, 1.4) {$7$};
+
+    % Plus sign
+    \node at (-0.5, 1.6) {$+$};
+
+    % Horizontal line
+    \draw[thick] (-0.5, 1) -- (2.5, 1);
+
+    % Result digits
+%    \node at (0, 0.7) {$2$};
+%    \node at (1, 0.7) {$3$};
+    \node at (1.5, 0.55) {.}; % lower decimal
+    \node at (2, 0.7) {$3$};
+
+
+%base ten blocks
+\draw[thick, step=0.1] (4,0) grid (5,1);
+\foreach \x in {5.2, 5.4, 5.6, 5.8, 6, 6.2, 6.4, 6.6} \draw[thick, step=0.1] (\x, 0) grid (\x+0.101, 1);
+\draw[thick, red, step=0.1] (6.8, 0) grid (6.901, 1);
+\foreach \x in {7.2, 7.4, 7.6, 7.8} \draw[thick, step=0.1, fill=blue] (\x, 0) rectangle (\x+0.101, 1);
+\foreach \y in {0.1, 0.2, ..., 0.9} \foreach \x in {7.2, 7.4, 7.6, 7.8} \draw[thick,white] (\x, \y)--(\x+0.1, \y);
+\foreach \y in {0, 0.2, 0.4} \draw[thick] (8.1, \y)--(8.2, \y)--(8.2, \y+0.1)--(8.1, \y+0.1)--(8.1, \y);
+\end{tikzpicture}
+\end{image}
+
+All together we now have $\answer[given]{13}$ bundles. Just like we did before, we can bundle $\answer[given]{10}$ of those bundles together to make a superbundle. We will place a red box around the superbundle that is formed. We will record this extra superbundle above the superbundles place with a little $1$ since it's one extra superbundle. We will also  record the number of leftover bundles, which is $\answer[given]{3}$, below the line in the bundles or ones place.
+
+\begin{image}
+\begin{tikzpicture}[every node/.style={font=\large}]
+
+    % Carrying digits
+    \node at (0, 2.8) {\scriptsize $1$};
+    \node at (1, 2.8) {\scriptsize $1$};
+
+    % Top number (augend)
+    \node at (0, 2.2) {$1$};
+    \node at (1, 2.2) {$8$};
+    \node at (1.5, 2.05) {.}; % lower decimal
+    \node at (2, 2.2) {$6$};
+
+    % Bottom number (addend)
+    \node at (0, 1.4) { };
+    \node at (1, 1.4) {$4$};
+    \node at (1.5, 1.25) {.}; % lower decimal
+    \node at (2, 1.4) {$7$};
+
+    % Plus sign
+    \node at (-0.5, 1.6) {$+$};
+
+    % Horizontal line
+    \draw[thick] (-0.5, 1) -- (2.5, 1);
+
+    % Result digits
+%    \node at (0, 0.7) {$2$};
+    \node at (1, 0.7) {$3$};
+    \node at (1.5, 0.55) {.}; % lower decimal
+    \node at (2, 0.7) {$3$};
+
+
+%base ten blocks
+\draw[thick, step=0.1] (4,0) grid (5,1);
+\draw[thick, red, step=0.1] (5.2, 0) grid (6.2, 1);
+\foreach \x in {5.2, 5.4, 5.6, 5.8, 6, 6.2, 6.4, 6.6} \draw[thick, step=0.1] (\x, 0) grid (\x+0.101, 1);
+\draw[thick, red, step=0.1] (6.8, 0) grid (6.901, 1);
+\foreach \x in {7.2, 7.4, 7.6, 7.8} \draw[thick, step=0.1, fill=blue] (\x, 0) rectangle (\x+0.101, 1);
+\foreach \y in {0.1, 0.2, ..., 0.9} \foreach \x in {7.2, 7.4, 7.6, 7.8} \draw[thick,white] (\x, \y)--(\x+0.1, \y);
+\draw[thick, red] (5.15, -0.1)--(7.35, -0.1)--(7.35, 1.1)--(5.15, 1.1)--(5.15, -0.1);
+\foreach \y in {0, 0.2, 0.4} \draw[thick] (8.1, \y)--(8.2, \y)--(8.2, \y+0.1)--(8.1, \y+0.1)--(8.1, \y);
+\end{tikzpicture}
+\end{image}
+
+Finally, we combine together all of the superbundles, which in this case is the one from $18.6$ and the one that we just made from the bundles. We have $\answer[given]{2}$ superbundles all together, so we record that under the line in the superbundles or tens place. 
+
+\begin{image}
+\begin{tikzpicture}[every node/.style={font=\large}]
+
+    % Carrying digits
+    \node at (0, 2.8) {\scriptsize $1$};
+    \node at (1, 2.8) {\scriptsize $1$};
+
+    % Top number (augend)
+    \node at (0, 2.2) {$1$};
+    \node at (1, 2.2) {$8$};
+    \node at (1.5, 2.05) {.}; % lower decimal
+    \node at (2, 2.2) {$6$};
+
+    % Bottom number (addend)
+    \node at (0, 1.4) { };
+    \node at (1, 1.4) {$4$};
+    \node at (1.5, 1.25) {.}; % lower decimal
+    \node at (2, 1.4) {$7$};
+
+    % Plus sign
+    \node at (-0.5, 1.6) {$+$};
+
+    % Horizontal line
+    \draw[thick] (-0.5, 1) -- (2.5, 1);
+
+    % Result digits
+    \node at (0, 0.7) {$2$};
+    \node at (1, 0.7) {$3$};
+    \node at (1.5, 0.55) {.}; % lower decimal
+    \node at (2, 0.7) {$3$};
+
+
+%base ten blocks
+\draw[thick, step=0.1] (4,0) grid (5,1);
+\draw[thick, red, step=0.1] (5.2, 0) grid (6.201, 1);
+%\foreach \x in {5.2, 5.4, 5.6, 5.8, 6, 6.2, 6.4, 6.6} \draw[thick, step=0.1] (\x, 0) grid (\x+0.101, 1);
+%\draw[thick, red, step=0.1] (6.8, 0) grid (6.901, 1);
+%\foreach \x in {7.2, 7.4, 7.6, 7.8} \draw[thick, step=0.1] (\x, 0) grid (\x+0.101, 1);
+%\draw[thick, dotted, blue] (5.15, -0.1)--(7.35, -0.1)--(7.35, 1.1)--(5.15, 1.1)--(5.15, -0.1);
+\foreach \x in {7, 7.2, 7.4} \draw[thick, step=0.1] (\x, 0) grid (\x+0.101, 1);
+\foreach \y in {0, 0.2, 0.4} \draw[thick] (8.1, \y)--(8.2, \y)--(8.2, \y+0.1)--(8.1, \y+0.1)--(8.1, \y);
+\end{tikzpicture}
+\end{image}
+
+Finally, we see our answer. In the picture, we have a total of $\answer[given]{2}$ superbundles, $\answer[given]{3}$ bundles, and $\answer[given]{3}$ individual blocks, for a total value of $23.3$. And that's exactly the number we have below the line. Notice that we know that we used the meaning of addition to solve this problem, because we \wordChoice{\choice{took away} \choice[correct]{combined}} all of the requested blocks (a total quantity of $4.7$, even though we broke that up into steps). So, we are confident that our picture with the blocks gives us the correct answer. Since our steps correspond with the algorithm steps, we are also confident that we got the right answer using the algorithm.
+
+
+\end{example}
+
+Again, we have done this with a specific example, but we hope you will practice with more examples and see why the algorithm works for any two numbers, whether they are whole numbers or decimals. Pay special attention to the regrouping step, which can be a little confusing. But when we did the regrouping step, each time we were bundling up one kind of object into the next kind of object, and so we had to place them in the next place value to the left.
+
+Overall, we hope that you are now feeling more confident in both using the standard algorithms and understanding why they work.
+
+
+
+
+
+\section{Other algorithms}
+
+We called the algorithms that we have seen in this section the ``standard'' algorithms. The reason for this is that these are the algorithms for addition and subtraction most commonly taught in US schools. However, they are not the only kinds of algorithms out there!
+
+First, notice that if you give children blocks and ask them to solve addition and subtraction problems, the children will likely not do their steps with the blocks in the same way that we have used base ten blocks to model the algorithm. In that way, the steps of the algorithm aren't as natural for most people as methods they would come up with on their own. Children can invent their own algorithms that reliably produce the correct answers, though they aren't quite as fast as the standard ones. However, we hope that you encourage the kids in your future classroom to play with these ideas and come up with their own strategies as well as encourage them to use the standard algorithm when they need to get the answer quickly.
+
+Second, we mentioned that these standard algorithms are the ones most frequently taught in the US, and it is part of Ohio's standards that children should be able to use these methods. However, this isn't necessarily the case throughout the world. There are plenty of other algorithms that work just fine to produce the right answer to addition and subtraction problems. Watch the following video to see two examples of alternative algorithms.
+
+\youtube{Ys5qi9YflOc}
+
+\begin{question}
+In your opinion, how are algorithms useful to you?
+\begin{freeResponse}
+Write your thoughts here!
+\end{freeResponse}
+\end{question}
+
+\end{document}
+
+
+
+
+
+

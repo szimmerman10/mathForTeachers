@@ -1,0 +1,352 @@
+\documentclass{ximera}
+
+\input{../preamble.tex}
+
+\title{Congruence}
+\author{Jenny Sheldon}
+
+\begin{document}
+
+\begin{abstract}
+We investigate shapes that are the same.
+\end{abstract}
+\maketitle
+
+\section{Activities for this section:} 
+\link[Triangle congruence]{https://ximera.osu.edu/m4t/elementaryActivities/SemesterTwoPacket/elementaryActivities/ComparingShapes/TriangleCongruence}, 
+\link[Same or different?]{https://ximera.osu.edu/m4t/elementaryActivities/SemesterTwoPacket/elementaryActivities/ComparingShapes/SameOrDifferent}
+
+\section{Congruence}
+
+It might feel like we've taken a little detour, but remember that the purpose of this chapter is to talk about how we can compare and contrast shapes. Previously, we've focused on sorting shapes into various categories according to their aspects and properties, which is a huge part of the geometry curriculum in \link[grades K--5]{https://education.ohio.gov/getattachment/Topics/Learning-in-Ohio/Mathematics/Ohio-s-Learning-Standards-in-Mathematics/Ohio-s-K-8-Learning-Progressions.pdf.aspx?lang=en-US}.  We've now built up enough terminology to say something specific about when two shapes are the same. At a first glance, it might seem like saying that two shapes are ``the same'' is a more basic concept than classifying them, but remember that when we are working on proving things exactly and we want to say that two shapes are exactly the same, we really need them to be exactly the same. It's not enough to look at them and say ``they pretty much look the same'' since our eyes can easily deceive us. (Could you tell with your eyes the difference between a $90\degree$ angle and one that's $89.999\degree$? I couldn't!) In the case of proof, it's not even enough to measure them and say ``we got the same measurements for both'', since measurements are only accurate to a certain extent. (Could you measure with your protractor an angle that's $89.999\degree$? I couldn't!) However, notice that we have an increasing level of sophistication that we are building, here: we'd like kids to start by looking at shapes and making observations like ``they look the same'', and then later in school we'd like them to measure things and say ``I think they have all the same measurements'', and then finally (around seventh or eighth grade and into high school) we'd like to be able to say that two things are the same without doing any measuring. 
+
+\begin{definition}
+We say that two shapes are \dfn{congruent} if we can find a sequence of basic rigid motions taking the first shape to the second shape.
+\end{definition}
+Notice what this definition is doing for us: we use rotations, reflections, and translations to say when two shapes are exactly the same, and we use the word \dfn{congruent} instead of ``exactly the same''. We are essentially giving precise instructions for how to pick up one of the shapes and place it exactly on top of the other. (Some people like to call placing one shape on top of another the ``principle of superposition''.) Two shapes being congruent is different from two shapes being equal, because the shapes are allowed to be in different locations and still be the same (rather than being equal, where we might want the two shapes to also be in the same spot).
+
+Let's look at an example to help us put our thinking in order.
+\begin{example}
+Let's start with a triangle.
+\begin{image}\begin{tikzpicture}
+\draw[thick] (-4,-1)--(-2,1)--(-3.8, 0.5)--(-4,-1);
+\end{tikzpicture}\end{image}
+Next, let's translate that triangle so it's in a different spot. We'll show one of the translation arrows using a dashed line.
+\begin{image}\begin{tikzpicture}
+\draw[thick] (-4,-1)--(-2,1)--(-3.8, 0.5)--(-4,-1);
+\draw[thick, dashed, ->] (-4,-1)--(-1,1);
+\draw[thick] (-1,1)--(1,3)--(-0.8,2.5)--(-1,1);
+%\draw[fill=black] (0,2) circle (2pt);
+\end{tikzpicture}\end{image}
+Next, we'll remove the arrow from the original to the translated one and draw the translated one using a dotted line instead of a solid one (so that you can see the final shape). Then, let's rotate our translated (dotted) triangle 50 degrees counterclockwise around the marked point on one of the sides.
+\begin{image}\begin{tikzpicture}
+\draw[thick] (-4,-1)--(-2,1)--(-3.8, 0.5)--(-4,-1);
+%\draw[thick, dashed, ->] (-4,-1)--(-1,1);
+\draw[thick, dotted] (-1,1)--(1,3)--(-0.8,2.5)--(-1,1);
+\draw[fill=black] (0,2) circle (2pt);
+\draw[thick] (0.1232, 0.5911)--(-0.1232, 3.4088)--(-0.8972, 1.70856)--(0.1232, 0.5911);
+\node at (-3, -1) {old};
+\node at (0,0) {new};
+\end{tikzpicture}\end{image}
+
+%Next, let's translate that triangle so it's in a different spot. We'll show one of the translation arrows using a dashed line.
+%\begin{image}\begin{tikzpicture}
+%\draw[thick] (-4,-1)--(-2,1)--(-3.8, 0.5)--(-4,-1);
+%%\draw[thick, dashed, ->] (-4,-1)--(-1,1);
+%\draw[thick, dotted] (-1,1)--(1,3)--(-0.8,2.5)--(-1,1);
+%\draw[fill=black] (0,2) circle (2pt);
+%\draw[thick] (0.1232, 0.5911)--(-0.1232, 3.4088)--(-0.8972, 1.70856)--(0.1232, 0.5911);
+%\node at (-3, -1) {old};
+%\node at (0,0) {new};
+%\end{tikzpicture}\end{image}
+
+\begin{question}
+True or false: The old triangle is the same as the new triangle, just in a different location.
+\begin{multipleChoice}
+\choice[correct]{True}
+\choice{False}
+\end{multipleChoice}
+\end{question}
+
+\begin{question}
+True or false: The new triangle was produced by applying a sequence of transformations (which are also basic rigid motions) to the old triangle.
+\begin{multipleChoice}
+\choice[correct]{True}
+\choice{False}
+\end{multipleChoice}
+\end{question}
+
+\begin{question}
+True or false: The new triangle is congruent to the old triangle.
+\begin{multipleChoice}
+\choice[correct]{True}
+\choice{False}
+\end{multipleChoice}
+\end{question}
+
+\end{example}
+
+Think also of the opposite situation: you are given the old and new triangles, and you are asked whether they are congruent or not. You might first try translating the old shape so that it's closer to the new one. You might then try to rotate the old shape so that it looks like it's in the same orientation as the new one. You might have to translate again if the two shapes don't exactly line up. But you've produced a sequence of transformations which are also rigid motions that take the old shape to the new shape, so you've explained that the two shapes are congruent.
+
+
+
+\section{A shortcut: congruence of triangles}
+
+Most of the time, it's a little bit too tedious for us to actually produce the transformations that would show that two shapes are congruent. Instead, we like to use the fact that triangles have some special properties that make it easier for us to talk about when triangles are congruent. The special thing about triangles is that they are the same \emph{shape} when they have the same \emph{angles}.
+\begin{question}
+Having the same angles doesn't always produce the same shape. Which shapes below always have the same angles? Select all that apply.
+\begin{selectAll}
+	\choice{A rhombus and a parallelogram.}
+	\choice{A pentagon and a trapezoid.}
+	\choice[correct]{A square and a rectangle.}
+	\choice{A kite and a bigger kite.}
+	\choice[correct]{A rectangle and a bigger rectangle.}
+	\choice[correct]{A square and a smaller square.}
+\end{selectAll}
+\end{question}
+Since triangles have the same shape when they have the same angles, we can also tell when they are the same size using some shortcuts. These are each theorems that we could prove (and our friend Euclid from a few sections ago did prove them in his book called ``Elements'') but we won't prove them here. We will, however, explore these ideas in class!
+\begin{itemize}
+	\item SAS or side-angle-side: two triangles are congruent when they have two sides with the same measure, and the angle between those sides also has the same measure.
+	\item ASA or angle-side-angle: two triangles are congruent when they have two angles with the same measure, and the side between those angles also has the same measure.
+	\item AAS or angle-angle-side: two triangles are congruent when they have two angles with the same measure, and the side not between those angles also has the same measure.
+	\item SSS or side-side-side: two triangles are congruent when all three sides have the same measures.
+	\item HL or hypotenuse-leg: two right triangles are congruent when their hypotenuses (the side across from the right angle) have the same measure, and one of the other two sides have the same measure. (This is really just a special case of SSS!)
+\end{itemize}
+Using these theorems to prove that triangles are congruent is a focus in high school geometry, so we won't do a lot of work with these theorems. However, we'd like you to first notice that while triangles have six pieces of information when we combine side lengths and angle measures, we typically only need three of these pieces of information to determine the triangle completely. Also, Ohio has a \link[Grade 7 standard]{https://education.ohio.gov/getattachment/Topics/Learning-in-Ohio/Mathematics/Ohio-s-Learning-Standards-in-Mathematics/MATH-Standards-Grade-7.pdf.aspx?lang=en-US} where students should learn to construct triangles and quadrilaterals from these pieces of information and notice when there is only one construction possible. Furthermore, we would like you to see how the ideas of comparing shapes are building towards high school, and we'd like you to see how these theorems can help us be precise about some things that otherwise we could only measure and guess at.
+
+\begin{example} 
+Two triangles, $ABC$ and $DEF$, are pictured below. The length of side $AB$ is 3cm, the length of side $BC$ is 5.5cm, and the angle $ABC$ measures $104\degree$.  The length of side $DE$ is 3cm, the length of side $EF$ is 5.5cm, and the angle $DEF$ measures $104\degree$.
+\begin{image} \begin{tikzpicture}
+% First triangle ABC
+\coordinate (A) at (0,0);
+\coordinate (B) at (3,0);
+\coordinate (C) at (4,2.6);
+
+\draw (A) -- (B) -- (C) -- cycle;
+\node[below left] at (A) {A};
+\node[below right] at (B) {B};
+\node[above] at (C) {C};
+
+% Second triangle DEF (translated and congruent to ABC)
+\coordinate (D) at (5,0);
+\coordinate (E) at (8,0);
+\coordinate (F) at (9,2.6);
+
+\draw (D) -- (E) -- (F) -- cycle;
+\node[below left] at (D) {D};
+\node[below right] at (E) {E};
+\node[above] at (F) {F};
+\node at (1.5, -0.2) {3cm};
+\node at (6.5, -0.2) {3cm};
+\node at (4.3, 1.5) {5.5cm};
+\node at (9.3, 1.5) {5.5 cm};
+\node at (2.7, 0.2) {$104\degree$};
+\node at (7.7, 0.2){$104\degree$};
+\end{tikzpicture}\end{image}
+Are the two triangles congruent? If so, which theorem tells us that they are congruent?
+\begin{multipleChoice}
+\choice{They are congruent by SSS}
+\choice[correct]{They are congruent by SAS}
+\choice{They are congruent by AAS}
+\choice{They are congruent by ASA}
+\choice{They are congruent by HL}
+\choice{The two triangles are not congruent}
+\choice{We cannot tell from this information whether the triangles are congruent}
+\end{multipleChoice}
+\end{example}
+
+Two big ideas to notice: as we mentioned at the start, these theorems allow us to say that two triangles are congruent without talking about transformations. But remember that transformations are behind the scenes here! Second, if we wanted to talk about two polygons being congruent, we can still use these theorems: first we cut our polygon into triangles, and then if all the sub-triangles are congruent and in the same configuration in both shapes, then the original polygons should also be congruent. The triangle congruence theorems are powerful!
+
+
+
+
+\section{Applied congruence: more properties}
+
+Another way that triangle congruence can be used is to show that certain properties of quadrilaterals actually hold. So far, we have referred to some properties along the way, but many of them we haven't been able to prove. Let's see how triangle congruence can help.
+
+\begin{example}
+Prove that opposite sides of a parallelogram are congruent. (We mentioned this fact in the ``Constructions'' section.)
+
+First, let's start with any parallelogram called $ABCD$. We'll draw one example, but you should pay attention to how this argument would work if we drew a different parallelogram.
+\begin{image}\begin{tikzpicture}
+\draw[thick] (0,0)--(3,0)--(7,2)--(4,2)--(0,0);
+\node[below] at (0,0) {$A$};
+\node[below] at (3,0) {$B$};
+\node[above] at (7,2) {$C$};
+\node[above] at (4,2) {$D$};
+\end{tikzpicture}\end{image}
+Next, our goal is to use the triangle congruence theorems, so we need some triangles. We'll get them by drawing a diagonal through the parallelogram. (Either diagonal is fine!)
+\begin{image}\begin{tikzpicture}
+\draw[thick] (0,0)--(3,0)--(7,2)--(4,2)--(0,0);
+\node[below] at (0,0) {$A$};
+\node[below] at (3,0) {$B$};
+\node[above] at (7,2) {$C$};
+\node[above] at (4,2) {$D$};
+\draw[dashed] (0,0)--(7,2);
+\end{tikzpicture}\end{image}
+Next, we want to show that these triangles are congruent, so we need to start thinking about pieces that we already know. We know from the definition of a parallelogram that opposite sides are parallel, so we can use side $AB$ and side $CD$ as parallel lines and the diagonal $AC$ as a transversal. The Parallel Postulate says that alternate interior angles are congruent in this situation, so we know that angle $a$ is congruent to angle $b$ in the figure.
+\begin{image}\begin{tikzpicture}
+\draw[thick] (0,0)--(3,0)--(7,2)--(4,2)--(0,0);
+\node[below] at (0,0) {$A$};
+\node[below] at (3,0) {$B$};
+\node[above] at (7,2) {$C$};
+\node[above] at (4,2) {$D$};
+\draw[dashed] (0,0)--(7,2);
+\node at (5.7, 1.8) {$a$};
+\node at (1.3, 0.2) {$b$};
+\end{tikzpicture}\end{image}
+We also showed previously that parallelograms have the properties that opposite angles are equal. This means that the angle at $D$ is congruent to the angle at $\answer[given]{B}$. We'll mark those as $\alpha$ and $\beta$ in the figure.
+\begin{image}\begin{tikzpicture}
+\draw[thick] (0,0)--(3,0)--(7,2)--(4,2)--(0,0);
+\node[below] at (0,0) {$A$};
+\node[below] at (3,0) {$B$};
+\node[above] at (7,2) {$C$};
+\node[above] at (4,2) {$D$};
+\draw[dashed] (0,0)--(7,2);
+\node at (5.7, 1.8) {$a$};
+\node at (1.3, 0.2) {$b$};
+\node at (2.9, 0.2) {$\beta$};
+\node at (4, 1.8) {$\alpha$};
+\end{tikzpicture}\end{image}
+Finally, here's a tricky step: the length of the diagonal is equal to itself.
+\begin{question}
+How do we know that triangle $ACD$ is congruent to triangle $CAB$?
+\begin{multipleChoice}
+\choice{They are congruent by SSS}
+\choice{They are congruent by SAS}
+\choice[correct]{They are congruent by AAS}
+\choice{They are congruent by ASA}
+\choice{They are congruent by HL}
+\choice{The two triangles are not congruent}
+\choice{We cannot tell from this information whether the triangles are congruent}
+\end{multipleChoice}
+\end{question}
+Now that we know that the triangles are congruent, we know that they are the same in every way. So, side $CD$ has to be equal in length to side $AB$, and side $AD$ has to be equal in length to side $BC$. And that's what we wanted to prove!
+
+\end{example}
+
+It's a good time to point out that the way we describe parts of congruent triangles is important.
+\begin{question}
+If we know that $\triangle ABC$ is congruent to $\triangle XYZ$, is it necessarily true that $\triangle ABC$ is congruent to $\triangle ZXY$?
+\begin{multipleChoice}
+\choice{Yes}
+\choice[correct]{No}
+\begin{feedback}[correct]
+When we say that $\triangle ABC$ is congruent to $\triangle XYZ$, we mean that angle $A$ matches up with angle $X$, side $AB$ matches up with side $XY$, and so on for all of the other parts of the triangle. So if we ask about $\triangle ABC$ and $\triangle ZXY$, we are now asking whether side $AB$ is congruent to side $ZX$, and while this could be true we don't know it already from the fact that $\triangle ABC$ is congruent to $\triangle XYZ$. We do know that side $ZX$ is congruent to side $CB$, but that doesn't tell us about side $AB$.
+\end{feedback}
+\end{multipleChoice}
+\end{question}
+
+
+
+
+\begin{example}
+Prove that the opposite angles of a rhombus are congruent. (We mentioned this fact in the ``Constructions'' section.) 
+
+Let's start by drawing any rhombus. Again, we'll draw a specific rhombus called $ABCD$, but you should imagine how this argument would work for any rhombus.
+\begin{image}\begin{tikzpicture}
+    % Define the coordinates of the rhombus vertices
+    \coordinate (A) at (0, 0);
+    \coordinate (B) at (3, 2);
+    \coordinate (C) at (6, 0);
+    \coordinate (D) at (3, -2);
+
+    % Draw the rhombus
+    \draw [thick] (A) -- (B) -- (C) -- (D) -- cycle;
+
+    % Optionally, label the vertices
+    \node at (A) [below] {A};
+    \node at (B) [above] {B};
+    \node at (C) [below] {C};
+    \node at (D) [below] {D};
+\end{tikzpicture}\end{image}
+Since we are trying to use the triangle congruence theorems, we need triangles. Let's do this by drawing one of the diagonals, $AC$, using a dashed line.
+\begin{image}\begin{tikzpicture}
+    % Define the coordinates of the rhombus vertices
+    \coordinate (A) at (0, 0);
+    \coordinate (B) at (3, 2);
+    \coordinate (C) at (6, 0);
+    \coordinate (D) at (3, -2);
+
+    % Draw the rhombus
+    \draw [thick] (A) -- (B) -- (C) -- (D) -- cycle;
+
+    % Optionally, label the vertices
+    \node at (A) [below] {A};
+    \node at (B) [above] {B};
+    \node at (C) [below] {C};
+    \node at (D) [below] {D};
+    
+    %draw the diagonal
+    \draw[thick, dashed] (A)--(C);
+\end{tikzpicture}\end{image}
+Remember that the definition of a rhombus is that all sides have equal length. So we know that side $AB$ is equal in length to side $CD$, and side $BC$ is equal in length to side $AD$. Also, we know that the diagonal is equal in length to itself.
+\begin{question}
+How do we know that triangle $ABC$ is congruent to triangle $CDA$?
+\begin{multipleChoice}
+\choice[correct]{They are congruent by SSS}
+\choice{They are congruent by SAS}
+\choice{They are congruent by AAS}
+\choice{They are congruent by ASA}
+\choice{They are congruent by HL}
+\choice{The two triangles are not congruent}
+\choice{We cannot tell from this information whether the triangles are congruent}
+\end{multipleChoice}
+\end{question}
+Since the triangles $ABC$ and $CDA$ are congruent, they are the same in every way. (Sometimes people say this in a fancy way by saying ``corresponding parts of congruent triangles are congruent'', or because that's a mouthful they abbreviate it as CPCTC. Personally the acronym confuses me but you can use if it makes you feel good!) In this case, the triangles' angles are the same, meaning that angle $ABC$ is equal to angle $CDA$, and these are one pair of the opposite angles of the rhombus. You can repeat the argument with the other diagonal ($BD$) to see that angle $BAD$ is congruent to angle $BCD$.
+
+\end{example}
+
+
+\begin{question}
+How can you use the previous result and the converse of the Parallel Postulate to prove that opposite sides of a rhombus are parallel?
+\begin{freeResponse}
+Enter your thoughts here, or a reminder of where you wrote your proof in your notes!
+\end{freeResponse}
+\end{question}
+
+
+\begin{example}
+Prove that the diagonals of a rhombus bisect the interior angles of that rhombus. (We mentioned this fact in the ``Properties'' section.)
+
+First, let's start with the same rhombus $ABCD$ we used in the previous example (but again you are imagining that this could be any rhombus at all).
+\begin{image}\begin{tikzpicture}
+    % Define the coordinates of the rhombus vertices
+    \coordinate (A) at (0, 0);
+    \coordinate (B) at (3, 2);
+    \coordinate (C) at (6, 0);
+    \coordinate (D) at (3, -2);
+
+    % Draw the rhombus
+    \draw [thick] (A) -- (B) -- (C) -- (D) -- cycle;
+
+    % Optionally, label the vertices
+    \node at (A) [below] {A};
+    \node at (B) [above] {B};
+    \node at (C) [below] {C};
+    \node at (D) [below] {D};
+    
+        %draw the diagonal
+    \draw[thick, dashed] (A)--(C);
+\end{tikzpicture}\end{image}
+We already showed that triangle $ABC$ was congruent to $ADC$ using SSS. Again, we know that this means that the triangles are the same in every way, so they have the same angles. We used angles $B$ and $D$ before, but now take a look at angles $BAC$ and $DAC$. They also must be equal, because they are in corresponding positions when we look at our congruent triangles. In other words, the diagonal $AC$ bisects the angle $BAD$. Similarly, we can see that the diagonal $AC$ bisects the angle $BCD$. To see that the other diagonal bisects the other two angles, you should draw the diagonal $BD$ and repeat the argument.
+
+\end{example}
+
+Just to bring the meaning of congruence back to our minds, in the previous example we didn't actually need to use the triangle congruence theorems.
+\begin{question}
+How could we use the definition of congruence to see that triangle $ABC$ is congruent to triangle $ADC$?
+\begin{multipleChoice}
+\choice{We rotate triangle $ABC$ 180 degrees using center $A$ to get triangle $ADC$.}
+\choice{We rotate triangle $ABC$ 360 degrees using center $B$ to get triangle $ADC$.}
+\choice[correct]{We reflect triangle $ABC$ over the line $AC$ to get triangle $ADC$}
+\choice{We reflect triangle $ABC$ over a line through point $D$ to get triangle $ADC$.}
+\choice{We translate triangle $ABC$ due south to get triangle $ADC$.}
+\end{multipleChoice}
+\end{question}
+
+We've now proven all of the properties that we claimed to be true. There are many more properties you can prove in this fashion. Feel free to explore on your own!
+
+
+
+\end{document}

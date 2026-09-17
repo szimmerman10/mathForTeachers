@@ -1,0 +1,99 @@
+\documentclass{ximera}
+
+\input{../preamble.tex}
+
+\title{Dimension}
+\author{Jenny Sheldon}
+
+\begin{document}
+
+\begin{abstract}
+We consider the idea of dimension.
+\end{abstract}
+\maketitle
+
+\section{Activities for this section:} 
+\link[Where do we live?]{https://ximera.osu.edu/m4t/elementaryActivities/SemesterTwoPacket/elementaryActivities/Preliminaries/WhereDoWeLive}
+
+\section{Dimension}
+
+In geometry, we want to work with different types of objects, and one of our goals will be to classify objects into various categories. One important category is the {\bf dimension} of an object.
+
+Dimension is a difficult idea in mathematics. One way that we can think about dimension is to think about how many coordinates we need to move around, but of course this would first require us to understand what we mean by coordinates. Perhaps you already have some idea what coordinates are, and in this case this definition is helpful.
+
+However, there are some more informal ways to think about dimension, and they can also introduce us to one of our themes in this book: ideas at different academic levels. The discussion above can be helpful for high school students who are pretty used to graphing on a coordinate plane. But we would like to talk with kids about dimension starting as early as kindergarten, so we need an idea about dimension that will make sense to kids around middle school, and another idea that will make sense even to the youngest kids we talk to. These ideas about dimension at different levels don't need to be a full definition, but they should help us help kids build their ideas about dimension towards the formal definition they will see in high school. 
+
+Let's look at a middle school idea and then an elementary school idea.
+
+\section{Around middle school: the little bug}
+
+First, we imagine that we are a little bug -- so tiny that when we live in or on a shape, that shape is so big relative to our own size that we can't really tell what shape it is. (Think about this like being a human being living on the Earth: the Earth is a sphere, but you can't really tell what shape it is just by looking at it from where you're standing.)
+
+Second, we want to understand how we can move in different directions. Think again about yourself on the Earth: you can move left or right, but left and right are kind of the same direction. One is a positive move, and the other is a negative move. This is a little bit like having East and West directions on a compass: we represent them with the same line, so they are two different versions of a ``horizontal'' direction. Or, you might connect any ideas about coordinates you had earlier to having a left-and-right number line. On the Earth, you could also move forward and back, and we would again say that forward and back are the same direction, but positive and negative again. This is like having a North/South direction in addition to your East/West direction. You can also move in all kinds of diagonal directions, but all of those diagonals could be written as combinations of the right-left direction and the forward-back direction. Continuing with the direction analogy, you could move north-west or south-east or any other diagonal direction. So, you have two different directions you could move, and all of the combinations of those directions. The Earth, in this case, is a two-dimensional object, because you have two different directions that you can move.
+
+Another way of thinking about the number of directions the little bug could move is by thinking about how you might give instructions to the little bug. If the little bug lives on a line, you can give it directions like ``move $2$ steps forward" or ``move 8 steps back''. If the little bug lives on a piece of paper, you can give it directions like ``move $3$ steps right then $6$ steps backwards'' or ``move $8$ steps left and $0$ steps forwards''. On the piece of paper, the little bug needs two pieces of information to be able to move everywhere on the object, whereas on the line the little bug only needed one piece of information to be able to move anywhere on the object. The line, then, would be a one-dimensional example, while the piece of paper would be a two-dimensional example.
+
+
+Let's take a look at another example to help us explore this idea.
+
+%An object is \dfn{$n$-dimensional} if you can direct a little bug living in or on that object to any place in its universe by giving instructions using $n$ different directions. can move in $n$ different directions, as well as all the combinations of those directions.
+
+\begin{example}
+	Javier is making a decorative piece of wall art in the shape of a big circle. He wants to draw a line all the way around the outside of the circular art. What dimension is this line?
+	
+	\begin{explanation}
+		Our friend the little bug lives only on the line. So, the little bug can move \wordChoice{\choice[correct]{forward-back} \choice{right-left} \choice{both} \choice{neither}}. An object is $n$-dimensional if a little bug living in that object can move in $n$ different directions. In this case, the little bug can move in $\answer[given]{1}$ direction, so the line is $\answer[given]{1}$-dimensional.  
+	\end{explanation}
+\end{example}
+
+
+\section{Very young kids: examples}
+
+Another way to think about dimension is comparing to other examples we know. So, for instance, an object is $1$-dimensional if it's like a line, or if we are using or measuring its length. An object is $2$-dimensional if it's like a filled-in square, or if we are using or measuring its area. An object is $3$-dimensional if it's like a cube, or if we are using or measuring its volume.
+
+We can also use physical objects in these comparisons. 
+\begin{example} A piece of string would be $\answer[given]{1}$-dimensional, because it's a lot like a line. A piece of paper would be $\answer[given]{2}$-dimensional, because it's a lot like a filled-in square. A balloon would be $\answer[given]{3}$-dimensional, because it's like a cube but round. You should come up with a list of a few more examples for each dimension that help you recognize $1$, $2$, and $3$-dimensional objects. Please record them here.
+\begin{freeResponse}
+
+\end{freeResponse}
+\end{example}
+
+Another way that some teachers talk about dimension is to use rulers. If I need one ruler to measure the object, it should be one-dimensional. For instance, I can measure a straight line with one ruler. If I need two rulers to measure the object, it's two-dimensional. For instance, if I want to measure the area of a square, I need two rulers: one to measure the width, and one to measure the length. If I need three rulers to measure the object, it's three-dimensional. For instance, to measure the volume of a box, I would need one ruler for the length, one for the width, and one for the height. However, these ideas with rulers can also lead us astray: if I try to measure a wiggly line, how many rulers do I need? This is less clear. A wiggly line is still one-dimensional, even if the wiggly line has to live in three-dimensional space.
+
+\begin{question}
+Pause and think: how do all of these ideas about dimension relate to one another? How do the earlier ideas help learners to be ready for the full definition later in their learning?
+\begin{freeResponse}
+
+\end{freeResponse}
+\end{question}
+
+
+
+\section{Some cautions}
+
+As we mentioned at the start, dimension is tricky. Consider the example of the piece of paper.
+
+\begin{example}
+	We gave the piece of paper as an example of a $\answer[given]{2}$-dimensional object. But that isn't quite true, because a piece of paper does have a thickness, even though it's thin. So, the actual piece of paper itself is $\answer[given]{3}$-dimensional because it's more like a cube than a filled-in square. However, if we ignore the thickness of the paper and just consider the surface of the paper, we now are back to an object that's $2$-dimensional. 
+	
+	The paper also has sides, and each side of the paper is $\answer[given]{1}$-dimensional, because the side is like a line. 
+	
+	Is our piece of paper 1-dimensional, 2-dimensional, or 3-dimensional? It depends on what we're doing!
+\end{example}
+
+Finally, let's consider the example of the circle.
+
+\begin{example}
+Is a circle $1$-dimensional, or $2$-dimensional?
+
+Let's first consider the filled-in part of the circle. (Some people call this a disc.) In this case, our friend the little bug can move \wordChoice{\choice{forward-back} \choice{right-left} \choice[correct]{both} \choice{neither}}, so this object is $\answer[given]{2}$-dimensional.
+
+Next, let's consider just the outside edge of the circle. (Some people call this the perimeter or the circumference.) In this case, our friend the little bug can move \wordChoice{\choice[correct]{forward-back} \choice{right-left} \choice{both} \choice{neither}}, so this object is $\answer[given]{1}$-dimensional.
+
+So, is the circle $1$-dimensional, or $2$-dimensional? It depends on what you mean by a ``circle''!
+\end{example}
+
+One key takeaway: we want to be precise with our language. Always err on the side of over-describing what you are talking about so there's no confusion.
+
+
+\end{document}

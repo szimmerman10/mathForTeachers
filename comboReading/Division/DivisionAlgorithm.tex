@@ -1,0 +1,721 @@
+\documentclass{ximera}
+
+\input{../preamble.tex}
+
+
+\title{Division algorithms}
+\author{Jenny Sheldon}
+
+\begin{document}
+
+\begin{abstract}
+We discuss why division algorithms work.
+\end{abstract}
+\maketitle
+
+
+
+
+
+\section{The scaffold method for division}
+
+As with the other algorithms we have discussed, there is more than one way to quickly calculate the answer to a division problem. We will discuss two algorithms in this section so that we can look at how both of our interpretations of division might be used to think about what is happening behind the scenes. The first algorithm we will use is called the scaffold method. Much like the partial products algorithm for multiplication, this method can have more steps and takes a little longer than the standard division algorithm, but it can be  easier to see what is happening. In fact, the scaffold method is also often called the partial quotient method for division to show that it is the inverse of the partial products method for multiplication.
+
+Throughout this section, we will work with the division expression $268 \div 5$.
+
+Watch the video to see how to perform the steps of the algorithm (as well as be reminded of how to do the steps in the standard division algorithm).
+
+\youtube{6QxTkChXR9g}
+
+Let's take a look at an example to see why the scaffold method makes sense, using a ``how many groups'' interpretation of division.
+
+\begin{example}
+Let's start with a how many groups story problem for $268 \div 5$. Ms. Ruiz is giving out prize bags at the end-of-school party, and she would like to put $5$ pencils in each prize bag. If Ms. Ruiz has $268$ pencils, how many prize bags can she make, and how many pencils will be left over?
+
+First, let's investigate why this is a how many groups division story. Returning to our meaning of multiplication, we have the following structure.
+\begin{image}
+\begin{tikzpicture}
+\node at (0, 0) {$A$};
+\node at (0.5, 0) {$\times$};
+\node at (1, 0) {$B$};
+\node at (1.5, 0) {$=$};
+\node at (2, 0) {$C$};
+\node at (-0.75, -1) {\# of };
+\node at (-0.75, -1.35) {groups}; 
+\node at (1,-1) {\# of objects};
+\node at (1, -1.35) { per group}; 
+\node at (3, -1) {\# of total};
+\node at (3, -1.35) {objects};
+\draw[->] (-0.75, -0.75)--(0, -0.25);
+\draw[->] (1, -0.75)--(1, -0.25);
+\draw[->] (2.75, -0.75)--(2, -0.25);
+\end{tikzpicture}
+\end{image}
+In a how many groups situation, we know the total number of objects and the number of objects in each group, giving us $C \div B = A$.
+
+\begin{image}
+\begin{tikzpicture}
+\node at (0, 0) {$?$};
+\node at (0.5, 0) {$\times$};
+\node at (1, 0) {$B$};
+\node at (1.5, 0) {$=$};
+\node at (2, 0) {$C$};
+\node at (-0.75, -1) {\# of };
+\node at (-0.75, -1.35) {groups}; 
+\node at (1,-1) {\# of objects};
+\node at (1, -1.35) { per group}; 
+\node at (3, -1) {\# of total};
+\node at (3, -1.35) {objects};
+\draw[->] (-0.75, -0.75)--(0, -0.25);
+\draw[->] (1, -0.75)--(1, -0.25);
+\draw[->] (2.75, -0.75)--(2, -0.25);
+\draw[thick, ->] (2.5, 0)--(3,0);
+\node at (4, 0) {$C \div B = ?$};
+\end{tikzpicture}
+\end{image}
+In the story problem, Ms. Ruiz has a total of $268$ pencils, and we know that $5$ pencils go in each goodie bag. In this case, we can use one object as one \wordChoice{\choice{division} \choice{party} \choice{goodie bag} \choice[correct]{pencil}} and one group as one \wordChoice{\choice{division} \choice{party} \choice[correct]{goodie bag} \choice{pencil}}. This means that we know the total number of objects ($\answer[given]{268}$ pencils) and we know the number of objects per group ($\answer[given]{5}$ pencils per goodie bag), and we are looking for the number of groups (how many goodie bags can be made). In other words, we have the following situation.
+
+\begin{image}
+\begin{tikzpicture}
+\node at (0, 0) {$?$};
+\node at (0.5, 0) {$\times$};
+\node at (1, 0) {$5$};
+\node at (1.5, 0) {$=$};
+\node at (2, 0) {$268$};
+\node at (-0.75, -1) {\# of };
+\node at (-0.75, -1.35) {groups}; 
+\node at (1,-1) {\# of objects};
+\node at (1, -1.35) { per group}; 
+\node at (3, -1) {\# of total};
+\node at (3, -1.35) {objects};
+\draw[->] (-0.75, -0.75)--(0, -0.25);
+\draw[->] (1, -0.75)--(1, -0.25);
+\draw[->] (2.75, -0.75)--(2, -0.25);
+\draw[thick, ->] (2.5, 0)--(3,0);
+\node at (4, 0) {$268 \div 5 = ?$};
+\end{tikzpicture}
+\end{image}
+This choice of one group and one object fits with our story and our model of how many groups division, so we know it is correct.
+
+Next, let's imagine Ms. Ruiz placing those pencils in the bags, but using the same steps as the scaffold method in the video. Throughout the algorithm, Ms. Ruiz is asking: how many bags of pencils can I make? Do I have enough pencils left to keep distributing them? Her first step is to make $20$ goodie bags, so the $20$ is written on the top above the line. Still thinking of one bag as one group and one pencil as one object, Ms. Ruiz knows that she has used $20 \times 5 = \answer[given]{100}$ total pencils at this stage. There were $20$ goodie bags, and $\answer[given]{5}$ pencils per bag. So Ms. Ruiz writes the $100$ pencils below the $268$ in the algorithm, and subtracts these $100$ pencils because she has already placed them in the bags and so we need to take them away from the total number of pencils. There are now $\answer[given]{168}$ pencils remaining, so she can keep going.
+
+Next, Ms. Ruiz notices that she can make another $20$ goodie bags and use up another $100$ pencils. So she repeats the above steps, placing a $20$ above the previous $20$ and taking away the $100$  pencils from the remaining $168$ pencils at the bottom of the algorithm. After she removes the second $100$ pencils, she is left with $\answer[given]{68}$ pencils.
+
+On her next step, Ms. Ruiz notices that she can't make another $20$ goodie bags, but she could make $10$ goodie bags instead. Still using one group as one bag and one pencil as one object, this will use $\answer[given]{10} \times 5 = 50$ pencils. So Ms. Ruiz writes the $10$ above the two $20$s and the $50$ below the $68$. She subtracts $50$ from $68$ to remove the pencils she already used, and has $\answer[given]{18}$ pencils remaining.
+
+Finally, Ms. Ruiz can make $3$ more bags of pencils since $3 \times \answer[given]{5} = 15$, so she writes a $3$ above the $10$ and a $15$ below the $18$ remaining pencils. When she takes away these $15$ pencils, she has $\answer[given]{3}$ pencils remaining. These can't go into a goodie bag, so she will leave them as a remainder (and maybe save them for next year). Here are all the steps in the scaffold method written as Ms. Ruiz would write them.
+
+\begin{image}
+\begin{tikzpicture}[font=\large, every node/.style={inner sep=0pt, outer sep=1pt}]
+
+% Long division symbol
+\draw[thick] (0.8,1.9) -- (2.5,1.9);
+
+% Dividend and Divisor
+\node at (0.5,1.6) {$5$};
+\node at (0.85,1.6) {\,\big)};
+\node at (1.2, 1.6) { $2$};
+\node at (1.7, 1.6) {$6$};
+\node at (2.2, 1.6) {$8$};
+
+% Quotient
+\node at (1.7,2.2) {$2$};
+\node at (2.2,2.2) {$0$};
+
+% Quotient
+\node at (1.7,2.6) {$2$};
+\node at (2.2,2.6) {$0$};
+
+% Quotient
+\node at (1.7,3) {$1$};
+\node at (2.2,3) {$0$};
+\node at (2.2,3.4) {$3$};
+
+
+% First subtraction step
+\node at (1.2,1.1) {$1$};
+\node at (1.7,1.1) {$0$};
+\node at (2.2, 1.1){$0$};
+\draw (1,0.9) -- (2.3,0.9);
+\node at (1.2,0.6) {$1$};
+\node at (1.7,0.6) {$6$};
+\node at (2.2,0.6) {$8$};
+
+
+% Second subtraction step
+\node at (1.2,0.1) {$1$};
+\node at (1.7,0.1) {$0$};
+\node at (2.2, 0.1){$0$};
+\draw (1,-0.1) -- (2.4,-0.1);
+\node at (1.7,-0.4) {$6$};
+\node at (2.2,-0.4) {$8$};
+
+
+\node at (1.7,-0.8) {$5$};
+\node at (2.2, -0.8){$0$};
+\draw (1,-1) -- (2.4,-1);
+\node at (1.7,-1.3) {$1$};
+\node at (2.2,-1.3) {$8$};
+
+\node at (1.7,-1.7) {$1$};
+\node at (2.2, -1.7){$5$};
+\draw (1,-1.9) -- (2.4,-1.9);
+
+\node at (2.2,-2.1) {$3$};
+
+\end{tikzpicture}
+\end{image}
+
+
+To get the final answer, Ms. Ruiz notices that the numbers above the line represent all of the goodie bags that she made: first $20$, then another $20$, then $10$ and finally $3$. To get the total number of goodie bags, she should combine (or add) all of those goodie bags together. So the final answer is $20 + 20 + 10 + 3 = \answer[given]{53}$ goodie bags, with $3$ pencils left over. Algebraically, we can write her final answer using the Division theorem as
+\[
+53 \times 5 + 3 = 268.
+\]
+
+Each of the steps of the scaffold method corresponded directly to Ms. Ruiz making some of her goodie bags, so we can see why each step makes sense with our story problem and our meaning of division. Our answer also corresponds to the unique answer we expect from the Division theorem.
+
+\end{example}
+
+As has become our habit, we have shown how to use the scaffold method with a specific example. Be sure to practice with a few other examples so that you can see why this method gives us the correct answer for any division problem. You should be able to see why each of the steps in the algorithm makes sense with our meaning of division and an appropriate story problem.
+
+Notice also that the scaffold method is not always the most efficient method to calculate the answer to a division problem, but it can be very helpful for children who are first learning division. We can model each of the steps with blocks or other objects, reinforce our ideas of place value, and practice estimation. Another nice feature of the scaffold method is that we don't have to do our division in the most efficient way. For example, in the problem above, Ms. Ruiz could have noticed from the beginning that she could make $50$ gift bags, since that would use $50 \times 5 = 250$ pencils. But if she didn't know that fact, she could instead use the facts that she was more familiar with. This is a big contrast with the standard division algorithm, where we must always use the most efficient step. Let's move on so that we can compare and contrast.
+
+
+
+
+
+\section{The standard division algorithm}
+
+In the video above, we walked through the steps of the standard division algorithm, which is also called \dfn{long division}. Let's take a look at why this algorithm makes sense, using a how many in each group interpretation of division.
+
+\begin{example}
+Let's look at how we can justify the steps in the standard division algorithm for $268 \div 5$ using a how many in each group interpretation. 
+
+In this example, we want to use base ten blocks to model the steps of the long division algorithm. Since we are using how many in each group division, we know how many groups there are as well as the total number of objects, but we don't know how many objects are in each group. 
+
+\begin{image}
+\begin{tikzpicture}
+\node at (0, 0) {$A$};
+\node at (0.5, 0) {$\times$};
+\node at (1, 0) {$?$};
+\node at (1.5, 0) {$=$};
+\node at (2, 0) {$C$};
+\node at (-0.75, -1) {\# of };
+\node at (-0.75, -1.35) {groups}; 
+\node at (1,-1) {\# of objects};
+\node at (1, -1.35) { per group}; 
+\node at (3, -1) {\# of total};
+\node at (3, -1.35) {objects};
+\draw[->] (-0.75, -0.75)--(0, -0.25);
+\draw[->] (1, -0.75)--(1, -0.25);
+\draw[->] (2.75, -0.75)--(2, -0.25);
+\draw[thick, ->] (2.5, 0)--(3,0);
+\node at (4, 0) {$C \div A = ?$};
+\end{tikzpicture}
+\end{image}
+Filling in the numbers from this particular expression, we have the following.
+
+\begin{image}
+\begin{tikzpicture}
+\node at (0, 0) {$5$};
+\node at (0.5, 0) {$\times$};
+\node at (1, 0) {$?$};
+\node at (1.5, 0) {$=$};
+\node at (2, 0) {$268$};
+\node at (-0.75, -1) {\# of };
+\node at (-0.75, -1.35) {groups}; 
+\node at (1,-1) {\# of objects};
+\node at (1, -1.35) { per group}; 
+\node at (3, -1) {\# of total};
+\node at (3, -1.35) {objects};
+\draw[->] (-0.75, -0.75)--(0, -0.25);
+\draw[->] (1, -0.75)--(1, -0.25);
+\draw[->] (2.75, -0.75)--(2, -0.25);
+\draw[thick, ->] (2.5, 0)--(3,0);
+\node at (4, 0) {$268 \div 5 = ?$};
+\end{tikzpicture}
+\end{image}
+
+
+Since we are using base ten blocks in this example, the $268$ will be the total number of individual cubes we have, and we are thinking of these cubes as being organized into $\answer[given]{2}$ superbundles, $\answer[given]{6}$ bundles, and $\answer[given]{8}$ individual blocks. We also know that we are trying to organize these blocks into $\answer[given]{5}$ equal groups according to our interpretation of division, so we will use $5$ large circles to represent these groups (one group will be one large circle). Let's draw all of this below, along with the set up step for the algorithm.
+
+\begin{image}
+\begin{tikzpicture}[font=\large, every node/.style={inner sep=0pt, outer sep=1pt}]
+
+% Long division symbol
+\draw[thick] (0.8,1.9) -- (2.5,1.9);
+
+% Dividend and Divisor
+\node at (0.5,1.6) {$5$};
+\node at (0.85,1.6) {\,\big)};
+\node at (1.2, 1.6) { $2$};
+\node at (1.7, 1.6) {$6$};
+\node at (2.2, 1.6) {$8$};
+
+%% Quotient
+%\node at (1.7,2.3) {$5$};
+%\node at (2.2,2.3) {$3$};
+%\node at (2.7,2.3) {R $3$};
+%
+%
+%% First subtraction step
+%\node at (1.2,1.1) {$2$};
+%\node at (1.7,1.1) {$5$};
+%\draw (1,0.9) -- (2.3,0.9);
+%\node at (1.7,0.6) {$1$};
+%\node at (2.2,0.6) {$8$};
+%
+%% Bring down arrow for the 8
+%\draw[->, thick] (2.2,1.4) -- (2.2,1.0);
+%%\node at (2.9,1.3) {↓};
+%
+%% Second subtraction step
+%\node at (1.7,0.1) {$1$};
+%\node at (2.2,0.1) {$5$};
+%\draw (1.6,-0.1) -- (2.4,-0.1);
+%\node at (2.2,-0.4) {$3$};
+\end{tikzpicture}
+\end{image}
+
+\begin{image}
+\begin{tikzpicture}
+\draw[thick, step=0.1] (0,0) grid (1,1);
+\draw[thick, step=0.1] (1.2, 0) grid (2.2, 1);
+\foreach \x in {2.4, 2.6, ..., 3.4} \draw[thick, step=0.1] (\x, 0) grid (\x+0.1, 1);
+\foreach \x in {3.6, 3.6} \foreach \y in {0, 0.2, 0.4, 0.6} \draw[thick] (\x, \y) rectangle (\x+0.1, \y+0.1);
+\foreach \a in {(-4, -2), (-2, -2), (0, -2), (2, -2), (4, -2)} \draw[thick] \a circle (1cm);
+
+\end{tikzpicture}
+\end{image}
+
+Our goal with the blocks will be to place them into the five groups equally, and then count how many blocks are in each group. To do this, we are going to start with the largest objects in the picture. The first step in the algorithm is to look at whether $5$ divides $2$ (using whole numbers), and it does not. In our picture, this corresponds to the fact that we only have $\answer[given]{2}$ superbundles, and this is not enough to place even one superbundle in each group without breaking them up. So, let's break up our superbundles into $\answer[given]{10}$ bundles each, and combine these together with the $\answer[given]{6}$ bundles we already had, for a total of $\answer[given]{26}$ bundles.
+
+\begin{image}
+\begin{tikzpicture}[font=\large, every node/.style={inner sep=0pt, outer sep=1pt}]
+
+% Long division symbol
+\draw[thick] (0.8,1.9) -- (2.5,1.9);
+
+% Dividend and Divisor
+\node at (0.5,1.6) {$5$};
+\node at (0.85,1.6) {\,\big)};
+\node at (1.2, 1.6) { $2$};
+\node at (1.7, 1.6) {$6$};
+\node at (2.2, 1.6) {$8$};
+
+%% Quotient
+%\node at (1.7,2.3) {$5$};
+%\node at (2.2,2.3) {$3$};
+%\node at (2.7,2.3) {R $3$};
+%
+%
+%% First subtraction step
+%\node at (1.2,1.1) {$2$};
+%\node at (1.7,1.1) {$5$};
+%\draw (1,0.9) -- (2.3,0.9);
+%\node at (1.7,0.6) {$1$};
+%\node at (2.2,0.6) {$8$};
+%
+%% Bring down arrow for the 8
+%\draw[->, thick] (2.2,1.4) -- (2.2,1.0);
+%%\node at (2.9,1.3) {↓};
+%
+%% Second subtraction step
+%\node at (1.7,0.1) {$1$};
+%\node at (2.2,0.1) {$5$};
+%\draw (1.6,-0.1) -- (2.4,-0.1);
+%\node at (2.2,-0.4) {$3$};
+\end{tikzpicture}
+\end{image}
+
+\begin{image}
+\begin{tikzpicture}
+
+\foreach \x in {0, 0.2, 0.4, ..., 5} \draw[thick, step=0.1] (\x, 0) grid (\x+0.101, 1);
+\foreach \x in {5.2, 5.4} \foreach \y in {0, 0.2, 0.4, 0.6} \draw[thick] (\x, \y) rectangle (\x+0.1, \y+0.1);
+\foreach \a in {(-2, -2), (0, -2), (2, -2), (4, -2), (6, -2)} \draw[thick] \a circle (1cm);
+
+\end{tikzpicture}
+\end{image}
+
+Next, we know that we have $26$ bundles all together, and $5$ groups to place them in. We can place $5$ bundles in each of the groups, which will use $5 \times 5 = \answer[given]{25}$ bundles total. In our picture, we will cross off these bundles to indicate that they have been taken away from the full collection and placed in the groups. This crossing off step will also allow us to see how many blocks we still have to distribute and judge whether or not we can continue distributing them. In the algorithm, we record these steps by writing the $25$ bundles that are used below the $26$ bundles in $268$. We write the $5$ bundles placed in each group above the $6$ in $268$, because this represents the bundles place of the answer. We will then subtract the $25$ bundles used from the $26$ bundles total and see that there is $\answer[given]{1}$ bundle remaining.
+
+\begin{image}
+\begin{tikzpicture}[font=\large, every node/.style={inner sep=0pt, outer sep=1pt}]
+
+% Long division symbol
+\draw[thick] (0.8,1.9) -- (2.5,1.9);
+
+% Dividend and Divisor
+\node at (0.5,1.6) {$5$};
+\node at (0.85,1.6) {\,\big)};
+\node at (1.2, 1.6) { $2$};
+\node at (1.7, 1.6) {$6$};
+\node at (2.2, 1.6) {$8$};
+
+%% Quotient
+\node at (1.7,2.3) {$5$};
+%\node at (2.2,2.3) {$3$};
+%\node at (2.7,2.3) {R $3$};
+%
+%
+% First subtraction step
+\node at (1.2,1.1) {$2$};
+\node at (1.7,1.1) {$5$};
+\draw (1,0.9) -- (2.3,0.9);
+\node at (1.7,0.6) {$1$};
+%\node at (2.2,0.6) {$8$};
+%
+%% Bring down arrow for the 8
+%\draw[->, thick] (2.2,1.4) -- (2.2,1.0);
+
+%
+%% Second subtraction step
+%\node at (1.7,0.1) {$1$};
+%\node at (2.2,0.1) {$5$};
+%\draw (1.6,-0.1) -- (2.4,-0.1);
+%\node at (2.2,-0.4) {$3$};
+\end{tikzpicture}
+\end{image}
+
+\begin{image}
+\begin{tikzpicture}
+
+\foreach \x in {0, 0.2, 0.4, ..., 5} \draw[thick, step=0.1] (\x, 0) grid (\x+0.101, 1);
+\foreach \x in {0, 0.2, 0.4, ..., 4.8} \draw[thick, red] (\x-0.1, 0)--(\x+0.1,1);
+\foreach \x in {-2.4, -2.2, -2, -1.8, -1.6, -0.4, -0.2, 0, 0.2, 0.4, 2.4, 2.2, 2, 1.8, 1.6, 4.4, 4.2, 4, 3.8, 3.6, 6.4, 6.2, 6, 5.8, 5.6} \draw[thick] (\x, -2.5) rectangle (\x+0.101, -1.5);
+\foreach \x in {-2.4, -2.2, -2, -1.8, -1.6, -0.4, -0.2, 0, 0.2, 0.4, 2.4, 2.2, 2, 1.8, 1.6, 4.4, 4.2, 4, 3.8, 3.6, 6.4, 6.2, 6, 5.8, 5.6} \foreach \y in {-2.4, -2.3, ..., -1.6} \draw[thick] (\x, \y)--(\x+0.1, \y);
+\foreach \x in {5.2, 5.4} \foreach \y in {0, 0.2, 0.4, 0.6} \draw[thick] (\x, \y) rectangle (\x+0.1, \y+0.1);
+\foreach \a in {(-2, -2), (0, -2), (2, -2), (4, -2), (6, -2)} \draw[thick] \a circle (1cm);
+
+\end{tikzpicture}
+\end{image}
+
+Our one remaining bundle is not enough to be placed into the five groups without breaking it up, so we will unbundle this remaining bundle into $\answer[given]{10}$ individual blocks. We'll combine that together with the $8$ blocks we started with to get a total of $\answer[given]{18}$ individual blocks. These are now enough blocks to distribute to the groups, so we can continue with our division. To help clean up our picture, we won't draw again the $25$ bundles that we removed from the original $268$ blocks, but we'll just draw the remaining $18$ blocks. We record this step in the algorithm by dropping down the $8$ from $268$ to go with the $1$ remaining bundle. We'll now think of this as $18$ blocks.
+
+\begin{image}
+\begin{tikzpicture}[font=\large, every node/.style={inner sep=0pt, outer sep=1pt}]
+
+% Long division symbol
+\draw[thick] (0.8,1.9) -- (2.5,1.9);
+
+% Dividend and Divisor
+\node at (0.5,1.6) {$5$};
+\node at (0.85,1.6) {\,\big)};
+\node at (1.2, 1.6) { $2$};
+\node at (1.7, 1.6) {$6$};
+\node at (2.2, 1.6) {$8$};
+
+%% Quotient
+\node at (1.7,2.3) {$5$};
+%\node at (2.2,2.3) {$3$};
+%\node at (2.7,2.3) {R $3$};
+%
+%
+% First subtraction step
+\node at (1.2,1.1) {$2$};
+\node at (1.7,1.1) {$5$};
+\draw (1,0.9) -- (2.3,0.9);
+\node at (1.7,0.6) {$1$};
+\node at (2.2,0.6) {$8$};
+%
+%% Bring down arrow for the 8
+\draw[->, thick] (2.2,1.4) -- (2.2,1.0);
+
+%
+%% Second subtraction step
+%\node at (1.7,0.1) {$1$};
+%\node at (2.2,0.1) {$5$};
+%\draw (1.6,-0.1) -- (2.4,-0.1);
+%\node at (2.2,-0.4) {$3$};
+\end{tikzpicture}
+\end{image}
+
+\begin{image}
+\begin{tikzpicture}
+
+\draw[thick] (0,0) rectangle (0.1, 1);
+\foreach \y in {0.1, 0.2, ..., 0.9} \draw[thick] (0, \y)--(0.1, \y);
+\foreach \x in {0.2, 0.4} \foreach \y in {0, 0.2, 0.4, 0.6} \draw[thick]  (\x, \y) rectangle (\x+0.1, \y+0.1);
+\draw[very thick, ->] (0.8, 0.5)--(2.2, 0.5);
+\node[above] at (1.5 , 0.5) {unbundle};
+\foreach \x in {2.4, 2.6, 2.8, 3} \foreach \y in {0, 0.2, 0.4, 0.6} \draw[thick] (\x, \y) rectangle (\x+0.1, \y+0.1);
+\foreach \x in {2.4, 2.6} \foreach \y in {0.8} \draw[thick] (\x, \y) rectangle (\x+0.1, \y+0.1);
+\foreach \x in {-2.4, -2.2, -2, -1.8, -1.6, -0.4, -0.2, 0, 0.2, 0.4, 2.4, 2.2, 2, 1.8, 1.6, 4.4, 4.2, 4, 3.8, 3.6, 6.4, 6.2, 6, 5.8, 5.6} \draw[thick] (\x, -2.5) rectangle (\x+0.101, -1.5);
+\foreach \x in {-2.4, -2.2, -2, -1.8, -1.6, -0.4, -0.2, 0, 0.2, 0.4, 2.4, 2.2, 2, 1.8, 1.6, 4.4, 4.2, 4, 3.8, 3.6, 6.4, 6.2, 6, 5.8, 5.6} \foreach \y in {-2.4, -2.3, ..., -1.6} \draw[thick] (\x, \y)--(\x+0.1, \y);
+\foreach \a in {(-2, -2), (0, -2), (2, -2), (4, -2), (6, -2)} \draw[thick] \a circle (1cm);
+
+\end{tikzpicture}
+\end{image}
+
+Now we can place the $18$ individual blocks into the five groups. Since we know that $5 \times 3 = \answer[given]{15}$ (5 groups or circles with $3$ blocks per circle is $15$ blocks total), we know we can place $3$ blocks into each of the groups and this will use up $15$ blocks. We will have $\answer[given]{3}$ blocks left over. These $3$ blocks are not enough to continue distributing, so we will stop here and leave a remainder. In the algorithm, we record this step by writing the $15$ blocks used below the $18$ blocks we got from unbundling, and we write the $3$ blocks placed in each group above the $8$ in $268$ since this is the individual blocks place. We subtract $18-15$ to take away the $15$ blocks used from the total, and we end up with $\answer[given]{3}$ remaining blocks. We write these remaining $3$ blocks using ``R$3$'' next to the $3$ we just placed in the ones place, where the R stands for ``remainder''.
+
+\begin{image}
+\begin{tikzpicture}[font=\large, every node/.style={inner sep=0pt, outer sep=1pt}]
+
+% Long division symbol
+\draw[thick] (0.8,1.9) -- (2.5,1.9);
+
+% Dividend and Divisor
+\node at (0.5,1.6) {$5$};
+\node at (0.85,1.6) {\,\big)};
+\node at (1.2, 1.6) { $2$};
+\node at (1.7, 1.6) {$6$};
+\node at (2.2, 1.6) {$8$};
+
+% Quotient
+\node at (1.7,2.3) {$5$};
+\node at (2.2,2.3) {$3$};
+\node at (2.7,2.3) {R $3$};
+
+
+% First subtraction step
+\node at (1.2,1.1) {$2$};
+\node at (1.7,1.1) {$5$};
+\draw (1,0.9) -- (2.3,0.9);
+\node at (1.7,0.6) {$1$};
+\node at (2.2,0.6) {$8$};
+
+% Bring down arrow for the 8
+\draw[->, thick] (2.2,1.4) -- (2.2,1.0);
+%\node at (2.9,1.3) {↓};
+
+% Second subtraction step
+\node at (1.7,0.1) {$1$};
+\node at (2.2,0.1) {$5$};
+\draw (1.6,-0.1) -- (2.4,-0.1);
+\node at (2.2,-0.4) {$3$};
+
+\end{tikzpicture}
+\end{image}
+
+\begin{image}
+\begin{tikzpicture}
+
+
+\foreach \x in {2.4, 2.6, 2.8, 3} \foreach \y in {0, 0.2, 0.4, 0.6} \draw[thick] (\x, \y) rectangle (\x+0.1, \y+0.1);
+\foreach \x in {2.4, 2.6, 2.8} \foreach \y in {0, 0.2, 0.4, 0.6} \draw[thick, red] (\x-0.1, \y-0.1) -- (\x+0.1, \y+0.1);
+\draw[thick, red] (2.9, -0.1) -- (3.1, 0.1);
+\foreach \x in {2.4, 2.6} \foreach \y in {0.8} \draw[thick] (\x, \y) rectangle (\x+0.1, \y+0.1);
+\foreach \x in {2.4, 2.6} \foreach \y in {0.8} \draw[thick, red] (\x-0.1, \y-0.1) -- (\x+0.1, \y+0.1);
+\foreach \x in {-2.4, -2.2, -2, -1.8, -1.6, -0.4, -0.2, 0, 0.2, 0.4, 2.4, 2.2, 2, 1.8, 1.6, 4.4, 4.2, 4, 3.8, 3.6, 6.4, 6.2, 6, 5.8, 5.6} \draw[thick] (\x, -2.5) rectangle (\x+0.101, -1.5);
+\foreach \x in {-2.4, -2.2, -2, -1.8, -1.6, -0.4, -0.2, 0, 0.2, 0.4, 2.4, 2.2, 2, 1.8, 1.6, 4.4, 4.2, 4, 3.8, 3.6, 6.4, 6.2, 6, 5.8, 5.6} \foreach \y in {-2.4, -2.3, ..., -1.6} \draw[thick] (\x, \y)--(\x+0.1, \y);
+\foreach \x in {-2.3, -2, -1.7, -0.3, 0, 0.3, 1.7, 2, 2.3, 3.7, 4, 4.3, 5.7, 6, 6.3} \draw[thick] (\x, -2.8) rectangle (\x+0.1, -2.7);
+\foreach \a in {(-2, -2), (0, -2), (2, -2), (4, -2), (6, -2)} \draw[thick] \a circle (1cm);
+
+\end{tikzpicture}
+\end{image}
+
+We find the answer in our picture by counting the number of blocks in each group. Each group has $5$ bundles and $3$ individual blocks, for a total of $\answer[given]{53}$ blocks in each group, with a remainder of $3$ blocks left over. In the algorithm, we read the answer above the division symbol and see that it agrees: $53$ remainder $3$. If we'd like to, we can record this using the language of the Division theorem as
+\[
+5 \times 53 + 3 = 268.
+\]
+
+\end{example}
+
+As usual, we hope you will practice with several more examples so that you can see why each step in the standard algorithm makes sense using a picture of bundled objects. Our place value system is behind every step of this algorithm, helping us to calculate quickly. A big idea in the division algorithm is the ability to think of the place value objects in more than one way: for example, we thought about the $2$ superbundles in $268$ as both $2$ superbundles as well as $20$ bundles and $200$ individual blocks. This kind of flexibility takes time for children to learn, and they are laying the foundations for success with this algorithm as soon as they start counting and learning about place value.
+
+
+Notice that we chose to use how many groups division to explain why the scaffold method makes sense, and how many in each group division to explain why the standard algorithm makes sense. We made these choices to give you more practice with both interpretations of division and because we think these interpretations are the most natural for the algorithms. However, you can also justify the scaffold method using how many in each group division, and you can justify the standard algorithm using how many groups division. We encourage you to give this a try!
+
+Another challenge exercise is to use the same division interpretation with both algorithms as well as the most efficient calculations in the scaffold method to show how the two methods are actually the same thing. See what happens if you work out the two algorithms side-by-side!
+
+
+
+
+\section{Long division and decimals}
+
+
+Throughout this section, we have been working with division and remainder. But the long division algorithm is powerful enough to get a decimal answer as well. Let's take a look at an example.
+\begin{example}
+Let's work through $268 \div 5$ again, but this time use the long division algorithm to get a decimal answer. We start in the same way that we did before.
+\begin{image}
+\begin{tikzpicture}[font=\large, every node/.style={inner sep=0pt, outer sep=1pt}]
+
+% Long division symbol
+\draw[thick] (0.8,1.9) -- (2.5,1.9);
+
+% Dividend and Divisor
+\node at (0.5,1.6) {$5$};
+\node at (0.85,1.6) {\,\big)};
+\node at (1.2, 1.6) { $2$};
+\node at (1.7, 1.6) {$6$};
+\node at (2.2, 1.6) {$8$};
+
+% Quotient
+\node at (1.7,2.3) {$5$};
+\node at (2.2,2.3) {$3$};
+%\node at (2.4, 2.3) {$.$};
+%\node at (2.7, 2.3) {$6$};
+
+
+
+% First subtraction step
+\node at (1.2,1.1) {$2$};
+\node at (1.7,1.1) {$5$};
+\draw (1,0.9) -- (2.3,0.9);
+\node at (1.7,0.6) {$1$};
+\node at (2.2,0.6) {$8$};
+
+% Bring down arrow for the 8
+\draw[->, thick] (2.2,1.4) -- (2.2,1.0);
+%\node at (2.9,1.3) {↓};
+
+% Second subtraction step
+\node at (1.7,0.1) {$1$};
+\node at (2.2,0.1) {$5$};
+\draw (1.6,-0.1) -- (2.4,-0.1);
+\node at (2.2,-0.4) {$3$};
+
+\end{tikzpicture}
+\end{image}
+But now, instead of deciding that we don't have enough blocks to distribute, we want to find a way to place these blocks equally into the groups so that we end up with an exact answer and no remainder. So, we can think about the extra $\answer[given]{3}$ blocks that were left over at the end of the previous example, and unbundle them into mini sticks. We don't have any mini sticks in $268$, so we can write this number as $268.0$. When we unbundle $3$ blocks, we will have $\answer[given]{30}$ mini sticks, so this will be the same in the algorithm as dropping down the $0$ from $268.0$.
+\begin{image}
+\begin{tikzpicture}[font=\large, every node/.style={inner sep=0pt, outer sep=1pt}]
+
+% Long division symbol
+\draw[thick] (0.8,1.9) -- (3,1.9);
+
+% Dividend and Divisor
+\node at (0.5,1.6) {$5$};
+\node at (0.85,1.6) {\,\big)};
+\node at (1.2, 1.6) { $2$};
+\node at (1.7, 1.6) {$6$};
+\node at (2.2, 1.6) {$8$};
+\node at(2.4, 1.5) {$.$};
+\node at (2.7, 1.6) {$0$};
+
+% Quotient
+\node at (1.7,2.3) {$5$};
+\node at (2.2,2.3) {$3$};
+%\node at (2.4, 2.2) {$.$};
+%\node at (2.7, 2.3) {$6$};
+
+
+
+% First subtraction step
+\node at (1.2,1.1) {$2$};
+\node at (1.7,1.1) {$5$};
+\draw (1,0.9) -- (2.2,0.9);
+\node at (1.7,0.6) {$1$};
+\node at (2.2,0.6) {$8$};
+
+% Bring down arrow for the 8
+\draw[->, thick] (2.2,1.4) -- (2.2,1.0);
+\draw[->, thick] (2.7, 1.4)--(2.7, 0);
+%\node at (2.9,1.3) {↓};
+
+% Second subtraction step
+\node at (1.7,0.1) {$1$};
+\node at (2.2,0.1) {$5$};
+\draw (1.6,-0.1) -- (2.8,-0.1);
+\node at (2.2,-0.4) {$3$};
+\node at (2.7, -0.4) {$0$};
+
+\end{tikzpicture}
+\end{image}
+
+We now can place $\answer[given]{6}$ mini sticks in each of our $5$ groups because we know that $5 \times 6 = \answer[given]{30}$, and this will use up all of the mini sticks, and we will have a remainder of $0$. So, we add a decimal point after the $3$ in our answer since our next number will be in the tenths (mini sticks) place, and then place the $6$ mini sticks in each group after that decimal.
+\begin{image}
+\begin{tikzpicture}[font=\large, every node/.style={inner sep=0pt, outer sep=1pt}]
+
+% Long division symbol
+\draw[thick] (0.8,1.9) -- (3,1.9);
+
+% Dividend and Divisor
+\node at (0.5,1.6) {$5$};
+\node at (0.85,1.6) {\,\big)};
+\node at (1.2, 1.6) { $2$};
+\node at (1.7, 1.6) {$6$};
+\node at (2.2, 1.6) {$8$};
+\node at(2.4, 1.5) {$.$};
+\node at (2.7, 1.6) {$0$};
+
+% Quotient
+\node at (1.7,2.3) {$5$};
+\node at (2.2,2.3) {$3$};
+\node at (2.4, 2.2) {$.$};
+\node at (2.7, 2.3) {$6$};
+
+
+
+% First subtraction step
+\node at (1.2,1.1) {$2$};
+\node at (1.7,1.1) {$5$};
+\draw (1,0.9) -- (2.2,0.9);
+\node at (1.7,0.6) {$1$};
+\node at (2.2,0.6) {$8$};
+
+% Bring down arrow for the 8
+\draw[->, thick] (2.2,1.4) -- (2.2,1.0);
+\draw[->, thick] (2.7, 1.4)--(2.7, 0);
+%\node at (2.9,1.3) {↓};
+
+% Second subtraction step
+\node at (1.7,0.1) {$1$};
+\node at (2.2,0.1) {$5$};
+\draw (1.6,-0.1) -- (2.8,-0.1);
+\node at (2.2,-0.4) {$3$};
+\node at (2.7, -0.4) {$0$};
+
+% Second subtraction step
+\node at (2.2,-0.9) {$3$};
+\node at (2.7,-0.9) {$0$};
+\draw (2.1,-1.1) -- (2.8,-1.1);
+\node at (2.7, -1.4) {$0$};
+
+\end{tikzpicture}
+\end{image}
+
+Our answer is now $\answer[given]{53.6}$ blocks fit in each group, and we don't have a remainder. Algebraically, we could write
+\[
+5 \times 53.6 = 268.
+\]
+
+\end{example}
+
+We only needed one more decimal place to finish this example, but if we didn't get a remainder of zero, we could keep unbundling as long as we need to. Some division problems will never get to that remainder of zero, and in that case we can add as many zeros to the end of the divisor as we want. We'll investigate some examples like this in a later section where we discuss the connection between fractions and division.
+
+Finally, we discussed in \link[The meaning of division]{https://ximera.osu.edu/m4t/elementaryTeachersOne/elementaryReading/Division/MeaningOfDivision} that we can relate decimal division problems by changing the value of one block.
+\begin{question}
+Which of the following decimal division problems could be solved using the same picture as the one we drew for $437 \div 12$? Select all that apply.
+\begin{selectAll}
+\choice[correct]{$43.7 \div 1.2$}
+\choice{$43.7 \div 0.012$}
+\choice[correct]{$4370 \div 120$}
+\choice[correct]{$0.437 \div 0.012$}
+\end{selectAll}
+\end{question}
+
+This actually tells us an easy way to use long division with decimal numbers: replace the divisor with a whole number and change the division problem accordingly. 
+
+\begin{example}
+Let's show how to set up the division problem $268 \div 0.5$ to use long division to calculate the answer. First, we replace the divisor, which is $\answer[given]{0.5}$ in this case, with a whole number. Here, we need to move the decimal place one place value to the right in order to accomplish this, so that we are dividing by $\answer[given]{5}$ instead of $0.5$. Since moving the decimal point corresponds to changing the value of one block, we need to also change the value of one block in $268$. Since we moved the decimal one place right, we must do the same to $268$, changing the value of the block in the same way. So, the division problem we will set up is $\answer[given]{2680} \div 5$ instead of $268 \div 0.5$, and these two division problems will have the same answer. Our long division set up will look like this.
+\begin{image}
+\begin{tikzpicture}[font=\large, every node/.style={inner sep=0pt, outer sep=1pt}]
+
+% Long division symbol
+\draw[thick] (0.8,1.9) -- (3,1.9);
+
+% Dividend and Divisor
+\node at (0.5,1.6) {$5$};
+\node at (0.85,1.6) {\,\big)};
+\node at (1.2, 1.6) { $2$};
+\node at (1.7, 1.6) {$6$};
+\node at (2.2, 1.6) {$8$};
+\node at (2.7, 1.6) {$0$};
+
+\end{tikzpicture}
+\end{image}
+
+Practice this calculation for yourself using long division: the answer is $\answer[given]{536}$.
+\end{example}
+
+
+\end{document}
+
+
+
+
+
+

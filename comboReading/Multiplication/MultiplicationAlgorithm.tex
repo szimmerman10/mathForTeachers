@@ -1,0 +1,1033 @@
+\documentclass{ximera}
+
+\input{../preamble.tex}
+
+
+\title{Multiplication algorithms}
+\author{Jenny Sheldon}
+
+\begin{document}
+
+\begin{abstract}
+We discuss why the partial products algorithm for multiplication makes sense.
+\end{abstract}
+\maketitle
+
+
+
+\section{The partial products algorithm}
+
+As we discussed with addition and subtraction algorithms, there are times when we want to quickly know the answer to a multiplication problem, or times when the numbers in a multiplication expression are too large for us to reasonably draw. In these cases we want to use an algorithm for multiplication.  However, remember again that algorithms help us to calculate quickly but can cost us our understanding of the meaning of multiplication. In this section we are going to connect why the standard algorithm for multiplication makes sense with our meaning of multiplication. We will start by using an algorithm called the partial products algorithm. This algorithm has more steps than the standard algorithm, but it will help us to see more clearly what is happening with the standard algorithm.
+
+Throughout this section, we will work with the multiplication expression $53 \times 28$. Remember that according to our definition of multiplication, this expression means the total number of objects when we have $53$ equal groups, and each group contains $28$ objects. We'll be using array models made out small squares, and so we'll think about one object as one square in the array.
+
+Let's start by showing the steps for the partial products algorithm. We start by writing the two numbers we want to multiply, lining up the ones place of each number.
+
+\begin{image}
+\begin{tikzpicture}[every node/.style={font=\large}]
+
+    % Multiplicand
+    \node at (1, 3) {5};
+    \node at (1.5, 3) {3};
+
+    % Multiplier
+    \node at (1, 2.4) {2};
+    \node at (1.5, 2.4) {8};
+
+    % Times sign
+    \node at (0, 2.4) {$\times$};
+
+    % Horizontal line under multiplier
+    \draw[thick] (0, 2.0) -- (1.8, 2.0);
+\end{tikzpicture}
+\end{image}
+
+Next, we multiply the numbers in the ones place. This will be $3 \times 8$, and we write the answer below the line.
+
+\begin{image}
+\begin{tikzpicture}[every node/.style={font=\large}]
+
+    % Multiplicand
+    \node at (1, 3) {5};
+    \node at (1.5, 3) {3};
+
+    % Multiplier
+    \node at (1, 2.4) {2};
+    \node at (1.5, 2.4) {8};
+
+    % Times sign
+    \node at (0, 2.4) {$\times$};
+
+    % Horizontal line under multiplier
+    \draw[thick] (0, 2.0) -- (1.8, 2.0);
+
+    % First partial product: 3x8=24
+    \node at (1.5, 1.6) {4};
+    \node at (1, 1.6) {2};
+    \node at (0.5, 1.6) { };
+     \node at (0, 1.6) { };
+     \node at (2.5, 1.6) {$\leftarrow 3 \times 8$};
+
+\end{tikzpicture}
+\end{image}
+
+Next, we multiply the $8$ ones in $28$ by the $5$ tens in $53$. In other words, we multiply $50 \times 8$, and write that below the $24$ under the line.
+
+\begin{image}
+\begin{tikzpicture}[every node/.style={font=\large}]
+
+    % Multiplicand
+    \node at (1, 3) {5};
+    \node at (1.5, 3) {3};
+
+    % Multiplier
+    \node at (1, 2.4) {2};
+    \node at (1.5, 2.4) {8};
+
+    % Times sign
+    \node at (0, 2.4) {$\times$};
+
+    % Horizontal line under multiplier
+    \draw[thick] (0, 2.0) -- (1.8, 2.0);
+
+    % First partial product: 3x8=24
+    \node at (1.5, 1.6) {4};
+    \node at (1, 1.6) {2};
+    \node at (0.5, 1.6) { };
+     \node at (0, 1.6) { };
+     \node at (2.5, 1.6) {$\leftarrow 3 \times 8$};
+     
+         % second partial product: 50 x 8 =400 
+    \node at (1.5, 1) {0};
+    \node at (1, 1) {0};
+    \node at (0.5, 1) {4};
+     \node at (0, 1) { };
+     \node at (2.6, 1) {$\leftarrow 50 \times 8$};
+
+\end{tikzpicture}
+\end{image}
+
+We are using an arrow to show you the calculations we made, but these are optional when you do the algorithm. You can write them to remind yourself about how you made the calculation, or you can just write the answers. We now move to the tens place in $28$ and multiply the $20$ by each of the $3$ and the $50$ from $53$ and write these below the line.
+
+\begin{image}
+\begin{tikzpicture}[every node/.style={font=\large}]
+
+    % Multiplicand
+    \node at (1, 3) {5};
+    \node at (1.5, 3) {3};
+
+    % Multiplier
+    \node at (1, 2.4) {2};
+    \node at (1.5, 2.4) {8};
+
+    % Times sign
+    \node at (0, 2.4) {$\times$};
+
+    % Horizontal line under multiplier
+    \draw[thick] (0, 2.0) -- (1.8, 2.0);
+
+    % First partial product: 3x8=24
+    \node at (1.5, 1.6) {4};
+    \node at (1, 1.6) {2};
+    \node at (0.5, 1.6) { };
+     \node at (0, 1.6) { };
+     \node at (2.5, 1.6) {$\leftarrow 3 \times 8$};
+     
+         % second partial product: 50 x 8 =400 
+    \node at (1.5, 1) {0};
+    \node at (1, 1) {0};
+    \node at (0.5, 1) {4};
+     \node at (0, 1) { };
+     \node at (2.6, 1) {$\leftarrow 50 \times 8$};
+
+    % third partial product: 3 x 20 = 60
+    \node at (1.5, 0.4) {0};
+    \node at (1, 0.4) {6};
+    \node at (0.5, 0.4) { };
+     \node at (0, 0.4) { };
+     \node at (2.6, 0.4) {$\leftarrow 3 \times 20$};
+     
+         % fourth partial product: 20x50=1,000 
+    \node at (1.5, -0.2) {0};
+    \node at (1, -0.2) {0};
+    \node at (0.5, -0.2) {0};
+     \node at (0, -0.2) {1};
+     \node at (2.7, -0.2) {$\leftarrow 50 \times 20$};
+
+
+
+    % Horizontal line before final answer
+    \draw[thick] (-0.5, -0.6) -- (1.8, -0.6);
+
+    % Plus sign
+    \node at (-0.5, -0.2) {$+$};
+
+\end{tikzpicture}
+\end{image}
+
+We've drawn a second horizontal line below the ``partial products'' that we have just calculated. Finally, to get the answer, we add each of these partial products and write the answer below the second line. 
+
+\begin{image}
+\begin{tikzpicture}[every node/.style={font=\large}]
+
+    % Multiplicand
+    \node at (1, 3) {5};
+    \node at (1.5, 3) {3};
+
+    % Multiplier
+    \node at (1, 2.4) {2};
+    \node at (1.5, 2.4) {8};
+
+    % Times sign
+    \node at (0, 2.4) {$\times$};
+
+    % Horizontal line under multiplier
+    \draw[thick] (0, 2.0) -- (1.8, 2.0);
+
+    % First partial product: 3x8=24
+    \node at (1.5, 1.6) {4};
+    \node at (1, 1.6) {2};
+    \node at (0.5, 1.6) { };
+     \node at (0, 1.6) { };
+     \node at (2.5, 1.6) {$\leftarrow 3 \times 8$};
+     
+         % second partial product: 50 x 8 =400 
+    \node at (1.5, 1) {0};
+    \node at (1, 1) {0};
+    \node at (0.5, 1) {4};
+     \node at (0, 1) { };
+     \node at (2.6, 1) {$\leftarrow 50 \times 8$};
+
+    % third partial product: 3 x 20 = 60
+    \node at (1.5, 0.4) {0};
+    \node at (1, 0.4) {6};
+    \node at (0.5, 0.4) { };
+     \node at (0, 0.4) { };
+     \node at (2.6, 0.4) {$\leftarrow 3 \times 20$};
+     
+         % fourth partial product: 20x50=1,000 
+    \node at (1.5, -0.2) {0};
+    \node at (1, -0.2) {0};
+    \node at (0.5, -0.2) {0};
+     \node at (0, -0.2) {1};
+     \node at (2.7, -0.2) {$\leftarrow 50 \times 20$};
+
+
+
+    % Horizontal line before final answer
+    \draw[thick] (-0.5, -0.6) -- (1.8, -0.6);
+
+    % Plus sign
+    \node at (-0.5, -0.2) {$+$};
+
+    % Final result
+    \node at (0, -1) {1};
+    \node at (0.5, -1) {4};
+    \node at (1, -1) {8};
+    \node at (1.5, -1) {4};
+
+\end{tikzpicture}
+\end{image}
+
+Now that we know how to use this algorithm, let's explain why each of the steps makes sense.
+
+\begin{explanation}
+We are trying to calculate the product $53 \times 28$, so let's start with an array which has $53$ columns and $28$ rows.
+
+\begin{image}
+\begin{tikzpicture}
+\draw[thick, step=0.1] (0,0) grid (5.3, 2.8);
+\node[above] at (2.6, 2.8) {$53$ columns};
+\node[right] at (5.5, 1.4) {$28$ squares per column};
+\end{tikzpicture}
+\end{image}
+In this case, one group is \wordChoice{\choice[correct]{one column} \choice{one row} \choice{one square} \choice{one array}} and one object is  \wordChoice{\choice{one column} \choice{one row} \choice[correct]{one square} \choice{one array}}, and the product $53 \times 28$ will tell us the total number of \wordChoice{\choice{columns} \choice{rows} \choice[correct]{squares} \choice{arrays}} in the array.
+
+Our goal is to see why adding up the separate partial products gives us the same answer as simply counting the number of squares in the array, since counting the squares in the array using the groups and objects per group is our most basic meaning of multiplication. In order to find the partial products, let's subdivide our array into four zones: the top left will be $50$ columns with $20$ squares in each column, the bottom left will be $50$ columns with $8$ squares in each column, the top right will be $3$ columns with $20$ squares in each column, and the bottom right will be $3$ columns with $8$ squares in each column.
+
+\begin{image}
+\begin{tikzpicture}
+\draw[fill=yellow] (0, 0.8) rectangle (5, 2.8);
+\draw[fill=orange] (0,0) rectangle (5, 0.8);
+\draw[fill=green] (5,0.8) rectangle (5.3, 2.8);
+\draw[fill=cyan] (5,0) rectangle (5.3, 0.8);
+\draw[thick, step=0.1] (0,0) grid (5.3, 2.8);
+\draw[ultra thick] (0, 0.8)--(5.3, 0.8);
+\draw[ultra thick] (5, 0)--(5, 2.8);
+\node[above] at (2.6, 2.8) {$53$ columns};
+\node[right] at (5.5, 1.4) {$28$ squares per column};
+\node[below] at (2.5, 0) {$50$ columns};
+\node[below] at (5.3, 0) {$3$ columns};
+\node[left] at (-0.3, 0.4) {$8$ squares per column};
+\node[left] at (-0.3, 2) {$20$ squares per column};
+\end{tikzpicture}
+\end{image}
+
+After subdividing, we have the same total number of squares that we started with, and no squares were gained or lost. So, if we combine together the amount of squares in each of the subdivisions, we will get the same total as $53 \times 28$. How can we count the number of squares in each subdivision using multiplication? Let's stick with one group as one column, and one object as one little square.
+
+\begin{itemize}
+\item In the top left subdivision, we have $\answer[given]{50}$ columns with $\answer[given]{20}$ squares in each column for a total of $\answer[given]{50} \times \answer[given]{20}$ small squares.
+\item In the bottom left subdivision, we have $\answer[given]{50}$ columns with $\answer[given]{8}$ squares in each column for a total of $\answer[given]{50} \times \answer[given]{8}$ small squares.
+\item In the top right subdivision, we have $\answer[given]{3}$ columns with $\answer[given]{20}$ squares in each column for a total of $\answer[given]{3} \times \answer[given]{20}$ small squares.
+\item In the bottom right subdivision, we have $\answer[given]{3}$ columns with $\answer[given]{8}$ squares in each column for a total of $\answer[given]{3} \times \answer[given]{8}$ small squares.
+\end{itemize}
+
+Let's label those totals on our diagram.
+
+\begin{image}
+\begin{tikzpicture}
+\draw[fill=yellow] (0, 0.8) rectangle (5, 2.8);
+\draw[fill=orange] (0,0) rectangle (5, 0.8);
+\draw[fill=green] (5,0.8) rectangle (5.3, 2.8);
+\draw[fill=cyan] (5,0) rectangle (5.3, 0.8);
+\draw[ultra thick] (0,0) rectangle (5.3, 2.8);
+\draw[ultra thick] (0, 0.8)--(5.3, 0.8);
+\draw[ultra thick] (5, 0)--(5, 2.8);
+\node at (2.5, 2) {$50 \times 20$};
+\node at (2.5, 0.4) {$50 \times 8$};
+\node at (5.2, 2) {$3 \times 20$};
+\node at (5.2, 0.4) {$3 \times 8$};
+\end{tikzpicture}
+\end{image}
+Notice that we removed the lines indicating the tiny squares so that it was easier to see the multiplication labels, but you should be imagining that the array is still made of little squares. If you are working on a similar problem and don't want to draw all the tiny squares, a picture like this one can be a good substitute, as long as you mention that we are imagining all those little squares!
+
+In order to count all of the squares in the diagram, we want to combine all of the subdivisions. In other words, we want to \wordChoice{\choice[correct]{add} \choice{subtract} \choice{multiply} \choice{something else}} all of the partial products together. 
+
+\[
+53 \times 28 = (50 \times 20) + (50 \times 8) + (3 \times 20) + (3 \times 8)
+\]
+
+Looking back at our partial products algorithm, these are exactly the four products that we added together in order to get the total. In other words, the partial products algorithm makes sense with our meaning of multiplication.
+
+\end{explanation}
+
+Notice one more thing about this algorithm before we move forward: the four products that we multiplied are exactly what we would have gotten if we split apart the $53$ and the $28$ into their place value parts and used the distributive property several times.
+
+\begin{align*}
+53 \times 28 &= (50 + 3) \times (20 + 8) \\
+& = (50+3) \times 20 + (50 + 3) \times 8 \\
+&= 50 \times 20 + 3 \times 20 + (50+3) \times 8 \\
+&= (50 \times 20) + (3 \times 20) + (50 \times 8) + (3 \times 8)
+\end{align*}
+
+These calculations aren't in the same order that we did them in the algorithm, but the commutative property says that we can add these terms in any order. However, the main idea with this calculation is that the partial products algorithm is just a fancy way to write down a version of the distributive property. 
+
+The model that we used to explain why the partial products algorithm makes sense is called an area model, which we discussed as being a version of an array model for multiplication. Fourth grade students practice using area models like these before they move on to learning the steps of the partial products algorithm. Once they have learned the algorithm, they don't need to draw the pictures anymore, since the point of the algorithm is to calculate quickly. However, it's good to remember what's happening behind the scenes!
+
+
+\section{The standard multiplication algorithm}
+
+The partial products algorithm is an excellent algorithm to use because of this connection to the distributive property and the way we think about place values while we use it. However, there are many steps, and we can shorten our work if we use the standard multiplication algorithm. Let's start by working through the algorithm on our example step-by-step. Watch the next video to be reminded of the steps in the standard algorithm. 
+
+\youtube{BjcZrBjByzw}
+
+%We begin by writing the numbers in the same way that we did to start the partial products algorithm: lining them up vertically with the ones place aligned. 
+%
+%\begin{image}
+%\begin{tikzpicture}[every node/.style={font=\large}]
+%
+%    % Multiplicand
+%    \node at (1, 3) {5};
+%    \node at (1.5, 3) {3};
+%
+%    % Multiplier
+%    \node at (1, 2.4) {2};
+%    \node at (1.5, 2.4) {8};
+%
+%    % Times sign
+%    \node at (0, 2.4) {$\times$};
+%
+%    % Horizontal line under multiplier
+%    \draw[thick] (0, 2.0) -- (1.8, 2.0);
+%\end{tikzpicture}
+%\end{image}
+%
+%Our first goal will be to multiply the ones place of $28$ by everything in the $53$. So we start with the same step as the partial products algorithm: we multiply in the ones place taking $3 \times 8$ and getting $24$. But this time we write the $4$ in the ones place below the line, but we write the $2$ in $24$ above the next place value to the left, which is the tens place.
+%\begin{image}
+%\begin{tikzpicture}[every node/.style={font=\large}]
+%
+%    % Multiplicand
+%    \node at (1, 3) {5};
+%    \node at (1.5, 3) {3};
+%
+%    % Multiplier
+%    \node at (1, 2.4) {2};
+%    \node at (1.5, 2.4) {8};
+%
+%    % Times sign
+%    \node at (0, 2.4) {$\times$};
+%
+%    % Horizontal line under multiplier
+%    \draw[thick] (0, 2.0) -- (1.8, 2.0);
+%
+%    % Carry digits for 53 × 8
+%    \node at (1, 3.5) {\scriptsize 2};
+%
+%    % First partial product: 53 × 8 = 424
+%    \node at (1.5, 1.6) {4};
+%
+%\end{tikzpicture}
+%\end{image}
+%
+%Now, we multiply the $8$ in the ones place of $28$ with the $5$ in the tens place of $53$, but this time we just think of it as a $5$, not as $50$. We calculate $5 \times 8 = 40$, but we must also add the $2$ that we carried in the previous step to get $42$. If we had more place values to multiply we would carry this $4$, but since we don't have anything more to multiply by the $8$ we just write the $42$ next to the $4$ that's already below the line.
+%
+%\begin{image}
+%\begin{tikzpicture}[every node/.style={font=\large}]
+%
+%    % Multiplicand
+%    \node at (1, 3) {5};
+%    \node at (1.5, 3) {3};
+%
+%    % Multiplier
+%    \node at (1, 2.4) {2};
+%    \node at (1.5, 2.4) {8};
+%
+%    % Times sign
+%    \node at (0, 2.4) {$\times$};
+%
+%    % Horizontal line under multiplier
+%    \draw[thick] (0, 2.0) -- (1.8, 2.0);
+%
+%    % Carry digits for 53 × 8
+%    \node at (1, 3.5) {\scriptsize 2};
+%
+%    % First partial product: 53 × 8 = 424
+%    \node at (1.5, 1.6) {4};
+%    \node at (1, 1.6) {2};
+%    \node at (0.5, 1.6) {4};
+%     \node at (0, 1.6) { };
+%
+%
+%\end{tikzpicture}
+%\end{image}
+%
+%Our second goal will be to multiply the tens place of $28$ by everything in the $53$. Since we are working in the tens place, we are going to start by placing a zero in the ones place on the next line below the $424$ we got from our first steps. 
+%\begin{image}
+%\begin{tikzpicture}[every node/.style={font=\large}]
+%
+%    % Multiplicand
+%    \node at (1, 3) {5};
+%    \node at (1.5, 3) {3};
+%
+%    % Multiplier
+%    \node at (1, 2.4) {2};
+%    \node at (1.5, 2.4) {8};
+%
+%    % Times sign
+%    \node at (0, 2.4) {$\times$};
+%
+%    % Horizontal line under multiplier
+%    \draw[thick] (0, 2.0) -- (1.8, 2.0);
+%
+%    % Carry digits for 53 × 8
+%    \node at (1, 3.5) {\scriptsize 2};
+%
+%    % First partial product: 53 × 8 = 424
+%    \node at (1.5, 1.6) {4};
+%    \node at (1, 1.6) {2};
+%    \node at (0.5, 1.6) {4};
+%     \node at (0, 1.6) { };
+%
+%
+%    % Second partial product: 53 × 2 = 106 → shift left → 1060
+%    \node at (1.5, 1.0) {0};
+%
+%
+%
+%\end{tikzpicture}
+%\end{image}
+%
+%Since we have started on a new place value, some people like to cross out the carried numbers from the first step to remind us that we don't need them in this step, but we won't do that in this example. We will trust you to remember that it's left over from the first step. Now we multiply the $2$ in $28$ by the $3$ in $53$ and get $2 \times 3 = 6$. We write the $6$ below the line, next to the zero (or in the tens place).
+%
+%\begin{image}
+%\begin{tikzpicture}[every node/.style={font=\large}]
+%
+%    % Multiplicand
+%    \node at (1, 3) {5};
+%    \node at (1.5, 3) {3};
+%
+%    % Multiplier
+%    \node at (1, 2.4) {2};
+%    \node at (1.5, 2.4) {8};
+%
+%    % Times sign
+%    \node at (0, 2.4) {$\times$};
+%
+%    % Horizontal line under multiplier
+%    \draw[thick] (0, 2.0) -- (1.8, 2.0);
+%
+%    % Carry digits for 53 × 8
+%    \node at (1, 3.5) {\scriptsize 2};
+%
+%    % First partial product: 53 × 8 = 424
+%    \node at (1.5, 1.6) {4};
+%    \node at (1, 1.6) {2};
+%    \node at (0.5, 1.6) {4};
+%     \node at (0, 1.6) { };
+%
+%
+%    % Second partial product: 53 × 2 = 106 → shift left → 1060
+%    \node at (1, 1.0) {6};
+%    \node at (1.5, 1.0) {0};
+%
+%
+%
+%\end{tikzpicture}
+%\end{image}
+%
+%We multiply the $2$ in $28$ by the $5$ in $50$ to get $2 \times 5 = 10$. We would carry the $1$ if we had another place value, but we don't so we write this $10$ next to the $6$ we got in the previous step.
+%
+%\begin{image}
+%\begin{tikzpicture}[every node/.style={font=\large}]
+%
+%    % Multiplicand
+%    \node at (1, 3) {5};
+%    \node at (1.5, 3) {3};
+%
+%    % Multiplier
+%    \node at (1, 2.4) {2};
+%    \node at (1.5, 2.4) {8};
+%
+%    % Times sign
+%    \node at (0, 2.4) {$\times$};
+%
+%    % Horizontal line under multiplier
+%    \draw[thick] (0, 2.0) -- (1.8, 2.0);
+%
+%    % Carry digits for 53 × 8
+%    \node at (1, 3.5) {\scriptsize 2};
+%
+%    % First partial product: 53 × 8 = 424
+%    \node at (1.5, 1.6) {4};
+%    \node at (1, 1.6) {2};
+%    \node at (0.5, 1.6) {4};
+%     \node at (0, 1.6) { };
+%
+%
+%    % Second partial product: 53 × 2 = 106 → shift left → 1060
+%    \node at (0, 1.0) {1};
+%    \node at (0.5, 1.0) {0};
+%    \node at (1, 1.0) {6};
+%    \node at (1.5, 1.0) {0};
+%
+%\end{tikzpicture}
+%\end{image}
+%
+%We have now multiplied all of the digits in both numbers, so we add everything below the first line to get our final answer.
+
+Here is the algorithm from the video written out.
+
+\begin{image}
+\begin{tikzpicture}[every node/.style={font=\large}]
+
+    % Multiplicand
+    \node at (1, 3) {$5$};
+    \node at (1.5, 3) {$3$};
+
+    % Multiplier
+    \node at (1, 2.4) {$2$};
+    \node at (1.5, 2.4) {$8$};
+
+    % Times sign
+    \node at (0, 2.4) {$\times$};
+
+    % Horizontal line under multiplier
+    \draw[thick] (0, 2.0) -- (1.8, 2.0);
+
+    % Carry digits for 53 × 8
+    \node at (1, 3.5) {\scriptsize $2$};
+
+    % First partial product: 53 × 8 = 424
+    \node at (1.5, 1.6) {$4$};
+    \node at (1, 1.6) {$2$};
+    \node at (0.5, 1.6) {$4$};
+     \node at (0, 1.6) { };
+
+
+    % Second partial product: 53 × 2 = 106 → shift left → 1060
+    \node at (0, 1.0) {$1$};
+    \node at (0.5, 1.0) {$0$};
+    \node at (1, 1.0) {$6$};
+    \node at (1.5, 1.0) {$0$};
+
+    % Horizontal line before final answer
+    \draw[thick] (-0.5, 0.6) -- (1.8, 0.6);
+
+    % Plus sign
+    \node at (-0.5, 1) {$+$};
+
+    % Final result
+    \node at (0, 0.2) {1};
+    \node at (0.5, 0.2) {4};
+    \node at (1, 0.2) {8};
+    \node at (1.5, 0.2) {4};
+
+\end{tikzpicture}
+\end{image}
+
+Why does this algorithm work and give us the correct answer? Let's take a look.
+
+\begin{explanation}
+To see what is happening with the standard algorithm, we are going to compare it to the partial products algorithm. Let's take a look at both of them side-by-side.
+
+\begin{image}
+\begin{tikzpicture}[every node/.style={font=\large}]
+
+    % Multiplicand
+    \node at (1, 3) {$5$};
+    \node at (1.5, 3) {$3$};
+
+    % Multiplier
+    \node at (1, 2.4) {$2$};
+    \node at (1.5, 2.4) {$8$};
+
+    % Times sign
+    \node at (0, 2.4) {$\times$};
+
+    % Horizontal line under multiplier
+    \draw[thick] (0, 2.0) -- (1.8, 2.0);
+
+    % Carry digits for 53 × 8
+    \node at (1, 3.5) {\scriptsize $2$};
+
+    % First partial product: 53 × 8 = 424
+    \node at (1.5, 1.6) {$4$};
+    \node at (1, 1.6) {$2$};
+    \node at (0.5, 1.6) {$4$};
+     \node at (0, 1.6) { };
+
+
+    % Second partial product: 53 × 2 = 106 → shift left → 1060
+    \node at (0, 0.4) {$1$};
+    \node at (0.5, 0.4) {$0$};
+    \node at (1, 0.4) {$6$};
+    \node at (1.5, 0.4) {$0$};
+
+    % Horizontal line before final answer
+    \draw[thick] (-0.5, -0.6) -- (1.8, -0.6);
+
+    % Plus sign
+    \node at (-0.5, -0.2) {$+$};
+
+    % Final result
+    \node at (0, -1) {$1$};
+    \node at (0.5, -1) {$4$};
+    \node at (1, -1) {$8$};
+    \node at (1.5, -1) {$4$};
+    
+
+    % Multiplicand
+    \node at (6, 3) {$5$};
+    \node at (6.5, 3) {$3$};
+
+    % Multiplier
+    \node at (6, 2.4) {$2$};
+    \node at (6.5, 2.4) {$8$};
+
+    % Times sign
+    \node at (5, 2.4) {$\times$};
+
+    % Horizontal line under multiplier
+    \draw[thick] (5, 2.0) -- (6.8, 2.0);
+
+    % First partial product: 3x8=24
+    \node at (6.5, 1.6) {$4$};
+    \node at (6, 1.6) {$2$};
+    \node at (5.5, 1.6) { };
+     \node at (5, 1.6) { };
+     \node at (7.5, 1.6) {$\leftarrow 3 \times 8$};
+     
+         % second partial product: 50 x 8 =400 
+    \node at (6.5, 1) {$0$};
+    \node at (6, 1) {$0$};
+    \node at (5.5, 1) {$4$};
+     \node at (5, 1) { };
+     \node at (7.6, 1) {$\leftarrow 50 \times 8$};
+
+    % third partial product: 3 x 20 = 60
+    \node at (6.5, 0.4) {$0$};
+    \node at (6, 0.4) {$6$};
+    \node at (5.5, 0.4) { };
+     \node at (5, 0.4) { };
+     \node at (7.6, 0.4) {$\leftarrow 3 \times 20$};
+     
+         % fourth partial product: 20x50=1,000 
+    \node at (6.5, -0.2) {$0$};
+    \node at (6, -0.2) {$0$};
+    \node at (5.5, -0.2) {$0$};
+     \node at (5, -0.2) {$1$};
+     \node at (7.7, -0.2) {$\leftarrow 50 \times 20$};
+
+
+
+    % Horizontal line before final answer
+    \draw[thick] (5.5, -0.6) -- (6.8, -0.6);
+
+    % Plus sign
+    \node at (4.5, -0.2) {$+$};
+
+    % Final result
+    \node at (5, -1) {$1$};
+    \node at (5.5, -1) {$4$};
+    \node at (6, -1) {$8$};
+    \node at (6.5, -1) {$4$};
+
+\end{tikzpicture}
+\end{image}
+We have spaced out the products in the standard algorithm on purpose. 
+%When we look at the $424$ that we got from multiplying $53 \times 8$, notice first that we got the right answer: if we do $(50 + 3) \times 8$, we use the \wordChoice{\choice{commutative property} \choice{associative property} \choice[correct]{distributive property}} to rewrite this as $50 \times 8 + 3 \times 8$. We first calculate $3 \times 8$ and get $24$, which we can rewrite as $20 + 4$. So we have
+%\[
+%(50 + 3) \times 8 = 50 \times 8 + 3 \times 8 = 50 \times 8 + 24 = 50 \times 8 + 20 + 4.
+%\]
+%In the algorithm, we calculated $5 \times 8$ instead of $50 \times 8$, which is like rewriting $50 = 5 \times \answer[given]{10}$. If we also think of $20$ as $2 \times 10$, we can use the commutative and associative properties to rearrange this calculation a little bit.
+%\[
+%50 \times 8 + 20 + 4 = (5 \times 10) \times 8 + 2 \times 10 + 4 = (5 \times 8) \times 10 + 2 \times 10 + 4 = (5 \times 8 + 2) \times 10 + 4
+%\]
+%Now we can see why we took $5 \times 8$ and added that $2$ in the algorithm. We can also calculate all of these values and see that
+%\[
+%(5 \times 8 + 2) \times 10 + 4 = 42 \times 10 + 4 = 424.
+%\]
+%So indeed we did get the right answer. The main point of all of this is to see that 
+When we calculated that $424$ on the first line, we actually did a short cut for the first two steps in the partial products algorithm. Let's highlight them with a box on our side-by-side algorithms.
+\begin{image}
+\begin{tikzpicture}[every node/.style={font=\large}]
+
+    % Multiplicand
+    \node at (1, 3) {$5$};
+    \node at (1.5, 3) {$3$};
+
+    % Multiplier
+    \node at (1, 2.4) {$2$};
+    \node at (1.5, 2.4) {$8$};
+
+    % Times sign
+    \node at (0, 2.4) {$\times$};
+
+    % Horizontal line under multiplier
+    \draw[thick] (0, 2.0) -- (1.8, 2.0);
+
+    % Carry digits for 53 × 8
+    \node at (1, 3.5) {\scriptsize $2$};
+
+    % First partial product: 53 × 8 = 424
+    \node at (1.5, 1.6) {$4$};
+    \node at (1, 1.6) {$2$};
+    \node at (0.5, 1.6) {$4$};
+     \node at (0, 1.6) { };
+
+
+    % Second partial product: 53 × 2 = 106 → shift left → 1060
+    \node at (0, 0.4) {$1$};
+    \node at (0.5, 0.4) {$0$};
+    \node at (1, 0.4) {$6$};
+    \node at (1.5, 0.4) {$0$};
+
+    % Horizontal line before final answer
+    \draw[thick] (-0.5, -0.6) -- (1.8, -0.6);
+
+    % Plus sign
+    \node at (-0.5, -0.2) {$+$};
+
+    % Final result
+    \node at (0, -1) {$1$};
+    \node at (0.5, -1) {$4$};
+    \node at (1, -1) {$8$};
+    \node at (1.5, -1) {$4$};
+    
+
+    % Multiplicand
+    \node at (6, 3) {$5$};
+    \node at (6.5, 3) {$3$};
+
+    % Multiplier
+    \node at (6, 2.4) {$2$};
+    \node at (6.5, 2.4) {$8$};
+
+    % Times sign
+    \node at (5, 2.4) {$\times$};
+
+    % Horizontal line under multiplier
+    \draw[thick] (5, 2.0) -- (6.8, 2.0);
+
+    % First partial product: 3x8=24
+    \node at (6.5, 1.6) {$4$};
+    \node at (6, 1.6) {$2$};
+    \node at (5.5, 1.6) { };
+     \node at (5, 1.6) { };
+     \node at (7.5, 1.6) {$\leftarrow 3 \times 8$};
+     
+         % second partial product: 50 x 8 =400 
+    \node at (6.5, 1) {$0$};
+    \node at (6, 1) {$0$};
+    \node at (5.5, 1) {$4$};
+     \node at (5, 1) { };
+     \node at (7.6, 1) {$\leftarrow 50 \times 8$};
+
+    % third partial product: 3 x 20 = 60
+    \node at (6.5, 0.4) {$0$};
+    \node at (6, 0.4) {$6$};
+    \node at (5.5, 0.4) { };
+     \node at (5, 0.4) { };
+     \node at (7.6, 0.4) {$\leftarrow 3 \times 20$};
+     
+         % fourth partial product: 20x50=1,000 
+    \node at (6.5, -0.2) {$0$};
+    \node at (6, -0.2) {$0$};
+    \node at (5.5, -0.2) {$0$};
+     \node at (5, -0.2) {$1$};
+     \node at (7.7, -0.2) {$\leftarrow 50 \times 20$};
+
+
+
+    % Horizontal line before final answer
+    \draw[thick] (5.5, -0.6) -- (6.8, -0.6);
+
+    % Plus sign
+    \node at (4.5, -0.2) {$+$};
+
+    % Final result
+    \node at (5, -1) {$1$};
+    \node at (5.5, -1) {$4$};
+    \node at (6, -1) {$8$};
+    \node at (6.5, -1) {$4$};
+    
+ \draw[thick, red] (0, 0.8) rectangle (8.5, 1.8);
+
+\end{tikzpicture}
+\end{image}
+
+In other words, we get $53 \times 8 = 424$ by adding $\answer[given]{24} + 400$. This is the distributive property at work again.
+\begin{align*}
+53 \times 8 &= (50+3) \times 8  \\
+& = (50 \times 8) + (3 \times 8)
+\end{align*}
+
+Similarly, the second calculation in the standard algorithm, where we multiplied $53 \times 20$, is a shortcut for the third and fourth partial products in the partial products algorithm.
+\begin{image}
+\begin{tikzpicture}[every node/.style={font=\large}]
+
+    % Multiplicand
+    \node at (1, 3) {$5$};
+    \node at (1.5, 3) {$3$};
+
+    % Multiplier
+    \node at (1, 2.4) {$2$};
+    \node at (1.5, 2.4) {$8$};
+
+    % Times sign
+    \node at (0, 2.4) {$\times$};
+
+    % Horizontal line under multiplier
+    \draw[thick] (0, 2.0) -- (1.8, 2.0);
+
+    % Carry digits for 53 × 8
+    \node at (1, 3.5) {\scriptsize $2$};
+
+    % First partial product: 53 × 8 = 424
+    \node at (1.5, 1.6) {$4$};
+    \node at (1, 1.6) {$2$};
+    \node at (0.5, 1.6) {$4$};
+     \node at (0, 1.6) { };
+
+
+    % Second partial product: 53 × 2 = 106 → shift left → 1060
+    \node at (0, 0.4) {$1$};
+    \node at (0.5, 0.4) {$0$};
+    \node at (1, 0.4) {$6$};
+    \node at (1.5, 0.4) {$0$};
+
+    % Horizontal line before final answer
+    \draw[thick] (-0.5, -0.6) -- (1.8, -0.6);
+
+    % Plus sign
+    \node at (-0.5, -0.2) {$+$};
+
+    % Final result
+    \node at (0, -1) {$1$};
+    \node at (0.5, -1) {$4$};
+    \node at (1, -1) {$8$};
+    \node at (1.5, -1) {$4$};
+    
+
+    % Multiplicand
+    \node at (6, 3) {$5$};
+    \node at (6.5, 3) {$3$};
+
+    % Multiplier
+    \node at (6, 2.4) {$2$};
+    \node at (6.5, 2.4) {$8$};
+
+    % Times sign
+    \node at (5, 2.4) {$\times$};
+
+    % Horizontal line under multiplier
+    \draw[thick] (5, 2.0) -- (6.8, 2.0);
+
+    % First partial product: 3x8=24
+    \node at (6.5, 1.6) {$4$};
+    \node at (6, 1.6) {$2$};
+    \node at (5.5, 1.6) { };
+     \node at (5, 1.6) { };
+     \node at (7.5, 1.6) {$\leftarrow 3 \times 8$};
+     
+         % second partial product: 50 x 8 =400 
+    \node at (6.5, 1) {$0$};
+    \node at (6, 1) {$0$};
+    \node at (5.5, 1) {$4$};
+     \node at (5, 1) { };
+     \node at (7.6, 1) {$\leftarrow 50 \times 8$};
+
+    % third partial product: 3 x 20 = 60
+    \node at (6.5, 0.4) {$0$};
+    \node at (6, 0.4) {$6$};
+    \node at (5.5, 0.4) { };
+     \node at (5, 0.4) { };
+     \node at (7.6, 0.4) {$\leftarrow 3 \times 20$};
+     
+         % fourth partial product: 20x50=1,000 
+    \node at (6.5, -0.2) {$0$};
+    \node at (6, -0.2) {$0$};
+    \node at (5.5, -0.2) {$0$};
+     \node at (5, -0.2) {$1$};
+     \node at (7.7, -0.2) {$\leftarrow 50 \times 20$};
+
+
+
+    % Horizontal line before final answer
+    \draw[thick] (5.5, -0.6) -- (6.8, -0.6);
+
+    % Plus sign
+    \node at (4.5, -0.2) {$+$};
+
+    % Final result
+    \node at (5, -1) {$1$};
+    \node at (5.5, -1) {$4$};
+    \node at (6, -1) {$8$};
+    \node at (6.5, -1) {$4$};
+    
+ \draw[thick, red] (0, 0.8) rectangle (8.5, 1.8);
+ \draw[thick, dashed, blue] (-0.3, -0.5) rectangle (8.7, 0.6);
+
+\end{tikzpicture}
+\end{image}
+
+Since the algorithms are both calculating the same thing, if the partial products algorithm gives us the correct answer, the standard algorithm must as well. The standard algorithm is just a condensed version of the partial products algorithm, and the partial products algorithm is really a version of the \wordChoice{\choice{commutative} \choice{associative} \choice[correct]{distributive}} property in disguise.
+
+\end{explanation}
+
+There are many other multiplication algorithms as well. If you learned a different algorithm in school, we challenge you to see if your algorithm is also just the distributive property in disguise, or if you need to justify it in a different way!
+
+
+
+
+\section{Multiplying decimal numbers}
+
+So far in this section, we have been working with whole numbers. What if we would like to multiply decimal numbers? The rule for multiplying decimal numbers is to first remove the decimal point from both numbers, keeping track of how many total places you had behind the decimal point. For instance, suppose we would like to multiply $5.3 \times 0.28$. In this case, we have three places behind the decimal point: one from $5.3$ and two from $0.28$. Next, you multiply the two numbers with the decimal points removed, using the algorithm of your choice for whole numbers. In our example, we would get $53 \times 28 = 1484$. Finally, you put the decimal point back in your number, moving the same number of places to the left as your total number of decimal places in the original numbers. In this case, our final answer would be $1.484$, with the decimal point moved three places to the left. 
+
+The most common way to explain why this algorithm makes sense is to use the connection between multiplication and division, and since we haven't talked about division yet we will save this explanation for later. Instead, let's use our knowledge of place value to explain why this answer makes sense.
+
+\begin{explanation}
+When we multiply $5.3 \times 0.28$, this product would represent the total number of objects that we have if we start with $5.3$ equal groups, and one full group has $0.28$ objects in it. We haven't looked at partial groups yet, but we can use our ideas of bundling to understand that if we know what one group looks like, we can cut that group into $10$ equal pieces (or unbundle it) to find out what $0.1$ of a group would look like. Then $0.3$ of a group would be $\answer[given]{3}$ copies of $0.1$ of a group. We can draw something like this using our base ten blocks, where the value of one individual block is $\answer[given]{0.01}$ since one full group has $0.28$ objects in it, and the smallest place value we have is the hundredths. Let's take a look at what one group would look like, with $\answer[given]{8}$ individual blocks and $\answer[given]{2}$ bundles of blocks so that we have a total value of $0.28$.
+\begin{image}
+\begin{tikzpicture}[scale=2]
+\draw[thick] (0,0) rectangle (2.8, 1);
+\foreach \x in {0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9} \draw[dashed] (\x, 0)--(\x, 1);
+\foreach \x in {1, 2, 2.1, 2.2, 2.3, 2.4, 2.5, 2.6, 2.7} \draw[thick] (\x, 0)--(\x, 1);
+\node[below] at (1.4, 0) {$1$ group = 28 blocks or $0.28$};
+\end{tikzpicture}
+\end{image}
+In the picture, we have stretched out our usual individual blocks to make them a bit taller, so that the thin rectangles in the picture represent one block or $0.01$. The larger squares with dashed lines through them represent our bundles, and the dashed lines remind us that the bundles are made of $10$ individual blocks. 
+
+To ``unbundle'' this group, we need to cut each of our objects into $\answer[given]{10}$ equal pieces. We will do that in our picture with horizontal lines.
+
+\begin{image}
+\begin{tikzpicture}[scale=2]
+\draw[thick] (0,0) rectangle (2.8, 1);
+\foreach \x in {0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9} \draw[dashed] (\x, 0)--(\x, 1);
+\foreach \x in {1, 2, 2.1, 2.2, 2.3, 2.4, 2.5, 2.6, 2.7} \draw[thick] (\x, 0)--(\x, 1);
+\node[below] at (1.4, 0) {$1$ group = 28 blocks or $0.28$};
+\foreach \y in {0.1, 0.2, ..., 0.9} \draw[thick, magenta] (0, \y) -- (2.8, \y);
+\end{tikzpicture}
+\end{image}
+
+Since each of our original blocks got cut into $10$ equal pieces, the value of the smallest square in the picture is now $\answer[given]{0.001}$, since the block worth $0.01$ was unbundled. Each horizontal cut will represent $0.1$ of a group. Let's highlight $0.1$ of a group in our picture.
+
+\begin{image}
+\begin{tikzpicture}[scale=2]
+\draw[fill=pink] (0, 0.9) rectangle (2.8, 1);
+\draw[thick] (0,0) rectangle (2.8, 1);
+\foreach \x in {0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9} \draw[dashed] (\x, 0)--(\x, 1);
+\foreach \x in {1, 2, 2.1, 2.2, 2.3, 2.4, 2.5, 2.6, 2.7} \draw[thick] (\x, 0)--(\x, 1);
+\node[below] at (1.4, 0) {$1$ group = 28 blocks or $0.28$};
+\foreach \y in {0.1, 0.2, ..., 0.9} \draw[thick, magenta] (0, \y) -- (2.8, \y);
+\node[right] at (2.8, 0.95) {$0.1$ groups};
+\end{tikzpicture}
+\end{image}
+
+To represent $0.3$ of a group, we would need $\answer[given]{3}$ copies of $0.1$ of a group. So, we would take three copies of the highlighted strip from the previous picture.
+
+\begin{image}
+\begin{tikzpicture}[scale=2]
+\draw[thick] (0,0) rectangle (2.8, 0.3);
+\foreach \x in {0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9} \draw[dashed] (\x, 0)--(\x, 0.3);
+\foreach \x in {1, 2, 2.1, 2.2, 2.3, 2.4, 2.5, 2.6, 2.7} \draw[thick] (\x, 0)--(\x, 0.3);
+\node[below] at (1.4, 0) {$0.3$ groups};
+\foreach \y in {0.1, 0.2, 0.3} \draw[thick, magenta] (0, \y) -- (2.8, \y);
+\end{tikzpicture}
+\end{image}
+
+Finally, to see $5.3$ groups with $0.28$ objects in each full group, we draw $5$ full copies of $0.28$ and then add on this $0.3$ of a group that we just drew. We will stack them on top of each other in order to form an array picture for this multiplication.
+
+\begin{image}
+\begin{tikzpicture}
+\draw[thick] (0,0) rectangle (2.8, 5.3);
+\foreach \x in {0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9} \draw[dashed] (\x, 0)--(\x, 5.3);
+\foreach \x in {1, 2, 2.1, 2.2, 2.3, 2.4, 2.5, 2.6, 2.7} \draw[thick] (\x, 0)--(\x, 5.3);
+\node[below] at (1.4, 0) {$5.3$ groups};
+\foreach \y in {5.1, 5.2, 5.3} \draw[thick, magenta] (0, \y) -- (2.8, \y);
+\foreach \y in {1, 2, 3, 4, 5} \draw[ultra thick] (0, \y)--(2.8, \y);
+\draw[thick] (3.5, 2.2) rectangle (3.6, 3.2);
+\node[right] at (3.6, 2.7) {one block $= 0.01$};
+\end{tikzpicture}
+\end{image}
+
+We could absolutely use this array picture to calculate the answer to our original multiplication problem: how many objects total are in this picture if we consider the picture to be $5.3$ groups (in the array one group is one row) with $0.28$ objects in each group. We would find that the total value of all of the objects in the picture is $\answer[given]{1.484}$, which is the exact answer we got using the algorithm above. In the picture we can see this answer because if we rearrange all of our base ten blocks and bundle them as necessary, we would have $1$ superbundle, $4$ bundles, $8$ individual blocks, and $4$ mini blocks.
+\end{explanation}
+
+
+
+
+
+In the previous example, we used base ten blocks to calculate the answer. Another strategy we could use is to reason about the size of the numbers. If we change the value of the objects in our picture and instead consider the value of the smallest block in the upper right hand corner to be $1$, then this picture would show us $53$ groups with $28$ objects in each group. To see this more clearly, we would cut not only the $0.3$ group at the top, but all of the other groups as well, and see the same array we considered earlier, but with all of the blocks cut to the same size.
+
+\begin{image}
+\begin{tikzpicture}
+\draw[thick, step=0.1] (0,0) grid (2.8, 5.3);
+%\foreach \y in {1, 2, 3, 4, 5} \draw[ultra thick] (0, \y)--(2.8, \y);
+\node[above] at (1.4, 5.3) {$28$ objects in each row};
+\node[left] at (-0.5, 2.3) {$53$ rows};
+\end{tikzpicture}
+\end{image}
+
+Now, we can change the value of one block to be any place value we like, and we can group or ungroup the rows in sections of $10$ to change the place value of the number of groups. In other words, when we multiply $53 \times 28$ or $5.3 \times 0.28$ or $530 \times 2.8$ or any other combination of these digits, we get the same digits in our answer, just in a different place value depending on the value of the blocks and the value of the rows, because we count all the same blocks in the picture. The place value of the answer depends on the value of the individual block and the place value of the rows. So, if we want to know the answer to $5.3 \times 0.28$, we can instead multiply $53 \times 28$, and then think about how big the answer should actually be. Since $5.3$ is less than 6, and $0.28$ is less than $1$, our answer should be less than $6 \times 1 = 6$. Also $5.3$ is greater than $5$ and $0.28$ is greater than $0.25$ or $\frac{1}{4}$, so $5.3 \times 0.28$ should be greater than $5 \times 0.25 = 1.25$. So if we look at the digits $1484$ that we get from multiplying $53 \times 28$, the only place to put the decimal point that gives us an answer of a reasonable size is between the $1$ and the $4$, giving $1.484$.
+
+
+
+
+\begin{question}
+Using the estimation technique we just discussed, what is the value of $84.32 \times 1.97$?
+
+\begin{freeResponse}
+Jot down some notes about your process!
+\end{freeResponse}
+\end{question}
+
+
+
+\end{document}
+
+
+
+
+
+

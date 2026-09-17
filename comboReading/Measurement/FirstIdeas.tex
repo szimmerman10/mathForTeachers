@@ -1,0 +1,185 @@
+\documentclass{ximera}
+
+\input{../preamble.tex}
+
+\title{First Ideas about Measurement}
+\author{Jenny Sheldon}
+
+\begin{document}
+
+\begin{abstract}
+We begin to measure things.
+\end{abstract}
+\maketitle
+
+\section{Activities for this section:} 
+\link[I'm the biggest kid!]{https://ximera.osu.edu/m4t/elementaryActivities/SemesterTwoPacket/elementaryActivities/Measurement/BiggestKid}
+
+
+
+\section{Comparisons lead to measurements}
+So far, we have talked about comparing shapes in terms of comparing the properties that shapes have. There is another way to compare shapes that we haven't touched on yet: measuring them in various ways. We can ask something like ``which shape is bigger?'' or ``which shape is taller?'' or similar questions about shapes. 
+
+
+One of the first ideas that kids explore on their way to measuring things is to compare things by ``lining them up''. For instance, kids could ask a question like, ``which kid is the tallest in our class?'' To solve this problem, the kids could start with someone that they guess is the tallest, and then have each kid stand back-to-back with that kid until they try everyone in the class, or until they find someone taller. The taller kid would then compare their height against all of the remaining children, and so on.
+\begin{question}
+Which stick figure is taller?
+\begin{image}
+\begin{tikzpicture}
+   % Taller Stick Figure
+    % Head
+    \draw (0,2.5) circle (0.5);
+    % Body
+    \draw (0,2) -- (0,0);
+    % Arms
+    \draw (-1,1.5) -- (1,1.5);
+    % Legs
+    \draw (0,0) -- (-1,-1);
+    \draw (0,0) -- (1,-1);
+    \node at (0, -1.2) {Figure 1};
+    
+    % Shorter Stick Figure (shifted to the right)
+    % Head
+    \draw (3,2) circle (0.5);
+    % Body
+    \draw (3,1.5) -- (3,0);
+    % Arms
+    \draw (2,1) -- (4,1);
+    % Legs
+    \draw (3,0) -- (2,-1);
+    \draw (3,0) -- (4,-1);
+    \node at (3,-1.2) {Figure 2};
+\end{tikzpicture}
+\end{image}
+\begin{multipleChoice}
+\choice[correct]{Figure 1}
+\choice{Figure 2}
+\end{multipleChoice}
+
+Did you need to measure the two heights to know the answer to this question?
+\begin{multipleChoice}
+\choice{Yes}
+\choice[correct]{No}
+\end{multipleChoice}
+\end{question}
+
+This height comparison should remind you a little of a one-to-one correspondence. With one-to-one correspondence, we matched up items in each set until we ran out of items in one set, and then said we had more in the other set. We didn't need to be able to count to make that conclusion. Here, we are essentially matching up the height of the two people until we run out of height on one of them, and then we say that the other is taller. And we didn't need to be able to measure to make that conclusion.
+
+We make this type of comparison regularly in our every-day lives. We might decide which of two books is wider by putting them both flat on a table, or we might decide which of two charging cables is longer by matching them up. We don't need to measure length, area, or volume in order to make these comparisons, and we didn't need any numbers at all in order to make our comparisons. However, there are other types of comparisons can be more difficult to make without numbers. For instance, we could ask ``is it farther from here to Denver, Colorado, or from here to Miami, Florida?" Perhaps we could look at a map and guess, but it's hard to hold up these two objects and be very sure. Instead, we would measure the distance from here to Denver, and then measure the distance from here to Miami, and then compare the two numbers we get from doing those measurements. In a sense, we are comparing both distances to a common unit, which in this case is probably a mile.
+
+\begin{question}
+Which of the following comparisons would be easier to do if we first measured the objects in question? Select all that apply.
+\begin{selectAll}
+\choice[correct]{The distance from Earth to the Moon versus the distance from Jupiter to its moon Io}
+\choice{The length of a pencil versus the length of a pen}
+\choice{The area of a piece of computer paper versus the area of a bulletin board}
+\choice[correct]{The amount of wallpaper needed for the kitchen versus the amount of wallpaper needed for a bedroom}
+\choice{The size of a marble versus the size of an egg}
+\choice[correct]{The weight of a brown cow versus the weight of a black and white cow}
+\end{selectAll}
+\end{question}
+
+\section{A caution}
+When we compare and measure things, we need to be a little bit careful. Perhaps you've noticed this already in the questions we've asked. For instance, when discussing the kids in the class, we asked ``which kid is the tallest?'' Instead of something like ``which kid is the biggest?'' There are lots of ways to interpret the question ``which kid is the biggest?'', so we want to be sure that we are being specific when we ask such questions.
+
+\begin{question}
+Which of the following are questions that are \emph{not} specific enough to answer? Select all that apply.
+\begin{selectAll}
+\choice{Which winged insect in the museum has the widest wingspan?}
+\choice[correct]{Which skyscraper is the biggest in Columbus?}
+\choice{Which painting in the school's art gallery has the biggest area?}
+\choice{Which of two vases will hold the most water?}
+\choice{Which temperature is the coldest?}
+\choice[correct]{Which kid is the strongest in the class?}
+\end{selectAll}
+\end{question}
+
+Asking specific questions can be tricky, so let's make sure we practice as often as we can!
+
+
+\section{Units of measure}
+
+In order to move from comparisons to measurements, we need to first choose a unit of measurement. As we mentioned in the previous section, when we make a measurement, we are essentially comparing the object we are trying to measure to the unit we have chosen. As we learn to use units of measure, we want to use a bunch of different kinds of units, and we want to use unexpected or non-standard units. There are two main reasons for this: first, because we want to experience measurement the way kids do when they are first learning it and having their first experiences with units of measure that we already know well, and second because we really want you to see how the process of measuring is the same regardless of what unit we are using. Please be looking for these themes!
+
+The units of measure that you are probably familiar with are things like inches, centimeters, feet, miles, kilometers, square inches, square miles, cubic feet, milliliters, and so on. These are all \dfn{standard units of measure}, meaning that each of these units has a specific definition that we agree on all over the world. We want to focus right now on non-standard units of measure, which could be nearly anything else. Let's start with an example.
+\begin{example}
+Suppose we want to measure the length of a golf club using a little golf pencil that we found on the golf course. We will talk about how, specifically, we want to do this in the next section, but for right now we want to notice that we are using the golf pencil as our unit of measurement. However, we want to be a little bit more specific than just ``the golf pencil'', because there are several different aspects of the golf pencil we could be using to do this measurement. For instance, we could be using the length of the golf pencil, we could be using the width of the golf pencil, we could be using the flat end of the golf pencil somehow, we could be using the sharpened end of the pencil somehow, or something else!
+
+Perhaps we want to use the length of the golf pencil; in this case we would say that our unit of measurement is the length of the golf pencil.
+\end{example}
+
+From the last example, there are two things to observe. First, we need to be specific when we describe our unit of measure, so that we don't have more than one option for how we'd like to use the unit. The other thing we'd like to point out is related to dimension. The golf pencil itself is a 3D object, but the thing we are trying to measure is a 1D length (the length of the golf club). In order to be able to talk about how many units it takes to measure that golf pencil, we need our unit of measure to also be one-dimensional. The length of the golf pencil is a one-dimensional unit, so we can use it to make a one-dimensional measurement. When the dimension of the unit matches the dimension of the aspect we are trying to measure, we will say that our unit is \dfn{appropriate} for that measurement.
+
+\begin{question}
+Which of the following units of measure would be appropriate for measuring the (one-dimensional) distance between your house and your school? Select all appropriate answers.
+\begin{selectAll}
+\choice{A rope}
+\choice[correct]{The length of a piece of string}
+\choice{A notecard}
+\choice{The flat side of a textbook}
+\choice[correct]{The length of a charging cable}
+\choice{A shoe}
+\end{selectAll}
+\end{question}
+
+\begin{question}
+Food for thought: what kind of objects do you have that could be used to measure a two-dimensional aspect?
+\begin{freeResponse}
+Enter your answer here!
+\end{freeResponse}
+\end{question}
+
+Thinking about how the size of a particular unit of measure affects the measurement we get is an important skill for kids to learn. For instance, let's think about measuring a soccer field.
+\begin{question}
+Suppose you know that the soccer field at your local high school is $120$ yards long. (In the next section we'll tackle how you might come up with such a measurement!) A student in your class is working on figuring out how many feet it woutd take to measure the same distance, knowing that there are $3$ feet in every yard. What should be true about the measurement in feet?
+\begin{multipleChoice}
+\choice{The measurement in yards should be the bigger number, because yards are bigger than feet.}
+\choice{The measurement in yards should be the bigger number, because we use yards to measure large things.}
+\choice[correct]{The measurement in feet should be the bigger number, because each yard is made up of multiple feet.}
+\choice{The measurement in feet should be the bigger number, because the field gets longer when we use feet to measure.}
+\end{multipleChoice}
+\end{question}
+Think about how you build this intuition each time you come across a measurement, whether that measurement is exact or an estimate.This kind of question is also relevant when we choose what type of unit to use when we measure.
+
+So far, we have talked about units for measuring length, area, and volume, because we will focus the most on these ideas moving forward. However, we also have units for measuring other aspects like temperature, time, speed, and all kinds of other objects! 
+\begin{question}
+What kinds of measurements do you see in your every-day life? Are these measurements exact, or approximate?
+\begin{freeResponse}
+Enter your thoughts here!
+\end{freeResponse}
+\end{question}
+
+\section{Measurement and fractions}
+The idea of measuring occurs in some unexpected places throughout mathematics, including when we talk about fractions. Remember that we defined a fraction $\frac{A}{B}$ by first taking a whole and cutting it into $B$ equal pieces. Each of these equal pieces is what we mean by $\frac{1}{B}$ of the whole, and then to get $\frac{A}{B}$, we take $A$ copies of $\frac{1}{B}$. In this sense, we can think about $\frac{1}{B}$ as a sort of unit of measure that we are using to measure out the $A$ parts we need.
+\begin{image}
+\begin{tikzpicture}
+\draw[thick, <->] (-0.3,0)--(5.3,0);
+\foreach \x in {0,1,2,...,5} \draw (\x,-0.2)--(\x, 0.2);
+\node[below] at (0, -0.3) {$0$};
+\node[below] at (1, -0.3) {$\frac{1}{5}$};
+\node[below] at (2, -0.3) {$\frac{2}{5}$};
+\node[below] at (3, -0.3) {$\frac{3}{5}$};
+\node[below] at (4, -0.3) {$\frac{4}{5}$};
+\node[below] at (5, -0.3) {$1$};
+\end{tikzpicture}
+\end{image}
+On the number line above, we can think of the length of $\frac{1}{5}$ of $1$ as a unit, and then we have essentially made a ruler using this $\frac{1}{5}$ (of $1$) length. So, if we wanted to measure a length of $\frac{3}{5}$ (of $1$) on this number line, we would highlight three copies of that unit.
+
+\begin{image}
+\begin{tikzpicture}
+\draw[thick, <->] (-0.3,0)--(5.3,0);
+\foreach \x in {0,1,2,...,5} \draw (\x,-0.2)--(\x, 0.2);
+\node[below] at (0, -0.3) {$0$};
+\node[below] at (1, -0.3) {$\frac{1}{5}$};
+\node[below] at (2, -0.3) {$\frac{2}{5}$};
+\node[below] at (3, -0.3) {$\frac{3}{5}$};
+\node[below] at (4, -0.3) {$\frac{4}{5}$};
+\node[below] at (5, -0.3) {$1$};
+\draw[very thick, yellow] (0,0)--(3,0);
+\end{tikzpicture}
+\end{image}
+
+We hope this helps you to see some connections that you might not have seen before, and to understand the idea of fractions a little better!
+
+
+\end{document}

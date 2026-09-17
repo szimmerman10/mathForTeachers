@@ -1,0 +1,525 @@
+\documentclass{ximera}
+
+\input{../preamble.tex}
+
+\title{Scaling and Conversion}
+\author{Jenny Sheldon}
+
+\begin{document}
+
+\begin{abstract}
+We scale area and volume.
+\end{abstract}
+\maketitle
+
+\section{Activities for this section:} 
+\link[Scale it up]{https://ximera.osu.edu/m4t/elementaryActivities/SemesterTwoPacket/elementaryActivities/Measurement/scaleItUp}, 
+\link[My feelings are similar]{https://ximera.osu.edu/m4t/elementaryActivities/SemesterTwoPacket/elementaryActivities/Measurement/MyFeelingsAreSimilar}, 
+\link[Back and forth]{https://ximera.osu.edu/m4t/elementaryActivities/SemesterTwoPacket/elementaryActivities/Measurement/BackAndForth}, 
+\link[Area and volume conversions]{https://ximera.osu.edu/m4t/elementaryActivities/SemesterTwoPacket/elementaryActivities/Measurement/AreaVolumeConversions}
+
+\section{Scaling and conversion}
+
+
+We talked about scaling objects in a \link[previous section]{https://ximera.osu.edu/m4t/elementaryTeachersTwo/elementaryReading/ComparingShapes/Similarity}, but we'd like to revisit it here now that we have talked about measuring length, area, and volume. Our main goal in this section will be to talk about how to scale area and volume, and to connect these ideas to converting from one unit to another. To get started, let's look at a few length examples to put us in the right frame of mind.
+
+\begin{question}
+A certain polygon has one of its diagonals that measures $6$cm. If we scale this polygon with a scale factor of $3.5$, what will be the length of the diagonal in the new shape?
+
+\begin{prompt}
+$\answer{21}$ centimeters
+\end{prompt}
+\end{question}
+Perhaps you remember this type of problem; the key feature that we would highlight in our explanation is the meaning of the (length) scale factor as a factor that scales any length in the original figure to a length in the new figure. Let's look at the same problem again, but in a different context.
+
+\begin{example}
+Braxton measured the diagonal of a polygon as $6$cm. Cardale also measures the same diagonal in the same polygon, but uses a small eraser such that it takes exactly $3.5$ erasers to make up one centimeter. When Cardale measures the diagonal, let's figure out how many erasers he will need.
+
+Let's start by thinking about how the two units of measure are related. We know that there are $3.5$ erasers for every $1$ centimeter. Let's draw a picture to represent this.
+\begin{image}
+\begin{tikzpicture}
+\draw[thick] (0,0)--(10.5,0);
+\node[above] at (5.25, 0) {one centimeter};
+\draw (0,-2)--(12,-2)--(12,-1)--(0,-1)--(0,-2);
+\node[below] at (1.5, -2) {one eraser};
+\foreach \x in {3, 6, 9} \draw (\x,-2)--(\x,-1);
+\draw[dashed] (10.5,-2)--(10.5,-1);
+\end{tikzpicture}
+\end{image} 
+Notice specifically that Cardale is using the 
+\wordChoice{\choice[correct]{length of the eraser} \choice{area of the eraser} \choice{volume of the eraser} \choice{eraser}} as his unit of measure so that the dimension of the unit matches the dimension of the aspect he is trying to measure, which is the length of the diagonal in the polygon.
+
+As we continue with our four-step process of measurement, the next step is to cover the aspect with units, leaving no gaps and no overlaps. We already know from Braxton's measurement that we can cover this diagonal with exactly $6$ centimeters, or exactly $6$ copies of $1$ centimeter or $6$ groups with $1$ centimeter in each group. We also know that for every $1$ centimeter, there are $\answer[given]{3.5}$ erasers. So if we made $6$ copies of $1$ centimeter, we will also make $6$ copies of $\answer[given]{3.5}$ erasers. In other words, to find the number of erasers that Cardale will need to measure the diagonal of the polygon, we could calculate
+\[
+6 \textrm{ copies (groups) } \times \answer{3.5} \textrm{ erasers per copy (objects per group)}
+\]
+to find the answer of $\answer[given]{21}$ erasers total. Interpreting our answer in terms of our four-step process, it will take $\answer[given]{21}$ copies of one eraser length to cover the diagonal of the polygon with no gaps or overlaps.
+
+\end{example}
+There are two important ideas to notice here. First, our goal in this problem was to change from one unit of length to another unit of length. In general (for length, area, or volume), we will call this process \dfn{measurement conversion}. You have probably learned some strategies or tricks for measurement conversion in other places, and we encourage you to use those strategies to check your work. (I'm looking at you, ``dimensional analysis''!) However, we are talking about measurement conversion in a specific way here that highlights how it is connected to other ideas we have learned, so we would like for you to explain your work in a fashion similar to what we have done in the previous example and will do in later examples in this section.
+
+Second, you should notice that we did the same calculation in our first question about scaling and our second example about measurement conversion. In a sense, we can think about measurement conversion as scaling the unit of measure. You can think about that idea as we move on to area and volume.
+
+
+
+\section{Scaling and converting area}
+Hopefully you are feeling good about what happens when we scale length. But when we scale the length of something, what happens to its area? Let's start by scaling a rectangle and see if we can make some generalizations.
+
+\begin{example}
+Let's find the new area when we take a rectangle whose length is $5$cm and whose width is $2$cm and scale it by a (linear) scale factor of $3$. Let's start by drawing a picture of the original rectangle. Since we are eventually looking for the area, let's also cover it with a grid of square centimeters.
+\begin{image}
+\begin{tikzpicture}
+\draw (0,0) grid (5,2);
+\draw[thick] (0,0)--(5,0)--(5,2)--(0,2)--(0,0);
+\node[below] at (2.5, 0) {$5$ cm};
+\node[right] at (5,1) {$2$cm};
+\end{tikzpicture}
+\end{image}
+We are scaling this rectangle by a linear scale factor of $3$, which means that every length in the original rectangle is multiplied by $\answer[given]{3}$. This means that the new length of the rectangle will be $\answer[given]{15}$ cm and the new width of the rectangle will be $\answer[given]{6}$ cm. Let's draw a picture of the new rectangle.
+
+\begin{image}
+\begin{tikzpicture}
+\draw[thick] (0,0)--(15,0)--(15,6)--(0,6)--(0,0);
+\node[below] at (7.5, 0) {$15$ cm};
+\node[right] at (15,3) {$6$cm};
+\end{tikzpicture}
+\end{image}
+
+Our goal is to find the area of this rectangle, so the most basic technique we could use is our four-step process of measurement to count the number of square centimeters that cover this rectangle with no gaps or overlaps. Let's cover it with a grid of square centimeters and count. 
+\begin{image}
+\begin{tikzpicture}
+\draw[dotted] (0,0) grid (15,6);
+\draw[thick] (0,0)--(15,0)--(15,6)--(0,6)--(0,0);
+\node[below] at (7.5, 0) {$15$ cm};
+\node[right] at (15,3) {$6$cm};
+\end{tikzpicture}
+\end{image}
+We see that the area of the rectangle is $\answer[given]{90}$ square centimeters. When we remember that the original area of the rectangle (which was $5$-by-$2$) is $\answer[given]{10}$ square centimeters, we can see that the new area is $\answer[given]{9}$ times as large as the original.
+\end{example}
+
+Let's see if we can see what is happening to the area in the previous example in a couple different ways. 
+
+\begin{explanation}
+For our first method, notice that we had a grid on the original rectangle which was made of square centimeters, or $1$cm by $1$cm squares. If we scale those squares using our (linear) scale factor of $3$, each side of the scaled unit will measure $\answer[given]{3}$ centimeters.
+\begin{image}
+\begin{tikzpicture}
+\draw[thick] (0,0)--(1,0)--(1,1)--(0,1)--(0,0);
+\node[below] at (0.5, 0) {$1$ cm};
+\node[right] at (1, 0.5) {$1$ cm};
+\draw[thick, ->] (3,1)--(5,1) node[midway,above]{$k=3$};
+\draw[thick] (6,0)--(9,0)--(9,3)--(6,3)--(6,0);
+\node[below] at (7.5, 0) {$3$ cm};
+\node[right] at (9, 1.5) {$3$ cm};
+\end{tikzpicture}
+\end{image}
+Let's look at both grids on the scaled rectangle: the grid of square centimeters (dotted) and the grid of scaled units (solid).
+\begin{image}
+\begin{tikzpicture}
+\draw[dotted] (0,0) grid (15,6);
+\draw[step=3] (0,0) grid (15,6);
+\draw[thick] (0,0)--(15,0)--(15,6)--(0,6)--(0,0);
+\node[below] at (7.5, 0) {$15$ cm};
+\node[right] at (15,3) {$6$cm};
+\end{tikzpicture}
+\end{image}
+We can see here the original $10$ square centimeters, and when scaled, each of the original square centimeters contains $\answer[given]{9}$ square centimeters. So, we can think of the original area as $10$ copies of $1$ square centimeter, or $10$ groups with $1$ square centimeter per group. After scaling, we still have the $10$ groups, but now each one contains $\answer[given]{9}$ square centimeters, so our new area is $9$ times as large as the original area. We will call this method \dfn{scaling a unit} and it should feel similar to what we did with length earlier.
+
+For our second method, let's think about how the square units will fit in the scaled version of the rectangle. If we started off with $5$ centimeters of length along the width, and we scaled by a factor of $3$, we can fit $3$ times as many square centimeters along the width of the rectangle now. So if we think of the width as telling us how many groups of square centimeters we have, we have $3 \times 5$ groups of square centimeters. If we use the width to tell us how many square centimeters we have per group, we could originally fit $2$ square centimeters along the width (and so we had $2$ square centimeters per group). Now we can fit $3 \times 2$ square centimeters in each group. Instead of having $5$ groups of $2$ square centimeters per group, we have $5 \times 3$ groups with $2 \times 3$ square centimeters per group. We can see this in a picture if we mark off copies of the original rectangle inside the larger, scaled rectangle. Three copies fit along the width, and three copies fit along the length.
+\begin{image}
+\begin{tikzpicture}
+\draw[dotted] (0,0) grid (15,6);
+\foreach \x in {5, 10} \draw[thick] (\x, 0) -- (\x, 6);
+\foreach \y in {2, 4} \draw[thick] (0, \y)--(15, \y);
+\draw[thick] (0,0)--(15,0)--(15,6)--(0,6)--(0,0);
+\node[below] at (7.5, 0) {$15$ cm};
+\node[right] at (15,3) {$6$cm};
+\end{tikzpicture}
+\end{image}
+When we multiply by an extra factor of $3$ on both the length and width, we are actually getting $\answer[given]{9}$ times as much area as we started with, which we can see by the $9$ copies of the original rectangle inside the scaled version. We'll call this method our \dfn{geometric strategy}.
+
+For our third method, let's think about the area formula for a rectangle. We know that to calculate the area of a rectangle, we multiply length and width. Since our (linear) scaling factor here is $3$, we multiply both the length and width by $3$. So we get the following.
+\[
+A = L \times W = (5 \times \answer{3}) \times (2 \times \answer{3})
+\]
+If we rearrange this using the commutative and associative properties of multiplication, we see that the area is given as follows.
+\[
+A = (5 \times 2) \times \answer{9}
+\]
+In other words, the new area is $\answer[given]{9}$ times as large as the original area, which was given by $3 \times 3$. When we use an algebraic formula to compare the old and new areas, we will call this method our \dfn{algebraic strategy}.
+
+However we look at the area, in each case we notice that the scaled area is $9$ times as large as the original area. We won't ask you to use all three of these strategies, but you should pick one that makes sense to you and make sure you can explain what's going on.
+\end{explanation}
+
+But, we don't always scale by $3$! Let's see if we can think through a pattern here with a few other scale factors and then state it. Go back through the arguments to practice figuring out how the area is scaled. Draw pictures in your notes!
+\begin{question}
+For each part, assume we are sticking with our rectangle which is $5$cm long and $2$cm wide.
+\begin{enumerate}
+\item If we use a linear scale factor of $2$, what will the area be multiplied by? \begin{prompt} $\answer{4}$\end{prompt}
+\item If we use a linear scale factor of $5$, what will the area be multiplied by? \begin{prompt} $\answer{25}$\end{prompt}
+\item If we use a linear scale factor of $8$, what will the area be multiplied by? \begin{prompt} $\answer{64}$\end{prompt}
+\item If we use a linear scale factor of $15$, what will the area be multiplied by? \begin{prompt} $\answer{225}$\end{prompt}
+\end{enumerate}
+\end{question}
+
+Hopefully you are thinking ahead to a general conclusion, but let's look at one more example before we state it.
+
+\begin{example}
+We have a blobby shape which measures exactly $16.8$ square inches of area. Let's investigate what happens to the area of this shape if we make a similar version of it by scaling with a linear scale factor of $4$.
+
+I don't know what this shape looks like, but we do know that we can cover it exactly with $16.8$ copies of one square inch. So, what happens to each of these individual square inches when we scale? Let's look at a picture similar to the one we drew when scaling a unit in the previous example.
+\begin{image}
+\begin{tikzpicture}
+\draw[thick] (0,0)--(1,0)--(1,1)--(0,1)--(0,0);
+\node[below] at (0.5, 0) {$1$ in};
+\node[right] at (1, 0.5) {$1$ in};
+\draw[thick, ->] (3,1)--(5,1) node[midway,above]{$k=4$};
+\draw[thick] (6,0)--(10,0)--(10,4)--(6,4)--(6,0);
+\draw[dotted] (6,0) grid (10,4);
+\node[below] at (8, 0) {$4$ in};
+\node[right] at (10, 2) {$4$ in};
+\end{tikzpicture}
+\end{image}
+Each individual square inch is replaced by $\answer[given]{16}$ square inches once we scale, which we can tell by calculating the area of the $4$-by-$4$ square or by counting the number of square inches inside the bigger square. So, if we think of each square inch as a group, there are $16.8$ groups. After scaling, each group would contain $\answer[given]{16}$ square inches. So we would have a total of 
+\[
+16.8 \textrm{ groups (original squares) } \times \answer{16} \textrm{ square inches per group } = \answer{268.8} \textrm{ square inches total}
+\]
+
+\end{example}
+Wow! We didn't even need to draw a picture for that one! That's a fancy use of multiplication, if I do say so myself. Plus, I think we're ready for a general statement to sum up everything we've observed here.
+
+\begin{theorem}
+If we have a shape with area $A$ square units and we make a similar version of this shape by scaling with a linear scale factor of $k$, the area after scaling is
+\[
+A \times k^2 \textrm{ square units.}
+\]
+We can call $k^2$ an \dfn{area scale factor} since it scales the area.
+\end{theorem}
+
+\begin{question}
+Pause and think: how does the general statement make sense with the specific examples we worked through?
+\begin{freeResponse}
+Write your thoughts in your own words!
+\end{freeResponse}
+\end{question}
+
+Let's use our observations to think about converting an area from one unit of measure to another.
+\begin{example}
+We start with an area of $9$ square inches, and we would like to convert this area to square centimeters. We know that there are $2.54$ centimeters in every one inch, and we notice that this means that we can think of $2.54$ sort of like a linear scaling factor as we did when we converted length measurements above. Every inch gets replaced by $2.54$ centimeters of length when we convert (although technically we are not changing the size of our original figure here).
+
+We have $9$ square inches of area in our original figure, so let's see what happens to each of these square inches when we convert.
+\begin{image}
+\begin{tikzpicture}
+\draw[thick] (0,0)--(1,0)--(1,1)--(0,1)--(0,0);
+\node[below] at (0.5, 0) {$1$ in};
+\node[right] at (1, 0.5) {$1$ in};
+\draw[thick, ->] (3,0.5)--(5,0.5) node[midway,above]{$2.54$ cm per inch};
+\draw[thick] (6,0)--(7,0)--(7,1)--(6,1)--(6,0);
+\node[below] at (6.5, 0) {$2.54$ cm};
+\node[right] at (7, 0.5) {$2.54$ cm};
+\end{tikzpicture}
+\end{image}
+Each square inch will be replaced by $\answer[given]{6.4516}$ square centimeters, so if we have $9$ square inches originally we end up with
+\[
+9 \textrm{ groups (sq in) } \times 6.4516 \textrm{ objects per group (sq cm per sq in) } = \answer{58.0644} \textrm{ sq cm total.}
+\]
+
+
+
+
+\end{example}
+We hope that felt a little familiar! We will also practice a few other strategies for converting area units of measure in class, and you can again pick your favorite method to explain. Let's move on to volume.
+
+
+
+
+\section{Scaling and converting volume}
+
+Let's start out with the punch line in this case.
+\begin{theorem}
+If we have a shape with volume $V$ cubic units and we make a similar version of this shape by scaling with a linear scale factor of $k$, the volume after scaling is
+\[
+V \times k^3 \textrm{ square units.}
+\]
+We can call $k^3$ a \dfn{volume scale factor} since it scales the volume.
+
+\end{theorem}
+
+Since the scaling a unit method tends to be the most broadly applicable, let's investigate an example from that perspective.
+
+\begin{example}
+Let's start out with a solid with a volume of $20$ cubic meters and we scale this solid using a linear scale factor of $k=2$ and investigate why we end up with $2^3=8$ times as much volume as we started with.
+
+We'll start by looking at a single unit of volume. In this case, our volume is given in cubic meters, so one unit of volume is $1$ cubic meter. We have $20$ copies of this volume in some configuration. Our moving and additivity principles tell us that we don't actually need to know the actual shape in order to work with its volume. We'll get the same conclusion no matter what the shape actually is. So, let's draw a single cubic unit as well as its scaled version, much like we did with area.
+\begin{image}
+\begin{tikzpicture}
+
+% Define the coordinates of the vertices of the cube
+\coordinate (A) at (0,0,0);
+\coordinate (B) at (1,0,0);
+\coordinate (C) at (1,1,0);
+\coordinate (D) at (0,1,0);
+\coordinate (E) at (0,0,1);
+\coordinate (F) at (1,0,1);
+\coordinate (G) at (1,1,1);
+\coordinate (H) at (0,1,1);
+
+% Draw the edges of the cube
+\draw[thick] (A) -- (B) -- (C) -- (D) -- cycle;
+\draw[thick] (E) -- (F) -- (G) -- (H) -- cycle;
+\draw[thick] (A) -- (E);
+\draw[thick] (B) -- (F);
+\draw[thick] (C) -- (G);
+\draw[thick] (D) -- (H);
+
+% Label the length, width, and height
+\node[below] at (0.5, 0, 1) {1m};
+\node[right] at (1,0,0.5) {1m};
+\node[right] at (1, 0.5, 0) {1m};
+
+%arrow
+\draw[thick, ->] (2, 0.5, 0.5)--(4, 0.5, 0.5) node[midway, above] {$k=2$};
+
+% Define the coordinates of the vertices of the second cube
+\coordinate (A2) at (5,0,0);
+\coordinate (B2) at (7,0,0);
+\coordinate (C2) at (7,2,0);
+\coordinate (D2) at (5,2,0);
+\coordinate (E2) at (5,0,2);
+\coordinate (F2) at (7,0,2);
+\coordinate (G2) at (7,2,2);
+\coordinate (H2) at (5,2,2);
+
+% Draw the edges of the second cube
+\draw[thick] (A2) -- (B2) -- (C2) -- (D2) -- cycle;
+\draw[thick] (E2) -- (F2) -- (G2) -- (H2) -- cycle;
+\draw[thick] (A2) -- (E2);
+\draw[thick] (B2) -- (F2);
+\draw[thick] (C2) -- (G2);
+\draw[thick] (D2) -- (H2);
+
+% Label the length, width, and height of the second cube
+\node[below] at (6, 0, 2) {2m};
+\node[right] at (7,0,1) {2m};
+\node[right] at (7, 1, 0) {2m};
+
+\end{tikzpicture}
+\end{image}
+
+Each side of the scaled cube is now $2$ meters instead of $1$ meter. We can also see that inside the scaled cube we can fit $\answer[given]{8}$ cubic meters. So, if we think of each cubic meter as a group, we have $20$ groups total. Inside each group will be $\answer[given]{8}$ cubic meters (so one cubic meter is one object). Our answer is then
+\[
+20 \times \answer{8} = {160} \textrm{ cubic meters total.}
+\]
+\end{example}
+
+Let's finish up by considering a volume conversion example.
+
+\begin{question}
+We have a volume of $2$ cubic meters. What is this volume in cubic feet? Use the fact that $1$ inch is equal to $2.54$ centimeters.
+
+\begin{explanation}
+Let's draw a picture of one cubic meter and begin to convert. Since we know that $1$ inch is equal to $2.54$ centimeters, let's first convert the side lengths in meters to centimeters. We know that there are $100$ centimeters for every $1$ meter.
+
+\begin{image}
+\begin{tikzpicture}
+
+% Define the coordinates of the vertices of the cube
+\coordinate (A) at (0,0,0);
+\coordinate (B) at (1,0,0);
+\coordinate (C) at (1,1,0);
+\coordinate (D) at (0,1,0);
+\coordinate (E) at (0,0,1);
+\coordinate (F) at (1,0,1);
+\coordinate (G) at (1,1,1);
+\coordinate (H) at (0,1,1);
+
+% Draw the edges of the cube
+\draw[thick] (A) -- (B) -- (C) -- (D) -- cycle;
+\draw[thick] (E) -- (F) -- (G) -- (H) -- cycle;
+\draw[thick] (A) -- (E);
+\draw[thick] (B) -- (F);
+\draw[thick] (C) -- (G);
+\draw[thick] (D) -- (H);
+
+% Label the length, width, and height
+\node[below] at (0.5, 0, 1) {1m};
+\node[right] at (1,0,0.5) {1m};
+\node[right] at (1, 0.5, 0) {1m};
+
+%arrow
+\draw[thick, ->] (2, 0.5, 0.5)--(4, 0.5, 0.5) node[midway, above] {100cm per m};
+
+% Define the coordinates of the vertices of the second cube
+\coordinate (A2) at (5,0,0);
+\coordinate (B2) at (6,0,0);
+\coordinate (C2) at (6,1,0);
+\coordinate (D2) at (5,1,0);
+\coordinate (E2) at (5,0,1);
+\coordinate (F2) at (6,0,1);
+\coordinate (G2) at (6,1,1);
+\coordinate (H2) at (5,1,1);
+
+% Draw the edges of the second cube
+\draw[thick] (A2) -- (B2) -- (C2) -- (D2) -- cycle;
+\draw[thick] (E2) -- (F2) -- (G2) -- (H2) -- cycle;
+\draw[thick] (A2) -- (E2);
+\draw[thick] (B2) -- (F2);
+\draw[thick] (C2) -- (G2);
+\draw[thick] (D2) -- (H2);
+
+% Label the length, width, and height of the second cube
+\node[below] at (6, 0, 1) {100cm};
+\node[right] at (6,0,0.5) {100cm};
+\node[right] at (6, 0.5, 0) {100cm};
+
+\end{tikzpicture}
+\end{image}
+Each side of the cube has $100$ cm of length, so its volume is $\answer[given]{1000000}$ cubic cm.
+
+Next, let's look at just $1$ cubic cm and convert this to cubic inches. We know that there are $2.54$ cm per inch, and we can think of this conversion factor as telling us how many objects per group we have. So, one object is one centimeter, and one group is one inch. We are looking for how many inches are in one centimeter, meaning we have the following multiplication.
+\[
+? \textrm{ in (groups)} \times 2.54 \textrm{ cm per in (obj/gp) } = 1 \textrm{cm total (objects total)}
+\]
+In other words, this is a ``how many groups?'' division problem, which we can solve by taking $1 \div 2.54$ and getting approximately $0.3937$ inches in one centimeter. (Of course, you can use the exact value of $\frac{1}{2.54}$ but I was worried that the picture would get too crowded.)
+\begin{image}
+\begin{tikzpicture}
+
+% Define the coordinates of the vertices of the cube
+\coordinate (A) at (0,0,0);
+\coordinate (B) at (1,0,0);
+\coordinate (C) at (1,1,0);
+\coordinate (D) at (0,1,0);
+\coordinate (E) at (0,0,1);
+\coordinate (F) at (1,0,1);
+\coordinate (G) at (1,1,1);
+\coordinate (H) at (0,1,1);
+
+% Draw the edges of the cube
+\draw[thick] (A) -- (B) -- (C) -- (D) -- cycle;
+\draw[thick] (E) -- (F) -- (G) -- (H) -- cycle;
+\draw[thick] (A) -- (E);
+\draw[thick] (B) -- (F);
+\draw[thick] (C) -- (G);
+\draw[thick] (D) -- (H);
+
+% Label the length, width, and height
+\node[below] at (0.5, 0, 1) {1cm};
+\node[right] at (1,0,0.5) {1cm};
+\node[right] at (1, 0.5, 0) {1cm};
+
+%arrow
+\draw[thick, ->] (2, 0.5, 0.5)--(4, 0.5, 0.5) node[midway, above] {0.3937 cm/in};
+
+% Define the coordinates of the vertices of the second cube
+\coordinate (A2) at (5,0,0);
+\coordinate (B2) at (6,0,0);
+\coordinate (C2) at (6,1,0);
+\coordinate (D2) at (5,1,0);
+\coordinate (E2) at (5,0,1);
+\coordinate (F2) at (6,0,1);
+\coordinate (G2) at (6,1,1);
+\coordinate (H2) at (5,1,1);
+
+% Draw the edges of the second cube
+\draw[thick] (A2) -- (B2) -- (C2) -- (D2) -- cycle;
+\draw[thick] (E2) -- (F2) -- (G2) -- (H2) -- cycle;
+\draw[thick] (A2) -- (E2);
+\draw[thick] (B2) -- (F2);
+\draw[thick] (C2) -- (G2);
+\draw[thick] (D2) -- (H2);
+
+% Label the length, width, and height of the second cube
+\node[below] at (6, 0, 1) {0.3937in};
+\node[right] at (6,0,0.5) {0.3937in};
+\node[right] at (6, 0.5, 0) {0.3937in};
+
+\end{tikzpicture}
+\end{image}
+Now, each cubic centimeter measures 0.3937in on each of its three sides, so the total volume of a cubic centimeter in cubic inches is approximately $\answer[tolerance=0.005]{0.06102}$. Remember that we have $1000000$ copies of this cubic centimeter in our cubic meter, so the cubic meter now measures
+\[
+1000000 \times 0.061 = \answer[tolerance=25]{61023.744} \textrm{ cubic inches.}
+\]
+Finally, we need to convert to cubic feet. We know that there are $12$ inches in one foot, so we can calculate
+\[
+? \textrm{ feet (groups) } \times 12 \textrm{ in per ft (obj/gp) } = 1 \textrm{ in (object) }
+\]
+or in other words we have $1 \div 12 = \frac{1}{12}$ feet in one inch. We'll approximate this as $0.083$ feet per inch in our diagram.
+\begin{image}
+\begin{tikzpicture}
+
+% Define the coordinates of the vertices of the cube
+\coordinate (A) at (0,0,0);
+\coordinate (B) at (1,0,0);
+\coordinate (C) at (1,1,0);
+\coordinate (D) at (0,1,0);
+\coordinate (E) at (0,0,1);
+\coordinate (F) at (1,0,1);
+\coordinate (G) at (1,1,1);
+\coordinate (H) at (0,1,1);
+
+% Draw the edges of the cube
+\draw[thick] (A) -- (B) -- (C) -- (D) -- cycle;
+\draw[thick] (E) -- (F) -- (G) -- (H) -- cycle;
+\draw[thick] (A) -- (E);
+\draw[thick] (B) -- (F);
+\draw[thick] (C) -- (G);
+\draw[thick] (D) -- (H);
+
+% Label the length, width, and height
+\node[below] at (0.5, 0, 1) {1in};
+\node[right] at (1,0,0.5) {1in};
+\node[right] at (1, 0.5, 0) {1in};
+
+%arrow
+\draw[thick, ->] (2, 0.5, 0.5)--(4, 0.5, 0.5) node[midway, above] {0.083 ft per in};
+
+% Define the coordinates of the vertices of the second cube
+\coordinate (A2) at (5,0,0);
+\coordinate (B2) at (6,0,0);
+\coordinate (C2) at (6,1,0);
+\coordinate (D2) at (5,1,0);
+\coordinate (E2) at (5,0,1);
+\coordinate (F2) at (6,0,1);
+\coordinate (G2) at (6,1,1);
+\coordinate (H2) at (5,1,1);
+
+% Draw the edges of the second cube
+\draw[thick] (A2) -- (B2) -- (C2) -- (D2) -- cycle;
+\draw[thick] (E2) -- (F2) -- (G2) -- (H2) -- cycle;
+\draw[thick] (A2) -- (E2);
+\draw[thick] (B2) -- (F2);
+\draw[thick] (C2) -- (G2);
+\draw[thick] (D2) -- (H2);
+
+% Label the length, width, and height of the second cube
+\node[below] at (6, 0, 1) {0.083ft};
+\node[right] at (6,0,0.5) {0.083ft};
+\node[right] at (6, 0.5, 0) {0.083ft};
+
+\end{tikzpicture}
+\end{image}
+Since each side of the cubic inch measures $0.083$ feet, the volume of one cubic inch is $\answer[tolerance=0.0005]{0.0005787}$ cubic feet.
+
+We had a total of $61023.744$ cubic inches in one cubic meter (though you might have gotten a different number with rounding). We think of each cubic inch as a group, and we have  $0.00058$ cubic feet per group (or per cubic inch) to get a total of
+\[
+61023.744 \times 0.00058 = \answer[tolerance=2]{35.315} \textrm{ cubic feet.}
+\]
+This number is for \emph{one} cubic meter, but our original volume was two cubic meters. We can think of each cubic meter as a group containing $35.315$ cubic feet, (one group is one cubic meter, one object is one cubic foot) and finally find our answer of
+\[
+2 \textrm{ cubic m (groups) } \times 35.315 \textrm{ cu ft per cu m (obj/gp) } = \answer[tolerance=0.5]{70.6} \textrm{ cubic ft total.}
+\]
+
+\end{explanation}
+\end{question}
+
+\begin{question}
+Pause and think: we could also think about the volume case using either the geometric method or the algebraic method from our investigations with area. Choose one of these methods and draw some pictures in your notes to explain what is happening. How can we scale the volume of a box whose length is $4$ feet, width is $8$ feet, and height is $3$ feet using a linear scale factor of $5$?
+\begin{freeResponse}
+Enter your thoughts here!
+\end{freeResponse}
+\end{question}
+
+
+
+
+
+\end{document}

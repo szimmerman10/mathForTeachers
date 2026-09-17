@@ -1,0 +1,335 @@
+\documentclass{ximera}
+
+\input{../preamble.tex}
+
+\title{Points, Lines, and Angles}
+\author{Jenny Sheldon}
+
+\begin{document}
+
+\begin{abstract}
+We introduce some basic objects in geometry.
+\end{abstract}
+\maketitle
+
+\section{Activities for this section:} 
+\link[What is an angle?]{https://ximera.osu.edu/m4t/elementaryActivities/SemesterTwoPacket/elementaryActivities/Preliminaries/WhatIsAnAngle}
+
+\section{Points and Lines}
+
+We've already been talking about points and lines, and you probably already have a good idea about what we mean when we talk about these objects: in the figure below, $P$ is a point, and $\ell$ is a line. 
+\begin{image}
+	\begin{tikzpicture}
+		\draw[thick, <->] (0,0)--(5,2) node[below right] {$\ell$}; %%
+		\draw[fill=black] (2.5, 1) circle (2pt) node[above]{$P$};
+	\end{tikzpicture}
+\end{image}
+We typically use upper-case letters to label points and lower case letters to label lines. This is a convention that most people choose to follow, not a requirement. However, it's important to keep in mind that if we use both an upper case and a lower case letter in the same example (like both a $p$ and a $P$) these would mean different objects in the example.
+
+If you are expecting a definition here for lines or points, you might be surprised: points and lines actually don't have definitions. The mental images you have for these objects are just about the best we can do. In mathematics, we have some ideas that we essentially have to take for granted. We try to minimize the number of those ideas, but we will still have a few. If we tried to define points and lines, we would run into trouble pretty quickly! (Pause and try to do it yourself to see how tough it is!)
+
+We also make some important assumptions about points and lines that we should consider.
+
+While we usually draw a little circle to represent a point (like $P$ above), we have to remember that a point doesn't have any thickness at all. This is hard to imagine, but if you were our friend the little bug, and your entire world was the point $P$ above, you actually couldn't move at all. In fact, this means that points are $0$-dimensional, because there are $0$ different directions that the bug could move.
+
+Also, in most kinds of geometry, we can identify points anywhere we like. So on the line $M$ below, we can identify points $Q$, $R$, and $S$, as well as many, many more points. 
+\begin{image}
+	\begin{tikzpicture}
+		\draw[thick, <->] (0,0)--(4,-4) node[below] {$m$};
+		\draw[fill=black] (0.2, -0.2) circle (2pt) node[above right]{$Q$};
+		\draw[fill=black] (2.6, -2.6) circle (2pt) node[above right]{$R$};
+		\draw[fill=black] (3.15, -3.15) circle (2pt) node[above right]{$S$};
+	\end{tikzpicture}
+\end{image}
+(Wait: there are more kinds of geometry??!? Yes! But that's a story for another day.)
+
+Lines extend forever in each direction, and we usually indicate that by placing arrows at each end. We can also draw a \dfn{ray}, which extends forever in one direction, or a \dfn{line segment} which has a definite length. In the figure below, $\overrightarrow{AB}$ is a ray, and $CD$ is a line segment.
+\begin{image}
+	\begin{tikzpicture}
+		\draw[thick, <-] (0,0)--(2,4);
+		\draw[fill=black] (2, 4) circle (2pt) node[above]{$A$};
+		\draw[fill=black] (0.5, 1) circle (2pt) node[above left]{$B$};
+		\draw[thick] (6,4)--(9,2);
+		\draw[fill=black] (6,4) circle (2pt) node[above]{$C$};
+		\draw[fill=black] (9,2) circle (2pt) node[above]{$D$};
+	\end{tikzpicture}
+\end{image}
+Notice that we can name either a ray or a line segment using two points. We can do the same for lines.
+
+Lines are one-dimensional, meaning they have no thickness. In this case, our little bug could move in the forward-back direction, just not right-left. One of the most important things to keep in mind concerning lines is that if we are looking for the shortest distance between two points, it will be located along a line.
+
+We have drawn all of our lines so far to be straight lines, and most of the time when we refer to a line we will want it to be straight. When we refer to curved lines, we will usually call them curves, but it's best to be specific most of the time!
+
+Finally, we can tallk about a \dfn{plane}, which is like a piece of paper with no thickness at all that extends in every direction. It's easiest to visualize planes in three-dimensional space, and we typically draw a piece of the plane like in the image below.
+\begin{image}
+	\begin{tikzpicture}
+		\draw[thick, dotted] (0,0)--(3,1)--(3,6)--(0,5)--(0,0);
+		\draw[->] (-0.5, 2.5)--(-1.5, 2.17);
+		\draw[->] (3.5, 3.5)--(4.5, 3.83);
+		\draw[->] (1.5, 6.16)--(1.5, 7.16);
+		\draw[->] (1.5, 0.16)--(1.5, -0.84);
+	\end{tikzpicture}
+\end{image}
+Imagine that the edges drawn aren't actually edges, but keep extending forever. Even though this plane is drawn in three-dimensional space, the plane itself is two dimensional, because if our friend the little bug lived on this plane, it could move forward-back and also right-left as well as all of the combinations of those two directions. But since the plane has no thickness, the little bug couldn't fly around in an up-down direction.
+
+\begin{question}
+If you drew a line on the plane above, what dimension would the line be?
+\begin{multipleChoice}
+\choice[correct]{one dimensional}
+\choice{two dimensional}
+\choice{three dimensional}
+\choice{something else}
+\end{multipleChoice}
+\end{question}
+
+
+
+
+\section{Angles}
+
+Next, let's talk about what we mean by an ``angle''.
+
+\begin{definition}
+An \dfn{angle}  is formed when two rays meet at a common endpoint, called the \dfn{vertex}.
+\begin{image}
+	\begin{tikzpicture}
+		\draw[thick, <->] (4,0)--(0,0)--(4,2);
+		 \draw[thick,->] (0.7,0) arc (0:38:0.5);
+		 \node[left] at (0,0) {vertex};
+		 \node[right] at (4,0) {ray 1};
+		 \node[above right] at (4,2) {ray 2};
+	\end{tikzpicture}
+\end{image}
+\end{definition}
+
+%Our second definition we can call the turning definition.
+%
+%\begin{definition}
+%An \dfn{angle}  is a fraction of a turn. The point around which the turning happens is called the \dfn{vertex}.
+%\end{definition}
+%
+%
+%
+%\begin{question}
+%Pause to think: how are the two definitions for an angle related to one another?
+%\begin{freeResponse} \end{freeResponse}
+%\end{question}
+
+We can also indicate points on the rays that make up our angle, and name the angle according to those rays. The middle point should label the vertex as in $\angle ABC$ below.
+\begin{image}
+	\begin{tikzpicture}
+		\draw[thick, <->] (4,0)--(0,0)--(4,2);
+		\draw[fill=black] (3.5, 1.75) circle (2pt) node[above left] {$A$};
+		\draw[fill=black] (0,0) circle (2pt) node[left]{$B$};
+		\draw[fill=black] (3.5,0) circle (2pt) node[below]{$C$};
+		 \draw[thick,->] (0.7,0) arc (0:38:0.5);
+	\end{tikzpicture}
+\end{image}
+This angle can be called either $\angle ABC$ or $\angle CBA$. Since the angle has a marking indicating it starts at the horizontal ray, it would be most common to label it as $\angle CBA$. Or, if the points $A$ and $C$ are clear or not labeled, we could also call it angle $\angle B$ using just the vertex label.
+
+While our definition for an angle is a static object formed by the two rays and the vertex, the way we measure angles is most commonly done by thinking either about turning or about the relative direction between the two rays. The center of the turn must be the vertex of the angle.
+
+\begin{definition}
+The \dfn{measure} of an angle is given by the fraction of a full turn which is represented by the two rays. The turn can be thought of as part of a circle whose center is at the vertex of the angle. We can also think of this turn as telling us the relative direction between the two rays.
+\end{definition} 
+
+The arrow we frequently draw to indicate an angle reminds us to think about turning at the same time that we think about the two rays and the vertex. Keeping both perspectives in mind is important!
+
+To measure an angle by thinking about turning, we have to first decide what the size or measure of one full rotation should be. The most common measure for one full turn is to use $360$ degrees (usually written $360^{\circ}$). From the measure of a full turn, we can either use the fraction of a turn that we have to measure an angle, or we can fill up the angle with copies of another angle whose measure we know.
+\begin{question}
+Using what we've just discussed, what would be the measures of the angles below?
+\begin{itemize}
+	\item A half-turn would measure $\answer{180}$ degrees, because it's half of 360 degrees.
+	\item A quarter-turn would measure $\answer{90}$ degrees, because it's a quarter of 360 degrees.
+	\item A turn which is $\frac{1}{360}$ of a full turn would measure $\answer{1}$ degree.
+\end{itemize}
+\end{question}
+
+\begin{question}
+In the image below, each angle measures $1^{\circ}$ and there are five copies of this $1\degree$ angle. What is the total measure of this angle?
+\begin{image}
+	\begin{tikzpicture}[scale=10]
+  \coordinate (O) at (0,0);
+  \coordinate (A) at (0:1cm);
+  \foreach \x in {1,2,...,6} {
+    \draw (O) -- (\x*1:1cm);
+    %\draw (\x*1:0.3cm) arc (\x*1:\x*1+1:0.3cm);
+  }
+\end{tikzpicture}
+\end{image}
+
+\begin{prompt}
+The angle measures $\answer[given]{5}^{\circ}$.
+\end{prompt}
+\end{question}
+In the previous example, we can see both the amount of turning as well as the relative direction ideas. In both cases, we think about standing on the vertex and  facing one of the rays (let's pick the horizontal one so that we're all imagining the same thing). We can think of physically turning our bodies, still standing on the vertex, until we are facing the second ray. The amount of turning that we did in this case was $\frac{5}{360}$ of a full turn, which we can call $5\degree$. Or, we can think of the $5\degree$ as the relative direction between the first ray and the second ray, telling us how different the directions represented by the two rays are.
+
+You should also know that there are other ways to measure a full turn. Another common way is to call a full turn $2\pi$ radians, so that a half-turn is $\pi$ radians and a quarter-turn is $\frac{\pi}{2}$ radians. Or, you could invent your own unit for angle measures: say that you wanted a full turn to measure $50$ angle-units. In that case, a half-turn would measure $25$ angle-units, and a quarter turn would measure $12.5$ angle-units. One fiftieth of a turn would measure $1$ angle-unit, and from there you could measure angles of $27.3$ angle-units as well as others.
+
+We will measure angles using degrees (so that there are $360$ degrees in a full turn) unless we say otherwise.  A useful tool to measure angles is called a protractor. Watch the following video for a demonstration of using a protractor. If you'd like to practice using a protractor here is an \link[online worksheet]{https://teachablemath.com/apps/protractor-practice-app/} that uses a digital protractor similar to what kids use on state tests in Ohio.
+
+\youtube{aLydX2TeMKA}
+
+%If we use our two rays definition, the \dfn{measure} of an angle tells us how different the two rays are. Another way to say this is that the measure of the angle tells us the relative direction of the second ray based on the first ray. So, if we have two angles which are the same, they also represent the same relative direction. As another example, if we consider an angle which measures $180\degree$, we could say that the two rays are in exactly opposite directions, so that the relative direction between them measures the same as a half-turn.
+
+%Next, let's investigate how to determine the measure of an angle using a tool called a protractor. VIDEO for using a protractor.
+
+Here is a common misconception about angles.
+\begin{question}
+Which of the following angle has a larger measure?
+\begin{image}
+	\begin{tikzpicture}
+	\draw[thick, <->] (4,0)--(0,0)--(4, 4.8);
+	\node at (-0.2, -0.2) {$A$};
+	\draw[thick, <->] (6,0)--(5,0)--(6,1.2);
+	\node at (4.8, -0.2) {$B$};
+	\end{tikzpicture}
+\end{image}
+
+\begin{multipleChoice}
+\choice{Angle $A$}
+\choice{Angle $B$}
+\choice[correct] {They have the same measure.}
+\end{multipleChoice}
+\end{question}
+The angles in the previous question represent the same amount of turning or the same relative direction, even though the rays themselves have different sizes. This example is important to keep in mind so that we are thinking about turning and direction more than we are thinking about the space inside the angle.
+
+Angles are used to describe many different phenomena in the world as well as in mathematics. We'll see them in many places throughout the course, and we hope you see them in many places in your every-day life as well!
+
+\section{Vocabulary}
+
+We end this section by talking through some vocabulary we will use to talk about lines and angles.
+
+We sometimes call a half-turn a \dfn{straight angle}, because it looks like a straight line. Remember to distinguish when you are discussing a line and when you are discussing an angle! For example, if I am considering this object as an angle with vertex $V$, it is a straight angle measuring $180$ degrees. If I am thinking about measuring a part of this object as a line, that measure would refer to its length, not an amount of turning.
+
+\begin{image}
+\begin{tikzpicture}
+  % Draw the lines
+  \coordinate (A) at (0,0);
+  \coordinate (B) at (3,0);
+  \coordinate (C) at (5,0);
+  \draw (A) -- (B) -- (C);
+  
+  % Draw the arc
+  \draw[thick,->] (3.3,0) arc (0:180:0.3);
+\draw[fill=black] (B) circle (2pt);
+\node[below] at (B) {$V$};
+\end{tikzpicture}
+\end{image}
+
+We say two angles are \dfn{supplementary} when together they form a straight angle. 
+\begin{image}
+\begin{tikzpicture}
+  % Draw the lines
+  \coordinate (A) at (0,0);
+  \coordinate (B) at (3,0);
+  \coordinate (C) at (5,0);
+  \coordinate (D) at (2,2);
+  
+  \draw (A) -- (C);
+  \draw (B)--(D);
+  \draw[fill=black] (B) circle (2pt);
+
+  
+  % Draw the arc and add labels for the angles
+  \draw[thick,->] (3.3,0) arc (0:120:0.3);
+  \draw[thick,->] (2.8,0.28) arc (125:180:0.3);
+
+\end{tikzpicture}
+\end{image}
+
+We say two angles are \dfn{complementary} when together they form a quarter turn.
+
+\begin{image}
+\begin{tikzpicture}
+  % Draw the lines
+  \coordinate (A) at (0,0);
+  \coordinate (B) at (3,0);
+  \coordinate (C) at (3,3);
+  \coordinate (D) at (2, 2.8);
+  
+  \draw (A) --(B)-- (C);
+  \draw (B)--(D);
+  \draw[fill=black] (B) circle (2pt);
+
+  
+  % Draw the arc and add labels for the angles
+  \draw[thick,->] (3,0.3) arc (90:115:0.3);
+  \draw[thick,->] (2.8,0.28) arc (125:180:0.3);
+
+\end{tikzpicture}
+\end{image}
+
+We say that two angles are \dfn{vertical} or \dfn{opposite} if they are formed by two straight lines intersecting, and they are opposite of one another with regard to the vertex.
+\begin{image}
+\begin{tikzpicture}
+  % Draw the intersecting lines
+  \coordinate (A) at (0,0);
+  \coordinate (B) at (3,5);
+  \coordinate (C) at (0,2);
+  \coordinate (D) at (4,-1);
+  
+  \draw (A) -- (B);
+  \draw (C) -- (D);
+  
+  % Draw the arcs and add labels for the angles
+  \draw[thick,->] (1.2,1.2) arc (0:45:0.5);
+  \node at (1.35,1.4) {$a$};
+  
+
+  
+  \draw[thick,->] (0.7,1.5) arc (135:190:0.5);
+  \node at (0.4,1.3) {$b$};
+  
+
+\end{tikzpicture}
+\end{image}
+
+We also know that vertical angles are congruent, or have equal measure. Here are two ways to think about why this might be true.
+
+\begin{example}
+If you are a very young child, say in second grade, you might fold the vertical angles so that the measure labeled $a$ matches up with the measure labeled $b$. You could also do this for some more examples of vertical angles, and you might notice that in every case, the folded angles match up with one another. And then you could conclude that vertical angles are equal.
+\end{example}
+
+The example above is important, because it describes a child making observations and then guesses about what could be true. Kids should be encouraged to explore like this and make guesses as to what is true, even if we don't have the mathematics concepts yet for a full proof. Notice that this reasoning isn't a proof, because we haven't considered every single pair of vertical angles that could ever be drawn. But the argument helps us to get a feeling for what could be true. 
+
+\begin{example}
+In this example, let's start by labeling the measures of all of the angles.
+\begin{image}
+\begin{tikzpicture}
+  % Draw the intersecting lines
+  \coordinate (A) at (0,0);
+  \coordinate (B) at (3,5);
+  \coordinate (C) at (0,2);
+  \coordinate (D) at (4,-1);
+  
+  \draw (A) -- (B);
+  \draw (C) -- (D);
+  
+  \node at (1.35,1.4) {$a$};
+  \node at (0.4,1.3) {$b$};
+  \node at (0.8, 1.7) {$c$};
+  \node at (0.8, 0.9) {$d$};
+  
+
+\end{tikzpicture}
+\end{image}
+Since we have labeled the angle measures with letters, and we don't know the exact values for those measures, these letters or variables can stand for any angle measures at all. This means that now we are considering every pair of vertical angles that could be drawn, because we can plug any values in for the letters above.
+
+We know that the measures $a$ and $c$ add up to $\answer[given]{180}^{\circ}$ because the angles whose measures are $a$ and $c$ form a straight angle. In other words, these angles are \wordChoice{\choice[correct]{supplementary} \choice{complementary}}. Similarly, the measures of $c$ and $b$ add up to $\answer[given]{180}^{\circ}$ for the same reasoning. In other words, we have the following.
+\begin{align}
+a + c &= 180 \\
+b + c &= 180 \\
+\end{align}
+Solving the first equation for $c$, we get \[c = 180-a. \] Plugging this in to the second equation, we get \[b + 180 - a = 180.\] Finally, we subtract 180 from both sides and add $a$ to both sides to get \[ b = \answer[given]{a}.\]
+
+\end{example}
+
+This second example is more appropriate for kids who have gotten more comfortable with algebra, perhaps in high school. Both examples are important steps in developing and proving geometric ideas.
+
+\begin{question}
+Pause and think: how are the two examples similar? How are they different?
+\begin{freeResponse} Enter your thinking here! \end{freeResponse}
+\end{question}
+
+\end{document}

@@ -1,0 +1,683 @@
+\documentclass{ximera}
+
+\input{../preamble.tex}
+
+
+\title{Adding and subtracting}
+\author{Carolyn Johns and Jenny Sheldon}
+
+\begin{document}
+
+\begin{abstract}
+We discuss what it means to add and subtract two numbers.
+\end{abstract}
+\maketitle
+
+
+
+\section{Addition}
+
+\emph{Note: many of the ideas in this section were influenced by a book called \link[Children's Mathematics]{https://www.heinemann.com/products/e05287.aspx} by Carpenter, et al. This book is sometimes used to teach Elementary Math Methods courses, so you may see it again later in your career. This book has many good examples of the way children think about solving problems like the ones in this section.}
+
+
+
+Like all mathematical concepts, children learn addition and subtraction in a progression. This progression includes learning various types of addition and subtraction problems, as well as strategies for solving them. However, throughout all types of addition and subtraction, and all strategies for those operations, we'll see the same meanings.
+
+Children begin to understand the concept of addition at age 4 when they can solve change over time, or joining, problems using blocks and a counting all strategy. Let's look at an example.
+
+\begin{question}
+Carlos has $3$ pencils in his pencil box, and then his friend Darius gives him $4$ more pencils. How many pencils does Carlos have now?
+
+\begin{explanation}
+In this case, we want to start by drawing the pencils that Carlos has at the beginning of the story. We will represent the pencils with small circles, and we need to draw $\answer[given]{3}$ of them.
+
+\begin{image}
+\begin{tikzpicture}
+	\foreach \x in {0, 0.5, 1} \draw[fill=yellow] (\x, 0) circle (3pt);
+\end{tikzpicture}
+\end{image}
+
+Next, Darius gives Carlos $4$ more pencils. If we had actual blocks in front of us, we might set down more blocks next to the ones we already have, and then count the total. Let's include in our picture the $\answer[given]{4}$ pencils from Darius. We'll make them a different color only so that we can see which ones were the original ones and which ones are new.
+
+\begin{image}
+\begin{tikzpicture}
+	\foreach \x in {0, 0.5, 1} \draw[fill=yellow] (\x, 0) circle (3pt);
+	\foreach \x in {1.5, 2, 2.5, 3} \draw[fill=purple] (\x, 0) circle (3pt);
+\end{tikzpicture}
+\end{image}
+
+Now we can count all of the circles that we have.
+
+\begin{image}
+\begin{tikzpicture}
+	\foreach \x in {0, 0.5, 1} \draw[fill=yellow] (\x, 0) circle (3pt);
+	\foreach \x in {1.5, 2, 2.5, 3} \draw[fill=purple] (\x, 0) circle (3pt);
+	\node[below] at (0, -0.2) {$1$};
+	\node[below] at (0.5, -0.2) {$2$};
+	\node[below] at (1, -0.2) {$3$};
+	\node[below] at (1.5, -0.2) {$4$};
+	\node[below] at (2, -0.2) {$5$};
+	\node[below] at (2.5, -0.2) {$6$};
+	\node[below] at (3, -0.2) {$7$};
+\end{tikzpicture}
+\end{image}
+We see that Carlos now has $\answer[given]{7}$ pencils. Note that at age $5$, children can move from a count the total strategy to a count on method as their understanding of counting progresses. With a count on strategy, children might count out $3$ and then with their fingers count $4$,$5$,$6$,$7$ as they put up one finger at a time to track the $4$ objects they need to count on.
+
+\end{explanation}
+\end{question}
+
+What action did we take with the pencils (or with the beads that represented them)? We combined all of the pencils together and counted the total, because that's what the problem was asking us to do. When we find ourselves taking this action in order to solve a problem, we've used \dfn{addition}.
+
+\begin{definition}
+When we \dfn{add} two numbers $A$ and $B$ together, we combine the two quantities $A$ and $B$ and count the total. We write this total as $A+B$. Sometimes we use a different letter like $C$ to represent $A+B$ to remind us that the total is a single quantity. The two numbers $A$ and $B$ are called the \dfn{addends} and the total is also called the \dfn{sum}.
+\begin{image}
+\begin{tikzpicture}
+\node at (0, 0) {$A$};
+\node at (0.5, 0) {$+$};
+\node at (1, 0) {$B$};
+\node at (1.5, 0) {$=$};
+\node at (2, 0) {$C$};
+\node at (0.5, -1) {addends};
+\node at (2, -1) {sum};
+\draw[->] (0.5, -0.75)--(0, -0.25);
+\draw[->] (0.5, -0.75)--(1, -0.25);
+\draw[->] (2, -0.75)--(2, -0.25);
+\end{tikzpicture}
+\end{image}
+\end{definition}
+
+One thing to pay attention to here is that $A+B$ means the total of all of the objects. We often think of $A+B$ as telling us to do something (perhaps to combine some things), but we want you to practice thinking about it more as the result than the process.
+
+Another thing to notice is that we will often think of $A$ and $B$, the two addends, as the number of items in two different sets. When we add these two quantities, we are combining the sets together and finding out how many elements are in this combined set. Of course, we have to have no overlap between the original sets for this to work! For instance, if Carlos and Darius are sharing a set of pencils and Darius gives Carlos $3$ of the pencils that they are sharing and $2$ other pencils from his personal collection, we wouldn't want to double-count the shared pencils.
+
+At age 5, children learn a new type of addition problem: put together or part-part-whole. Like change over time/joining problems, children are first able to solve these problems using blocks and a count all strategy before they can use a count on with fingers strategy. 
+
+Let's look at an example.
+
+\begin{question}
+Alastair has $5$ pencils in his pencil box, and Blake has $8$ pencils in her pencil box. How many pencils are there all together?
+
+\begin{explanation}
+Alastair has $5$ pencils in his pencil box, and Blake has $8$ pencils in her pencil box. We are trying to see how many pencils they have all together. We'll start by drawing a picture using beads to represent this situation.
+
+\begin{image}
+\begin{tikzpicture}
+	 \foreach \x/\y in {
+    0/0, 2/2, 3/0.2, 0.3/1.2, 4/2
+  } {
+    \draw[fill=orange] (\x, \y) circle (4pt);}
+   	\draw[thick] (2, 1) ellipse (3cm and 2cm);
+	\node[below] at (2, -1) {Alastair's pencils};
+
+	 \foreach \x/\y in {
+    6/1, 8/2, 7/0, 6.5/1.5, 9/0, 8/0.5, 7.25/1.5, 9.25/1.5
+  } {
+    \draw[fill=lightgray] (\x, \y) circle (4pt);}
+   	\draw[thick] (8, 1) ellipse (2.5cm and 1.75cm);
+	\node[below] at (8, -1) {Blake's pencils};
+
+\end{tikzpicture}
+\end{image}
+
+The problem is asking us how many pencils Alastair and Blake have all together, so let's put their pencils all together in a pile and count how many pencils there are in total. We'll show the pencils being put together with some arrows.
+
+\begin{image}
+\begin{tikzpicture}
+	 \foreach \x/\y in {
+    0/0, 2/2, 3/0.2, 0.3/1.2, 4/2
+  } {
+    \draw[fill=orange] (\x, \y) circle (4pt);}
+   	\draw[thick] (2, 1) ellipse (3cm and 2cm);
+	\node[below] at (2, -1) {Alastair's pencils};
+
+	 \foreach \x/\y in {
+    6/1, 8/2, 7/0, 6.5/1.5, 9/0, 8/0.5, 7.25/1.5, 9.25/1.5
+  } {
+    \draw[fill=lightgray] (\x, \y) circle (4pt);}
+   	\draw[thick] (8, 1) ellipse (2.5cm and 1.75cm);
+	\node[below] at (8, -1) {Blake's pencils};
+
+\draw[thick, ->] (2, -1.5)--(3, -3.5);
+\draw[thick, ->] (8, -1.5)--(6, -3.5);
+ \foreach \x/\y in {
+    3/-4.5, 2.5/-3.75, 4/-3.8, 3.3/-5.2, 4.5/-5
+  } {
+    \draw[fill=orange] (\x, \y) circle (4pt);}
+	
+ \foreach \x/\y in {
+    7/-5, 6/-4, 5/-4, 4.5/-3.5, 7/-4, 6/-4.5, 5.25/-5.5, 7.25/-3.5
+  } {
+    \draw[fill=lightgray] (\x, \y) circle (4pt);}
+
+	\node[below] at (5, -6) {all of the pencils};
+
+
+\end{tikzpicture}
+\end{image}
+
+We can count $\answer[given]{13}$ pencils in total.
+
+
+\end{explanation}
+\end{question}
+
+
+Now that we've solved this problem, let's make sure we used addition to solve it.
+
+\begin{question}
+What expression would we use to solve the following problem? \emph{Alastair has $5$ pencils in his pencil box, and Blake has $8$ pencils in her pencil box. How many pencils are there all together?}
+
+\begin{explanation}
+Look back at the picture we used to solve the original problem. We remember that the meaning of addition is to combine two quantities together and count the total. Is that what we did in our picture?
+\begin{multipleChoice}
+\choice[correct]{Yes, we combined two quantities and counted the total.}
+\choice{No, we did something else.}
+\end{multipleChoice}
+
+Since we did combine two quantities and count the total, we used addition to solve this problem. The expression that represents the total would then be $5 + \answer[given]{8}$ because we started with $5$ objects, combined that with $8$ more objects, and then the total would be represented by $5+8$.
+\end{explanation}
+\end{question}
+
+We've now described two different types of addition problems: 1) add to or change over time, 2) put together or part part whole.
+
+In the problem at the beginning of this section, Carlos started with some pencils, and then over time his 
+number of pencils was changing. The type of problem that occurs over time we might call an \dfn{add to} problem. 
+Other books call this a \dfn{change over time} problem, because we started with one set, and then joined another set 
+to it, and then counted the result.
+
+The problem we just solved with Alastair is a \dfn{put together} type story, because our main goal in the problem was to put together two different sets of objects and count the total. Another way to describe this type of problem is to call it a \dfn{part-part-whole} problem, because we are considering two separate parts as well as the whole we get by joining them together. 
+
+Let's compare Alastair's problem with Carlos's problem to see how they are similar and different. In Alastair's problem, we started by drawing both Alastair's pencils and Blake's pencils, because all of the pencils were there at the start of the problem. In Carlos's problem, we started by only drawing some of the pencils, the ones he had to start. These are different starting situations, and sometimes children could think that we are working on different operations because of this. However, we want to point out that for both problems, in the end, the action we took to find the answer was to combine the two quantities and count everything we had. 
+
+Another difference is the physical action we took with the blocks. In Alastair's problem, we show the two sets being combined together with arrows. We might do this by moving the blocks around the table, or pushing the two sets of blocks together. In Carlos's problem, we set down some blocks and then set down some more blocks next to the first ones. We didn't really need to move the blocks around on the table. Again, we want to point out that even though the physical actions of the movement of blocks was different, we still combine the two sets together.
+
+Note that for teachers, understanding these different types of addition problems is important not only to support children's progression of learning addition at early ages, but to continue to use a variety of types of problems throughout children's education. This will support children's understanding of future topics, such as addition with algebra.
+
+It's also important to reinforce with children that addition is an operation that comes out of the ideas they have about putting things together, not just a rule we memorize when it comes to certain wording. Specifically, when determining what operation to use in a word problem, using key words isn't reliable! It's easy to write (or interpret) story problems that have keywords for one operation but are solved in a completely different way than you might expect! With any story problem, pay attention to both the specific wording of a problem and the actions you are taking when you draw simple pictures to solve these problems.
+
+There is a third and final type of addition problem that children learn at age $5$, but it will be easier to talk about that type after we talk about subtraction. So, let's move on!
+
+
+\section{Subtraction}
+
+Children begin to learn ideas of subtraction about a year after they start to grasp addition. At age 5, children can solve take from (also called take away or change over time) subtraction problems by moving blocks away from the starting amount, one at a time, and then counting the remaining blocks.
+
+\begin{example}
+Consider the following story problem.
+
+\emph{Carlos has $4$ pencils in his pencil box, and then he gives away $3$ of his pencils to his friend Darius. How many pencils does Carlos have now?}
+
+Let's start by drawing all $4$ of Carlos's pencils, using small circles to represent the pencils.
+
+\begin{image}
+\begin{tikzpicture}
+\foreach \x in {0, 0.5, 1, 1.5} \draw[fill=yellow] (\x, 0) circle (4pt);
+\end{tikzpicture}
+\end{image}
+
+Next, Carlos gives away $\answer[given]{3}$ of his pencils. A child learning to subtract would move three pencils away from the group, one at a time, counting ``1'', ``2'', ``3'' as they move the pencils. In our picture, let's cross out the pencils that Carlos gives away.
+
+\begin{image}
+\begin{tikzpicture}
+\foreach \x in {0, 0.5, 1, 1.5} \draw[fill=yellow] (\x, 0) circle (4pt);
+\foreach \a in {0, 0.5, 1} \node at (\a, 0) {\huge $\times$};
+\end{tikzpicture}
+\end{image}
+
+Now, we count the pencils that Carlos still has, and we see the answer to this question is $\answer[given]{1}$.
+
+We notice that we took pencils away from a starting amount, or modeled a take from type. Carlos starts with $4$ pencils, and then some time later he has a different number of pencils. So we could also think about our solution as describing a change over time. 
+
+\end{example}
+
+
+The previous example gives us a good example of a definition of subtraction that we can use.
+
+\begin{definition}
+When we \dfn{subtract} two numbers, we take the quantity $B$ away from the quantity $A$ and then count the remaining objects. We write this total as $A - B$. We write the total using a single letter $C$ to remind ourselves that this is a single quantity, and we can use the terminology \dfn{difference} to describe the total $C$. We can also call $A$, the starting number, the \dfn{minuend} and $B$, the number we subtracted, the \dfn{subtrahend}.
+\begin{image}
+\begin{tikzpicture}
+\node at (0, 0) {$A$};
+\node at (0.5, 0) {$-$};
+\node at (1, 0) {$B$};
+\node at (1.5, 0) {$=$};
+\node at (2, 0) {$C$};
+\node at (-0.75, -1) {minuend};
+\node at (1,-1) {subtrahend};
+\node at (2.75, -1) {difference};
+\draw[->] (-0.75, -0.75)--(0, -0.25);
+\draw[->] (1, -0.75)--(1, -0.25);
+\draw[->] (2.75, -0.75)--(2, -0.25);
+\end{tikzpicture}
+\end{image}
+\end{definition}
+
+Similarly to how we think about $A+B$ as meaning the total number of objects, think about $A-B$ as the number of leftover objects. So while we got this number by working with the two separate numbers $A$ and $B$, the quantity $A-B$ is a single number. 
+
+We also frequently will work with sets when we subtract. In this case, we are often thinking about starting with one set and removing part of that set when we subtract. Then the minuend would be how many elements are in the starting set, the subtrahend would be the number of items we want to remove, and the difference would be the number of items that remain after our taking away action is complete.
+
+In our example with Carlos and his pencils, we could also write the answer to the problem using the expression $4-3$ because we started with $4$ objects and then took $3$ objects from the starting amount. The meaning of $A-B$ is how many objects are left when we take away $B$ objects from $A$ objects, so this fits our definition of subtraction.
+
+
+Later around age 5, children begin to reason about comparison addition and comparison subtraction problems using matching of objects. In the comparison type, the story asks us to make a comparison between two sets.
+
+
+\begin{example}
+Consider the following story problem.
+
+\emph{Elphaba is playing with $6$ blocks while her friend Flynn is playing with $9$ blocks. How many more blocks is Flynn playing with than Elphaba?}
+
+We want to solve this story problem with a picture, and discuss what operation we used to solve the problem. We'll actually do this in two different ways.
+
+Before we get started, notice that this story is asking us to compare the blocks that Elphaba is playing with and the blocks that Flynn is playing with. This story is a comparison story, because the main goal is to compare these two sets. How might we solve this story with a picture?
+
+Here is our first idea. Let's draw Elphaba's blocks in a horizontal line using small circles to represent the blocks, and then we'll draw Flynn's blocks in another horizontal line, but we'll line up the blocks vertically like we are using a one-to-one correspondence.
+
+\begin{image}
+\begin{tikzpicture}
+\node at (0,0) {Elphaba's blocks: };
+\foreach \x in {2, 2.5, 3, 3.5, 4, 4.5} \draw[fill=pink] (\x, 0) circle (3pt);
+\node at (0, -1) {Flynn's blocks: };
+\foreach \x in {2, 2.5, 3, 3.5, 4, 4.5, 5, 5.5, 6} \draw[fill=red] (\x, -1) circle (3pt);
+\end{tikzpicture}
+\end{image}
+
+Since we are thinking about a one-to-one correspondence, let's cross out the blocks that both students have in common. We'll do this in our picture with horizontal lines through the ones that match up. Those are blocks that we don't want to count for our answer, so we want to take them away from our picture. (We won't actually remove them, but the lines through them will indicate taking them away.)
+
+\begin{image}
+\begin{tikzpicture}
+\node at (0,0) {Elphaba's blocks: };
+\foreach \x in {2, 2.5, 3, 3.5, 4, 4.5} \draw[fill=pink] (\x, 0) circle (3pt);
+\node at (0, -1) {Flynn's blocks: };
+\foreach \x in {2, 2.5, 3, 3.5, 4, 4.5, 5, 5.5, 6} \draw[fill=red] (\x, -1) circle (3pt);
+\foreach \x in {2, 2.5, 3, 3.5, 4, 4.5} \draw[thick] (\x, -1.5)--(\x, 0.5);
+\end{tikzpicture}
+\end{image}
+
+The blocks that are not crossed off are the ones that Flynn has that Elphaba doesn't have, so these are the ones we want to count in order to solve this problem. We can circle them in our diagram, and then count and see that Flynn has $\answer[given]{3}$ extra blocks.
+
+\begin{image}
+\begin{tikzpicture}
+\node at (0,0) {Elphaba's blocks: };
+\foreach \x in {2, 2.5, 3, 3.5, 4, 4.5} \draw[fill=pink] (\x, 0) circle (3pt);
+\node at (0, -1) {Flynn's blocks: };
+\foreach \x in {2, 2.5, 3, 3.5, 4, 4.5, 5, 5.5, 6} \draw[fill=red] (\x, -1) circle (3pt);
+\foreach \x in {2, 2.5, 3, 3.5, 4, 4.5} \draw[thick] (\x, -1.5)--(\x, 0.5);
+\draw[thick] (5.5,-1) ellipse (0.75cm and 0.5cm);
+\end{tikzpicture}
+\end{image}
+
+What expression might we write to describe our solution? Let's start with our operation. Here we will choose \wordChoice{\choice{addition} \choice[correct]{subtraction}} because the main action we took while solving this problem was \wordChoice{\choice{combining} \choice[correct]{taking away}}. In that case, our expression for the solution would be $9 - 6$ , because in a sense we started with the $9$ blocks that Flynn had, and removed the $6$ blocks that Elphaba had in common.
+
+At age 6, children will be able to reason about this problem in another way. Let's redraw our starting picture and then attack the problem using different thinking. 
+
+\begin{image}
+\begin{tikzpicture}
+\node at (0,0) {Elphaba's blocks: };
+\foreach \x in {2, 2.5, 3, 3.5, 4, 4.5} \draw[fill=pink] (\x, 0) circle (3pt);
+\node at (0, -1) {Flynn's blocks: };
+\foreach \x in {2, 2.5, 3, 3.5, 4, 4.5, 5, 5.5, 6} \draw[fill=red] (\x, -1) circle (3pt);
+\end{tikzpicture}
+\end{image}
+
+This time, instead of crossing out the blocks, let's think about what we might need to draw with Elphaba's blocks in order to make them match with Flynn's blocks. We'll draw one unshaded circle for each new block we put down, and we'll count them as we go by labeling them with numbers.
+
+\begin{image}
+\begin{tikzpicture}
+\node at (0,0) {Elphaba's blocks: };
+\foreach \x in {2, 2.5, 3, 3.5, 4, 4.5} \draw[fill=pink] (\x, 0) circle (3pt);
+\foreach \a in {5, 5.5, 6} \draw (\a, 0) circle (3pt);
+\node[above] at (5, 0.1) {$1$};
+\node[above] at (5.5, 0.1) {$2$};
+\node[above] at (6, 0.1) {$3$};
+\node at (0, -1) {Flynn's blocks: };
+\foreach \x in {2, 2.5, 3, 3.5, 4, 4.5, 5, 5.5, 6} \draw[fill=red] (\x, -1) circle (3pt);
+\end{tikzpicture}
+\end{image}
+
+The number of extra blocks that we had to put down to make the two lines of blocks match was $\answer[given]{3}$, so that's (still) the answer to this problem.
+
+What expression might we write to describe this second solution?  Here we used 
+\wordChoice{\choice[correct]{addition} \choice{subtraction}} because the main action we took while solving this 
+problem was \wordChoice{\choice[correct]{combining} \choice{taking away}}. Notice that we put down more blocks to solve this problem instead of removing them. If we wanted to use mathematical notation to write down our solution, we would use an equation this time: we solved this problem using $6 + ? = 9$. We started with the $6$ blocks that belonged to Elphaba, and we drew more blocks. We didn't know how many blocks we were going to tack on when we started, so we use a question mark for the second number. But we do know that we need to end up with a total of $9$ blocks.
+
+
+\end{example} 
+
+You might be a little less comfortable with the idea of a question mark in an equation, but representing unknown values 
+in equations is important for children to experience as early as age 5. When we use question marks or empty boxes to 
+represent an unknown quantity, we're setting the stage for their later work in algebra. We want to encourage kids to think 
+flexibly about addition and subtraction, using strategies that make sense to them, so that we can build off of these 
+strategies later. We also want algebra teachers to be able to refer back to this kind of thinking when they are helping 
+kids make sense of big ideas like variables. After all, something like $6 + ? = 9$ isn't so different from something like $6 + x = 9$. Notice also that you might solve $6+x = 9$ by doing $9-6$, which connects the two solutions that we saw earlier. But for kids, these two things could be very different.  There is often a distinction between the expression or equation children write down to describe what's happening in the story problem and the expression or equation they might write down to solve the problem.
+
+There is often not a big distinction between when kids are using addition and when they are using subtraction. Frequently, young children solve problems by rearranging blocks or other objects (or putting down more blocks or taking some away), and it's the role of the teacher to put language like ``addition'' and ``subtraction'' on top of what kids are naturally doing. So, it's important to be able to recognize when kids are using addition (combining things together) and when they are using subtraction (taking things away), even if the child's strategy isn't what you expected.
+
+Using mathematical notation, we are saying that there are three different places where you might place the unknown in expression like
+\[
+A + B = C, 
+\]
+seeing any of 
+\[
+? + B = C, \quad A + ? = C, \, \textrm{ or } \, A + B = ?
+\]
+When we are familiar with algebra, these three problems might seem the same to us, but they can feel very different for kids.
+
+Let's look at another example relating addition and subtraction.
+
+At age 6, children learn the third and final type of subtraction problems, take apart, which break down a given amount into two separate parts.  Understanding of this problem type occurs last due to the difficult nature of the idea that a number is part of a larger number. This subtraction problem type has two missing addend subtypes with children being able to comprehend the second addend missing ($5+?=7$) before start unknown ($?+2=7$). With both subtypes, children will learn to solve these by a counting on with fingers method first. 
+
+\begin{example}
+Consider the following story problem. 
+
+\emph{Blake is using $8$ different colored pencils to work on a drawing, but $5$ of her pencils actually belong to Alastair. How many pencils belong to Blake?}
+
+We want to see how this is a subtraction story problem.
+
+Let's start by drawing all $8$ pencils that Blake is using.
+
+\begin{image}
+\begin{tikzpicture}
+ \foreach \x/\y in {
+    3/4.5, 2.5/3.75, 4.5/5, 7/5, 5/4, 4.5/3.5, 6/4.5, 7.25/3.5
+  } {
+    \draw[fill=orange] (\x, \y) circle (4pt);}
+    \node[below] at (5, 3.25) {all of the pencils};
+\end{tikzpicture}
+\end{image}
+
+We know that not all of these pencils belong to Blake, however. There are $\answer[given]{5}$ of them that belong to Alastair. Let's separate out Alastair's pencils from the entire collection and draw a circle around them.
+
+\begin{image}
+\begin{tikzpicture}
+
+ \foreach \x/\y in {
+     3/4.5, 2.5/3.75, 4.5/5, 7/5, 5/4, 4.5/3.5, 6/4.5, 7.25/3.5
+  } {
+    \draw[fill=orange] (\x, \y) circle (4pt);}
+    \node[below] at (5, 3.25) {all of the pencils};
+
+	 \foreach \x/\y in {
+    0/-2, 2/0, 3/-1.8, 0.3/-0.8, 4/-0.5
+  } {
+    \draw[fill=orange] (\x, \y) circle (4pt);}
+   	\draw[thick] (2, -1) ellipse (3cm and 2cm);
+	\node[below] at (2, -3) {Alastair's pencils};
+
+	 \foreach \x/\y in {
+    8/-1, 8.25/0, 8.5/-0.5
+  } {
+    \draw[fill=lightgray] (\x, \y) circle (4pt);}
+   	\draw[thick] (8.25, -0.5) ellipse (1.5cm and 1cm);
+	%\node[below] at (8, -1) {Blake's pencils};
+
+\draw[thick, ->] (4.9, 2.5)--(3.5, 0.8);
+\draw[thick, ->] (5.1, 2.5)--(7, 0.5);
+
+\end{tikzpicture} \end{image}
+
+The group of pencils that is not Alastair's must be Blake's, so we can label the other circle as Blake's pencils and then count how many pencils are in Blake's circle.
+
+
+\begin{image}
+\begin{tikzpicture}
+
+ \foreach \x/\y in {
+     3/4.5, 2.5/3.75, 4.5/5, 7/5, 5/4, 4.5/3.5, 6/4.5, 7.25/3.5
+  } {
+    \draw[fill=orange] (\x, \y) circle (4pt);}
+    \node[below] at (5, 3.25) {all of the pencils};
+
+	 \foreach \x/\y in {
+    0/-2, 2/0, 3/-1.8, 0.3/-0.8, 4/-0.5
+  } {
+    \draw[fill=orange] (\x, \y) circle (4pt);}
+   	\draw[thick] (2, -1) ellipse (3cm and 2cm);
+	\node[below] at (2, -3) {Alastair's pencils};
+
+	 \foreach \x/\y in {
+    8/-1, 8.25/0, 8.5/-0.5
+  } {
+    \draw[fill=lightgray] (\x, \y) circle (4pt);}
+   	\draw[thick] (8.25, -0.5) ellipse (1.5cm and 1cm);
+	\node[below] at (8, -1.5) {Blake's pencils};
+
+\draw[thick, ->] (4.9, 2.5)--(3.5, 0.8);
+\draw[thick, ->] (5.1, 2.5)--(7, 0.5);
+
+\end{tikzpicture} \end{image}
+
+We count $\answer[given]{3}$ pencils in Blake's circle, and that's the answer to the original problem. 
+
+We could also write the answer to this problem as $8-5$ because we started with $8$ pencils and we took away $5$ pencils from that collection, then we counted the leftovers.
+
+%We can view this as a $5+$?$=8$ story. 
+\end{example}
+
+ \dfn{Take apart} stories are the subtraction version of our put together type. We also called this type a part-part-whole story. We have all of the objects with us at the beginning of the problem, and we are simply rearranging them in order to solve the problem at hand.  Another way to think about this type of problem is that we are primarily rearranging a quantity instead of adding to it or taking from it.
+
+
+As we stated with addition,  our main point right now is that we want to be able to give children different kinds of problems 
+to work from, and we want to be able to use different types of representations in order to be able to build the idea of 
+subtraction from what children are naturally doing when they model problems with blocks or other objects. Children will 
+naturally develop reasoning skills for some types of problems, and strategies for solving them, earlier than other types 
+and strategies. It's important that teachers give students story types that are developmentally appropriate for the children 
+they are working with and develop skills for assisting children in furthering their understanding.
+
+We used Carlos and Darius in both of the change over time problems (add to and take from) and we used Alastair and Blake in both of the part-part-whole problems (put together and take apart) to help you to see that the type of story problem is independent of the operation we are using to solve the problem. We can have addition or subtraction versions of either of these types as with comparison problems.
+
+
+
+\begin{question}
+How could you write three different story problems that correspond to the following equations?
+\[
+? - 4 = 10, \quad 14 - ? = 10, \quad 14-4=?
+\]
+(As a bonus question, consider doing the same but replacing the subtraction with addition.)
+\begin{freeResponse}
+Write your thoughts here or in your notes. If you aren't sure that your answers are correct, that's a great question for office hours!
+\end{freeResponse}
+\end{question}
+
+
+
+\section{Mental Math}
+
+As adults, one of the most useful mathematical skills we can have is the ability to make good estimates for any situation. Often, the process of making a good estimate depends on being able to make some calculations quickly in our minds. Children begin to develop these kinds of strategies at age 7, as they begin to consider numbers as part of a larger number. Children will be asked to add and subtract numbers using a variety of strategies. This practice helps children build their understanding of place value, to express their creative thinking using numbers and expressions, and build strategies for the kind of estimating they will do later in life. It's important for children to be able to calculate flexibly.
+
+There are many ways to find the answer to addition and subtraction problems, and we hope that during this course you will see many of them and invent some new ones for yourself. We will take a look at a few examples in this section, and then continue to build on these ideas as we work with multiplication and division as well. 
+
+When children are working on finding the answers to addition and subtraction problems, their main strategies should involve rearranging things in order to make the calculations easier for themselves. The first important tool they might use is called the commutative property.
+
+\begin{definition}
+The \dfn{commutative property of addition} says that we can add two numbers in either order and get the same total. In mathematical symbols, this means that for any two numbers $A$ and $B$, we have
+\[
+A + B = B + A.
+\]
+\end{definition}
+
+When children are asked to add more than one number, they might also use the associative property. Notice that we only defined addition for two numbers at a time, so if we have three or more numbers to add, we must group them in pairs in order to use the meaning of addition.
+\begin{definition}
+The \dfn{associative property of addition} says that we can regroup numbers in different pairs (without changing the order of the numbers) and get the same sum. In mathematical symbols, this means that for any three numbers $A$, $B$, and $C$, we have
+\[
+(A + B) + C = A + (B+C)
+\]
+\end{definition}
+Notice that the groupings changed, but the order of the numbers did not. However, we frequently combine the commutative and associative properties of addition when we make calculations, and together these properties say that we can rearrange sums in any way that we like.
+
+Take a moment to draw some pictures in your notes explaining why these properties make sense with our meaning of addition using the examples of $7+2 = 2+7$ and $3+(8+6) = (3+8)+6$. We will do this more explicitly once we are ready to include the properties of multiplication, but it's good to practice now.
+
+Now, here is an example of how we can use these properties to calculate sums.
+
+\begin{example}
+Genevieve is working on the addition problem $5 + 9$. Here is her thinking.
+
+\emph{First I swap the numbers so I am looking at $9+5$. Then I take one away from the $5$ and give it to the $9$ to make $10$. Then I have $4$ left, so the answer is $14$.}
+
+Genevieve starts with the commutative property, which in this case tells her that $5+9 = \answer[given]{9} + \answer[given]{5}$. Many children find it easier to work on addition problems which have the larger number first, and the commutative property means that they can rearrange problems in order to put the numbers in this preferred order. Notice that this means that children only need to memorize about half as many addition facts, since if they know that $2+3=5$, for instance, they also know that $3+2=5$ as well. 
+
+Next, Genevieve uses a common strategy sometimes called \dfn{make a ten}. When she says that she takes away $1$ from the $5$, she is actually splitting up the $5$ into $1+4$ and then regrouping the $1$ with the $9$ instead of with the $5$. This is an example of the associative property, where we see that $9+(1+4) = \left (\answer[given]{9} + \answer[given]{1} \right ) + \answer[given]{4}$.
+
+One way to write equations to describe Genevieve's strategy is the following.
+\begin{align*}
+5 + 9 &= 9+5 \\
+&= 9 + (1+4) \\
+&= (9+1)+4\\
+&= 10 + 4 \\
+&= 14 \\
+\end{align*}
+
+\end{example}
+
+While the properties we discussed are for addition, we can still use similar ideas to solve subtraction problems mentally.
+
+\begin{example}
+Hassan is working on the subtraction problem $64 - 38$. Here is his strategy.
+
+\emph{ I know that $64$ is six tens and four, and $38$ is three tens and eight. I want to just take away the three tens but the eight is confusing me. So I'll round up the $38$ to be $40$, which is just four tens. Now I take away four tens from six tens, and that leaves me with two tens. I took away an extra two, so I'll add that back on and get $22$. Finally the $64$ also had four ones, so I need to add those back on as well. My answer is $26$.}
+
+Hassan starts with a strategy of rounding $38$ up to $40$. If he was just estimating this number, he could nearly stop there: the answer will be close to $20$. But since he is looking for the precise answer, he needs to keep going.
+
+Rounding up is also a fairly common strategy for these problems, and the rounding should be done in order to make the calculation easier. Hassan could have rounded down to $30$ as well, but $40$ is closer in this case. Notice that Hassan is replacing $38$ by $40 - \answer[given]{2}$ in his calculation. 
+
+Next, Hassan uses his knowledge of place value to deal with the tens and the ones separately. He subtracts the tens first, and he is using the commutative and associative properties in order to deal with the four ones and the two ones at the end.
+
+Notice that Hassan also has to add back the extra two that he subtracted. This strategy can be confusing for some children, and it might be easier to model with base ten blocks, a picture, or a number line to really see what is going on. 
+
+One way to write equations to describe Hassan's strategy is the following.
+\begin{align*}
+64 - 38 &= 64 - 40 + 2 \\
+&= (60 + 4) - 40 + 2 \\
+&= (60 - 40) + (4 + 2) \\
+&= 20 + (4 + 2) \\
+&= 20 + (2 + 4) \\
+& = (20 + 2) + 4 \\
+& = 22 + 4 \\
+&= 26
+\end{align*}
+\end{example}
+
+Practice solving similar problems on your own!
+
+
+
+
+
+\section{Adding and subtracting decimal numbers}
+
+You might also remember an algorithm for adding and subtracting decimal numbers; we'll tackle that in the next section when we tackle the addition and subtraction algorithms for whole numbers. Instead, let's take a look at how we could solve a decimal subtraction problem using a picture with base ten blocks.
+
+\begin{question}
+Raina knows that she needs to make $5.3$ liters of lemonade for a school fundraiser. If $2.84$ liters of lemonade need to be sugar free, how much regular (non-sugar free) lemonade does Raina need to make?
+
+\begin{explanation}
+Let's see how Raina's lemonade problem can be solved with a subtraction expression, and then let's simplify the answer into a single number.
+
+First, the operation of subtraction means that we need to \wordChoice{\choice{combine} \choice[correct]{take away} \choice{ignore}} some things in our story problem. In this case, Raina starts with the full amount of lemonade, which is $5.3$ liters. Since we know how much lemonade needs to be sugar free, we can take that amount away from the total to find the amount of lemonade that is not sugar free. In other words, we are using subtraction to solve this problem because we are taking away one amount from another amount and counting what remains. The amount we start with is the $5.3$ liters, and the amount we take away is the $2.84$ liters, so our subtraction expression is
+\[
+\answer[given]{5.3} - \answer[given]{2.84}.
+\]
+
+Now, we'd like to simplify this answer into a single number. We will start by drawing the $5.3$ liters using base ten blocks. Since we know that one of our numbers in this problem has a value in the hundredths place, we will make the value of the smallest block equal to $\answer[given]{0.01}$, meaning that the bundle is one place to the left or has value $\answer[given]{0.1}$ and the superbundle is two places to the left or has value $1$. In other words, in order to represent the number $5.3$ we will use $\answer[given]{5}$ superbundles and $\answer[given]{3}$ bundles. Let's go ahead and draw this amount.
+
+\begin{image}
+\begin{tikzpicture}
+\foreach \x in {0, 1.2, 2.4, 3.6, 4.8} \draw[thick, step=0.1] (\x,0) grid (\x+1, 1);
+\foreach \x in {6, 6.2, 6.4} \draw[thick, step=0.1] (\x, 0) grid (\x+0.101, 1);
+\end{tikzpicture}
+\end{image}
+
+Now, we want to take away $2.84$ liters from this amount. This means that we need to remove $\answer[given]{2}$ superbundles, $\answer[given]{8}$ bundles, and $\answer[given]{4}$ individual blocks. Let's start with the $2$ superbundles. We will mark them off with a red line.
+
+\begin{image}
+\begin{tikzpicture}
+\foreach \x in {0, 1.2, 2.4, 3.6, 4.8} \draw[thick, step=0.1] (\x,0) grid (\x+1, 1);
+\foreach \x in {6, 6.2, 6.4} \draw[thick, step=0.1] (\x, 0) grid (\x+0.101, 1);
+\draw[ultra thick, red] (-0.2, -0.2)--(1.2, 1.2);
+\draw[ultra thick, red] (1, -0.2)--(2.4, 1.2);
+\end{tikzpicture}
+\end{image}
+
+Next, we need to remove $8$ bundles from this picture, but right now we only have $3$ bundles. Let's unbundle the last superbundle into $\answer[given]{10}$ bundles so that we have enough bundles to do this taking away. We will put a purple dotted box around the $10$ bundles that used to be this superbundle, just for this step so that you can see them.
+
+\begin{image}
+\begin{tikzpicture}
+\foreach \x in {0, 1.2, 2.4, 3.6} \draw[thick, step=0.1] (\x,0) grid (\x+1, 1);
+\foreach \x in {4.8, 5, 5.2, 5.4, 5.6, 5.8, 6, 6.2, 6.4, 6.6, 6.8, 7, 7.2} \draw[thick, step=0.1] (\x, 0) grid (\x+0.101, 1);
+\draw[dotted, thick, violet] (4.7, -0.2)--(6.75, -0.2)--(6.75, 1.2)--(4.7, 1.2)--(4.7, -0.2);
+\draw[ultra thick, red] (-0.2, -0.2)--(1.2, 1.2);
+\draw[ultra thick, red] (1, -0.2)--(2.4, 1.2);
+\end{tikzpicture}
+\end{image}
+
+Now we can take away $8$ bundles using our big red lines again. (We removed the purple dotted box from this one, since the bundles don't make a superbundle anymore.)
+
+\begin{image}
+\begin{tikzpicture}
+\foreach \x in {0, 1.2, 2.4, 3.6} \draw[thick, step=0.1] (\x,0) grid (\x+1, 1);
+\foreach \x in {4.8, 5, 5.2, 5.4, 5.6, 5.8, 6, 6.2, 6.4, 6.6, 6.8, 7, 7.2} \draw[thick, step=0.1] (\x, 0) grid (\x+0.101, 1);
+\draw[ultra thick, red] (-0.2, -0.2)--(1.2, 1.2);
+\draw[ultra thick, red] (1, -0.2)--(2.4, 1.2);
+\foreach \a in {4.8, 5, 5.2, 5.4, 5.6, 5.8, 6, 6.2} \draw[ultra thick, red] (\a-0.1,-0.2)--(\a+0.1, 1.2);
+\end{tikzpicture}
+\end{image}
+
+Our last removal will be the $4$ individual blocks, but again we don't have any individual blocks so we'll unbundle one of our bundles. Again we will draw the purple dotted box only for this step to show that these individuals used to be bundled together.
+
+\begin{image}
+\begin{tikzpicture}
+\foreach \x in {0, 1.2, 2.4, 3.6} \draw[thick, step=0.1] (\x,0) grid (\x+1, 1); %superbundles
+\foreach \x in {4.8, 5, 5.2, 5.4, 5.6, 5.8, 6, 6.2, 6.4, 6.6, 6.8, 7} \draw[thick, step=0.1] (\x, 0) grid (\x+0.101, 1);
+\foreach \y in {0, 0.2, 0.4, 0.6, 0.8} \draw[thick, step=0.1] (7.2, \y)--(7.3, \y)--(7.3, \y+0.1)--(7.2, \y+0.1)--(7.2, \y); %individuals
+\foreach \y in {0, 0.2, 0.4, 0.6, 0.8} \draw[thick, step=0.1] (7.4, \y)--(7.5, \y)--(7.5, \y+0.1)--(7.4, \y+0.1)--(7.4, \y);
+\draw[ultra thick, red] (-0.2, -0.2)--(1.2, 1.2);
+\draw[ultra thick, red] (1, -0.2)--(2.4, 1.2);
+\draw[thick, dotted, violet] (7.15, -0.1) rectangle (7.6, 1);
+\foreach \a in {4.8, 5, 5.2, 5.4, 5.6, 5.8, 6, 6.2} \draw[ultra thick, red] (\a-0.1,-0.2)--(\a+0.1, 1.2);
+\end{tikzpicture}
+\end{image}
+
+We are ready to remove the $4$ individual blocks with our big red lines.
+
+\begin{image}
+\begin{tikzpicture}
+\foreach \x in {0, 1.2, 2.4, 3.6} \draw[thick, step=0.1] (\x,0) grid (\x+1, 1);
+\foreach \x in {4.8, 5, 5.2, 5.4, 5.6, 5.8, 6, 6.2, 6.4, 6.6, 6.8, 7} \draw[thick, step=0.1] (\x, 0) grid (\x+0.101, 1);
+\foreach \y in {0, 0.2, 0.4, 0.6, 0.8} \draw[thick, step=0.1] (7.2, \y)--(7.3, \y)--(7.3, \y+0.1)--(7.2, \y+0.1)--(7.2, \y);
+\foreach \y in {0, 0.2, 0.4, 0.6, 0.8} \draw[thick, step=0.1] (7.4, \y)--(7.5, \y)--(7.5, \y+0.1)--(7.4, \y+0.1)--(7.4, \y);
+\draw[ultra thick, red] (-0.2, -0.2)--(1.2, 1.2);
+\draw[ultra thick, red] (1, -0.2)--(2.4, 1.2);
+\foreach \a in {4.8, 5, 5.2, 5.4, 5.6, 5.8, 6, 6.2} \draw[ultra thick, red] (\a-0.1,-0.2)--(\a+0.1, 1.2);
+\foreach \b in {0, 0.2}
+	\foreach \a in {7.2, 7.4} 
+		\draw[ultra thick, red] (\a-0.1, \b-0.1)--(\a+0.1, \b+0.1);
+\end{tikzpicture}
+\end{image}
+
+Now that we are done removing things, we find the answer by counting the remaining amount. We see that we still have $\answer[given]{2}$ superbundles, $\answer[given]{4}$ bundles, and $\answer[given]{6}$ individual blocks, which means that the answer  $5.3 - 2.84$ can also be written as $\answer[given]{2.46}$. In other words, Raina will need to make $2.46$ liters of regular lemonade.
+
+
+\end{explanation}
+\end{question}
+
+Notice how just like it was necessary to have the same whole for adding and subtracting fractions, we need to draw decimal numbers using the same value for one individual block. And pay attention to the way that pictures help us think about the problems we are solving in different ways than we might if we were just making calculations!
+
+
+\begin{question}
+In your own words, how do we see that addition (or subtraction) is the same operation no matter what kinds of numbers we are working with?
+\begin{freeResponse}
+Write your thoughts here!
+\end{freeResponse}
+\end{question}
+
+
+
+
+
+\end{document}
+
+
+
+
+
+

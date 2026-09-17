@@ -1,0 +1,519 @@
+\documentclass{ximera}
+
+\input{../preamble.tex}
+
+
+\title{Counting and Base Ten}
+\author{Carolyn Johns and Jenny Sheldon}
+
+\begin{document}
+
+\begin{abstract}
+We consider what it means to count.
+\end{abstract}
+\maketitle
+
+
+
+\section{Counting and base ten}
+
+In order to start counting, we need new vocabulary: we'll need names for each of the quantities and we'll have to understand how those names are related to one another. Let's take things slowly.
+
+\section{In the past} 
+
+Different cultures have approached the idea of counting in different ways. For instance, in \link[Ancient Egypt]{https://en.wikipedia.org/wiki/Egyptian_numerals}, the first quantity (what we would call ``one'') was marked with a single line like this.
+
+
+\begin{image}
+\begin{tikzpicture}
+\node at (0,0) {\textpmhg{{\HZi}}};
+\end{tikzpicture}
+\end{image}
+
+
+
+Next, another line would be added to make the symbol for the next quantity.
+
+
+\begin{image}
+\begin{tikzpicture}
+\node at (0,0) {\textpmhg{{\HZi\HZi}}};
+\end{tikzpicture}
+\end{image}
+
+
+This would continue until we had (what we would call) nine lines.
+
+\begin{image}
+\begin{tikzpicture}
+\node at (0,0) {\textpmhg{{\HZi\HZi\HZi\HZi\HZi\HZi\HZi\HZi\HZi}}};
+\end{tikzpicture}
+\end{image}
+
+
+But for the next quantity, the Ancient Egyptians invented a new symbol.
+
+\begin{image}
+\begin{tikzpicture}
+\node at (0,0) {\textpmhg{\HVxx}};
+\end{tikzpicture}
+\end{image}
+
+
+Then, the Ancient Egyptians would write numbers by combining together however many ones and tens they needed to express their numbers. For instance, the symbol for what we would call $11$ would be a ten symbol and a one symbol, like this.
+
+\begin{image}
+\begin{tikzpicture}
+\node at (0,0) {\textpmhg{\HVxx\HZi}};
+\end{tikzpicture}
+\end{image}
+
+ This meant they could keep counting with tens and ones as long as they liked, but once they got to what we would call one hundred, they invented a new symbol again.
+
+\begin{image}
+\begin{tikzpicture}
+\node at (0,0) {\textpmhg{\HZvii}};
+\end{tikzpicture}
+\end{image}
+
+This would continue on. Each time you couldn't write the number you wanted, you needed a completely different symbol to express the number you wanted. And while this looks pretty cool when you write numbers like (what we would call) $13,412$
+
+\begin{image}
+\begin{tikzpicture}
+\node at (0,0) {\textpmhg{\HDl\HMxii\HMxii\HMxii\HZvii\HZvii\HZvii\HZvii\HVxx\HZi}};
+\end{tikzpicture}
+\end{image}
+
+perhaps you get the feeling that this was a lot to memorize and could get a little tedious. We won't ask you to write numbers in Ancient Egyptian, but we want you to have something to compare our modern system with!
+
+In \link[Ancient Rome]{https://en.wikipedia.org/wiki/Roman_numerals}, they had a similar idea which you might have seen at some point in your life. They used I for what we would call one, V for what we would call five, X for what we would call ten, and so on. Then, they would put together their symbols, using however many they needed for the quantity they were trying to describe, and they would write numbers like this one. 
+
+\begin{image}
+MMLXXXVII
+\end{image}
+
+Again, each time they ran out of symbols, they had to invent another one in order to keep going. You might already be feeling a little overwhelmed with interpreting all of those symbols and how they are related to one another, so hopefully you are starting to see that both of these systems can lead to needing a lot of symbols to write down some quantities! Again, we won't ask you to write Roman numerals, but we want you to feel like there is a reason we don't still use these older systems.
+
+\section{The idea of bundling}
+
+Both of the systems we've already discussed rely on inventing a new symbol every time you run out of symbols to describe the quantity you are trying to write. This is a perfectly acceptable strategy, and both math and science continued to develop for thousands of years under such systems. But mathematicians decided we could probably come up with something that's a little more efficient, especially for writing bigger numbers. Let's see this in action.
+
+So that we can see what's happening without our own thoughts about counting getting in the way, let's say that we've invented a counting system where we will use the symbols $A$, $B$, $C$, $D$, $E$, and $0$ (the usual zero, a symbol that means we have nothing). We don't know any other symbols, so the usual $1, 2, 3$ and words like ``one'', ``two'', ``three'' and so on don't mean anything to us at the moment. Throughout this course, we will model quantities using small objects like beads, sticks, paper clips, or similar objects. Let's start to count using some little beads to visualize how many we have. First, we put down a single bead.
+
+\begin{image}
+\begin{tikzpicture}
+\foreach \x in {0} 
+	\draw (\x, 0) circle (3pt);
+\node[below] at (0,-0.2) {$A$};
+\end{tikzpicture}
+\end{image}
+This quantity is called $A$ because it's the smallest one in our list. (We'll assume that the quantities get larger as we move further in the list.) Now let's place another bead with what we already had.
+
+\begin{image}
+\begin{tikzpicture}
+\foreach \x in {0,0.5} 
+	\draw (\x, 0) circle (3pt);
+\node[below] at (0.25,-0.2) {$B$};
+\end{tikzpicture}
+\end{image}
+This quantity is called $B$ because it's the next one in our list after $A$. Let's put down yet another bead.
+
+\begin{image}
+\begin{tikzpicture}
+\foreach \x in {0, 0.5, 1} 
+	\draw (\x, 0) circle (3pt);
+\end{tikzpicture}
+\end{image}
+
+\begin{question}
+What would we call the quantity in the above picture? $\answer[given]{C}$
+\end{question}
+
+Let's draw the quantities $D$ and $E$ in the next picture, adding a single bead at a time.
+
+\begin{image}
+\begin{tikzpicture}
+\foreach \x in {0, 0.5, 1, 1.5, 4, 4.5, 5, 5.5, 6} 
+	\draw (\x, 0) circle (3pt);
+\node[below] at (0.75,-0.2) {$D$};
+\node[below] at (5,-0.2) {$E$};
+\end{tikzpicture}
+\end{image}
+
+I hope this feels pretty good so far, but it's time to be challenged. Let's put down another bead after $E$.
+
+\begin{image}
+\begin{tikzpicture}
+\foreach \x in {0, 0.5, 1, 1.5, 2, 2.5} 
+	\draw (\x, 0) circle (3pt);
+\node[below] at (1.25,-0.2) {?};
+\end{tikzpicture}
+\end{image}
+
+What should we call this quantity? If we lived in Ancient Egypt or Rome, we would just invent a new symbol (maybe like $F$) to describe this quantity. But remember that we're trying to be more efficient and use {\em only} the symbols that we were given. There's no inventing new symbols here and we decided to use only the letters $A$ through $E$ to write our quantities! Notice that we also don't want to use only our zero to describe this quantity, because zero should mean we have nothing, and there's clearly something here.
+
+Instead, let's invent something new that we will call a \dfn{bundle}. Now, instead of just counting our individual beads, we can also count how many bundles we have. We'll also draw a circle around our bundles to indicate that we are counting those beads as a unit - as a bundle. Notice that we bundle all the beads we have, leaving $0$ loose beads that aren't bundled.
+
+\begin{image}
+\begin{tikzpicture}
+\foreach \x in {0, 0.5, 1, 1.5, 2, 2.5} 
+	\draw (\x, 0) circle (3pt);
+	\draw[thick] (1.25, 0) ellipse (2cm and 0.5cm);
+\node at (1.25,-0.8) {?};
+\end{tikzpicture}
+\end{image}
+
+But how do we write down this quantity? In addition to the idea of a bundle, we need the idea of a \dfn{place value}. In other words, we decide that when we write two symbols next to each other, the one farthest to the right will tell us how many loose beads we have, and then the next one to the left will tell us how many bundles we have. In the previous case, we have no loose beads, so we can write this with a zero in the right-most place value. Then we have $A$ amount of bundles, and we write this in the next place value to the left. Remember that $A$ represents the smallest quantity we have that's not zero, because it's at the beginning of our list.
+
+\begin{image}
+\begin{tikzpicture}
+\foreach \x in {0, 0.5, 1, 1.5, 2, 2.5} 
+	\draw (\x, 0) circle (3pt);
+	\draw[thick] (1.25, 0) ellipse (2cm and 0.5cm);
+\node at (1.25,-0.8) {$A0$};
+\end{tikzpicture}
+\end{image}
+
+We have written an $A$ in the ``bundles place'' and a $0$ in the ``individuals place''. Let's place another bead down and see if we can keep counting. Notice that our individual bead doesn't go inside the bundle, because the bundle is already complete.
+
+\begin{image}
+\begin{tikzpicture}
+\foreach \x in {0, 0.5, 1, 1.5, 2, 2.5, 4.5} 
+	\draw (\x, 0) circle (3pt);
+	\draw[thick] (1.25, 0) ellipse (2cm and 0.5cm);
+\node at (3,-0.8) {$AA$};
+\end{tikzpicture}
+\end{image}
+
+We've called this quantity $AA$ because we can see that we have $A$ amount of loose beads, so we place an $A$ in the rightmost place, and then we have $A$ amount of bundles, so we place an $A$ in the next place to the left.
+
+\begin{image}
+\begin{tikzpicture}
+\foreach \x in {0, 0.5, 1, 1.5, 2, 2.5, 4.5, 5} 
+	\draw (\x, 0) circle (3pt);
+	\draw[thick] (1.25, 0) ellipse (2cm and 0.5cm);
+\node at (3.25,-0.8) {?};
+\end{tikzpicture}
+\end{image}
+
+\begin{question}
+If we place another bead in our picture of $AA$ and get the picture above, what would we call this quantity? $\answer[given]{AB}$
+\end{question}
+
+We can keep placing beads and counting, since we can now express a lot of different quantities.  Here is an example after we have put down a bunch of individual beads.
+
+\begin{image}
+\begin{tikzpicture}
+\foreach \x in {0, 0.5, 1, 1.5, 2, 2.5, 4.5, 5, 5.5, 6, 6.5, 7, 9, 9.5, 10, 10.5} 
+	\draw (\x, 0) circle (3pt);
+	\draw[thick] (1.25, 0) ellipse (2cm and 0.5cm);
+	\draw[thick] (5.75, 0) ellipse (2cm and 0.5cm);
+\node at (5.25,-0.8) {?};
+\end{tikzpicture}
+\end{image}
+
+\begin{question}
+What would you call the  quantity above which has $B$ amount of bundles and $D$ amount of individual beads? $\answer[given]{BD}$
+\end{question}
+
+We can now count for a little while before we get stuck again.
+
+\begin{question}
+Pause and think: what is the highest value you can count in this system with just bundles and individual sticks?
+\begin{freeResponse}
+Write your guess here and a few sentences about your reasoning.
+\end{freeResponse}
+\end{question}
+
+The video below will talk us through how to keep counting once we get stuck again and introduce the idea of a superbundle.
+
+\youtube{1VGj-Nsk4r4}
+
+\begin{question}
+What would you call the quantity pictured below, with $A$ amount of superbundles, $C$ amount of bundles, and $E$ individual sticks?
+
+\begin{image}
+\begin{tikzpicture}
+\foreach \x in {0, 0.5, 1, 1.5, 2, 2.5, 4.5, 5, 5.5, 6, 6.5, 7}
+   \foreach \y in {0, 1, 2}
+	\draw (\x, \y) circle (3pt);
+   \foreach \y in {0, 1, 2}
+	\draw[thick] (1.25, \y) ellipse (2cm and 0.5cm);
+   \foreach \y in {0, 1, 2}
+	\draw[thick] (5.75, \y) ellipse (2cm and 0.5cm);
+\draw[very thick] (-0.75,-0.5)--(7.75,-0.5)--(7.75,2.5)--(-0.75,2.5)--(-0.75,-0.5);
+
+\foreach \x in {9, 9.5, 10, 10.5, 11, 11.5}
+   \foreach \y in {0,1,2}
+   	\draw (\x,\y) circle (3pt);
+   \foreach \y in {0, 1, 2}
+	\draw[thick] (10.25, \y) ellipse (2cm and 0.5cm);
+	
+\foreach \x in {13.5, 14, 14.5, 15, 15.5}
+	\draw (\x, 0) circle (3pt);
+
+\node at (8.5,-1) {?};
+\end{tikzpicture}
+\end{image}
+
+\begin{prompt}
+$\answer[given]{ACE}$
+\end{prompt}
+\end{question}
+
+\begin{question}
+What would you call a quantity that had $B$ individual sticks, $A$ amount of bundles, $E$ amount of superbundles, and $E$ amount of mega bundles?
+
+\begin{prompt}
+$\answer[given]{EEAB}$
+\end{prompt}
+\end{question}
+
+Let's wrap up this section by summarizing what we did.
+
+\begin{definition}
+In a \dfn{place value numeration system}, the value of each digit depends on its place in the symbol we use to write it down. For example, a $B$ in the bundles place doesn't mean only $B$ objects, it means we have $B$ amount of bundles. We create these place values when we create new types of objects we want to count. A \dfn{bundle} is the first new type of object we create, and we make one when we are out of symbols to use to keep counting. The next type of new object we make is a \dfn{superbundle}, which we could also think of as a bundle of bundles. We can keep making new kinds of bundles, and new place values to go with them, to count as high as we want without creating any new symbols.
+\end{definition}
+
+
+
+
+\section{Hindu-Arabic numerals}
+
+While I hope you are getting the hang of bundles and superbundles, we don't usually count with letters. Instead, we use the symbols $1$, $2$, $3$, $4$, $5$, $6$, $7$, $8$, $9$, and zero ($0$). This collection of symbols works just like the $A$ through $E$ system that we were just using, but we have a different number of symbols, so our bundles look a little different. Let's start counting to see, using our small beads again.
+
+\begin{image}
+\begin{tikzpicture}
+\foreach \x in {0, 1, 1.4, 2.4, 2.8, 3.2, 4.2, 4.6, 5, 5.4} 
+	\draw (\x, 0) circle (3pt);
+\node[below] at (0,-0.5) {$1$};
+\node[below] at (1.2,-0.5) {$2$};
+\node[below] at (2.8,-0.5) {$3$};
+\node[below] at (4.8,-0.5) {$4$};
+\node at (6.4,0) {$\dots$};
+\end{tikzpicture}
+\end{image}
+
+Once we get to $9$ beads and another bead, we are out of symbols to use.
+
+\begin{image}
+\begin{tikzpicture}
+\foreach \x in {0, 0.4, 0.8, 1.2, 1.6, 2, 2.4, 2.8, 3.2, 4, 5.2, 5.6, 6, 6.4, 6.8, 7.2, 7.6, 8, 8.4, 8.8} 
+	\draw (\x, 0) circle (3pt);
+\draw[thick] (7, 0) ellipse (2.2cm and 0.5cm);
+\node at (3.6, 0) {$+$};
+\node at (4.5, 0) {$\rightarrow$};
+
+\end{tikzpicture}
+\end{image}
+
+\begin{question}
+How would you write down the quantity that comes after 9?
+
+\begin{prompt}
+	$\answer[given]{10}$
+\end{prompt}
+\end{question}
+
+While you might be thinking that the answer to the previous question is ``ten'' (and you're not wrong), it's helpful to also be able to think about it as ``one-zero'', meaning we have one bundle and zero individual beads leftover. In the language of this system, we could also say we have one ten and zero ones.
+
+\begin{question}
+How would you write the quantity of sticks where we have $8$ bundles and $3$ individual sticks?
+
+\begin{prompt}
+	$\answer[given]{83}$
+\end{prompt}
+\end{question}
+
+
+\begin{question}
+Think about the quantity that we would write as 59, and draw a picture of this quantity using sticks.
+
+How many bundles did you use? $\answer{5}$
+
+How many loose individuals did you use? $\answer{9}$
+
+How many sticks would you need all together (counting the ones that are loose and the ones that are in the bundles)? $\answer{59}$
+\end{question}
+
+We can also make superbundles in this system. We start with $99$ beads, drawn as $9$ bundles and $9$ individual beads. 
+
+\begin{image}
+\begin{tikzpicture}
+\foreach \x in {0, 0.4, 0.8, 1.2, 1.6, 2, 2.4, 2.8, 3.2, 3.6} 
+\foreach \y in {0, 1, ..., 8}
+	\draw (\x, \y) circle (3pt);
+\foreach \y in {0, 1, ..., 8}
+	\draw[thick] (1.8, \y) ellipse (2.2cm and 0.5cm);
+\foreach \x in {5, 5.4, 5.8, 6.2, 6.6, 7, 7.4, 7.8, 8.2}
+ 	\draw (\x, 4.5) circle (3pt);
+\end{tikzpicture}
+\end{image}
+
+Now, if we add another individual bead to this collection, the $9$ loose beads plus the extra bead will make enough for another bundle. But now we have $9$ bundles and another extra bundle, and we don't have a symbol beyond $9$ to write this down. Instead, we bundle up all of these bundles into a superbundle, create a place value to record the number of superbundles, and then count superbundles, bundles, and individual beads. We've highlighted the last bead (or stick) blue so that you can see how it completed that extra bundle.
+
+\begin{image}
+\begin{tikzpicture}
+\foreach \x in {0, 0.4, 0.8, 1.2, 1.6, 2, 2.4, 2.8, 3.2, 3.6} 
+\foreach \y in {0, 1, ..., 8}
+	\draw (\x, \y) circle (3pt);
+\foreach \y in {0, 1, ..., 8}
+	\draw[thick] (1.8, \y) ellipse (2.2cm and 0.5cm);
+\foreach \x in {5, 5.4, 5.8, 6.2, 6.6, 7, 7.4, 7.8, 8.2}
+ 	\draw (\x, 4.5) circle (3pt);
+	\draw[thick, blue] (8.6, 4.5) circle (3pt);
+\draw[thick] (6.8, 4.5) ellipse (2.2cm and 0.5cm);
+\draw[very thick] (-0.75,-0.5)--(9.25,-0.5)--(9.25,8.5)--(-0.75,8.5)--(-0.75,-0.5);
+\end{tikzpicture}
+\end{image}
+
+If you don't like the way the superbundle looks with one bundle off to the side, you can feel free to rearrange it any way you like! The important things are to see all the bundles and sticks inside the superbundle.
+
+
+\begin{image}
+\begin{tikzpicture}
+\foreach \x in {0, 0.4, 0.8, 1.2, 1.6, 2, 2.4, 2.8, 3.2, 3.6} 
+\foreach \y in {0, 1, ..., 9}
+	\draw (\x, \y) circle (3pt);
+\foreach \y in {0, 1, ..., 9}
+	\draw[thick] (1.8, \y) ellipse (2.2cm and 0.5cm);
+\draw[very thick] (-0.75,-0.5)--(4.25,-0.5)--(4.25,9.5)--(-0.75,9.5)--(-0.75,-0.5);
+\end{tikzpicture}
+\end{image}
+
+\begin{question}
+How would we write down the quantity consisting of one superbundle, zero loose bundles, and zero loose sticks?
+
+\begin{prompt}
+	$\answer[given]{100}$
+\end{prompt}
+\end{question}
+
+We can now continue counting with just the symbols $0$ through $9$ to numbers as large as we'd like. Many of our place values have special names, like when we call the bundles place the ``tens'' place, or the superbundles place the ``hundreds place'', but we don't need to have names for the places to be able to understand numbers like this one.
+
+\[
+%\num{
+7363849937475643839475765637383948575646379202
+%}
+\]
+
+That's a very powerful system!
+
+The counting system we use today is called the \link[Hindu-Arabic numeral system]{https://en.wikipedia.org/wiki/Hindu-Arabic_numeral_system} because it was first developed by mathematicians in India and then refined by mathematicians in the Middle East. The Hindu-Arabic numeral system is also called a base ten place value system, where ``base ten'' refers to the fact that we have ten objects in each bundle. Our base ten system is essential to understanding so much of the way that we do mathematics today that we would like you to be very comfortable with it by the time you leave this course. For instance, there is a \link[first grade standard]{https://education.ohio.gov/getattachment/Topics/Learning-in-Ohio/Mathematics/Ohio-s-Learning-Standards-in-Mathematics/Ohio-s-K-8-Learning-Progressions.pdf.aspx?lang=en-US} in Ohio that says we would like kids to be able to mentally find 10 more or 10 less than a particular number without having to count. Let's take a look at how bundling can help kids navigate these kinds of questions.
+
+\begin{example}
+
+What is $10$ less than $65$?
+
+\begin{explanation}
+We know that we can represent the number $65$ using sticks by $\answer[given]{6}$ bundles and $\answer[given]{5}$ individual sticks. If we want to find a number that's $10$ less than this number, we know there are $10$ sticks in one bundle. Instead of thinking about the $10$ sticks individually, we can instead think of them as $\answer[given]{1}$ bundle. To find the number that's $10$ less than $65$, that means we need to think of $1$ less bundle and leave the individual sticks alone. Once we do that, we find we have $\answer[given]{5}$ bundles and $\answer[given]{5}$ individual sticks, so the answer to the original question is $\answer[given]{55}$.
+\end{explanation}
+
+\end{example}
+
+\begin{question}
+How is the base-ten system similar to and different from the $A$ through $E$ counting system that we used above?
+
+\begin{freeResponse}
+Write your thoughts here!
+\end{freeResponse}
+\end{question}
+
+\section{Kids learning counting}
+
+We want to finish up this section by thinking a bit about how students progress in learning to count and the challenges they can face along the way. If you happen to already have some experience with watching or helping kids learn to count, we encourage you to think back on those experiences throughout this section.
+
+Clements and Sarama, in their 2009 paper \link[Learning trajectories in early mathematics- Sequences of acquisition and teaching]{https://www.child-encyclopedia.com/pdf/expert/numeracy/according-experts/learning-trajectories-early-mathematics-sequences-acquisition-and} describe a general learning progression as children learn to count. 
+
+As early as ages 1 and 2, children begin to recite, or memorize, number words they've heard from people around them. However, they may not recite number words in order and may skip number words. In addition children  learn the words before they realize that these words correspond to specific quantities. For example ``two" means a specific amount of objects. 
+
+It is around age 3 that children begin to count small amounts of physical objects laid in a line and start to recognize that each object corresponds to a singular number word. When children point to objects, they point to one object at a time. So, each object, by itself, could be counted as one object. 
+\begin{image}
+\begin{tikzpicture}
+\foreach \x in {0, 1, ..., 4} \draw (\x, 0) circle (3pt);
+\foreach \x in {0, 1, ..., 4} \node at (\x, -0.3) {$1$};
+\end{tikzpicture}
+\end{image}
+
+
+
+It isn't until around  age  4 that children begin to connect the question of ``how many?'' as corresponding to the last number counted. At this age, children can also count out objects as they start with a pile of objects and place objects one at a time in front of them to count out a certain amount. In addition, when kids point to objects and count them, they need to learn that the last number that they say (as long as they have said the correct numbers in the correct order) is the total quantity they have. Imagine that a child is counting these five beads. The child points at one bead and says ``one'', the next bead and says ``two'', and so on, until all of the beads have been counted. 
+
+\begin{image}
+\begin{tikzpicture}
+\draw (0,0) circle (3pt) node[below]{$1$};
+\draw (1,1) circle (3pt) node[below]{$2$};
+\draw (1.2, -0.5) circle (3pt) node[below]{$5$};
+\draw (1.5, 0.5) circle (3pt) node[below]{$3$};
+\draw (2, 0.3) circle (3pt) node[below]{$4$};
+\end{tikzpicture}
+\end{image}
+The child must then realize that because ``five'' was the last number said, the total quantity of beads here is $5$.
+
+Kids might be a bit confused that they are pointing to one object and calling it ``two'' when it's not two objects. We have to keep in mind that when we say ``two'', we are collecting together both the first object that we counted ``one'' as well as that second object which we are counting ``two'' even though it looks like one again. Circling the two objects together can help children see where the two objects are instead of focusing on them one at a time.
+
+\begin{image}
+\begin{tikzpicture}
+\draw (0,0) circle (3pt) node[below]{$1$};
+\draw (0.5, 0) circle (3pt) node[below]{$2$};
+\draw (0,0) ellipse (0.3cm and 0.5cm);
+\draw (0.25, 0) ellipse (0.7cm and 0.6cm);
+\end{tikzpicture}
+\end{image}
+Paying close attention to the physical actions that children take while they are counting can be a good clue as to what they are thinking. It's also important to pay attention to both the physical and written ways that you as a teacher are modeling counting steps.
+
+
+
+At age 5, kids are learning to count a given set of objects as well as count out a given quantity with numbers larger than 10. Children have also developed a firm understanding that numbers tell how many since they are an ordered one-to-one correspondence between number words and objects. There is more than just a one-to-one correspondence happening here: the numbers  occur in order, where each quantity is one more than the previous one. Children will also notice that each number word corresponds to exactly one quantity. The English word ``five'' corresponds to the number that we write as $5$ and the quantity represented below.
+
+\begin{image}
+\begin{tikzpicture}
+\draw (0,0) circle (3pt);
+\draw (1,1) circle (3pt);
+\draw (1.2, -0.5) circle (3pt);
+\draw (1.5, 0.5) circle (3pt);
+\draw (2, 0.3) circle (3pt);
+\end{tikzpicture}
+\end{image}
+
+A different word corresponds to a different symbol and a different quantity. Mathematicians would use the word ``number'' to refer to the abstract quantity, while they would use the word ``numeral'' to refer to the symbol used to write that quantity. While it's not appropriate to use this vocabulary with young children, the fact that numbers and numerals are different ideas can be a source of confusion for some kids. 
+
+As children progress in their understanding of counting, they will learn to skip count or subitize using examples like
+\[
+\textrm{skip count by twos: } 2, 4, 6, 8, \dots.
+\] 
+They also learn to count on using examples like
+\[
+\textrm{count starting from six: } 6, 7, 8, \dots
+\]
+and count backward using examples like
+\[
+\textrm{count backwards from five: } 5, 4, 3, 2, 1. 
+\]
+
+For each of these kinds of examples, children have to eventually move beyond starting from 1 and counting each individual object every time. This is the point where a deeper understanding of the place value system can really come in handy. Let's take a look at one last example for this section.
+
+
+\begin{example}
+We want to find the quantity right before $184$. Instead of counting forward from $1$ and stopping right before we get to $184$, let's use the ideas of bundling to help us. We can draw or imagine drawing $184$ sticks. We would draw $\answer[given]{1}$ superbundle, $\answer[given]{8}$ bundles, and $\answer[given]{4}$ individual sticks. To find the number right before this one, we need to remove one of the sticks from our picture. Luckily, we don't need to disturb the bundles or superbundles in order to do this. We just need to take away one stick, leaving us with $\answer[given]{3}$ sticks. We still have $\answer[given]{1}$ superbundle and $\answer[given]{8}$ bundles, so the quantity right before $184$ would be $\answer[given]{183}$.
+\end{example}
+Of course, once you have a lot more experience with counting and place value, you probably don't need to decompose a number into its parts in order to find out what comes right before it. But we hope you can see how bundling can help even young children who are less confident in their counting to be able to answer these questions and explain why their answer is correct.
+
+
+There are many challenges that children face while learning to count. One that we have not yet mentioned is specific to memorizing number-words in the English language. Some of the English number words don't sound very much like the quantities they represent. For instance, the symbol $41$ we would read out loud in English we would read this number as ``forty one''. The word ``forty one'' sounds a little bit like ``four tens and one'', which is exactly what we get with bundling.
+
+On the other hand, if we consider the symbol $12$, we would read this out loud in English as ``twelve''. However, the  word ``twelve'' does not particularly sound like ``one ten and two''. It's important to listen to what kids are thinking and ask them questions that help you understand where they are confused, since some of these misconceptions can really hide!
+
+
+
+
+
+
+
+
+\end{document}
+
+
+
+
+

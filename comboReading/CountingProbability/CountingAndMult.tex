@@ -1,0 +1,243 @@
+\documentclass{ximera}
+
+\input{../preamble.tex}
+
+\title{Counting and Multiplication}
+\author{Jenny Sheldon}
+
+\begin{document}
+
+\begin{abstract}
+We use multiplication to count things.
+\end{abstract}
+\maketitle
+
+
+\section{Activities for this section:} 
+\link[You can count on it]{https://ximera.osu.edu/m4t/elementaryActivities/SemesterTwoPacket/elementaryActivities/CountingProbability/YouCanCountOnIt}, 
+\link[Compare and count]{https://ximera.osu.edu/m4t/elementaryActivities/SemesterTwoPacket/elementaryActivities/CountingProbability/CompareAndCount}, 
+\link[You can count on it getting more difficult]{https://ximera.osu.edu/m4t/elementaryActivities/SemesterTwoPacket/elementaryActivities/CountingProbability/YouCanCountOnItDifficult}
+
+
+
+\section{Counting and multiplication}
+
+We have reached the final chapter in our journey together. In this chapter, we will talk about counting and probability in terms of other mathematics we have learned over the past two semesters. This content isn't really related to geometry, but we think it's good to end here with some tough problems that can really showcase how much you've learned. Counting and probability are all around us in our everyday lives: we might hear that there's a $65\%$ chance of rain tomorrow, or that we have a one-in-five chance of winning a particular game. We might like to know how many outfits we can make while on vacation if we pack two different pairs of shorts and three different shirts. (Or perhaps the opposite: if I'm going on vacation for seven days, what is the minimum number of shirts and shorts I can pack and still be able to wear a different combination each day?) But while these subjects touch our lives frequently, they are often misunderstood! As we move through these sections, be sure to look out for places where the answer is unexpected, or places where we discuss common misconceptions.
+
+We'll focus in this section on counting problems, and look at different strategies we can use to solve these problems. Our goal will be to connect each strategy back to our work on multiplication. In order to see how the strategies are related, throughout this section we'll use the same counting problem.
+\begin{example}
+You have found your little sister's diary and you are trying to open it and read all of her secrets! The diary is unlocked by pressing one of three buttons on the front, turning a dial to one of five options, and then inserting a key. You also found your sister's key ring, and it has four keys on it. If you tried every single combination of button, dial, and key that you have available, how many tries would you make? (In other words, what is the maximum number of combinations that you will have to enter before you can open the diary?)
+\end{example}
+
+\section{Counting using an ordered list}
+The first option we have for solving this problem is making a list of all of the available options and then counting what we get. The easiest way to get the wrong answer using this method is to forget one of the options, so we want to make sure that we are making our list in an orderly fashion. Once we are finished with our list, we should explain how we know we didn't forget any of the options.
+\begin{example}
+Let's solve the example problem. You have found your little sister's diary and you are trying to open it and read all of her secrets! The diary is unlocked by pressing one of three buttons on the front, turning a dial to one of five options, and then inserting a key. You also found your sister's key ring, and it has four keys on it. If you tried every single combination of button, dial, and key that you have available, how many tries would you make? (In other words, what is the maximum number of combinations that you will have to enter before you can open the diary?)
+
+We are first going to push one of the buttons, so let's call the buttons $A$, $B$, and $C$ and look at what happens if we push button $A$. Next, we are going to turn the dial, and we have five options there so let's call them $1$, $2$, $3$, $4$, and $5$. For simplicity, let's look at what happens when we turn the dial to $1$. Finally, we have four possible keys, so let's call them $d, e, f$,and $g$. Here are the first possibilities.
+\begin{center}
+A1d \\ A1e \\ A1f \\ A1g
+\end{center}
+These are all of the options when we start with button $A$ and dial $1$, because we systematically went through all four keys. So let's move on to button $A$ and dial $2$.
+\begin{center}
+A2$\answer{d}$ \\ A2$\answer{e}$ \\ A2$\answer{f}$ \\ A2$\answer{g}$
+\end{center}
+Perhaps you are starting to get the idea. Let's do button $A$ and dial $3$, then $A$ and $4$, and finally $A$ and $5$.
+\begin{center}
+A3d \\ A3e \\ A3f \\ A3g \\ A4d \\ A4e \\ A4f \\ A4g \\ A5d \\ A5e \\ A5f \\ A5g
+\end{center}
+We are confident that we now have written all the possibilities for pushing button $A$, because we systematically tried each of the dials with each of the keys. We didn't leave out any options for either dials or keys, and we considered each dial with each key.
+
+Following this pattern, we should repeat our work for button $\answer[given]{B}$, looking at dial $1$, then $2$, then $3$, then $4$, then $5$. Let's start writing them horizontally to save space.
+\begin{center}
+B1d, B1e, B1f, B1g, B2d, B2e, B2f, B2g, B3d, B3e, B3f, B3g, B4d, B4e, B4f,  B4g,  B5d,  B5e,  B5f, B5g
+\end{center}
+We've now written every possibility for button $B$ for the same reasoning as we had for button $A$.
+
+Finally, we should repeat our work for button $\answer[given]{C}$.
+\begin{center}
+C1d, C1e, C1f, C1g, C2d, C2e, C2f, C2g, C3d, C3e, C3f, C3g, C4d, C4e, C4f,  C4g,  C5d,  C5e,  C5f, C5g
+\end{center}
+We have now written every combination with button $C$, and since there are only these three buttons, we are finished writing all of the combinations. Since we proceeded in this orderly fashion, we are convinced that nothing was forgotten.
+
+To find the total number of combinations, we just need to count each possibility that we listed. When we do that, we get $\answer[given]{60}$ possible combinations.
+
+\end{example}
+Writing an ordered list like this can take time, especially if the number of possibilities is very large. However, writing down even a few entries can give you a feeling for how you might like to organize your work, and the more you organize things into groups, the more likely you are to be able to start using multiplication as a short-cut. Perhaps you are already seeing some groups, here!
+
+
+\section{Counting using an array}
+Our next counting strategy is to organize our entries into an array instead of just a long list. Maybe you already have some idea for how you might like to do that for our particular example, so let's dive right in.
+\begin{example}
+Let's solve the example problem again. You have found your little sister's diary and you are trying to open it and read all of her secrets! The diary is unlocked by pressing one of three buttons on the front, turning a dial to one of five options, and then inserting a key. You also found your sister's key ring, and it has four keys on it. If you tried every single combination of button, dial, and key that you have available, how many tries would you make? (In other words, what is the maximum number of combinations that you will have to enter before you can open the diary?)
+
+This time, let's organize our work in an array or table. Let's use the same variables for the buttons, dial numbers, and keys that we did in the previous example. I'm going to make my table by listing all of the $A$ combinations in the first column, all of the $B$ combinations in the second column, and all of the $C$ combinations in the third column.
+\begin{image}
+\begin{tabular}{|c|c|c|} \hline
+A1d & B1d & C1d \\ \hline
+A1e & B1e & C1e \\ \hline
+A1f & B1f & C1f \\ \hline
+A1g & B1$\answer[given]{g}$ & C1g \\ \hline
+A2d & B2d & C2d \\ \hline
+A2e & B2e & C2e \\ \hline
+A2f & B2f & C2f \\ \hline
+A2g & B2g & C2g \\ \hline
+A3d & B3d & C3d \\ \hline
+A3e & B3e & C3$\answer[given]{e}$ \\ \hline
+A3f & B3f & C3f \\ \hline
+A3g & B3g & C3g \\ \hline
+A4d & B4d & C4d \\ \hline
+A4e & B4e & C4e \\ \hline
+A4f & B4f & C4f \\ \hline
+A4g & B4g & C4g \\ \hline
+A5d & B5d & C5d \\ \hline
+A5$\answer[given]{e}$ & B5e & C5e \\ \hline
+A5f & B5f & C5f \\ \hline
+A5g & B5g & C5g \\ \hline
+\end{tabular}
+\end{image}
+In this case, we have essentially just written our ordered list from the previous example in a table format. We are convinced that we didn't miss any entries for the same reasons that we are convinced we didn't miss any entries in the previous case: for each button we systematically went through each dial and key combination. It might be easier to see that none are missing in our table, just because of the way it's organized. To find the total number of entries, we count all of the items in our table.
+
+No matter how we organize things, we get the same answer of $\answer[given]{60}$ different combinations for our sister's diary.
+
+\end{example}
+Perhaps you were going to draw a different-looking array than I did, and that's perfectly okay! The point of using an array is to keep things organized and to help us be sure we aren't missing any entries. Of course, a secondary reason for using an array is that you might be ready now to write down a multiplication expression that would give us the answer to the question.
+\begin{question}
+Pause and think: if you have a multiplication expression in mind here, what is it? What would you use for the groups and objects per group for your expression?
+\begin{freeResponse}
+Enter your thoughts here!
+\end{freeResponse}
+\end{question}
+
+
+
+\section{Counting using a tree diagram}
+Our next method for counting is making a tree diagram. A tree diagram is another method to organize our outcomes, but the tree diagram can be more helpful when we have multiple stages to our counting, like in the current example. In other words, if the diary only had a button and a dial, the previous methods (making a list or making an array) might seem easier to manage. But since the diary has a button, a dial, and a key, a tree diagram might help you keep better track of each stage of your counting.
+\begin{example}
+Let's solve the example problem again. You have found your little sister's diary and you are trying to open it and read all of her secrets! The diary is unlocked by pressing one of three buttons on the front, turning a dial to one of five options, and then inserting a key. You also found your sister's key ring, and it has four keys on it. If you tried every single combination of button, dial, and key that you have available, how many tries would you make? (In other words, what is the maximum number of combinations that you will have to enter before you can open the diary?)
+
+This time, we are going to draw a tree diagram. A tree diagram has branches for each stage in our counting, so we will build up the diagram as we go. We will continue to use the same names for the buttons, dial entries, and keys that we have been using in the previous examples.
+
+As we have done before, we'll consider the button first. We have three choices for the button, so we will start by making three branches, one for each button.
+\begin{image}
+\begin{tikzpicture}
+\draw (0,0)--(2,1) node[right] {$A$};
+\draw (0,0)--(2,0) node[right]  {$B$};
+\draw (0,0)--(2,-1) node[right] {$C$};
+\end{tikzpicture}
+\end{image}
+Next, we know that we need to choose one of the five dials, and we can choose one of the five dials off of each of the thee buttons. So, from each button we'll draw five branches, one for each dial.
+\begin{image}
+\begin{tikzpicture}
+\draw (0,0)--(2,3) node[right] {$A$};
+\draw (0,0)--(2,0) node[right]  {$B$};
+\draw (0,0)--(2,-3) node[right] {$C$};
+\draw (2.5,3)--(4,4.2) node[right]{$A1$};
+\draw (2.5,3)--(4,3.6) node[right]{$A2$};
+\draw (2.5,3)--(4,3) node[right]{$A3$};
+\draw (2.5,3)--(4,2.4) node[right]{$A4$};
+\draw (2.5,3)--(4,1.8) node[right]{$A5$};
+\draw (2.5,0)--(4,1.2) node[right]{$B1$};
+\draw (2.5,0)--(4,0.6) node[right]{$B2$};
+\draw (2.5,0)--(4,0) node[right]{$B3$};
+\draw (2.5,0)--(4,-0.6) node[right]{$B4$};
+\draw (2.5,0)--(4,-1.2) node[right]{$B5$};
+\draw (2.5,-3)--(4,-1.8) node[right]{$C1$};
+\draw (2.5,-3)--(4,-2.4) node[right]{$C2$};
+\draw (2.5,-3)--(4,-3) node[right]{$C3$};
+\draw (2.5,-3)--(4,-3.6) node[right]{$C4$};
+\draw (2.5,-3)--(4,-4.2) node[right]{$C5$};
+\end{tikzpicture}
+\end{image}
+Finally, we need to choose one of the four keys. We need to include each of the four keys off of each combination of button and dial number, so we need to make four branches off of each of the branches we already have.
+\begin{image}
+\begin{tikzpicture}
+\draw (0,0)--(3,9) node[right] {$A$};
+\draw (0,0)--(3,0) node[right]  {$B$};
+\draw (0,0)--(3,-9) node[right] {$C$};
+\foreach \a in {1, 2, 3, 4, 5} \draw (3.5, 9)--(5, {9+1.8*(3-\a)}) node[right]{$A\a$};
+\foreach \b in {1, 2, 3, 4, 5} \draw (3.5, 0)--(5, {1.8*(3-\b)}) node[right]{$B\b$};
+\foreach \c in {1, 2, 3, 4, 5} \draw (3.5, -9)--(5, {-9+1.8*(3-\c)}) node[right]{$C\c$};
+
+\foreach \d in {1, 2, 3, 4, 5} \draw (6, {9+1.8*(3-\d)})--(8, {9.675+1.8*(3-\d)}) node[right]{$A\d d$};
+\foreach \e in {1, 2, 3, 4, 5} \draw (6, {9+1.8*(3-\e)})--(8, {9.225+1.8*(3-\e)}) node[right]{$A\e e$};
+\foreach \f in {1, 2, 3, 4, 5} \draw (6, {9+1.8*(3-\f)})--(8, {9-0.225+1.8*(3-\f)}) node[right]{$A\f f$};
+\foreach \g in {1, 2, 3, 4, 5} \draw (6, {9+1.8*(3-\g)})--(8, {9-0.675+1.8*(3-\g)}) node[right]{$A\g g$};
+
+\foreach \dd in {1, 2, 3, 4, 5} \draw (6, {1.8*(3-\dd)})--(8, {0.675+1.8*(3-\dd)}) node[right]{$B\dd d$};
+\foreach \ee in {1, 2, 3, 4, 5} \draw (6, {1.8*(3-\ee)})--(8, {0.225+1.8*(3-\ee)}) node[right]{$B\ee e$};
+\foreach \ff in {1, 2, 3, 4, 5} \draw (6, {1.8*(3-\ff)})--(8, {-0.225+1.8*(3-\ff)}) node[right]{$B\ff f$};
+\foreach \gg in {1, 2, 3, 4, 5} \draw (6, {1.8*(3-\gg)})--(8, {-0.675+1.8*(3-\gg)}) node[right]{$B\gg g$};
+
+\foreach \ddd in {1, 2, 3, 4, 5} \draw (6, {-9+1.8*(3-\ddd)})--(8, {-9+0.675+1.8*(3-\ddd)}) node[right]{$C\ddd d$};
+\foreach \eee in {1, 2, 3, 4, 5} \draw (6, {-9+1.8*(3-\eee)})--(8, {-9+0.225+1.8*(3-\eee)}) node[right]{$C\eee e$};
+\foreach \fff in {1, 2, 3, 4, 5} \draw (6, {-9+1.8*(3-\fff)})--(8, {-9-0.225+1.8*(3-\fff)}) node[right]{$C\fff f$};
+\foreach \ggg in {1, 2, 3, 4, 5} \draw (6, {-9+1.8*(3-\ggg)})--(8, {-9-0.675+1.8*(3-\ggg)}) node[right]{$C\ggg g$};
+
+\end{tikzpicture}
+\end{image}
+Phew! That was a lot of work, but you are hopefully very convinced that we didn't miss any entries because of the way we drew the tree diagram. We first considered all of the buttons, then from there each of the dial numbers, and finally from each button and dial number combo we considered each key. The entries we are trying to count are located on the diagram at the \wordChoice{\choice{beginning} \choice{middle} \choice[correct]{end}} of each branch, so we can count the number of ends of this tree diagram to find the total number of passcodes.  We get the same $\answer[given]{60}$ outcomes that we've gotten in every other case.
+
+\end{example}
+If you are making a tree diagram as large as the one above, please feel free to draw only part of the diagram, and indicate where the pattern follows from what you have already drawn. Also, some people like to make their diagram by listing only the new information on each branch, so that in our previous case the first branches would be $A$, $B$, and $C$, and then the second branches would be $1, 2, 3, 4$, and $5$ in every case (instead of $A1$, $B2$, et cetera) and the last branches would be marked with $d, e, f$, or $g$. The danger with this method of listing things is that we are not trying to count the number of $d$'s $e$'s, and so forth, but we are trying to count the number of total passcode options we have for the diary. In the tree diagram, this is represented by the total number of paths through the diagram, not just what's on the end of the branches. It's easy to forget that each $d$ at the end of a branch goes with an $A, B$, or $C$ as well as a number between $1$ and $5$. We encourage you to write out the full options as we've done above!
+
+Another note to consider is that this tree diagram had the same number of branches at each stage, but it's certainly possible to have a tree diagram that has different options at each stage. For instance, we could have a situation where button $A$ could only go with dial numbers $3$ and $5$, and so our tree would only have two branches off of $A$ while it still has five branches off of each of $B$ and $C$. Many other types of examples are possible, and we'll see some of these together in class.
+
+Hopefully, the idea of grouping outcomes in order to use multiplication to count them has become even more clear. Let's see what we can do!
+
+
+
+\section{Counting using algebra}
+Remember that our definition of multiplication is given by
+\[
+A \textrm{ (number of groups) } \times B \textrm{ (number of objects in one full group) } = C \textrm{ (number of objects total)}.
+\]
+So, if we want to use multiplication to count the number of outcomes in a certain situation, we need to organize them into groups. Luckily, all of the solutions we've worked through above have organized the outcomes, so we just need to describe what we are seeing as the groups and what we are seeing as the objects. It is usually more clear to describe what one group looks like (since all the groups have to be equal) and what one object looks like, and giving examples for both one group and one object can really help to make things clear. Often, people find it easiest to at least start on one of the methods above so they can see and describe their organization strategy, and then move to multiplication to finish the calculation rather than drawing out every possible option. (Perhaps you see the advantage of such a strategy after we made such a gigantic tree diagram!)
+
+Let's return to our example.
+\begin{example}
+You have found your little sister's diary and you are trying to open it and read all of her secrets! The diary is unlocked by pressing one of three buttons on the front, turning a dial to one of five options, and then inserting a key. You also found your sister's key ring, and it has four keys on it. If you tried every single combination of button, dial, and key that you have available, how many tries would you make? (In other words, what is the maximum number of combinations that you will have to enter before you can open the diary?)
+
+Each time we have counted these diary passcodes, we have started with the buttons. In each strategy, this divided up the outcomes into $\answer[given]{3}$ equal groups, one for each button. So we could say that one group is given by all the passcodes that go with a single button: an $A$ group, a $B$ group, and a $C$ group.
+
+This means that we so far know that we have
+\[
+\answer[given]{3} \textrm{ groups } \times \textrm{ ?? passcodes per group}.
+\]
+In our array example, the groups could be indicated by the columns in the table, and in our tree diagram the groups could be indicated by the initial branches of the tree. Notice that all of these groups are equal; if they weren't, we couldn't multiply like this!
+
+To find how many passcodes there are in each one of the groups, let's investigate further. Of course, we could just count the number of passcodes per group and see that there are $\answer[given]{20}$ per group, and get the answer
+\[
+\answer[given]{3} \textrm{ groups } \times \answer[given]{20} \textrm{ passcodes per group } = 60 \textrm{ passcodes total},
+\]
+ but we can also investigate how these passcodes are organized within the groups. This second-level organization is probably easiest to see in the tree diagram, though you should also be able to see it in our array.
+ 
+ Once we have chosen a button to push, the next thing we choose is a number on the dial. This means that we can organize the passcodes inside the $A$ group by which dial number we choose. There are $\answer[given]{5}$ different dial numbers, so we have $5$ subgroups inside the $A$ group. Each subgroup is made up of all the passcodes that go with a certain dial number. So we have a group for dial number $1$, a group for dial number $2$, and so on. 
+ 
+ Finally, we choose one of the keys. There are $\answer[given]{4}$ keys total, so inside each of the dial number groups there are $4$ passcodes. Look at the tree diagram again: inside the $A$ group, do you see $5$ subgroups, with $4$ passcodes in each subgroup? For instance, inside the $A$ group, there's a subgroup where all of the passcodes start with $A3$. Inside that group we find $A3d$, $A3e$, $A3f$, and $A3g$ for a total of four passcodes. Each of the subgroups has four passcodes inside the subgroup.
+ 
+ Overall, this means we can count the number of passcodes using the following multiplication.
+ \[
+ \answer[given]{3} \textrm{ groups (buttons) } \times \left ( \answer[given]{5} \textrm{ subgroups (dials) } \times \answer[given]{4} \textrm{ passcodes per subgroup } \right )
+ \]
+When we multiply this all out, we get the same $\answer[given]{60}$ passcodes that we've gotten in every other case, and we didn't need to write them all out!
+
+\end{example}
+
+What we have illustrated here is what some people call the ``Fundamental Counting Principle", which says that if we have $m$ options for one event to happen and $n$ options for a different event to happen, then there are $m \times n$ options for the two events together.
+
+
+
+These strategies are useful for a wide variety of counting problems, but they need to be adapted to each situation individually. We'll practice with more types of counting problems in class as well as in the sections to come. Be prepared to adjust your strategies! For instance, sometimes we want to make an ordered list but then remove some of the options from our list. Sometimes we'll want to use more than just multiplication while we count. It's not unusual to see some addition, subtraction, or division popping up in these problems. Think carefully about what the problem is asking, and never be afraid to just start writing out the outcomes you are looking for until you can see a pattern!
+
+
+\begin{question}
+Pause and think: which strategy or strategies do you like best so far, and why?
+\begin{freeResponse}
+Write your thoughts here!
+\end{freeResponse}
+\end{question}
+
+
+
+\end{document}

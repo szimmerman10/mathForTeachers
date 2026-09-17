@@ -1,0 +1,542 @@
+\documentclass{ximera}
+
+\input{../preamble.tex}
+
+\title{Properties}
+\author{Jenny Sheldon}
+
+\begin{document}
+
+\begin{abstract}
+We distinguish definitions and properties of shapes.
+\end{abstract}
+\maketitle
+
+
+\section{Activities for this section:} 
+\link[Triangle angles]{https://ximera.osu.edu/m4t/elementaryActivities/SemesterTwoPacket/elementaryActivities/ComparingShapes/TriangleAngles}, 
+\link[Walking around a triangle]{https://ximera.osu.edu/m4t/elementaryActivities/SemesterTwoPacket/elementaryActivities/ComparingShapes/WalkingAndTurning}, 
+\link[Property rights]{https://ximera.osu.edu/m4t/elementaryActivities/SemesterTwoPacket/elementaryActivities/ComparingShapes/PropertyRights}
+
+
+
+\section{What are properties?}
+
+Remember that our goal in this chapter is to compare and contrast shapes. Now that we understand how to define shapes, we want to expand to more ways we can compare and contrast shapes.
+
+At their most basic, properties are things that are true about an object. For instance, you could say something like ``my cat has very soft fur''. In this example, ``soft fur'' is a property that your cat has, because this is something that's true about your cat. 
+
+Properties can be things that are sometimes true. For example, consider a statement like ``Irina's grandmother has purple hair''. If Irina's grandmother just dyed her hair purple, then having purple hair is a property of Irina's grandmother right now. But if it's a temporary hair dye, and Irina's grandmother normally has grey hair, then when she washes her hair a few times, the property ``has purple hair'' won't be true anymore, because her hair has gone back to being grey.
+
+However, when we work with properties in mathematics, we typically mean things that are always true. For example, consider a statement like, ``Theo lived on Main Street when he was 8''. Assuming this statement is true, ``lived on Main Street when he was 8" is a property that Theo has, and this property isn't going to change no matter how many times Theo's family moves.
+
+Maybe at this point you are wondering if any of this has anything to do with shapes, and it does! However, we hope these everyday examples help you to think about what is meant by a property. When it comes to shapes, we could state properties that are sometimes true, like ``this circle is orange''. Here ``is orange'' is a property that a circle could have. We could also state properties that are always true, like ``a rhombus has four sides'', where ``has four sides'' is a property that's always true about a rhombus no matter which rhombus you draw.
+
+\begin{question}
+Pause and think: what are properties that are true about you? Are these properties always true or sometimes true?
+\begin{freeResponse}
+You can enter your answer here.
+\end{freeResponse}
+\end{question}
+
+Remember that kids begin learning to identify shapes as early as kindergarten, and continue learning to classify shapes throughout their work in elementary school. Much of what students focus on is classifying shapes according to properties that these shapes have, so identifying properties is a significant piece of elementary school geometry. We would like to see children classify shapes in progressively sophisticated ways.
+
+\section{Properties and definitions}
+
+In our previous section, we highlighted the definitions of many types of shapes. As we turn to thinking about the properties of these shapes, we should be able to identify when we are working with a definition, and when we are working with a property. This can be a little tricky, because the two ideas are very much related.
+
+\begin{center}
+\emph{A definition is a collection of properties that we have selected to use in identifying a shape.}
+\end{center}
+
+That's a little bit wordy, so let's break it down using the example of a rhombus.
+\begin{definition}
+A \dfn{rhombus} is a quadrilateral where all of its sides have the same length. 
+\end{definition}
+Notice that in the definition we have ``is a quadrilateral'' (or perhaps ``has four sides'') as well as ``all sides have the same length''. Each of these are properties of a rhombus, because each of these statements are true about rhombuses. In fact, these statements are always true about rhombuses; if they weren't, we wouldn't be able to use the statements as a definition. Also, notice that either statement by itself isn't enough to identify a rhombus. If we said a rhombus was a shape with all equal sides, we haven't described how many sides the shape has, and so other things (that we don't want to be classified as a rhombus) would meet this definition. We want our definition to identify all rhombuses, and only rhombuses.
+
+On the other hand, there are plenty of other properties that are true about all rhombuses. For instance, the opposite sides of a rhombus are parallel to one another -- we'll tackle why this statement is true later. So, we could have included this statement in our definition, like this.
+\begin{center}
+	\emph{A rhombus is a quadrilateral where all of its sides have the same length and its opposite sides are parallel.}
+\end{center}
+This definition would identify all rhombuses, and it would not identify anything that isn't a rhombus, so it could be used. However, the property ``has opposite sides parallel'' is extra, here. It's not adding any new shapes to the category, and we could explain why this property is true only using the other properties on the list. Since we want our definitions to be as easy to use as possible, let's not include that extra property as something in the definition that we would need to check in order to be sure we are working with a rhombus.
+
+\begin{question}
+Look again at the definition of a quadrilateral. Which options below are properties that are also part of that definition? Select all that apply.
+\begin{selectAll}
+\choice[correct]{The shape is closed}
+\choice{The shape could be a square}
+\choice[correct]{The shape has four sides}
+\choice{The shape has curved sides}
+\choice{The shape has interior angles which add to $360^{\circ}$}
+\end{selectAll}
+\end{question}
+
+\section{Properties of triangles}
+
+First, recall the definition of a triangle.
+\begin{definition}
+A \dfn{triangle} is a polygon (in other words, the shape is 2D, closed, and simple) with three (straight) sides.
+\end{definition}
+
+What else can we say about triangles in general? Let's talk about properties that are always true for triangles.
+
+\begin{question}
+Sketch a quick picture of any triangle. Which of the properties below does your triangle (and any other triangle you might draw) have? Select all that apply.
+\begin{selectAll}
+\choice[correct]{The shape is 2D}
+\choice[correct]{The shape has three sides}
+\choice{The shape has a hole in the middle}
+\choice{The shape is green}
+\choice[correct]{The shape has three vertices}
+\choice[correct]{The shape has three interior angles}
+\end{selectAll}
+\end{question}
+
+Another important property of triangles concerns the sum of their interior angles.
+
+\begin{theorem}
+The interior angles of any triangle add up to $180^{\circ}$.
+\end{theorem}
+
+Let's explain why this property holds using only the definition of a triangle and other facts we know to be true. Notice that if we can do this, we don't need to include this property in the definition of a triangle -- it will be true for any three-sided polygon.
+
+First, we investigate this statement by looking at some triangles. Say that you start with a triangle drawn on a piece of paper, and then you tear off the edges. (Stop and draw your own triangle, cut it out, then tear off the corners!)
+\begin{image}
+\begin{tikzpicture}
+% Define the vertices of the triangle
+\coordinate (A) at (0,0);
+\coordinate (B) at (4,0);
+\coordinate (C) at (3,1);
+
+% Draw the main triangle
+\draw (A) -- (B) -- (C) -- cycle;
+
+
+% Draw the torn off corners
+\draw plot[smooth,tension=1] coordinates {(0.8, 0) (0.5, 0.05) (0.6, 0.08) (0.4, 0.12)};
+\draw plot[smooth,tension=1] coordinates {(2.2,0.74) (2.3, 0.7) (2.6, 0.8) (2.9, 0.75) (3.3, 0.7)};
+\draw plot[smooth,tension=1] coordinates {(3.3,0) (3.5, 0.1) (3.7, 0.08) (3.8, 0.2)};
+\end{tikzpicture}
+
+\end{image}
+
+The corners represent the angles that we are trying to combine. So, let's combine them together into a single angle.
+\begin{image}
+\begin{tikzpicture}
+  % Draw the lines
+  \coordinate (A) at (0,0);
+  \coordinate (B) at (3,0);
+  \coordinate (C) at (5,0);
+  \coordinate (D) at (0.5,0.5);
+  \coordinate (E) at (4, 1.5);
+  
+  \draw (A) -- (C);
+  \draw (B)--(D);
+  \draw (B)--(E);
+  \draw[fill=black] (B) circle (2pt);
+
+  % Draw the arc and add labels for the angles
+%  \draw[thick,->] (3.3,0) arc (0:120:0.3);
+%  \draw[thick,->] (2.8,0.28) arc (125:180:0.3);
+
+% Draw the torn off corners
+\draw plot[smooth,tension=1] coordinates {(0,0) (0.3, 0.2) (0.4, 0.4) (0.5, 0.5)};
+\draw plot[smooth,tension=1] coordinates {(0.5, 0.5) (2, 1) (3,0.9) (4, 1.5)};
+\draw plot[smooth,tension=1] coordinates {(4, 1.5) (4.2, 0.8)  (4.7, 0.6) (4.8, 0.1) (5,0)};
+\end{tikzpicture}
+\end{image}
+
+\begin{question}
+What type of angle appears to be made when we combine the torn off corners?
+\begin{multipleChoice}
+\choice{A right angle}
+\choice[correct]{A straight angle}
+\choice{A vertical angle}
+\choice{A straight line}
+\end{multipleChoice}
+\end{question}
+
+\begin{question} 
+  What is the measure of the angle that appears to be made when we combine the torn off corners?
+\begin{prompt}
+	$\answer[given]{180}$ degrees
+  \begin{hint}
+    You should be able to answer this question without measuring the individual angles!
+  \end{hint}
+\end{prompt}
+\end{question}
+
+This investigation is not a proof, because we haven't checked every single triangle that's possible. But we are starting to get an idea for why this property might be true. Kids as young as kindergarten could investigate like this, and make guesses, or conjectures, about what they expect to be true.
+
+Kids in middle school can start to explain with a bit more depth why this property might be true.
+\begin{explanation}
+Let's explain why the interior angles in any triangle add up to $180^{\circ}$.
+
+Start by watching the video where two people perform what we will call ``the walking and turning procedure''. The ``walker'' will be the person who walks around the outline of the triangle, and the ``turner'' will be the person who stands on one spot and just does the turning part.
+\youtube{AVLahAs3H60}
+
+%\begin{question}
+In the video, what is the total amount of turning done by the turner, in degrees?
+\begin{prompt}
+	$\answer[given]{360}$ degrees
+\end{prompt}
+%\end{question}
+
+%\begin{question}
+In the video, what is the total amount of turning done by the walker, in degrees?
+\begin{prompt}
+	$\answer[given]{360}$ degrees
+\end{prompt}
+%\end{question}
+
+Let's now draw a diagram of a triangle, and imagine that the walker and turner used this triangle in the walking and turning procedure starting from point $P$.
+\begin{image}
+\begin{tikzpicture}
+	% Define the points of the triangle
+    \coordinate (A) at (0,0);
+    \coordinate (B) at (4,0);
+    \coordinate (C) at (3,3);
+
+    % Draw the triangle
+    \draw [thick] (A) -- (B) -- (C) -- cycle;
+    \draw[fill=black] (A) circle (2pt);
+    \draw[fill=black] (B) circle (2pt);
+    \draw[fill=black] (C) circle (2pt);
+    
+    %extend the lines
+    \draw[dashed] (-2,0)--(6,0);
+    \draw[dashed] (-2, -2)--(5,5);
+    \draw[dashed] (2,6)--(5,-3);
+    
+    %label the starting point
+    \draw[fill=black] (1.5,1.5) circle (2pt) node[below]{$P$};
+    
+    %label the angles
+    \node at (0.4, 0.2) {$a$};
+    \node at (0.1, -0.2) {$d$};
+    \node at (3.7, 0.2) {$b$};
+    \node at (4.2, 0.2) {$e$};
+    \node at (2.9, 2.7) {$c$};
+    \node at (2.7, 3) {$f$};
+\end{tikzpicture}
+\end{image}
+
+%\begin{question}
+Which of the angles in the figure are the interior angles of the triangle? Select all that apply.
+\begin{selectAll}
+\choice[correct]{$a$}
+\choice[correct]{$b$}
+\choice[correct]{$c$}
+\choice{$d$}
+\choice{$e$}
+\choice{$f$}
+\end{selectAll}
+%\end{question}
+%\begin{question}
+Which of the angles in the figure are exterior angles of the triangle? Select all that apply.
+\begin{selectAll}
+\choice{$a$}
+\choice{$b$}
+\choice{$c$}
+\choice[correct]{$d$}
+\choice[correct]{$e$}
+\choice[correct]{$f$}
+\end{selectAll}
+%\end{question}
+%\begin{question}
+Which of the angles in the figure are the angles through which the walker turns?
+\begin{multipleChoice}
+\choice{The interior angles}
+\choice[correct]{The exterior angles}
+\choice{The turning angles are not marked in the figure}
+\end{multipleChoice}
+%\end{question}
+%\begin{question}
+
+Which of the angles in the figure are the angles we are trying to find the sum of?
+\begin{multipleChoice}
+\choice[correct]{The interior angles}
+\choice{The exterior angles}
+\choice{The angles we are trying to sum are not marked in the figure}
+\end{multipleChoice}
+
+%\end{question}
+
+Next, notice that we know something more about the angles in the figure.
+%\begin{question}
+What happens when we add up $a+d$ or $b+e$ or $c+f$?
+
+\begin{prompt}
+ $a+d = \answer[given]{180}^{\circ}$
+ 
+  $b+e = \answer[given]{180}^{\circ}$
+  
+   $c+f = \answer[given]{180}^{\circ}$
+\end{prompt}
+%\end{question}
+
+Now, let's put together all the information we know. First, we add together all of the angles in the picture.
+\[
+(a+d) + (b+e) + (c+f) = \answer[given]{180}\degree + \answer[given]{180}\degree + \answer[given]{180}\degree
+\]
+Simplify the sum on the right-hand side, and rearrange the letters on the left-hand side to be in alphabetical order.
+\[
+a + b + c + d + e + f = \answer[given]{540}\degree
+\]
+We know that $(a + b + c)$ are the interior angles we are trying to sum, and we know that $(d + e + f) = \answer[given]{360}\degree$ from the walking and turning procedure. So let's substitute this second quantity.
+\[
+(a + b + c) + \answer[given]{360}\degree = 540\degree
+\]
+Gathering together the constants, we get the result we want.
+\[
+a + b + c = 180\degree
+\]
+This explanation was based on a specific triangle that we drew, but we could use the same construction for \wordChoice{\choice[correct]{any} \choice{some} \choice{no}} other triangle that we drew. (Can you imagine it?) So, we have indeed shown that any triangle has interior angles which add up to $180\degree$.
+\end{explanation}
+
+When kids learn a bit more about algebra, we have another explanation that we could use to discuss why the interior angles in a triangle add up to $180\degree$.
+
+\begin{explanation}
+We start by drawing any triangle, choosing one side as the base, and then drawing a line parallel to the base through the vertex that's not on the base.
+\begin{image}
+\begin{tikzpicture}
+	\draw[thick] (0,0)--(5,0)--(2,4)--(0,0);
+	\draw (0,4)--(5,4);
+\end{tikzpicture}
+\end{image}
+Since the line through the base and the line through the opposite vertex are parallel, we can use the Parallel Postulate in this situation. Each of the two sides of the triangle that aren't the base will be used as a transversal. In our previous picture, let's extend the two non-parallel sides and label the angles underneath the top parallel line as $d$, $e$, and $f$ from left to right.
+\begin{image}
+\begin{tikzpicture}
+	\draw[thick] (0,0)--(5,0)--(2,4)--(0,0);
+	\draw[dashed] (-1, -2)--(3,6) node[right]{$T$};
+	\draw[dashed] (6.5, -2)--(0.5, 6) node[left] {$U$};
+	\draw[dashed] (-1,0)--(6,0) node[below]{$L$};
+	\draw (0,4)--(5,4) node[below]{$M$};
+	\node at (0.3, 0.2) {$a$};
+	\node at (4.7, 0.2) {$b$};
+	\node at (2.02, 3.7) {$c$};
+	\node at (1.65, 3.85) {$d$};
+	\node at (2.4, 3.85) {$e$};
+\end{tikzpicture}
+\end{image}
+
+Using $T$ as a transversal, the Parallel Postulate says that angle $a$ is congruent to angle $\answer[given]{d}$. Using $U$ as a transversal, the Parallel Postulate says that angle $b$ is congruent to angle $\answer[given]{e}$.
+
+Angles $d$, $c$, and $e$ together form a \wordChoice{\choice{right} \choice[correct]{straight} \choice{supplementary}} angle, which measures $\answer[given]{180}\degree$. Combining these two statements, we have the result we want.
+\[
+a+b+c = d + e + c = 180\degree
+\]
+Again, we looked at a specific triangle in our picture, but we started by saying ``draw any triangle.'' In other words, we could use the same algebraic steps for any triangle we could draw, and we would come to the same conclusion. So, we have shown that the interior angles of any triangle add up to $180\degree$.
+
+\end{explanation}
+
+\begin{question}
+Pause and think: we've talked about three different ways to think about why the interior angles of a triangle add up to $180\degree$. What similarities and differences do you see between these arguments? 
+\begin{freeResponse}
+Write some thoughts here!
+\end{freeResponse}
+\end{question}
+
+
+Another property of triangles that we might find useful is concerning the triangle's angles and sides.
+\begin{theorem}
+For any triangle, the angle with the largest measure is across from the longest side, and the angle with the smallest measure is across from the shortest side.
+\end{theorem}
+We won't prove this theorem, but you should think about why it makes sense by drawing some pictures and measuring the sides and angles of some triangles. Don't forget to take notes on your explorations!
+
+
+\section{Properties of special quadrilaterals}
+
+While our special quadrilaterals are already quadrilaterals with extra properties in their definitions, 
+we can continue to look for extra properties that we might be interested in. For instance, we might be 
+playing around with some shapes and notice that it seems like a lot of them have pairs of interior angles 
+that look the same. From there, we could ask: which special quadrilaterals have opposite angles that have equal measure?
+\begin{definition}
+The \dfn{opposite angles} in a quadrilateral are those interior angles that are opposite from one another in the shape. 
+For example, angles $a$ and $c$ are opposite in the figure below. Angles $b$ and $d$ are also opposite.
+\begin{image}
+\begin{tikzpicture}
+	\draw[thick] (0,0)--(3,1)--(5,-1)--(2, -4)--(0,0);
+	\node at (0.25, -0.1) {$a$};
+	\node at (3, 0.7) {$b$};
+	\node at (4.7, -1) {$c$};
+	\node at (2, -3.5) {$d$};
+\end{tikzpicture}
+\end{image}
+\end{definition}
+
+Now let's investigate whether a parallelogram has opposite angles with equal measure.
+\begin{explanation}
+First, remember that a parallelogram is a quadrilateral for which opposite sides are parallel. Let's draw 
+a parallelogram, extend its lines, and label its angles counter clockwise from the bottom left starting with $a$. We'll also label the supplementary angle to $c$ as $e$.
+\begin{image}
+\begin{tikzpicture}
+\draw[thick] (0,0)--(4,0)--(5,2)--(1,2)--(0,0);
+\draw[dashed] (-1,0)--(6,0) node[below]{$L$};
+\draw[dashed] (-1,2)--(6,2) node[above]{$M$};
+\draw[dashed] (-1, -2)--(2,4) node[left]{$T$};
+\draw[dashed] (3,-2)--(6,4) node[right]{$U$};
+\node at (0.3, 0.2) {$a$};
+\node at (3.8, 0.2) {$b$};
+\node at (4.7, 1.8) {$c$};
+\node at (5.1, 1.8) {$e$};
+\node at (1.2, 1.8) {$d$};
+\end{tikzpicture}
+\end{image}
+
+Since line $L$ is parallel to line \wordChoice{\choice[correct]{$M$}\choice{$T$}\choice{$U$}}, we can use 
+the Parallel Postulate with either line $U$ or line $T$ as a transversal. Let's start with line $U$. 
+Using $U$ as a transversal, angles $b$ and $\answer[given]{e}$ are alternate interior angles, so they have the 
+same measure.  If you are drawing the picture in your own notes, you might find it helpful to highlight the angles 
+that we know are equal.
+
+Next, we know that line $T$ is parallel to line  \wordChoice{\choice{$L$}\choice{$M$}\choice[correct]{$U$}},
+ we can again use the Parallel Postulate, now with line $M$ as a transversal. Considering the corresponding angles 
+ this time, angle $e$ has the same measure as angle $\answer[given]{d}$. In other words, we have
+\[
+b=e=d 
+\]
+showing that angles $b$ and $d$, which are opposite, have the same measure.
+
+To convince yourself that this makes sense, use a similar argument to show that angle $a$ has the same measure 
+as angle $c$.
+
+\end{explanation}
+
+The previous example is one type of property we could check for our special quadrilaterals. We will explore 
+other properties in class and in exercises. To take good notes on this topic, think about how the definition 
+of a parallelogram helped us to show that this property was true. But notice that we don't need to add the 
+property ``opposite angles are equal'' to the definition of a parallelogram, because we just showed that this 
+property is true using the defintion we already have. Adding more to the definition wouldn't add any information 
+that we don't already have. Sometimes we like to use the word \dfn{implies} for this situation: the fact that 
+the sides are parallel implies that the opposite angles are equal.
+
+\section{Properties and special cases}
+
+Another thing we can do using properties is understand when a shape is a special case of another shape. To do 
+this, we use the definitions of both shapes, and decide when the first shape always satisfies the definition 
+of the second shape.
+
+\begin{example}
+	Let's show that squares are a special case of rectangles.
+	
+	We'll start with the definition of a square: a quadrilateral where all of its interior angles are right 
+  angles and all of its sides have the same length.
+	
+	Next, let's look at the definition of a rectangle: a quadrilateral where all of its interior angles are 
+  right anges.
+	
+	Does the definition of a square satisfy the definition of a rectangle? \wordChoice{\choice[correct]{Yes} \choice{No}}. 
+  In this case, we can see that the definition of a rectangle is actually part of the definition of a square, 
+  and then the square has additional special properties. So, the square is a special case of a rectangle.
+\end{example}
+
+This example is tricky for a couple of reasons. First, the language can be confusing, so you should try 
+to find a way to talk about the relationship between squares and rectangles that makes sense to you. For 
+instance, you could say that a square is a rectangle with additional properties. You could say that every 
+square is also a rectangle (but not every rectangle is necessarily a square). You could say that squares 
+are rectangles. There are many options!
+
+A second note is that in the case of squares and rectangles, we just had to match the definitions. Some shapes 
+are more difficult to classify in this way because we need additional properties in order to see the relationship. 
+For instance, a rhombus is a special case of a parallelogram, but in order to see why this is true we need to 
+show that the opposite sides of a rhombus are parallel. To show that opposite sides of a rhombus are parallel, we 
+would work through an argument a little bit like we did to show that opposite angles of a parallelogram are equal.  
+This isn't obvious, and we will need more tools!
+
+\begin{question}
+Pause and think: can you show that a square is a special case of a parallelogram using the converse of the Parallel Postulate?
+\begin{freeResponse}
+You'll want to sketch this out in your notes, but feel free to leave a note here to help yourself find your notes later.
+\end{freeResponse}
+\end{question}
+
+
+There are many more properties of special quadrilaterals as well as many more relationships between the special 
+quadrilaterals we have defined. We will investigate more of these ideas as we develop more tools. But don't be 
+afraid to notice properties yourself and then test out whether or not they hold! Noticing, making guesses about 
+patterns, testing out your guesses, and then trying to prove or explain why your guesses will always be true is 
+important mathematical work and models the trajectory we want kids to take as they explore with shapes.
+
+\section{Venn diagrams}
+
+A particular tool we can use to visualize the relationships between categories of shapes is called a Venn Diagram. 
+Venn Diagrams are useful in many subjects other than math for comparing and contrasting things. For instance, 
+suppose Ryan and Jim are trying to choose a restaurant for dinner. They could each make a list of restaurants they 
+like. If they then made a Venn Diagram of their preferences, Ryan would put restaurants that he likes but that Jim 
+doesn't like on one side of the diagram, and Jim would put restaurants that he likes but that Ryan doesn't like 
+on the other side of the diagram. In the middle, they would place restaurants that they both like (and hopefully 
+choose one from this category for dinner).
+
+\begin{image}
+\begin{tikzpicture}
+\draw[thick] (0,0) circle (1in);
+\draw[thick] (2,0) circle (1in);
+\node at (1,1) {Taco Bell};
+\node at (-1.5,0) {Chipotle};
+\node at (3.5,1) {KFC};
+\node at (1,0) {Panera};
+\node at (3.5,0){Five Guys};
+\node at (-1, 1) {Moe's};
+\node at (3.5, -1) {Wendy's};
+\node at (-3.5, 2) {Ryan's choices};
+\node at (5.5, 2) {Jim's choices};
+\end{tikzpicture}
+\end{image}
+
+Venn diagrams aren't limited to two overlapping circles. You can use as many circles as you need to describe the different sets you are considering, and those circles can have any sort of interaction that makes sense to describe how the sets overlap. For example, perhaps Jim and Ryan invite a classmate named Paul to also go to dinner. Then, they find out that Paul is a vegan who won't eat at a restaurant that serves meat. In this case, the Venn diagram of dinner preferences would look a little different.
+\begin{image}
+\begin{tikzpicture}
+\draw[thick] (0,0) circle (1in);
+\draw[thick] (2,0) circle (1in);
+\draw[thick] (10,0) circle (1in);
+\node at (1,1) {Taco Bell};
+\node at (-1.5,0) {Chipotle};
+\node at (3.5,1) {KFC};
+\node at (1,0) {Panera};
+\node at (3.5,0){Five Guys};
+\node at (-1, 1) {Moe's};
+\node at (3.5, -1) {Wendy's};
+\node at (10,0) {Neehee's};
+\node at (-1, -3) {Ryan's choices};
+\node at (3, -3) {Jim's choices};
+\node at (10, -3) {Paul's choices};
+\end{tikzpicture}
+\end{image}
+In this particular case, the Venn diagram describes that there isn't a good choice for these three people to go to dinner. Please feel free to google some more examples of Venn diagrams to see many other types of configurations!
+
+We can also use Venn diagrams to show how various categories of shapes are related to one another or to depict shapes that have particular properties. For instance, perhaps we wanted to use a Venn diagram to compare polygons that have four sides and polygons that are regular. We might draw a Venn diagram like the one below which has trapezoids, squares, parallelograms, and rhombuses inside the left circle. It has squares, regular pentagons, rhombuses, equilateral triangles, and regular octagons in the right circle.
+
+\begin{image}
+\begin{tikzpicture}
+\draw[thick] (0,0) circle (1.5in);
+\draw[thick] (4,0) circle (1.5in);
+\node at (1.5,1) {squares};
+\node at (-1.5,0) {parallelograms};
+\node at (5.5,1) {regular pentagons};
+\node at (2,0) {rhombuses};
+\node at (5.5,0){equilateral triangles};
+\node at (-1, 1) {trapezoids};
+\node at (5.5, -1) {regular octagons};
+\node at (0, -4) {four sides};
+\node at (4, -4) {regular};
+\end{tikzpicture}
+\end{image}
+
+\begin{question}
+According to the Venn diagram above, which shapes have both four sides and are regular? Select all that apply.
+\begin{selectAll}
+\choice[correct]{squares}
+\choice{trapezoids}
+\choice{equilateral triangles}
+\choice{regular pentagons}
+\choice{parallelograms}
+\choice[correct]{rhombuses}
+\choice{regular octagons}
+\end{selectAll}
+\end{question}
+
+
+
+\end{document}

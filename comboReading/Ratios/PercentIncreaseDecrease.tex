@@ -1,0 +1,245 @@
+\documentclass{ximera}
+
+\input{../preamble.tex}
+
+
+\title{Percent increase and decrease}
+\author{Jenny Sheldon}
+
+\begin{document}
+
+\begin{abstract}
+We return to calculating percents.
+\end{abstract}
+\maketitle
+
+\section{Activities for this section:} 
+\link[Percent Increase and Decrease]{https://ximera.osu.edu/m4t/elementaryActivities/SemesterOnePacket/elementaryActivities/Ratios/PercentIncreaseDecrease}
+
+\section{Percents as rates}
+
+Our definition for percent is that $P\%$ means the fraction $\frac{P}{100}$ of some whole. However, another convenient way to think about what a percent means is that $P\%$ is a rate per $100$. In other words, if we say that $25\%$ of a collection of $1000$ marbles are blue, then $25$ marbles per every $100$ marbles are blue. We could then find the total number of blue marbles by first calculating how many groups of $100$ marbles are in $1000$ marbles (a division question for $1000 \div 100$) and then multiplying this number of groups by $25$, since every copy of $100$ marbles would have $25$ blue ones. Ohio's mathematics standards indicate that children in 6th grade should practice working with percents using this thinking.
+
+Let's work through an example.
+
+\begin{example}
+Consider the following story problem.
+
+\emph{Mr. Underhill is making punch for an end-of-year party. The school requires any punch served to contain $30\%$ fruit juice. If Mr. Underhill needs to make $50$ liters of punch for the party, how many liters of fruit juice must be used?}
+
+Let's see how to solve this problem by thinking about the percent as a rate.
+
+We said that $30\%$ of the liters of punch as a rate means $\answer[given]{30}$ out of every $100$ liters of punch. Let's use this rate in two different ways. First, we can change this rate into a ratio of $30:100$ liters of fruit juice to liters of punch and think of this like a recipe for the punch. One batch of punch contains $30$ liters of fruit juice and makes $100$ liters of punch total. Since we need to make $50$ liters of punch, we see that we want $\answer[given]{\frac{1}{2}}$ of a batch since $50$ is half of $100$. Since we are thinking about batches, we should have multiplication in our minds. Using one group as one \wordChoice{\choice{liter of punch} \choice{liter of fruit juice} \choice[correct]{batch} \choice{classroom}} and one object as one liter of punch, we can see that we have a total of $\answer[given]{\frac{1}{2}}$ of a group with $100$ liters of punch per group, giving us the following multiplication.
+\begin{image}
+\begin{tikzpicture}
+\node at (0, 0) {$\frac{1}{2}$};
+\node at (0.5, 0) {$\times$};
+\node at (1, 0) {$100$};
+\node at (1.5, 0) {$=$};
+\node at (2, 0) {$50$};
+\node[left] at (-0.75, -1) {\# of };
+\node[left] at (-0.75, -1.35) {batches}; 
+\node at (1,-1) {\# of L of punch};
+\node at (1, -1.35) { per batch}; 
+\node[right] at (2.8, -1) {total L of};
+\node[right] at (2.8, -1.35) {punch};
+\draw[->] (-0.75, -0.75)--(-0.1, -0.35);
+\draw[->] (1, -0.75)--(1, -0.4);
+\draw[->] (2.75, -0.75)--(2, -0.4);
+\end{tikzpicture}
+\end{image}
+Since we have a ratio, we have to keep the same relationship between the punch and the fruit juice, so we will also make half a batch of the fruit juice.
+\begin{image}
+\begin{tikzpicture}
+\node at (0, 0) {$\frac{1}{2}$};
+\node at (0.5, 0) {$\times$};
+\node at (1, 0) {$30$};
+\node at (1.5, 0) {$=$};
+\node at (2, 0) {$?$};
+\node at (-0.75, -1) {\# of };
+\node at (-0.75, -1.35) {batches}; 
+\node at (1,-1) {\# of L juice};
+\node at (1, -1.35) { per batch}; 
+\node at (2.8, -1) {total L};
+\node at (2.8, -1.35) {of juice};
+\draw[->] (-0.75, -0.75)--(-0.1, -0.35);
+\draw[->] (1, -0.75)--(1, -0.4);
+\draw[->] (2.75, -0.75)--(2, -0.4);
+\end{tikzpicture}
+\end{image}
+Simplifying this multiplication, we see that Mr. Underhill should use $\answer[given]{15}$ liters of fruit juice for this recipe.
+
+\end{example}
+
+However, we can also use our thinking about rates to consider the percent as a unit rate. Let's work through the same example again, but thinking about the percent as a unit rate.
+
+\begin{example}
+Consider the following story problem.
+
+\emph{Mr. Underhill is making punch for an end-of-year party. The school requires any punch served to contain $30\%$ fruit juice. If Mr. Underhill needs to make $50$ liters of punch for the party, how many liters of fruit juice must be used?}
+
+Let's see how to solve this problem using a unit rate.
+
+Our story says that $30\% = \frac{30}{100}$ of the punch must be fruit juice. Considering this fraction as a unit rate, we can interpret this as saying that $\frac{30}{100}$ of each one liter of punch must be made of fruit juice. This $\frac{30}{100}$ corresponds to a unit rate for the ratio $30:100$, which we discussed in the previous problem. The unit rate of $\frac{30}{100}$ liters of fruit juice per liter of punch can also be used as how many objects in each group if we take one group to be one \wordChoice{\choice[correct]{liter of punch} \choice{liter of fruit juice} \choice{batch} \choice{classroom}} and one object to be one \wordChoice{\choice{liter of punch} \choice[correct]{liter of fruit juice} \choice{batch} \choice{classroom}}. Now, our $50$ liters of punch is $50$ \wordChoice{\choice[correct]{groups} \choice{objects per group} \choice{total objects}} so we can set up our multiplication equation as follows.
+\begin{image}
+\begin{tikzpicture}
+\node at (0, 0) {$50$};
+\node at (0.5, 0) {$\times$};
+\node at (1, 0) {$\frac{30}{100}$};
+\node at (1.5, 0) {$=$};
+\node at (2, 0) {$?$};
+\node[left] at (-0.75, -1) {\# of L};
+\node[left] at (-0.75, -1.35) {punch}; 
+\node at (1,-1) {\# of L juice};
+\node at (1, -1.35) { per L of punch}; 
+\node[right] at (2.8, -1) {total L};
+\node[right] at (2.8, -1.35) {of juice};
+\draw[->] (-0.75, -0.75)--(0, -0.25);
+\draw[->] (1, -0.75)--(1, -0.4);
+\draw[->] (2.75, -0.75)--(2, -0.4);
+\end{tikzpicture}
+\end{image}
+In other words, this is a multiplication story for $\answer[given]{50} \times \answer[given]{\frac{30}{100}}$. Simplifying this expression we see that Mr. Underhill needs to use $\answer[given]{15}$ liters of fruit juice to make $50$ liters of punch. 
+
+\end{example}
+
+Notice how we have now incorporated multiplication into our solutions for percent problems, which we did not do previously. We have many more tools at our disposal now that we have talked about addition, subtraction, multiplication, division, rates, and ratios, and we encourage you to use any solution method you like. Just be sure to explain why your calculations make sense in terms of their meaning, and never be afraid to draw a picture to help you sort out why you are using the operations that you are using.
+
+
+
+\section{Percent increase and decrease}
+
+When we work with percents, sometimes we would like to use a percent to make something larger or smaller. You might have seen this language on products at the grocery store, saying something like ``Now in a $20\%$ larger package!'' Problems where we increase or decrease a base amount using a percent are called percent increase or decrease problems. Let's take a look at some examples. As with any problems about percents, pay careful attention to what we are using as the whole. 
+
+\begin{example}
+Consider the following story problem. 
+
+\emph{Vera is auditioning to be a backup dancer for her favorite singer. In order to prepare for the audition, Vera plans to practice $20\%$ more hours this week than she practiced last week. If Vera practiced for $15$ hours last week, how many hours should she practice this week?}
+
+Let's solve this problem with a picture. 
+
+First, we remember that the meaning of $20\%$ according to our definition is that $20\%$ means $\frac{\answer[given]{20}}{100}$ of our whole. But what is the whole for this fraction? When Vera wants to practice $20\%$ more this week than last week, this means that she wants to use last week's hours as her original whole, and then add on another $20\%$ of last week's hours. So the whole for this fraction is \wordChoice{\choice{dancing} \choice{one hour} \choice{this week's hours} \choice[correct]{last week's hours}}. Let's draw a picture of our whole. 
+\begin{image}
+\begin{tikzpicture}
+\draw[thick] (0,0) rectangle (5,2);
+\node[below] at (2.5, 0) {last week's hours};
+\end{tikzpicture}
+\end{image}
+We need to find $\frac{20}{100}$ of this whole. Instead of cutting this whole into $100$ equal pieces, let's write an equivalent fraction whose denominator is smaller than $100$. We know that
+\[
+\frac{20}{100} = \frac{\answer[given]{1}}{5},
+\]
+and this fraction with denominator $5$ will be easier to draw. The denominator tells us to cut our whole into $\answer[given]{5}$ equal pieces, and the numerator tells us to shade $\answer[given]{1}$ of those pieces. Let's do that in our picture.
+\begin{image}
+\begin{tikzpicture}
+\draw[fill=red] (0,0) rectangle (1,2);
+\draw[thick] (0,0) rectangle (5,2);
+\foreach \x in {1, 2, ..., 4} \draw[thick] (\x, 0)--(\x, 2);
+\node[below] at (2.5, 0) {last week's hours};
+\end{tikzpicture}
+\end{image}
+We need to find out how many hours are in this shaded region, since these are the extra hours Vera will practice. We know that the entire box represents all of last week's hours, and Vera practiced for $\answer[given]{15}$ hours last week. We have $5$ total boxes and we want to know how many hours are in each box. This is a \wordChoice{\choice{multiplication} \choice{how many groups} \choice[correct]{how many in each group}} story for $15 \div \answer[given]{5}$ if we use one group as one box and one object as one hour. In other words, there are $\answer[given]{3}$ hours in each box. Let's label that in our picture.
+
+\begin{image}
+\begin{tikzpicture}
+\draw[fill=red] (0,0) rectangle (1,2);
+\draw[thick] (0,0) rectangle (5,2);
+\foreach \x in {1, 2, ..., 4} \draw[thick] (\x, 0)--(\x, 2);
+\foreach \x in {1.5, 2.5, 3.5, 4.5} \node at (\x, 1) {$3$ hr};
+\node[text=white] at (0.5, 1) {$3$ hr};
+\node[below] at (2.5, 0) {last week's $15$ hours};
+\end{tikzpicture}
+\end{image}
+
+The additional amount of practice that Vera would like to do this week is $\answer[given]{3}$ hours. However, the question is asking for her total practice time this week, which means we need to combine these $3$ hours with the $15$ hours she practiced last week. The operation we use for combining is \wordChoice{\choice[correct]{addition} \choice{subtraction}}, and so we see Vera's total practice time for this week is $\answer[given]{18}$ hours. Let's draw a picture of all of the hours together.
+
+\begin{image}
+\begin{tikzpicture}
+\draw[fill=red] (7,0) rectangle (8,2);
+\draw[thick] (7,0) rectangle (12,2);
+\foreach \x in {8, 9, 10, 11} \draw[thick] (\x, 0)--(\x, 2);
+\foreach \x in {8.5, 9.5, 10.5, 11.5} \node at (\x, 1) {$3$ hr};
+\node[text=white] at (7.5, 1) {$3$ hr};
+
+\draw[fill=red] (0,0) rectangle (5, 2);
+\foreach \x in {1, 2, 3, 4} \draw[thick, white] (\x, 0)--(\x, 2);
+\foreach \x in {0.5, 1.5, ..., 4.5} \node[text=white] at (\x, 1) {$3$ hr};
+
+
+\node[below] at (2.5, 0) {last week's $15$ hours};
+%\node[below] at (9.5, 0) {last week's $15$ hour};
+
+\draw[thick, <->] (0, -0.2)--(0, -0.7)--(8, -0.7)--(8, -0.2);
+\node[below] at (4, -0.7) {this week's hours};
+\end{tikzpicture}
+\end{image}
+
+
+
+\end{example}
+
+We used a fraction picture to solve this problem, much like we might have done earlier in the semester. The main difference  is that we had to add on the extra $20\%$ rather than simply finding $20\%$ of last week's total. It's important to read the question carefully and make sure you've answered it! Let's try another one.
+
+\begin{example}
+Consider the following story problem. 
+
+\emph{Wafa just heard the news that next year's freshman class will be $45\%$ smaller than this year's freshman class. If this year's freshman class had $960$ students, how many students will be in next year's freshman class?}
+
+First, we know that $45\%$ means $\frac{\answer[given]{45}}{\answer[given]{100}}$ of some whole according to our meaning of percents. We also know that $\frac{1}{100} = \answer[given]{0.01}$ as a decimal (remember that we unbundled our unit twice!) so we can write $\frac{45}{100}$ as a decimal as $\answer[given]{0.45}$.
+
+Next, we need to determine the whole for this problem. When we say that next year's class will be $45\%$ smaller than this year's class, we mean that we would like to calculate $45\%$ of this year's class and then remove these students from this year's class. So, the whole for this percent should be \wordChoice{\choice[correct]{this year's class} \choice{next year's class} \choice{$100$ students} \choice{Wafa's friends}}.
+
+Now, let's calculate $45\%$ of this year's class by reasoning about operations. If we think about this year's class as one group of students, we know this group contains $\answer[given]{960}$ students. In other words, we could say that we have $960$ students per this year's class. We are thinking of one student as one \wordChoice{\choice{group} \choice[correct]{object}} and the full amount of this year's class as one \wordChoice{\choice[correct]{group} \choice{object}}. We know the number of objects per group, but how many groups do we want? We are looking for $0.45$ of this year's class, so we can say that we are looking for the total number of students in $0.45$ of a group. We can fit this into our definition of multiplication as follows.
+\begin{image}
+\begin{tikzpicture}
+\node at (0, 0) {$0.45$};
+\node at (0.5, 0) {$\times$};
+\node at (1, 0) {$960$};
+\node at (1.5, 0) {$=$};
+\node at (2, 0) {$?$};
+\node[left] at (-0.75, -1) {amt of last};
+\node[left] at (-0.75, -1.35) {year's class}; 
+\node at (1,-1) {\# of students};
+\node at (1, -1.35) { per last year}; 
+\node[right] at (2.8, -1) {total};
+\node[right] at (2.8, -1.35) {students};
+\draw[->] (-0.75, -0.75)--(0, -0.25);
+\draw[->] (1, -0.75)--(1, -0.4);
+\draw[->] (2.75, -0.75)--(2, -0.4);
+\end{tikzpicture}
+\end{image}
+This is a multiplication problem for $\answer[given]{0.45} \times \answer[given]{960}$, and we simplify this product to get $\answer[given]{432}$ students. 
+
+However, these are the students that we don't want in next year's total, so we want to take away this number from $\answer[given]{960}$. Taking away means we use the operation of \wordChoice{\choice{addition} \choice[correct]{subtraction}} and see that next year's class will have $960 - 432 =\answer[given]{528}$ students.
+
+\end{example}
+
+There's another way to reason about operations that we'd like to mention here, and it's a bit more algebra focused than what we just did. Because the whole is always equal to $100\%$ of itself, we can reason that since we don't want $45\%$ of the students, that means we do want $100\% - 45\% = 55\%$ of the students. Then, instead of finding $0.45$ of this year's students, we can instead directly calculate $0.55$ or $55\%$ of this year's students. Remembering that $100\%$ as a decimal is $1$, we have the following.
+\begin{align*}
+(1 - 0.45) \times 960 &= \textrm{ total students for next year} \\
+0.55 \times 960 &= \textrm{ total students for next year} \\
+528 &= \textrm{ total students for next year}
+\end{align*}
+We are using the same groups and objects per group for this multiplication, but instead of thinking about the students we want to remove from this situation, we are thinking about the students we want to keep, and we get to do one fewer step in our calculations. 
+
+There are still more ways to think about percent problems. We hope these examples have given you good models for how we want to connect percent problems to fractions, decimals, rates, ratios, and all the operations we have studied. Compare your work now to the work you did when we first solved percent problems and I hope you can see that you've come a long way!
+
+\begin{question}
+How can you identify the whole in percent increase or decrease problems?
+\begin{multipleChoice}
+\choice{The whole is always the smaller number.}
+\choice{The whole is always the larger number.}
+\choice[correct]{The whole is always the original amount.}
+\choice{The whole is always the new amount after increasing or decreasing.}
+\choice{There is no rule for finding the whole.}
+\end{multipleChoice}
+\end{question}
+
+
+\end{document}
+
+
+
+
+
+

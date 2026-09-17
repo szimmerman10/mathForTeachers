@@ -1,0 +1,213 @@
+\documentclass{ximera}
+
+\input{../preamble.tex}
+
+
+\title{Percent}
+\author{Jenny Sheldon}
+
+\begin{document}
+
+\begin{abstract}
+We interpret percents as fractions.
+\end{abstract}
+\maketitle
+
+
+\section{Percent}
+
+You have probably seen percents in your every-day life. They are common when we talk about things like ``there is a 50\% chance of snow tomorrow'' or  a``33\% discount''.
+\begin{question}
+What are one or two examples of percents you have seen in your every-day life?
+\begin{freeResponse}
+Write your thoughts here!
+\end{freeResponse}
+\end{question}
+
+While each of these examples might bring different kinds of calculations to mind, in this course we want to primarily think about percents as a specific type of fraction.
+
+\begin{definition}
+When we write $P\%$ of some whole, we will mean the fraction $\frac{P}{100}$ of that whole. 
+\end{definition}
+
+So, for example, if we are talking about $20\%$ of the girls in the class, we also want to be thinking about $\frac{20}{100}$ of the girls in the class.
+
+\begin{question}
+What fraction are we thinking about if we are talking about $38\%$ of all species of butterflies?
+
+\begin{prompt}
+$\frac{\answer{38}}{\answer{100}}$ of all species of butterflies
+\end{prompt}
+\end{question}
+
+\begin{question}
+What fraction are we thinking about if we are talking about $12.5\%$ of the cookies in a jar?
+
+\begin{prompt}
+$\frac{\answer{12.5}}{\answer{100}}$ of the cookies in a jar
+\end{prompt}
+\end{question}
+
+Notice now that since percents are special cases of fractions, they always have some whole associated with them. Make it a habit to look for what the percent is \emph{of}, even if the word ``of'' doesn't occur near the fraction. Correctly interpreting and solving percent problems depends on correctly identifying the whole, just like other types of fraction problems. Also, watch out for times when the same physical object is interpreted with a different percent depending on what part of the physical object the whole is taken to be.
+
+Second, notice that unlike the fractions we worked with in the previous section, we're now considering fractions where the numerator isn't necessarily a whole number.  We'll talk about decimals in the next section, so for now we will keep our numerators mostly whole numbers.
+
+At this point, you might be asking yourself, ``why do we need percents when we already have fractions?" That's a great question, and the answer is related to comparing fractions. We spent a lot of time in that section trying to write fractions in ways where either their numerators or their denominators were the same so that we knew how to compare them. When we work with percents, the denominators are always $100$, so if we have the same whole we know it's being cut into the same number of equal-sized pieces and we can compare the numerators only.
+
+\begin{question}
+Which is larger: $43\%$ of a crate of pencils, or $27\%$ of the same crate of pencils?
+
+\begin{multipleChoice}
+\choice[correct]{$43\%$ of the crate of pencils}
+\choice{$27\%$ of the crate of pencils}
+\choice{They are the same.}
+\choice{It's impossible to tell from this information.}
+\end{multipleChoice}
+\end{question}
+
+Now that we understand why we might want percents, let's turn to representing them and solving problems.
+
+\begin{example}
+Let's show how to represent $43\%$ of a crate of pencils in a picture. First, we remember the definition of a percent: $P\%$ means we are working with the fraction $\frac{P}{100}$, so in this case $43\%$ means we are working with the fraction $\frac{\answer[given]{43}}{\answer[given]{100}}$. Next, since this is a fraction, we need to identify our whole. In the question above, the whole was \wordChoice{\choice{one pencil} \choice[correct]{one crate of pencils} \choice{a classroom} \choice{43} \choice{100}}. We can now draw a rectangle to represent our whole.
+
+\begin{image}
+\begin{tikzpicture}
+\draw[thick] (0,0)--(10,0)--(10,10)--(0,10)--(0,0);
+\node[below] at (5,0) {one crate of pencils};
+\end{tikzpicture}
+\end{image}
+
+Since the denominator of our fraction tells us how many equal pieces to cut our whole into, and the denominator in this case is $\answer[given]{100}$, we cut our whole into $100$ equal-sized pieces.
+
+\begin{image}
+\begin{tikzpicture}
+\draw[thick] (0,0) grid (10,10);
+\node[below] at (5,0) {one crate of pencils};
+\end{tikzpicture}
+\end{image}
+
+Finally, since the numerator of our fraction tells us how many equal pieces we want to shade, we shade in $\answer[given]{43}$ of the equal pieces in our whole. 
+
+\begin{image}
+\begin{tikzpicture}
+\draw[fill=lime] (0,0)--(5,0)--(5,3)--(4,3)--(4,10)--(0,10)--(0,0);
+\draw[thick] (0,0) grid (10,10);
+\node[below] at (5,0) {one crate of pencils};
+\end{tikzpicture}
+\end{image}
+
+Now the shaded region represents $43\%$ of the crate of pencils. 
+
+\end{example}
+
+We don't know how many pencils there are in this particular crate, but we can still cut the entire crate of pencils into $100$ equal pieces. However, if we had more information about this crate of pencils, we could also include that in our picture and use it to solve problems. Let's tackle such an example.
+
+\begin{question}
+Mrs. Meyer got a crate of $300$ pencils to give out to her students as prizes. At the end of the year, Mrs. Meyer has used $43\%$ of the pencils in the crate. How many pencils has Mrs. Meyers used?
+
+\begin{explanation}
+We have already explained how to interpret the percent $43\%$ as $\frac{43}{100}$ of all the pencils in the crate, and we just drew a picture of this fraction. But now we know that there are $300$ pencils in this crate. One option would be to cut each of the boxes above into three equal boxes, so that each box represents one pencil.
+
+\begin{image}
+\begin{tikzpicture}
+\draw[fill=lime] (0,0)--(5,0)--(5,3)--(4,3)--(4,10)--(0,10)--(0,0);
+\draw[thick] (0,0) grid (10,10);
+\foreach \x in {0.333, 0.666, 1.333, 1.666, 2.333, 2.666, 3.333, 3.666, 4.333, 4.666, 5.333, 5.666, 6.333, 6.666, 7.333, 7.666, 8.333, 8.666, 9.333, 9.666} \draw[thick, dotted] (0, \x)--(10,\x);
+\node[below] at (5,0) {one crate of pencils};
+\end{tikzpicture}
+\end{image}
+We drew the new lines as dotted lines so that you can still see the original picture. While it looks like we drew some horizontal lines, remember that our focus is cutting {\bf each} of the pieces into more pieces, the way we did with equivalent fractions.  Our picture shows that 
+\[
+\frac{43}{100} = \frac{129}{\answer[given]{300}}
+\]
+of a crate of pencils. Children will first find the numerator by counting the number of boxes or skip-counting by threes. Later, they can use multiplication to count the shaded boxes. Either way, we can see that Mrs. Meyer used $\answer[given]{129}$ pencils from her crate.
+
+%However, this picture can be drawn in many ways. If we return to the original picture of $43\%$, we can imagine again that this entire picture represents the $300$ pencils in the crate. Instead of cutting the boxes, we can imagine distributing the pencils equally among the boxes and counting how many pencils end up in each box. (Alternatively, you can use some division if you feel comfortable with that topic, but remember that kids can get pretty far with counting and determination!)
+%
+%\begin{image}
+%\begin{tikzpicture}
+%\draw[fill=lime] (0,0)--(5,0)--(5,3)--(4,3)--(4,10)--(0,10)--(0,0);
+%\draw[thick] (0,0) grid (10,10);
+%\foreach \x in {0.5, 1.5, 2.5, ..., 9.5} \foreach \y in {0.5, 1.5, 2.5, ..., 9.5} \node at (\x,\y) {$3$};
+%\node[below] at (5,0) {one crate of pencils};
+%\end{tikzpicture}
+%\end{image}
+%
+%We placed the number $3$ inside each box to indicate that after distributing all of the $300$ pencils into the $100$ equal-sized pieces, there are $3$ pencils in each box. Now, Mrs. Meyer used the pencils in the shaded boxes, so we can either count or use multiplication to find that she used $\answer[given]{129}$ pencils.
+
+\end{explanation}
+
+\end{question}
+
+Let's work through one more example to see how the meaning of fractions can help us solve percent problems.
+
+\begin{question}
+Ebony has $8$ cups of flour, and this amount represents $40\%$ of the flour she needs to bake a very large loaf of bread. How many cups of flour does Ebony need to bake the loaf of bread?
+
+\begin{explanation}
+We will start by thinking about the meaning of the percent in this problem. We know that $P\%$ means the fraction $\frac{P}{100}$, so our $40\%$ means $\frac{\answer[given]{40}}{\answer[given]{100}}$. Next, since we have a fraction we need to identify its whole. In this case, the whole for the fraction is \wordChoice{\choice[correct]{all the flour for the bread} \choice{one cup of flour} \choice{a classroom} \choice{40} \choice{100}}. Let's draw a picture of our whole.
+
+\begin{image}
+\begin{tikzpicture}
+	\draw[thick] (0,0)--(5,0)--(5,2)--(0,2)--(0,0);
+	\node[below] at (2.5, 0) {all the flour};
+\end{tikzpicture}
+\end{image}
+
+Next, we know that we need to shade $\frac{40}{100}$ of this whole, but I'd rather not cut it into $100$ equal pieces. Instead, let's use an equivalent fraction. (Remember to think about how you could show that these fractions are equivalent with a picture!)
+
+\[
+\frac{40}{100} = \frac{\answer[given]{2}}{5}
+\]
+
+In other words, if we want to shade $40\%$ of all the flour, we can instead shade $\frac{2}{5}$ of all the flour. So, let's use the meaning of fractions. The denominator tells us to cut our whole into $\answer[given]{5}$ equal pieces, and the numerator tells us to shade $\answer[given]{2}$ of those pieces. Let's go ahead and do that in our picture.
+
+\begin{image}
+\begin{tikzpicture}
+	\draw[fill=teal] (0,0)--(2,0)--(2,2)--(0,2)--(0,0);
+	\draw[thick] (0,0)--(5,0)--(5,2)--(0,2)--(0,0);
+	\foreach \x in {1, 2, 3, 4} \draw[thick] (\x, 0)--(\x,2);
+	\node[below] at (2.5, 0) {all the flour};
+\end{tikzpicture}
+\end{image}
+
+The problem tells us that Ebony's $8$ cups of flour is the same as the $40\%$ of all of the flour, so that means that in this case it's the shaded region in the picture which represents those $8$ cups. In other words, if we distribute those $8$ cups of flour equally into the two shaded pieces and count how many cups are in each piece, there will be $4$ cups of flour per piece. Let's add that information to our picture by writing $4$ cups of flour in each box.
+
+\begin{image}
+\begin{tikzpicture}
+	\draw[fill=teal] (0,0)--(2,0)--(2,2)--(0,2)--(0,0);
+	\draw[thick] (0,0)--(5,0)--(5,2)--(0,2)--(0,0);
+	\foreach \x in {1, 2, 3, 4} \draw[thick] (\x, 0)--(\x,2);
+	\foreach \a in {0.5, 1.5} \node[text=white] at (\a, 1) {4c};
+	\node[below] at (2.5, 0) {all the flour};
+\end{tikzpicture}
+\end{image}
+
+However, we know that each of the pieces in the picture are equal, so if each of the shaded pieces are $4$ cups, each of the non-shaded pieces must also be $4$ cups. Let's add that information to our picture as well. 
+
+\begin{image}
+\begin{tikzpicture}
+	\draw[fill=teal] (0,0)--(2,0)--(2,2)--(0,2)--(0,0);
+	\draw[thick] (0,0)--(5,0)--(5,2)--(0,2)--(0,0);
+	\foreach \x in {1, 2, 3, 4} \draw[thick] (\x, 0)--(\x,2);
+	\foreach \a in {0.5, 1.5} \node[text=white] at (\a, 1) {4c};
+	\foreach \a in {2.5, 3.5, 4.5} \node at (\a, 1) {4c};
+	\node[below] at (2.5, 0) {all the flour};
+\end{tikzpicture}
+\end{image}
+To answer the question, we need to know how many cups are in all the flour, or in other words how many cups are in the entire diagram. We can count, add, or multiply to find that there are $\answer[given]{20}$ cups of flour total, and that's our answer!
+
+
+\end{explanation}
+\end{question}
+
+You have probably solved  percent problems using other strategies. For now, we want to focus on strategies like these, where we use a picture and the meaning of both percents and fractions in order to solve problems. Later, after we talk about operations, we'll return to percents and make sense of some other methods as well.
+
+
+\end{document}
+
+
+
+
+
+

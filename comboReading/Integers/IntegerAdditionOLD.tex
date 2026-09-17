@@ -1,0 +1,182 @@
+\documentclass{ximera}
+
+\input{../preamble.tex}
+
+\title{Addition with Integers}
+\author{Vic Ferdinand, Betsy McNeal, Jenny Sheldon}
+
+\begin{document}
+
+\begin{abstract}
+We look at adding integers.
+\end{abstract}
+\maketitle
+
+
+Now that we have thought about several ways to represent integers, as well as different models that will 
+help us try to make sense of operations with integers, we are ready to dive in to talk about addition with 
+integers.  We will start by thinking again about addition with positive numbers, and try to use what we 
+already know to build what we would like to know.  We hope this is becoming one of your practices any time 
+you encounter a new mathematical concept!
+
+As we begin this section, you may want to consider re-reading the sections in your text about addition with 
+whole numbers, since we plan to build from this beginning.
+
+\subsection{Checks and Bills}
+
+Let's begin with one of our most basic addition examples.
+\begin{example}
+Johnny has $9$ apples, and Suzy gives him $2$ more apples.  How many apples does Johnny have now?  Write an expression using the addition sign which solves this problem. $\answer[given]{9 + 2}$
+\end{example}
+
+If we change this example to a story about checks and bills, we might use the following instead.
+\begin{example}
+Johnny opens his business for today with a net worth of \$$9$, and then he receives a check for \$$2$.  What is Johnny's net worth now?
+\begin{explanation}
+Johnny begins with a net worth of \$$9$.  From our checks and bills model, we know that receiving something means we should \wordChoice{\choice[correct]{add the value to} \choice{subtract the value from}} Johnny's total net worth.  Since the object he receives is a check, the value should be \wordChoice{\choice[correct]{positive} \choice{negative}}.  Therefore, the expression we would write which solves this problem is $\answer[given]{9 + 2}$.
+\end{explanation}
+\end{example}
+
+Let's begin to include some negative numbers in our stories.
+\begin{question}
+Johnny opens his business for today with a net worth of \$$-8$, and then he receives a 
+check for \$$4$.  What is Johnny's net worth now?
+\begin{prompt}
+Johnny's net worth is now $-8 + \answer[given]{4}$.
+\end{prompt}
+\end{question}
+
+\begin{question}
+Johnny opens his business for today with a net worth of \$$-22$, and then he receives a bill for \$$54$.  What is Johnny's net worth now?
+\begin{prompt}
+Johnny's net worth is now 
+$-22+\answer[given]{-54}$.
+\end{prompt}
+\end{question}
+
+Since we are focusing our attention on addition, all of these story problems are about Johnny receiving something in the mail.  His total net worth sometimes increases and sometimes decreases as a result of the value of what he receives in the mail.
+
+There are several important things to notice with these examples.  First, our story gives us a good idea whether Johnny's net worth at the end of the day should be positive or negative.  If we begin with a positive net worth, and then add a positive number to it, we expect a positive net worth.  If we begin with a negative net worth, and then add a negative number to it, we expect a negative net worth.  If we start with a positive net worth, and then add a negative number to it, we could get a positive net worth or a negative net worth depending on the relative sizes of the numbers.  Making these conclusions didn't require us to know any ``rules'' about negative numbers at all!  Thinking about what the story tells us about the sign of the answer will be important when we start to ask questions about multiplication with negative numbers, so we would like to start practicing this skill now.
+
+A second thing to notice is that we need to exercise care with the question we ask in our checks and bills stories.  Writing a good question to go along with your story problem is for many people the most difficult part about writing story problems.  Here are some examples of questions to avoid.
+
+\begin{example}
+Johnny receives a check for \$$18$ and a bill for \$$14$.  What is Johnny's net worth now?
+\begin{explanation}
+We don't actually have enough information to answer this question, because we don't know what Johnny's net worth was when the day began.  If he began with a net worth of \$$10$, his new net worth is $\answer[given]{10 + 18 + (-14)}$.  If he began the day with \$$0$, his new net worth is $\answer[given]{0 + 18 + (-14)}$.  The second answer is likely what the writer of this question was aiming for, but we can't know for sure!
+\end{explanation}
+\end{example}
+
+\begin{example}
+Johnny starts the day with a net worth of \$$7$, and then receives a bill for \$$5$.  How much did Johnny's net worth decrease?
+\begin{explanation}
+This story looks very similar to our first addition story at a glance, but if we read the question carefully, we see an important difference.  We are asked how much Johnny's net worth {\em decreases}, so we do not need the information about his beginning net worth.  Our bill was for \$$5$, so his net worth decreases by $\answer[given]{5}$.  Notice that this answer is positive, even though our bill is a negative number, and that this story no longer models $7 + (-5)$.
+\end{explanation}
+\end{example}
+
+Any time you write a story problem, it's an excellent practice to go back and try to answer the question from an objective perspective.  Is the question really asking what you intend?  Is there any other way the question could be interpreted?  Especially in class or on a homework assignment, ask someone else for their opinion!
+
+
+
+
+\subsection{Number Lines}
+
+Next, let's use a number line to solve some addition problems with integers.  You can write a story problem to go along with each of these addition problems for extra practice.
+
+\begin{example}
+Imagine using a number line like the one below to solve the addition problem $5 + 3$.
+\begin{center}
+\begin{tikzpicture}[font=\Large]
+\draw[<->] (-0.5,0) -- (12.5,0);
+\foreach \x in {0,1.5, 3, 4.5, 6, 7.5, 9, 10.5,12}
+\draw[shift={(\x,0)},color=black] (0pt,3pt) -- (0pt,-2pt);
+\draw (0,0) node[below]{$-4$};
+\draw (1.5,0) node[below]{$-3$};
+\draw (3,0) node[below]{$-2$};
+\draw (4.5,0) node[below]{$-1$};
+\draw (6,0) node[below]{$0$};
+\draw (7.5,0) node[below]{$1$};
+\draw (9,0) node[below]{$2$};
+\draw (10.5,0) node[below]{$3$};
+\draw (12,0) node[below]{$4$};
+\end{tikzpicture}  
+\end{center}
+We begin by standing on the number line at the tick marked with $\answer[given]{5}$.  Since we are adding, we move 
+\wordChoice{\choice[correct]{forward} \choice{backward}}.  We will face 
+\wordChoice{\choice[correct]{right} \choice{left}} since $3$ is positive and move $\answer[given]{3}$ spaces.  
+Where on the number line are we now? 
+
+\begin{prompt}
+We are located at the tick labeled $\answer[given]{8}$.
+\end{prompt}
+\end{example}
+
+\begin{example}
+Imagine using a number line like the one below to solve the addition problem $-8 + 4$.
+\begin{center}
+\begin{tikzpicture}[font=\Large]
+\draw[<->] (-0.5,0) -- (12.5,0);
+\foreach \x in {0,1.5, 3, 4.5, 6, 7.5, 9, 10.5,12}
+\draw[shift={(\x,0)},color=black] (0pt,3pt) -- (0pt,-2pt);
+\draw (0,0) node[below]{$-4$};
+\draw (1.5,0) node[below]{$-3$};
+\draw (3,0) node[below]{$-2$};
+\draw (4.5,0) node[below]{$-1$};
+\draw (6,0) node[below]{$0$};
+\draw (7.5,0) node[below]{$1$};
+\draw (9,0) node[below]{$2$};
+\draw (10.5,0) node[below]{$3$};
+\draw (12,0) node[below]{$4$};
+\end{tikzpicture}  
+\end{center}
+We begin by standing on the number line at the tick marked with $\answer[given]{-8}$.  Since we are adding, we will move
+\wordChoice{\choice[correct]{forward} \choice{backward}}.  We will face 
+\wordChoice{\choice[correct]{right} \choice{left}}, since $4$ is positive and move $\answer[given]{4}$ spaces.  
+Where on the number line are we now? $\answer[given]{-4}$
+\end{example}
+
+\begin{example}
+Imagine using a number line like the one below to solve the addition problem $(-22) + (-54)$.
+\begin{center}
+\begin{tikzpicture}[font=\Large]
+\draw[<->] (-0.5,0) -- (12.5,0);
+\foreach \x in {0,1.5, 3, 4.5, 6, 7.5, 9, 10.5,12}
+\draw[shift={(\x,0)},color=black] (0pt,3pt) -- (0pt,-2pt);
+\draw (0,0) node[below]{$-4$};
+\draw (1.5,0) node[below]{$-3$};
+\draw (3,0) node[below]{$-2$};
+\draw (4.5,0) node[below]{$-1$};
+\draw (6,0) node[below]{$0$};
+\draw (7.5,0) node[below]{$1$};
+\draw (9,0) node[below]{$2$};
+\draw (10.5,0) node[below]{$3$};
+\draw (12,0) node[below]{$4$};
+\end{tikzpicture}  
+\end{center}
+We begin by standing on the number line at the tick marked with $\answer[given]{-22}$.  Since we are adding, we will move
+\wordChoice{\choice[correct]{forward} \choice{backward}}.  We will face 
+\wordChoice{\choice{right} \choice[correct]{left}} since $54$ is negative and move $\answer[given]{54}$ spaces .  
+Where on the number line are we now? $\answer[given]{-76}$
+\end{example}
+
+Again, notice that the direction of our movement on the number line gives us a sense as to whether the final answer should be positive or negative!
+
+\subsection{Patterns}
+
+Finally, we investigate addition of negative numbers via patterns.
+\begin{example}
+Consider the sequence of addition problems.
+\begin{align*}
+5 + 4 &= \answer[given]{9} \\
+5 + 3 &= \answer[given]{8} \\
+5 + 2 &= \answer[given]{7} \\
+5 + 1 &= \answer[given]{6} \\
+5 + 0 &= \answer[given]{5}
+\end{align*}
+As we move down the chart, moving one row down results in the final answer decreasing by $\answer[given]{1}$.  So, if the pattern continues to hold, we expect the answer to $5 + (-1)$ to be $\answer[given]{4}$, since it is one less than $5$.
+\end{example}
+Try your hand at recognizing patterns with some other addition problems.
+
+Finally, notice that no matter how we approach the problems in this section, we are getting consistent answers.  Whether we use a checks and bills story, a number line, or a pattern, we are always getting the same answer.  This is not only comforting, it is necessary for addition as an operation!
+
+\end{document}

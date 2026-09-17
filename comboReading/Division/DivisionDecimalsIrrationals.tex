@@ -1,0 +1,228 @@
+\documentclass{ximera}
+
+\input{../preamble.tex}
+
+
+\title{Division, fractions, and irrational numbers}
+\author{Jenny Sheldon}
+
+\begin{document}
+
+\begin{abstract}
+We build to the idea of irrational numbers..
+\end{abstract}
+\maketitle
+
+\section{Activities for this section:} 
+\link[Fractions and division]{https://ximera.osu.edu/m4t/elementaryActivities/SemesterOnePacket/elementaryActivities/Division/FractionsAndDivision}
+
+\section{Division and fractions}
+
+You may have noticed that we have so far written division problems like this.
+\[
+5 \div 2
+\]
+But you might also recall having seen division problems written like this.
+\[
+5 / 2
+\]
+And that notation is really the same as writing division like this.
+\[
+\frac{5}{2}
+\]
+However, this last notation is the same thing that we have used for fractions, but we have  different definitions for fractions and for division. However, once we understand how these two ideas are different, we will also see that the answer to the division problem $5 \div 2$ is  the fraction $\frac{5}{2}$. We'll use a story problem to illustrate.
+
+\begin{example}
+Consider the following story problem. 
+
+\emph{Manuel and Akira have a total of $5$ liters of water that they would like to split equally between them. How many liters of water will each person get?}
+
+First, we want to see that this is a division problem, so that it can be solved by $5 \div 2$. Next, we want to solve it with a picture to see that the answer is $\frac{5}{2}$. 
+
+
+To see that this is a division problem, we need to identify our groups and objects as well as the type of division. The water is going to be split between the two people, so it makes sense to take one group as one \wordChoice{\choice{liter} \choice{gallon} \choice[correct]{person} \choice{container}}.  And then, we will take one object to be one \wordChoice{\choice[correct]{liter} \choice{gallon} \choice{person} \choice{container}}. We know that we have a total of $\answer[given]{5}$ liters of water, which is our total number of objects. We also know that there are $\answer[given]{2}$ people that are getting water, and this is our number of groups. The piece of information we don't know is how many liters per person or in other words \wordChoice{\choice{how many groups} \choice[correct]{how many objects in each group} \choice{this is a multiplication problem}}. We can write this using our definition of multiplication as follows.
+
+\begin{image}
+\begin{tikzpicture}
+\node at (0, 0) {$2$};
+\node at (0.5, 0) {$\times$};
+\node at (1, 0) {$?$};
+\node at (1.5, 0) {$=$};
+\node at (2, 0) {$5$};
+\node at (-0.75, -1) {\# of };
+\node at (-0.75, -1.35) {people}; 
+\node at (1,-1) {\# of liters};
+\node at (1, -1.35) { per person}; 
+\node at (2.8, -1) {total};
+\node at (2.8, -1.35) {liters};
+\draw[->] (-0.75, -0.75)--(0, -0.25);
+\draw[->] (1, -0.75)--(1, -0.25);
+\draw[->] (2.75, -0.75)--(2, -0.25);
+\end{tikzpicture}
+\end{image}
+
+In other words, this is a how many in each group division story for $5 \div 2$. This expression represents the answer to this division problem in the same way that something like $9 \times 7$ represents the answer to a multiplication problem or $4+13$ represents the answer to an addition problem.
+
+Next, let's draw a picture to solve this problem. We'll start by drawing the $5$ liters of water as $5$ rectangles.
+\begin{image}
+\begin{tikzpicture}
+\foreach \x in {0, 2, 4, 6, 8} \draw[thick] (\x, 0) rectangle (\x+1, 2);
+\foreach \x in {0.5, 2.5, 4.5, 6.5, 8.5} \node[below] at (\x, 0) {$1$ L};
+\end{tikzpicture}
+\end{image}
+
+Since there are $\answer[given]{2}$ people getting water, the easiest way to be sure that we are distributing the water fairly is by cutting each liter into $2$ equal pieces and passing out one piece to each person. Let's draw that in our picture. We will use a dotted line to split each box in half horizontally, and label Manuel's piece with an $M$ and Akira's piece with an $A$.
+
+\begin{image}
+\begin{tikzpicture}
+\foreach \x in {0, 2, 4, 6, 8} \draw[thick] (\x, 0) rectangle (\x+1, 2);
+\foreach \x in {0, 2, 4, 6, 8} \draw[thick, dotted] (\x,1)--(\x+1, 1);
+\foreach \x in {0.5, 2.5, 4.5, 6.5, 8.5} \node at (\x, 0.5) {$A$};
+\foreach \x in {0.5, 2.5, 4.5, 6.5, 8.5} \node at (\x, 1.5) {$M$};
+\foreach \x in {0.5, 2.5, 4.5, 6.5, 8.5} \node[below] at (\x, 0) {$1$ L};
+\end{tikzpicture}
+\end{image}
+
+The question asks us how much water each person gets, so we can look at just Manuel's pieces (since Akira's amount will be the same). We can count in the picture that Manuel gets a total of $\answer[given]{5}$ pieces, and each piece is worth $\frac{1}{2}$ of a liter of water. In other words, using our meaning of fractions, Manuel's share of the water is $\frac{\answer[given]{5}}{2}$ liters of water. These calculations tell us that the answer to this problem for $5 \div 2$ is $\frac{5}{2}$, or that
+
+\[
+5 \div 2 = \frac{5}{2}.
+\]
+
+\end{example}
+
+%note for Jenny: this could also be done with HMG.
+
+We have shown in this example that when we divide, we can also write our answer as a fraction. It makes sense to use the same notation for both ideas, since both of them are the answer to the same division problem. Let's keep exploring this idea, but now also include decimals in our thinking.
+
+\section{Types of decimal numbers}
+
+
+Recall that in \link[Fractions and decimals]{https://ximera.osu.edu/m4t/elementaryTeachersOne/elementaryReading/Numbers/FractionsDecimals}, we used the fact that $0.1 = \frac{1}{10}$ to write the decimal equivalents for fractions like $\frac{3}{20}$ or $\frac{6}{8}$.  We noticed that if we can make an equivalent fraction whose denominator is a power of $10$ (like $10$, $100$, $1000$, etc), we can write the fraction as a decimal by looking at the numerator of that fraction. Decimals like this one, which can be written as a fraction whose denominator is a power of $10$ and whose decimal values stop at some place value, are called \dfn{terminating decimals}. 
+
+
+We saw in our Fractions and Decimals activity that we also have another class of decimals called \dfn{repeating decimals}, where the decimal does not stop at any place value, but repeats over and over in a pattern. For example, the decimal number
+\[
+4.36\overline{25}
+\]
+could also be written as
+\[
+4.36252525252525\dots
+\]
+Where the $2$ and $5$ repeat forever. We draw a line over the repeating part of the decimal so that we know it's the part that repeats.
+
+Repeating decimals cannot be written as a fraction whose denominator is a power of 10, so we cannot use the strategy of the example above to find these decimal numbers. However, we can use the connection between division and fractions to help us.
+
+\begin{example}
+Use the connection between division and fractions to write $\frac{5}{9}$ as a decimal. 
+
+We know that the fraction $\frac{5}{9}$ can be written as the answer to the division problem $5 \div 9$. So, if we calculate the answer to the division problem $5 \div 9$ by using long division, this answer will be equal to the fraction $\frac{5}{9}$. Let's write down the first few steps in the long division.
+
+\begin{image}
+\begin{tikzpicture}[font=\large, every node/.style={inner sep=0pt, outer sep=1pt}]
+
+% Long division symbol
+\draw[thick] (0.8,1.9) -- (3,1.9);
+
+% Dividend and Divisor
+\node at (0.5,1.6) {$9$};
+\node at (0.85,1.6) {\,\big)};
+\node at (1.2, 1.6) { $5$};
+\node at (1.4, 1.5) {$.$};
+\node at (1.7, 1.6) {$0$};
+\node at (2.2, 1.6) {$0$};
+
+\node at (2.7, 1.6) {$0$};
+
+% Quotient
+\node at (1.2,2.3) {$0$};
+\node at (1.4,2.2) {$.$};
+\node at (1.7,2.3) {$5$};
+\node at (2.2,2.3) {$5$};
+\node at (2.7, 2.3) {$5$};
+
+
+
+% First subtraction step
+\node at (1.2,1.1) {$4$};
+\node at (1.7,1.1) {$5$};
+\draw (1,0.9) -- (2.2,0.9);
+\node at (1.7,0.6) {$5$};
+\node at (2.2,0.6) {$0$};
+
+% Bring down arrow for the 8
+\draw[->, thick] (2.2,1.4) -- (2.2,1.0);
+\draw[->, thick] (2.7, 1.4)--(2.7, 0);
+%\node at (2.9,1.3) {↓};
+
+% Second subtraction step
+\node at (1.7,0.1) {$4$};
+\node at (2.2,0.1) {$5$};
+\draw (1.6,-0.1) -- (2.8,-0.1);
+\node at (2.2,-0.4) {$5$};
+\node at (2.7, -0.4) {$0$};
+
+\end{tikzpicture}
+\end{image}
+
+
+
+We can see a pattern here: every time we subtract, our remainder is $5$, and then we drop down a zero next to that and divide $50$ by $9$ to continue. We'll get another remainder of $5$, drop down another zero, and this pattern will continue forever. We can keep placing more zeroes on the end of $5.0$ because we will never see a remainder of zero, no matter how many steps we take. So we can see that the answer to $5 \div 9$ is $0.\overline{5}$ or in other words that
+\[
+\frac{5}{9} = 0.\overline{\answer[given]{5}}
+\]
+as a decimal.
+\end{example}
+
+As we saw in the Fractions and decimals activity, the fact that we only have a finite number of remainders that are possible when we divide by $9$ guarantees that the long division will repeat at some point. In this case the repetition started at the first decimal place. 
+
+We found the pattern very quickly in this case, but sometimes the pattern can take longer to find.
+\begin{question}
+Using long division, what is the decimal equivalent of $\frac{2}{7}$?
+
+\begin{prompt}
+$0.\overline{\answer{285714}}$
+\end{prompt}
+\end{question}
+
+The numbers we have been considering are decimals which can also be written as fractions. Any number which can also be written in the form $\frac{A}{B}$ for integers $A$ and $B$ is called a \dfn{rational number}. (Notice again we said integers, but you can think about this as whole numbers for now.)
+\begin{question}
+Which of the following are rational numbers? Select all that apply.
+\begin{selectAll}
+\choice[correct]{$6$}
+\choice[correct]{$\frac{8}{327}$}
+\choice[correct]{$0.0472$}
+\end{selectAll}
+\begin{hint}
+Remember that a rational number can be placed in the form $\frac{A}{B}$, it does not have to look like that right now!
+\end{hint}
+\end{question}
+The previous question might give you the impression that every number is a rational number, but in fact that's not true. There are many numbers that cannot be written as fractions, no matter how hard we try. For example, the number $\pi$ or the number $\sqrt{2}$ are good examples to keep in mind. These numbers, which cannot be written as fractions, are called \dfn{irrational numbers}. (If you are interested in a proof that $\sqrt{2}$ is irrational, you can find one \link[online]{https://www.mathsisfun.com/numbers/euclid-square-root-2-irrational.html}.)
+
+These connections between division, fractions, and decimals allow us to ask and answer many interesting questions about numbers. (In fact, there is an entire branch of mathematics called ``number theory'' where mathematicians ask and answer questions about numbers!) If this sounds interesting, try out some of the following puzzles!
+
+\begin{itemize}
+	\item How can we predict what power of $10$ we will need to write a terminating decimal?
+	\item How can we predict whether a fraction's decimal will terminate or repeat?
+	\item How can we predict how many long division steps we need to take before a repeating decimal will repeat?
+	\item How can we write down a number we know will be irrational?
+\end{itemize}
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}
+
+
+
+
+
+

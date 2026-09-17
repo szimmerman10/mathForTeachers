@@ -1,0 +1,218 @@
+\documentclass{ximera}
+
+\input{../preamble.tex}
+
+\title{Sequences}
+\author{Jenny Sheldon}
+
+\begin{document}
+
+\begin{abstract}
+We investigate patterns.
+\end{abstract}
+\maketitle
+
+\section{Activities for this section:} 
+\link[Sequences]{https://ximera.osu.edu/m4t/elementaryActivities/SemesterTwoPacket/elementaryActivities/ConnectAlgebraGeometry/Sequences}, 
+\link[Gertrude the gumchewer]{https://ximera.osu.edu/m4t/elementaryActivities/SemesterTwoPacket/elementaryActivities/Measurement/scaleItUp}, 
+\link[I walk the line]{https://ximera.osu.edu/m4t/elementaryActivities/SemesterTwoPacket/elementaryActivities/ConnectAlgebraGeometry/WalkTheLine}
+
+\section{Sequences}
+
+Our goal in this chapter is to connect some of what we've learned in geometry to some of what we've learned with operations and algebra. One important building block for this connection is the idea of \dfn{sequences}.
+
+\begin{definition}
+A \dfn{sequence} is a list of objects in a particular order. The objects of the sequence are called \dfn{elements} or \dfn{terms}.
+\end{definition}
+
+You are probably a little familiar with sequences even if you haven't heard them called by that name before.
+
+\begin{question}
+What is the next element in the following sequence?
+
+\begin{center}
+\dots, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday, Monday, Tuesday, ?, \dots
+\end{center}
+
+\begin{multipleChoice}
+\choice{Monday}
+\choice{Tuesday}
+\choice[correct]{Wednesday}
+\choice{Thursday}
+\choice{Friday}
+\choice{Saturday}
+\choice{Sunday}
+\choice{Something else that's not on this list}
+\end{multipleChoice}
+\end{question}
+
+We can have sequences that are infinite (or they go on forever) and sequences which are finite (or they have a starting and ending element). We can have sequences that are infinite on both sides (they don't have a start or an end, like the example above) or we can have sequences that are infinite only on one side (they have a start, but don't have an end, for example). We'll be focused mostly on sequences that are infinite because of the connections we want to make later. Sequences and sets have a lot in common, but the big difference is that the elements in a sequence come in a specific order and the elements in a set do not.
+
+Kids learn about and use sequences from a young age, but often see them in contexts other than math class.
+\begin{example}
+Draw a pattern involving circles and squares, and identify the sequence used in the pattern.
+
+The pattern I'll choose in this case will be two squares and then one circle. We'll repeat this pattern forever, and we'll show that the pattern repeats forever using dots at the end of the shapes we draw.
+\begin{image}
+\begin{tikzpicture}
+\foreach \x in {0, 1, 3, 4, 6, 7} \draw[thick, fill=black] (\x,0)--(\x+0.5, 0)--(\x+0.5, 0.5)--(\x, 0.5)--(\x,0);
+\foreach \y in {2, 5, 8} \draw[fill=yellow] (\y+0.25,0.25) circle (0.25cm);
+\node at (9,0) {\dots};
+\end{tikzpicture}
+\end{image}
+Let's extend this example by finding the $32$-nd shape in this pattern. We could do this by writing squares and circles until we've made $32$ shapes, but I think we can shortcut our work with a little algebra. We know that the shapes come in groups of three, so we could ask ourselves ``how many groups of $3$ are there in $32$?" This question means we need to use the operation \wordChoice{\choice{addition} \choice{subtraction} \choice{multiplication} \choice[correct]{division (how many groups?)} \choice{division (how many in each group?)}} So we'll take $32 \div 3$ and get $\answer[given]{10}$ with a remainder of $\answer[given]{2}$. (Remember to write specifically what you are using for your groups and your objects!) What does that mean for our sequence? Well, if we take $10$ full groups of $3$, we'll have made $30$ shapes and the $30$th shape will be a \wordChoice{\choice[correct]{circle} \choice{square}}. Since we need to get to the $32$-nd shape, we need to draw two more shapes, meaning that we will end up on a  \wordChoice{\choice{circle} \choice[correct]{square}}.
+\end{example}
+The previous example might be very much at home in an art class. Here's an example that might be at home in a music class.
+\begin{example}
+A drummer is playing a piece of music where they hit the drum on counts 1, 2, and 3, and they do not hit the drum on count 4. These four counts repeat over and over for the entire song. Let's examine this as a sequence.
+
+The elements of the sequence in this case are when the drummer hits the drum (let's call that ``hit'') and when the drummer does not hit the drum (let's call that ``rest''). So the pattern in this case is three hits and then a rest, which we might draw as follows.
+
+\begin{center}
+hit, hit, hit, rest, hit, hit, hit, rest, hit, hit, hit, rest, \dots
+\end{center}
+
+The dots mean that the pattern keeps going, but we keep in the back of our mind that this only continues until the end of the song.
+
+Let's extend this example and ask: if the song ends on a rest, what fraction of the beats is the drummer hitting the drum? Well, we have some number $N$ of copies of the four-beat pattern, and we know that $N$ is a whole number because the song ends on a rest. We can think about cutting this $N$ into pieces using each beat, so that there are $\answer[given]{4}$ equal pieces of the song: one piece for beat one, one piece for beat two, and so on. Now of those equal pieces, the drummer is always hitting the drum on $\answer[given]{3}$ of them, so if we imagine shading in the beats on which the drummer is hitting the drum, we have $\frac{3}{4}$ of the beats shaded, representing that the drummer hits the drum during $\frac{3}{4}$ of the entire song.
+
+\end{example}
+
+We can have sequences that have patterns as well as sequences that don't have patterns. For example, you could generate a list of random numbers in order, like $\{ 1, 5, 2, 9, 9.3, -4, 3, 8, 15, \dots\}$ and this is an example of a sequence because the numbers are in a particular order in this case, but it's hard to know what the next element in this sequence will be. Mostly we will focus on sequences that have patterns so that we can talk about the elements farther in the future of the sequence. There are a few specific patterns that come up frequently, so we will take a look at those patterns individually.
+
+
+\section{Arithmetic sequences}
+The first type of special pattern that we want to investigate is the one we will call an \dfn{arithmetic sequence}.
+\begin{definition}
+An \dfn{arithmetic sequence} is a sequence of numbers whose elements are given by the following pattern. We choose the first element of the sequence to be whatever we would like it to be. The first element is often called the \dfn{initial term}. We then pick another number which we will call $k$. To get the next sequence in the term from any previous sequence, we add this $k$ value to the previous term. The $k$ value is sometimes called the \dfn{common difference}.
+\end{definition}
+
+\begin{question}
+An arithmetic sequence has initial term $4$ and common difference $5$. What are the first few terms in this sequence?
+\begin{prompt}
+\[
+4, 9, 14, \answer[given]{19}, \answer[given]{24}, \answer[given]{29}, \answer[given]{34}, \dots
+\]
+\end{prompt}
+\end{question}
+Arithmetic sequences show up in plenty of places in real-life situations and story problems. We'll investigate a few together in class; here is another example.
+\begin{example}
+A school is renovating their football stadium. They can fit $150$ seats in the first row, and because of the bowl-shape of the stadium they can fit an additional $10$ seats in each row as they go up each row. Let's figure out how many seats are in the $20$-th row. 
+
+We could, of course, use the pattern we've established for an arithmetic sequence and write out the first $20$ rows. But I think we can use the meaning of operations to help us out a little bit. We might consider starting by making a table of the first few rows to get the hang of what's going on.
+\begin{image}
+\begin{tabular}{c|c}
+Row & Number of seats \\ \hline
+1 & 150 \\ \hline
+2 & $160 = 150 + 10$ \\ \hline
+3 & $170 = 150 + 10 + 10$ \\ \hline
+4 & $\answer[given]{180} = 150 + 10 + 10 + 10$ \\ \hline
+5 & $\answer[given]{190} = 150 + 10 + 10 + 10 + 10$ \\ \hline
+\end{tabular}
+\end{image}
+Each time we add another row, we also add another set of $10$ seats. With $2$ rows, we added one set of $10$ seats. With $3$ rows, we added $\answer[given]{2}$ sets of $10$ seats. With $4$ rows, we added $\answer[given]{3}$ sets of $10$ seats, and so on. If we added $N$ rows, we would add $N-1$ sets of $10$ seats. In other words, if we think of each additional row as a group, at the $N$-th row we have $N-1$ groups. In each group we have $10$ seats, so one seat is one object and there are $10$ objects per group. The operation we should use here is   \wordChoice{\choice{addition} \choice{subtraction} \choice[correct]{multiplication} \choice{division (how many groups?)} \choice{division (how many in each group?)}}, so our additional number of seats can be given by the following.
+\[
+\textrm{additional seats for row }N = (N-1)\times 10
+\]
+Now, these are only the additional seats; we also have to combine this number with the number of seats from the first row. To so, we need the operation of \wordChoice{\choice[correct]{addition} \choice{subtraction} \choice{multiplication} \choice{division (how many groups?)} \choice{division (how many in each group?)}} and our equation becomes the following.
+\[
+\textrm{ total seats in row }N = (N-1) \times 10 + 150
+\]
+Now we're ready to find the number of seats in row $20$. Since $N$ means the row number, in this case we have $N=\answer[given]{20}$. So we plug this in to our formula.
+\[
+\textrm{ total seats in row } 20 = \left (\answer[given]{20} - 1 \right ) \times 10 + 150 = \answer[given]{19} \times 10 + 150 = \answer[given]{340}
+\]
+
+\end{example}
+This kind of formula for directly finding an element of an arithmetic sequence is a useful tool. We won't state it generally here, though, because it will look different in different situations depending on the particular sequence we're working with. We'll practice with developing the formulas quite a bit for now, and we'll see it again when we talk about linear functions. Be on the lookout!
+
+
+
+\section{Geometric sequences}
+The next type of special pattern that we want to investigate is the one we will call a \dfn{geometric sequence}.
+\begin{definition}
+A \dfn{geometric sequence} is a sequence of numbers whose elements are given by the following pattern. We choose the first element of the sequence to be whatever we would like it to be. The first element is often called the \dfn{initial term}. We then pick another number which we will call $r$. To get the next sequence in the term from any previous sequence, we multiply this $r$ value to the previous term. The $r$ value is sometimes called the \dfn{common ratio}.
+\end{definition}
+
+\begin{question}
+A geometric sequence has initial term $6$ and common ratio $2$. What are the first few terms in this sequence?
+\begin{prompt}
+\[
+6, 12, 24, \answer[given]{48}, \answer[given]{96}, \answer[given]{192}, \answer[given]{384}, \dots
+\]
+\end{prompt}
+\end{question}
+Geometric sequences also show up in plenty of real-life applications and story problems. Here is one example.
+\begin{example}
+You deposit \$30 in a savings account which earns $2\%$ interest every year. (There are lots of complicated versions of this problem depending on how the interest is ``compounded''; we'll stick with the basic version here.) Assuming you don't deposit any more money in this account, let's find out how much money you will have in the account in $15$ years. 
+
+As we did with the arithmetic sequence, let's start by making a table. Before we do that, notice that 2\% interest means the bank adds (your current balance) $\times 0.02$ to your original balance so that you have all your original money plus 2\% more. In other words, you can calculate your new balance by taking
+\[
+\textrm{ original balance } \times 0.02 + \textrm{original balance} = \textrm{ original balance } \times (1 + 0.02) = \textrm{ original balance } \times 1.02
+\]
+\begin{image}
+\begin{tabular}{c|c}
+Year & Money in the account (rounded to nearest cent) \\ \hline
+0 & 30 \\ \hline
+1 & $ 30.6 = 30 \times 1.02$ \\ \hline
+2 & $31.21 = 30 \times 1.02 \times 1.02$ \\ \hline
+3 & $\answer[tolerance=0.01]{31.84} = 30 \times 1.02 \times 1.02 \times 1.02$ \\ \hline
+4 & $\answer[tolerance=0.01]{32.47} = 30 \times 1.02 \times 1.02 \times 1.02 \times 1.02$ \\ \hline
+\end{tabular}
+\end{image}
+If we remember that we can use an exponent to indicate how many times $1.02$ is multiplied, we have things like $30 \times 1.02^4$ at year $4$. Also notice that in this case we started with year $0$ because we hadn't added any interest yet when we first opened the account. We could have called this year $1$, but the formula we come up with next would be a little different.
+
+To find the amount after $15$ years, we could keep extending this table until we get there, or we can describe the pattern in a different way. Notice that at year $1$, we multiply by $1.02$ one time. At year $2$, we multiply by $1.02$ two times. At year three, we multiply by $1.02$ $\answer[given]{3}$ times. So if we think about what happens at year $N$, we would multiply by $1.02$ $N$ times. This gives us the following formula.
+\[
+\textrm{ amount in the account at year } N = 30 \times 1.02^N
+\]
+So at year $15$, we can substitute $N = \answer[given]{15}$ and get
+\[
+\textrm{ amount in the account at year } 15 = 30 \times 1.02^{15} \approx 40.38.
+\]
+In other words, we would have about \$40 in the account after $15$ years. (In a more practical example, you would be putting more money in this account and then earning even more interest! But that's a much more complicated problem and no longer a geometric sequence.)
+
+\end{example}
+There are plenty of parallels between geometric and arithmetic sequences, and we hope that seeing both types of sequences helps you to understand them better.
+
+
+
+
+\section{Other sequences}
+
+Remember that there are many other types of patterns out there: arithmetic and geometric sequences are not the only ones! For instance, there's a famous sequence called the \dfn{Fibonacci Sequence}.
+\begin{example}
+The Fibonacci sequence is found in the following way. The first two elements of the sequence are both $1$. After that, you find the next element of the sequence by adding the previous elements in the sequence.
+\[
+1, 1, 2, 3, 5, \answer[given]{8}, \answer[given]{13}, \answer[given]{21}, \answer[given]{34}, \dots
+\]
+The Fibonacci sequence tends to appear in \link[real-life applications]{https://www.geeksforgeeks.org/real-life-applications-of-fibonacci-sequence/} like flowers, trees, and poetry. It is also related to something called the \link[golden ratio]{https://en.wikipedia.org/wiki/Golden_ratio} which artists and architects sometimes use to make their work more visually pleasing.
+\end{example}
+
+
+Another example of a sequence is found by using a different mathematical operation.
+
+\begin{example}
+Let's write the terms of the sequence found in the following way. The first term is $3$, and every element after that is found by squaring the place of the term and adding two.
+\[
+3, 6, 11, \answer[given]{18}, \answer[given]{27}, \answer[given]{38}, \answer[given]{51}, \dots
+\]
+
+
+I don't know a practical application of this sequence off the top of my head, but keep this example in mind as we head to the next section to talk about functions.
+
+\end{example}
+
+\begin{question}
+Pause and think: design your own infinite sequence with a pattern that hasn't been mentioned in this section. What are its terms? What is the pattern?
+\begin{freeResponse}
+Write your sequence here!
+\end{freeResponse}
+\end{question}
+
+
+
+
+
+
+\end{document}

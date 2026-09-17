@@ -1,0 +1,238 @@
+\documentclass{ximera}
+
+\input{../preamble.tex}
+
+
+\title{Factors and multiples in common}
+\author{Jenny Sheldon}
+
+\begin{document}
+
+\begin{abstract}
+We solve problems about finding common factors and common multiples.
+\end{abstract}
+\maketitle
+
+\section{Activities for this section:} 
+\link[Count With Me]{https://ximera.osu.edu/m4t/elementaryActivities/SemesterOnePacket/elementaryActivities/FactorsAndMultiples/CountWithMe}, 
+\link[Common Time]{https://ximera.osu.edu/m4t/elementaryActivities/SemesterOnePacket/elementaryActivities/FactorsAndMultiples/CommonTime}
+
+\section{Factors in common}
+
+Once we begin to find factors and multiples, there are some occasions where we would like to know whether or not two numbers have factors in common or to find numbers that are multiples of two or more numbers. Let's begin with common factors.
+
+\begin{question}
+Britt is making a small house in her art class and she wants to cover the floor of the house with colorful rectangles. If the house currently measures $12$cm wide and $30$ cm long, what size rectangles can Britt use so that there are no partial rectangles covering the floor?
+
+\begin{explanation}
+Let's begin by drawing the floor of the house so that we can think about how factors or multiples apply to this situation.
+\begin{image}
+\begin{tikzpicture}
+\draw[thick] (0,0) rectangle (4, 10);
+\node[above] at (2, 10) {$12$ cm};
+\node[right] at (4, 5) {$30$ cm};
+\end{tikzpicture}
+\end{image}
+Britt needs the rectangles to cover the floor exactly, using no partial rectangles. This means that we must be able to fit a whole number of rectangles along the width and a whole number of rectangles along the length. Since we can think of the width of each rectangle as a group of centimeters, we are looking at a \wordChoice{\choice{multiplication} \choice[correct]{how many groups} \choice{how many in each group}} problem where we would like to have a whole number quotient with zero remainder. In other words, if we let $W$ be the width of the small rectangle, we need to find some number $N$ of rectangles so that
+\[
+W \times N = 30.
+\]
+The width of the rectangle must be a \wordChoice{\choice[correct]{factor} \choice{multiple}} of $30$ according to our definition. Similarly, the length $L$ of the rectangles must be a \wordChoice{\choice[correct]{factor} \choice{multiple}} of $12$. Let's list the factors of $12$ and of $30$ in order from smallest to largest.
+
+\[
+\textrm{Factors of } 30: \answer[given]{1}, \answer[given]{2},  \answer[given]{3}, \answer[given]{5}, \answer[given]{6}, \answer[given]{10}, \answer[given]{15}, 30
+\]
+
+\[
+\textrm{Factors of } 12: \answer[given]{1}, \answer[given]{2},  \answer[given]{3}, \answer[given]{4}, \answer[given]{6}, 12
+\]
+
+Choosing from our list of factors, we could draw a rectangle which is $5$cm long and $4$cm wide. Since $5$ is a factor of $30$ we can fit $\answer[given]{6}$ rectangles along the length of the house and since $4$ is a factor of $12$ we can fit $\answer[given]{3}$ rectangles along the width of the house. Let's draw this on our house.
+\begin{image}
+\begin{tikzpicture}
+\draw[thick] (0,0) rectangle (4, 10);
+\foreach \x in {1.333, 2.667} \draw[thick, orange] (\x,0)--(\x, 10);
+\foreach \y in {1.667, 3.333, 5, 6.667, 8.333} \draw[thick, orange] (0,\y)--(4, \y);
+\node[above] at (2, 10) {$12$ cm};
+\node[right] at (4, 5) {$30$ cm};
+\end{tikzpicture}
+\end{image}
+These rectangles exactly cover the floor of the house, so this is one correct answer for this question. 
+
+
+However, there are also other correct choices that we can make. We could also draw a rectangle which is $3$cm long and $3$cm wide. Since $3$ is a factor of $30$, we will be able to fit $\answer[given]{10}$ of these rectangles along the length of the house. Since $3$ is also a factor of $12$ we can fit $\answer[given]{4}$ of these rectangles along the width of the house. Let's draw this in our house.
+
+\begin{image}
+\begin{tikzpicture}
+\draw[thick] (0,0) rectangle (4, 10);
+\foreach \x in {1, 2, 3} \draw[thick, red] (\x,0)--(\x, 10);
+\foreach \y in {1, 2, 3, ..., 9} \draw[thick, red] (0,\y)--(4, \y);
+\node[above] at (2, 10) {$12$ cm};
+\node[right] at (4, 5) {$30$ cm};
+\end{tikzpicture}
+\end{image}
+These rectangles also exactly cover the floor of the house, so this is another correct answer for this question.
+
+
+In fact, we can choose any factor of $30$ for the width of the rectangle and any factor of $12$ for the length of the rectangle and we will be able to exactly cover the floor with these rectangles.
+
+\end{explanation}
+\end{question}
+
+In the previous question, we explained that we wanted to find factors of $30$ and $12$ because the story asked for a whole number of rectangles to fit on each side of the house. Then, we found all of the factors of both $30$ and $12$. Remember that prime factorization can help when you are looking for a list of all of the factors of a number! Let's change our question a little bit and see how our solution changes.
+
+\begin{question}
+Britt is making a small house in her art class and she wants to cover the floor of the house with colorful squares. If the house currently measures $12$cm wide and $30$ cm long, what size squares can Britt use so that there are no partial squares covering the floor?
+
+\begin{explanation}
+In this problem, we are still covering the floor with shapes, but this time we are covering the floor with squares. The big difference here is that squares have to have the same width and length while rectangles do not. Looking back at our first explanation, we can see that we are still looking for \wordChoice{\choice[correct]{factors} \choice{multiples}} of both $30$ and $12$, but now we need to choose the same number to be both the width and the length. As we did in the last problem, we could choose the width and length to both be $3$, and these squares would cover the floor of the house exactly. However, in this example we cannot choose a width of $5$ and a length of $4$, because this is not a square. So, this problem has a different answer than the previous problem.
+
+Let's rewrite our factors of $30$ and factors of $12$.
+\[
+\textrm{Factors of } 30: 1, 2, 3, 5, 6, 10, 15, 30
+\]
+\[
+\textrm{Factors of } 12: 1, 2, 3, 4, 6, 12
+\]
+Since we are trying to cut out a square, we need to choose factors that are in \wordChoice{\choice{one or the other} \choice[correct]{both} \choice{neither}} lists. These are (in increasing order)
+\[
+\answer[given]{1}, \answer[given]{2}, \answer[given]{3}, \answer[given]{6}.
+\]
+In other words, Britt can make squares whose side lengths are $1$cm, $2$cm, $3$cm, or $6$cm. Any of these squares will fit the floor exactly with no partial squares. 
+\end{explanation}
+\end{question}
+
+In the case of squares, we needed not only factors of $30$ and $12$, but factors that they had in common. This is because we were making squares, whose side lengths have to be the same. In some problems we will be looking just for factors, and in other problems we will be looking for common factors. You should use the situation of the problem to explain what you are looking for. Let's change the problem one more time.
+
+\begin{question}
+Britt is making a small house in her art class and she wants to cover the floor of the house with colorful squares. If the house currently measures $12$cm wide and $30$ cm long, what is the largest size squares that can Britt use to cover the floor so that there are no partial squares being used?
+
+\begin{explanation}
+In this question, Britt is still looking to use squares to cover the floor, so we are looking for common factors of $30$ and $12$, as we explained in the previous example. But this time, Britt is looking to use only the largest of those squares. Looking back at our list of possible squares, the largest one would have side lengths which are $\answer[given]{6}$cm. Let's sketch that on the floor.
+\begin{image}
+	\begin{tikzpicture}
+	\draw[thick] (0,0) rectangle (4, 10);
+\foreach \x in {2} \draw[thick, green] (\x,0)--(\x, 10);
+\foreach \y in {2, 4, 6, 8} \draw[thick, green] (0,\y)--(4, \y);
+\node[above] at (2, 10) {$12$ cm};
+\node[right] at (4, 5) {$30$ cm};
+	\end{tikzpicture}
+\end{image}
+\end{explanation}
+\end{question}
+In this last version of the house decorating problem, we wanted to find a single answer: the largest squares that could be used to cover the floor. Since we wanted no partial squares, we needed factors of both $30$ and $12$. Since we were looking for squares and not rectangles, we needed common factors of $30$ and $12$. And then this particular problem asked us to find the largest such factor, so we chose the largest common factor off of our list. Choosing the largest factor that two numbers have in common is something we do often enough that we give it a special name.
+\begin{definition}
+The \dfn{greatest common factor (GCF)} of two whole numbers $A$ and $B$ is the largest factor that is common to both $A$ and $B$. We can use the notation GCF$(A, B)$ as notation for the greatest common factor.
+\end{definition}
+
+Let's see how prime factorizations can help us in this situation. We can write the prime factorization of $30$ as
+\[
+30 = 2 \times 3 \times 5
+\]
+We can write the prime factorization of $12$ (with primes in increasing order) as
+\[
+12 = 2 \times 2 \times 3 \textrm{ or } 2^2 \times 3.
+\]
+What primes do these have in common? We see that both have $2$ as a prime factor (but only one copy is common to both), and both have $3$ as a prime factor. We get the largest possible factor of both numbers by multiplying all the primes they have in common.
+\[
+\textrm{GCF}(30, 12) = 2 \times 3 = 6
+\]
+This works because of the Fundamental Theorem of Arithmetic: the uniqueness of the prime factorization means that we can build numbers from their prime factorizations, and so in order to be a common factor of both $12$ and $30$, the GCF can only contain prime factors common to both numbers. When we multiply together all the primes they have in common, that's the largest we can make a common factor. 
+
+
+
+\section{Multiples in common}
+
+Next, let's focus on problems about multiples in common.
+
+\begin{question}
+A music class has split into two groups to work on a rhythm. The teacher will play a steady beat on the drum. Half of the class will clap on every fourth beat, and the other half of the class will shout on every sixth beat. Caesar wonders: when will the clapping and shouting happen at the same time?
+\begin{explanation}
+First, let's take a look at the patterns. We will use an $X$ to represent ``do nothing''. On the $X$, the teacher beats the drum but the clap does not happen. Here is the pattern.
+\[
+X, X, X, \textrm{ clap}, X, X, X, \textrm{ clap}, X, X, X, \textrm{ clap}, \dots
+\]
+This half of the class is clapping on every fourth beat, or we are repeating a group of $4$ beats: $X$, $X$, $X$, clap. The first clap will happen on beat $4$, the second will happen on beat $\answer[given]{8}$, the third will happen on beat $\answer[given]{12}$, and so on. This means that the claps are happening on the \wordChoice{\choice{factors} \choice[correct]{multiples}} of $4$. The $N$th clap will happen after $N$ groups of $4$ beats, or on beat
+\[
+N \times 4.
+\]
+This fits with our definition of multiples. Similarly, the shouting half of the class will follow the following pattern.
+\[
+X, X, X, X, X, \textrm{ shout}, X, X, X, X, X, \textrm{ shout}, X, X, X, X, X, \textrm{ shout}, \dots
+\]
+The first shout happens on beat $6$, the second shout on beat $\answer[given]{12}$,  the third shout on beat $\answer[given]{18}$, and so on. In this case the shouts happen on beats which are \wordChoice{\choice{factors} \choice[correct]{multiples}} of $\answer[given]{6}$. 
+
+Caesar is wondering about when the claps and shouts will happen at the same time. If we translate this into the language of factors and multiples, Caesar is wondering when a beat will be \wordChoice{\choice{one of} \choice[correct]{both} \choice{neither}} a multiple of $4$ (a clap) and a multiple of $6$ (a shout). Let's take a look at the first few multiples of $4$.
+\[
+\textrm{Multiples of }4: 4, \answer[given]{8}, \answer[given]{12}, \answer[given]{16}, \answer[given]{20}, \answer[given]{24}, \answer[given]{28}, \dots
+\]
+Next, let's list the first few multiples of $6$.
+\[
+\textrm{Multiples of }6: 6, \answer[given]{12}, \answer[given]{18}, \answer[given]{24}, \answer[given]{30}, \answer[given]{36}, \dots
+\]
+Which numbers do both lists have in common? We can already see two of them: $12$ and $\answer[given]{24}$. We could continue this list further and observe that the next shout and clap together is beat $36$, and after that beat $48$. This will continue until the teacher stops playing the drum. So we can guess that both clapping and shouting will happen every $\answer[given]{12}$ beats. How can we use prime factorization to be sure of this?
+
+The prime factorization of $4$ (with primes written in increasing order) is
+\[
+4 = \answer[given]{2} \times \answer[given]{2}
+\]
+and the prime factorization of $4$ (with primes written in increasing order) is
+\[
+6 = \answer[given]{2} \times \answer[given]{3}.
+\]
+Remember that we are looking for a  number $N$ that is a multiple of both $4$ and $6$. Since $N$ is a multiple of $4$, the Fundamental Theorem of Arithmetic says it must have $2\times 2$ as a factor. Since $N$ is also a multiple of $6$ it must have $2 \times 3$ as a factor. This means that the prime factorization of $N$ has to include at least two copies of the prime $2$ and at least one copy of the prime $3$ in order to have both $2 \times 2$ and $2 \times 3$ as factors. For example, we could have
+\[
+N = 2 \times 2 \times 3 \times 5
+\]
+or
+\[
+N = 2 \times 2 \times 2 \times 3 \times 11 \times 13.
+\]
+However, the smallest $N$ we could make would be
+\[
+N = 2 \times 2 \times 3 = \answer[given]{12}.
+\]
+Since $N$ must have $2 \times 2 \times 3$ as part of its prime factorization, we see that $12$ must be a factor of $N$, or $N$ is a multiple of $12$. Since $N$ is then a multiple of both $4$ and $6$, we see that the shouting and clapping happens at the same time on beats which are multiples of $12$.
+\end{explanation}
+\end{question}
+
+In this problem we were looking for multiple that both $4$ and $6$ have in common. As we did with factors, we used the story situation to explain why we needed multiples, and then why we wanted those multiples to be common to both $4$ and $6$. Please make sure to do this in your own explanations! Let's change this problem a little bit.
+
+
+\begin{question}
+A music class has split into two groups to work on a rhythm. The teacher will play a steady beat on the drum. Half of the class will clap on every fourth beat, and the other half of the class will shout on every sixth beat. Caesar wonders: when is the first beat on which the clapping and shouting happen at the same time?
+\begin{explanation}
+In this case, Caesar is still looking for common multiples of $4$ and $6$, because he is still looking for a beat where the clap and shout both happen. However, he has changed his question to ask when the first such beat will happen. Since we made a list in the last problem of the beats on which the clap and shout both happen, we can use that list to answer this question as well. We saw that the clap and shout happened on beats
+\[
+12, 24, 36, 48, \dots
+\]
+and the smallest such number is $\answer[given]{12}$. So the earliest beat on which the clap and shout will both happen is beat $12$.
+\end{explanation}
+\end{question}
+In this last version of the music class problem, we wanted to find a single answer: the first beat on which both the clap and shout happened. Since we wanted beats with claps and shouts, we needed multiples of both $4$ and $6$. Since we were looking for claps and shouts to happen at the same time, we needed common multiples of $4$ and $6$. And then this particular problem asked us to find the smallest such multiple, so we chose the least common multiple off of our list. Choosing the smallest multiple that two numbers have in common is something we do often enough that we give it a special name.
+\begin{definition}
+The \dfn{least common multiple (LCM)} of two whole numbers $A$ and $B$ is the smallest multiple that is common to both $A$ and $B$. We can use the notation LCM$(A, B)$ as notation for the least common multiple.
+\end{definition}
+
+Now that we have defined both the least common multiple and the greatest common factor of two numbers, notice that in the problems we solved we actually explained these ideas in reverse order. First we explained why we had factors or multiples, then we explained why the situation was asking for factors or multiples in common, and then we discussed why the problem was asking for the least or the greatest. This is a pattern we would like you to also follow in your own explanations!
+
+Since least common multiples and greatest common factors are extensions of the ideas of factors and multiples, children begin finding such values around grade six. However, we hope that you notice the way that solving these problems builds off of kids' prior work in multiplication and division as well as what they have learned about factors and multiples.
+
+
+\begin{question}
+If you are given two numbers $A$ and $B$, do they have a greatest common multiple? A least common factor? 
+\begin{freeResponse}
+Jot down some thoughts here, and feel free to discuss this question in office hours!
+\end{freeResponse}
+\end{question}
+
+
+
+
+\end{document}
+
+
+
+
+
+

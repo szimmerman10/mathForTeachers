@@ -1,0 +1,296 @@
+\documentclass{ximera}
+ 
+\input{../preamble.tex}
+ 
+ 
+\title{Exponents}
+\author{Scott Zimmerman}
+ 
+\begin{document}
+ 
+\begin{abstract}
+We understand the meaning of raising a counting number to an integral power.
+\end{abstract}
+\maketitle
+ 
+\section{Activity for this section:}
+Properties of Powers, 
+Integer Powers
+
+
+ 
+\section{Exponents}
+
+Recall that multiplication can be used to simplify addition. For example, if we have 3 groups with 5 objects in each group, when we have ``5 objects'' 3 times or
+$$
+5 + 5 + 5 = 15.
+$$
+We simplify this idea by saying that there are
+$$
+3 \times 5 = 15
+$$
+total objects.
+
+We can do a similar technique to simplify multiplication.
+First, consider the expression 
+$$
+5 \times 5 \times 5.
+$$
+
+
+\begin{question}
+Which of the following questions could be answered by calculating $5 \times 5 \times 5$?
+ 
+\begin{multipleChoice}
+\choice{I have 5 trout, 5 carp, and 5 tuna. How many total fish do I have?}
+\choice{I wrote 125 letters and put 5 letters in each envelope. How many envelopes did I use?}
+\choice[correct]{I have 5 crates. Each crate contains 5 boxes of markers, and each box contains 5 markers. How many total markers do I have?}
+\choice{None of these.}
+\end{multipleChoice}
+\end{question}
+
+You may remember that a shorter way of writing $5 \times 5 \times 5$ is by writing $5^3$ read as ``5 to the power of 3'' or ``five to the third''.
+
+\begin{definition}
+For counting numbers $A$ and $B$, the expression $A^B$ is equal to 
+$$
+\underbrace{A \times A \times \cdots \times A}_{B \text{ copies}}.
+$$
+We call $A$ the \dfn{base} and $B$ the \dfn{power} or \dfn{exponent}.
+\end{definition}
+
+\begin{question}
+Evaluate $5^3$.
+ 
+\begin{prompt}
+$\answer{125}$
+\end{prompt}
+\end{question}
+
+\begin{question}
+Rewrite $7^4$ as a product.
+ 
+\begin{prompt}
+$\answer{7} \times \answer{7} \times \answer{7} \times \answer{7}$
+\end{prompt}
+\end{question}
+
+\section{Adding powers}
+
+Sometimes, we see addition inside a power. For example, we might see $4^{2+3}$. Where does this come from? Let's explore!
+
+\begin{example}
+Let's understand the meaning of $4^2\times4^3$.
+Well, $4^2$ is equal to $\answer[given]{16}$ and $4^3$ is equal to $\answer[given]{64}$.
+This means that $(4^2)\times(4^3)$ represents the total number of objects in $\answer[given]{16}$ groups with $\answer[given]{64}$ objects in each group.
+
+As we saw above, $4^2$ is also equal to
+\begin{prompt}
+    $\answer{4} \times \answer{4}$
+\end{prompt},
+and $4^3$ is equal to 
+\begin{prompt}
+    $\answer{4} \times \answer{4} \times \answer{4}$
+\end{prompt}.
+Using the \wordChoice{\choice[correct]{associative} \choice{commutative} \choice{distributive}} property of multiplication, we see that
+$$
+4^2 \times 4^3 = (4 \times 4) \times (4 \times 4 \times 4) = 4 \times 4 \times 4 \times 4 \times 4.
+$$
+This last product is equal to 
+\begin{prompt}
+    $4^{\answer{5}}$
+\end{prompt}. We ended up with 5 ``4''s on the right hand side because we put together 2 ``4''s and 3 ``4''s. That is, we \wordChoice{\choice[correct]{added} \choice{subtracted} \choice{multiplied} \choice{divided}} 2 and 3 to find the total number of ``4''s we have.
+In the end, we see that 
+\begin{prompt}
+$$
+4^2\times4^3 = 4^{\text{\wordChoice{\choice[correct]{$2+3$} \choice{$2-3$} \choice{$2\times3$} \choice{$2 \div 3$}}}}.
+$$
+\end{prompt}
+\end{example}
+
+
+\begin{definition}
+\label{addtomult}
+For counting numbers $A$, $B$, and $C$, the expression $A^{B+C}$ is equal to 
+$
+A^B \times A^C.
+$
+\end{definition}
+
+\begin{question}
+Rewrite $7^{3+5}$ as a product.
+ 
+\begin{prompt}
+$7^{\answer{3}}\times 7^{\answer{5}}$
+\end{prompt}
+\end{question}
+
+\begin{question}
+Rewrite $6^2 \times 6^7$ as a single base to one power. (Do not include ``$+$'' in your answer!)
+ 
+\begin{prompt}
+$\answer{6}^{\answer{9}}$
+\end{prompt}
+\end{question}
+
+
+
+
+
+
+\section{Multiplying Powers}
+
+We've discussed addition inside a power. What about multiplication? Why might we end up with $4^{3 \times 2}$? Where does this come from? Let's explore!
+
+\begin{example}
+Let's understand the meaning of $(4^2)^3$.
+Again, $4^2$ is equal to
+\begin{prompt}
+    $\answer{4} \times \answer{4}$.
+\end{prompt}
+Raising $4^2$ to the power of 3 means multiplying together $3$ copies of  $4^2$.
+That is, $(4^2)^3$ is equal to 
+\begin{prompt}
+    $$
+    (4^2)^3 = (\answer{4} \times \answer{4})^3
+    =
+    (\answer{4} \times \answer{4}) \times (\answer{4} \times \answer{4}) \times (\answer{4} \times \answer{4}).
+    $$
+\end{prompt}
+According to the grouping pictured here, we have 
+\begin{prompt}
+    $\answer{3}$
+\end{prompt}
+groups with
+\begin{prompt}
+    $\answer{2}$
+\end{prompt}
+``4''s in each group. In other words, we have 
+\wordChoice{\choice{$3+2$} \choice{$3-2$} \choice[correct]{$3\times2$} \choice{$3\div2$}}
+total ``4''s multiplied together!
+\end{example}
+
+
+
+\begin{definition}
+\label{powtoprod}
+For counting numbers $A$, $B$, and $C$, the expression $A^{B\times C}$ is equal to 
+$
+(A^C)^B 
+$
+or 
+$
+(A^B)^C
+$.
+\end{definition}
+
+\begin{question}
+Which of the following is equal to $7^{3\times 5}$?
+ 
+\begin{multipleChoice}
+\choice{$7^{3+5}$}
+\choice[correct]{$(7^5)^3$}
+\choice{$\frac{7^3}{7^5}$}
+\choice{$7^3 \times 7^5$}
+\end{multipleChoice}
+\end{question}
+
+\begin{question}
+Rewrite $(6^2)^7$ using a single power. (Do not include ``$\times$'' in your answer!)
+ 
+\begin{prompt}
+$6^{\answer{14}}$
+\end{prompt}
+\end{question}
+
+
+
+\section{Power of 0}
+
+What if the number in the exponent is 0? For example, what is the meaning of the expression $4^0$?
+We'd like the ``multiplication to addition'' property of exponents (like the one in Definition~\ref{addtomult}) to always be true.
+If that's true, then let's explore the meaning behind $4^0$.
+
+\begin{example}
+    If the ``multiplication to addition'' property of exponents is true, what should $4^3 \times 4^0$ be equal to?
+    \begin{prompt}
+        $4^{\answer{3}}$
+    \end{prompt}
+
+    In other words, when we multiply a number by $4^0$, we should just just end up with the number we started with. What special number can we multiply a starting number by so that it doesn't change?
+    \begin{prompt}
+        $\answer{1}$
+    \end{prompt}
+\end{example}
+
+\begin{definition}
+    For a counting number $A$,
+    $$
+    A^0 = 1.
+    $$
+\end{definition}
+
+
+
+
+
+\section{Integer powers}
+
+
+We've explored addition and multiplication within an exponent. What about subtraction?
+In particular, let's give meaning to an expression like ``$5^{-2}$''.
+Again, we'd like the ``multiplication to addition'' property of exponents (like the one in Definition~\ref{addtomult}) to always be true.
+
+\begin{example}
+    If the ``multiplication to addition'' property of exponents is true, what should $5^2 \times 5^{-2}$ be equal to?
+    \begin{prompt}
+        $5^{\answer{0}}$
+    \end{prompt}
+    And what single number is this expression equal to?
+    \begin{prompt}
+        $\answer{1}$
+    \end{prompt}
+
+    In other words, when we multiply $5^2$ by $5^{-2}$, we should end up with 1. Note that $5^2 = 25$. Combining these two facts, how should we define $5^{-2}$?
+    
+    \begin{prompt}
+        $5^{-2} = \frac{1}{\answer{25}}$
+    \end{prompt}
+\end{example}
+
+\begin{definition}
+    For counting numbers $A$ and $B$,
+    $$
+    A^{-B} = \frac{1}{A^B}.
+    $$
+\end{definition}
+
+\begin{question}
+    Rewrite $4^{-3}$ as a fraction without exponents.
+
+    \begin{prompt}
+        $\frac{1}{\answer{64}}$
+    \end{prompt}
+\end{question}
+
+\begin{question}
+    Rewrite $6^{-1}$ as a fraction without exponents.
+
+    \begin{prompt}
+        $\frac{1}{\answer{6}}$
+    \end{prompt}
+\end{question}
+
+
+\begin{question}
+    Rewrite $\frac{1}{36}$ using a negative exponent.
+
+    \begin{prompt}
+        $6^{\answer{-2}}$
+    \end{prompt}
+\end{question}
+
+
+
+
+\end{document}

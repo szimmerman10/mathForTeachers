@@ -1,0 +1,240 @@
+\documentclass{ximera}
+
+\input{../preamble.tex}
+
+
+\title{Divisibility Testing}
+\author{Jenny Sheldon}
+
+\begin{document}
+
+\begin{abstract}
+We explain why divisibility tests make sense.
+\end{abstract}
+\maketitle
+
+\section{Activities for this section:}
+\link[Factor testing]{https://ximera.osu.edu/m4t/elementaryActivities/SemesterOnePacket/elementaryActivities/FactorsAndMultiples/FactorTesting}
+
+\section{Divisibility tests}
+
+Another common technique in mathematics that is connected to the idea of factors and 
+multiples is that of divisibility tests. A \dfn{divisibility test} is a criteria we 
+can use to tell whether one number is divisible by another. Let's start with an 
+example that you are likely already familiar with.
+
+\begin{example}
+Explain why an integer $N$ is divisible by $10$ if it ends in a zero.
+
+First, we need to remember that ``divisible'' means that we take the integer $N$ and 
+compute $N \div 10$. If we get a remainder of zero, then $N$ is divisible by $10$. 
+If the remainder is not zero, then $N$ is not divisible by $10$. Using the division 
+theorem, we should be able to find some quotient $q$ so that 
+\[
+10 \times q + 0 = N
+\]
+which reduces to 
+\[
+10 \times q = N.
+\]
+Here we see our connection to the idea of factors, since according to our definition of factors if $10$ and $N$ satisfy the equation above then $10$ is a factor of $N$. So, if $N$ ends in a zero, then how do we know that $10$ is a factor of $N$?
+
+The answer lies in our bundling system. If the last digit of $N$ is a zero, this means that if we draw a picture of $N$ using bundled objects or base ten blocks, we would have no individual objects. Let's use the example of $N=320$ to illustrate, but you should try to think about this argument more generally. So, if we represent $320$ with base ten blocks, we will draw $\answer[given]{3}$ superbundles and $\answer[given]{2}$ bundles. Let's draw this.
+
+\begin{image}
+\begin{tikzpicture}
+\foreach \x in {0, 1.2, 2.4} \draw[thick, step=0.1] (\x, 0) grid (\x+1, 1);
+\foreach \x in {3.6, 3.8} \draw[thick, step=0.1] (\x, 0) grid (\x+0.1, 1);
+\end{tikzpicture}
+\end{image}
+
+According to our definition of multiplication, if $320 = 10 \times q$ for some quotient $q$, we want to find $\answer[given]{10}$ equal groups and then $q$ will tell us how many objects are in each group. In our picture, we could use one group as one row. Let's shade in one group in the image below.
+
+\begin{image}
+\begin{tikzpicture}
+\foreach \x in {0, 1.2, 2.4} \draw[thick, fill=magenta] (\x, 0.9) rectangle (\x+1, 1);
+\foreach \x in {3.6, 3.8} \draw[thick, fill=magenta] (\x, 0.9) rectangle (\x+0.1, 1);
+\foreach \x in {0, 1.2, 2.4} \draw[thick, step=0.1] (\x, 0) grid (\x+1, 1);
+\foreach \x in {3.6, 3.8} \draw[thick, step=0.1] (\x, 0) grid (\x+0.1, 1);
+\end{tikzpicture}
+\end{image}
+
+Each of these $10$ groups has $\answer[given]{32}$ blocks in it, so the total $320$ blocks can be written as 
+\[
+10 \times \answer[given]{32} = 320.
+\]
+If we had a different number of superbundles and bundles, we could still separate them into $10$ equal rows. Even if we had megabundles or larger place values, everything could be broken down into bundles with no blocks left over, and so we could use the rows as groups and make $10$ equal groups out of these blocks. In other words, if $N$ has a zero in the ones place, it must be divisible by $10$.
+
+\end{example}
+
+In our previous example, we saw our first example of a divisibility test: and integer $N$ is divisible by $10$ if it has a zero in the ones place. We understand why this test makes sense from the explanation, but we use divisibility tests when we want to know quickly whether a number is divisible by another number. This is like our algorithms for the operations: we get the answer quickly but most of the time we trade speed for understanding. Remember that there are times for both!
+
+
+
+
+Let's take a look at the divisibility test for $9$ and explain why it is true.
+
+\begin{example}
+The divisibility test for $9$ says that an integer $N$ is divisible by $9$ if the sum of the digits of $N$ is divisible by $9$. Let's explain why this test makes sense.
+
+Again, if we are given an integer $N$ and we want to know whether this number is divisible by $9$, we can rephrase this question to ask whether $9$ is a factor of $N$. In other words, can we find some quotient $q$ so that
+\[
+q \times 9 = N.
+\] 
+(Of course, we could use $q$ as either the number of groups or the number of objects per group; we are going to use it as the number of groups in this example.)
+
+Let's work with the example of $N=285$, but as usual we would like you to try to continue thinking generally so that our reasoning applies to any number $N$ and not just this specific example. Let's start by drawing the quantity $285$ using base ten blocks. We'll need to draw $\answer[given]{2}$ superbundles, $\answer[given]{8}$ bundles, and $\answer[given]{5}$ individual blocks. 
+
+\begin{image}
+\begin{tikzpicture}
+\foreach \x in {0, 1.2} \draw[thick, step=0.1] (\x, 0) grid (\x+1, 1);
+\foreach \x in {2.4, 2.6, ..., 4} \draw[thick, step=0.1] (\x, 0) grid (\x+0.1, 1);
+\foreach \x in {4.2, 4.4, ..., 5} \draw[thick] (\x, 0) rectangle (\x+0.1, 0.1);
+\end{tikzpicture}
+\end{image}
+
+Now we would like to know whether or not we can make groups of $9$ blocks with no blocks left over. We will start with the bundles since every superbundle, megabundle, and so on is made out of bundles. Each bundle is made out of $\answer[given]{10}$ blocks, or $\answer[given]{1}$ group of $9$ blocks and $\answer[given]{1}$ block leftover. In the image below, we will shade in the $9$ blocks in each bundle and leave the leftover block unshaded. We will also draw the leftover block underneath each bundle so that we can use it later.
+
+\begin{image}
+\begin{tikzpicture}
+\foreach \x in {2.4, 2.6, ..., 4} \draw[fill=green] (\x, 0) rectangle (\x+0.1, 0.9);
+\foreach \x in {0, 1.2} \draw[thick, step=0.1] (\x, 0) grid (\x+1, 1);
+\foreach \x in {2.4, 2.6, ..., 4} \draw[thick, step=0.1] (\x, 0) grid (\x+0.1, 1);
+\foreach \x in {4.2, 4.4, ..., 5} \draw[thick] (\x, 0) rectangle (\x+0.1, 0.1);
+\foreach \x in {2.4, 2.6, ..., 4} \draw[thick, ->] (\x+0.05, -0.2)--(\x+0.05, -0.6);
+\foreach \x in {2.4, 2.6, ..., 4} \draw[thick] (\x, -1) rectangle (\x+0.1, -0.9);
+\end{tikzpicture}
+\end{image}
+
+So far we have made $8$ groups of $9$ and we have $8$ blocks left over. Next let's take a look at what's happening with the superbundles. Each superbundle is made out of $\answer[given]{10}$ bundles, so we can repeat the process we just took with the bundles with the superbundles as well. In other words, we will start by making $10$ groups of $9$ and we will have $10$ blocks left over. Let's shade the groups of $9$ in the columns of each superbundle.
+
+\begin{image}
+\begin{tikzpicture}
+\foreach \x in {0, 1.2} \draw[fill=green] (\x, 0) rectangle (\x+1, 0.9);
+\foreach \x in {2.4, 2.6, ..., 4} \draw[fill=green] (\x, 0) rectangle (\x+0.1, 0.9);
+\foreach \x in {0, 1.2} \draw[thick, step=0.1] (\x, 0) grid (\x+1, 1);
+\foreach \x in {2.4, 2.6, ..., 4} \draw[thick, step=0.1] (\x, 0) grid (\x+0.1, 1);
+\foreach \x in {4.2, 4.4, ..., 5} \draw[thick] (\x, 0) rectangle (\x+0.1, 0.1);
+\foreach \x in {2.4, 2.6, ..., 4} \draw[thick, ->] (\x+0.05, -0.2)--(\x+0.05, -0.6);
+\foreach \x in {2.4, 2.6, ..., 4} \draw[thick] (\x, -1) rectangle (\x+0.1, -0.9);
+\end{tikzpicture}
+\end{image}
+However, in this case we have $10$ blocks left over, so we can make $\answer[given]{1}$ more group of $9$ blocks, and there will be $\answer[given]{1}$ block left over. Let's shade the last group of $9$ in each superbundle.
+\begin{image}
+\begin{tikzpicture}
+\foreach \x in {0, 1.2} \draw[fill=yellow] (\x, 0.9) rectangle (\x+0.9, 1);
+\foreach \x in {0, 1.2} \draw[fill=green] (\x, 0) rectangle (\x+1, 0.9);
+\foreach \x in {2.4, 2.6, ..., 4} \draw[fill=green] (\x, 0) rectangle (\x+0.1, 0.9);
+\foreach \x in {0, 1.2} \draw[thick, step=0.1] (\x, 0) grid (\x+1, 1);
+\foreach \x in {2.4, 2.6, ..., 4} \draw[thick, step=0.1] (\x, 0) grid (\x+0.1, 1);
+\foreach \x in {4.2, 4.4, ..., 5} \draw[thick] (\x, 0) rectangle (\x+0.1, 0.1);
+\foreach \x in {2.4, 2.6, ..., 4} \draw[thick, ->] (\x+0.05, -0.2)--(\x+0.05, -0.6);
+\foreach \x in {2.4, 2.6, ..., 4} \draw[thick] (\x, -1) rectangle (\x+0.1, -0.9);
+\end{tikzpicture}
+\end{image}
+We have now made as many groups of $9$ as we can out of our superbundle, and we ended up 
+making $\answer[given]{11}$ groups of $9$ and we have $\answer[given]{1}$ block left over. 
+Let's draw that leftover block below each superbundle. We will also draw the individual 
+blocks down below as well so that all of the loose blocks are now available in order to 
+make groups of $9$.
+\begin{image}
+\begin{tikzpicture}
+\foreach \x in {0, 1.2} \draw[fill=yellow] (\x, 0.9) rectangle (\x+0.9, 1);
+\foreach \x in {0, 1.2} \draw[fill=green] (\x, 0) rectangle (\x+1, 0.9);
+\foreach \x in {2.4, 2.6, ..., 4} \draw[fill=green] (\x, 0) rectangle (\x+0.1, 0.9);
+\foreach \x in {0, 1.2} \draw[thick, step=0.1] (\x, 0) grid (\x+1, 1);
+\foreach \x in {2.4, 2.6, ..., 4} \draw[thick, step=0.1] (\x, 0) grid (\x+0.1, 1);
+\foreach \x in {4.2, 4.4, ..., 5} \draw[thick] (\x, 0) rectangle (\x+0.1, 0.1);
+\foreach \x in {2.4, 2.6, ..., 4} \draw[thick, ->] (\x+0.05, -0.2)--(\x+0.05, -0.6);
+\foreach \x in {2.4, 2.6, ..., 4} \draw[thick] (\x, -1) rectangle (\x+0.1, -0.9);
+\foreach \x in {0.5, 1.7, 4.2, 4.4, 4.6, 4.8, 5} \draw[thick, ->] (\x, -0.2)--(\x, -0.6);
+\foreach \x in {0.45, 1.65, 4.2, 4.4, 4.6, 4.8, 5} \draw[thick] (\x, -1) rectangle (\x+0.1, -0.9);
+\end{tikzpicture}
+\end{image}
+Before we move forward, stop and notice how many individual blocks we have left that we need to place into groups of $9$. We have $\answer[given]{2}$ blocks from the superbundles (one from each superbundle), $\answer[given]{8}$ blocks from the bundles (one from each bundle), and $\answer[given]{5}$ blocks from the individual blocks. If we combine these blocks together, we have a total of 
+\[
+2 + 8 + 5 = \answer[given]{15}
+\]
+loose blocks. Notice that this is the same as the sum of the digits. Because we can 
+always make $11$ groups of $9$ with $1$ individual block left over from every super 
+bundle, and $1$ group of $9$ with $1$ left over from every bundle, (and similarly we 
+would make $111$ groups of $9$ with $1$ left over from every megabundle, and so on), 
+to know whether or not we can make groups of $9$ with none left over, we only need to 
+consider what is happening with these extra individual blocks. Because we get one 
+extra block from every superbundle, one extra block from every bundle, and one extra 
+block from every individual block, the number of blocks we need to group is the same 
+as the sum of the digits. In this case we got $2$ individual blocks left over from the 
+two superbundles, $8$ individual blocks left over from the $8$ bundles, and $5$ 
+individual blocks that were originally the loose blocks.  There is a one-to-one 
+correspondence between the objects in the representation using base ten blocks and the 
+leftover blocks we need to group. The one-to-one correspondence tells us we need to 
+add up how many objects we have in the picture, which is the same as adding the digits.
+
+Let's finish this one up by showing that $9$ is not a factor of $285$. If we look at the $15$ leftover blocks, we can make $\answer[given]{1}$ more group of $9$, but then we will have $\answer[given]{6}$ blocks left over, which is not a reminder of  $0$. Let's circle the last group of $9$ in the picture.
+
+\begin{image}
+\begin{tikzpicture}
+\foreach \x in {0, 1.2} \draw[fill=yellow] (\x, 0.9) rectangle (\x+0.9, 1);
+\foreach \x in {0, 1.2} \draw[fill=green] (\x, 0) rectangle (\x+1, 0.9);
+\foreach \x in {2.4, 2.6, ..., 4} \draw[fill=green] (\x, 0) rectangle (\x+0.1, 0.9);
+\foreach \x in {0, 1.2} \draw[thick, step=0.1] (\x, 0) grid (\x+1, 1);
+\foreach \x in {2.4, 2.6, ..., 4} \draw[thick, step=0.1] (\x, 0) grid (\x+0.1, 1);
+\foreach \x in {4.2, 4.4, ..., 5} \draw[thick] (\x, 0) rectangle (\x+0.1, 0.1);
+\foreach \x in {2.4, 2.6, ..., 4} \draw[thick, ->] (\x+0.05, -0.2)--(\x+0.05, -0.6);
+\foreach \x in {2.4, 2.6, ..., 4} \draw[thick] (\x, -1) rectangle (\x+0.1, -0.9);
+\foreach \x in {0.5, 1.7, 4.2, 4.4, 4.6, 4.8, 5} \draw[thick, ->] (\x, -0.2)--(\x, -0.6);
+\foreach \x in {0.45, 1.65, 4.2, 4.4, 4.6, 4.8, 5} \draw[thick] (\x, -1) rectangle (\x+0.1, -0.9);
+\draw[thick, orange] (2, -0.95) ellipse (1.75cm and 0.2cm);
+\end{tikzpicture}
+\end{image}
+
+Since the sum of the digits of $285$ is $15$, which is not divisible by $9$, we know that $285$ is also not divisible by $9$. 
+
+
+
+
+\end{example}
+
+
+The divisibility test for $3$ is very similar to the divisibility test for $9$, and we will explain why this makes sense using an in-class activity. Let's write down the test here and practice using it.
+
+\begin{example}
+Use the divisibility test for $3$ to determine whether $8349$ is divisible by $3$.
+
+The divisibility test for $3$ says that an integer $N$ is divisible by $3$ if the sum of the digits of $N$ is divisible by $3$. Let's apply that to $N=8349$. We start out by adding up the digits of this number.
+\[
+8 + 3 + 4 + 9 = \answer[given]{24}
+\]
+Is the sum of the digits divisible by $3$?
+\begin{multipleChoice}
+\choice[correct]{Yes}
+\choice{No}
+\end{multipleChoice}
+The sum $24$ is divisible by $3$, and so the original number $8349$ is also divisible by $3$. Notice that if you weren't sure whether $24$ is divisible by $3$, you could add its digits $2+4=6$ and use the divisibility test as many times as you need to until you can tell whether the sum is divisible by $3$.
+\end{example}
+
+Now we have a quick test to determine whether or not $3$ is a factor of a number. This sort of test can be useful when we are making factor trees or trying to determine a prime factorization.
+
+
+
+There are many other divisibility tests, and you should practice explaining why they make sense. Below you will find a list of  divisibility tests that you can practice on, and there are still others out there!
+\begin{itemize}
+\item A number has $2$ as a factor if it ends in $0$, $2$, $4$, $6$, or $8$.
+\item A number has $4$ as a factor if you can divide it by $2$ and get an even number quotient.
+\item A number has $4$ as a factor if the last two digits have $4$ as a factor.
+\item A number has $5$ as a factor if it ends in $0$ or $5$.
+\item A number has $6$ as a factor if it's even and the sum of the digits is a multiple of $3$.
+\item A number has $7$ as a factor if the difference between twice the last digit subtracted from the remaining digits is a multiple of $7$.
+\item A number has $8$ as a factor if the last $3$ digits have 8 as a factor.
+\end{itemize}
+
+
+
+
+\end{document}
+
+
+
+
+
+

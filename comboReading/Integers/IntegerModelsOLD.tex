@@ -1,0 +1,227 @@
+\documentclass{ximera}
+
+\input{../preamble.tex}
+%hi there again and again
+
+\title{Integers: Models}
+\author{Vic Ferdinand, Betsy McNeal, Jenny Sheldon}
+
+\begin{document}
+
+\begin{abstract}
+We discuss various models for integers.
+\end{abstract}
+\maketitle
+
+\section{Activities for this section:}
+\link[Where have the integers been?]{https://ximera.osu.edu/m4t/elementaryActivities/SemesterOnePacket/elementaryActivities/Integers/WhereHaveTheIntegersBeen}
+
+\subsection{Motivation}
+
+From the point of view of arithmetic, the whole numbers have had two serious deficiencies.
+\begin{itemize}
+	\item We can add any two whole numbers and get another whole number, but the same isn't true for subtraction.
+	\item We can multiply any two whole numbers and get another whole number, but the same isn't true for division.
+\end{itemize} 
+We fix the second deficiency by introducing the set of fractions -- we can now divide any whole number by any other whole number which is not zero and get a meaningful answer.  In fact, the same is true for the entire (now expanded) set of integers and fractions together.  To solve the first deficiency, we want to do something similar.  The expansion of the whole number system to the system of integers, that is, introducing negative numbers to go along with positive numbers, is designed to resolve this problem.
+
+
+From an application point of view, we need integers to be able to quantifiably describe situations in which we have what we will call an artificial zero.
+\begin{definition}
+An \textbf{artificial zero} is a situation in which it makes sense and is useful for values of the quantities to be less than zero.
+\end{definition}
+ Remember (or read in the section about the history of the integers) that finding such situations was difficult for mathematicians for many centuries!  Many physical situations do not need integers because they have what we will call an absolute zero.
+ \begin{definition} An \textbf{absolute zero} is a situation in which it does not make sense and is not useful for values of the quantities to be less than zero.
+ \end{definition}
+ 
+ \begin{explanation}
+  It makes no sense to say, ``I have fewer than zero oranges'', so this situation 
+  would have an absolute zero.  ``I am taking fewer than zero classes this semester'' 
+  has an \wordChoice{\choice{artificial zero} \choice[correct]{absolute zero}}, and 
+  ``I have fewer than zero dollar bills in my wallet'' has an 
+  \wordChoice{\choice{artificial zero} \choice[correct]{absolute zero}}, while 
+  ``It is fewer than zero degrees Fahrenheit outside'' has an 
+  \wordChoice{\choice[correct]{artificial zero}\choice{absolute zero}}.
+  \end{explanation}
+  
+  The terminology for absolute and artificial zeros helps us to distinguish these two types of situations, but we will not in general focus on identifying which situation is which or require you to use this terminology.  After all, we want to work here with negatives as well as positives, so we will generally be in situations with an artificial zero!
+
+In situations with an artificial zero, or a zero arbitrarily set, it makes sense to be talking about amounts that are less than zero.  Here are some examples.
+\begin{itemize}
+	\item {\em Temperature.}  In the Fahrenheit and Celsius scales, zero is set at a chosen 
+	level, but it is possible for temperatures to be colder than that set zero.  Notice that the Kelvin scale is different:  zero is set at the point there is completely no heat, so a temperature less than zero Kelvin is not possible.
+	\item {\em Finances.}  In finances, a person is said to have zero financial worth when they don't have any money.  Also, it makes sense for a person to have a negative financial worth in the sense of owing someone money.  So, having a worth of $-5$ dollars means you need to somehow gain \$5 before you can say you are ``even'', with no debt and no profit.  Notice that this can get complicated! If oranges are the currency, one could say one has $-5$ oranges instead of $-5$ dollars even though it is impossible to physically have $-5$ oranges or $-5$ dollar bills.  The idea of owing someone oranges or dollars makes this idea work.
+	\item {\em Sports.}  In football, we can take zero to be the line of scrimmage (or 
+	starting line for the play), or where the play begins, and we report the result of 
+	the play based on this zero.  For instance, if a player who is running gets tackled 
+	behind the starting line, we say that the play has resulted in negative yardage. 
+	\item {\em More sports.} In golf, ``par'' is defined as the number of shots experts think a golfer should 
+		  need in order to be able to get the golf ball into the hole. We can take par as 
+		  our zero in this situation. However, if the golfer takes fewer shots to get into 
+		  the hole, we say the golfer is so many shots ``under par'', and if the golfer 
+		  takes more shots to get into the hole, we say the golfer is so many shots 
+		  ``over par''.
+\end{itemize}
+	
+	\begin{example}  A running play starts at the 25 yard line (this is the line of 
+		scrimmage) and goes backwards to the 19 yard line.  In this case, the runner 
+		has gone backwards $\answer[given]{6}$ yards, so football commentators would 
+		say that the play resulted in a total of $\answer[given]{-6}$ yards.  \end{example}
+		  
+	
+	\begin{example} A certain golf hole has a par of $5$.  If a golfer takes $2$ shots to get into the hole, we say the golfer is $\answer[given]{3}$ shots under par, or at $\answer[given]{-3}$ with respect to par.  \end{example}
+	
+
+\subsection{Representations of Integers}
+
+There are several main ways we represent integers, or several important tools we will discuss.
+
+{\bf Stories.}  We use situations similar to those with an artificial zero described above.  These stories are useful because we can start to picture what we would like to do with integers, why we would like to do these things, and most importantly we can use the stories to check whether or not our answers make sense.
+
+{\bf Chips.}  We use one black chip to represent one positive unit and one red chip to represent one negative unit.  If I have one black chip together with one red chip, I have the same amount in value as if I have no chips at all.  We might say that one red chip cancels one black chip.  
+\begin{example}
+Sometimes these chips are used alongside a story.  If Alisha has seven apples, but also owes Alex four apples, we could use the black chips to represent the apples she has.  We would place $\answer[given]{7}$ black chips on the table, each with a value of $\answer[given]{1}$ apple.  We could also use the red chips to represent the apples Alisha owes, and in this situation we would place $\answer[given]{4}$ red chips on the table, each with a value of $\answer[given]{-1}$ apples.
+\end{example} 
+
+One of the most important things to keep in mind while working with chips is that we can easily change the {\em representation} of our number without changing the {\em value} of our number.  Let's investigate this phenomenon.
+
+\begin{question}
+What is the total value of all of the chips in the picture below?
+\begin{center}
+\begin{tikzpicture}
+\draw[black, fill=black](0,0) circle (0.5cm);
+\draw[black, fill=black](2,0) circle (0.5cm);
+\draw[black, fill=black](4,0) circle (0.5cm);
+\draw[black, fill=black](6,0) circle (0.5cm);
+\draw[red, fill=red] (6, 2) circle (0.5cm);
+\draw[red, fill=red] (4, 2) circle (0.5cm);
+\end{tikzpicture}
+\end{center}
+The total value of the chips is $\answer[given]{2}$.
+\end{question}
+
+\begin{question}
+Suppose you would like to use chips to represent a total value of $8$.  Which of the following combinations of chips would give you this value?
+\begin{selectAll}
+\choice[correct]{$8$ black chips}
+\choice{$8$ red chips}
+\choice[correct]{$10$ black chips and $2$ red chips}
+\choice{$2$ black chips and $10$ red chips}
+\choice[correct]{$24$ black chips and $16$ red chips}
+\choice{$3$ black chips and $11$ red chips}
+\choice{$5$ black chips and $3$ red chips}
+\end{selectAll}
+\end{question}
+
+{\bf Number lines.}  Previously, we marked zero and one on our number lines, and used the spacing between zero and one to mark all of the other positive numbers to the right of zero.  With integers, we extend the number line to the left of zero as well, using the same spacing between zero and one.
+\begin{center}
+\begin{tikzpicture}[font=\Large]
+\draw[<->] (-0.5,0) -- (12.5,0);
+\foreach \x in {0,1.5, 3, 4.5, 6, 7.5, 9, 10.5,12}
+\draw[shift={(\x,0)},color=black] (0pt,3pt) -- (0pt,-2pt);
+\draw (0,0) node[below]{$-4$};
+\draw (1.5,0) node[below]{$-3$};
+\draw (3,0) node[below]{$-2$};
+\draw (4.5,0) node[below]{$-1$};
+\draw (6,0) node[below]{$0$};
+\draw (7.5,0) node[below]{$1$};
+\draw (9,0) node[below]{$2$};
+\draw (10.5,0) node[below]{$3$};
+\draw (12,0) node[below]{$4$};
+\end{tikzpicture}  
+\end{center}
+
+
+\subsection{Comparison of Integers}
+
+Like with the other number systems we've studied, when we have two integer amounts, we would like to be able to tell which one is greater, lesser, or if the two amounts are equal.  While we could just state a rule for this, as with all mathematics, if it is possible to come up with a rule from a sense-making point of view, it will be more understandable and useful.
+
+Your first guess might be to try a one-to-one correspondence.  However, with negative numbers we are sometimes dealing with sets of objects that don't physically exist, and so making a one-to-one correspondence is very difficult in this case.  Also, when we work with models like the chips, our physical objects have different meanings, and so they cannot be placed in a one-to-one correspondence without extra care!  
+\begin{example}
+Imagine a situation in which Ava has $4$ black chips, and Aleks has $8$ red chips.  The value of Ava's chips is $\answer[given]{4}$, while the value of Aleks' chips is $\answer[given]{-8}$.  If we line up their chips in a one-to-one correspondence, we see that \wordChoice{\choice{Ava} \choice[correct]{Aleks}} has more chips, but \wordChoice{\choice[correct]{Ava} \choice{Aleks}} has the greater value in chips.
+\end{example}
+
+However, like in other number systems, we can use our story problems to look at real-life situations and ask, ``Which situation is better?'' or ``Which number has more value in this situation?''  For instance, we have things like the following.
+\begin{itemize}
+\item Which financial worth is better? (``Better'' here usually means more money.)
+\item Which team's total running yards is better? (``Better'' here usually means more yards, with positive yards being better than negative yards.)
+\item Which temperature is better? (Here, ``better'' depends on the situation!  We should probably ask instead, ``Which temperature is hotter?'')
+\item Which golf score is better? (Here, ``better'', with respect to par, would actually be the more negative number!)
+\end{itemize}
+Notice that in each case, one needs to define which attribute means greater and which means lesser.
+
+We can also use a number line and take advantage of what we did with positive numbers, but extend our ideas to negative numbers as well.
+
+\begin{example}
+Consider the following number line, and the locations of $-5$ and $2$.
+\begin{center}
+\begin{tikzpicture}[font=\Large]
+\draw[<->] (-0.5,0) -- (9.5,0);
+\foreach \x in {0,1,2, 3, 4, 5,6, 7, 8, 9}
+\draw[shift={(\x,0)},color=black] (0pt,3pt) -- (0pt,-2pt);
+\draw (0,0) node[below]{$-6$};
+\draw (1, 0) node[below]{$-5$};
+\draw (2, 0) node[below]{$-4$};
+\draw (3,0) node[below]{$-3$};
+\draw (4,0) node[below]{$-2$};
+\draw (5,0) node[below]{$-1$};
+\draw (6,0) node[below]{$0$};
+\draw (7,0) node[below]{$1$};
+\draw (8,0) node[below]{$2$};
+\draw (9,0) node[below]{$3$};
+\node at (1,0)[circle,fill,inner sep=1.5pt]{};
+\node at (8,0)[circle,fill,inner sep=1.5pt]{};
+\end{tikzpicture}  
+\end{center}
+
+On the number line above, $\answer[given]{-5} < \answer[given]{2}$ because $-5$ is to the \wordChoice{\choice[correct]{left} \choice{right}} of $2$ on the number line.  However, of these two numbers, $\answer[given]{-5}$ is further from zero.  If our home was located at $0$ and we asked, ``Which of $-5$ and $2$ is further from home?'' we might say that $\answer[given]{2} < \answer[given]{-5}$.
+ \end{example}
+Again, notice how complicated these ideas get!  We should always keep in mind the context for our numbers.
+
+
+\subsection{Checks and Bills}
+
+We will end this section with two sets of conventions that we plan to use to help make sense of operations with integers.  The first is a model that often helps us to write meaningful story problems, called the ``checks and bills'' model.
+\begin{definition}
+In the \textbf{checks and bills model}, imagine that you are a small business owner, and that you live in a wonderful land where everyone always pays their bills.  We will ask questions about the financial net worth (in dollars) of your business using the following.
+\begin{itemize}
+	\item An addition sign means to ``receive'', generally in the mail.
+	\item A subtraction sign means to ``send'', generally in the mail.
+	\item A check will refer to a positive number.
+	\item A bill will refer to a negative number.
+\end{itemize}
+\end{definition}
+
+If we are using chips to represent the checks and bills in our stories, a black chip will mean \$$1$, and a red chip will mean \$$-1$.
+
+\begin{example}
+Yesterday, you wrote a check for twelve dollars.  What amount is represented by this check?  $\answer[given]{12}$
+
+Today, you plan to write a bill for eighteen dollars.  What amount is represented by this bill?  $\answer[given]{-18}$
+
+Yesterday, you sent the check you wrote in the mail.  So, the twelve dollars should be \wordChoice{\choice{added} \choice[correct]{subtracted}} from your net worth.
+\end{example}
+
+\subsection{Operations and Number Lines}
+
+When we model our operations using number lines, we will use the following conventions.
+\begin{itemize}
+	\item An addition sign means to walk or move forward.
+	\item A subtraction sign means to walk or move backward.
+	\item A positive number means to face right (towards the positive numbers).
+	\item A negative number means to face left (towards the negative numbers).
+\end{itemize}
+The result that you see after following these procedures should answer the question, ``Where on the number line are we now?''  We can also often use our story situation, whether it is checks and bills or something else, to understand how to move on the number line.  Some people think of this as asking the question, ``Did we get good news or bad news?'' 
+\begin{example}
+Receiving a bill in the mail is generally considered to be \wordChoice{\choice{good news} \choice[correct] {bad news}}.  If we received a bill for \$$24$, we should move towards the \wordChoice{\choice{positive} \choice[correct]{negative}} numbers on the line.  The number of steps we should move is $\answer[given]{24}$.
+
+Receiving a check in the mail is generally considered to be \wordChoice{\choice[correct]{good news} \choice{bad news}}.  If we received a check for \$$19$, we should move towards the \wordChoice{\choice[correct]{positive} \choice{negative}} numbers on the line.  The number of steps we should move is $\answer[given]{19}$.
+\end{example}
+
+\end{document}
+
+
+
+
+
+

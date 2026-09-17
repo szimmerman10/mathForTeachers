@@ -1,0 +1,464 @@
+\documentclass{ximera}
+
+\input{../preamble.tex}
+
+
+\title{Prime numbers}
+\author{Jenny Sheldon}
+
+\begin{document}
+
+\begin{abstract}
+We discuss prime numbers as building blocks.
+\end{abstract}
+\maketitle
+
+\section{Activities for this section:} 
+\link[Prime Time]{https://ximera.osu.edu/m4t/elementaryActivities/SemesterOnePacket/elementaryActivities/FactorsAndMultiples/PrimeTimev2}
+
+\section{Prime numbers}
+
+When children start making lists of factors, they can begin to notice things. Let's make a few lists of factors and make observations about what we see.
+
+\begin{example}
+Write down all the factors of $24$.
+
+Remember that if $A$ is a factor of $24$, we need to find some other number $B$ so that $A \times B = 24$, and then both $A$ and $B$ are factors of $24$. So, we'll write these factors down in pairs that multiply to $24$.
+
+\begin{center}
+\begin{tabular}{c|c}
+$1$ & $\answer[given]{24}$ \\
+$\answer[given]{2}$ & $12$ \\
+$\answer[given]{3}$ & $8$ \\
+$4$ & $\answer[given]{6}$ \\
+\end{tabular}
+\end{center}
+
+We got a total of $\answer[given]{8}$ factors of $24$.
+\end{example}
+
+How do we know that we wrote down all of the factors of $24$? We did this in a systematic way by checking whether $1$, $2$, $3$, and so on were factors of $24$, and we continued until we had checked every number. We can see that $5$ is not a factor of $24$, and then when we check $6$ we find that it's already on our list of factors. We could check that $7$ is not a factor of $24$, but we actually don't need to do the division if we notice that the numbers in the left column in our example are all smaller than the numbers in the right column. When we multiply $A \times B$ and get $24$, one of the numbers will be smaller than the other. Since $7$ is larger than $6$, and $6$ is the smallest number in the right hand column, if it was a factor of $24$ it would already have appeared paired with a smaller number from the left hand column. Another way to see this is to divide.
+\[
+24 \div 7 \approx 3.43
+\]
+Since the quotient is not a whole number, we know that $7$ can't be a factor of $24$. Since $3.43$ is between $3$ and $4$, we also know that if $7$ was a factor, we would have already written it down between $8$ and $6$. We can use the same reasoning for numbers higher than $7$, so we are confident that this is the entire list of factors. 
+
+Let's do another example.
+
+\begin{example}
+Write down all the factors of $25$.
+
+Remember that if $A$ is a factor of $25$, we need to find some other number $B$ so that $A \times B = 25$, and then both $A$ and $B$ are factors of $25$. Let's make our chart again in a systematic fashion.
+
+\begin{center}
+\begin{tabular}{c|c}
+$1$ & $\answer[given]{25}$ \\
+$\answer[given]{5}$ &  \\
+\end{tabular}
+\end{center}
+
+We got a total of $\answer[given]{3}$ factors of $25$.
+\end{example}
+
+Notice that in this example, we wrote the factor $5$ but we didn't write anything across from it. The reason for this is that $5 \times 5 = 25$ and we only want to write the factor $5$ once in our list. While $24$ had an even number of factors (every factor had a pair), $25$ has an odd number of factors. The difference is that with $24$, we don't have any whole number $A$ so that $A$ multiplied by itself gives $24$. But we do have such a number for $25$. A number $N$ where we can find some whole number $A$ so that $A$ multiplied by itself is equal to $N$ is called a \dfn{square number}. So, we have said that $25$ is a square number and $24$ is not. We've also noticed, as children do when they are playing with factors, that square numbers have an odd number of factors while non-square numbers (like $24$) have an even number of factors.
+
+We could still find a number $A$ so that $A$ multiplied by itself is equal to $24$, but this number would not be a whole number. In fact, we use special notation for this $A$ called the \dfn{square root} of $N$, written $A = \sqrt{N}$. As an example, we have
+\[
+\sqrt{25} = 5
+\]
+because
+\[
+5 \times 5 = 25.
+\]
+We could also write
+\[
+\sqrt{24} = 4.89897\dots
+\]
+because if we took the infinitely long decimal above and multiplied it by itself, we would get exactly $24$.
+\[
+4.89897\dots \times 4.89897\dots = 24
+\]
+There is one more thing to notice, here: the square root gives us the ``turning point'' in the table where we switch from the left-hand side of the table to the right-hand side. Notice that in our table for $24$, the last row was $4$ and $6$ since $4 \times 6 = 24$. We know that
+\[
+24 \div 4 = 6.
+\]
+In this division expression $6$ is the quotient and $4$ is the divisor, and so we can notice that the quotient is larger than the divisor. Following our pattern, we increase the divisor $4$ by $1$ and divide again, and we get
+\[
+24 \div 5 = 4.8.
+\]
+Now that the divisor is $5$, the quotient is $4.8$ and we see that the quotient is smaller than the divisor. When we divide by whole numbers starting with $1$ and increasing by $1$ each time, the square root is the place where the quotient switches to be smaller than the divisor and we know that we are done making our chart.
+
+Let's look at one more example that will bring us to the main idea of this section.
+
+\begin{example}
+Write down all the factors of $31$.
+
+Remember that if $A$ is a factor of $31$, we need to find some other number $B$ so that $A \times B = 31$, and then both $A$ and $B$ are factors of $31$. Let's make our chart once more in our systematic fashion. Remember that we only need to check whole numbers up to $\sqrt{31} \approx 5.57$ before we know we have found them all.
+
+\begin{center}
+\begin{tabular}{c|c}
+$1$ & $\answer[given]{31}$ \\
+\end{tabular}
+\end{center}
+
+\end{example}
+
+In this case, we found exactly two factors: $1$ and $31$. Numbers that have exactly two factors are special enough that we will talk about them for the rest of this section.
+
+\begin{definition}
+A positive whole number $N$ is \dfn{prime} if it has exactly two factors, $1$ and itself. A number which is not prime is called \dfn{composite}.
+\end{definition}
+
+Children begin learning about prime numbers in fourth grade alongside their work on factors and multiples. Let's check out an application of our definition.
+
+\begin{question}
+Using our definition, is $1$ a prime number?
+
+\begin{multipleChoice}
+\choice{Yes.}
+\choice[correct]{No.}
+\begin{feedback}[correct]
+ To be a prime number, we need to have exactly two factors. But the number $1$ only has a single factor. So this does not fit our definition.
+\end{feedback}
+\end{multipleChoice}
+\end{question}
+
+The number $1$ is a strange case, but our definition makes things clear. You might have seen the definition of prime numbers before as numbers which can only be divided by $1$ and themselves. This ``dividing'' definition can be confusing for number of reasons, including that it is ambiguous whether or not $1$ should be considered prime. This is why we chose our definition using factors: we can clearly see that $1$ is not prime.
+
+\begin{question}
+Which of the following numbers are prime? Select all that apply.
+\begin{selectAll}
+\choice[correct]{$2$}
+\choice[correct]{$3$}
+\choice{$4$}
+\choice{$10$}
+\choice[correct]{$11$}
+\choice{$12$}
+\end{selectAll}
+\end{question}
+
+
+Above, when we wrote all of the factors of $31$, you probably divided $31$ by $1$, $2$, $3$, $4$, and $5$ and then stopped because larger divisors would be greater than the square root. This strategy is called \dfn{trial division}, because we tried to divide by all the numbers we know. This strategy is great when we are in the mindset of making a list of all of the factors of a number, because if the number is not prime we want to make sure that we write down all of the factors. However, if we are just trying to see whether or not a number is prime, we can take a short cut that depends on the relationships between factors. Let's investigate this relationship with an example and then apply it to our example.
+
+\begin{question}
+Suppose $4$ is a factor of a number $N$. Is $2$ also a factor of that number?
+
+\begin{explanation}
+In this question, we are not looking for all of the factors of $N$, but instead looking at a relationship between its factors. We know one of the factors of a number $N$ (in this case $4$) and we want to investigate whether another number (in this case $2$) is also a factor of the same $N$.Using our definition of factors, if $4$ is a factor of a number $N$, we know that we can find another number $B$ so that 
+\[
+4 \times B = N.
+\]
+Our goal is to transform the $B$ so that we can rewrite this equation as 
+\[
+2 \times C = N
+\]
+where we understand how to calculate $C$ using $B$.
+
+
+To make this more concrete, let's use $N=80$. In this case, 
+\[
+4 \times \answer[given]{20} = 80
+\]
+and so $4$ is a factor of $80$. To find out whether or not $2$ is a factor of $N=80$, we need to find  some number $C$ so that $2 \times C = N$ and we want to use the fact that $4$ is a factor of $80$ to find this $C$. In the language we used above, we are transforming our $B$ into this new $C$. Remember that $4 = \answer[given]{2} \times \answer[given]{2}$ and let's rewrite that in our equation.
+\begin{align*}
+ 4 \times 20 &= 80 \quad \textrm{ or in general } \quad 4 \times B  = N\\
+ (2 \times 2) \times 20 &= 80 \quad \textrm{ or in general } \quad (2 \times 2) \times B = N\\
+\end{align*}
+To find the $C$ from the $B$, we can use the associative property to rearrange the parenthesis.
+\begin{align*}
+ (2 \times 2) \times 20 &= 80 \quad \textrm{ or in general } \quad (2 \times 2) \times B = N\\
+ 2 \times (2 \times 20) &= 80 \quad \textrm{ or in general } \quad 2 \times (2 \times B) = N\\
+\end{align*}
+Now we can set $C = 2 \times 20$ or $C = 2 \times B$ and see that in fact $2$ is a factor of $N$.
+\end{explanation}
+\end{question}
+
+We just showed that if $4$ is a factor of $N$, then $2$ must also be a factor of $N$. This works because $2$ is a factor of $4$. We can use similar equations to show if $A$ is a factor of $B$ and $B$ is a factor of $C$, then $A$ must also be a factor of $C$. In this example, we showed that since $A=2$ is a factor of $B = 4$, and $B=4$ is a factor of $C = 80$, then $A=2$ is also a factor of $C=80$. Try the next question to see another example.
+
+\begin{question}
+If $12$ is a factor of a number $N$, is $3$ also a factor of $N$?
+\begin{multipleChoice}
+\choice[correct]{Yes}
+\choice{No}
+\begin{feedback}
+Write some equations like the ones in the previous problem to justify your work.
+\end{feedback}
+\end{multipleChoice}
+\end{question}
+
+If we apply this idea to our example of finding whether or not $31$ is prime, remember that we divided by $1$, $2$, $3$, $4$, and $5$ in order to determine that $31$ is prime. But we could have skipped dividing by $4$ since we already know that $2$ is not a factor of $31$. Based on what we just learned, if $4$ is a factor of $31$, then $2$ would also have to be a factor of $31$, which we know isn't true. Reversing this, we know that since $2$ isn't a factor of $31$, we cannot have $4$ as a factor of $31$. We can now reduce the number of calculations we need in order to determine whether a number is prime.
+
+The idea of using factors that we have already tested to determine whether a number is prime is also the main idea in one of the oldest algorithms for finding prime numbers, called the \link[Sieve of Eratosthenes]{https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes}. Let's use the sieve in the next example to find all of the prime numbers less than $40$.
+
+\begin{example}
+Use the Sieve of Eratosthenes to find all of the prime numbers less than $40$.
+
+The first step is to list out all of the numbers, beginning with $2$ and ending with $40$.
+
+\begin{image}
+\begin{tikzpicture}
+\foreach \x in {2, ..., 10} \node at (\x, 3) {$\x$};
+\foreach \x in {11, 12, ..., 20} \node at (\x-10, 2) {$\x$};
+\foreach \x in {21, 22, ..., 30} \node at (\x-20, 1) {$\x$};
+\foreach \x in {31, 32, ..., 40} \node at (\x-30, 0) {$\x$};
+\end{tikzpicture}
+\end{image}
+Next, we cross off all of the multiples of $2$ other than $2$ itself. These multiples of $2$ will have $2$ as a factor, and hence the ones that are larger than $2$ are not prime.
+\begin{image}
+\begin{tikzpicture}
+\foreach \x in {2, ..., 10} \node at (\x, 3) {$\x$};
+\foreach \x in {11, 12, ..., 20} \node at (\x-10, 2) {$\x$};
+\foreach \x in {21, 22, ..., 30} \node at (\x-20, 1) {$\x$};
+\foreach \x in {31, 32, ..., 40} \node at (\x-30, 0) {$\x$};
+\foreach \x in {4, 6, 8, 10} \draw[thick, red] (\x-0.2, 2.8)--(\x+0.2, 3.2);
+\foreach \x in {2, 4, 6, 8, 10} \foreach \y in {0, 1, 2} \draw[thick, red] (\x-0.2, \y-0.2)--(\x+0.2, \y+0.2);
+\end{tikzpicture}
+\end{image}
+We now cross off all of the multiples of $3$ other than $3$ itself. Again, these multiples of $3$ which are larger than $3$ are not prime.
+\begin{image}
+\begin{tikzpicture}
+\foreach \x in {2, ..., 10} \node at (\x, 3) {$\x$};
+\foreach \x in {11, 12, ..., 20} \node at (\x-10, 2) {$\x$};
+\foreach \x in {21, 22, ..., 30} \node at (\x-20, 1) {$\x$};
+\foreach \x in {31, 32, ..., 40} \node at (\x-30, 0) {$\x$};
+\foreach \x in {4, 6, 8, 10} \draw[thick, red] (\x-0.2, 2.8)--(\x+0.2, 3.2);
+\foreach \x in {2, 4, 6, 8, 10} \foreach \y in {0, 1, 2} \draw[thick, red] (\x-0.2, \y-0.2)--(\x+0.2, \y+0.2);
+\draw[thick, red] (8.8, 2.8)--(9.2, 3.2);
+\draw[thick, red] (4.8, 1.8)--(5.2, 2.2);
+\draw[thick, red] (0.8, 0.8)--(1.2, 1.2);
+\draw[thick, red] (6.8, 0.8)--(7.2, 1.2);
+\draw[thick, red] (2.8, -0.2)--(3.2, 0.2);
+\draw[thick, red] (8.8, -0.2)--(9.2, 0.2);
+\end{tikzpicture} \end{image}
+We keep repeating this process with the next uncrossed number until we have no more multiples to cross off. So, we cross off the multiples of $5$, then $7$, and so forth. In the resulting chart, the numbers that are not crossed off must be the prime numbers.
+
+
+\begin{image}
+\begin{tikzpicture}
+\foreach \x in {2, ..., 10} \node at (\x, 3) {$\x$};
+\foreach \x in {11, 12, ..., 20} \node at (\x-10, 2) {$\x$};
+\foreach \x in {21, 22, ..., 30} \node at (\x-20, 1) {$\x$};
+\foreach \x in {31, 32, ..., 40} \node at (\x-30, 0) {$\x$};
+\foreach \x in {4, 6, 8, 10} \draw[thick, red] (\x-0.2, 2.8)--(\x+0.2, 3.2);
+\foreach \x in {2, 4, 6, 8, 10} \foreach \y in {0, 1, 2} \draw[thick, red] (\x-0.2, \y-0.2)--(\x+0.2, \y+0.2);
+\draw[thick, red] (8.8, 2.8)--(9.2, 3.2);
+\draw[thick, red] (4.8, 1.8)--(5.2, 2.2);
+\draw[thick, red] (0.8, 0.8)--(1.2, 1.2);
+\draw[thick, red] (6.8, 0.8)--(7.2, 1.2);
+\draw[thick, red] (2.8, -0.2)--(3.2, 0.2);
+\draw[thick, red] (8.8, -0.2)--(9.2, 0.2);
+\draw[thick, red] (4.8, 0.8)--(5.2, 1.2);
+\draw[thick, red] (4.8, -0.2)--(5.2, 0.2);
+\end{tikzpicture}
+\end{image}
+A sieve is like a filter, and so you can think about this process as filtering out the multiples and keeping only the prime numbers. 
+\end{example}
+
+Our examples in this section have been focused on finding all of the factors of a given number. Since factors are related to one another (if $A$ is a factor of $B$ and $B$ is a factor of $C$ then $A$ is also a factor of $C$ as we discussed above), the most important factors of a number are the prime factors. When we find the prime factors that multiply together to make a given number, we call this process find a  \dfn{prime factorization} for the number. Let's work through such an example.
+
+\begin{example}
+Find the prime factorization of $132$.
+
+We need to find the factors of $132$. Many people draw what is called a \dfn{factor tree} to help them keep track of the factors they are finding. A factor tree starts with the number we are factoring at the top, and then branches out into the factors below. We know that $132$ is an even number, and this means that $2$ must be a factor of this number. When we divide $132 \div 2$ we get $\answer[given]{66}$ so we record this in our factor tree by drawing two branches below $132$, one for $2$ and the other for $66$.
+\begin{image} \begin{tikzpicture}
+\node at (0, 4) {$132$};
+\node at (-1, 3) {$2$};
+\node at (1, 3) {$66$};
+\draw[thick] (0, 3.8)--(-1, 3.2);
+\draw[thick] (0, 3.8)--(1, 3.2);
+\end{tikzpicture} \end{image}
+Now $2$ is a prime number, so we don't need to factor it any more and its branch will end there. But $66$ can be factored as $6 \times \answer[given]{11}$, so we draw these two branches below the $66$.
+\begin{image} \begin{tikzpicture}
+\node at (0, 4) {$132$};
+\node at (-1, 3) {$2$};
+\node at (1, 3) {$66$};
+\draw[thick] (0, 3.8)--(-1, 3.2);
+\draw[thick] (0, 3.8)--(1, 3.2);
+\node at (0.5, 2) {$6$};
+\node at (1.5, 2) {$11$};
+\draw[thick] (1, 2.8)--(0.5, 2.2);
+\draw[thick] (1, 2.8)--(1.5, 2.2);
+\end{tikzpicture} \end{image}
+We have that $11$ is prime, so we only need to factor $6$, which we know is $\answer[given]{2} \times 3$. We record these numbers on branches below the $6$.
+\begin{image} \begin{tikzpicture}
+\node at (0, 4) {$132$};
+\node at (-1, 3) {$2$};
+\node at (1, 3) {$66$};
+\draw[thick] (0, 3.8)--(-1, 3.2);
+\draw[thick] (0, 3.8)--(1, 3.2);
+\node at (0.5, 2) {$6$};
+\node at (1.5, 2) {$11$};
+\draw[thick] (1, 2.8)--(0.5, 2.2);
+\draw[thick] (1, 2.8)--(1.5, 2.2);
+\node at (0.25, 1) {$2$};
+\node at (0.75, 1) {$3$};
+\draw[thick] (0.5, 1.8)--(0.25, 1.2);
+\draw[thick] (0.5, 1.8)--(0.75, 1.2);
+\end{tikzpicture} \end{image}
+Now that all of the branches end in prime numbers, we know that the original number is the product of all of these prime numbers. In other words, 
+\[
+132 = 2 \times \answer[given]{2} \times 3 \times \answer[given]{11}.
+\]
+This is the prime factorization of $132$.
+\end{example}
+
+
+
+\section{Unique factorization}
+
+Now that we have practiced finding a prime factorization, does it matter how we begin the process of factoring?
+
+\begin{example}
+Let's find another factor tree for $132$.
+
+This time, let's start by factoring $132$ as $6 \times \answer[given]{22}$. We will then need to factor both $6$ and $22$, and we see that 
+\[
+6 = \answer[given]{2} \times 3
+\]
+and
+\[
+22 = 2 \times \answer[given]{11}.
+\]
+These are now all prime numbers, so let's write them on the branches in our factor tree starting with $132$ at the top.
+\begin{image}
+\begin{tikzpicture}
+\node at (0, 4) {$132$};
+\node at (-1, 3) {$6$};
+\node at (1, 3) {$22$};
+\node at (-1.5, 2) {$2$};
+\node at (-0.5, 2) {$3$};
+\node at (0.5, 2) {$2$};
+\node at (1.5, 2) {$11$};
+\draw[thick] (0, 3.8)--(-1, 3.2);
+\draw[thick] (0, 3.8)--(1, 3.2);
+\draw[thick] (-1, 2.8)--(-1.5, 2.2);
+\draw[thick] (-1, 2.8)--(-0.5, 2.2);
+\draw[thick] (1, 2.8)--(0.5, 2.2);
+\draw[thick] (1, 2.8)--(1.5, 2.2);
+\end{tikzpicture}
+\end{image}
+Looking at the prime numbers at the ends of the branches, we see that 
+\[
+132 = 2 \times 3 \times 2 \times \answer[given]{11}
+\]
+which can be rearranged using the commutative property to be
+\[
+132 = 2 \times 2 \times 3 \times 11.
+\]
+\end{example}
+
+We have now factored $132$ in two different ways and we got the same prime factorization in each case. This is an example of the \dfn{Fundamental Theorem of Arithmetic}.
+\begin{theorem}[The Fundamental Theorem of Arithmetic]
+Say that we have a positive integer $N$ which is greater than $1$ and the prime factorization of $N$. Any prime factorization of $N$ must use the same primes as any other prime factorization of $N$, so that the only difference between two prime factorizations of $N$ is the order in which we multiply the numbers.
+\end{theorem}
+This theorem is also called the \dfn{Unique Factorization Theorem} because it is telling us that prime factorizations are unique. If we write the prime factorization of $132$ and then rearrange the prime factors so that they are in order from smallest to largest, we are always going to get
+\[
+132 = 2 \times 2 \times 3 \times 11.
+\]
+This is the only way to factor $132$ into primes.
+
+The Fundamental Theorem of Arithmetic is important because it allows us to think about prime numbers as the instructions or building blocks for any whole number. Because prime factorizations are unique, we have a specific recipe for building each number, and we can use this recipe to answer questions about the number. It's a common technique for mathematicians who are asking questions about numbers to rephrase their questions in terms of prime numbers. Let's see an example.
+
+\begin{question}
+Is $14$ a factor of $132$?
+
+\begin{explanation}
+We have already seen that the prime factorization of $132$ is 
+\[
+\answer[given]{2} \times 2 \times 3 \times 11.
+\]
+We can also find the prime factorization of $14$ and write it in order from the smallest prime to the largest.
+\[
+14 = \answer[given]{2} \times \answer[given]{7}
+\]
+Now, if $14$ is a factor of $132$, then by our definition of a factor we have to be able to find some integer $B$ so that $14 \times B = 132$. Remember that $B$ is also made of prime numbers, so that when we write it in the equation below we would like to be thinking of it as a collection of primes. We need to find $B$ so that 
+\[
+2 \times 7 \times B = 2 \times 2 \times 3 \times 11.
+\]
+But now we see a problem. On the left hand side of this equation we have a prime factor of $7$, but on the right hand side of the equation we do not. No matter what prime factors make up the number $B$, we will have $7$ as a prime factor of the number on the left. However, we do not have $7$ as a prime factor of the number on the right. Since prime factorizations are unique, this means that the number on the left must be different from the number on the right. All together, this tells us that $14$ \wordChoice{\choice{is} \choice[correct]{is not}} a factor of $132$ because it's impossible for us to choose a value of $B$ that will make our equation a true statement.
+
+\end{explanation}
+\end{question}
+
+As we work through more problems about factors and multiples, watch out for instances where making a prime factorization will help you answer questions about numbers.
+
+
+\section{Exponents}
+
+We will wrap up this section with some notation that is very important for middle grades students to understand: exponents. You might have already noticed some places in this section where using exponents would have shortened our expressions, and you should feel free to use exponents in your work if you feel comfortable with them. If you don't feel comfortable with using them, we encourage you to practice and ask any questions you have. 
+
+\begin{definition}
+The notation $a^n$ means we have $n$ copies of the number $a$ multiplied together. In this expression, the number $a$ is called the \dfn{base} and the number $n$ is called the \dfn{exponent}.
+\end{definition}
+
+\begin{question}
+How would we write the following exponential expressions as whole numbers?
+
+\begin{itemize}
+	\item $4^2 = \answer[given]{16}$
+	\item $3^3 = \answer[given]{27}$
+	\item $5^4 = \answer[given]{625}$
+\end{itemize}
+\end{question}
+
+In other words, exponential notation helps us to write expressions involving repeated factors in a shorter way. For example, we have been writing
+\[
+132 = 2 \times 2 \times 3 \times 11
+\]
+but using the notation of exponents we could instead write
+\[
+132 = 2^2 \times 3 \times 11.
+\]
+
+There are several rules for working with exponents that are consequences of the definition.
+
+\begin{itemize}
+	\item $a^n \times a^m = a^{n+m}$
+	\item $a^n \div a^m = a^{n-m}$
+	\item $\left ( a^n \right )^m = a^{n \times m}$
+	\item $\left ( ab \right )^n = a^n \times b^n$
+\end{itemize}
+These rules for exponents follow from our definitions, and they also can help us make sense of what we might mean when we write zero as an exponent, a negative exponent, or a fractional exponent. Let's explain why one of these rules makes sense.
+
+\begin{example}
+Let's explain why $a^n \times a^m = a^{n+m}$ using the example $5^3 \times 5^6 = 5^{3+6}$. Notice that in order to use this rule of exponents we have to have the same base $a$ for each of the factors, and in our example the base is $a=5$ throughout.
+
+We know that $5^3$ means that we take $\answer[given]{3}$ copies of the number $5$ and multiply them together.
+\[
+5^3 =5 \times 5 \times 5
+\]
+Similarly, $5^6$ means that we take $\answer[given]{6}$ copies of the number $5$ and multiply them together.
+\[
+5^6 =5 \times 5 \times 5 \times 5 \times 5 \times 5
+\]
+Now, if we multiply $5^3$ and $5^6$, we have the following.
+\begin{align*}
+5^3 \times 5^6 &= \left ( 5 \times 5 \times 5 \right ) \times \left (5 \times 5 \times 5 \times 5 \times 5 \times 5 \right ) \\
+&=  5 \times 5 \times 5  \times 5 \times 5 \times 5 \times 5 \times 5 \times 5 
+\end{align*}
+We can find the total number of fives being multiplied together in this product by combining the $3$ fives from the first number with the $6$ fives from the second number. In other words, the total number of fives we have in this product is given by $3 + 6$. We would get the same result if we used a different base $a$ and different exponents $n$ and $m$. Once we use our definition to write down the appropriate number of copies of the base, we will end up combining the $n$ copies with the $m$ copies for a total of $n+m$ copies of the base. 
+
+\end{example}
+
+If you are up for a challenge, we encourage you to think about some of the following questions. We are happy to talk about their answers in office hours!
+\begin{itemize}
+	\item Why do the other rules of exponents make sense?
+	\item What do we mean by $8^0$ and why?
+	\item What do we mean by $25^{\frac{1}{2}}$ and why?
+	\item What do we mean by $3^{-1}$ and why?
+\end{itemize}
+
+
+
+
+
+
+
+
+\end{document}
+
+
+
+
+
+

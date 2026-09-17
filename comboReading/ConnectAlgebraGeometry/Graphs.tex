@@ -1,0 +1,567 @@
+\documentclass{ximera}
+
+\input{../preamble.tex}
+
+\title{Graphs}
+\author{Jenny Sheldon}
+
+\begin{document}
+
+\begin{abstract}
+We connect geometry and algebra using graphs.
+\end{abstract}
+\maketitle
+
+\section{Activities for this section:} 
+\link[Where are we?]{https://ximera.osu.edu/m4t/elementaryActivities/SemesterTwoPacket/elementaryActivities/ConnectAlgebraGeometry/WhereAreWe}, 
+\link[The graphic details]{https://ximera.osu.edu/m4t/elementaryActivities/SemesterTwoPacket/elementaryActivities/ConnectAlgebraGeometry/GraphicDetails}
+
+
+
+\section{Graphs}
+
+
+
+
+Now that we have investigated functions from an algebraic perspective, how can we also investigate functions from a geometric perspective? The answer is to use a graph, and the idea of connecting geometry with algebra in mathematics was one of the most significant developments in the history of mathematics. The credit for this groundbreaking idea generally goes to two different French mathematicians who lived roughly in the 1600s: \link[Pierre de Fermat]{https://en.wikipedia.org/wiki/Pierre_de_Fermat} and \link[Ren\'e Descartes]{https://en.wikipedia.org/wiki/Rene_Descartes}. Actually, both men have rather interesting stories: neither was a professional mathematician for their entire career (Fermat was a lawyer and Descartes was a soldier), which perhaps shows that important mathematical discoveries aren't always made by people working only math jobs.
+
+Imagine for a moment that the only way you could work with a function was by using algebra. This is pretty tough for us -- if I had to guess, you probably had some graphs in mind while reading the previous section! How would you visualize a function? What kinds of visual intuition might you have about functions if all you knew about was algebra? This was actually the state of mathematics for a long time! Try to put yourself in the mind of Fermat and Descartes: what is the first thing you would need in order to draw a picture of a function?
+
+If you said ``a coordinate system'', then you've come up with Fermat and Descartes' big contribution to this subject!
+
+\section{The rectangular coordinate system}
+When we think about functions, we start by thinking about the set of inputs, or the domain, for our function. Typically these inputs are numbers, and we've seen that often these numbers come from the real numbers. In fact, most of the time the inputs can come from any real number. When we draw the set of all real numbers, we most often represent this with a number line. 
+\begin{question}
+What kind of information do we need in order to draw a number line? Select all that apply.
+\begin{selectAll}
+\choice{We always have to mark the number zero.}
+\choice[correct]{We don't have to mark zero, but we need to decide at least two numbers to mark.}
+\choice{We always have to mark the number one.}
+\choice[correct]{We don't always have to mark the number one, but we need a scale from which we can determine the size of one unit.}
+\end{selectAll}
+\end{question}
+While we can draw number lines very generally using the information above, a very common way to draw  a number line for a graph is to first mark zero, and then our one unit length is given by where we place the tick mark for the number $1$.
+\begin{image}
+\begin{tikzpicture}
+\draw[thick, <->] (-3.2, 0)--(3.2,0);
+\foreach \x in {-3, -2, ..., 2, 3} \draw (\x, 0.2)--(\x, -0.2) node[below] {$\x$};
+\end{tikzpicture}
+\end{image}
+
+But, inputs aren't the only thing we have with functions: we also have outputs. Our outputs are also usually numbers, and so we could also represent them using another number line. But the outputs aren't completely separate from the inputs, they depend on what input we have. We want to represent this relationship, so we are going to make this second number line vertical instead of horizontal. In other words, if we are given an input, we draw the corresponding output directly above that input, using the vertical number line.
+\begin{image}
+\begin{tikzpicture}
+\draw[thick, <->] (-3.2, 2)--(3.2,2);
+\draw[thick, <->] (-3, 0.8)--(-3, 5.2);
+\foreach \x in {-2, -1, ..., 2, 3} \draw (\x, 2.2)--(\x, 1.8) node[below] {$\x$};
+\foreach \y in {1,2, ..., 5} \draw (-2.8, \y)--(-3.2, \y) node[left] {$\y$};
+\end{tikzpicture}
+\end{image}
+You might be ready to complain about the drawing I just made, but before I draw one that looks a little more like what you were expecting, notice that what I did draw satisfies the requirements that I need in order to draw a function. I have a horizontal number line (called the \dfn{horizontal axis}) and I have a vertical number line (called the \dfn{vertical axis}) and they meet at right angles. I could use this set of number lines (called \dfn{axes}) to graph a function if I wanted to, by playing dots on the output values corresponding to my input values.
+\begin{question}
+Use the graph of a function $f$ below to answer the questions which follow.
+\begin{image}
+\begin{tikzpicture}
+\draw[thick, <->] (-3.2, 2)--(3.2,2);
+\draw[thick, <->] (-3, 0.8)--(-3, 5.2);
+\foreach \x in {-2, -1, ..., 2, 3} \draw (\x, 2.2)--(\x, 1.8) node[below] {$\x$};
+\foreach \y in {1,2, ..., 5} \draw (-2.8, \y)--(-3.2, \y) node[left] {$\y$};
+\draw[fill=black] (-2, 4) circle (2pt);
+\draw[fill=black] (-1, 3) circle (2pt);
+\draw[fill=black] (0, 3) circle (2pt);
+\draw[fill=black] (1, 2) circle (2pt);
+\draw[fill=black] (2, 1) circle (2pt);
+\end{tikzpicture}
+\end{image}
+
+The graph above has a dot directly above $-2$ at height $4$, a dot directly above $-1$ at height $3$, a dot directly above $0$ at height $3$, a dot directly above $1$ at height $2$, and a dot directly below $2$ at height $1$.
+
+What is the domain of this function?
+\begin{multipleChoice}
+\choice{all real numbers}
+\choice{all integers}
+\choice[correct]{the set $\{-2, -1, 0, 1, 2\}$}
+\choice{the set $\{-2, -1, 0, 1, 2, 3\}$}
+\end{multipleChoice}
+
+According to the graph, what is $f(0)$?
+\begin{prompt}
+$\answer[given]{3}$
+\end{prompt}
+\end{question}
+
+Of course, it is much more common to place the intersection of the two axes at zero on both number lines. When we do so, we typically call the point which is zero on both number lines the \dfn{origin}. The axes below are probably more what you are used to seeing, and the origin is located at the intersection of those axes.
+\begin{image}
+\begin{tikzpicture}
+\draw[thick, <->] (-3.2, 0)--(3.2,0);
+\draw[thick, <->] (0, -3.2)--(0, 3.2);
+\foreach \x in {-3, -2, -1, 1, 2, 3} \draw (\x, 0.2)--(\x, -0.2) node[below] {$\x$};
+\foreach \y in {-3, -2, -1, 1, 2, 3} \draw (0.2, \y)--(-0.2, \y) node[left] {$\y$};
+\end{tikzpicture}
+\end{image}
+While we are on the subject of vocabulary, we will sometimes use $x$ to represent the input values of our function, and so the horizontal axis is also called the \dfn{$x$-axis}. We will sometimes use $y$ to represent the output values of our function, and so the vertical axis is also called the \dfn{$y$-axis}. The variable $y$ represents the function's output values, so we will sometimes write $y=f(x)$ to connect the $y$-values to the idea of the function. The $y$-variable is also sometimes called the \dfn{dependent variable} because its value \emph{depends} on the input. The $x$-variable is then called the \dfn{independent variable} because its value doesn't depend on anything; we get to choose the inputs. As much as we aren't tied to placing the horizontal axis at $y=0$ we are also not tied to using $x$ and $y$ as our variables! If we used $t$ for the independent variable (the inputs), then the horizontal axis would be called a $t$-axis. Overall, the idea of using a coordinate system to do geometry is called \dfn{analytic geometry}. These coordinates are called \dfn{rectangular coordinates} because of the fact that the axes are at right angles to one another, and they are also called \dfn{Cartesian coordinates} in honor of Descartes. (Sadly, Fermat doesn't get as much credit as Descartes!) This vocabulary lesson isn't here because we want you to use all of these terms all of the time (though you are welcome to if they help you) but more because we want you to make sense of some vocabulary you might have heard in the past and connect it to the ideas we are discussing now.
+
+These two number lines set at right angles create a plane which is called \dfn{the coordinate plane}. 
+\begin{question}
+What dimension is the plane formed by two number lines set at right angles?
+\begin{multipleChoice}
+\choice{one-dimensional} 
+\choice[correct]{two-dimensional} 
+\choice{three-dimensional}
+\end{multipleChoice}
+\begin{feedback}[correct]
+The coordinate plane is sometimes referred to as \dfn{the 2D coordinate plane} for this reason.
+\end{feedback}
+\end{question}
+We always assume that we are using rectangular coordinates unless we say otherwise. (Wait, there are other types of coordinates?? Yes! But we won't talk about them here. Please feel free to look it up if you're interested.) There is also a way to define a 3D coordinate space, but we would need three axes set at right angles to do so. In fact, you could define a 4D coordinate space, a 5D coordinate space, or larger, but these are hard to visualize. Here is a picture of the axes for 3D coordinate space. Here the origin is where the axes intersect, but it's not labeled so that the markings on the tick marks are easier to see.
+\begin{image}
+\begin{tikzpicture}
+
+% Draw the x-axis
+\draw[<->] (-2.2,0,0) -- (3,0,0);
+% Draw tick marks and labels on x-axis
+\foreach \x in {-2,-1,1,2}
+    \draw[shift={(\x,0,0)},color=black] (0pt,2pt) -- (0pt,-2pt) node[below] {\footnotesize $\x$};
+
+% Draw the y-axis
+\draw[<->] (0,-2.2,0) -- (0,3,0);
+% Draw tick marks and labels on y-axis
+\foreach \y in {-2,-1,1,2}
+    \draw[shift={(0,\y,0)},color=black] (2pt,0pt) -- (-2pt,0pt) node[left] {\footnotesize $\y$};
+
+% Draw the z-axis
+\draw[<->] (0,0,-2.2) -- (0,0,3);
+% Draw tick marks and labels on z-axis
+\foreach \z in {-2,-1,1,2}
+    \draw[shift={(0,0,\z)},color=black] (2pt,0pt) -- (-2pt,0pt) node[below right] {\footnotesize $\z$};
+
+\end{tikzpicture}
+\end{image}
+
+
+Now that we have a coordinate plane, we can describe any location in our plane using the $x$ and $y$ axes (and also the $z$-axis if we are working in 3D space). Say we have our axes, and we start at the origin and move $3$ units in the positive $x$-direction, and $1.5$ units in the positive $y$-direction.
+\begin{question}
+True or false: if we move first according to $x$ and second according to $y$, we will end up in the same location as if we move first according to $y$ and second according to $x$.
+\begin{multipleChoice}
+\choice[correct]{True}
+\choice{False}
+\end{multipleChoice}
+\end{question}
+
+Let's look at this on our axes.
+\begin{image}
+\begin{tikzpicture}
+\draw[thick, <->] (-3.2, 0)--(3.2,0);
+\draw[thick, <->] (0, -3.2)--(0, 3.2);
+\foreach \x in {-3, -2, -1, 1, 2, 3} \draw (\x, 0.2)--(\x, -0.2) node[below] {$\x$};
+\foreach \y in {-3, -2, -1, 1, 2, 3} \draw (0.2, \y)--(-0.2, \y) node[left] {$\y$};
+\draw[very thick, red, ->] (0,0)--(3,0);
+\draw[very thick, dashed, blue, ->] (3,0)--(3,1.5);
+\draw[fill=black] (3,1.5) circle(2pt) node[above] {$(3,1.5)$};
+\end{tikzpicture}
+\end{image}
+The solid red line shows us beginning at the origin and moving $3$ spaces along the positive $x$-axis, while the dashed blue line shows us starting at the end of the red arrow and moving vertically $1.5$ spaces. Notice that the red and blue lines are at right angles to one another, just like the $x$ and $y$ axes are. This means that we are ``following'' the $y$-axis when we move vertically, even if we aren't actually touching the $y$-axis. (Remember that it doesn't actually matter where we place the $y$-axis, so we could actually place it at $x=3$ if we wanted to!) We have labeled the location at the end of the blue arrow as $(3, 1.5)$. We use parenthesis to indicate that this is a point or location in the plane, and then the first entry (or \dfn{coordinate}) tells us how far we moved in the $x$-direction, while the second entry (or coordinate) tells us how far we moved in the $y$-direction.
+
+\begin{question}
+How would we interpret the point $(-3, 0, 5)$ in 3D space?
+
+We move $\answer[given]{-3}$ units in the $x$-direction, then $\answer[given]{0}$ units in the $y$-direction, then $\answer[given]{5}$ units in the third direction (we usually call this last one $z$).
+\end{question}
+
+We now have all of the pieces we need in order to draw a graph of a function.
+\begin{definition}
+Say we have some function $f$ whose inputs are real numbers and whose outputs are real numbers. We get the \dfn{graph} of $f$ by drawing a point at $(x, f(x))$ for every possible input $x$ in the domain.
+\end{definition}
+It's time to tackle an example!
+
+\begin{example}
+Let's graph the function $f(x) = 2x-1$.
+
+Our goal is to draw (or plot) the point $(x,f(x))$ for every $x$ in the domain of our function. So, what is the domain?
+\begin{multipleChoice}
+\choice[correct]{all real numbers}
+\choice{all integers}
+\choice{the set $\{-2, -1, 0, 1, 2\}$}
+\choice{the set $\{-2, -1, 0, 1, 2, 3\}$}
+\end{multipleChoice}
+We can plug in any real number $x$ into this function, so we will need to plot a point for every value of $x$. That sounds overwhelming, so let's just start with a few that we know. I love to start by making a chart!
+\begin{image}
+\begin{tabular}{c|c|c}
+Input $x$ & Output $f(x)=2x-1$ & Point $(x, f(x))$ \\ \hline
+-3 & $\answer[given]{-7}$ & $(-3, -7)$ \\ \hline
+-2 & $\answer[given]{-5}$ & $(-2, -5)$ \\ \hline
+-1 & $\answer[given]{-3}$ & $(-1, -3)$ \\ \hline
+0 & $\answer[given]{-1}$ & $(0, -1)$ \\ \hline
+1 & $\answer[given]{1}$ & $(1, 1)$ \\ \hline
+2 & $\answer[given]{3}$ & $(2, 3)$ \\ \hline
+3 & $\answer[given]{5}$ & $(3, 5)$ \\ \hline
+\end{tabular}
+\end{image}
+Next, let's plot those points on a pair of axes. We'll draw the usual type. 
+\begin{image}
+\begin{tikzpicture}
+\draw[thick, <->] (-3.2, 0)--(3.2,0);
+\draw[thick, <->] (0, -7.2)--(0, 5.2);
+\foreach \x in {-3, -2, -1, 1, 2, 3} \draw (\x, 0.2)--(\x, -0.2) node[below] {$\x$};
+\foreach \y in {-7, -6, -5, -4, -3, -2, -1, 1, 2, 3, 4, 5} \draw (0.2, \y)--(-0.2, \y) node[left] {$\y$};
+\draw[fill=black] (-3,-7) circle(2pt) node[above] {$(-3,-7)$};
+\draw[fill=black] (-2,-5) circle(2pt) node[above] {$(-2,-5)$};
+\draw[fill=black] (-1,-3) circle(2pt) node[above] {$(-1,-3)$};
+\draw[fill=black] (0,-1) circle(2pt) node[above] {$(0,-1)$};
+\draw[fill=black] (1,1) circle(2pt) node[above] {$(1,1)$};
+\draw[fill=black] (2,3) circle(2pt) node[above] {$(2,3)$};
+\draw[fill=black] (3,5) circle(2pt) node[above] {$(3,5)$};
+\end{tikzpicture}
+\end{image}
+We could also plot points in between these points. For instance, when $x=1.5$, we would have $y = f(1.5) = \answer[given]{2}$. Or when $x=-2.5$, we would have $y=f(x)=\answer[given]{-6}$. Let's take off the labels of the points and draw in some points between the ones we already have.
+\begin{image}
+\begin{tikzpicture}
+\draw[thick, <->] (-3.2, 0)--(3.2,0);
+\draw[thick, <->] (0, -7.2)--(0, 5.2);
+\foreach \x in {-3, -2, -1, 1, 2, 3} \draw (\x, 0.2)--(\x, -0.2) node[below] {$\x$};
+\foreach \y in {-7, -6, -5, -4, -3, -2, -1, 1, 2, 3, 4, 5} \draw (0.2, \y)--(-0.2, \y) node[left] {$\y$};
+\draw[fill=black] (-3,-7) circle(2pt);
+\draw[fill=black] (-2.5,-6) circle(2pt);
+\draw[fill=black] (-2,-5) circle(2pt);
+\draw[fill=black] (-1.5,-4) circle(2pt);
+\draw[fill=black] (-1,-3) circle(2pt);
+\draw[fill=black] (-0.5,-2) circle(2pt);
+\draw[fill=black] (0,-1) circle(2pt);
+\draw[fill=black] (0.5,0) circle(2pt);
+\draw[fill=black] (1,1) circle(2pt);
+\draw[fill=black] (1.5,2) circle(2pt);
+\draw[fill=black] (2,3) circle(2pt);
+\draw[fill=black] (2.5,4) circle(2pt);
+\draw[fill=black] (3,5) circle(2pt);
+\end{tikzpicture}
+\end{image}
+Maybe you are starting to see a pattern, here. In fact, we could keep going, drawing more and more points on this graph, but in this case we can see we will draw more and more points all in a straight line. So, instead of drawing the individual points, we can draw a straight line that represents all of the points $(x, f(x))$ that we are trying to draw.
+\begin{image}
+\begin{tikzpicture}
+\draw[thick, <->] (-3.2, 0)--(3.2,0);
+\draw[thick, <->] (0, -7.2)--(0, 5.2);
+\foreach \x in {-3, -2, -1, 1, 2, 3} \draw (\x, 0.2)--(\x, -0.2) node[below] {$\x$};
+\foreach \y in {-7, -6, -5, -4, -3, -2, -1, 1, 2, 3, 4, 5} \draw (0.2, \y)--(-0.2, \y) node[left] {$\y$};
+\draw[very thick, <->, domain=-3:3, samples=100, smooth] plot (\x, {2*\x-1});
+\end{tikzpicture}
+\end{image}
+
+\end{example}
+It's incredibly important to remember that this graph, even though it looks like a line, is made up of all of the points $(x, f(x))$ that we get from evaluating our function. It can be easy to forget this when we start by drawing a line rather than by drawing a bunch of points!
+
+We have motivated coordinate systems by wanting to draw graphs, but they are actually much more useful than that. Any time you want to be able to describe all of the points in a certain space, you can add coordinates. You'll start with number lines, just like we have, so you'll need a zero and a unit length to draw each number line. Then, set up your number lines at right angles (however many of them you need depending on the dimension of the space you're working in) and you can use these ideas to describe all the points in your space.
+
+
+
+\section{Interpreting graphs}
+Now that we understand how to draw a graph, what kind of information can we get about functions from a graph? Let's look at an example.
+\begin{example}
+The graph below represents the delivery route of an Amazon driver from noon until 6pm 
+last Thursday. On the horizontal axis we are going to record the time of day, using 
+$x=0$ to mean noon. On the vertical axis we are going to record how many miles the 
+driver is from the warehouse, using $y=0$ to mean the warehouse itself. In other words, 
+the variable $x$ represents the number of hours after noon, and the variable $y$ represents 
+the number of miles the driver is from the warehouse.
+\begin{image}
+\begin{tikzpicture}
+\draw[<->] (-0.2, 0)--(7,0);
+\draw[<->] (0, -0.2)--(0, 5.2);
+\foreach \x in {1, 2, ..., 6} \draw (\x, 0.2)--(\x,-0.2) node[below]{$\x$pm};
+\foreach \y in {1, 2, ..., 5} \draw (0.2, \y)--(-0.2,\y);
+\node[left] at (-0.2, 1) {$5$mi};
+\node[left] at (-0.2, 2) {$10$mi};
+\node[left] at (-0.2, 3) {$15$mi};
+\node[left] at (-0.2, 4) {$20$mi};
+\node[left] at (-0.2, 5) {$25$mi};
+\draw[thick] (0,3)--(1,2)--(2,0)--(3,0)--(4,1)--(5,4)--(6,3);
+\end{tikzpicture}
+\end{image}
+Let's investigate some kinds of questions we can answer about this graph.
+
+First, the point $(1,10)$ is on the graph. What does this point mean?
+\begin{multipleChoice}
+\choice{At 10pm, the driver is 1 mile from the warehouse.}
+\choice[correct]{At 1pm, the driver is 10 miles from the warehouse.}
+\choice{After 1 hour, the driver has driven 10 miles.}
+\choice{After 10 hours, the driver has driven 1 mile.}
+\choice{None of the above.}
+\begin{feedback}[correct]
+The point $(1,10)$ means that we move $1$ unit along the $x$-axis, and then we move from there vertically $10$ units. The $x$-axis is the time after noon, so $x=1$ means 1pm. The vertical axis is the number of miles from the warehouse, so $y=10$ means the driver is $10$ miles from the warehouse. Being at the point $(1,10)$ means that both $x=1$ and $y=10$, so we have that it's 1pm and the driver is $10$ miles from the warehouse.
+\end{feedback}
+\end{multipleChoice}
+
+The value of $y = f(x)$ is $15$ when $x=0$. What does this mean for the driver?
+\begin{multipleChoice}
+\choice{It doesn't take the driver any time to travel 15 miles.}
+\choice{At noon, the driver is traveling 15 miles per hour.}
+\choice{The driver starts their route at noon.}
+\choice[correct]{At noon, the driver is 15 miles from the warehouse.}
+\choice{None of the above.}
+\begin{feedback}[correct]
+When we say that $f(x) = 15$ when $x=0$, this means that the point $(0,15)$ is on the graph. As we said previously, $x=0$ means that we are $0$ hours after noon, so it's exactly noon. Next, the output of $y=15$ means that the driver is $15$ miles from the warehouse. This is an example of a $y$-intercept, because we are talking about the point where the graph touches the $y$-axis, or what the output value is when $x=0$.
+\end{feedback}
+\end{multipleChoice}
+
+From 2 until 3pm, the graph touches the $x$-axis. What does this mean for the driver?
+\begin{multipleChoice}
+\choice[correct]{The driver is at the warehouse from 2 until 3pm.}
+\choice{The driver is delivering packages from 2 until 3pm.}
+\choice{The driver is stuck in a traffic jam from 2 until 3pm.}
+\choice{The driver is getting farther from the warehouse from 2 until 3pm.}
+\choice{None of the above.}
+\begin{feedback}[correct]
+When the graph touches the $x$-axis, this means that the output value for the function is zero. In this scenario, the output values describe how far the driver is from the warehouse, so this means that the driver is $0$ miles from the warehouse. But $0$ miles from the warehouse is actually the warehouse itself. So, the driver is at the warehouse from 2 until 3pm. Perhaps they are loading more packages in the truck, or perhaps they are taking a lunch break. We can't be sure from the story, but we do know they are at the warehouse for this entire hour. These points are all $x$-intercepts, because we are talking about points where the graph touches the $x$-axis. These are input values for which the output value is zero.
+\end{feedback}
+\end{multipleChoice}
+
+The output values on the graph look like they range from 0 to 20. What is the driver's maximum distance from the warehouse?
+\begin{multipleChoice}
+\choice{0 miles}
+\choice{15 miles}
+\choice[correct]{20 miles}
+\choice{25 miles}
+\choice{None of the above.}
+\begin{feedback}[correct]
+The maximum distance means the farthest the driver is from the warehouse for the data we have. That farthest value will be represented by the biggest output value. Since the number line for output values has higher numbers at the top of the line and lower numbers at the bottom of the line, we can look at the output value that's highest for this graph. We can see that it occurs when $x=5$ or at 5pm, where the output value is 20 miles. Even though the graph has higher output values on the number line, the graph doesn't reach those values.
+\end{feedback}
+\end{multipleChoice}
+
+The graph appears to slope down from noon until 2pm, slope up from 3 to 5pm, and slope 
+down again from 5 to 6pm. During which intervals is the driver getting farther away from 
+the warehouse? Select all that apply.
+\begin{selectAll}
+\choice{Noon until 2pm}
+\choice{2pm until 3pm}
+\choice[correct]{3pm until 5pm}
+\choice{5pm until 6pm}
+\choice{after 6pm}
+\begin{feedback}[attempt]
+The driver is getting farther away from the warehouse means that as time increases (or the $x$-values get larger), the output values also get larger. On this graph, we can see that from noon until 2pm, as time passes (or as the $x$-values get larger), the distance drops from 15 miles to 0 miles. From 2 until 3pm, we've already said that the driver is at the warehouse. From 3 until 4pm, as time passes the output values go from 0 miles to 20 miles. From 5pm until 6pm, as time passes the output values go from 20 miles to 15 miles. After 6pm, we don't have any data.
+\end{feedback}
+\end{selectAll}
+
+The driver's route looks to be made up of pieces of straight lines. Is this a reasonable graph for a delivery driver's route? Why or why not?
+\begin{multipleChoice}
+\choice{Yes. The driver has to get steadily closer to the warehouse or steadily farther from the warehouse.}
+\choice{Yes. The driver has to drive in straight lines.}
+\choice{No. The graph doesn't show enough turns made by the truck.}
+\choice[correct]{No. The graph shows the driver's speed constantly increasing or constantly decreasing, which doesn't make sense for real driving.}
+\choice{None of the above.}
+\begin{feedback}[correct]
+Since the driver's graph is made out of pieces of straight lines, each straight line piece has a constant rate of change. (We will say more about this later! Come back and convince yourself that this is true once you've finished this section.) That constant rate of change means that the distance between the driver and the warehouse is changing at the same rate for the entire hour. In reality, the driver probably made stops to drop off packages, and they would speed up and slow down to do so. Or, the driver perhaps made stops for stoplights, or the speed limit changed, so the speed of the truck shouldn't really be constant. This example gives us an overall idea of where the driver is, but reality is much more complicated than this graph!
+\end{feedback}
+\end{multipleChoice}
+
+\end{example}
+
+
+While we had some multiple choice prompts to help us analyze the graph in the previous example, in general we will expect you to be able to use a story situation to describe what you are seeing in the graph. You might want to go back to the previous example and write the correct multiple choice options in your own words to make sure that you are ready to do this on your own in future problems.
+
+Let's also pause and collect some of the vocabulary we used to describe parts of the graph above. 
+\begin{definition}
+The \dfn{$x$-intercepts} of a graph are where the graph crosses the horizontal axis. (They may be called by another name if you are using a different letter for the horizontal axis!) We can also find these intercepts using algebra by setting $y=0$, which represents the $x$-axis.
+
+The \dfn{$y$-intercept} of a graph is where the graph crosses the vertical axis. (Again, this might be called something else if the vertical axis is named for a variable other than $y$.) We can find this intercept using algebra by setting $x=0$, which represents the $y$-axis.
+\end{definition}
+Notice that a graph can have many $x$-intercepts, but if the graph is a graph for a function it should have only one $y$-intercept since it should have only one output when $x=0$. In fact, if you have heard of the Vertical Line Test in a previous course, this test simply says that the graph of a function should have exactly one output for every input, so if you draw a vertical line from any output it should only pass through a single point on the graph. That single point on the graph represents a single output corresponding to that input. But don't be afraid to analyze graphs that don't represent functions! They are still often very interesting.
+
+\begin{definition}
+The \dfn{maximum value} of a function on an interval is the largest output value the function has on that interval. A \dfn{local maximum} is the largest output value a function has in a particular neighborhood, but this neighborhood does not have to be the entire domain.
+
+The \dfn{minimum value} of a function on an interval is the smallest output value the function has on that interval. A \dfn{local minimum} is the smallest output value a function has in a particular neighborhood, but this neighborhood does not have to be the entire domain.
+\end{definition}
+Minimum and maximum values can give us quite a bit of information about a function. We can find them algebraically using techniques from calculus, or we can estimate them by looking at a graph of the function. In fact, one of the reasons that calculus is important is that it can help us use algebra to be precise about what we are seeing in a graph.
+
+\begin{definition}
+We say that a graph is \dfn{increasing} on some interval when the function's output value $f(x)$ is larger for larger input values.
+
+We say that a graph is \dfn{decreasing} on some interval when the function's output value $f(x)$ is smaller for larger input values.
+
+We say that a graph is \dfn{constant} on some interval when it is neither increasing nor decreasing on that interval.
+\end{definition}
+When we talk about a function which is increasing, decreasing, or constant on some interval, we mean that it is increasing, decreasing, or constant on that entire interval. So, if you have an increasing function, if you pick any two inputs, the larger input has to have a larger output.
+
+We can also talk about how the graph is increasing or decreasing: is it increasing slowly? Quickly? What might those things mean for the story problem associated with a graph? Is the function increasing more and more quickly? Increasing more and more slowly? These questions are associated with what we could call the \dfn{concavity} of a graph, in case you have seen that terminology before.
+
+As we investigate functions using both their equations as well as their graphs, pay attention to things which are easier to know using an equation and things which are easier to know using a graph. It's very powerful to have both tools at our disposal, and it can be incredibly useful to go back and forth from one representation to the other.
+\begin{question}
+Pause and think: give an example of something that's easier to know using an equation for a function, and something that's easier to know using the graph of a function.
+\begin{freeResponse}
+Write your thoughts here!
+\end{freeResponse}
+\end{question}
+
+There is one more feature of graphs of functions that we should pay very careful attention to, and that is how the domain of a function is represented in a graph. Remember that the domain is the set of all input values for a graph, and we want to be sure that we are representing the domain accurately. Let's use the next example to see how this works.
+\begin{example}
+Here is a sequence we considered previously. 
+
+A school is renovating their football stadium. They can fit $150$ seats in the first row, and because of the bowl-shape of the stadium they can fit an additional $10$ seats in each row as they go up each row. Previously, we figured out that there are $340$ seats in the 20th row, and this time let's assume that the $20$th row is the last row in the stadium. 
+
+What is the domain of this arithmetic sequence if we consider it as a function?
+\begin{multipleChoice}
+\choice{all real numbers}
+\choice{all integers}
+\choice{all positive whole numbers}
+\choice[correct]{the set $\{1, 2, \dots, 20\}$}
+\end{multipleChoice}
+
+Let's now graph this function. Let's use the number of seats on the vertical axis, because the number of seats depends on the row number. So, we want the dependent variable to be our output values, which are the number of seats, and we want the independent variable to be the input values, or the row number. We'll use $y$ to represent the number of seats, and we'll use $x$ to represent the row number. If we wanted to write down an algebraic expression for this function, we could use
+\[
+y = f(x) = (10)(x-1) + 150.
+\]
+(Check whether you agree with this equation!) 
+
+We start by plotting points that we know. You can look back at the table we made in the section on \link[Sequences]{https://ximera.osu.edu/m4t/elementaryTeachersTwo/elementaryReading/ConnectAlgebra/Sequences} or you can make another table for yourself.
+\begin{image}
+\begin{tikzpicture}
+\draw[<->] (-0.2, 0)--(10.2,0);
+\draw[<->] (0, -0.2)--(0, 7.2);
+\foreach \x in {1, 2, ..., 10} \draw (\x, 0.2)--(\x,-0.2);
+\foreach \a in {2, 4, 6, ..., 20} \node[below] at ({\a/2}, -0.2) {$\a$};
+\foreach \y in {1, 2, ..., 7} \draw (0.2, \y)--(-0.2,\y);
+\foreach \b in {50, 100, ..., 350} \node[left] at (-0.2, {\b/50}) {$\b$};
+\foreach \c in {0.5, 1, 1.5, ..., 10} \draw[fill=black] ({\c}, {0.2*((2*\c)-1)+3}) circle (2pt);
+\end{tikzpicture}
+\end{image}
+We've now placed a dot for each of the $20$ rows in the stadium. Does it make sense to connect these dots with a line?
+\begin{multipleChoice}
+\choice{Yes}
+\choice[correct]{No}
+\begin{feedback}[correct]
+The domain of this function is only the set $\{1, 2, \dots, 20\}$, so we only have output values for those exact input values. If we connected the dots on this graph, we would be indicating that we had input values between the ones we marked, as well as corresponding output values between those we marked. But since we don't have half-rows or quarter-rows (or $0.283293$ of rows, or anything else), we only want to mark the dots above for the whole-number rows we have. We also don't want to put an arrow on either end of this graph, because the input values don't continue in either direction. We've represented all of the input values here, and there are no more that are off to the side of this graph. The arrows we sometimes use on functions indicate that the graph continues in the direction of the arrow. That's not the case for this example!
+\end{feedback}
+\end{multipleChoice}
+
+\end{example}
+
+
+\section{Graphs of linear functions}
+To wrap up this section, let's look at the graphs of linear functions. Perhaps you remember that we defined a linear function as one whose equation could be placed in the form $y=mx+b$ for some values of $m$ and $b$. Let's use a specific example to investigate what this means for its graph.
+\begin{example}
+Let's consider the example $y = -2x+3$ and draw a graph of this function.
+
+Usually, the first thing we want to do when we graph an equation is to plot some of its points. Let's start by doing that here.
+\begin{image}
+\begin{tabular}{c|c|c}
+Input $x$ & Output $f(x)=-2x+3$ & Point $(x, f(x))$ \\ \hline
+-3 & $\answer[given]{9}$ & $(-3, 9)$ \\ \hline
+-2 & $\answer[given]{7}$ & $(-2, 7)$ \\ \hline
+-1 & $\answer[given]{5}$ & $(-1, 5)$ \\ \hline
+0 & $\answer[given]{3}$ & $(0, 3)$ \\ \hline
+1 & $\answer[given]{1}$ & $(1, 1)$ \\ \hline
+2 & $\answer[given]{-1}$ & $(2, -1)$ \\ \hline
+3 & $\answer[given]{-3}$ & $(3, -3)$ \\ \hline
+\end{tabular}
+\end{image}
+Next, we can plot the points we found.
+\begin{image}
+\begin{tikzpicture}
+\draw[thick, <->] (-3.2, 0)--(3.2,0);
+\draw[thick, <->] (0, -3.2)--(0, 9.2);
+\foreach \x in {-3, -2, -1, 1, 2, 3} \draw (\x, 0.2)--(\x, -0.2) node[below] {$\x$};
+\foreach \y in {-3, -2, -1, 1, 2, 3, 4, 5, 6, 7, 8, 9} \draw (0.2, \y)--(-0.2, \y) node[left] {$\y$};
+\foreach \p in {-3, -2, ..., 3} \draw[fill=black] (\p, {-2*\p+3}) circle (2pt);
+\end{tikzpicture}
+\end{image}
+When we saw a graph like this before, we just went ahead and drew a line connecting the dots. Does that make sense with the domain of this function?
+\begin{multipleChoice}
+\choice[correct]{Yes}
+\choice{No}
+\begin{feedback}[correct]
+The domain of this function is all real numbers, so we do want to connect the dots in some fashion here. We have an output for every single input on the number line, and this will create a line of dots.
+\end{feedback}
+\end{multipleChoice}
+However, the last time we saw an example like this, we just guessed that the line would be straight. Let's now investigate why this is true. For simplicity, let's focus on the points between $x=1$ and $x=2$, but think about how the same argument could apply to any other range of points.
+
+We know that the equation of this function is $f(x) = -2x+3$, so we can think about what happens when we change $x$ by a little bit. We know that the slope of this function represents a constant rate of change, so if we change the $x$ by one unit, the $y$ has to change by $-2$: the $m$ for this equation is $\answer[given]{-2}$, which we can write as $\frac{-2}{1}$ and think of this as our ratio of change in outputs to change in inputs. In other words, we expect that the output value for $x=2$ has to be two less than the output value for $x=1$, and it is. But this ratio is the same no matter how much we change our input.
+\begin{itemize}
+\item For $x=1.1$, we changed our input by $0.1$ so we change our output by $-2 \times \answer[given]{0.1} = -0.2$.
+\item For $x=1.25$, we changed our input by $0.25$ (from $x=1$) so we change our output by $-2 \times \answer[given]{0.25} = -0.5$.
+\item For $x=1.5$, we changed our input by $0.5$ so we change our output by $-2 \times \answer[given]{0.5} = -1$.
+\item For $x=1.75$, we changed our input by $0.75$ so we change our output by $-2 \times \answer[given]{0.75} = -1.5$.
+\end{itemize} 
+Let's zoom in and take a look at all of these changes in one image together.
+\begin{image}
+\begin{tikzpicture}
+\draw[fill=black] (0,0) circle (2pt) node[above]{$(1,1)$};
+\draw[fill=black] (4,-8) circle (2pt) node[below] {$(2, -1)$};
+\draw[fill=black] (0.4, -0.8) circle (2pt) node[above right] {$(1.1, 0.8)$};
+\draw[fill=black] (1, -2) circle (2pt) node[above right] {$(1.25, 0.5)$};
+\draw[fill=black] (2, -4) circle (2pt) node[above right] {$(1.5, 0)$};
+\draw[fill=black] (3, -6) circle (2pt) node[above right] {$(1.75, -0.5)$};
+\end{tikzpicture}
+\end{image}
+These points sure look like they are on a straight line, but we want to be certain that there won't be some strange point in between that doesn't fall on the line. And the way we can tell is by looking at triangles formed by this collection of points and the ratio of change in $x$ to change in $y$.
+\begin{image}
+\begin{tikzpicture}
+\draw[fill=black] (0,0) circle (2pt) node[above]{$(1,1)$};
+\draw[fill=black] (4,-8) circle (2pt) node[below] {$(2, -1)$};
+\draw[fill=black] (0.4, -0.8) circle (2pt) node[above right] {$(1.1, 0.8)$};
+\draw[fill=black] (1, -2) circle (2pt) node[above right] {$(1.25, 0.5)$};
+\draw[fill=black] (2, -4) circle (2pt) node[above right] {$(1.5, 0)$};
+\draw[fill=black] (3, -6) circle (2pt) node[above right] {$(1.75, -0.5)$};
+\draw (0,0)--(4,-8);
+\draw (0,0)--(0,-0.8)--(0.4, -0.8);
+\draw (0,0)--(0, -2)--(1, -2);
+\draw (0,0)--(0,-4)--(2, -4);
+\draw (0,0)--(0,-6)--(3, -6);
+\draw (0,0)--(0,-8)--(4,-8);
+\end{tikzpicture}
+\end{image}
+We are paying attention to the five triangles in the image created by starting at $(1,1)$ and drawing a line straight down to represent the change in $y$-value, then a horizontal line to represent the change in the $x$-value. We are confident that all of these triangles are similar, because we have the same internal factor for each triangle given by the ratio of the change in $y$ to the change in $x$. Since these triangles are all similar, they have to have all the same angles. Since every triangle makes the same angle with the horizontal line, all of the points here have to be on the same line. And if we drew another change in $x$ and change in $y$ triangle, that one has to also be similar to all of these because of the constant rate, and so that new point would also lie on the line. 
+
+In other words, when we have a constant rate of change, all of our points have to lie on the same line because the constant rate allows us to make all of these similar triangles. So, the graph of an equation in the form $y=mx+b$ has to be a straight line.
+\begin{image}
+\begin{tikzpicture}
+\draw[thick, <->] (-3.2, 0)--(3.2,0);
+\draw[thick, <->] (0, -3.2)--(0, 9.2);
+\foreach \x in {-3, -2, -1, 1, 2, 3} \draw (\x, 0.2)--(\x, -0.2) node[below] {$\x$};
+\foreach \y in {-3, -2, -1, 1, 2, 3, 4, 5, 6, 7, 8, 9} \draw (0.2, \y)--(-0.2, \y) node[left] {$\y$};
+\draw[very thick, <->, domain=-3:3, samples=100, smooth] plot (\x, {-2*\x+3});
+\node[above right] at (1,1) {$y=-2x+3$};
+\end{tikzpicture}
+\end{image}
+
+
+\end{example}
+So, now we know that if we write an equation in the form of a linear function $y=mx+b$, the graph has to be a straight line. But the opposite is also true: if a graph is a straight line, the equation of that graph can be written in the form $y=mx+b$ for some $m$ and $b$. 
+\begin{example}
+Let's find an equation for the line whose graph is given below.
+\begin{image}
+\begin{tikzpicture}
+\draw[very thin] (-3,-1) grid (3,4);
+\draw[thick, <->] (-3.2, 0)--(3.2,0);
+\draw[thick, <->] (0, -1.2)--(0, 4.2);
+\foreach \x in {-3, -2, -1, 1, 2, 3} \draw (\x, 0.2)--(\x, -0.2) node[below] {$\x$};
+\foreach \y in { -1, 1, 2, 3, 4} \draw (0.2, \y)--(-0.2, \y) node[left] {$\y$};
+\draw[very thick, <->, domain=-3:3, samples=100, smooth] plot (\x, {0.5*\x+1});
+\end{tikzpicture}
+\end{image}
+First, let's observe that the graph crosses the $y$-axis at the point $(0,1)$, so we know that the \wordChoice{\choice{$x$-intercept} \choice[correct]{$y$-intercept}} is $1$. This means that no matter what our equation for our function is, when we plug in $x=0$, we get $y= \answer[given]{1}$. 
+
+Next, let's observe that because our graph is a straight line, we can draw a bunch of similar triangles just like we did in the previous example. This time, we know that our triangles are similar because of the angles. The triangles we draw are right triangles because the horizontal and vertical always make a right angle, and since the line is straight it always makes the same angle with the horizontal. Let's draw some of these triangles on our graph below.
+\begin{image}
+\begin{tikzpicture}
+\draw[very thin] (-3,-1) grid (3,4);
+\draw[thick, <->] (-3.2, 0)--(3.2,0);
+\draw[thick, <->] (0, -1.2)--(0, 4.2);
+\foreach \x in {-3, -2, -1, 1, 2, 3} \draw (\x, 0.2)--(\x, -0.2) node[below] {$\x$};
+\foreach \y in { -1, 1, 2, 3, 4} \draw (0.2, \y)--(-0.2, \y) node[left] {$\y$};
+\draw[very thick, <->, domain=-3:3, samples=100, smooth] plot (\x, {0.5*\x+1});
+\draw[red] (0,1)--(1,1)--(1,1.5);
+\draw[red] (0,1)--(2,1)--(2,2);
+\draw[red] (0,1)--(3,1)--(3,2.5);
+\end{tikzpicture}
+\end{image}
+Since these triangles are similar, the ratio of the bottom (horizontal) side to the vertical side has to be the same no matter which triangle we consider. We could also consider triangles between the ones we drew, and they would also be similar to these and thus have that same internal factor.
+
+In this case, since the graph passes through the points $(0,1)$ and $(2,2)$, when we increase the input by $2$ units, the output increases by $\answer[given]{1}$ unit, and so the ratio of change in output to change in input must be $\answer[given]{\frac{1}{2}}$. This ratio has to be constant because our line produces all of these similar ``slope triangles''. 
+
+Now we know that the graph has a constant rate of change and we know its $y$-intercept, so we can write its equation. This graph is the graph of the function $y= \frac{1}{2} x + 1$ because $m=\frac12$ is the constant rate of change, and $b=1$ is the $y$-intercept. In other words, this is the graph of a linear function.
+
+\end{example}
+
+Now we know that our two definitions for linear functions are really the same idea, so it makes sense to use either definition interchangeably. Linear functions and ratios and similar triangles are closely related ideas, so as you talk with kids about any of these ideas, you are helping lay the groundwork for deeper understanding of the other topics later in their mathematical journey.
+
+
+\end{document}

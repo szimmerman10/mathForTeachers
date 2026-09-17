@@ -1,0 +1,284 @@
+\documentclass{ximera}
+
+\input{../preamble.tex}
+
+
+\title{The meaning of multiplication}
+\author{Jenny Sheldon}
+
+\begin{document}
+
+\begin{abstract}
+We investigate the structure of multiplication.
+\end{abstract}
+\maketitle
+
+
+\section{The meaning of multiplication}
+
+As we did with addition, we want to develop a definition for multiplication that helps us recognize when a problem should be solved using multiplication. We'll investigate what physical actions we are taking with blocks or other small objects when we multiply, so that multiplication becomes a solution strategy that we recognize rather than a memorized procedure. This will continue the kind of thinking we set out in the \link[Operations]{https://ximera.osu.edu/m4t/elementaryTeachersOne/elementaryReading/AdditionSubtraction/Operations} section. As usual, let's start out with an example.
+
+\begin{example}
+Solve the following problem using  strategies that a small child who has not yet learned multiplication might use.
+
+\emph{At the grocery store, Horatio sees $3$ baskets. Each basket contains $5$ apples. How many apples did Horatio see?}
+
+\begin{explanation}
+Let's start by drawing a picture. We will use a large box to represent each basket, and a small circle to represent each apple.
+
+\begin{image}
+\begin{tikzpicture}
+\foreach \x in {0, 3, 6} \draw[thick] (\x, 0)--(\x+2, 0)--(\x+2, 2)--(\x, 2)--(\x, 0);
+\foreach \a in {0.5, 1.5, 3.5, 4.5, 6.5, 7.5} \draw[fill=red] (\a, 0.5) circle (3pt);
+\foreach \a in {0.5, 1.5, 3.5, 4.5, 6.5, 7.5} \draw[fill=red] (\a, 1.5) circle (3pt);
+\foreach \b in {1, 4, 7} \draw[fill=red] (\b, 1) circle (3pt);
+\end{tikzpicture}
+\end{image}
+Now, since we want to know how many apples there are all together, we can count all of the circles in our picture. We find that there are a total of $\answer[given]{15}$ apples.
+
+\end{explanation}
+
+\end{example}
+
+
+Looking back at our example, how was this different than the problems we solved using addition? Remember that when we add quantities together, we are essentially combining them and counting. While we did that here, the things we wanted to count were organized into equal groups. We drew one basket at a time with the five apples in each instead of just drawing all of the apples. This is the underlying structure we want you to recognize when it comes to multiplication, and so the definition of multiplication that we want to use in this course is the following.
+
+\begin{definition}
+When we \dfn{multiply} two numbers $A$ and $B$ together, we are finding the total number of objects in $A$ equal groups with $B$ objects in one full group. We write this total as $A\times B$. Sometimes we use a different variable like $C$ to represent $A\times B$ to remind us that the total is a single quantity. The two numbers $A$ and $B$ are called the \dfn{factors} and the total is also called the \dfn{product}.
+\begin{image}
+\begin{tikzpicture}
+\node at (0, 0) {$A$};
+\node at (0.5, 0) {$\times$};
+\node at (1, 0) {$B$};
+\node at (1.5, 0) {$=$};
+\node at (2, 0) {$C$};
+\node at (0.5, -1) {factors};
+\node at (2, -1) {product};
+\draw[->] (0.5, -0.75)--(0, -0.25);
+\draw[->] (0.5, -0.75)--(1, -0.25);
+\draw[->] (2, -0.75)--(2, -0.25);
+\end{tikzpicture}
+\end{image}
+\end{definition}
+
+Let's return to Horatio and the grocery store and see how our definition of multiplication applies in this situation.
+\begin{explanation}
+First, let's restate the problem we were solving. 
+
+\emph{At the grocery store, Horatio sees $3$ baskets. Each basket contains $5$ apples. How many apples did Horatio see?}
+
+For our meaning of multiplication, we need to organize our objects into equal groups, In this particular story, we know that one group is one \wordChoice{\choice{apple} \choice[correct]{basket} \choice{fruit}  \choice{grocery store}}. Notice that these groups are all equal in the story. They each contain the same thing. But what do they contain? We also know that inside these groups we need to have objects, and so in this story one object is one  \wordChoice{\choice[correct]{apple} \choice{basket} \choice{fruit}  \choice{grocery store}}. Now, to solve the problem we can use multiplication. We count the number of groups and get $\answer[given]{3}$ baskets, and we count the number of objects in each full group and get $\answer[given]{5}$ apples in each basket. According to our meaning of multiplication, that means that we can write the total number of apples as 
+\[
+\answer[given]{3} \times \answer[given]{5}.
+\]
+\end{explanation}
+
+For the purpose of clarity in your explanations, we will ask you to always write the number of groups as the first number in your multiplication expression, and the number of objects in one full group as the second number in your multiplication expression. In shorthand notation, we are looking for the following order.
+\begin{image}
+\begin{tikzpicture}
+\node at (0, 0) {$A$};
+\node at (0.5, 0) {$\times$};
+\node at (1, 0) {$B$};
+\node at (1.5, 0) {$=$};
+\node at (2, 0) {$C$};
+\node at (-0.75, -1) {\# of groups};
+\node at (1,-1.5) {\# of objects per group};
+\node at (2.75, -1) {total \# of objects};
+\draw[->] (-0.75, -0.75)--(0, -0.25);
+\draw[->] (1, -1.25)--(1, -0.25);
+\draw[->] (2.75, -0.75)--(2, -0.25);
+\end{tikzpicture}
+\end{image}
+
+In some situations, it will be easy for us to identify what is playing the role of one group and what is playing the role of one object, but in other situations these roles might be harder to see. We would like you to be able to see this same structure spanning all kinds of multiplication problems. As with addition and subtraction stories, children often don't recognize that different models of multiplication are actually all the same operation. One of our goals for you as teachers is to be able to bring all of these different meanings and examples of multiplication into the same category in your mind, fitting inside the one meaning we have chosen as our definition.
+
+
+
+\section{Repeated addition}
+
+The first experience that many children have with multiplication is using repeated addition. In this type of multiplication problem, the goal is to add together the same quantity over and over again. Let's take a look at an example, and see how repeated addition fits into our definition of multiplication.
+
+\begin{example}
+Solve the following problem and explain why the problem can be solved using multiplication.
+
+\emph{Camdyn eats two cookies every day for lunch at school. How many cookies did Camdyn eat this week (Monday through Friday)?}
+
+A child who hasn't yet learned multiplication might solve this problem by adding, using something like this.
+\[
+\answer[given]{2} + \answer[given]{2} + \answer[given]{2} + \answer[given]{2} + \answer[given]{2} = \answer[given]{10}
+\]
+This child might reason that we need to combine together the cookies that Camdyn is eating each day, so we add together all of the cookies from each weekday. This is a great way to solve the problem, and gets us the right answer. It also connects back to the idea of skip counting, which children start practicing much earlier than they learn multiplication. We are counting by twos starting from zero, and we can keep track on our fingers of how many days have passed.
+
+Notice that this example still fits into our definition of multiplication using groups and objects per group. In this case, the objects we are trying to count are \wordChoice{\choice[correct]{the cookies} \choice{the days} \choice{the week} \choice{2}}, or we could say that one object in this problem is one cookie. Then we can look to see if these cookies are grouped in any way, and they are: we have equal groups based on each day of the week. So we could say in this problem that one group is one \wordChoice{\choice{cookie} \choice[correct]{day} \choice{week} \choice{5}}. It's important to notice that Camdyn eats the same number of cookies each day, so that these groups are all equal. To fit this situation into our definition of multiplication, we write the number of groups in place of $A$ and we write the number of objects in each group in place of $B$. The total $C$ will be the total number of cookies that Camdyn ate.
+\[
+\answer[given]{5} \textrm{ (number of groups) } \times \answer[given]{2} \textrm{ (number of objects per group). }
+\]
+
+\end{example}
+
+Our meaning of multiplication agrees with this repeated addition example. The things we are repeatedly adding are the objects, and each group is one repetition of the addition. Another way to say this is that the number of groups is the number of times we need to repeat the number we are adding.
+
+
+
+\section{Array and area problems}
+
+The next example of a multiplication situation we might encounter is an array or area model, where the things we would like to count are arranged in a grid. Here is another example for us to consider.
+
+\begin{example}
+Solve the following problem and explain why the problem can be solved using multiplication.
+
+\emph{Angel has a bunch of trading cards that she laid out on the table in front of her in the shape of a grid. The grid is six cards wide and four cards tall. How many cards are on the table?}
+
+In this situation, a child who is just learning multiplication might draw out or model the cards on the table and count them. Here is an example picture.
+\begin{image}
+\begin{tikzpicture}
+\foreach \x in {0, 2, 4, 6, 8, 10} \foreach \y in {0, 3, 6, 9} \draw[thick] (\x, \y)--(\x+1, \y)--(\x+1, \y+2)--(\x, \y+2)--(\x, \y);
+\end{tikzpicture}
+\end{image}
+
+To find the total number of cards, a child with such a picture could count them and find that there are $\answer[given]{24}$ total cards. 
+
+But to see how this fits with our meaning of multiplication, we need to connect this counting to the idea of making equal groups. First, we are trying to count the total number of cards in this example, so one object will be one \wordChoice{\choice{4} \choice{6} \choice{row} \choice{column} \choice[correct]{card}}. Next, we need to group these cards into equal groups. Let's use the rows of the array to do this. We will re-draw our picture, using an oval to circle each of the groups in the picture. 
+
+\begin{image}
+\begin{tikzpicture}
+\foreach \x in {0, 2, 4, 6, 8, 10} \foreach \y in {0, 3, 6, 9} \draw[thick] (\x, \y)--(\x+1, \y)--(\x+1, \y+2)--(\x, \y+2)--(\x, \y);
+\foreach \a in {1, 4, 7, 10} \draw[thick, blue] (5.5, \a) ellipse (7cm and 1.5cm);
+\end{tikzpicture}
+\end{image}
+
+We can now use the rows as our groups, because each row has the same number of cards in it. In other words, we want one group to be one row in this example. Now we can count the number of groups and the number of objects per group to write the total number of cards using multiplication. 
+\[
+\answer[given]{4} \textrm{ rows } \times \answer[given]{6} \textrm{ cards per row}
+\]
+
+
+\end{example}
+
+Our meaning of multiplication also agrees with this array example. Notice that we chose to use the rows for our groups in this case, but we could also have chosen one group to be one column instead. We also titled this section ``array and area models'' because we could also use this grid arrangement to find the area of a figure. To connect these ideas, we have to realize that when we are trying to find the area of a figure, we are usually trying to find the number of squares that cover the object. For instance, here is a rectangle whose width is $7$ inches and whose height is $3$ inches, covered with squares.
+\begin{image}
+\begin{tikzpicture}
+\draw[thick] (0,0) grid (7,3);
+\end{tikzpicture}
+\end{image}
+To find the area of this figure, we would count the number of squares that cover it. See if you can work through this example with your notes, using one column as one group and one square as one object. We will talk a lot more about area when we discuss geometry!
+
+
+
+
+
+\section{Scaling problems}
+
+Our next type of multiplication problem is a scaling problem. Let's see an example.
+
+\begin{example}
+Solve the following problem and explain why the problem can be solved using multiplication.
+
+\emph{Geoff ran for $9$ minutes in gym class today, but his friend Usain ran $3$ times as long. How many minutes did Usain run in gym class today?}
+
+First, if you were drawing a picture to help yourself solve this problem, notice that you might draw an array to represent the minutes that Usain ran. Or, you might think of this problem using repeated addition, adding up or skip counting using Geoff's minutes. Usain ran for 
+\[
+\answer[given]{9} + \answer[given]{9} + \answer[given]{9} = \answer[given]{27} \textrm{ minutes in total.}
+\]
+
+Actually, this already gives us a hint as to how we can connect this ``times as many'' type of problem to our meaning of multiplication. To solve this problem, we are trying to find how many minutes Usain ran, so one object in this problem is \wordChoice{\choice{Usain} \choice{Geoff} \choice[correct]{one minute} \choice{one mile}}. We need to see these minutes arranged into equal groups, which they already are based on our skip counting. The challenge here is to describe these groups. If we model the picture with an array, using a circle to represent one minute, we might draw an array with $3$ rows and $9$ dots in each row.
+\begin{image}
+\begin{tikzpicture}
+\foreach \x in {0, 1, 2, 3, ..., 8} \foreach \y in {0, 1, 2} \draw[fill=yellow] (\x, \y) circle (3pt);
+\node at (10.2, 0) {$\leftarrow$ one row is one group};
+\end{tikzpicture}
+\end{image}
+Now we could use one row as one group, just like we did in the previous array problem, and we could count the number of minutes per row. Alternatively, if we didn't draw a picture, we could use one copy of Geoff's running time as one group, since every copy of Geoff's running time is equal and Usain has some number of copies of Geoff's time. Either way, we can now count the number of groups and number of objects per group to express the total number of minutes using multiplication.
+\[
+\answer[given]{3} \textrm{ (number of groups) } \times \answer[given]{9} \textrm{ (number of objects per group) }
+\]
+\end{example}
+
+This scaling or ``times as many'' type of multiplication can sometimes feel easy to recognize, since the word ``times'' reminds us of multiplication, but don't forget to connect back to the groups-and-objects meaning of multiplication in your explanations.
+
+
+\section{The multiplication principle of counting}
+
+Our last type of example of multiplication for this section involves a specific type of problem called a counting problem. We will deal with counting problems more in another chapter, but we will preview them briefly here to strengthen their connection to multiplication.
+
+The \dfn{multiplication principle of counting} says that when you have several events that occur in order and you are trying to find the total number of ways that these events can happen, you multiply the number of ways that each event can happen in order to find this total. Let's take a look at an example and explain the principle as well as why multiplication is the right idea in this case.
+
+\begin{example}
+Solve the following problem and explain why the problem can be solved using multiplication.
+
+\emph{Jordan went to the dining hall for lunch, where they had three different sandwiches available as well as two different kinds of soup. If Jordan picks one sandwich and one soup for lunch, how many different lunch combinations can Jordan choose?}
+
+To solve this problem, we are going to draw a specific kind of diagram called a tree diagram, where we represent the choices as branches on a tree. Selecting a sandwich is an event which can occur in $\answer[given]{3}$ different ways. We will start at a point on the left side of the diagram, and draw three branches for the three different sandwiches that Jordan can choose. Let's call these sandwiches $S$, $T$, and $U$.
+\begin{image}
+\begin{tikzpicture}
+\draw[thick] (0,3.5)--(3, 5.5) node[right] {$S$};
+\draw[thick] (0,3.5)--(3, 3.5) node[right] {$T$};
+\draw[thick] (0,3.5)--(3, 1.5) node[right] {$U$};
+\end{tikzpicture}
+\end{image}
+Now, off of each sandwich branch, we have two different soup choices. Selecting a soup choice is the second event, which can happen in $\answer[given]{2}$ different ways. Let's call our soup choices $1$ and $2$. For instance, off of the sandwich $S$ branch, we will have lunch combos $S1$ and $S2$ representing sandwich $S$ with soup $1$ and sandwich $S$ with soup $2$, respectively. We will need to do this for each of the original branches.
+
+\begin{image}
+\begin{tikzpicture}
+\draw[thick] (0,3.5)--(3, 5.5) node[right] {$S$};
+\draw[thick] (0,3.5)--(3, 3.5) node[right] {$T$};
+\draw[thick] (0,3.5)--(3, 1.5) node[right] {$U$};
+
+\draw[thick] (3.5, 5.5)--(6, 6) node[right] {$S1$};
+\draw[thick] (3.5, 5.5)--(6, 5) node[right] {$S2$};
+
+\draw[thick] (3.5, 3.5)--(6, 4) node[right] {$T1$};
+\draw[thick] (3.5, 3.5)--(6, 3) node[right] {$T2$};
+
+\draw[thick] (3.5, 1.5)--(6, 2) node[right] {$U1$};
+\draw[thick] (3.5, 1.5)--(6, 1) node[right] {$U2$};
+\end{tikzpicture}
+\end{image}
+To find all of the lunch combinations, we need to count how many end branches we have on this tree, representing both a sandwich and a soup. If we do this, we can count $\answer[given]{6}$ different lunch combinations that Jordan can eat.
+
+To connect this to our meaning of multiplication, we need to find some groups and objects per group here. Since we are trying to count the lunch combinations, one object in this case should be one \wordChoice{\choice[correct]{lunch combination} \choice{Jordan} \choice{soup} \choice{sandwich}}. How are these lunch combinations organized? We organized them by first splitting them up by which sandwich was chosen. So there is one group for sandwich $S$, one group for sandwich $T$, and one group for sandwich $U$. We can circle the sandwich $S$ group on our tree diagram. 
+
+\begin{image}
+\begin{tikzpicture}
+\draw[thick] (0,3.5)--(3, 5.5) node[right] {$S$};
+\draw[thick] (0,3.5)--(3, 3.5) node[right] {$T$};
+\draw[thick] (0,3.5)--(3, 1.5) node[right] {$U$};
+
+\draw[thick] (3.5, 5.5)--(6, 6) node[right] {$S1$};
+\draw[thick] (3.5, 5.5)--(6, 5) node[right] {$S2$};
+
+\draw[thick] (3.5, 3.5)--(6, 4) node[right] {$T1$};
+\draw[thick] (3.5, 3.5)--(6, 3) node[right] {$T2$};
+
+\draw[thick] (3.5, 1.5)--(6, 2) node[right] {$U1$};
+\draw[thick] (3.5, 1.5)--(6, 1) node[right] {$U2$};
+\draw[thick, green] (5, 5.5) ellipse (2.25cm and 1cm);
+\end{tikzpicture}
+\end{image}
+
+We have $\answer[given]{3}$ total groups, each labeled by one sandwich, and then we have $\answer[given]{2}$ lunch combinations in each of these equal groups. So our total number of lunch combinations can be given by 
+\[
+3 \times 2.
+\]
+
+\end{example}
+
+We encourage you to start looking for ways that you can identify this groups-and-objects structure of multiplication not only in class, but in the everyday world around you.
+
+
+
+\begin{question}
+As you have worked through these problems, what helps you to identify what one group and one object are in multiplication problems?
+\begin{freeResponse}
+Write some advice for yourself here.
+\end{freeResponse}
+\end{question}
+
+
+\end{document}
+
+
+
+
+
+

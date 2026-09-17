@@ -1,0 +1,337 @@
+\documentclass{ximera}
+
+\input{../preamble.tex}
+
+
+\title{Ratios}
+\author{Jenny Sheldon}
+
+\begin{document}
+
+\begin{abstract}
+We discuss identifying ratios.
+\end{abstract}
+\maketitle
+
+\section{Activities for this section:} 
+\link[A Punch Problem]{https://ximera.osu.edu/m4t/elementaryActivities/SemesterOnePacket/elementaryActivities/Ratios/PunchProblem}, 
+\link[A Paint Problem]{https://ximera.osu.edu/m4t/elementaryActivities/SemesterOnePacket/elementaryActivities/Ratios/PaintProblem}, 
+\link[A Day at the Park]{https://ximera.osu.edu/m4t/elementaryActivities/SemesterOnePacket/elementaryActivities/Ratios/ADayAtThePark}
+
+\section{What are ratios?}
+
+In life, we are often mixing things together in ways that we want to make different quantities of the mixture, but to keep the overall mixture unchanged. Imagine baking a cake, where you mix together flour, sugar, baking powder, and other ingredients. You could make a smaller batch of this cake, but you would want to keep the taste the same, and so you would need to adjust all of the ingredients accordingly. Or imagine mixing paint that's a certain shade. You can mix a quart of paint or a gallon of paint, but if you want the quart and the gallon to be the same color you'll need to adjust the recipe for your paint accordingly. The mathematical language we give to such mixtures is a ratio.
+
+\begin{definition}
+A \dfn{ratio} $A:B$ is a relationship between quantities $A$ and $B$ where the relationship stays the same even if the quantities $A$ and $B$ change.
+\end{definition}
+
+This definition can help us recognize when we have a ratio, but it's harder to use for calculation. Here are three more definitions that might be useful in more practical situations. 
+
+\begin{definition}
+The \dfn{ratio} $A:B$ means that if  you multiply the quantity $A$ by a number $N$ and get $N \times A$, you must also multiply the quantity $B$ by the same value of $N$, getting $N \times B$.
+\end{definition}
+
+\begin{definition}
+The \dfn{ratio} $A:B$ means that if  you multiply the quantity $A$ by a number $N$ and get $A \times N$, you must also multiply the quantity $B$ by the same value of $N$, getting $B \times N$. %I don't love this
+\end{definition}
+These last two definitions are of course the same, but we interpret them differently because our convention when we multiply is to use the first number to refer to the number of groups and the second number to refer to the number of objects per group. But of course we know that multiplication is commutative, so while we apply these definitions differently, they represent the same idea. The fact that multiplying the quantity $A$ by $N$ requires us to also multiply $B$ by $N$ preserves the fixed relationship that the ratio $A:B$ is describing. If you are mixing red and yellow paint to get orange paint, think of $A$ and $B$ as the quantities of red and yellow, respectively, and $A:B$ as describing the particular shade of orange you are mixing. If you double the amount of red, you must also double the amount of yellow or the orange shade will change. Our third alternate definition is more algebraic.
+
+\begin{definition}
+Two quantities $x$ and $y$ are in a \dfn{proportional relationship} if there is a constant $k$ so that $y = kx$.
+\end{definition}
+The most difficult part of this last definition is that the constant $k$ does not have to be a whole number. This definition also focuses on the parts that are making up the ratio, rather than the relationship we have described above. So if $x$ and $y$ are in a proportional relationship, we can also consider their ratio $x:y$ as the fixed relationship between them. 
+
+We have used a colon (:) as our notation for a ratio. Perhaps you have also seen a ratio written as a fraction, like
+\[
+A:B = \frac{A}{B}.
+\]
+We will talk later about why it makes sense to use the same notation for both ideas, so for this section we will stick to the colon when describing a ratio.
+
+Let's take a look at our first example.
+
+\begin{example}
+Consider the following story problem.
+
+\emph{Luther is mixing a particular shade of dark blue paint by mixing a lighter blue and a grey. Luther makes the original mixture using $3$ cups of light blue paint and $4$ cups of grey paint, but now needs to make a larger batch containing a total of $21$ cups of dark blue (mixed) paint. How many cups of blue and grey should he use to make this larger mixture?}
+
+Let's explain why this situation includes a ratio, and then solve the problem using both a picture as well as reasoning about operations. 
+
+First, why do we have a ratio? Luther is trying to make \wordChoice{\choice[correct]{the same} \choice{a different}} shade of paint out of two colors. No matter how much of the light blue and grey he uses, he needs to mix the colors so that their relationship stays the same. We could describe the relationship here as the specific shade of dark blue he is making, since this is what must stay the same. In other words, according to our definition for a ratio, we have to keep the same relationship, or color, even if the amounts of light blue and grey paint change. The dark blue color we are making is in the ratio $3:4$ of light blue to grey. 
+
+Next, let's solve this problem using a picture. When Luther mixes the light blue with the grey, his original recipe says he mixes $3$ cups of light blue with $4$ cups of grey. This will make a total of $\answer[given]{7}$ cups of paint, since we combine together the light blue and the grey, and we recognize combining as meaning we must \wordChoice{\choice[correct]{add} \choice{subtract} \choice{multiply} \choice{divide}} the $3$ and the $4$. In our picture, let's draw the $3$ cups of light blue as three circles and the four cups of grey as four squares.
+\begin{image}
+\begin{tikzpicture}
+\foreach \y in {0}
+	\foreach \x in {0, 1, 2} \draw[fill=cyan] (\x, \y+0.25) circle (5pt);
+\foreach \y in {0}
+	\foreach \x in {3, 4, 5, 6} \draw[fill=darkgray] (\x, \y) rectangle (\x+0.5, \y+0.5);
+\node at (8, 0.25) {$7$ cups};
+\end{tikzpicture}
+\end{image}
+So far, we have made $7$ cups of dark blue paint. Let's make another batch with $3$ more cups of light blue and $4$ more cups of grey.
+\begin{image}
+\begin{tikzpicture}
+\foreach \y in {0,1}
+	\foreach \x in {0, 1, 2} \draw[fill=cyan] (\x, \y+0.25) circle (5pt);
+\foreach \y in {0,1}
+	\foreach \x in {3, 4, 5, 6} \draw[fill=darkgray] (\x, \y) rectangle (\x+0.5, \y+0.5);
+\node at (8, 0.25) {$14$ cups};
+\node at (8, 1.25) {$7$ cups};
+\end{tikzpicture}
+\end{image}
+Since we added another $7$ cups to the original batch, we are now up to $\answer[given]{14}$ total cups of dark blue. We want to get to $21$ cups, so let's add another batch of the original with $3$ more cups of light blue and $4$ more cups of grey.
+\begin{image}
+\begin{tikzpicture}
+\foreach \y in {0,1,2}
+	\foreach \x in {0, 1, 2} \draw[fill=cyan] (\x, \y+0.25) circle (5pt);
+\foreach \y in {0,1,2}
+	\foreach \x in {3, 4, 5, 6} \draw[fill=darkgray] (\x, \y) rectangle (\x+0.5, \y+0.5);
+\node at (8, 0.25) {$21$ cups};
+\node at (8, 1.25) {$14$ cups};
+\node at (8, 2.25) {$7$ cups};
+\end{tikzpicture} \end{image}
+We have added another $7$ cups to the mixture, and we are now up to $\answer[given]{21}$ cups of dark blue, which is what we wanted. Now we can count in our picture that we have $\answer[given]{9}$ cups of light blue and $\answer[given]{12}$ cups of grey making up this batch.
+
+This picture is helpful, but let's also see how we could solve this problem using reasoning about operations. We already know that Luther's original recipe uses $\answer[given]{3}$ cups of light blue and $\answer[given]{4}$ cups of grey and makes $\answer[given]{7}$ cups of dark blue. We want to make a total of $21$ cups of dark blue, so we could ask ourselves: how many batches of Luther's original recipe will it take to make $21$ cups of dark blue? This question could be rephrased as \wordChoice{\choice[correct]{how many groups?} \choice{how many in each group?} \choice{what is the total?}} if we let one group be one \wordChoice{\choice[correct]{batch} \choice{cup of light blue} \choice{cup of grey} \choice{cup of paint}} and one object be one \wordChoice{\choice{batch} \choice{cup of light blue} \choice{cup of grey} \choice[correct]{cup of paint}}. We have $7$ cups of paint per batch and we would like to make $21$ cups of paint total, so we can fit this in our definition of multiplication as follows.
+
+\begin{image}
+\begin{tikzpicture}
+\node at (0, 0) {$?$};
+\node at (0.5, 0) {$\times$};
+\node at (1, 0) {$7$};
+\node at (1.5, 0) {$=$};
+\node at (2, 0) {$21$};
+\node at (-0.75, -1) {\# of };
+\node at (-0.75, -1.35) {batches}; 
+\node at (1,-1) {\# of cups};
+\node at (1, -1.35) { per batch}; 
+\node at (2.8, -1) {total};
+\node at (2.8, -1.35) {cups};
+\draw[->] (-0.75, -0.75)--(0, -0.25);
+\draw[->] (1, -0.75)--(1, -0.4);
+\draw[->] (2.75, -0.75)--(2, -0.4);
+\end{tikzpicture}
+\end{image}
+
+In other words, this is a how many groups division question for $\answer[given]{21} \div \answer[given]{7}$. We simplify the division expression to see that Luther needs to make $\answer[given]{3}$ batches. Now we can use this information to find out how many cups of light blue and how many cups of grey are needed. We have
+\[
+3 \textrm{ batches (groups) } \times 3 \textrm{ cups of light blue per batch (objects per group) } = \answer[given]{9} \textrm{ total light blue cups (total objects)}
+\]
+and
+\[
+3 \textrm{ batches (groups) } \times 4 \textrm{ cups of grey per batch (objects per group) } = \answer[given]{12} \textrm{ total grey cups (total objects)}.
+\]
+
+So we got the same answer by reasoning about operations, and we didn't even need to draw a picture! 
+
+\end{example}
+
+Throughout this example, when we think about combining more and more batches of paint, we are taking the same color and adding it to the same color again, so that the total remains the same color. In this way we can see that the ``same color'' is that fixed relationship that we are keeping the same no matter how many batches we make.
+
+Children learn about ratios beginning in the sixth grade, so they should be familiar with all of their operations by the time they start this work. We would like for reasoning about operations to be firmly in their grasp so that they can solve these problems with confidence, but we also would like for you as teachers to always remember the value of a good picture. If a student isn't very comfortable with operations, it's always a great idea to suggest drawing a picture and reasoning about the answer, and then perhaps coming back to the picture to see if we can make sense of the operations. For instance, we can clearly see the three groups of paint in our picture as well as an array model for multiplication. Let's circle the groups to highlight what we mean.
+
+\begin{image}
+\begin{tikzpicture}
+\foreach \y in {0,1,2}
+	\foreach \x in {0, 1, 2} \draw[fill=cyan] (\x, \y+0.25) circle (5pt);
+\foreach \y in {0,1,2}
+	\foreach \x in {3, 4, 5, 6} \draw[fill=darkgray] (\x, \y) rectangle (\x+0.5, \y+0.5);
+\foreach \y in {0.25, 1.25, 2.25} \draw[thick] (1, \y) ellipse (1.5cm and 0.5cm);
+\foreach \y in {0.25, 1.25, 2.25} \draw[thick] (4.75, \y) ellipse (2.25cm and 0.5cm);
+\end{tikzpicture} \end{image}
+
+In fact, we could have drawn this picture to justify the distributive property in the case of $3 \times 3 + 3 \times 4 = 3 \times (3+4)$, which connects to this situation in the fact that we get the total number of cups of dark blue paint by adding together the cups of light blue and the cups of grey. Our work with ratios is fantastic for making connections to things that we have already learned, but is also challenging if we are still working through some of these earlier ideas!
+
+Let's also note that our solution to this problem fit with the definition of a ratio where we had the same ratio if we started with $A:B$ and then changed this to $(N \times A) : (N \times B)$. Some people call this a ``variable batches'' perspective, because we made a different number of batches of our original recipe. Let's now take a look at an example where we use a different perspective.
+
+\begin{example}
+Consider the following story problem.
+
+\emph{A recipe for slime calls for $\frac{1}{2}$ of a teaspoon of baking soda and $4$ ounces of glue. If Quinn wants to make slime using this recipe but instead using $10$ ounces of glue, how much baking soda should be used?}
+
+First, explain why this situation contains a ratio. Then solve the problem with a picture. Finally, solve the problem using reasoning about operations.
+
+We see that this situation contains a ratio because we have a relationship between the baking soda and the glue that needs to stay the same even if the amounts of baking soda and glue are changing. We could describe this relationship as \wordChoice{\choice{the amount of baking soda} \choice{the amount of glue} \choice{the amount of slime} \choice[correct]{the texture of the slime}}. We can make a larger batch or a smaller batch, using different amounts of ingredients, but that relationship always stays the same. 
+
+To solve this problem with a picture, we are going to start by drawing the four ounces of glue as a rectangle split into four equal pieces, and the $\frac{1}{2}$ teaspoon of baking soda as half of a rectangle. 
+
+\begin{image} \begin{tikzpicture}
+\draw[thick, fill=yellow] (0,0) rectangle (4,2);
+\foreach \x in {1, 2, 3} \draw[thick] (\x, 0)--(\x, 2);
+\draw[thick, fill=lime] (5,0) rectangle (6,1);
+\draw[thick, dotted] (5,1) rectangle (6,2);
+\foreach \x in {0.5, 1.5, 2.5, 3.5} \node[below] at (\x, 0) {1 oz};
+\node[below] at (5.5, 0) {$\frac{1}{2}$ tsp};
+\end{tikzpicture}\end{image}
+
+
+We have labeled each of the four boxes as $1$ ounce, since the entire amount of glue in the original recipe is $4$ ounces. But since a ratio is about keeping the same relationship between the ingredients, we could actually make these boxes any size at all, as long as we change the amount of teaspoons accordingly. So, instead of labeling each box as $1$ ounce, let's label the four boxes together as $10$ ounces. 
+
+\begin{image} \begin{tikzpicture}
+\draw[thick, fill=yellow] (0,0) rectangle (4,2);
+\foreach \x in {1, 2, 3} \draw[thick] (\x, 0)--(\x, 2);
+\draw[thick, fill=lime] (5,0) rectangle (6,1);
+\draw[thick, dotted] (5,1) rectangle (6,2);
+\node[below] at (2, 0) {10 ounces};
+\node[below] at (5.5, 0) {$?$};
+\end{tikzpicture}\end{image}
+
+Next, let's distribute the $10$ ounces into the four boxes equally. We have $4$ boxes (one box is one group) and $10$ ounces total (one ounce is one object), so this is a \wordChoice{\choice{how many groups} \choice[correct]{how many in each group}} division problem for $10 \div \answer[given]{4}$. This means we should place $\answer[given]{2.5}$ ounces in each box. Let's label our picture accordingly.
+
+\begin{image} \begin{tikzpicture}
+\draw[thick, fill=yellow] (0,0) rectangle (4,2);
+\foreach \x in {1, 2, 3} \draw[thick] (\x, 0)--(\x, 2);
+\draw[thick, fill=lime] (5,0) rectangle (6,1);
+\draw[thick, dotted] (5,1) rectangle (6,2);
+\foreach \x in {0.5, 1.5, 2.5, 3.5} \node at (\x, 1.2) {$2 \frac{1}{2}$};
+\foreach \x in {0.5, 1.5, 2.5, 3.5} \node at (\x, 0.6) {oz};
+\node[below] at (5.5, 0.75) {$?$};
+\end{tikzpicture}\end{image}
+
+Now, each of the parts of the glue has $2 \frac{1}{2}$ ounces in it, so it is $2 \frac{1}{2}$ times as large as it was when it was $1$ ounce.  In order to maintain the same relationship between the glue and the baking soda, we must also make the $\frac{1}{2}$ teaspoon $2 \frac{1}{2}$ times as large as it was. To find this, we will calculate $2 \frac{1}{2} \times \frac{1}{2}$ to get that we will fill in the baking soda box with $1 \frac{1}{4}$ teaspoons of baking soda. (For this multiplication, we are using one group as one copy of the original and one object as one teaspoon.) If the baking soda was made of more than one part, we would also scale each of the parts of baking soda in the same way in order to maintain this relationship.
+
+\begin{image} \begin{tikzpicture}
+\draw[thick, fill=yellow] (0,0) rectangle (4,2);
+\foreach \x in {1, 2, 3} \draw[thick] (\x, 0)--(\x, 2);
+\draw[thick, fill=lime] (5,0) rectangle (6,1);
+\draw[thick, dotted] (5,1) rectangle (6,2);
+\foreach \x in {0.5, 1.5, 2.5, 3.5} \node at (\x, 1.2) {$2 \frac{1}{2}$};
+\foreach \x in {0.5, 1.5, 2.5, 3.5} \node at (\x, 0.6) {oz};
+\node[below] at (5.5, 1) {$1 \frac{1}{4}$ tsp};
+\end{tikzpicture}\end{image}
+
+To make the slime with $10$ ounces of glue, Quinn should use $\answer[given]{\frac{5}{4}}$ teaspoons of baking soda.
+
+How can we solve this using our reasoning about operations? In our picture, we thought about our ratio $4:\frac{1}{2}$ as being composed of $4$ boxes for the glue and a smaller box for the baking soda. We passed out the glue into these boxes, or asked ourselves: if we have $10$ ounces of glue and need to distribute them amongst $4$ boxes, how much glue will go in each box? This question could be rephrased as \wordChoice{\choice{how many groups?} \choice[correct]{how many in each group?} \choice{what is the total?}} if we let one group be one \wordChoice{\choice{glue} \choice{ounce} \choice{teaspoon} \choice[correct]{box}} and one object be one \wordChoice{\choice{glue} \choice[correct]{ounce} \choice{teaspoon} \choice{box}}. We have $10$ ounces of glue total and $4$ boxes to put it in, so this fits our definition of multiplication as follows.
+
+\begin{image}
+\begin{tikzpicture}
+\node at (0, 0) {$4$};
+\node at (0.5, 0) {$\times$};
+\node at (1, 0) {$?$};
+\node at (1.5, 0) {$=$};
+\node at (2, 0) {$10$};
+\node at (-0.75, -1) {\# of };
+\node at (-0.75, -1.35) {boxes}; 
+\node at (1,-1) {\# of ounces};
+\node at (1, -1.35) { per box}; 
+\node at (2.8, -1) {total};
+\node at (2.8, -1.35) {ounces};
+\draw[->] (-0.75, -0.75)--(0, -0.25);
+\draw[->] (1, -0.75)--(1, -0.4);
+\draw[->] (2.75, -0.75)--(2, -0.4);
+\end{tikzpicture}
+\end{image}
+
+In other words, this is a how many in each group division question for $\answer[given]{10} \div \answer[given]{4}$. We simplify the division expression to see that we place $\answer[given]{2.5}$ ounces in each box. Since our baking soda was originally $\frac{1}{2}$ of a teaspoon, we must scale the baking soda in the same way. We have
+\[
+\frac{1}{2} \textrm{ of a box (group) } \times 2 \frac{1}{2} \textrm{ tsp per box (objects per group) } = \answer[given]{1.25} \textrm{tsp total (objects total)}.
+\]
+Quinn should use $1 \frac{1}{4}$ teaspoons of baking soda with the $10$ ounces of glue.
+
+\end{example}
+
+Notice the way that this explanation fit more with our third definition of a ratio. If we start with a ratio of $A:B$ and then change this to $(A \times N) : (B \times N)$, we still have the same ratio. Some people call this a ``variable parts'' perspective, because we changed the size of the parts as part of our solution. 
+
+There is another type of picture we would like to mention in order to close out this section, and this is called a \dfn{double number line}. A double number line is a picture where we draw two number lines with different scales, but the two scales show how the two quantities in our mixture relate to one another. Let's see how we could solve the slime problem again using a double number line. We start by drawing two number lines, labeling one for the amount of glue and the other for the amount of baking soda.
+
+\begin{image}
+\begin{tikzpicture}
+\draw[thick] (0, -0.4)--(0, 0.4);
+\draw[thick] (0, 0.6)--(0, 1.4);
+\draw[thick, ->] (0, 0)--(4,0);
+\draw[thick, ->] (0, 1)--(4,1);
+\node[left] at (-0.5, 0) {glue (oz)};
+\node[left] at (-0.5, 1) {baking soda (tsp)};
+\end{tikzpicture}
+\end{image}
+
+Now, we will mark the original ratio on these number lines. We know that $4$ oz of glue corresponds with $\frac{1}{2}$ teaspoons of baking soda, so we will line up these marks on the number lines accordingly. 
+
+\begin{image}
+\begin{tikzpicture}
+\draw[thick] (0, -0.4)--(0, 0.4);
+\draw[thick] (0, 0.6)--(0, 1.4);
+\draw[thick, ->] (0, 0)--(4,0);
+\draw[thick, ->] (0, 1)--(4,1);
+\node[left] at (-0.5, 0) {glue (oz)};
+\node[left] at (-0.5, 1) {baking soda (tsp)};
+\draw[thick] (1, 0.3) -- (1, -0.3) node[below] {$4$};
+\draw[thick] (1, 0.7)--(1, 1.3) node[above] {$\frac{1}{2}$};
+\end{tikzpicture}
+\end{image}
+
+Now we can use the scales on each line to find other quantities of baking soda and glue that correspond to one another. For instance, we could add another $4$ ounces of glue, and this would mean we need to add another $\frac{1}{2}$ teaspoon of baking soda in order to keep the same relationship. Let's mark these new points on our line.
+
+\begin{image}
+\begin{tikzpicture}
+\draw[thick] (0, -0.4)--(0, 0.4);
+\draw[thick] (0, 0.6)--(0, 1.4);
+\draw[thick, ->] (0, 0)--(4,0);
+\draw[thick, ->] (0, 1)--(4,1);
+\node[left] at (-0.5, 0) {glue (oz)};
+\node[left] at (-0.5, 1) {baking soda (tsp)};
+\draw[thick] (1, 0.3) -- (1, -0.3) node[below] {$4$};
+\draw[thick] (1, 0.7)--(1, 1.3) node[above] {$\frac{1}{2}$};
+\draw[thick] (2, 0.3) -- (2, -0.3) node[below] {$8$};
+\draw[thick] (2, 0.7)--(2, 1.3) node[above] {$1$};
+\end{tikzpicture}
+\end{image}
+
+Let's repeat this process again, adding another $4$ ounces of glue and another $\frac{1}{2}$ teaspoon of baking soda.
+
+\begin{image}
+\begin{tikzpicture}
+\draw[thick] (0, -0.4)--(0, 0.4);
+\draw[thick] (0, 0.6)--(0, 1.4);
+\draw[thick, ->] (0, 0)--(4,0);
+\draw[thick, ->] (0, 1)--(4,1);
+\node[left] at (-0.5, 0) {glue (oz)};
+\node[left] at (-0.5, 1) {baking soda (tsp)};
+\draw[thick] (1, 0.3) -- (1, -0.3) node[below] {$4$};
+\draw[thick] (1, 0.7)--(1, 1.3) node[above] {$\frac{1}{2}$};
+\draw[thick] (2, 0.3) -- (2, -0.3) node[below] {$8$};
+\draw[thick] (2, 0.7)--(2, 1.3) node[above] {$1$};
+\draw[thick] (3, 0.3) -- (3, -0.3) node[below] {$12$};
+\draw[thick] (3, 0.7)--(3, 1.3) node[above] {$1 \frac{1}{2}$};
+\end{tikzpicture}
+\end{image}
+
+The amount of glue that we want is exactly halfway between the $8$ ounce mark and the $12$ ounce mark, and so we can find the amount of baking soda that we want exactly halfway between the corresponding marks which are $1$ teaspoon and $1 \frac{1}{2}$ teaspoon. In other words, the amount of baking soda that matches with $10$ ounces of glue is $1 \frac{1}{4}$ teaspoon. Let's draw those corresponding marks on our double number line.
+
+\begin{image}
+\begin{tikzpicture}
+\draw[thick] (0, -0.4)--(0, 0.4);
+\draw[thick] (0, 0.6)--(0, 1.4);
+\draw[thick, ->] (0, 0)--(4,0);
+\draw[thick, ->] (0, 1)--(4,1);
+\node[left] at (-0.5, 0) {glue (oz)};
+\node[left] at (-0.5, 1) {baking soda (tsp)};
+\draw[thick] (1, 0.3) -- (1, -0.3) node[below] {$4$};
+\draw[thick] (1, 0.7)--(1, 1.3) node[above] {$\frac{1}{2}$};
+\draw[thick] (2, 0.3) -- (2, -0.3) node[below] {$8$};
+\draw[thick] (2, 0.7)--(2, 1.3) node[above] {$1$};
+\draw[thick] (3, 0.3) -- (3, -0.3) node[below] {$12$};
+\draw[thick] (3, 0.7)--(3, 1.3) node[above] {$1 \frac{1}{2}$};
+\draw[thick] (2.5, 0.2) -- (2.5, -0.2) node[below] {$10$};
+\draw[thick] (2.5, 0.8)--(2.5, 1.2) node[above] {$1 \frac{1}{4}$};
+\end{tikzpicture}
+\end{image}
+
+We have explained how to draw these marks by thinking about keeping the relationship between glue and baking soda the same, but you could also formulate this reasoning in terms of a groups and objects multiplication. Sometimes we would like to draw a picture to really see how the grouping is being done when we multiply or divide!
+
+\begin{question}
+How could you use a double number line to solve Luther's paint problem?
+\begin{freeResponse}
+Draw some pictures in your notes, and leave a reminder here so that you can find them later.
+\end{freeResponse}
+\end{question}
+
+\end{document}
+
+
+
+
+
+

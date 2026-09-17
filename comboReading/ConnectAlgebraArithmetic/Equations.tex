@@ -1,0 +1,369 @@
+\documentclass{ximera}
+
+\input{../preamble.tex}
+
+
+\title{Equations}
+\author{Jenny Sheldon}
+
+\begin{document}
+
+\begin{abstract}
+We use our understanding of operations to solve equations.
+\end{abstract}
+\maketitle
+
+\section{Activities for this section:} 
+\link[Pan balances]{https://ximera.osu.edu/m4t/elementaryActivities/SemesterOnePacket/elementaryActivities/ConnectAlgebraArithmetic/PanBalances}, 
+\link[Math problems]{https://ximera.osu.edu/m4t/elementaryActivities/SemesterOnePacket/elementaryActivities/ConnectAlgebraArithmetic/MathProblems}
+
+
+\section{Equations with pan balances}
+
+After discussing expressions in the previous section, it's time to tackle equations. Again, we have been discussing equations throughout the semester, but we are now ready to give a definition.
+\begin{definition}
+An \dfn{equation} is a statement that two expressions are equal.
+\end{definition}
+
+We've already talked about the importance of children developing a correct meaning of the equals sign as balancing two sides of an equation in our section on \link[Properties]{https://ximera.osu.edu/m4t/elementaryTeachersOne/elementaryReading/Multiplication/Properties}, and we also talked about the idea that equations can be true, sometimes true, or false. Most of the time when we see an equation with at least one variable, we are trying to find the value of that variable which makes the equation true. 
+
+Below, we will work with linear equations, and we will give a definition and discuss 
+these much more in  future courses. However, we would also like to remind you that there 
+are many other kinds of equations beyond those we will work with in this section. There 
+are quadratic equations, where the variable is raised to the second power, like
+\[
+x^2 - x - 6 = 0.
+\]
+There are exponential equations, like
+\[
+2^x = 8.
+\]
+There are still other types of equations beyond these. While these might look complicated, we remind you that all we are trying to do is to find a value (or sometimes more than one value) of $x$ which will make these equations true. There are techniques for finding the values of $x$ that will make these equations true, but we never want to lose sight of the overall goal. In fact, let's solve the second equation.
+\begin{question}
+What value of $x$ makes $2^x = 8$ a true statement?  $\answer[given]{3}$
+\begin{hint}
+The answer is a whole number - try some out!
+\end{hint}
+\end{question}
+
+While we are often looking for specific values that will make an equation true, this is not always the case. An identity is an equation which is always true for all of the variables in it. For example, our statement of the distributive property is an identity.
+\[
+A \times (B+C) = (A \times B) + (A \times C)
+\]
+This equation is an identity because it is true for any values of $A$, $B$, and $C$ that we choose. There are also examples of equations that are never true, like
+\[
+7 + x = 5 + x.
+\]
+This is still an equation because we have expressions on either side of the equals sign, but there are no values of $x$ that we could find that would make this equation true. 
+
+
+However, our focus will be on equations that have one value of $x$ that makes the equation true.  Let's get started with our first example.
+
+\begin{example}
+Using a pan balance, let's find the value of the variable $x$ which will make the equation
+\[
+5 + 6x = 3x + 11
+\]
+true.
+
+To represent this equation with a pan balance, we remember that the equals sign is represented by the fact that the two sides  are balanced. We will want to keep them balanced throughout our process. This also means that we want to represent $5 + 6x$ on one side of the balance (we will use the left side) and $3x + 11$ on the other side of the balance (we will use the right side). To draw $5 + 6x$ we will draw $\answer[given]{5}$ boxes which each represent one unit and then $\answer[given]{6}$ boxes labeled with an $x$ that represent $6$ copies or groups of our unknown value. On the other side, we will draw $\answer[given]{3}$ boxes lableled with our variable $x$ and then $\answer[given]{11}$ boxes which each represent one unit. You can draw these $11$ boxes as one bundle of boxes and then one additional box, or you can leave them unbundled.
+
+\begin{image}
+\begin{tikzpicture}
+\draw[thick] (0,0)--(4,0);
+\draw[thick] (6,0)--(10,0);
+\draw[thick] (2,0)--(2, -0.5)--(8, -0.5)--(8,0);
+\draw[thick] (2,-2)--(5,-0.5)--(8,-2);
+\foreach \x in {0.2, 0.4, 0.6, 0.8, 1, 7.6, 7.8, 8, 8.2, 8.4, 8.6, 8.8, 9, 9.2, 9.4, 9.6} \draw[thick] (\x, 0) rectangle (\x+0.1, 0.1);
+\foreach \x in {1.2, 1.6, 2, 2.4, 2.8, 3.2, 6.4, 6.8, 7.2} \draw[thick] (\x, 0) rectangle (\x+0.3, 0.3);
+\foreach \x in {1.2, 1.6, 2, 2.4, 2.8, 3.2, 6.4, 6.8, 7.2} \node at (\x+0.15, 0.15) {$x$};
+\end{tikzpicture}
+\end{image}
+
+If we look at the ones blocks, we see that we have $\answer[given]{5}$ ones blocks on the left side and $\answer[given]{11}$ ones blocks on the right side. This means that if we remove $5$ blocks from the left, we must also remove $\answer[given]{5}$ blocks from the right side in order to keep things balanced. We chose the number $5$ so that there would be no ones blocks remaining on the left side, but of course we could remove any number of ones blocks from both sides between $0$ and $5$ and things would stay balanced. Let's cross off the ones blocks that we are removing from each side.
+
+\begin{image}
+\begin{tikzpicture}
+\draw[thick] (0,0)--(4,0);
+\draw[thick] (6,0)--(10,0);
+\draw[thick] (2,0)--(2, -0.5)--(8, -0.5)--(8,0);
+\draw[thick] (2,-2)--(5,-0.5)--(8,-2);
+\foreach \x in {0.2, 0.4, 0.6, 0.8, 1, 7.6, 7.8, 8, 8.2, 8.4, 8.6, 8.8, 9, 9.2, 9.4, 9.6} \draw[thick] (\x, 0) rectangle (\x+0.1, 0.1);
+\foreach \x in {1.2, 1.6, 2, 2.4, 2.8, 3.2, 6.4, 6.8, 7.2} \draw[thick] (\x, 0) rectangle (\x+0.3, 0.3);
+\foreach \x in {1.2, 1.6, 2, 2.4, 2.8, 3.2, 6.4, 6.8, 7.2} \node at (\x+0.15, 0.15) {$x$};
+\foreach \x in {0.2, 0.4, 0.6, 0.8, 1, 7.6, 7.8, 8, 8.2, 8.4} \draw[thick, red] (\x-0.05, -0.05)--(\x+0.15, 0.15);
+\end{tikzpicture}
+\end{image}
+
+Next, let's redraw the balance with these blocks removed. 
+
+\begin{image}
+\begin{tikzpicture}
+\draw[thick] (0,0)--(4,0);
+\draw[thick] (6,0)--(10,0);
+\draw[thick] (2,0)--(2, -0.5)--(8, -0.5)--(8,0);
+\draw[thick] (2,-2)--(5,-0.5)--(8,-2);
+\foreach \x in {8.6, 8.8, 9, 9.2, 9.4, 9.6} \draw[thick] (\x, 0) rectangle (\x+0.1, 0.1);
+\foreach \x in {1.2, 1.6, 2, 2.4, 2.8, 3.2, 6.4, 6.8, 7.2} \draw[thick] (\x, 0) rectangle (\x+0.3, 0.3);
+\foreach \x in {1.2, 1.6, 2, 2.4, 2.8, 3.2, 6.4, 6.8, 7.2} \node at (\x+0.15, 0.15) {$x$};
+\end{tikzpicture}
+\end{image}
+
+We can now see that we have $\answer[given]{6}$ of the $x$-boxes on the left hand side and $\answer[given]{3}$ on the right hand side. If we remove $3$ of these boxes from each side, we will still be balanced. Even though we don't know what the value of the $x$ is, we do know that these boxes are all copies of one another, so they must all have the same value. Let's first cross off the three $x$-boxes from each side.
+
+\begin{image}
+\begin{tikzpicture}
+\draw[thick] (0,0)--(4,0);
+\draw[thick] (6,0)--(10,0);
+\draw[thick] (2,0)--(2, -0.5)--(8, -0.5)--(8,0);
+\draw[thick] (2,-2)--(5,-0.5)--(8,-2);
+\foreach \x in {8.6, 8.8, 9, 9.2, 9.4, 9.6} \draw[thick] (\x, 0) rectangle (\x+0.1, 0.1);
+\foreach \x in {1.2, 1.6, 2, 2.4, 2.8, 3.2, 6.4, 6.8, 7.2} \draw[thick] (\x, 0) rectangle (\x+0.3, 0.3);
+\foreach \x in {1.2, 1.6, 2, 2.4, 2.8, 3.2, 6.4, 6.8, 7.2} \node at (\x+0.15, 0.15) {$x$};
+\foreach \x in {1.2, 1.6, 2, 6.4, 6.8, 7.2} \draw[thick, red] (\x-0.05, -0.05)--(\x+0.35, 0.35);
+\end{tikzpicture}
+\end{image}
+Like we did the last time blocks were removed, let's redraw the picture without the removed blocks.
+\begin{image}
+\begin{tikzpicture}
+\draw[thick] (0,0)--(4,0);
+\draw[thick] (6,0)--(10,0);
+\draw[thick] (2,0)--(2, -0.5)--(8, -0.5)--(8,0);
+\draw[thick] (2,-2)--(5,-0.5)--(8,-2);
+\foreach \x in {8.6, 8.8, 9, 9.2, 9.4, 9.6} \draw[thick] (\x, 0) rectangle (\x+0.1, 0.1);
+\foreach \x in {2.4, 2.8, 3.2} \draw[thick] (\x, 0) rectangle (\x+0.3, 0.3);
+\foreach \x in {2.4, 2.8, 3.2} \node at (\x+0.15, 0.15) {$x$};
+
+\end{tikzpicture}
+\end{image}
+
+At this point, we have $\answer[given]{3}$ of the $x$-boxes remaining on the left side and $\answer[given]{6}$ of the ones blocks remaining on the right side. Our goal is to find out how many of the ones blocks correspond to each of the $x$-boxes, so we can think of each $x$-box as a group of ones blocks. We have a total of $6$ ones blocks that we want to place into $3$ groups, and we would like to know how many ones blocks will go in each group. Let's make three groups of ones blocks in our picture.
+
+\begin{image}
+\begin{tikzpicture}
+\draw[thick] (0,0)--(4,0);
+\draw[thick] (6,0)--(10,0);
+\draw[thick] (2,0)--(2, -0.5)--(8, -0.5)--(8,0);
+\draw[thick] (2,-2)--(5,-0.5)--(8,-2);
+\foreach \x in {6.5, 6.8, 7.4, 7.7, 8.3, 8.6} \draw[thick] (\x, 0) rectangle (\x+0.1, 0.1);
+\foreach \x in {2.4, 2.8, 3.2} \draw[thick] (\x, 0) rectangle (\x+0.3, 0.3);
+\foreach \x in {2.4, 2.8, 3.2} \node at (\x+0.15, 0.15) {$x$};
+\foreach \x in {6.7, 7.6, 8.5} \draw[thick, purple] (\x, 0.05) ellipse (0.3cm and 0.1cm);
+\end{tikzpicture}
+\end{image}
+
+We see that when we place the $6$ blocks into three equal groups, we have $\answer[given]{2}$ ones blocks in each group, or in other words each $x$ block matches with two ones blocks. This means that $x = \answer[given]{2}$.
+
+\end{example}
+
+Next, we want to see how the steps we took with the pan balance correspond to the algebraic steps you might have taken to solve the equation.
+
+\begin{example}
+Let's solve the equation
+\[
+5 + 6x = 3x + 11
+\]
+using algebra, and connect our steps to our work with the pan balance. 
+
+When solving this equation, the first step that we will take is to ``combine like terms''. This is a step we take in order to simplify the equation when we realize that we have pieces of our equation that are the same type and so could be combined. For instance, in this equation we have $5$ ones on the left side and $11$ ones on the right side. These are both ones, and so we can combine them. However, we cannot combine the $5$ ones with the $6x$ because these are different types of objects. We will start by combining the ones, and we will do this by subtracting $5$ from each side. Many teachers like to write a ``$-5$'' below each side of the equation to make our step clear.
+\begin{image}
+\begin{tikzpicture}
+\node at (0,0) {$5$};
+\node at (0.5, 0) {$+$};
+\node at (1, 0) {$6x$};
+\node at (1.5, 0) {$=$};
+\node at (2, 0) {$3x$};
+\node at (2.5, 0) {$+$};
+\node at (3, 0) {$11$};
+\node at (0, -0.5) {\scriptsize $-5$};
+\node at (3, -0.5) {\scriptsize $-5$};
+\end{tikzpicture} \end{image}
+
+Notice that we did the same thing with our pan balance when we removed $5$ ones blocks from each side. We know that we used subtraction on these $5$ blocks because we \wordChoice{\choice{combined} \choice[correct]{took away} \choice{grouped}} blocks from the balance.
+
+Next, we will combine the terms containing the variable $x$ by subtracting $3x$ from each side of the equation. Again we will write ``$-3x$'' below each line as a reminder step.
+
+\begin{image}
+\begin{tikzpicture}
+\node at (0,0) {$6x$};
+\node at (0.5, 0) {$=$};
+\node at (1, 0) {$3x$};
+\node at (1.5, 0) {$+$};
+\node at (2, 0) {$6$};
+\node at (0, -0.5) {\scriptsize $-3x$};
+\node at (1, -0.5) {\scriptsize $-3x$};
+\end{tikzpicture} \end{image}
+
+In our pan balance example, this was the step where we removed three $x$-blocks from each side of the balance. Notice that even though we call this step ``combining like terms'', the action we are taking is removing blocks, and so we use subtraction as our operation. 
+
+Finally, we divide both sides by $3$ in order to reduce the expression to an equivalent one that has just a single $x$ on one side.  We will write ``$\div 3$" under each side of the equation as our reminder step.
+
+\begin{image}
+\begin{tikzpicture}
+\node at (0,0) {$3x$};
+\node at (0.5, 0) {$=$};
+\node at (1, 0) {$6$};
+\node at (0, -0.5) {\scriptsize $\div 3$};
+\node at (1, -0.5) {\scriptsize $\div 3$};
+\end{tikzpicture} \end{image}
+
+In our pan balance example, this step was illustrated when we made $3$ groups of blocks. Since we were asking ``how many blocks in each group?'' the corresponding operation is \wordChoice{\choice{addition} \choice{subtraction}\choice{multiplication} \choice[correct]{division}}. We had a total of $\answer[given]{6}$ objects and $\answer[given]{3}$ groups (one for each $x$-box), and so asking how many blocks are in each group is the same as calculating $6 \div 3$. We end up with the equation
+\[
+x=2
+\]
+where it is easy to see what the value of $x$ should be.
+
+\end{example}
+
+Throughout the process of solving our equation either with the pan balance or with algebra, we kept replacing our equation with an equivalent equation by making sure that we kept the balance between the two sides. When we ``do the same thing to both sides'' of an equation, we are ensuring that our equation stays balanced so that the new equation is equivalent to the old one. Once we have simplified our equation enough that we can see what value the variable should have, we know we have solved the problem at hand. 
+
+As you solve equations in this section, we would like you to keep in mind the pictures and reasoning that justify the steps of the equation. Remembering the physical representation behind the scenes helps us to understand why the algebraic steps we are taking make sense. Connecting to pictures also helps us to see how the work children will do in algebra is connected to the meaning of operations and reasoning they have built in earlier grades.
+
+
+
+\section{Equations with strip diagrams}
+
+A pan balance is one type of picture that we can draw to solve equations, and strip diagrams are another. A strip diagram is a picture much like some of the fraction or ratio pictures we have been drawing where we use rectangles to represent various parts of the problem. These strip diagrams are also sometimes called bar models, and were made popular in the US through a curriculum called \link[Singapore math]{https://www.singaporemath.com/pages/what-is-singapore-math}. The Singapore math curriculum then influenced the development of the Common Core as well as Ohio's state standards. Let's take a look at an example.
+
+\begin{example}
+Consider the following story problem.
+
+\emph{Fleur is volunteering at the school library. The librarian has asked her to volunteer for $55$ hours over June and July in order to help get the library ready for the next school year. It's the beginning of July, and Fleur has already volunteered some hours in June and then $10$ hours in July. She calculates that she still needs to volunteer twice as many more hours in July as she did in June in order to make it to the $55$ hour goal. How many hours does Fleur still need to volunteer in July?}
+
+Let's solve this problem using a strip diagram. The problem says that we have two months (June and July) and that we need the total number of hours over those two months to be $55$ hours. We also know that the July hours will be made out of the $10$ hours that Fleur has already worked as well as twice as many hours as she worked in June. Since the number of July hours is based on the June hours, let's use a variable $H$ to represent the number of hours Fleur worked in June. Let's draw the June hours as a rectangle and also label it with the $H$.
+\begin{image}\begin{tikzpicture}
+\draw[thick] (0, 2) rectangle (4, 3);
+\node[left] at (0, 2.5) {June};
+\node at (2, 2.5) {$H$};
+\end{tikzpicture}\end{image}
+
+Now, the July box should be longer than the June box, but how much longer? We know that July is made out of two of the June boxes plus another $10$ hours. So we will draw two copies of the June box, and then another, smaller box to represent the $10$ hours. We will attach them all together to look like a long strip and label this strip July.
+
+\begin{image}\begin{tikzpicture}
+\draw[thick] (0, 2) rectangle (4, 3);
+\node[left] at (0, 2.5) {June};
+\node at (2, 2.5) {$H$};
+\draw[thick] (0,0) rectangle (4,1);
+\draw[thick] (4,0) rectangle (8,1);
+\draw[thick] (8,0) rectangle (10,1);
+\node at (2, 0.5) {$H$};
+\node at (6, 0.5) {$H$};
+\node at (9, 0.5) {$10$hr};
+\node[left] at (0, 0.5) {July};
+\end{tikzpicture}\end{image}
+
+The story tells us that all of these hours together will be $55$ hours, so let's mark $55$ hours as the total of all of the boxes in the picture.
+
+
+\begin{image}\begin{tikzpicture}
+\draw[thick] (0, 2) rectangle (4, 3);
+\node[left] at (0, 2.5) {June};
+\node at (2, 2.5) {$H$};
+\draw[thick] (0,0) rectangle (4,1);
+\draw[thick] (4,0) rectangle (8,1);
+\draw[thick] (8,0) rectangle (10,1);
+\node at (2, 0.5) {$H$};
+\node at (6, 0.5) {$H$};
+\node at (9, 0.5) {$10$hr};
+\node[left] at (0, 0.5) {July};
+\draw[thick, <->] (10.2, 0)--(10.4, 0)--(10.4, 3)--(10.2, 3);
+\node[right] at (10.4, 1.5) {$55$ hours};
+\end{tikzpicture}\end{image}
+
+If we remove the $10$ hours from the $55$ hour total, we'll be left with $\answer[given]{3}$ equal boxes of hours and a total of $\answer[given]{45}$ hours to split amongst those three boxes. This is a \wordChoice{\choice{addition} \choice{subtraction} \choice{multiplication} \choice{how many groups division} \choice[correct]{how many in each group division}} problem for $45 \div 3$ (one group is one box and one object is one hour), so we can see that we can fit $\answer[given]{15}$ hours in each of the boxes.
+
+However, the question asks how many additional hours Fleur needs to volunteer in July, and these are the two boxes in July. Using our calculations, this means that Fleur needs to volunteer for $\answer[given]{30}$ more hours in July to meet her goal.
+
+\end{example}
+
+Notice that in this problem, we started drawing rectangles to represent the parts of the problem that we understood. Once we understood how these rectangles were related to one another and to the quantities in the problem, we could solve for the unknown quantity. Strip diagrams are a very nice way to visualize equations if you aren't sure how to write them down algebraically. But speaking of writing algebraic equations, let's see how we could solve this same problem using an equation.
+
+\begin{example}
+Consider the following story problem. 
+
+\emph{Fleur is volunteering at the school library. The librarian has asked her to volunteer for $55$ hours over June and July in order to help get the library ready for the next school year. It's the beginning of July, and Fleur has already volunteered some hours in June and then $10$ hours in July. She calculates that she still needs to volunteer twice as many more hours in July as she did in June in order to make it to the $55$ hour goal. How many hours does Fleur still need to volunteer in July?}
+
+Let's explain how to solve this problem with an equation and connect the equation to the strip diagram we used to solve the problem above.
+
+Let's start by writing equations in English and then translating them into mathematical symbols. We know that Fleur's hours for June and July have to add up to $55$ hours, so we could write the following.
+\[
+\textrm{June hours } + \textrm{ July hours } = 55
+\]
+As with the previous example, we saw that the July hours were expressed in terms of the June hours, so let's again let $H$ represent the number of hours Fleur volunteered in June. That means we can replace ``June hours'' in the previous equation with $\answer[given]{H}$.
+\[
+H + \textrm{ July hours } = 55
+\]
+Now, we know that in July Fleur has already worked for $\answer[given]{10}$ hours, so we could split up the July hours into $10$ and the hours she still has to work. Let's write that in our equation.
+\[
+H + 10 + \textrm{ hours left to work } = 55
+\]
+The remaining hours must be twice as many as the June hours, and we can represent this by multiplying $\answer[given]{H}$ by $2$ to get two copies with $H$ amount of hours per copy. Let's now substitute this in our equation.
+\[
+H + 10 + 2H = 55
+\]
+We have now translated everything into mathematical symbols, and so we could solve this equation by simplifying it like we did earlier with our pan balance example. But before we do that, let's see how we could see this equation in our strip diagram. Here is the completed strip diagram again.
+
+\begin{image}\begin{tikzpicture}
+\draw[thick] (0, 2) rectangle (4, 3);
+\node[left] at (0, 2.5) {June};
+\node at (2, 2.5) {$H$};
+\draw[thick] (0,0) rectangle (4,1);
+\draw[thick] (4,0) rectangle (8,1);
+\draw[thick] (8,0) rectangle (10,1);
+\node at (2, 0.5) {$H$};
+\node at (6, 0.5) {$H$};
+\node at (9, 0.5) {$10$hr};
+\node[left] at (0, 0.5) {July};
+\draw[thick, <->] (10.2, 0)--(10.4, 0)--(10.4, 3)--(10.2, 3);
+\node[right] at (10.4, 1.5) {$55$ hours};
+\end{tikzpicture}\end{image}
+
+Notice that if we combine together everything in the rectangles, this should give us $55$ hours. So on one side of our equation we could write an expression that would \wordChoice{\choice[correct]{add} \choice{subtract} \choice{multiply} \choice{divide}} the values in all of the boxes, and on the other side we could write the $55$ hours. In the diagram, for June we have a box labeled $H$, and for July we have a total of $\answer[given]{2H+10}$. When we combine these together, we get
+\[
+H + 2H + 10 = 55
+\]
+which is the same as the equation we found above (after using the commutative property of addition). 
+
+Now, to solve this equation, we first combine the $H$ and $2H$ to get $3H$.
+\begin{align*}
+H + 10 + 2H &= 55 \\
+3H + 10 &= 55
+\end{align*}
+Next, we could subtract the $\answer[given]{10}$ from each side (mirroring how we first removed the rectangle labeled with the $10$ hours from our consideration and also took away $10$ hours from the $55$ hours).
+\begin{align*}
+H + 10 + 2H &= 55 \\
+3H + 10 &= 55\\
+3H &= 45
+\end{align*}
+Finally, we can divide both sides by $\answer[given]{3}$, which we did in our picture by asking how many hours fit in each box.
+\begin{align*}
+H + 10 + 2H &= 55 \\
+3H + 10 &= 55\\
+3H &= 45\\
+H &= 15
+\end{align*}
+We see again that $H = \answer[given]{15}$ hours. The question still asks how many hours Fleur has left to work in July, which is $2H$ or $\answer[given]{30}$ hours.
+\end{example}
+
+Notice that in both of these examples, we have been very careful to define our variable. 
+We want to be specific when describing what the variable represents so that we know exactly
+ how to use it in the problem. This is a common issue for students of mathematics: when we 
+ don't describe our variable carefully enough, we can be very unsure where to place it in 
+ the problem. We can also struggle to know whether or not the value of the variable gives 
+ us the answer! Practice being as specific as you can.
+
+Also notice again that our picture helps us to understand what the steps of solving the 
+problem actually mean. This is the heart of the connection that we would like you to see 
+between the operations work of elementary school and the beginning of algebra work in 
+middle school. If you are teaching kids about operations, we would love for you to keep 
+this later work in algebra in the back of your mind so that you are setting your students 
+up for success, no matter what comes their way.
+
+
+\end{document}
+
+
+
+
+
+

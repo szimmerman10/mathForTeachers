@@ -1,0 +1,240 @@
+\documentclass{ximera}
+
+\input{../preamble.tex}
+
+
+\title{Even and Odd}
+\author{Jenny Sheldon}
+
+\begin{document}
+
+\begin{abstract}
+We connect factors and multiples to the idea of numbers being even or odd.
+\end{abstract}
+\maketitle
+
+\section{Activities for this section:} 
+\link[Starting Point]{https://ximera.osu.edu/m4t/elementaryActivities/SemesterOnePacket/elementaryActivities/FactorsAndMultiples/StartingPoint}
+
+\section{Factors and multiples}
+
+In \link[Ohio's standards]{https://education.ohio.gov/getattachment/Topics/Learning-in-Ohio/Mathematics/Ohio-s-Learning-Standards-in-Mathematics/Ohio-s-K-8-Learning-Progressions.pdf.aspx?lang=en-US}, children start working with factors and multiples as early as grade four, although the major part of this work occurs in grade six. Throughout this segment of the course, we see that many ideas from the earlier grades are building blocks for their later work solving problems using ideas such as least common multiples or greatest common factors. Let's start with some definitions. 
+
+In fact, we have already defined what it means for a number to be a \dfn{factor} of another number. This happened when we defined multiplication and referred to the two numbers that are multiplied as factors, and the result as the product.
+\begin{image}
+\begin{tikzpicture}
+\node at (0, 0) {$A$};
+\node at (0.5, 0) {$\times$};
+\node at (1, 0) {$B$};
+\node at (1.5, 0) {$=$};
+\node at (2, 0) {$C$};
+\node at (0.5, -1) {factors};
+\node at (2, -1) {product};
+\draw[->] (0.5, -0.75)--(0, -0.25);
+\draw[->] (0.5, -0.75)--(1, -0.25);
+\draw[->] (2, -0.75)--(2, -0.25);
+\end{tikzpicture}
+\end{image}
+Children begin working on multiplication in grade three, so they are already familiar with some of this language by grade four. A number is a \dfn{multiple} of another number if we can get the number we want by multiplying the other number by something. Let's put this in more formal language.
+
+\begin{definition}
+If two integers $A$ and $B$ multiply to get a product of $C$, or in other words if $A \times B = C$, then $A$ and $B$ are \dfn{factors} of $C$, and $C$ is a multiple of both $A$ and $B$.
+
+\begin{image}
+\begin{tikzpicture}
+\node at (0, 0) {$A$};
+\node at (0.5, 0) {$\times$};
+\node at (1, 0) {$B$};
+\node at (1.5, 0) {$=$};
+\node at (2, 0) {$C$};
+\node at (0.5, -1) {factors};
+\node at (2, -1) {multiple};
+\draw[->] (0.5, -0.75)--(0, -0.25);
+\draw[->] (0.5, -0.75)--(1, -0.25);
+\draw[->] (2, -0.75)--(2, -0.25);
+\end{tikzpicture}
+\end{image}
+\end{definition}
+
+This definition is easier to understand with an example.
+
+\begin{example}
+We know that $2 \times 5 = \answer[given]{10}$. This means that $2$ and $\answer[given]{5}$ are factors of $10$, and that $10$ is a multiple of both $\answer[given]{2}$ and $5$.
+\end{example}
+
+Notice that we wrote our definition of factors and multiples for integers $A$, $B$, and $C$. While we want you to understand that these ideas extend to negative whole numbers as well as positive ones, we will focus in this segment on only positive whole numbers. Please assume that we are working with positive whole numbers unless we let you know  otherwise.
+
+While factors and multiples are not a new concept for us, the language is very easy to mix up in this situation. Be sure to listen carefully to your own explanations when you are talking about factors and multiples, since it's very easy to say ``factor'' when you mean ``multiple'' and vice versa. Typically, we will encounter factors and multiples in story problems, and one of our main goals will be to explain why the story is asking us to find factors or multiples, as appropriate.
+
+\begin{question}
+Consider the following story problem.
+
+\emph{Xia is throwing a party for her best friend Zhu, and wants to have the attendees of the party write notes of encouragement for Zhu. If Xia has $24$ cards and wants to distribute them equally amongst the guests, how many guests can Xia invite in order to have no left over cards?}
+
+Is the story asking you to find multiples of $24$ or factors of $24$?
+
+\begin{multipleChoice}
+\choice[correct]{Factors of $24$}
+\choice{Multiples of $24$}
+\choice{Neither}
+\end{multipleChoice}
+
+
+\begin{explanation}
+In this scenario, Xia wants to give out a total of $24$ cards to the people attending the party without having any leftovers. This is a \wordChoice{\choice{addition} \choice{subtraction} \choice{multiplication} \choice[correct]{division}} story problem where we can take one object to be one card and one group to be one friend. We know the total number of cards, which is $\answer[given]{24}$, and we are trying to figure out what arrangements of groups and objects per group will give whole number answers with no remainder. We can put this into our definition of multiplication with two question marks.
+\begin{image}
+\begin{tikzpicture}
+\node at (0, 0) {$?$};
+\node at (0.5, 0) {$\times$};
+\node at (1, 0) {$?$};
+\node at (1.5, 0) {$=$};
+\node at (2, 0) {$24$};
+\node at (-0.75, -1) {\# of };
+\node at (-0.75, -1.35) {friends}; 
+\node at (1,-1) {\# of cards};
+\node at (1, -1.35) { per friend}; 
+\node at (2.8, -1) {total};
+\node at (2.8, -1.35) {cards};
+\draw[->] (-0.75, -0.75)--(0, -0.25);
+\draw[->] (1, -0.75)--(1, -0.4);
+\draw[->] (2.75, -0.75)--(2, -0.4);
+\end{tikzpicture}
+\end{image}
+In other words, we know the total is $24$ cards, and we are trying to find the whole number factors of $24$ according to our definition of factors above.
+
+\end{explanation}
+\end{question}
+
+
+\section{Even and odd numbers}
+
+For our first application of factors and multiples, let's take a look at the idea of even and odd numbers. Children start working with these ideas in second grade, and continue throughout high school and beyond. Let's start with our intuitive understanding about even and odd numbers.
+
+\begin{question}
+The image below shows two rows of dots with $8$ dots in each row.
+\begin{image}
+\begin{tikzpicture}
+\foreach \x in {0, 1, ..., 7} \foreach \y in {1, 2} \draw[fill=violet] (\x, \y) circle (3pt);
+\end{tikzpicture}
+\end{image}
+
+Are there an even number of dots in the image?
+\begin{multipleChoice}
+\choice[correct]{Yes}
+\choice{No}
+\end{multipleChoice}
+\end{question}
+
+We can think about the dots in the previous image using very basic reasoning. Children as young as kindergarten can understand an even number using the idea that ``everyone has a buddy''. If there is someone left out with no buddy, then we have an odd number of people. This type of thinking can take us into middle school, where we could find a definition like the following.
+\begin{definition}
+An integer $N$ is \dfn{even} if $2$ is a factor of $N$.
+\end{definition}
+
+Let's see how we can apply this definition to our example with dots.
+
+\begin{question}
+The image below shows two rows of dots with $8$ dots in each row.
+\begin{image}
+\begin{tikzpicture}
+\foreach \x in {0, 1, ..., 7} \foreach \y in {1, 2} \draw[fill=violet] (\x, \y) circle (3pt);
+\end{tikzpicture}
+\end{image}
+
+Are there an even number of dots in the image?
+
+\begin{explanation}
+To see whether this collection of dots is even according to our definition, we need to know whether $2$ is a factor of the number of dots. In other words, can we find a number $D$ so that either
+\[
+2 \times D = \textrm{ total number of dots}
+\]
+or
+\[
+D \times 2 = \textrm{ total number of dots}?
+\]
+We are free to use the $2$ either as the number of groups, in which case we would like to organize the dots into two equal groups with none left over, or we can use the number $2$ as the number of dots per group and ask whether or not we can make equal groups of $2$ with no dots left over. Let's choose the first interpretation, where we are trying to make $2$ equal groups of dots. We can use the \wordChoice{\choice[correct]{rows} \choice{columns} \choice{dots}} as our groups in the picture we drew. Let's circle the two groups.
+\begin{image}
+\begin{tikzpicture}
+\foreach \x in {0, 1, ..., 7} \foreach \y in {1, 2} \draw[fill=violet] (\x, \y) circle (3pt);
+\foreach \y in {1, 2} \draw[thick] (3.5, \y) ellipse (4.5cm and 0.5cm);
+\end{tikzpicture}
+\end{image}
+We have made two equal groups of dots, and there are no dots left over. This means that $2$ is indeed a factor of the total number of dots, so this number is even.
+\end{explanation}
+\end{question}
+Notice how our picture corresponds with the idea that everyone has a buddy. If we think of the dots as representing people standing in two lines, we circled one person from each pair of people. If the two lines were labeled ``left line'' and ``right line'' and each pair of buddies stood so that one person was in the left line next to their buddy in the right line, we would draw exactly this picture. Or, we could take the perspective that there are $2$ people in each group and circle the pairs of buddies. Either way, we see that this idea of making buddies is the same as asking whether or not $2$ is a factor of that number.
+
+We could have also used the language of multiples in order to define even numbers, since factors and multiples are related. Since the number of dots in the picture has $2$ as a factor, the number of dots is also a multiple of $2$. You may use either definition, but as usual be sure that you are using the correct terminology between factors and multiples!
+
+In high school, students will extend this definition of even numbers to write algebraic equations describing even numbers. This will look like saying that an integer $N$ is even if there is another integer $F$ so that
+\[
+2F = N.
+\]
+From our thinking above about the dots, we hope you can see that this is just another way to write down the idea that $2$ is a factor of that number.
+
+Now that we have talked about even numbers, what are odd numbers?
+
+\begin{definition}
+An integer $N$ is \dfn{odd} if $2$ is not a factor of that number.
+\end{definition}
+
+Let's apply our definition of odd numbers to another example.
+
+\begin{example}
+Let's show that when we add two odd numbers, we get an even number. 
+
+First, we need to start with our definitions. The two odd numbers we start with do not have $2$ as a factor, which means that when we divide these numbers by $2$, we get a remainder. The only remainders we can get when we divide by $2$ are $0$ and $\answer[given]{1}$, so we must get a remainder of $\answer[given]{1}$ for each odd number. Let's start by drawing the two odd numbers. In this case we will think of the $2$ as the number of objects per group, so we will have a collection of dots organized into groups of $2$ with one leftover, and another collection of dots organized into groups of $2$ with one left over. These two numbers don't have to be the same size, and we will use $\dots$ in the middle of the groups of two to indicate that there could be any number of these groups.
+\begin{image}
+\begin{tikzpicture}
+\foreach \x in {0, 1, 2, 4, 5, 6} \foreach \y in {0, 1} \draw[fill=pink] (\x, \y) circle (3pt);
+\foreach \x in {10, 12} \foreach \y in {0, 1} \draw[fill=purple] (\x, \y) circle (3pt);
+\draw[fill=pink] (7,0) circle (3pt);
+\draw[fill=purple] (9,1) circle (3pt);
+\node at (8, 0.5) {$+$};
+\node at (3, 0.5) {$\dots$};
+\node at (11, 0.5) {$\dots$};
+\end{tikzpicture}
+\end{image}
+
+Since we are adding these numbers together, our goal is to \wordChoice{\choice[correct]{combine} \choice{take away} \choice{make groups}} these dots into one big collection of dots. Next, we want to ask whether or not the result is even. Our definition of even says that $2$ is a factor of that number, and if we continue using $2$ as the number of objects per group, we want to know if we can make groups of $2$ with $\answer[given]{0}$ leftovers. Let's see if we can circle groups of two in our picture. 
+\begin{image}
+\begin{tikzpicture}
+\foreach \x in {0, 1, 2, 4, 5, 6} \foreach \y in {0, 1} \draw[fill=pink] (\x, \y) circle (3pt);
+\foreach \x in {10, 12} \foreach \y in {0, 1} \draw[fill=purple] (\x, \y) circle (3pt);
+\draw[fill=pink] (7,0) circle (3pt);
+\draw[fill=purple] (9,1) circle (3pt);
+\node at (8, 0.5) {$+$};
+\node at (3, 0.5) {$\dots$};
+\node at (11, 0.5) {$\dots$};
+\foreach \x in {0, 1, 2, 4, 5, 6, 10, 12} \draw (\x, 0.5) ellipse (0.25cm and 0.75cm);
+\begin{scope}[shift={(8, 0.5)}]
+\draw[rotate=120] (0,0) ellipse (0.3cm and 1.35cm);
+\end{scope}
+\end{tikzpicture}
+\end{image}
+Notice that we drew a circle around the extra dot from the first odd number and the extra dot from the second odd number. In other words, if the dots represented people, we made a pair of buddies out of the people who originally had no buddies. This means that when we divide the sum of the two odd numbers by $2$, we get a remainder of $\answer[given]{0}$, or in other words this total has a factor of $\answer[given]{2}$. So, we have used our definitions to show that the sum of two odd numbers is even.
+
+\end{example}
+
+As with even numbers, kids will eventually translate the work they have done with factors and multiples into algebraic language to write that an integer $N$ is odd if it can be written as
+\[
+N = 2K +1
+\]
+for some integer $K$. This is exactly the same statement that $2$ is not a factor of this number, since the only possible remainder when dividing by $2$ other than zero is $1$. This algebraic statement is the same thing we would write down using the division theorem to say that when we divide $N$ by $2$ we get a remainder of $1$.
+
+Even and odd numbers are common in our everyday lives. As we leave this section, think of a few ways in which this thinking about even and odd numbers shows up in your everyday life.
+
+\begin{question}
+How do even or odd numbers show up in your everyday life?
+\begin{freeResponse}
+Write a few thoughts here!
+\end{freeResponse}
+\end{question}
+
+
+\end{document}
+
+
+
+
+
+

@@ -1,0 +1,270 @@
+\documentclass{ximera}
+
+\input{../preamble.tex}
+
+\title{Perimeter and Area}
+\author{Jenny Sheldon}
+
+\begin{document}
+
+\begin{abstract}
+We think about the relationships between perimeter and area.
+\end{abstract}
+\maketitle
+
+\section{Activities for this section:} 
+\link[Perimeter and area]{https://ximera.osu.edu/m4t/elementaryActivities/SemesterTwoPacket/elementaryActivities/Measurement/PerimeterAndArea}
+
+\section{Perimeter and area}
+
+Now that we have calculated both the perimeter of shapes as well as their areas, what can we say about the relationship between the two ideas? Let's investigate with a few examples.
+
+We have seen already with moving and additivity that we can make many different shapes with the same area by moving around pieces of the area. When we move around this area, the perimeter can change significantly.
+\begin{question}
+If we start with a square whose area is $25$ square centimeters and rearrange its area, what different perimeters can we make?
+
+First, what if we keep the square as a square? Its side lengths would each be $\answer{5}$ centimeters.
+\begin{image}
+\begin{tikzpicture}
+\draw[dotted] (0,0) grid (5,5);
+\draw[thick] (0,0)--(0,5)--(5,5)--(5,0)--(0,0);
+\end{tikzpicture}
+\end{image}
+Since each side of the square measures $5$cm and there are four equal sides, the total perimeter here is $\answer{20}$ centimeters.
+
+What if we rearrange the $25$ square centimeters of area into a rectangle which is $10$cm long and $2.5$cm wide?
+\begin{image}
+\begin{tikzpicture}
+\draw[dotted] (0,0) grid (10,3);
+\draw[thick] (0,0)--(10,0)--(10,2.5)--(0,2.5)--(0,0);
+\end{tikzpicture}
+\end{image}
+The area is still $25$ square centimeters, but now the perimeter is $\answer{25}$ centimeters.
+
+What if we rearrange the area so that we have a rectangle which is $25$cm long and $1$cm wide? We still have $25$ square centimeters of area, but now the perimeter is $\answer{52}$ centimeters.
+
+What if we rearrange the area so that we have a rectangle which is $50$cm long and $0.5$cm wide? We still have $25$ square centimeters of area, but now the perimeter is $\answer{101}$ centimeters.
+
+What if we rearrange the area into an $L$-shape which is $5$cm on the bottom, $2$cm on the top, $8$cm on the long side, and $3$cm on the shorter side (plus the other two sides making up the L)?
+\begin{image}
+\begin{tikzpicture}
+\draw[dotted] (0,0) grid (5,8);
+\draw[thick] (0,0)--(5,0)--(5,3)--(2,3)--(2,8)--(0,8)--(0,0);
+\end{tikzpicture}
+\end{image}
+The area is still $25$ square centimeters, but now the perimeter is $\answer{26}$ centimeters.
+\end{question}
+So, we can see from our explorations that moving area around doesn't preserve the perimeter. We get different answers for different perimeters.
+
+What about the opposite of moving and additivity? What if we keep the perimeter the same, and look at different areas that can be made?
+
+Let's start by investigating rectangles.
+\begin{question}
+If we keep a fixed perimeter of $20$cm and make different rectangles, what values for area do we get?
+
+Let's start by making a rectangle with side lengths of $1$cm and $9$cm.
+\begin{image}
+\begin{tikzpicture}
+\draw[dotted] (0,0) grid (9,1);
+\draw[thick] (0,0)--(9,0)--(9,1)--(0,1)--(0,0);
+\end{tikzpicture}
+\end{image}
+What is its area? \begin{prompt} $\answer{9}$ square centimeters \end{prompt}
+
+Now let's make a rectangle with side lengths of $2$cm and $8$cm.
+\begin{image}
+\begin{tikzpicture}
+\draw[dotted] (0,0) grid (8,2);
+\draw[thick] (0,0)--(8,0)--(8,2)--(0,2)--(0,0);
+\end{tikzpicture}
+\end{image}
+What is its area? \begin{prompt} $\answer{16}$ square centimeters \end{prompt}
+
+Now let's make a rectangle with side lengths of $3.5$cm and $6.5$cm.
+\begin{image}
+\begin{tikzpicture}
+\draw[dotted] (0,0) grid (7,4);
+\draw[thick] (0,0)--(6.5,0)--(6.5,3.5)--(0,3.5)--(0,0);
+\end{tikzpicture}
+\end{image}
+What is its area? \begin{prompt} $\answer{22.75}$ square centimeters \end{prompt}
+
+Finally, let's make a square with side lengths of $5$cm.
+\begin{image}
+\begin{tikzpicture}
+\draw[dotted] (0,0) grid (5,5);
+\draw[thick] (0,0)--(0,5)--(5,5)--(5,0)--(0,0);
+\end{tikzpicture}
+\end{image}
+What is its area? \begin{prompt} $\answer{25}$ square centimeters \end{prompt}
+
+\end{question}
+As our rectangle gets closer and closer to a square, the area is getting larger and larger. If we kept going with our pattern (and made the rectangle taller than it is wide) we would see the area start to go back down again as we made the rectangle more and more tall and skinny. From this work, let's observe the following fact.
+\begin{theorem}
+If we are given a fixed perimeter and asked to find the rectangle with the largest area, the shape formed with the largest area is a square with the given perimeter.
+\end{theorem}
+We can also make an observation about the smallest area possible. When we stretched out our rectangle to make it more skinny, we got a smaller area. If we had a certain area, like $0.003$ square centimeters, and we wanted a smaller area, like $0.0000003$ square centimeters, we would just need to stretch out our rectangle a bit more. However, if we tried to make a rectangle with an area of $0$ square centimeters, we wouldn't have a rectangle at all!
+\begin{theorem}
+With a given perimeter, we can make the area as small as we'd like, as long as the area is larger than $0$.
+\end{theorem}
+
+What about if we are allowed to make shapes other than rectangles? Here, if you missed the in-class activity, I encourage you to grab a piece of string, tie it into a loop, and investigate some possible areas. Come back when you've made several different shapes and recorded their areas. If you did this activity in class, just go ahead and enter a few of your answers from class below.
+\begin{question}
+What are three different areas that can be made with a string whose perimeter is approximately $13.5$ inches?
+
+\begin{prompt}
+$\answer[tolerance=7.89999]{7.9}$ square inches
+
+$\answer[tolerance=7.89999]{7.9}$ square inches
+
+$\answer[tolerance=7.89999]{7.9}$ square inches
+\end{prompt}
+\end{question}
+
+Let's see if we can observe a general rule like we did with rectangles.
+
+\begin{example}
+Let's start with a perimeter making a strange shape. We'll put the shape on top of a grid so you can count the approximate area of this figure.
+
+Here is figure $A$ with very wiggly sides.
+\begin{image}
+\begin{tikzpicture}
+    % Draw a dotted grid
+    \draw [dotted] (-5,-5) grid (5,5);
+
+    % Draw the wiggly shape with three big indents
+    \draw plot [smooth cycle, tension=1] coordinates {
+        (0: 3.82cm) 
+        (20: 3.9cm) 
+        (40: 3.8cm) 
+        (60: 4cm) 
+        (80: 3.75cm) 
+        (100: 3.9cm) 
+        (120: 2cm)  % First indent
+        (140: 3.75cm) 
+        (160: 3.9cm) 
+        (180: 4cm) 
+        (200: 3.8cm) 
+        (220: 3.9cm) 
+        (240: 2cm)  % Second indent
+        (260: 3.75cm) 
+        (280: 3.9cm) 
+        (300: 4cm) 
+        (320: 3.8cm) 
+        (340: 3.9cm)
+        (360: 2cm)  % Third indent
+    };
+\end{tikzpicture}
+\end{image}
+
+Here is figure $B$ with slightly less wiggly sides.
+
+\begin{image}
+\begin{tikzpicture}
+    % Draw a dotted grid
+    \draw [dotted] (-5,-5) grid (5,5);
+
+    % Draw the wiggly shape with two big indents
+    \draw plot [smooth cycle, tension=1] coordinates {
+        (0: 3.82cm) 
+        (30: 3.9cm) 
+        (60: 3.8cm) 
+        (90: 4cm) 
+        (120: 3.75cm) 
+        (150: 3.9cm) 
+        (180: 2cm)  % First indent
+        (210: 3.75cm) 
+        (240: 3.9cm) 
+        (270: 4cm) 
+        (300: 3.8cm) 
+        (330: 3.9cm)
+        (360: 2cm)  % Second indent
+    };
+\end{tikzpicture}
+\end{image}
+\begin{question}
+Which has more area, figure $A$ or figure $B$?
+\begin{multipleChoice}
+\choice{figure $A$}
+\choice[correct]{figure $B$}
+%\choice{figure $C$}
+%\choice{figure $D$}
+\end{multipleChoice}
+\end{question}
+
+
+
+
+
+Here is figure $C$ with even less wiggly sides.
+\begin{image}
+\begin{tikzpicture}
+    % Draw a dotted grid
+    \draw [dotted] (-5,-5) grid (5,5);
+
+    % Draw the wiggly shape with an indent
+    \draw plot [smooth cycle, tension=1] coordinates {
+        (0: 3.82cm) 
+        (30: 3.9cm) 
+        (60: 3.8cm) 
+        (90: 4cm) 
+        (120: 3.75cm) 
+        (150: 3.9cm) 
+        (180: 2cm)  % Indent here
+        (210: 3.75cm) 
+        (240: 3.9cm) 
+        (270: 4cm) 
+        (300: 3.8cm) 
+        (330: 3.9cm)
+    };
+\end{tikzpicture}
+\end{image}
+\begin{question}
+Which has the most area, figure $A$, figure $B$, or figure $C$?
+\begin{multipleChoice}
+\choice{figure $A$}
+\choice{figure $B$}
+\choice[correct]{figure $C$}
+%\choice{figure $D$}
+\end{multipleChoice}
+\end{question}
+
+
+Finally, here is figure $D$ with smooth sides (a circle).
+\begin{image}
+\begin{tikzpicture}
+    \draw[dotted] (-5,-5) grid (5,5);
+    \draw[thick] (0,0) circle[radius=3.82cm];
+\end{tikzpicture}
+\end{image}
+\begin{question}
+Which has the most area, figure $A$, figure $B$, figure $C$, or figure $D$?
+\begin{multipleChoice}
+\choice{figure $A$}
+\choice{figure $B$}
+\choice{figure $C$}
+\choice[correct]{figure $D$}
+\end{multipleChoice}
+\end{question}
+
+\end{example}
+As we push the perimeter outward, more and more towards being a circle, we get more and more area. It seems like we've observed the following result.
+\begin{theorem}
+For a fixed perimeter, the largest possible area that can be made is the area we get when the figure is a circle. 
+\end{theorem}
+A full proof of this fact would take some calculus, so we'll stick with what we've observed here. If we ask you to justify why this theorem is true, it's enough to show some examples and explain what we observed. Notice that we can say even slightly more: by pushing in the sides of the figure, we can make any area we like. If we need a little less area, we can push the perimeter a little more towards the center of the figure, and if we need a little more area, we can push the perimeter more outwards again (until it's fully pushed out and forms a circle).
+\begin{theorem}
+For a fixed perimeter, we can make any area larger than $0$ up to and including the area we get when the perimeter forms a perfect circle.
+\end{theorem}
+So, if we are given a particular perimeter, we can't say what the area is exactly, but we can give limits on what the area could be.
+
+Fun fact: we can make similar claims for the range of perimeters possible when we keep area fixed, but we'll leave that as an option for an exercise later!
+
+Recognizing the difference between perimeter and area is an important skill for kids. Exploring the relationships between them helps us to think about how and why they are different ideas!
+\begin{question}
+Pause and think: in your own words, how are perimeter and area different? How are they related?
+\begin{freeResponse}
+Enter your thoughts here!
+\end{freeResponse}
+\end{question}
+\end{document}

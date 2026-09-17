@@ -1,0 +1,234 @@
+\documentclass{ximera}
+
+\input{../preamble.tex}
+
+
+\title{Unit Rates}
+\author{Jenny Sheldon}
+
+\begin{document}
+
+\begin{abstract}
+We define and use unit rates to solve ratio problems.
+\end{abstract}
+\maketitle
+
+\section{Activities for this section:} 
+\link[Table discussion]{https://ximera.osu.edu/m4t/elementaryActivities/SemesterOnePacket/elementaryActivities/Ratios/TableDiscussion}, 
+\link[Unit rates]{https://ximera.osu.edu/m4t/elementaryActivities/SemesterOnePacket/elementaryActivities/Ratios/UnitRates}
+
+\section{Rates}
+
+In the previous section, we solved a problem about making slime out of glue and baking soda.
+
+\emph{A recipe for slime calls for $\frac{1}{2}$ of a teaspoon of baking soda and $4$ ounces of glue. If Quinn wants to make slime using this recipe but instead using $10$ ounces of glue, how much baking soda should be used?}
+
+We used three different methods to solve this problem, but there are many more ways. Let's take a look at one more in order to motivate our work in this section.
+
+\begin{example}
+We know that Quinn would like to make this slime using $10$ ounces of glue instead of $4$ ounces of glue. Instead of building up more glue and baking soda, let's first start by asking ourselves: how many teaspoons of baking soda should we use with one ounce of glue? This question should sound like a division question, because it is. We are trying to figure out how much of something goes with one of something else, which is the same question as ``how many are in one group?" Matching ``how many teaspoons of baking soda go with one ounce of glue'' to ``how many objects go with one full group?'', we see that we should take one group to be one \wordChoice{\choice[correct]{ounce of glue} \choice{teaspoon of baking soda} \choice{batch of the recipe} \choice{slime}} and one object to be one \wordChoice{\choice{ounce of glue} \choice[correct]{teaspoon of baking soda} \choice{batch of the recipe} \choice{slime}}. We know that $4$ ounces of glue, or $4$ groups, is used with $\frac{1}{2}$ of a teaspoon of baking soda, or $\frac{1}{2}$ of an object total. Fitting this with our meaning of multiplication, we have the following.
+\begin{image}
+\begin{tikzpicture}
+\node at (0, 0) {$4$};
+\node at (0.5, 0) {$\times$};
+\node at (1, 0) {$?$};
+\node at (1.5, 0) {$=$};
+\node at (2, 0) {$\frac{1}{2}$};
+\node at (-1.25, -1) {\# of };
+\node at (-1.25, -1.35) {oz glue}; 
+\node at (1,-1) {\# of tsp baking};
+\node at (1, -1.35) {soda per oz glue}; 
+\node at (3.4, -1) {total tsp};
+\node at (3.4, -1.35) {baking soda};
+\draw[->] (-1.25, -0.75)--(0, -0.25);
+\draw[->] (1, -0.75)--(1, -0.4);
+\draw[->] (3.4, -0.75)--(2.2, -0.2);
+\end{tikzpicture}
+\end{image}
+This is a how many in each group division question for $\answer[given]{\frac{1}{2}} \div \answer[given]{4}$. If we simplify this division expression, we need to remember that the whole number $4$ can be written as a fraction $\frac{4}{1}$, and then to divide fractions we flip the second factor and multiply.
+\[
+\frac{1}{2} \div \frac{4}{1} = \frac{1}{2} \times \frac{1}{4} = \frac{1}{\answer[given]{8}}
+\]
+In other words, we need $\frac{1}{8}$ of a teaspoon of baking soda per ounce of glue. Now, we can continue thinking about the ounces of glue as our groups and the teaspoons of baking soda as the objects in our group to find out how many teaspoons are needed for $10$ ounces of glue. This will be a \wordChoice{\choice{how many in each group} \choice{how many groups} \choice[correct]{multiplication}} problem, because we know the number of groups and the number of objects in each group. Let's use our definition of multiplication again.
+\begin{image}
+\begin{tikzpicture}
+\node at (0, 0) {$10$};
+\node at (0.5, 0) {$\times$};
+\node at (1, 0) {$\frac{1}{8}$};
+\node at (1.5, 0) {$=$};
+\node at (2, 0) {$?$};
+\node at (-1.25, -1) {\# of };
+\node at (-1.25, -1.35) {oz glue}; 
+\node at (1,-1) {\# of tsp baking};
+\node at (1, -1.35) {soda per oz glue}; 
+\node at (3.4, -1) {total tsp};
+\node at (3.4, -1.35) {baking soda};
+\draw[->] (-1.25, -0.75)--(0, -0.25);
+\draw[->] (1, -0.75)--(1, -0.4);
+\draw[->] (3.4, -0.75)--(2, -0.4);
+\end{tikzpicture}
+\end{image}
+We multiply to find the total number of teaspoons needed for the $10$ groups or ounces, and find that we need $\answer[given]{\frac{10}{8}}$ teaspoons of baking soda for this batch. Since $\frac{10}{8}$ of a teaspoon is equal to $1 \frac{1}{4}$ of a teaspoon, we got the same answer as we did when using a picture or a double number line.
+
+\end{example}
+
+Notice that in using this reasoning about operations strategy we found out how much of one ingredient goes with one unit of the other ingredient. This is such a common solution technique that we give it a special name.
+
+\begin{definition}
+Say that you have a ratio $A:B$ between two quantities. A \dfn{unit rate} associated with this ratio is the amount of one of the quantities that corresponds with one unit of the other quantity.
+\end{definition}
+For example, with the slime problem, $\frac{1}{8}$ of a teaspoon of baking soda per ounce of glue is a unit rate, because it tells how much baking soda goes with one unit (one ounce) of glue. There is another unit rate associated with this ratio, which would describe the amount of glue that goes with one ounce of baking soda. 
+
+\begin{question}
+In the slime ratio of $4$ ounces glue to $\frac{1}{2}$ teaspoon of baking soda, how much glue goes with $1$ teaspoon of baking soda? Use reasoning about operations to find your answer.
+
+\begin{prompt}
+$\answer[given]{8}$ ounces
+\end{prompt}
+
+\end{question}
+
+Up to this point, we have been using the language of ratios to talk about these problems, but people also use the language of rates to talk about such problems. Historically, ratios were typically used to compare two of the same type of thing, for instance if we had a ratio of $8$ cups of black paint for every $3$ cups of white paint. Rates were used to compare two different types of things as we would if we were talking about traveling $100$ miles every $2$ hours. Today, we use ratios and rates interchangeably to describe this constant relationship between two quantities indicated by our ``for every'' language. 
+
+
+However, we just discussed the definition of a unit rate. The big difference between ratios or rates and unit rates is that ratios and rates are \emph{two} numbers, while unit rates are \emph{one} number because we are always giving a quantity per one unit of the other quantity. This means that instead of working with two separate units, we make a single combined unit to express the unit rate. For example, we could talk about a speed of $65$ miles per hour. We use a single number ($65$) to express our speed, and rather than thinking about both miles and hours we use a combined unit of ``miles per hour''.  The combined unit of miles per hour tells us that we are traveling $65$ miles for every $1$ hour. Since one hour is one unit, this is a unit rate. We could also think about it as a ratio of $65:1$ where we are saying we travel $65$ miles for every $1$ hour. 
+
+In the next example, let's explore why we can use unit rates to write ratios using fraction notation.
+
+\begin{example}
+Consider the following story problem. 
+
+\emph{Randall went for a hike at a steady pace. The entire hike took him $4$ hours, and he walked a total of $7$ miles. What was Randall's speed?}
+
+Let's use this ratio problem to explain how ratios and fractions are related.
+
+First, let's see how we can use a ratio to think about Randall's hiking trip. Since he is walking at a steady pace, we know that if he walked a different time and distance, he would still have the same speed. This means that we could think about our constant relationship here as the \wordChoice{\choice{miles} \choice{hours} \choice[correct]{speed} \choice{hike}}. Even though this hike was a particular duration, if Randall hiked for $8$ hours, he would cover $\answer[given]{14}$ miles because this is a ``double batch'' of hiking. In other words, we can express the constant speed Randall hiked using a $7:4$ ratio, meaning $7$ miles every $4$ hours. 
+
+The question is asking for the speed, and presumably the question is looking for a single number that expresses how fast Randall is walking (not just the $7:4$ ratio). Typically we express speeds in units that are distance per unit of time, so in this case we are looking for miles per hour or how many miles Randall walked in one hour. Let's use a picture to solve this one. We'll start off by drawing $7$ boxes representing the $7$ miles, and $4$ boxes representing the $4$ hours.
+\begin{image}
+\begin{tikzpicture}
+\draw[thick, fill=green] (0,0) rectangle (7,2);
+\draw[thick, fill=teal] (8,0) rectangle (12, 2);
+\foreach \x in {1, 2, 3, 4, 5, 6, 9, 10, 11} \draw[thick] (\x, 0)--(\x, 2);
+\node[below] at (3.5, 0) {miles};
+\node[below] at (10,0) {hours};
+\end{tikzpicture}
+\end{image}
+We need to find out how many miles correspond with one hour, so we can change the value of the box representing the $4$ hours to instead represent $1$ hour. The box is cut into $\answer[given]{4}$ equal pieces from the original ratio, so if the entire box represents $1$ hour, then each of the equal pieces is worth $\answer[given]{\frac{1}{4}}$ of an hour. Let's label all of that on our picture.
+\begin{image}
+\begin{tikzpicture}
+\draw[thick, fill=green] (0,0) rectangle (7,2);
+\draw[thick, fill=teal] (8,0) rectangle (12, 2);
+\foreach \x in {1, 2, 3, 4, 5, 6, 9, 10, 11} \draw[thick] (\x, 0)--(\x, 2);
+\node[below] at (3.5, 0) {miles};
+\node[below] at (10,0) {$1$ hour};
+\foreach \x in {8.5, 9.5, 10.5, 11.5} \node[text=white] at (\x, 1.3) {$\frac{1}{4}$};
+\foreach \x in {8.5, 9.5, 10.5, 11.5} \node[text=white] at (\x, 0.6) {hr};
+\end{tikzpicture}
+\end{image}
+Since we need to keep the same relationship between the hours and the miles, we also need to change the pieces in the miles picture in the same way. In other words, each of the pieces that were originally $1$ mile must now become $\frac{1}{4}$ of a mile. Let's label them in our picture as well. 
+\begin{image}
+\begin{tikzpicture}
+\draw[thick, fill=green] (0,0) rectangle (7,2);
+\draw[thick, fill=teal] (8,0) rectangle (12, 2);
+\foreach \x in {1, 2, 3, 4, 5, 6, 9, 10, 11} \draw[thick] (\x, 0)--(\x, 2);
+\node[below] at (3.5, 0) {$\frac{7}{4}$ miles};
+\node[below] at (10,0) {$1$ hour};
+\foreach \x in {8.5, 9.5, 10.5, 11.5} \node[text=white] at (\x, 1.3) {$\frac{1}{4}$};
+\foreach \x in {8.5, 9.5, 10.5, 11.5} \node[text=white] at (\x, 0.6) {hr};
+\foreach \x in {0.5, 1.5, ..., 6.5} \node[text=black] at (\x, 1.3) {$\frac{1}{4}$};
+\foreach \x in {0.5, 1.5, ..., 6.5} \node[text=black] at (\x, 0.6) {mi};
+\end{tikzpicture}
+\end{image}
+We can now count the $7$ pieces, each worth $\frac{1}{4}$ of a mile, to see that in one hour, Randall walked $\answer[given]{\frac{7}{4}}$ of a mile. If we express this as a unit rate, we would say that Randall walked $\frac{7}{4}$ miles per hour. 
+
+Notice that we replaced the $7:4$ ratio (two numbers) with the unit rate $\frac{7}{4}$ miles per hour (a single number). In other words, when we write a ratio as a fraction we are actually changing from the ratio to its corresponding unit rate.
+\end{example}
+
+A common misconception that children have about fractions is that they are two numbers (a numerator and a denominator) rather than a single number which has one location on a number line. It's very important for children to focus on fractions as single numbers, and this connection between ratios and unit rates can emphasize this misconception. As teachers, we want to pay attention to the way that we talk and write about each of these ideas individually so that we can make sense of them when we use them at the same time.
+
+
+
+\section{Proportions}
+
+Perhaps the most important reason to work with unit rates over ratios is that unit rates make it easier for us to compare ratios to decide when they are equal. This brings us to a very powerful tool for solving ratios: proportions.
+
+\begin{definition}
+A \dfn{proportion} is a statement that two ratios are equal, or that two unit rates are equal. 
+\end{definition}
+
+It's time for an example!
+
+\begin{example}
+Consider the following story problem.
+
+\emph{Saanvi is making prize bags in different sizes, but the prize bags must contain $3$ pens for every $8$ stickers. If Saanvi makes a grand prize bag using $96$ stickers, how many pens should be in this bag?}
+
+Let's explain why it makes sense to set up a proportion to solve this problem. First, the problem describes having $3$ pens for every $8$ stickers, which is a fixed relationship in these prize bags, so we are working with a ratio. Even though it doesn't make sense to have partial pens or partial stickers in this situation, we can see that the unit rate for this ratio is $\frac{3}{8}$ of a pen for every one sticker. Let's explain this one using reasoning about operations. Since our unit rate is pens per sticker, we can think about this as objects per group and take one group to be one \wordChoice{\choice{prize bag} \choice[correct]{sticker} \choice{pen}} and one object to be one \wordChoice{\choice{prize bag} \choice{sticker} \choice[correct]{pen}}. We have a total of $\answer[given]{3}$ pens, or objects, and we want to place these in $\answer[given]{8}$ groups, then ask how many objects are in each group. We can fit this into our meaning of multiplication as follows.
+\begin{image}
+\begin{tikzpicture}
+\node at (0, 0) {$8$};
+\node at (0.5, 0) {$\times$};
+\node at (1, 0) {$?$};
+\node at (1.5, 0) {$=$};
+\node at (2, 0) {$3$};
+\node at (-0.75, -1) {\# of };
+\node at (-0.75, -1.35) {stickers}; 
+\node at (1,-1) {\# of pens};
+\node at (1, -1.35) { per sticker}; 
+\node at (2.8, -1) {total};
+\node at (2.8, -1.35) {pens};
+\draw[->] (-0.75, -0.75)--(0, -0.25);
+\draw[->] (1, -0.75)--(1, -0.4);
+\draw[->] (2.75, -0.75)--(2, -0.4);
+\end{tikzpicture}
+\end{image}
+In other words, this is a how many in each group division story for $\answer[given]{3} \div \answer[given]{8}$. Since we know that $3 \div 8$ is equal to $\frac{3}{8}$, we see that there are $\frac{3}{8}$ of a pen per sticker. 
+
+Similarly, if we let $P$ represent the unknown number of pens in the grand prize bag, we know that these $P$ pens correspond to $96$ stickers. We could also use these numbers to find the unit rate of pens per sticker. Using our meaning of multiplication again, we have the following.
+\begin{image}
+\begin{tikzpicture}
+\node at (0, 0) {$96$};
+\node at (0.5, 0) {$\times$};
+\node at (1, 0) {$?$};
+\node at (1.5, 0) {$=$};
+\node at (2, 0) {$P$};
+\node at (-0.75, -1) {\# of };
+\node at (-0.75, -1.35) {stickers}; 
+\node at (1,-1) {\# of pens};
+\node at (1, -1.35) { per sticker}; 
+\node at (2.8, -1) {total};
+\node at (2.8, -1.35) {pens};
+\draw[->] (-0.75, -0.75)--(0, -0.25);
+\draw[->] (1, -0.75)--(1, -0.4);
+\draw[->] (2.75, -0.75)--(2, -0.4);
+\end{tikzpicture}
+\end{image}
+In other words, this is a how many in each group division story for $P \div \answer[given]{96}$, which is also equal to $\frac{P}{96}$ pens per sticker.
+
+Here is the most important step. The fraction $\frac{3}{8}$ is the number of pens per sticker in these gift bags, and the fraction $\frac{P}{96}$ also represents the number of pens per sticker in these gift bags. Since the ratios of pens to stickers must stay the same as Saanvi is making these gift bags, these unit rates must be equal to one another. In other words, 
+\[
+\frac{3}{8} = \frac{P}{96}.
+\]
+Now, we have a statement that two fractions are equal to one another, and we can use any of our fraction techniques in order to find the value of $P$. Let's make equivalent fractions whose denominator is $8 \times 96$. This means we will multiply both the numerator and the denominator of $\frac{3}{8}$ by $\answer[given]{96}$ and we will multiply both the numerator and the denominator of $\frac{P}{96}$ by $\answer[given]{8}$.
+\[
+\frac{3 \times 96}{8 \times 96} = \frac{P \times 8}{96 \times 8}
+\]
+Since these fractions have the same denominator, they will be equal if their numerators are equal. So, we can instead solve the equation
+\[
+3 \times 96 = P \times 8
+\]
+and see that $P = \answer[given]{36}$. In other words, Saanvi will need to place $36$ pens in the grand prize goodie bag.
+\end{example}
+
+Some people call the strategy we just used ``setting up a proportion and cross-multiplying''. The example shows us why setting up a proportion makes sense as well as why it makes sense to cross-multiply. The proportion comes from the statement that the two unit rates are equal to each other, so it makes sense to replace the ratios with unit rates and set them equal to each other. The cross-multiplying step is the same as making equivalent fractions whose denominators are each the product of the original denominators. We've connected a lot of ideas here!
+
+
+
+\end{document}
+
+
+
+
+
+

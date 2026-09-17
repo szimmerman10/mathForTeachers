@@ -1,0 +1,389 @@
+\documentclass{ximera}
+
+\input{../preamble.tex}
+
+\title{Transformations}
+\author{Jenny Sheldon}
+
+\begin{document}
+
+\begin{abstract}
+We investigate rotations, reflections, and translations.
+\end{abstract}
+\maketitle
+
+\section{Activities for this section:} 
+\link[Reflections, rotations, translations]{https://ximera.osu.edu/m4t/elementaryActivities/SemesterTwoPacket/elementaryActivities/ComparingShapes/ReflectionsRotationsTranslations}
+
+\section{Transformations}
+
+The next way that we want to be able to compare shapes is to talk about when we have the same shape, but in a different location. Perhaps you think we could just look at two shapes and see whether or not they're the same, but remember that when we want to prove things we need to be sure that they are exactly the same in every way. So, we need some technical terminology to talk about what it means to be exactly the same in every way. This section will give us that technical terminology using transformations. Informally, a transformation is a motion of the plane, such as a rotation or a horizontal stretch. Transformations that preserve angles and distance are called \dfn{rigid motions}. The \dfn{basic rigid motions} are reflections, rotations, and translations.
+
+
+Throughout this section, we want to remember that our rigid motions don't stretch or shrink shapes, or that distance is preserved. If two points are a certain distance apart, they will remain the same distance apart. It's also true that rigid motions preserve angles. If you start with a particular angle measure, and then you do one of these transformations, however that angle moves in space, its measure doesn't change. 
+
+%Generally when we talk about transformations in this course, we are talking about these basic rigid motions. We'll give you a warning if we talk about transformations that aren't basic rigid motions! The first three basic rigid motions that we want to think about are reflections, rotations, and translations.
+
+
+\begin{question}
+If you begin with an angle measuring $60\degree$, what will the resulting angle be after a rigid motion?
+
+\begin{prompt}
+The angle will still measure $\answer[given]{60}\degree$.
+ \end{prompt}
+\end{question}
+
+The three transformations that we want to talk about in this section are reflections, rotations, and translations. In the elementary grades, these are usually called flips, turns, and slides.
+
+\section{Reflections}
+When we think of a reflection, our first thought probably involves a mirror. This is the right idea to have in our minds: a reflection is a mirror image of an object.
+\begin{definition}
+A \dfn{reflection} is what happens to all the points in the plane when we flip them over a line. To specify a reflection, we choose a particular line of reflection, which we can call $M$, and use this line $M$ to exchange each point in the plane with its mirror image with respect to $M$. The line of reflection must be a perpendicular bisector of the segment connecting the original point and its mirror image.
+\end{definition}
+ But what does that mean practically? Let's look at two examples that will help us see how to draw reflections of points and objects.
+
+\begin{example}
+	Let's begin with a point $P$ and a line $M$. Our goal is to reflect point $P$ over line $M$.
+\begin{image}
+\begin{tikzpicture}
+	\draw[thick, <->] (0,0)--(7.5,3) node[below]{$M$}; %line is y=2/5 x
+	\draw[fill=black] (3,4) circle (2pt) node[above] {$P$};
+\end{tikzpicture}
+\end{image}
+We want to produce the mirror image of this point on the other side of the line. To do this, we'll start by drawing another line which goes through point $P$.
+\begin{image}
+\begin{tikzpicture}
+	\draw[thick, <->] (0,0)--(7.5,3) node[below]{$M$}; %line is y=2/5 x; perpendicular is y-4 = -2.5 (x-3) or y=-2.5x+11.5
+	\draw[fill=black] (3,4) circle (2pt) node[right] {$P$};
+	\draw[domain=2.5:5.5, samples=100, smooth, dashed, <->] plot (\x, { -2.5*\x + 11.5 });
+\end{tikzpicture}
+\end{image}
+The new line we drew isn't any line between $P$ and $M$, it's the one which is \wordChoice{\choice{parallel} \choice{piecewise} \choice{supplementary} \choice[correct]{perpendicular}} to $M$. So we could make right-angle marks indicating this relationship if we wanted to.
+
+Next, we want the mirror image of $P$ to be exactly the same distance from the line as $P$, but on the opposite side of $M$. We could measure this distance with our ruler or we could use our compass if we didn't want to measure. The new point, which we'll call $\hat{P}$, is the point we are trying to construct.
+\begin{image}
+\begin{tikzpicture}
+	\draw[thick, <->] (0,0)--(7.5,3) node[below]{$M$}; %line is y=2/5 x; perpendicular is y-4 = -2.5 (x-3) or y=-2.5x+11.5
+	\draw[fill=black] (3,4) circle (2pt) node[right] {$P$};
+	\draw[domain=2.5:5.5, samples=100, smooth, dashed, <->] plot (\x, { -2.5*\x + 11.5 });
+	\draw[fill=black] (143/29, -24/29) circle (2pt) node[left] {$\hat{P}$};
+	\draw (3.897, 1.7586)--(4.034, 1.8138)--(4.103, 1.6414);
+\end{tikzpicture}
+\end{image}
+
+\end{example}
+We will say that the new point $\hat{P}$ is the \dfn{image} of $P$ when we reflect over $M$.
+\begin{question}
+If the point $P$ was on the line $M$, where would its reflection be?
+\begin{multipleChoice}
+	\choice{Above the line $M$}
+	\choice[correct]{On the line $M$}
+	\choice{Below the line $M$}
+	\choice{None of the above}
+\end{multipleChoice}
+\end{question}
+
+Let's try again, but this time let's reflect an entire shape.
+
+\begin{example}
+Let's reflect a triangle over the line $M$.
+\begin{image}
+\begin{tikzpicture}
+\draw[domain=-2:7, samples=100, smooth, <->] plot (\x, {0.3*\x+1}) node[below]{$M$};
+    % Define the points of the triangle
+    \coordinate (A) at (0,0);
+    \coordinate (B) at (2,-2);
+    \coordinate (C) at (3,1);
+
+    % Draw the triangle
+    \draw [thick] (A) -- (B) -- (C) -- cycle;
+    
+    % Label the vertices
+    \draw[fill=black] (A) circle (2pt) node [left] {$A$};
+    \draw[fill=black] (B) circle (2pt) node [right] {$B$};
+    \draw[fill=black] (C) circle (2pt) node [above] {$C$};
+\end{tikzpicture}
+\end{image}
+Let's start by drawing the reflection of each of the points $A$, $B$, and $C$, just like we did with point $P$ above. First, we draw a line which is \wordChoice{\choice{parallel} \choice{piecewise} \choice{supplementary} \choice[correct]{perpendicular}} to $M$ through each of $A$, $B$, and $C$.
+\begin{image}
+\begin{tikzpicture}
+\draw[domain=-2:7, samples=100, smooth, <->] plot (\x, {0.3*\x+1}) node[below]{$M$};
+    % Define the points of the triangle
+    \coordinate (A) at (0,0);
+    \coordinate (B) at (2,-2);
+    \coordinate (C) at (3,1);
+
+    % Draw the triangle
+    \draw [thick] (A) -- (B) -- (C) -- cycle;
+    
+    % Label the vertices
+    \draw[fill=black] (A) circle (2pt) node [left] {$A$};
+    \draw[fill=black] (B) circle (2pt) node [right] {$B$};
+    \draw[fill=black] (C) circle (2pt) node [right] {$C$};
+    
+    %draw the perpendicular lines
+    \draw[domain=-1:1, samples=100, smooth, dashed, <->] plot (\x, {-3.33333*\x});
+    \draw[domain=2:3.5, samples=100, smooth, dashed, <->] plot (\x, {11-3.33333*\x});
+    \draw[domain=0:2.5, samples=100, smooth, dashed, <->] plot (\x, {4.66667-3.33333*\x});
+\end{tikzpicture}
+\end{image}
+Next, we mark the image of each point by measuring the \wordChoice{\choice{angle} \choice{shape} \choice[correct]{distance}} between each point and the line $M$. We mark the same \wordChoice{\choice{angle} \choice{shape} \choice[correct]{distance}}  on the other side of the line, and use a hat to distinguish the image from the original point.
+\begin{image}
+\begin{tikzpicture}
+\draw[domain=-2:7, samples=100, smooth, <->] plot (\x, {0.3*\x+1}) node[below]{$M$};
+    % Define the points of the triangle
+    \coordinate (A) at (0,0);
+    \coordinate (B) at (2,-2);
+    \coordinate (C) at (3,1);
+
+    % Draw the triangle
+    \draw [thick] (A) -- (B) -- (C) -- cycle;
+    
+    % Label the vertices
+    \draw[fill=black] (A) circle (2pt) node [left] {$A$};
+    \draw[fill=black] (B) circle (2pt) node [right] {$B$};
+    \draw[fill=black] (C) circle (2pt) node [right] {$C$};
+    
+    %draw the perpendicular lines
+    \draw[domain=-1:1, samples=100, smooth, dashed, <->] plot (\x, {-3.33333*\x});
+    \draw[domain=2:3.5, samples=100, smooth, dashed, <->] plot (\x, {11-3.33333*\x});
+    \draw[domain=-0.5:2.5, samples=100, smooth, dashed, <->] plot (\x, {4.66667-3.33333*\x});
+    
+    %draw the reflected points
+    \coordinate (D) at (-0.550459, 1.83486);
+     \coordinate (E) at (0.0183486, 4.6055);
+      \coordinate (F) at (2.50459, 2.65138);
+      
+    \draw[fill=black] (D) circle (2pt) node [left] {$\hat{A}$};
+    \draw[fill=black] (E) circle (2pt) node [right] {$\hat{B}$};
+    \draw[fill=black] (F) circle (2pt) node [right] {$\hat{C}$};
+    
+\end{tikzpicture}
+\end{image}
+Finally, to see the reflected triangle, we connect the images of the points in the same way that the original points were connected. 
+
+\begin{image}
+\begin{tikzpicture}
+\draw[domain=-2:7, samples=100, smooth, <->] plot (\x, {0.3*\x+1}) node[below]{$M$};
+    % Define the points of the triangle
+    \coordinate (A) at (0,0);
+    \coordinate (B) at (2,-2);
+    \coordinate (C) at (3,1);
+
+    % Draw the triangle
+    \draw [thick] (A) -- (B) -- (C) -- cycle;
+    
+    % Label the vertices
+    \draw[fill=black] (A) circle (2pt) node [left] {$A$};
+    \draw[fill=black] (B) circle (2pt) node [right] {$B$};
+    \draw[fill=black] (C) circle (2pt) node [right] {$C$};
+    
+    %draw the perpendicular lines
+    \draw[domain=-1:1, samples=100, smooth, dashed, <->] plot (\x, {-3.33333*\x});
+    \draw[domain=2:3.5, samples=100, smooth, dashed, <->] plot (\x, {11-3.33333*\x});
+    \draw[domain=-0.5:2.5, samples=100, smooth, dashed, <->] plot (\x, {4.66667-3.33333*\x});
+    
+    %draw the reflected points
+    \coordinate (D) at (-0.550459, 1.83486);
+     \coordinate (E) at (0.0183486, 4.6055);
+      \coordinate (F) at (2.50459, 2.65138);
+      
+    \draw[fill=black] (D) circle (2pt) node [left] {$\hat{A}$};
+    \draw[fill=black] (E) circle (2pt) node [above right] {$\hat{B}$};
+    \draw[fill=black] (F) circle (2pt) node [right] {$\hat{C}$};
+    \draw[thick] (D) -- (E) -- (F) -- cycle;
+\end{tikzpicture}
+\end{image}
+
+
+Why does this construction reflect the entire triangle? We are reflecting all of the points in the plane over the line $M$, so all of the points between $A$ and $B$ also get reflected in the exact same way. Imagine every single point along the segment between $A$ and $B$ being reflected using the same process that we used. Since the reflection is a basic rigid motion, we're not stretching or shrinking, so we get the same result by connecting $\hat{A}$ with $\hat{B}$ as we would if we reflected each individual point. The same is true for the segment between $A$ and $C$ and the segment between $B$ and $\answer[given]{C}$, so we can connect the dots from $\hat{A}$ to $\hat{B}$ to $\hat{C}$ to get the reflected triangle.
+
+\end{example}
+
+\begin{question}
+Pause and think: what would happen if the line of reflection went through the middle of the triangle?
+\begin{freeResponse}
+Draw some ideas in your notes, and then write a summary of your thoughts here.
+\end{freeResponse}
+\end{question}
+
+
+\section{Rotations}
+The next type of transformation that we want to discuss is a rotation. Informally, we might think of a rotation as a turn of some kind. 
+\begin{definition}
+A \dfn{rotation} is what happens to all of the points in the plane when turn all of the points in the plane around a given point. To specify a rotation, we choose a particular point $O$ to act as a center point, and then a particular angle $\alpha$, and we turn all of the points of the plane an angle of $\alpha$ around $O$. 
+\end{definition}
+Think of using a piece of regular paper and a piece of transparent paper. Draw the point $O$ on both pieces of paper and line up the two copies of $O$. Draw a point $P$ that you are trying to rotate on both pieces of paper as well, and begin by also lining up the two copies of $P$. While holding down both papers at $O$, rotate the top (transparent) paper according to the chosen angle $\alpha$. The new location of $P$ on the transparent paper is the image of the original $P$. Let's see how to construct this with our tools.
+
+\begin{example}
+We are given the point $O$ below and an angle of $\alpha = 40\degree$ counterclockwise. We are also given the point $P$ below. Rotate $P$ around $O$ using the angle $\alpha$.
+\begin{image}
+\begin{tikzpicture}
+\draw[fill=black] (0,0) circle (2pt) node[below]{$O$};
+\draw[fill=black] (3,5) circle (2pt) node[above]{$P$};
+\end{tikzpicture}
+\end{image}
+In order to do this rotation, we need to ensure that the angle made by $P$, $O$, and the image of $P$ measures $\answer[given]{40}\degree$. So, we use point $\answer[given]{O}$ as the center of this angle and the ray $OP$ as the starting ray of the angle. So, let's draw the line from $O$ to $P$ as a solid line and then the other ray of the angle as a dashed line.
+\begin{image}
+\begin{tikzpicture}
+\draw[fill=black] (0,0) circle (2pt) node[below]{$O$};
+\draw[fill=black] (3,5) circle (2pt) node[above]{$P$};
+\draw[->] (0,0)--(4.5, 7.5);
+\draw[dashed, ->] (0,0)--(-1.02, 6.414);
+\draw[thick, ->] (0.3, 0.5) arc[start angle=60, end angle=100, radius=0.5] node[midway, above] {$\alpha$};
+\end{tikzpicture}
+\end{image}
+Now, since we aren't stretching or shrinking the points in the plane, we need to mark the image of $P$, which we will call $\hat{P}$, along the dashed line so that it is  \wordChoice{\choice[correct]{the same} \choice{not the same}} distance from $O$ as $P$ is from $O$. We can do this by measuring with our ruler, or we can use our compass.
+\begin{image}
+\begin{tikzpicture}
+\draw[fill=black] (0,0) circle (2pt) node[below]{$O$};
+\draw[fill=black] (3,5) circle (2pt) node[above]{$P$};
+\draw[->] (0,0)--(4.5, 7.5);
+\draw[dashed, ->] (0,0)--(-1.02, 6.414);
+\draw[fill=black] (-0.9158, 5.7585) circle (2pt) node[left]{$\hat{P}$};
+\draw[thick, ->] (0.3, 0.5) arc[start angle=60, end angle=100, radius=0.5] node[midway, above] {$\alpha$};
+\end{tikzpicture}
+\end{image}
+As we said, this $\hat{P}$ is the image of $P$ under this rotation of angle $40\degree$ counterclockwise with center $O$.
+\end{example}
+
+\begin{question}
+What happens if the point $P$ is on the point $O$?
+\begin{multipleChoice}
+	\choice{The point $P$ moves to the other side of $O$.}
+	\choice{The point $P$ moves farther away from $O$.}
+	\choice{The point $P$ moves closer to $O$.}
+	\choice[correct]{The point $P$ does not move.}
+	\choice{None of the above.}
+\end{multipleChoice}
+\end{question}
+
+To see an example of rotating an entire triangle, watch the video below.
+
+\youtube{war7hXFdq_c}
+
+\begin{question}
+What happens to a triangle if we rotate using an angle of $360\degree$?
+\begin{multipleChoice}
+	\choice{The triangle ends up as a mirror image of the original triangle.}
+	\choice{The triangle ends up upside-down compared to the original.}
+	\choice{The triangle twists around $O$ and moves farther from $O$.}
+	\choice[correct]{The triangle ends up in the same spot it started.}
+	\choice{None of the above.}
+\end{multipleChoice}
+\end{question}
+
+
+\section{Translations}
+The final type of transformation that we want to discuss in this section is a translation. Another word you could use for a transformation is a shift.
+\begin{definition}
+A \dfn{translation} is what happens to all of the points in the plane when we move each point a certain distance in a certain direction. To specify a translation, we often use a \dfn{vector} to describe the distance and direction.
+\end{definition}
+You can think of a vector as an arrow. For instance, the arrow below could tell us to move three spaces east:
+\begin{image}
+\begin{tikzpicture}
+\draw[gray] (0,0) grid (5,3);
+\draw[very thick, ->] (1,1)--(4,1);
+\end{tikzpicture}
+\end{image}
+The length of the arrow tells us how far to move, and the direction of the arrow tells us what direction to move (even if we don't have specific words to use to describe the direction). 
+
+First, let's look at what happens to a single point when we translate.
+\begin{example}
+Translate the point $P$ according to the arrow given. In this case, the arrow points a bit down and to the right, but we don't have specific direction words to use for this direction.
+\begin{image}
+\begin{tikzpicture}
+	\draw[very thick, ->] (0,0)--(3, -1);
+	\draw[fill=black] (2,2) circle (2pt) node[above]{$P$};
+\end{tikzpicture}
+\end{image}
+In order to translate this point $P$, our goal is to move the length of the arrow in the direction given by the arrow. There are many ways to actually construct this; we'll talk about several in class. In the image below, we've drawn the arrow again, but starting from the point $P$. This means that the image of $P$, or $\hat{P}$ is exactly at the other end of the arrow.
+\begin{image}
+\begin{tikzpicture}
+	\draw[very thick, ->] (0,0)--(3, -1);
+	\draw[fill=black] (2,2) circle (2pt) node[above]{$P$};
+	\draw[thick, dashed, ->] (2,2)--(5,1);
+	\draw[fill=black] (5,1) circle (2pt) node[above right]{$\hat{P}$};
+\end{tikzpicture}
+\end{image}
+\end{example}
+When you construct the arrow starting from $P$, remember that we aren't just guessing which direction the arrow goes. It has to be parallel to the original arrow that was drawn so that it goes in the same direction. 
+
+\begin{question}
+What property of shapes or of parallel lines could you use to verify that the arrow is exactly parallel to the original arrow?
+\begin{multipleChoice}
+\choice{Vertical angles}
+\choice[correct]{The Parallel Postulate}
+\choice{Opposite sides are equal}
+\choice{Adjacent angles are equal}
+\choice{You do not need to verify that the two vectors are parallel}
+\end{multipleChoice}
+\end{question}
+
+
+Next, let's see how we can translate an entire figure.
+
+\begin{example}
+Let's translate the quadrilateral $ABCD$ by the vector given. The quadrilateral is not any special type, and the vector points up and to the left, but we don't have specific words to describe the direction.
+\begin{image}
+\begin{tikzpicture}
+\draw[very thick, ->] (0,0)--(-2, 4);
+\draw[thick] (0,3)--(2,1)--(4,1)--(2,2.5)--(0,3);
+\node[above] at (0,3) {$A$};
+\node[left] at (2,1) {$B$};
+\node[right] at (4,1) {$C$};
+\node[above] at (2,2.5) {$D$};
+\end{tikzpicture}
+\end{image}
+When we translate, all of the points in the \wordChoice{\choice[correct]{entire plane} \choice{figure} \choice{direction of the arrow}} move according to the vector. So, we can translate each of the vertices of our shape (getting $\hat{A}$, $\hat{B}$, $\hat{C}$, and $\hat{D}$). The translation shifts the points on the line segments in the same way, so we can then connect the dots to see the final shape. In the figure below, we show the arrow translating each of the vertices, and then we draw the final shape.
+\begin{image}
+\begin{tikzpicture}
+\draw[very thick, ->] (0,0)--(-2, 4);
+\draw[thick] (0,3)--(2,1)--(4,1)--(2,2.5)--(0,3);
+\node[above] at (0,3) {$A$};
+\node[left] at (2,1) {$B$};
+\node[right] at (4,1) {$C$};
+\node[above] at (2,2.5) {$D$};
+\draw[thick, dashed, ->] (0,3)--(-2, 7);
+\draw[thick, dashed, ->] (2,1)--(0, 5);
+\draw[thick, dashed, ->] (4,1)--(2,5);
+\draw[thick, dashed, ->] (2,2.5)--(0,6.5);
+\draw[thick] (-2,7)--(0,5)--(2,5)--(0, 6.5)--(-2,7);
+\node[above] at (-2,7) {$\hat{A}$};
+\node[left] at (0,5) {$\hat{B}$};
+\node[right] at (2,5) {$\hat{C}$};
+\node[above] at (0,6.5) {$\hat{D}$};
+\end{tikzpicture}
+\end{image}
+
+\end{example}
+Even though the final image above looks a bit like a prism, remember that we are dealing with 2D shapes here, because we are sliding around all of the points on the plane. However, there's a good reason that the final picture looks like a prism. Remember that we made a prism by taking a second copy of a shape and moving it in 3D space. When we draw the lines from the top copy to the bottom copy, they should all be the same. So, if our vector is in 3D space, we could actually use the translation lines to make the sides of a prism.
+
+There's another type of transformation we want to mention.
+\begin{definition}
+The \dfn{identity transformation}, sometimes called the ``do nothing'' transformation, doesn’t move the plane at all.
+\end{definition}
+
+\begin{question}
+Is the identity transformation a translation? A reflection? A rotation? Select all true statements below.
+\begin{selectAll}
+\choice[correct]{The identity transformation is a translation using a vector of length zero.}
+\choice{The identity transformation is not a translation because it doesn't move the points anywhere.}
+\choice{The identity transformation is a reflection, because we can reflect over the $x$-axis.}
+\choice[correct]{The identity transformation is not a reflection, because reflections flip things over.}
+\choice[correct]{The identity transformation is a rotation using an angle of zero degrees.}
+\choice{The identity transformation is not a rotation because it doesn't turn the points.}
+\end{selectAll}
+\end{question}
+
+As a nearly final thought for this section, you might have heard the term \dfn{glide-reflection} to refer to what happens to all of the points in the plane when we do both a translation and a reflection across a line parallel to the translation. We won't use this terminology, but you should be prepared to perform any sequence of the basic rigid motions we have discussed.
+
+
+\begin{question}
+Pause and think: what are the characteristics for each of a reflection, a rotation, and a translation that you want to highlight in your explanations?
+\begin{freeResponse}
+Enter your thoughts here!
+\end{freeResponse}
+\end{question}
+
+\end{document}

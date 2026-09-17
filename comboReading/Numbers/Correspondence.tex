@@ -1,0 +1,189 @@
+\documentclass{ximera}
+
+\input{../preamble.tex}
+
+
+
+
+\title{One-to-one Correspondence}
+\author{Jenny Sheldon}
+
+\begin{document}
+
+\begin{abstract}
+We define and use the idea of one-to-one correspondence. (Typical grade: K)
+\end{abstract}
+\maketitle
+
+\section{Activities for this section:} \link[The Shepherd's Necklace]{https://ximera.osu.edu/m4t/elementaryActivities/SemesterOnePacket/elementaryActivities/Numbers/ShepherdsNecklace}
+
+
+\section{One-to-one correspondence}
+
+
+It might seem a little strange to say at this point, but mathematics is a pretty natural idea for 
+human beings. As long as there have been people, those people have tried to look for patterns in the world 
+around them, to measure the world in various ways, and to keep track of things.
+
+You might think that counting is the most basic mathematical idea, since it's one of the first mathematical 
+things we learn to do as humans. But there's an idea underlying that of counting: comparison.
+
+\begin{question}
+Imagine for a moment that you haven't yet learned how to count. Use a strategy other than counting to determine: are there  more stars or more circles in the image below?
+
+\begin{image}
+\begin{tikzpicture}
+	\foreach \i in {1, 2, 4, 6} 
+			 \node[draw, star, star points=5, star point ratio=0.5, fill=blue] at (\i, 1) {};
+	\foreach \k in {3, 5} 
+			 \node[draw, circle, fill=red] at (\k, 1) {};
+	\foreach \i in {3, 5, 6} 
+			 \node[draw, star, star points=5, star point ratio=0.5, fill=blue] at (\i, 2) {};
+	\foreach \k in {1, 2, 4} 
+			 \node[draw, circle, fill=red] at (\k, 2) {};
+\end{tikzpicture}
+\end{image}
+
+\begin{multipleChoice}
+	\choice[correct] {More stars.}
+	\choice {More circles.}
+	\choice {Neither the stars nor the circles has more.}
+	\choice {We can't answer this question from the information we have.}
+\end{multipleChoice}
+\end{question}
+
+
+Let's take a moment to rearrange the shapes above in a different way, which might help us a bit.
+
+\begin{question} \label{oneOneLine}
+Continue to imagine that you haven't yet learned how to count. In the image below, are there more stars, or 
+are there 
+more circles?
+
+\begin{image}
+\begin{tikzpicture}
+	\foreach \i in {1, 2, ..., 7} 
+			 \node[draw, star, star points=5, star point ratio=0.5, fill=blue] at (\i, 1) {};
+	\foreach \k in {1, 2, ..., 5} 
+			 \node[draw, circle, fill=red] at (\k, 2) {};
+\end{tikzpicture}
+\end{image}
+
+\begin{multipleChoice}
+	\choice[correct] {More stars.}
+	\choice {More circles.}
+	\choice {Neither the stars nor the circles has more.}
+	\choice {We can't answer this question from the information we have.}
+\end{multipleChoice}
+\end{question}
+
+This time, could you tell just by looking at the picture which of the two shapes has more? A little organization and a good picture can go a long way!  The mathematical strategy that we're considering here is comparison. The picture helps us to match up the circles and the stars and see how they are related. We could have an exact match between circles and stars, meaning we have the same number of circles as stars. We could have some extra stars that don't have a circle to match with after we've matched everything up, meaning there are more stars than circles. Or we could have some extra circles that don't have a star to match with after we've matched everything up, meaning there are more circles than stars. Stop here and draw a picture in your notes for each of these situations. Notice, too, that we lined up the circles and the stars with equal spacing everywhere. This equal spacing is very important when we look at the picture and see which line appears ``longer'' to see which set has more elements. Keep in mind that it's fairly common for children to think that a ``spaced out'' collection of things has more objects than a ``bunched up'' collection of things. Equal spacing helps kids focus on this matching idea.
+
+It's time to add some terminology to this discussion.
+
+Here, we are talking about something mathematicians call sets. A \dfn{set} is a collection of objects, where the objects are all the same. This can be a little tricky, though, because a set could have just a single object, or it could have no objects in it at all! A set with no objects in it is called the \dfn{empty set}. We could also have a set that has both apples and oranges in it, but in this case we would refer to the objects as ``fruit'' so that they are all the same.
+
+\begin{question}
+Which of the following are examples of sets?
+\begin{selectAll}
+	\choice[correct] {A bunch of marbles in a bag, where the objects are the marbles.}
+	\choice[correct] {A bunch of marbles in a bag, where the object is the bag.}
+	\choice[correct] {The numbers $1, 4, 7, 19, 34, 193$, where the objects are the numbers.}
+	\choice {A piece of rope, where the objects are scissors.}
+	\choice[correct] {A box of markers, where the objects are the markers.}
+	\choice {All the fruit in a bag which has both apples and oranges in it, where the objects are apples.}
+\end{selectAll}
+\end{question}
+
+Now, when we were matching up our stars and circles above, we were really starting with two sets. One set is the collection of stars, and the other set is the collection of circles. When we match in this specific way, we make a one-to-one correspondence.
+
+\begin{definition}
+	A \dfn{one-to-one correspondence} is a matching between two sets $A$ and $B$ where every object in set $A$ has exactly one match in set $B$, and every object in set $B$ has exactly one match in set $A$.
+\end{definition}
+
+\begin{question}
+In our example above with the stars and circles, do we have a one-to-one correspondence between the set of stars and the set of circles?
+\begin{image}
+\begin{tikzpicture}
+	\foreach \i in {1, 2, ..., 7} 
+			 \node[draw, star, star points=5, star point ratio=0.5, fill=blue] at (\i, 1) {};
+	\foreach \k in {1, 2, ..., 5} 
+			 \node[draw, circle, fill=red] at (\k, 2) {};
+\end{tikzpicture}
+\end{image}
+\begin{multipleChoice}
+	\choice{Yes}
+	\choice[correct]{No}
+\end{multipleChoice}
+\begin{explanation}
+	Look back at our definition of one-to-one correspondence: a matching between two sets $A$ and $B$ where every object in set $A$ has exactly one match in set $B$, and every object in set $B$ has exactly one match in set $A$. We let set $A$ be the set of stars and set $B$ be the set of circles. Then, we match the stars and circles in a one-to-one fashion: one circle matches with one star and vice versa. We can do this until we run out of circles. All the circles have been matched with one and only one star. But now there are some stars left over that aren't matched with any circle. So the condition that every star is matched with exactly one circle doesn't hold in this case.
+\begin{image}
+\begin{tikzpicture}
+	\foreach \i in {1, 2, ..., 7} 
+			 \node[draw, star, star points=5, star point ratio=0.5, fill=blue] at (\i, 1) {};
+	\foreach \k in {1, 2, ..., 5} 
+			 \node[draw, circle, fill=red] at (\k, 2) {};
+	\foreach \m in {1, 2, ..., 5}
+		\draw[dash dot] (\m,1)--(\m,2);
+\end{tikzpicture}
+\end{image}
+Our picture shows the matching used dashed lines, making it easier to see that not everything has exactly one match. That means that these two sets do not have a one-to-one correspondence.
+\end{explanation}
+\end{question}
+
+Let's finish up with two more examples.
+
+\begin{example}
+Syahida is helping her art teacher prepare for a drawing contest. The teacher has asked Syahida to place one pencil on each desk in the art room. In this case, we do have an example of a one-to-one correspondence between pencils and desks. Let's explain how we know. First, we draw a picture to represent this situation, where we use our circles to represent the pencils and our stars to represent the desks.
+\begin{image}
+\begin{tikzpicture}
+	\foreach \i in {1, 2, ..., 8} 
+			 \node[draw, star, star points=5, star point ratio=0.5, fill=blue] at (\i, 1) {};
+	\foreach \k in {1, 2, ..., 8} 
+			 \node[draw, circle, fill=red] at (\k, 2) {};
+	\foreach \m in {1, 2, ..., 8}
+		\draw[dash dot] (\m,1)--(\m,2);
+\end{tikzpicture}
+\end{image}
+Remember our definition of one-to-one correspondence: a matching between two sets $A$ and $B$ where every object in set $A$ has exactly one match in set $B$, and every object in set $B$ has exactly one match in set $A$. Now, let's explain how this definition applies to this particular situation. Let's let set $A$ be the pencils (circles) and set $B$ be the \wordChoice{\choice{pencils} \choice[correct]{desks} \choice{Syahida} \choice{the art teacher}} (stars). Every pencil is matched to exactly one desk, and every desk is matched to exactly \wordChoice{\choice[correct]{one} \choice{two}} pencil. There are no pencils left over, and we didn't run out of pencils early. Similarly, there are no extra desks without a pencil, and no desk has two pencils on it. Nothing left out, nothing left over. Our picture shows this situation by showing the circles exactly matched to the stars, one circle matching with one star, and we drew the dashed lines to show this matching. In this example, we do have a one-to-one correspondence between these two sets.
+
+\end{example}
+
+
+\begin{example}
+Marisol's baby brother got into her box of markers and took all of the caps off of them! Explain how Marisol can  use the 
+idea of one-to-one correspondence to figure out if any of the marker caps have been lost. 
+
+
+\begin{explanation} 
+We know that a one-to-one correspondence means matching every object of one set (the markers) to every object in the 
+other set (the caps). So, Marisol can start putting the caps on the markers. Here's an example drawing of her work, 
+where the diamonds represent the markers and the circles represent the caps. Notice that in the picture we have shown one circle 
+that is not matched to any square.
+\begin{image}
+\begin{tikzpicture}
+	\foreach \i in {1, 2, ..., 6} 
+			 \node[draw, star, star points=4, fill=gray] at (\i, 1) {};
+	\foreach \k in {1, 2, ..., 7} 
+			 \node[draw, circle] at (\k, 2) {};
+	\foreach \m in {1, 2, ..., 6}
+		\draw[dash dot] (\m,1)--(\m,2);
+\end{tikzpicture}
+\end{image}
+Marisol notices that she \wordChoice{\choice{does} \choice[correct]{does not}} have a one-to-one correspondence, because (in this example) there is an extra \wordChoice{\choice[correct]{cap} \choice{marker}} which doesn't have a \wordChoice{\choice{cap} \choice[correct]{marker}} which matches to it. In other words, every object in the set of caps is not matched with exactly one object in the set of markers. So, even though we don't have a one-to-one correspondence in this example, the idea of one-to-one correspondence helped Marisol to realize that in fact she is missing one of her markers!
+\end{explanation}
+\end{example}
+
+
+Notice that when Marisol puts the caps on the markers, she does not have to pay attention to whether or not the colors match. The question is asking whether or not any caps have been lost, not whether the caps match the markers.
+
+
+
+
+\end{document}
+
+
+
+
+
+

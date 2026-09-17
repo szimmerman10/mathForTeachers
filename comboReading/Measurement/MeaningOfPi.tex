@@ -1,0 +1,169 @@
+\documentclass{ximera}
+
+\input{../preamble.tex}
+
+\title{The Meaning of Pi}
+\author{Jenny Sheldon}
+
+\begin{document}
+
+\begin{abstract}
+We discuss the constant $\pi$.
+\end{abstract}
+\maketitle
+
+\section{Activities for this section:} 
+\link[Measuring circles]{https://ximera.osu.edu/m4t/elementaryActivities/SemesterTwoPacket/elementaryActivities/Measurement/MeasuringCircles}
+
+\section{Defining $\pi$}
+
+Perhaps you have seen the mathematical symbol $\pi$ before, written sometimes as ``pi'' and pronounced ``pie''. What does this symbol mean, and what do we use it for? We are introducing it now because we will use it in the next section to talk about the areas of circles (and perhaps you already remember a formula involving $\pi$ for the area of circles), but this formula isn't what $\pi$ actually means. Instead, we have the following definition.
+
+\begin{definition}
+The constant \dfn{$\pi$} is the ratio of any circle's circumference to its diameter.
+\end{definition}
+
+There are a lot of things to unpack, here. The first is the meaning of the terminology in the definition. Let's start with some circle.
+\begin{image}
+\begin{tikzpicture}
+\draw[thick] (0,0) circle (3cm);
+\end{tikzpicture}
+\end{image}
+The \dfn{circumference} of this circle is a fancy word that we use to mean the perimeter of the circle. Remember that the perimeter of a shape is the distance around the outside of the shape, so the circumference of the circle would be the length of the line we draw to indicate the circle.
+
+The \dfn{diameter} of a circle is the distance from one side of the circle to the other, passing through the circle's center point.
+
+And of course, the \dfn{radius} of a circle is the distance from the chosen center to the circle (which we needed to define a circle in the first place).
+\begin{image}
+\begin{tikzpicture}
+\draw[thick] (0,0) circle (3cm);
+\draw[fill=black] (0,0) circle (2pt) node[below]{$O$};
+\draw (-3,0)--(3,0);
+\node[left] at (-3,0) {$A$};
+\node[right] at (3,0) {$B$};
+\draw (-1.5, 2.598)--(2.298, 1.928);
+\node[above left] at (-1.5, 2.598){$C$};
+\node[above right] at (2.298, 1.928) {$D$};
+\end{tikzpicture}
+\end{image}
+
+In the figure, either segment $OA$ or $OB$ is a radius of the circle.   The segment $AB$ is a diameter of the circle because it passes through the circle's center, and the segment $CD$ is not a diameter of the circle because it does not pass through the center. A segment, like $CD$, which does not pass through the center of the circle is sometimes called a \dfn{chord} of the circle.
+
+The next thing to unpack is the idea that $\pi$ is a constant. In other words, we are saying that if you take any circle at all, and you form a ratio of its circumference to its diameter, you'll get the same value every time. This is tough to see in practice, because we can't measure very exactly, but that's exactly what this definition is saying. The reason we will get the same constant every time has to do with scaling. Let's see an example.
+
+\begin{example}
+Let's begin with two circles, one with a radius of $1$ cm, and the other with a radius of $3$cm.
+\begin{image}
+\begin{tikzpicture}
+\draw[thick] (0,0) circle (1cm);
+\draw[thick] (5,0) circle (3cm);
+\end{tikzpicture}
+\end{image}
+Let's draw an example radius of each circle.
+\begin{image}
+\begin{tikzpicture}
+\draw[thick] (0,0) circle (1cm);
+\draw[dashed] (0,0)--(0.5, 0.866);
+\draw[thick] (5,0) circle (3cm);
+\draw[dashed] (5,0)--(6.5, 2.598);
+\end{tikzpicture}
+\end{image}
+Remember that the definition of a circle says that each point on the circle is the exact same distance from the center point. So, on the first circle, each point on the circle is 1cm from the center, and on the second circle each point is 3cm from the center.
+
+Next, remember our work on similarity. 
+
+
+True or false: when two shapes are similar, we can use dilations as part of the sequence of transformations taking one shape to the other.
+\begin{multipleChoice}
+\choice[correct]{true}
+\choice{false}
+\end{multipleChoice}
+
+
+Let's look at one way to write down this sequence of transformations.
+
+
+What kind of transformation could we use to line up the center points of the circles?
+\begin{multipleChoice}
+\choice{reflection}
+ \choice{rotation} 
+ \choice[correct]{translation} 
+ \choice{dilation}
+ \end{multipleChoice}
+ 
+ Once the centers are lined up, let's resize the circles using a dilation.
+
+
+ What scaling factor would we use to scale the smaller circle so that it matches exactly with the larger circle?
+ \begin{prompt}
+ We scale all distances using a scale factor of $\answer[given]{3}$.
+ \end{prompt}
+
+
+ Since all the points in a circle are found by their distance from the center, when we scale a circle by just multiplying its distances, we are certain that we get another circle.
+
+So, if the second circle is a scaled version of the first circle, we have a scale factor $r$ which scales every length in the first circle to the corresponding length in the second circle. (We know in this case that $r=3$, but we'll do this calculation in general. Feel free to replace $r=3$ in your notes if that helps things make more sense.)
+
+The circumference of the first circle is some length $C$, and let's call its radius $a$. (Again, we know $a=1$cm here!) Since we scale by $r$ to get the second circle, and both the circumference and radius are lengths (\wordChoice{\choice[correct]{one-dimensional} \choice{two-dimensional} \choice{three-dimensional}}), the second circumference is $r \times C$ and the second radius is $r \times a$. If we take a ratio of radius to circumference, our two ratios are as follows.
+\[
+\frac{C}{a} \quad \textrm{and} \quad \frac{r\times C}{r\times a}
+\]
+Since we can think of these ratios as fractions, they are equivalent fractions, and thus have the same value.
+
+\end{example}
+
+In short: the value of $\pi$ is constant because every circle is a scaled version of every other circle. In the language we used with similar figures, $\pi$ is an internal factor for these circles (a ratio between two lengths in a figure).
+
+If we use $C$ and $D$ to refer to the circumference and diameter of a circle, we can rephrase our definition with some extra mathematical symbols.
+\begin{definition}
+The constant \dfn{$\pi$} is the ratio of any circle's circumference to its diameter. In other words, $\pi = \frac{C}{D}$
+\end{definition}
+In many circumstances, it's useful to rewrite the definition of $\pi$ to solve for the circumference.
+\[
+C = \pi D
+\]
+You might have seen this formula before -- it's true because it's the definition of $\pi$!
+
+
+\section{Approximating $\pi$}
+
+Now that we know the meaning of $\pi$, we have a pretty quick recipe for estimating its value. We can start by finding a circle, measuring its circumference and diameter, and then taking that ratio. 
+\begin{question}
+Find a circle and measure the circumference and diameter. What is your estimate for the value of $\pi$? (If we have already done a similar activity in class, please enter one of the values you measured in class.)
+
+Circumference: $\answer[tolerance=40]{40}$
+
+Diameter: $\answer[tolerance=15]{15}$
+
+Ratio $\frac{C}{D}$: $\answer[tolerance=0.5]{3.1415}$
+\end{question}
+
+Hopefully your estimate fell somewhere between $3$ and $4$, which is a reasonable range for the value of $\pi$. If we did this with many circles, we could perhaps take an average of all of our estimates to get an estimate for $\pi$.  
+
+Mathematicians throughout history have estimated the value of $\pi$, and calculating more and more digits of pi is an area some mathematicians are \link[currently working on]{https://www.livescience.com/physics-mathematics/mathematics/pi-calculated-to-105-trillion-digits-smashing-world-record}. One mathematician that gave us an estimate we still use today is \link[Archimedes]{https://en.wikipedia.org/wiki/Archimedes}, who lived in Ancient Greece around 200BCE. Let's look at his strategy.
+\begin{example} 
+Archimedes' strategy was to start by drawing a hexagon inside the circle, touching the circle at every corner. This type of hexagon is called ``inscribed'' in the circle.
+\begin{image}
+\begin{tikzpicture}
+    % Draw the circle
+    \draw[thick] (0,0) circle[radius=3cm];
+    
+    % Draw the hexagon
+%    \foreach \x in {0, 60, ..., 300} {
+%        \draw[thick] (0,0) -- (\x:3cm);
+%    }
+    \foreach \x in {0, 60, 120, 180, 240, 300} {
+        \draw[thick] (\x:3cm) -- (\x+60:3cm);
+    }
+\end{tikzpicture}
+\end{image}
+This circle has a diameter of $1$, so its circumference is $\answer[given]{\pi}$. Archimedes estimated the side length of the hexagon, which is an estimate for $\pi$ since the hexagon's \wordChoice{\choice{area} \choice[correct]{perimeter}} is close to the circle's \wordChoice{\choice{area} \choice[correct]{perimeter}}. But Archimedes wasn't done here. He then drew a regular 12-sided polygon inside the circle to get an estimate which was \wordChoice{\choice[correct]{closer to}\choice{farther from}} the value of $\pi$. He kept at this until he was using a polygon with $96$ sides! (And remember, this was before anyone had a calculator!!)
+
+Not to be stopped there, Archimedes also drew a hexagon outside of the circle, but touching the circle at the midpoints of the sides. This type of hexagon is called ``circumscribed'' around the circle. He repeated a similar process, up to 96 sides again, and when he was all finished with all of these calculations he had the following estimate for $\pi$.
+\[
+\frac{223}{71} < \pi < \frac{22}{7}
+\]
+\end{example}
+The estimate $\pi \approx \frac{22}{7}$ is so close to $\pi$ combined with so nice to use that people  still use it today!
+
+\end{document}

@@ -1,0 +1,219 @@
+\documentclass{ximera}
+
+\input{../preamble.tex}
+
+
+\title{Expressions}
+\author{Jenny Sheldon}
+
+\begin{document}
+
+\begin{abstract}
+We write expressions based on our thinking.
+\end{abstract}
+\maketitle
+
+\section{Activities for this section:} 
+\link[Writing formulas]{https://ximera.osu.edu/m4t/elementaryActivities/SemesterOnePacket/elementaryActivities/ConnectAlgebraArithmetic/WritingFormulas}
+
+\section{Expressions from a picture}
+
+As children become more familiar with numbers and operations, we would like for them to begin writing their own expressions to describe their mathematical thinking. We have been talking about expressions all semester, but let's start by giving a definition for an expression.
+
+\begin{definition}
+An \dfn{expression} is a collection of numbers, variables, exponents, and/or functions that are connected by any operations and any grouping symbols.
+\end{definition}
+This definition is a little bit technical so you can think about expressions as the mathematical phrases we write down to describe our mathematics. Think of the things in the definition as options that we can use for forming an expression. For example, 
+\[
+8x + 5
+\]
+is an expression, as well as something more complicated like
+\[
+\sqrt{x^3 - 5x} + 2(3y - 8).
+\]
+In each case, we are putting together some of the options from our list to form an expression. The expression $8x+5$ uses numbers and variables as well as multiplication and addition. The expression $\sqrt{x^3 - 5x} + 2(3y - 8)$ contains numbers, variables, exponents, the square root function, multiplication, addition, subtraction, and some parenthesis for grouping. (Remember that according to our convention on the order of operations, we always evaluate parenthesis first, then multiplication or division, and finally addition or subtraction.) What is not included in either expression is an equals sign or an inequality symbol. If we include an equals sign we are talking about an equation, and if we include an inequality symbol like $\geq$ or $<$ we are looking at an inequality.
+
+\begin{question}
+Which of the following are expressions? Select all that apply.
+\begin{selectAll}
+\choice[correct]{$(6x^2 + 12)^{\frac{1}{2}}$}
+\choice{$4x = 6$}
+\choice{$7x^2 + y \leq \frac{z}{8}$}
+\choice[correct]{$87$}
+\choice[correct]{$Z$}
+\end{selectAll}
+\begin{hint}
+Remember that you can include numbers, variables, exponents, functions, operations, 
+and grouping symbols (though not all need to be included). You cannot include the 
+equals sign or inequality symbols.
+\end{hint}
+\end{question}
+
+When we write expressions, as we have done all semester, we want to focus on using 
+the meaning of operations to describe what we are seeing. Let's take a look at two 
+examples.
+
+\begin{example}
+Below, we have a design made of dots. 
+\begin{image}
+\begin{tikzpicture}
+\foreach \x in {0, 1, 2, 3, 4, 5, 6, 7} \foreach \y in {0, 1, 2, 3, 4, 5} \draw[fill=cyan] (\x, \y) circle (0.2cm);
+\foreach \x in {2, 3, 4, 5} \foreach \y in {6, 7, 8} \draw[fill=cyan] (\x, \y) circle (0.2cm);
+\end{tikzpicture}
+\end{image}
+We would like to write an expression to describe the number of dots in the design.
+
+One way that we could describe the design is to say that we have a $3$-by$4$ array of dots stacked on top of a $6$-by-$8$ array of dots. Let's draw rectangles around these two arrays to make them more obvious. We will also label the lower array as box $1$ and the upper array as box $2$.
+\begin{image}
+\begin{tikzpicture}
+\foreach \x in {0, 1, 2, 3, 4, 5, 6, 7} \foreach \y in {0, 1, 2, 3, 4, 5} \draw[fill=cyan] (\x, \y) circle (0.2cm);
+\foreach \x in {2, 3, 4, 5} \foreach \y in {6, 7, 8} \draw[fill=cyan] (\x, \y) circle (0.2cm);
+\draw[thick] (-0.5, -0.5) rectangle (7.5, 5.5);
+\draw[thick] (1.5, 5.5) rectangle (5.5,8.5);
+\node[left] at (-0.5, 2.75) {Box $1$};
+\node[left] at (1.5, 7) {Box $2$};
+\end{tikzpicture}
+\end{image}
+Since these are both arrays, the appropriate operation to use to count the number of dots 
+is \wordChoice{\choice{addition} \choice{subtraction} \choice[correct]{multiplication} \choice{division}}. 
+For both arrays, we will use one circle as one \wordChoice{\choice{group} \choice[correct]{object}} 
+and one row of dots as one \wordChoice{\choice[correct]{group} \choice{object}}, and then
+ we see that in Box 1 we have a total of $\answer[given]{6}$ rows with $\answer[given]{8}$ 
+ dots in each row for a total of $\answer[given]{6} \times \answer[given]{8}$ dots. In 
+ Box 2 we see that we have $\answer[given]{3}$ rows with $\answer[given]{4}$ dots in each 
+ row for a total of $\answer[given]{3} \times \answer[given]{4}$ dots. To get the total 
+ number of dots in the entire design, we want to combine together the amount of dots in 
+ Box $1$ with the amount of dots in Box $2$, so the operation we should use is 
+ \wordChoice{\choice[correct]{addition} \choice{subtraction} \choice{multiplication} \choice{division}}. 
+ All together, we get the following.
+\[ 
+\textrm{Dots in Box } 1 + \textrm{Dots in Box } 2 = 6 \times 8 + 3 \times 4
+\]
+
+\end{example}
+
+
+Pay attention to the way that we wrote our expression to describe the way that we were seeing the diagram. The way we looked at the diagram suggested which operations to use, and the expression we got at the end of the problem reflects how we decomposed the diagram. We could simplify this expression to get a numerical value for the total number of dots, but simplifying this expression would remove any hints of our thinking so let's leave it as-is. However, this is not the only way to see the diagram. Let's work through the example again, but look for a different expression to describe the number of dots.
+
+
+
+\begin{example}
+Below, we have a design made of dots. (This is the same design as in the last example.)
+\begin{image}
+\begin{tikzpicture}
+\foreach \x in {0, 1, 2, 3, 4, 5, 6, 7} \foreach \y in {0, 1, 2, 3, 4, 5} \draw[fill=cyan] (\x, \y) circle (0.2cm);
+\foreach \x in {2, 3, 4, 5} \foreach \y in {6, 7, 8} \draw[fill=cyan] (\x, \y) circle (0.2cm);
+\end{tikzpicture}
+\end{image}
+We would like to write a different expression to describe the number of dots in the design. This time, let's view the diagram as a $9$-by-$8$ array of dots, but with two $3$-by-$2$ arrays of dots removed from the top corners. Let's draw a rectangle to represent the entire array of dots, and then draw the removed dots as circles that are not filled in.
+\begin{image}
+\begin{tikzpicture}
+\foreach \x in {0, 1, 2, 3, 4, 5, 6, 7} \foreach \y in {0, 1, 2, 3, 4, 5} \draw[fill=cyan] (\x, \y) circle (0.2cm);
+\foreach \x in {2, 3, 4, 5} \foreach \y in {6, 7, 8} \draw[fill=cyan] (\x, \y) circle (0.2cm);
+\foreach \x in {0, 1, 6, 7} \foreach \y in {6, 7, 8} \draw[thick, red] (\x, \y) circle (0.2cm);
+\draw[thick] (-0.5, -0.5) rectangle (7.5, 8.5);
+\end{tikzpicture}
+\end{image}
+
+We are still working with arrays, so we want to begin by thinking about multiplication. Continuing to use one dot as one object and one row as one group, we can count the full $9$-by-$8$ array by seeing that we have $\answer[given]{9}$ rows with $\answer[given]{8}$ dots per row for a total of $\answer[given]{9} \times \answer[given]{8}$ dots. But now we want to remove the two arrays at the corners. They are identical, so let's start by counting one of them. The removed array is a $3$-by-$2$ array so we have $\answer[given]{3}$ rows with $\answer[given]{2}$ dots per row for a total of $\answer[given]{3} \times \answer[given]{2}$ dots in each of them. Since we want to remove or take away these from the bigger array, the correct operation in this case is \wordChoice{\choice{addition} \choice[correct]{subtraction} \choice{multiplication} \choice{division}}. We have the following expression.
+\[
+\textrm{Dots in full array } - 2 \times \textrm{Dots in each corner array} = 9 \times 8 - 2 \times \left (3 \times 2 \right )
+\]
+\end{example}
+
+We got a different expression than the first example, because we used a different process of thinking about the diagram. This is something we should expect! However, many times it makes sense to simplify the expression so that we can work with it to solve a problem or so that we can present our answer as a single number. Let's go ahead and do that here to verify that both of the expressions we got are actually equal. 
+
+For our first expression we got the following.
+\begin{align*}
+6 \times 8 + 3 \times 4 &= 48 + 12 \\
+&= 60
+\end{align*}
+For our second expression we got the following.
+\begin{align*}
+9 \times 8 - 2 \left ( 3 \times 2 \right ) &=  72 - 2\times 6\\
+&= 72 - 12 \\
+&= 60
+\end{align*}
+When we replace an expression with a different expression that has an equal value, we can refer to these two expressions as \dfn{equivalent}. For example, $6 \times 8 + 3 \times 4$ and $48 + 12$ are equivalent expressions. Our work here showed that $6 \times 8 + 3 \times 4$ is an equivalent expression to $9 \times 8 - 2\times (3 \times 2)$, or that we got the same number of dots with either way of thinking.
+
+\begin{question}
+Can you find two more expressions to describe the total number of dots in this design?
+\begin{freeResponse}
+Jot down your work in your notes and feel free to record your expressions here. Be sure to show they are equivalent to the ones we already found!
+\end{freeResponse}
+\end{question}
+
+Many expressions that we use to describe our thinking will also involve a variable. We use a variable when there is a part of our work that we don't yet know or a part of our work that could vary. For instance, we could draw the same design of dots, but instead let the bottom array be any number of rows, each containing $8$ dots. We will draw this with an ellipses ($\dots$) in the middle of the bottom part of the array to indicate that we could have any number of these rows.
+
+\begin{image}
+\begin{tikzpicture}
+\foreach \x in {0, 1, 2, 3, 4, 5, 6, 7} \foreach \y in {0, 1, 4, 5} \draw[fill=cyan] (\x, \y) circle (0.2cm);
+\foreach \x in {2, 3, 4, 5} \foreach \y in {6, 7, 8} \draw[fill=cyan] (\x, \y) circle (0.2cm);
+\node at (3.5, 2.5) {$\dots$};
+\end{tikzpicture}
+\end{image}
+
+We could use the letter $R$ to indicate the number of rows in this bottom array, so that the array is an $R$-by-$8$ array.
+
+\begin{question}
+Using the same thinking as the first example (subdividing the design into two rectangles), what expression would we write for the total number of dots?
+
+\begin{prompt}
+	$\answer[given]{R} \times 8 + \answer[given]{3} \times 4$
+\end{prompt}
+\end{question}
+
+Using the same thinking as our second example (subtracting the corners from a full rectangle), we would have to think of the entire big array as being made out of $R + 3$ total rows with $8$ dots in each.
+
+\begin{question}
+Using the same thinking as the second example, what expression would we write for the total number of dots?
+
+\begin{prompt}
+	$\left ( R+3 \right ) \times \answer[given]{8} - 2 \times \left (3  \times \answer[given]{2} \right )$
+\end{prompt}
+\end{question}
+
+Let's see that each of these expressions is still equivalent. We will simplify the first expression first. When we have a variable multiplied by a number, it's customary to place the number before the variable, so we will do that as well as simplify the $3 \times 4$.
+\[
+R \times 8 + 3 \times 4 = 8R+12
+\]
+For the second expression, we first have to distribute the $8$ to each of the $R$ and the $3$ as well as simplify the $3 \times 2$. After that we multiply by the other $2$ and then combine like terms.
+\begin{align*}
+(R+3) \times 8 - 2 (3 \times 2) &= 8R + 24 - 2(6) \\
+&= 8R+24 - 12\\
+&= 8R+12
+\end{align*}
+We ended up with the same expression after simplifying, so these two expressions are equivalent. Simplifying to $8R+12$ gives us a form of this expression that is easy to work with, but the original expressions we wrote down are still valuable since they represent our individual thinking about the diagram. You should be able to work with both!
+
+
+
+\section{Expressions from a description}
+
+As we were working with the previous examples, we came across a few points where we verbally described an expression and then wrote it down. For example, 
+\[ 
+\textrm{Dots in Box } 1 + \textrm{Dots in Box } 2 = 6 \times 8 + 3 \times 4.
+\]
+Being able to transition from a verbal description to a mathematical expression is an important skill for children to develop as they get closer to working with algebraic expressions in middle school and beyond. This skill is also included in our mathematical practice standards. Let's practice one final example for this section.
+
+\begin{example}
+Let $x$ represent the number of crayons in Dale's pencil box and let $y$ represent the number of crayons in Edwin's pencil box. Write an expression for the quotient of $5$ more than the number of Dale's crayons and $2$ less than the number of pencils in Edwin's pencil box.
+
+We will start out by recognizing that we want to form a quotient, which is another word for the operation of \wordChoice{\choice{addition} \choice{subtraction} \choice{multiplication} \choice[correct]{division}}. Since we have explained why we can write a division problem as a fraction, we are looking for the following.
+\[
+\frac{5 \textrm{ more than Dale's crayons}}{2 \textrm{ less than Edwin's crayons}}
+\]
+The phrase ``$5$ more than Dale's crayons'' can be represented with an expression as $\answer[given]{5 + x}$ because we want to combine together $5$ and the number of Dale's crayons which is $x$. The meaning of addition is to combine, so we add together these quantities. The phrase ``$2$ less than Edwin's crayons'' can be represented with an expression as $\answer[given]{y - 2}$ because we want to take away $2$ crayons from the number of Edwin's crayons which is $y$. The meaning of subtraction is to take away, so we start with the $y$ and subtract $2$. We can now plug these expressions into our fraction above to get our final expression.
+\[
+\frac{x+5}{y-2}
+\]
+\end{example}
+Notice the way that we worked slowly as we transitioned from English into mathematics. We start to form expressions that have some mathematical symbols and some English phrases, which are an important step for children to take. Modeling our thoughts using the language of mathematics is a challenge, but the more we can break it down into steps that seem familiar to us, the easier it gets!
+
+
+\end{document}
+
+
+
+
+
+

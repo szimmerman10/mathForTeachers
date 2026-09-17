@@ -1,0 +1,158 @@
+\documentclass{ximera}
+
+\input{../preamble.tex}
+
+\title{Dilations}
+\author{Jenny Sheldon}
+
+\begin{document}
+
+\begin{abstract}
+We investigate a transformation that is not a basic rigid motion.
+\end{abstract}
+\maketitle
+
+\section{Activities for this section:} 
+\link[Eerily similar]{https://ximera.osu.edu/m4t/elementaryActivities/SemesterTwoPacket/elementaryActivities/ComparingShapes/EerilySimilar}
+
+\section{Dilations}
+
+When we talked about transformations a few sections ago, we left one of them out because it wasn't a basic rigid motion. Let's add dilations to our list of transformations.
+
+The first thing to know about dilations is that they still preserve angles. 
+\begin{question}
+If I start with an $80\degree$ angle, and then I dilate that angle, what will the resulting angle be?
+
+\begin{prompt}
+The result will be an $\answer[given]{80}\degree$ angle. 
+ \end{prompt}
+\end{question}
+
+The second thing to know about dilations is that they are not basic rigid motions. In other words, they don't preserve distances unless we scale by a factor of $1$. So if I have a shape with a side length of $4$cm, and I dilate that shape, the side length might not be $4$cm anymore. Remember that reflections, rotations, and translations do preserve distances, so this is a big difference between dilations and our other transformations. 
+
+\begin{question}
+If I start with a square whose side lengths are each $1$ inch and then I dilate this square, which of the following will have to be true after the dilation? Select all that apply.
+\begin{selectAll}
+\choice[correct]{The angles will all be $90$ degrees}
+\choice{The sides will still be $1$ inch}
+\choice[correct]{The shape will still have four sides}
+\choice[correct]{The shape will still be a square}
+\choice{The shape must be in the same location as it started}
+\end{selectAll}
+\end{question}
+
+Now that we know how dilations compare and contrast to our other transformations, how should we think about them? A dilation is generally a stretching or a shrinking. Think about zooming in or out on your phone or tablet, and you've got a dilation.
+
+\begin{definition}
+A \dfn{dilation} transforms each line to a parallel line whose length is a fixed multiple of the length of the original line. To specify a dilation, we choose a particular point, which we can call $O$, as well as a particular distance, which we call $r$, and we move each point $P$ in the plane such that the original distance between $O$ and $P$ is multiplied by $r$. This distance $r$ is sometimes called a \dfn{scale factor}.
+\end{definition}
+
+As we've done previously, let's see how dilations work by considering a few examples. 
+
+\begin{example}
+Let's start by choosing a point $O$, marked on the figure below, and a distance of $r=2$. We'll also choose a point $P$ and see what happens to this point when we dilate using $O$ and $r$.
+\begin{image}
+\begin{tikzpicture}
+\draw[fill=black] (0,0) circle (2pt) node[below]{$O$};
+\draw[fill=black] (1,2) circle (2pt) node[above]{$P$};
+\end{tikzpicture}
+\end{image}
+Our goal is to move $P$ twice as far from $O$ as it currently is. So let's start by drawing a dashed line from $O$ to $P$.
+\begin{image}
+\begin{tikzpicture}
+\draw[fill=black] (0,0) circle (2pt) node[below]{$O$};
+\draw[fill=black] (1,2) circle (2pt) node[above left]{$P$};
+\draw[thick, dashed, ->] (0,0)--(3,6);
+\end{tikzpicture}
+\end{image}
+Next, let's measure the distance between $O$ and $P$ with our ruler, or open our compass to that distance. Then we mark $\answer[given]{2}$ times that measurement along the line between $O$ and $P$ so that we move the point $2$ times as far from $O$.
+\begin{image}
+\begin{tikzpicture}
+\draw[fill=black] (0,0) circle (2pt) node[below]{$O$};
+\draw[fill=black] (1,2) circle (2pt) node[above left ]{$P$};
+\draw[thick, dashed, ->] (0,0)--(3,6);
+\draw[fill=black] (2, 4) circle (2pt) node[above left]{$\hat{P}$};
+\end{tikzpicture}
+\end{image}
+This new point, $\hat{P}$, is the image of $P$ under this dilation.
+
+\end{example}
+
+\begin{question}
+If the point $P$ was the same as the point $O$, where would $P$ move when we dilate?
+\begin{multipleChoice}
+	\choice{Above the point $O$}
+	\choice[correct]{It would not move}
+	\choice{Below the point $O$}
+	\choice{None of the above}
+\end{multipleChoice}
+\end{question}
+
+Next, let's look at what happens when we dilate an entire shape.
+
+\begin{example}
+This time, let's start with a point $O$ that we will mark in the image below and choose a value of $r=0.3$. The figure that we'll dilate will be a square. 
+\begin{image}
+\begin{tikzpicture}
+\draw[fill=black] (0,0) circle (2pt) node[below]{$O$};
+\draw[thick] (-4,4)--(-4,5)--(-5,5)--(-5,4)--(-4,4);
+\draw[fill=black] (-4,4) circle (2pt) node[below] {$A$};
+\draw[fill=black] (-4,5) circle (2pt) node[above] {$B$};
+\draw[fill=black] (-5,5) circle (2pt) node[above] {$C$};
+\draw[fill=black] (-5,4) circle (2pt) node[below] {$D$};
+\end{tikzpicture}
+\end{image}
+Like we have done previously, let's dilate each vertex of the shape. You should imagine also dilating each point on each segment between the vertices! We start by drawing a dashed line between $O$ and each vertex.
+\begin{image}
+\begin{tikzpicture}
+\draw[fill=black] (0,0) circle (2pt) node[below]{$O$};
+\draw[thick] (-4,4)--(-4,5)--(-5,5)--(-5,4)--(-4,4);
+\draw[fill=black] (-4,4) circle (2pt) node[below] {$A$};
+\draw[fill=black] (-4,5) circle (2pt) node[above] {$B$};
+\draw[fill=black] (-5,5) circle (2pt) node[above] {$C$};
+\draw[fill=black] (-5,4) circle (2pt) node[below] {$D$};
+\draw[thick, dashed, ->] (0,0)--(-5.5,5.5);
+\draw[thick, dashed, ->] (0,0)--(-4.53, 5.663);
+\draw[thick, dashed, ->] (0,0)--(-6, 4.8);
+\end{tikzpicture}
+\end{image}
+Next, we measure the distance between $O$ and each point, multiply that distance by $r=0.3$, and mark the new distance on the line between $O$ and that point. We use a hat to distinguish the image from the original point as usual.
+\begin{image}
+\begin{tikzpicture}
+\draw[fill=black] (0,0) circle (2pt) node[below]{$O$};
+\draw[thick] (-4,4)--(-4,5)--(-5,5)--(-5,4)--(-4,4);
+\draw[fill=black] (-4,4) circle (2pt) node[below] {$A$};
+\draw[fill=black] (-4,5) circle (2pt) node[above] {$B$};
+\draw[fill=black] (-5,5) circle (2pt) node[above] {$C$};
+\draw[fill=black] (-5,4) circle (2pt) node[below] {$D$};
+\draw[thick, dashed, ->] (0,0)--(-5.5,5.5);
+\draw[thick, dashed, ->] (0,0)--(-4.53, 5.663);
+\draw[thick, dashed, ->] (0,0)--(-6, 4.8);
+\draw[fill=black] (-2.8, 2.8) circle (2pt) node[below]{$\hat{A}$};
+\draw[fill=black] (-3.5, 3.5) circle (2pt) node[above]{$\hat{C}$};
+\draw[fill=black] (-2.8, 3.5) circle (2pt) node[above right]{$\hat{B}$};
+\draw[fill=black] (-3.5, 2.8) circle (2pt) node[below]{$\hat{D}$};
+\draw[thick] (-2.8, 2.8)--(-2.8, 3.5)--(-3.5, 3.5)--(-3.5, 2.8)--(-2.8,2.8);
+\end{tikzpicture}
+\end{image}
+
+
+
+
+\end{example}
+Now that we've actually dilated a square, go back and look at your answers to the first question. Do they still make sense?
+
+\begin{question}
+True or false: using only one dilation, we can turn a figure sideways.
+\begin{multipleChoice}
+\choice{True}
+\choice[correct]{False}
+\end{multipleChoice}
+\begin{feedback}
+To turn a figure, we should generally think about using a rotation!
+\end{feedback}
+\end{question}
+
+There are plenty of properties of dilations that we can explore, using things like rubber bands or dynamic geometry software. If you'd like to explore these things on your own, the Side-Splitter Theorem for triangles is an interesting consequence of these properties!
+
+\end{document}

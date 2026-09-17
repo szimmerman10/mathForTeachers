@@ -1,0 +1,678 @@
+\documentclass{ximera}
+
+\input{../preamble.tex}
+
+\title{Formulas for Length, Area, and Volume}
+\author{Jenny Sheldon}
+
+\begin{document}
+
+\begin{abstract}
+We discover how to develop formulas for length, area, and volume.
+\end{abstract}
+\maketitle
+
+\section{Activities for this section:} 
+\link[Formulate our thoughts]{https://ximera.osu.edu/m4t/elementaryActivities/SemesterTwoPacket/elementaryActivities/Measurement/FormulateOurThoughts}, 
+\link[Building blocks]{https://ximera.osu.edu/m4t/elementaryActivities/SemesterTwoPacket/elementaryActivities/Measurement/BuildingBlocksRevisited}, 
+\link[The right formula]{https://ximera.osu.edu/m4t/elementaryActivities/SemesterTwoPacket/elementaryActivities/Measurement/RightFormula}, 
+\link[Acute case]{https://ximera.osu.edu/m4t/elementaryActivities/SemesterTwoPacket/elementaryActivities/Measurement/AcuteCase}, 
+\link[Feeling obtuse]{https://ximera.osu.edu/m4t/elementaryActivities/SemesterTwoPacket/elementaryActivities/Measurement/FeelingObtuse}, 
+\link[Parallelogram area]{https://ximera.osu.edu/m4t/elementaryActivities/SemesterTwoPacket/elementaryActivities/Measurement/ParallelogramArea}, 
+\link[Cases to consider]{https://ximera.osu.edu/m4t/elementaryActivities/SemesterTwoPacket/elementaryActivities/Measurement/CasesToConsider}, 
+\link[Circle the wagons]{https://ximera.osu.edu/m4t/elementaryActivities/SemesterTwoPacket/elementaryActivities/Measurement/CircleTheWagons}
+
+
+
+\section{Formulas}
+
+
+Now that we understand the meaning of length, area, and volume, we can start trying to find shortcut formulas to calculate these quantities. It's important, however, to always remember what we are trying to measure: how much space something takes up. When we start using formulas, it's very easy to forget what the formulas represent! We will try to re-emphasize our four-step process of measurement throughout this section to help you to see how the formulas are simply shortcuts for that four-step process.
+
+
+\section{Length}
+
+The most common type of length formulas that we have are for calculating the perimeter of an object. For instance, we have a formula $C = \pi \times D$ or $C = 2 \pi r$.
+\begin{question}
+In the previous formula, what do $C$, $D$, and $r$ mean?
+
+\begin{prompt}
+$C$ is the \wordChoice{\choice[correct]{circumference} \choice{area} \choice{diameter} \choice{radius}} of the circle.
+
+$D$ is the \wordChoice{\choice{circumference} \choice{area} \choice[correct]{diameter} \choice{radius}} of the circle. 
+
+$r$ is the \wordChoice{\choice{circumference} \choice{area} \choice{diameter} \choice[correct]{radius}} of the circle. 
+\end{prompt}
+\end{question}
+We saw in the previous section that this is the definition of the number $\pi$, so we actually don't need to justify this formula.
+
+If we are calculating the perimeter of a rectangle, perhaps you have seen the formula $P = 2l + 2w$.
+\begin{question}
+In the previous formula, what do $P$, $l$ and $w$ represent?
+
+\begin{prompt}
+$P$ is the \wordChoice{\choice{volume} \choice[correct]{perimeter} \choice{length} \choice{width}} of the rectangle. 
+
+$l$ is the \wordChoice{\choice{volume} \choice{perimeter} \choice[correct]{length} \choice{width}} of the rectangle.
+
+$w$ is the \wordChoice{\choice{volume} \choice{perimeter} \choice{length} \choice[correct]{width}} of the rectangle. 
+\end{prompt}
+ \end{question}
+ But why is this formula true?
+\begin{example}
+Let's begin with a rectangle whose length is $l$ inches and whose width is $w$ inches. We would like to calculate its perimeter, which we can label as $P$.
+\begin{image}
+\begin{tikzpicture}
+\draw[thick] (0,0)--(4,0)--(4,1)--(0,1)--(0,0);
+\node[below] at (2,0) {$l$};
+\node[right]  at (4,0.5) {$w$};
+\end{tikzpicture}
+\end{image}
+To use our four-step process of measurement, we first need to determine the aspect we are measuring, which is the perimeter of the rectangle. The perimeter is \wordChoice{\choice[correct]{1D}\choice{2D} \choice{3D}}, so we also need our unit to be \wordChoice{\choice[correct]{1D}\choice{2D} \choice{3D}}. In this case, since the length and width are described in inches, we'll choose our unit to be one inch. This is a one-dimensional length unit, so it's appropriate to use in this case. 
+
+The next thing we need to do is to iterate our unit all over the perimeter. Let's say we start at the bottom left corner of the rectangle. We'll use $l$ inches across the bottom, then $w$ inches on the right side, then $l$ inches across the top, and then $w$ inches on the left side. (Imagine taking copies of a one inch unit and laying them along the sides of this rectangle.) We would like to put together or combine all of the inches we used to travel all along the outside of the shape (in other words its perimeter), so we want to \wordChoice{\choice[correct]{add} \choice{subtract} \choice{multiply} \choice{divide}}  all the inches we used.
+\[
+P = l + w + l + w
+\]
+Since we know that addition is commutative, we can rearrange the $l$'s and $w$'s and combine like terms.
+\[
+P = \answer[given]{2}l + \answer[given]{2}w
+\]
+Step four of our measuring process is to report and interpret our answer. In this case, it takes $2l + 2w$ copies of one inch to go all the way around the perimeter of the rectangle, so our answer is $P = 2l+2w$ inches. This is also the formula we claimed was true before starting the example.
+
+\end{example}
+So, when we go through the four-step process of measuring, we see that we get the formula $P = 2l +2w$ as the perimeter of a rectangle. This also means that we can now take a shortcut instead of the full four step process and just jump to the end if we are working with a rectangle. Let's do an example to see how we can use this formula on a specific rectangle.
+
+\begin{question}
+Find the perimeter of a square whose side length is $5$cm.
+\begin{explanation}
+First, we notice that a square is a special case of a rectangle, so we can apply the rectangle perimeter formula to this example. (If we did not have a rectangle, we could not use this formula.) The formula we just found for the perimeter of a rectangle is the following. (Use $l$ for the length and $w$ for the width.)
+\[
+P = \answer[given]{2l+2w}
+\]
+In the case we are working with, we know that $l = \answer[given]{5}$cm and $w = \answer[given]{5}$cm, so we can find the perimeter as follows.
+\[
+P = 2l + 2w = 2\cdot \answer[given]{5} + 2\cdot \answer[given]{5} = \answer[given]{20}
+\]
+In other words, the perimeter of this square is $20$cm.
+\end{explanation}
+\end{question}
+
+There are many other formulas for length, and we might ask you to either come up with these formulas or to use them. Use these two examples as your guide!
+
+
+\section{Area}
+
+We have seen that we want to calculate area by figuring out how much two-dimensional space an object takes up. Previously, we have used all kinds of units to cover the space, but when we consider things like area formulas, we want to be using our standard units: square inches, square centimeters, square miles, etc. Generally, squares have some very nice properties that make it easier for us to find areas.
+
+Let's start by considering the area of a rectangle.
+\begin{example}
+Find the area of a rectangle whose side lengths measure $5$cm and $3$cm.
+
+Our four-step measuring process says that we need to start with an aspect to measure, which in this case is the area of the square in question. Next, we choose a unit of measurement. In this case, we'll choose \wordChoice{\choice{one inch} \choice{one square inch} \choice{one centimeter} \choice[correct]{one square centimeter}} so that the dimension of our aspect matches the dimension of our unit.
+
+The third step is to cover the rectangle with our chosen units leaving no gaps and no overlaps. Let's draw a picture of the rectangle and cover it with squares in an organized fashion, like a grid. In this case, you can assume the grid lines are spaced $1$cm apart.
+\begin{image}\begin{tikzpicture}
+\draw(0,0) grid (5,3);
+\draw[thick] (0,0)--(5,0)--(5,3)--(0,3)--(0,0);
+\node[below] at (2.5,0) {5 cm};
+\node[right] at (5,1.5) {3cm};
+\end{tikzpicture}\end{image}
+
+For step four, to find our answer, we can count the number of units that we needed to cover the entire rectangle and we end up with $\answer[given]{15}$ square centimeters.
+
+However, this doesn't tell us much about a formula for the area of this rectangle. To do so, let's recognize that we can organize our square units into groups. Let's go ahead and use the vertical columns as groups in this case so that one group is one column. We have $\answer[given]{5}$ total groups.
+\begin{image}\begin{tikzpicture}
+\draw[fill={rgb,255:red,0; green,191; blue,125}](0,0)--(1,0)--(1,3)--(0,3)--(0,0);
+\draw[fill={rgb,255:red,0; green,180; blue,197}](1,0)--(2,0)--(2,3)--(1,3)--(1,0);
+\draw[fill={rgb,255:red,0; green,115; blue,230}](2,0)--(3,0)--(3,3)--(2,3)--(2,0);
+\draw[fill={rgb,255:red,37; green,70; blue,240}](3,0)--(4,0)--(4,3)--(3,3)--(3,0);
+\draw[fill={rgb,255:red,89; green,40; blue,237}](4,0)--(5,0)--(5,3)--(4,3)--(4,0);
+\draw(0,0) grid (5,3);
+\draw[thick] (0,0)--(5,0)--(5,3)--(0,3)--(0,0);
+\node[below] at (2.5,0) {5 cm};
+\node[right] at (5,1.5) {3cm};
+\end{tikzpicture}\end{image}
+
+Each of the groups has $\answer[given]{3}$ square centimeters in it so that one object is one square centimeter. This means that we have a total of 
+\[
+\answer{5} \times \answer{3}
+\]
+square centimeters total in the figure. (Remember to use our convention that the number of groups goes first in multiplication unless you are explaining otherwise!)
+
+Notice also that the square units covering this rectangle is an example of an array, and arrays were one of the main models we had for thinking about multiplication.
+
+\end{example}
+
+This example is getting us closer to the formula that we want, but let's pause and notice something strange here. The length and width of the rectangle are given in centimeters.
+\begin{question}
+What dimension are the measurements of length and width in a rectangle?
+\begin{prompt}
+$\answer[given]{1}$-dimensional
+\end{prompt}
+\end{question}
+However, we are trying to calculate the area of the rectangle and it is given in square centimeters.
+\begin{question}
+What dimension is the measurement of the area of a rectangle?
+\begin{prompt}
+$\answer[given]{2}$-dimensional
+\end{prompt}
+\end{question}
+How did we get from one-dimensional units to two-dimensional units? Remember that our goal in finding the area is to find how much 2D space the object takes up, and we use 2D units to measure that space. So our answer has to be in 2D units. In fact, we need to be working with 2D units all along. In our four-step measuring process, there's actually no room for 1D units! But notice that \emph{because our units are squares}, the 1D units along the sides of the rectangle actually tell us how we can line up the units inside the rectangle. Since the length along the bottom (or top) of our rectangle is $5$ centimeters, we see that we can fit $5$ squares along the bottom of this rectangle. These five squares along the bottom of the rectangle eventually each represent one group when we look at the multiplication. Similarly, the $3$ centimeter length along the right side (and left side) of the rectangle tell us that we can fit $3$ squares along that side, or that we can fit $3$ squares (objects) inside each of our groups. In fact, you can think about this as a one-to-one correspondence: each unit of length corresponds to a single square.
+
+We are also ready to explain why the area formula for rectangles is the formula we have heard before.
+\begin{theorem}
+The area of a rectangle whose length is $L$ units and whose width is $W$ units is given by $L \times W$ square units.
+\end{theorem}
+\begin{explanation}
+We want to proceed exactly as in the previous example, except instead of $5$ centimeters as the length, we use $L$ units as the length. In place of $3$ centimeters as the width, we use $W$ units as the width. We will draw an example rectangle here so that you can see what we are doing, but you want to imagine that this rectangle could have any length $L$ and any width $W$. In fact, you might want to draw a few more pictures in your notes, or see if you can draw a picture that could represent any $L$ and $W$.
+\begin{image}\begin{tikzpicture}
+\draw(0,0) grid (7,4);
+\draw[thick] (0,0)--(7,0)--(7,4)--(0,4)--(0,0);
+\node[below] at (3.5,0) {$L$ units};
+\node[right] at (7,2) {$W$ units};
+\end{tikzpicture}\end{image}
+We have covered the rectangle with square units, and so now we want to use multiplication to count the number of units. We notice that $L$ square units fit along the bottom side of the rectangle, and if we want to use the vertical columns as groups, each of these units represents one vertical group of units. In other words, one group is one column. Inside each column, we have $W$ square units since we know that $W$ units fit along the vertical sides of the rectangle. In this case one object is one square unit. In other words, we can find the total number of square units that cover this rectangle using the multiplication
+\[
+\answer{L} \textrm{ columns} \times \answer{W} \textrm{ square units per column}
+\]
+or, if we use $A$ to represent the area of the rectangle, $A = L \times W$ square units.
+\end{explanation}
+Again, remember that our one-dimensional measurements of length and width are actually telling us how to count the 2D squares that cover the shape. This interpretation fits with our usual definition of multiplication, where the groups and objects per group typically have different units from one another, with the units on the objects matching what we are trying to count with our multiplication.
+
+\begin{question}
+Pause and think: does this formula work for side lengths that are decimals? Fractions?
+\begin{freeResponse}
+Draw some pictures in your notes and make a record of your observations here.
+\end{freeResponse}
+\end{question}
+
+
+As we did with length, let's see how we could use this formula.
+\begin{question}
+What is the area of a rectangle whose length measures $12$ feet and whose width measures $20$ feet?
+
+\begin{explanation}
+The shape in question is a rectangle, so we can use the area formula for rectangles. We know that the formula is 
+\[
+A = L \times W
+\]
+where $A$ is the area of the rectangle in square units (in this case square feet), $L$ is the length of the rectangle (in this case $12$ feet) and $W$ is the width of the rectangle (in this case $20$ feet). So, plugging the numbers in to our formula we get the following.
+\[
+A = L \times W = 12 \times 20 = \answer{240} \textrm{ square feet}
+\]
+\end{explanation}
+\end{question}
+We won't demonstrate how to use each formula that we write, so please return to this explanation frequently and apply it to your own work with other shapes!
+
+Next, let's take a look at another common area formula.
+\begin{example}
+Let's find the area of a right triangle whose base length is $4$ inches and whose height length is $2$ inches. First, let's draw this triangle. We'll draw it on a grid since grids often help us count area units.
+\begin{image}\begin{tikzpicture}
+\draw (0,0) grid (4,2);
+\draw[thick] (0,0)--(4,0)--(0,2)--(0,0);
+\draw (0.2,0)--(0.2,0.2)--(0,0.2);
+\end{tikzpicture}\end{image}
+As we have previously done, let's connect with our four-step measurement process. We chose an aspect to measure, which is the area of this triangle. As our unit, we choose one \wordChoice{\choice{inch} \choice[correct]{square inch} \choice{cubic inch}} because the side lengths are measured in inches and both our aspect and our unit are \wordChoice{\choice{1D} \choice[correct]{2D} \choice{3D}}. For step three, we cover the aspect with our unit with no gaps and no overlaps. We have a grid overlaid on our picture above so that we can try to count the units, but it seems like this is pretty tough. The units don't fit exactly in the shape. 
+
+We could use the moving principle here to match up some of the pieces, but it will be hard to know if we have matched up all of the pieces exactly, and we want to be really sure that we have the exact measurement of this area. We're not approximating here!
+
+Instead, let's  make another copy of the triangle and combine it together with the original triangle. The additivity principle will tell us the if the area of the original triangle is $A$ square inches, and then we make another copy of the triangle and combine the two together, the new area will be $\answer[given]{2A}$ square inches. Let's draw our two copies of the triangle arranged to look like a rectangle.
+\begin{image}\begin{tikzpicture}
+\draw (0,0) grid (4,2);
+\draw[thick] (0,0)--(4,0)--(0,2)--(0,0);
+\draw (0.2,0)--(0.2,0.2)--(0,0.2);
+\draw[thick] (4,0)--(4,2)--(0,2)--(4,0);
+\draw (3.8,2)--(3.8,1.8)--(4,1.8);
+\node at (0.2,1.7) {$a$};
+\node at (3.8, 0.3) {$a$};
+\node at (3.2,0.2) {$b$};
+\node at (0.8, 1.8) {$b$};
+\end{tikzpicture}\end{image}
+We have also labeled the angles in the triangles here. We know one of the angles is a $90\degree$ angle, so we have marked that with a little square to indicate that it's a right angle. The other two angles are marked $a$ and $b$. Since the second triangle is a copy of the first one, it has the same three angles measuring $90\degree$, $a$, and $b$. Notice that we turned the second triangle so that in the two corners that are not marked as $90\degree$, we have angles $a$ and $b$ coming together to form the corner of the figure.
+
+This figure looks a lot like a rectangle, and so it would be nice to use the rectangle area formula to count the number of square inches that fill the 2D space inside this figure. But in order to do that, we need to be absolutely sure that these two triangles fit together and make a rectangle.
+
+To do that, we want to start by making sure the definition of a rectangle is satisfied. A rectangle is a quadrilateral, which means it is a polygon with $\answer[given]{4}$ sides. In this example, we formed the sides from the sides of the triangles, and we didn't try to piece together any sides in order to make the sides of the figure. So, we can see from the figure that we have the four sides we need. A rectangle is a quadrilateral that has $\answer[given]{4}$ right angles, so we also need to check that all of the angles in this figure are right angles. Two of them are already given by the fact that we started with a right triangle and made a copy of that same triangle. The right angle from the triangle forms two of the four corners of the shape. The other two corners are made from the angles measuring $a$ and $b$, as we mentioned. So what do we get when we add $a+b$?
+
+Well, we know that the interior angles of any triangle add up to $\answer[given]{180}\degree$, so we know that if we add up the $90\degree$ angle with $a$ and $b$ we get $\answer[given]{180}\degree$. We can write that as an equation like so.
+\[
+90\degree + a + b = \answer[given]{180}\degree
+\]
+Subtracting $90\degree$ from both sides, we get the sum of $a$ and $b$.
+\[
+a+b=\answer[given]{90}\degree
+\]
+This tells us exactly that the corners made from the angles measuring $a$ and $b$ are right angles, and so all four of the angles in this shape are right angles. Since it satisfies the definition of a rectangle, we know the shape we formed is a rectangle.
+
+We can find the area of this rectangle by counting the squares inside it, or by using the area formula for rectangles. Either way, we see that the area of the rectangle is $\answer[given]{8}$ square inches. Since the original triangle is half of the rectangle's area, the area of the original triangle is $\answer[given]{4}$ square inches.
+
+
+\end{example}
+
+Let's make a quick observation about the vocabulary we used in our example. At the beginning, we mentioned the ``length of the base''  and the ``length of the height'' of this triangle. The reason for this language, which can feel a little awkward at first, is that the ``base'' and ``height'' of a triangle are specific segments that are part of the triangle. If we want to measure the segment, we choose a unit and go through our four-step process of measurement to find the length of that segment. This is a bit like the difference between an angle (a physical object) and the measure of an angle (a number that we associate with that angle which can change depending on the units we choose). We have the physical segment as well as the number we associate with that segment telling us how long it is in certain units. This is a subtle distinction, but it can be an area of confusion for people who are just learning. So, we encourage you to distinguish in your writing whether you are talking about a segment or its length even if you don't use the phrase ``length of the segment''.
+
+Now that we have worked with this specific triangle, we are ready to give a more general formula.
+\begin{theorem}
+If we have a right triangle whose base measures $L$ units and whose height measures $H$ units, then the area $A$ in square units is given by $A = \frac12 L \times H$.
+\end{theorem}
+\begin{explanation}
+Like with rectangles, we want to make a more general version of the argument we had above. If we read through the argument again, we see that the only place we needed to use the measurements $L$ and $H$ were when we calculated the area of the rectangle. We didn't need to know the actual values of the measures $a$ and $b$ to know that they add to $90\degree$, so no matter what $L$ and $H$ are we know that two copies will always form a rectangle. Once we are absolutely certain that we've formed a rectangle, we can use the area formula for rectangles. If the area of one triangle is $A$ square units, we know that the two triangles together have area $2A$, so the total area of the rectangle is $2A$ square units. But we can also find the total area of the rectangle using the formula, giving us an equation.
+\[
+2A = L \times \answer[given]{H}
+\]
+Solving for just the area of just one of the triangles gives us the formula we want.
+\[
+A = \frac12 L \times \answer[given]{H}
+\]
+\end{explanation}
+
+This is very nice, but not every triangle is shaped this way.
+\begin{example}
+Let's find the area of an obtuse triangle whose base length is $L$ and whose height is $H$. Again, we'll start by drawing a picture of the triangle.
+\begin{image}\begin{tikzpicture}
+\draw[thick] (0,0)--(2,0)--(4,1)--(0,0);
+\draw[dashed] (2,0)--(4,0)--(4,1);
+\draw (4,0.2)--(3.8,0.2)--(3.8,0);
+\node[below] at (1,0) {$L$};
+\node[right] at (4,0.5){$H$};
+\end{tikzpicture}\end{image}
+
+This triangle is not a right triangle, but let's use shearing to transform it into a right triangle. Remember that when we use shearing, we first choose a base, which in this case will be the same as the base of the triangle (the side which measures $L$ units). Our next step is to cut the triangle into thin strips. We will shade one of them to help you see what is happening.
+\begin{image}\begin{tikzpicture}
+\draw[thick] (0,0)--(2,0)--(4,1)--(0,0);
+\draw[dashed] (2,0)--(4,0)--(4,1);
+\draw (4,0.2)--(3.8,0.2)--(3.8,0);
+\node[below] at (1,0) {base};
+\node[right] at (4,0.5){$H$};
+\foreach \y in {0.1, 0.2, ..., 0.9} \draw (4*\y, \y)--(2*\y+2, \y);
+\draw[fill=yellow] (1.2, 0.3)--(2.6, 0.3)--(2.8, 0.4)--(1.6, 0.4)--(1.2, 0.3);
+\draw[dotted] (0,1)--(5,1);
+\end{tikzpicture}\end{image}
+We then slide the strips parallel to the base without moving the base. To see how the strips slide parallel to the base, the previous image also has a dotted line through the vertex of the triangle which is not on the base, and this dotted line is parallel to the base. So, all of the strips will slide parallel to this line and parallel to the base. We are going to slide the strips until they line up with the left-hand edge of the base so that we create a right triangle after shearing.
+\begin{image}\begin{tikzpicture}
+\draw[thick] (0,0)--(2,0)--(0,1)--(0,0);
+\node[below] at (1,0) {$L$};
+\node[left] at (0,0.5){$H$};
+\foreach \y in {0.1, 0.2, ..., 0.9} \draw (0,\y)--(2-2*\y, \y);
+\draw[fill=yellow] (0,0.3)--(1.4,0.3)--(1.2,0.4)--(0,0.4)--(0,0.3);
+\draw[dotted] (0,1)--(5,1);
+\end{tikzpicture}\end{image}
+The new triangle that we get after shearing has the same area as the original obtuse triangle, but it's a right triangle and so we can use the formula for right triangles that we just developed. So, we see that this obtuse triangle also has area $A = \frac12 L \times \answer[given]{H}$.
+
+\end{example}
+
+
+
+\begin{question}
+Pause and think: how could you use the previous argument to show that an acute triangle's area could be found using the same formula $A = \frac12 L \times H$?
+\begin{freeResponse}
+Write your thoughts here!
+\end{freeResponse}
+\end{question}
+This way of thinking about transforming triangles into right triangles using shearing is my favorite way to think about the formula, but it's not the only way. We will look in class at a few other ways to think about coming up with the area formula for non-right triangles. You should pick a method that makes sense to you and be sure that you can explain all of the details! This is an instance where we will ask you to show that the pieces you move or add using the moving and additivity principles fit exactly as you claim they do. You can use the right triangle example as a guide for this kind of argument!
+
+However we do it, we will find that we get the same area formula for every triangle, so let's restate it here.
+\begin{theorem}
+If we have a triangle whose base measures $L$ units and whose height measures $H$ units, the area $A$ in square units of that triangle is given by $A = \frac12 L \times H$.
+\end{theorem}
+
+There are many other area formulas, and we will develop some of them in class. The point of developing area formulas is to practice with the meaning of measurement and to understand why the formulas make sense. We will ask you both to justify why area formulas make sense as well as use area formulas to solve problems. We'll list a few formulas here, and you are welcome to also search for more formulas if needed. Just remember that you should think about how to justify anything you find online!
+
+\begin{theorem}
+The area $A$ in square units of a parallelogram with base length $L$ units and height which measures $H$ units is given by
+\[
+A = H \times L.
+\]
+\end{theorem}
+It's very important to notice in the formula above that the height $H$ of the parallelogram is not one of the sides of the parallelogram unless the parallelogram is actually a rectangle. See the figure below.
+\begin{image}
+\begin{tikzpicture}
+\draw[thick] (0,0)--(4,0)--(5,4)--(1,4)--(0,0);
+\node[below] at (2,0) {base};
+\draw[dashed] (1,4)--(1,0);
+\node[right] at (1,2) {height};
+\end{tikzpicture}
+\end{image}
+
+\begin{theorem}
+Consider a trapezoid where the lengths of the two parallel sides are $B$ units and $C$ units. We draw the height as a segment perpendicular to both of the parallel sides, and we write the length of this height as $H$ units. In this case, the area $A$ in square units is given by
+\[
+A = \frac12 (B+C)H.
+\]
+\end{theorem}
+Again, notice that the height is not any of the sides of the trapezoid! We have labeled the various parts of the formula in the figure below.
+\begin{image}
+\begin{tikzpicture}
+\draw[thick] (0,0)--(6,0)--(5,3)--(2,3)--(0,0);
+\node[above] at (3.5, 3){length $B$};
+\node[below] at (3,0) {length $C$};
+\draw[dashed] (2,3)--(2,0);
+\node[right] at (2,1.5) {height $H$};
+\end{tikzpicture}
+\end{image}
+
+Our last example in this section will be the area formula for circles.
+\begin{theorem}
+The area $A$ in square units of a circle whose radius measures $r$ units is given by
+\[
+A = \pi r^2.
+\]
+\end{theorem}
+\begin{explanation}
+Let's start by drawing a circle and marking its radius. In the figure below, the radius has length $r$.
+\begin{image}
+\begin{tikzpicture}
+\draw[thick] (0,0) circle (2cm);
+\draw[dashed] (0,0)--(2,0);
+\node[below] at (1,0) {$r$};
+\end{tikzpicture}
+\end{image}
+In case we need them later, we will also use $C$ to refer to the length of the circle's circumference, and $D$ to refer to the length of the circle's diameter.
+
+We will use a moving and additivity strategy to find the area of this circle. Our goal will be to cut up and rearrange the area into a shape that we recognize. Watch the next video to see the process.
+
+\youtube{7u3zLq7W2w8}
+
+Now that we have rearranged the pieces, they are arranged in a shape that looks somewhat like this.
+\begin{image}
+\begin{tikzpicture}
+\draw[thick] (0,0)--(3,0)--(3,1)--(0,1)--(0,0);
+\node[right] at (3,0.5) {$A$};
+\node[above] at (1.5, 1) {$B$};
+\end{tikzpicture}
+\end{image}
+
+
+What shape have we made with our circle pieces?
+\begin{multipleChoice}
+\choice{A circle}
+\choice{A triangle}
+\choice[correct]{A rectangle}
+\choice{A parallelogram}
+\choice{A trapezoid}
+\end{multipleChoice}
+The side marked $A$ in the figure (on the right side of the shape) is the \wordChoice{\choice{diameter} \choice{circumference} \choice[correct]{radius}} of the original circle, and so it measures $\answer[given]{r}$ units. The side marked $B$ in the figure (on the top or bottom of the shape) is half of the \wordChoice{\choice{diameter} \choice[correct]{circumference} \choice{radius}} of the original circle, and so it measures $\frac{1}{2} \answer[given]{C}$.
+
+Since the figure in question is a rectangle, we can use the area formula for rectangles to find the area of this shape. We see the following.
+\[
+A = (r) \times \left ( \frac12 C \right )
+\]
+Since we also know from the definition of $\pi$ that $C = \pi D = \pi \times 2r = 2\pi r$, we can replace the $C$ in our equation.
+\[
+A = (r) \times \left (\frac12 \times 2 \pi r \right )
+\]
+Finally, we can combine like terms to get the formula we want.
+\[
+A = \pi \times r \times r = \pi r^2
+\]
+
+\end{explanation}
+As with many of our other figures, notice again that the radius of the circle is a specific segment, and its measure is a different idea than the segment itself! So, $r$ refers to the length of the radius in our formula.
+
+
+\begin{question}
+Pause and think: what similarities and differences have you seen among the formulas we've discussed? What ideas do you want to remember?
+\begin{freeResponse}
+Write your thoughts here!
+\end{freeResponse}
+\end{question}
+
+
+\section{Volume}
+
+It's time now to think about volume formulas, and we'll use the same perspective we took for length and area by using the four-step measurement process. Let's start with the volume of a box.
+\begin{example}
+Let's find the volume of a box whose base has sides which measure $5$cm and $4$cm and whose height measures $2$cm. We'll start by drawing a picture of this box.
+\begin{image}
+\begin{tikzpicture}
+    % Define the coordinates of the box vertices
+    \coordinate (A) at (0, 0, 0);
+    \coordinate (B) at (5, 0, 0);
+    \coordinate (C) at (5, 2, 0);
+    \coordinate (D) at (0, 2, 0);
+    \coordinate (E) at (0, 0, 4);
+    \coordinate (F) at (5, 0, 4);
+    \coordinate (G) at (5, 2, 4);
+    \coordinate (H) at (0, 2, 4);
+
+    % Draw the bottom face
+    \draw[thick] (A) -- (B) -- (C) -- (D) -- cycle;
+
+    % Draw the vertical edges
+    \draw[thick] (A) -- (E);
+    \draw[thick] (B) -- (F);
+    \draw[thick] (C) -- (G);
+    \draw[thick] (D) -- (H);
+
+    % Draw the top face
+    \draw[thick] (E) -- (F) -- (G) -- (H) -- cycle;
+
+    % Draw the hidden lines for clarity
+    \draw[dashed] (A) -- (E);
+    \draw[dashed] (B) -- (F);
+    \draw[dashed] (C) -- (G);
+    \draw[dashed] (D) -- (H);
+    
+    %label the measurements
+    \node[below] at (2.5,0,4) {5 cm};
+    \node[right] at (5,0,2){4cm};
+    \node[right] at (5,1,0) {2cm};
+\end{tikzpicture}
+\end{image}
+With our four step measuring process, the first thing we need to do is choose an aspect to measure, which in this case is the volume of the box. The second step is to choose an appropriate unit. The lengths are measured in centimeters, so we should choose \wordChoice{\choice{centimeters}\choice{square centimeters} \choice[correct]{cubic centimeters}} because the volume is a 3D aspect and we need our unit to also be a 3D aspect. So one unit is one cubic centimeter (remember that this just means we have a cube whose side lengths all measure one centimeter).
+
+Let's start by fitting square centimeters on the bottom face of the box. We'll draw a picture of just the bottom face, and then imagine how the boxes will fit. Here is a picture of just the bottom of the box.
+\begin{image}
+\begin{tikzpicture}
+    % Define the coordinates of the box vertices
+    \coordinate (A) at (0, 0, 0);
+    \coordinate (B) at (5, 0, 0);
+    \coordinate (C) at (5, 2, 0);
+    \coordinate (D) at (0, 2, 0);
+    \coordinate (E) at (0, 0, 4);
+    \coordinate (F) at (5, 0, 4);
+    \coordinate (G) at (5, 2, 4);
+    \coordinate (H) at (0, 2, 4);
+
+    % Draw the bottom face
+    \draw[thick] (E) -- (A) -- (B) -- (F) -- cycle;
+    
+    %label the measurements
+    \node[below] at (2.5,0,4) {5 cm};
+    \node[right] at (5,0,2){4cm};
+    %\node[right] at (5,1,0) {2cm};
+\end{tikzpicture}
+\end{image}
+This figure is a rectangle, even though it looks like a parallelogram. So, we can place a grid on top of this rectangle that will show us how to cover it with cubes.
+\begin{image}
+\begin{tikzpicture}
+    % Define the coordinates of the box vertices
+    \coordinate (A) at (0, 0, 0);
+    \coordinate (B) at (5, 0, 0);
+    \coordinate (C) at (5, 2, 0);
+    \coordinate (D) at (0, 2, 0);
+    \coordinate (E) at (0, 0, 4);
+    \coordinate (F) at (5, 0, 4);
+    \coordinate (G) at (5, 2, 4);
+    \coordinate (H) at (0, 2, 4);
+
+    % Draw the bottom face
+    \draw[thick] (E) -- (A) -- (B) -- (F) -- cycle;
+    
+    %label the measurements
+    \node[below] at (2.5,0,4) {5 cm};
+    \node[right] at (5,0,2){4cm};
+    %\node[right] at (5,1,0) {2cm};
+    \foreach \x in {1, 2, ..., 4} \draw (\x,0,4)--(\x,0,0);
+   \foreach \y in {1, 2, ..., 3} \draw (0,0,\y)--(5,0,\y);
+\end{tikzpicture}
+\end{image}
+This grid is made out of squares even though it looks like they are parallelograms again. We know that the length of the rectangle measures $5$cm, so we can fit $\answer[given]{5}$ squares along the length, making $5$ groups of squares. We also know that the width of this rectangle is $4$cm, so we can fit $\answer[given]{4}$ squares in each of the groups. All in total, we have $5 \times 4 = 20$ total squares that fit on the bottom of this shape.
+
+But, we are not trying to fill the shape with squares, we are trying to fill it with cubes. Thankfully, since our cubes measure 1 centimeter on each side, they have faces that exactly match up with the squares drawn on this face. Let's draw one of the cubes sitting on top of one of the squares.
+\begin{image}
+\begin{tikzpicture}
+    % Define the coordinates of the box vertices
+    \coordinate (A) at (0, 0, 0);
+    \coordinate (B) at (5, 0, 0);
+    \coordinate (C) at (5, 2, 0);
+    \coordinate (D) at (0, 2, 0);
+    \coordinate (E) at (0, 0, 4);
+    \coordinate (F) at (5, 0, 4);
+    \coordinate (G) at (5, 2, 4);
+    \coordinate (H) at (0, 2, 4);
+
+    % Draw the bottom face
+    \draw[thick] (E) -- (A) -- (B) -- (F) -- cycle;
+    
+    %label the measurements
+    \node[below] at (2.5,0,4) {5 cm};
+    \node[right] at (5,0,2){4cm};
+    %\node[right] at (5,1,0) {2cm};
+    \foreach \x in {1, 2, ..., 4} \draw (\x,0,4)--(\x,0,0);
+   \foreach \y in {1, 2, ..., 3} \draw (0,0,\y)--(5,0,\y);
+   \draw (0,0,1)--(0,1,1)--(1,1,1)--(1,1,0)--(0,1,0)--(0,1,1);
+   \draw (1,1,1)--(1,0,1);
+   \draw (1,1,0)--(1,0,0);
+   \draw (0,1,0)--(0,0,0);
+\end{tikzpicture}
+\end{image}
+Imagine such a cube fitting exactly on each square, so we need a total of $\answer[given]{20}$ cubes to fill up the bottom of the box.
+
+Next, we know that the box is $2$cm tall, so we can fit exactly $\answer[given]{2}$ such layers of cubes in the entire box. If we think of each layer as a box, we have the following.
+\[
+\answer{2} \textrm{ layers } \times \answer{20} \textrm{ cubes per layer} = 40 \textrm{ cubes total}
+\]
+We used one layer as one group, and one cube as one object in our multiplication.
+\end{example}
+
+Let's take a step back and develop a more general formula here. To find the volume of this box, we first found the area of the rectangle at the base. We justified using multiplication, or we could have used the area formula for a rectangle. We then matched the squares up with cubes (using a one-to-one correspondence again!) to find the volume of the bottom layer. Since all the layers were the same, we used the cubic inches as our objects (one cubic inch was one object) and then we took the number of layers and used that as the number of groups (one layer is one group) and got the following formula.
+\begin{theorem}
+The volume $V$ in cubic units of a solid whose base measures $A$ square units, whose height measures $h$ units, and where the layers of volume made by the units of height are all the same is
+\[
+V = A \times h.
+\]
+\end{theorem}
+For a box whose height measures $h$ and whose base is a rectangle with sides measuring $l$ and $w$, this formula gives us
+\[
+V = A \times h = (l \times w) \times h
+\]
+and this is the box volume formula that you have probably seen before.
+
+But this formula is more flexible, as well. Let's look at another example.
+\begin{example}
+ Suppose we have a right prism with a triangular base. We can use the area formula for triangles to find the area of the base, and then since the prism is a right prism we'll have all the layers the same, and so we can use the same formula. The triangular prism below has a triangle as its base with (triangle) base length of $b$ and a (triangle) height length of $a$ as well as a (prism) height of $h$.
+\begin{image}
+\begin{tikzpicture}
+    % Define the coordinates of the triangular base vertices
+    \coordinate (A) at (0, 0, 0);
+    \coordinate (B) at (3, 0, 0);
+    \coordinate (C) at (1.5, 2.5, 0);
+
+    % Define the height of the prism
+    \coordinate (D) at (0, 0, 3);
+    \coordinate (E) at (3, 0, 3);
+    \coordinate (F) at (1.5, 2.5, 3);
+
+    % Draw the bottom face
+    %\draw[thick] (A) -- (B) -- (C) -- cycle;
+    \draw[dashed] (C)--(A)--(B);
+    \draw[thick] (B)--(C);
+
+    % Draw the vertical edges
+    \draw[dashed] (A) -- (D);
+    \draw[thick] (B) -- (E);
+    \draw[thick] (C) -- (F);
+
+    % Draw the top face
+    \draw[thick] (D) -- (E) -- (F) -- cycle;
+
+    %label some lengths
+    \draw[dotted] (1.5,0,0)--(1.5,2.5,0);
+    \node[right] at (1.5, 1.25, 0) {$a$};
+    \node[right] at (3,0,1.5) {$h$};
+    \node[below] at (1.5, 0, 3) {$b$};
+
+\end{tikzpicture}
+\end{image}
+We can calculate the area of the base using the area formula for triangles, since the base is a triangle. We get
+\[
+\frac12 \times \answer[given]{a} \times b
+\]
+for the area of the base, and then the height measures $h$, so the volume of this figure is given by
+\[
+V = A \times h =\left ( \frac12\times  \answer[given]{a} \times b \right ) \times \answer[given]{h}.
+\]
+
+\end{example}
+
+In fact, we could use this formula on an oblique prism with a triangular base, since we could first shear the oblique prism into a right one! You should still imagine matching the cubes to the area squares in the first layer, but you might need to use part of a cube if you only have part of an area unit.
+
+We could also use this formula to calculate the volume of a right cylinder whose base is a circle of radius $r$ and whose height measures $h$. 
+\begin{question}
+For a right cylinder whose base is a circle of radius $r$ and whose height is $h$, what is the area of the base?
+\begin{prompt}
+\[
+\pi \times \answer{r}^2
+\]
+\end{prompt}
+
+What is the volume using the formula $V = A \times h$?
+\begin{prompt}
+\[
+V = A \times h = (\pi \times \answer{r}^2 ) \times \answer{h}.
+\]
+\end{prompt}
+\end{question}
+This is a powerful formula!
+
+However, we cannot use this formula to calculate every volume, because not every solid has layers which are all the same. For instance, if you took a right cone with a circular base and tried to cut it into layers, the layers would all be different. Here is a cone to help you visualize, but if you have some modeling dough handy you could try this out yourself.
+\begin{image}
+\begin{tikzpicture}
+% Define dimensions
+\def\radius{1.5}
+\def\height{3}
+
+% Draw the oval base
+\draw (0,0) ellipse[x radius=2*\radius, y radius=0.5*\radius];
+
+% Draw lines to the apex
+\draw (-3,0)--(0,\height);
+\draw (2.8,0.27)--(0,\height);
+\draw (1,-0.7)--(0,\height);
+\draw (2.8, -0.27)--(0,\height);
+\draw (-1,-0.7)--(0,\height);
+
+%mark radius and height
+\draw[dashed] (0,3)--(0,0)--(3,0);
+\node[right] at (0,1.5){$h$};
+\draw[fill=black] (0,0) circle (2pt);
+\node[below] at (1.5,0) {$r$};
+\end{tikzpicture}
+\end{image}
+\begin{theorem}
+The volume $V$ in cubic units of a cone whose base is a circle with radius length $r$ and whose height has length $h$ units is given by
+\[
+V = \frac13 \pi r^2 h.
+\]
+\end{theorem}
+We won't prove this theorem here and we won't ask you to explain where it comes from, but you should be able to use it like our other formulas. Similarly, here is the formula for the volume of a sphere.
+\begin{theorem}
+The volume $V$ in cubic units of a sphere whose radius measures $r$ units is given by
+\[
+V = \frac43 \pi r^3.
+\]
+\end{theorem}
+
+The Ohio Mathematics Standards have kids thinking about length formulas by grade two, area formulas starting in grade three, and volume formulas starting in grade five. More importantly than using the formulas, the standards talk about relating the formulas to the meanings of operations that kids are learning as well as connecting to the meaning of length, area, and volume. While we might not go into as much detail and depth about why the formulas make sense with kids as we have done in this section, we want you to deeply understand how all of these ideas are connected so that you are ready to teach both today's standards as well as any that come in the future. More importantly, we want you to be able to engage deeply with kids on these topics!
+
+\begin{question}
+Pause and think: in your own words, what are the connections between the meaning of area, the meaning of multiplication, and the area formulas we have discussed?
+\begin{freeResponse}
+Write some thoughts here!
+\end{freeResponse}
+\end{question}
+
+
+\end{document}

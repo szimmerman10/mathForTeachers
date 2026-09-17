@@ -1,0 +1,408 @@
+\documentclass{ximera}
+
+\input{../preamble.tex}
+
+\title{Counting And Structure}
+\author{Jenny Sheldon}
+
+\begin{document}
+
+\begin{abstract}
+We recognize when two counting problems are the same.
+\end{abstract}
+\maketitle
+
+\section{Activities for this section:} 
+\link[Counting structure]{https://ximera.osu.edu/m4t/elementaryActivities/SemesterTwoPacket/elementaryActivities/CountingProbability/CountingStructure}
+
+\section{Counting and structure}
+
+In the previous section, we really only talked about one counting problem (and let's call it the diary problem), so let's start this section by looking at a few more types of counting problems.
+
+\begin{question} {\bf The dice-rolling problem.}
+
+Raj has a die with \link[four equal sides]{https://diceenvy.com/pages/d4-dice}. This means that when he rolls the die, we are equally likely to see the number $1$, $2$, $3$, or $4$ as the result of the roll. Raj rolls this die three times. How many different three-dice rolls are possible?
+
+\begin{explanation}
+Let's start by thinking about what the question is asking. What does a three-dice roll look like? Well, Raj could roll a $2$ on the first roll, then a $3$ on the second roll, and then a $2$ on the third roll, so the three-dice roll would look like $232$. Write down a few more three-dice rolls.
+
+\begin{prompt}
+A second option: $\answer[tolerance=166.5]{277.5}$
+
+A third option:  $\answer[tolerance=166.5]{277.5}$
+\end{prompt}
+Okay. We could continue listing options, but it seems like that might take a while. Let's use a tree diagram to solve this one. 
+
+We start with the first roll, and there are $\answer[given]{4}$ options for the first roll, so we will have $\answer[given]{4}$ branches to start with. We'll draw this tree diagram vertically instead of horizontally, but you can draw it whatever way you like better.
+\begin{image}
+\begin{tikzpicture}[
+  level 1/.style={sibling distance=40mm},
+  level 2/.style={sibling distance=20mm}
+]
+
+\node {}
+  child {node {1}}
+  child {node {2}}
+  child {node {3}}
+  child {node {4}};
+  
+\end{tikzpicture}
+\end{image}
+Next, off of each of these branches, we have $\answer[given]{4}$ options, so let's draw the next level.
+\begin{image}
+\begin{tikzpicture}[
+  level 1/.style={sibling distance=80mm},
+  level 2/.style={sibling distance=20mm},
+  level 3/.style={sibling distance=5mm}
+]
+
+\node {}
+  child {node {1}
+    child {node {11}}
+    child {node {12}}
+    child {node {13}}
+    child {node {14}}
+  }
+  child {node {2}
+    child {node {21}}
+    child {node {22}}
+    child {node {23}}
+    child {node {24}}
+  }
+  child {node {3}
+    child {node {31}}
+    child {node {32}}
+    child {node {33}}
+    child {node {34}}
+  }
+  child {node {4}
+    child {node {41}}
+    child {node {42}}
+    child {node {43}}
+    child {node {44}}
+  };
+
+\end{tikzpicture}
+\end{image}
+Finally, we have the third roll, so off of each of these branches we need $\answer[given]{4}$ more branches.
+\begin{image}
+\begin{tikzpicture}[
+  level 1/.style={sibling distance=120mm},
+  level 2/.style={sibling distance=30mm},
+  level 3/.style={sibling distance=5mm},
+  level 4/.style={sibling distance=7mm}
+]
+
+\node {Root}
+  child {node {1}
+    child {node {11}
+      child {node {111}}
+      child {node {112}}
+      child {node {113}}
+      child {node {114}}
+    }
+    child {node {12}
+      child {node {121}}
+      child {node {122}}
+      child {node {123}}
+      child {node {124}}
+    }
+    child {node {13}
+      child {node {131}}
+      child {node {132}}
+      child {node {133}}
+      child {node {134}}
+    }
+    child {node {14}
+      child {node {141}}
+      child {node {142}}
+      child {node {143}}
+      child {node {144}}
+    }
+  }
+  child {node {2}
+    child {node {21}
+      child {node {211}}
+      child {node {212}}
+      child {node {213}}
+      child {node {214}}
+    }
+    child {node {22}
+      child {node {221}}
+      child {node {222}}
+      child {node {223}}
+      child {node {224}}
+    }
+    child {node {23}
+      child {node {231}}
+      child {node {232}}
+      child {node {233}}
+      child {node {234}}
+    }
+    child {node {24}
+      child {node {241}}
+      child {node {242}}
+      child {node {243}}
+      child {node {244}}
+    }
+  }
+  child {node {3}
+    child {node {31}
+      child {node {311}}
+      child {node {312}}
+      child {node {313}}
+      child {node {314}}
+    }
+    child {node {32}
+      child {node {321}}
+      child {node {322}}
+      child {node {323}}
+      child {node {324}}
+    }
+    child {node {33}
+      child {node {331}}
+      child {node {332}}
+      child {node {333}}
+      child {node {334}}
+    }
+    child {node {34}
+      child {node {341}}
+      child {node {342}}
+      child {node {343}}
+      child {node {344}}
+    }
+  }
+  child {node {4}
+    child {node {41}
+      child {node {411}}
+      child {node {412}}
+      child {node {413}}
+      child {node {414}}
+    }
+    child {node {42}
+      child {node {421}}
+      child {node {422}}
+      child {node {423}}
+      child {node {424}}
+    }
+    child {node {43}
+      child {node {431}}
+      child {node {432}}
+      child {node {433}}
+      child {node {434}}
+    }
+    child {node {44}
+      child {node {441}}
+      child {node {442}}
+      child {node {443}}
+      child {node {444}}
+    }
+  };
+
+\end{tikzpicture}
+\end{image}
+We're convinced that we wrote down all of the options, because we proceeded in an orderly fashion: we started with every possible option for the first roll, then recorded every possible option for the second roll off of each option for the first roll, and repeated this again for the third roll.
+
+To find the total number of three-dice rolls, we can count all of the options at the bottom of the tree diagram.
+
+
+So, the total number of three-dice rolls is $\answer[given]{64}$.
+
+Notice that we could have gotten the same answer by calculating $\answer[given]{4} \times \left ( \answer[given]{4} \times \answer[given]{4} \right)$ using the first branches to designate the big groups, the second branches to designate the subgroups, and the three-dice rolls in each subgroup as our objects per subgroup.
+
+
+\end{explanation}
+\end{question}
+
+
+\begin{question}
+Let's check whether or not the previous explanation made sense: if Raj has a die with $6$ equal sides and rolls it four times, how many different four-dice rolls are possible?
+
+\begin{prompt}
+$\answer{1296}$ four-dice rolls.
+\end{prompt}
+\end{question}
+
+
+
+Here's our second of three examples.
+\begin{question}{\bf The game setup problem.}
+
+Four members of a family would like to play a game made for three players. The family needs to decide which people will play as well as the order in which the players will play. To decide all of this fairly, the names of the people (we'll call them $A$, $B$, $C$, and $D$) are placed in a bag on slips of paper, and then the youngest person draws out three slips, one at a time. The first slip pulled out will go first, the second slip pulled out will go second, and the third slip pulled out will go fourth. How many orders of three names are possible in this scenario?
+
+\begin{explanation}
+Again, let's start by looking at some possible orders. We could have $A$ chosen first, then $C$, then $D$ for an order of $ACD$. We could choose $B$, then $A$, then $C$ for an order of $BAC$. Or, we could choose $C$, then $A$, then $B$ for an order of $\answer[given]{CAB}$. Notice that $BAC$ and $CAB$ are different options, here: I'm guessing that there's some advantage to going first (since that's true for most games), so person $B$ has a different experience playing the game if they go first rather than third.
+
+Let's solve this one by making a table. Let's place all of the options where $A$ goes first in the first column, and make our list by considering $A$ then $B$, and then $A$ then $C$, and then $A$ then $D$. Then, we'll follow the same pattern for the $B$ column, the $C$ column, and the $D$ column.
+\begin{image}
+\begin{tabular}{|c|c|c|c|} \hline
+ABC & BAC & $\answer[given]{CAB}$ & DAB \\ \hline
+ABD & $\answer[given]{BAD}$ & CAD & DAC \\ \hline
+ACB & BCA & CBA & $\answer[given]{DBA}$ \\ \hline
+ACD & BCD & CBD & $\answer[given]{DBC}$ \\ \hline
+ADB & $\answer[given]{BDA}$ & CDA & DCA \\ \hline
+$\answer[given]{ADC}$ & BDC & $\answer[given]{CDB}$ & DCB \\ \hline
+\end{tabular}
+\end{image}
+
+We are confident that we got all of the options because of the organized way in which we made our list: all of the $AB$ options, then all of the $AC$ options, and so on. We didn't leave out any starting with $A$, and then we repeated this process for $B$, $C$, and $D$.
+
+
+So, the total number of orders for playing the game is $\answer[given]{24}$.
+ 
+Notice that we could have gotten the same answer by calculating $\answer[given]{4} \times \left ( \answer[given]{3} \times \answer[given]{2} \right )$. It might help to think about a tree diagram to see the groups and objects per group, here: there are four possible first branches for the initial groups, then off of each branch would be three branches for the subgroups, and then finally two game-playing orders inside each subgroup.
+\end{explanation}
+\end{question}
+
+\begin{question}
+Let's check whether or not the previous explanation made sense: if a different family has $7$ members, and $4$ of them are going to play the game, how many different orders of four names are possible?
+
+\begin{prompt}
+$\answer{840}$ game-playing scenarios are possible.
+\end{prompt}
+\end{question}
+
+Here is our third new example. 
+\begin{question}
+{\bf The party prizes problem.}
+
+Harold is planning a party where $4$ people will be invited. There will be three games at the party, and so Harold will hand out a prize to each game winner. The people attending the party won't be eligible to earn prizes more than once, and the three prizes are all the same. How many ways are there to give out the three prizes at the party?
+
+\begin{explanation}
+As is hopefully becoming a habit, let's look at some examples of ways to give out the prizes before we start. Let's name the people with the letters $A$, $B$, $C$, and $D$. So, we could give a prize to person $A$, person $B$, and person $C$ and we could list this outcome as $ABC$. Or we could give a prize to person $A$, person $C$, and person $D$ and we could list this outcome as $\answer[given]{ACD}$. 
+
+In this case, is there a difference between $ABC$ and $CBA$? Perhaps there are different bragging rights for the different games at the party, but the question is really just about who gets prizes. And in the situation $ABC$, the three people listed get prizes, and person $D$ doesn't. In the situation $CBA$, it's still person $A$, person $B$, and person $C$ who get prizes (and still person $D$ who doesn't). So in light of what we are trying to count, $ABC$ and $CBA$ really represent the same distribution of prizes. We don't want to count both of them!
+
+To solve this problem, let's just make an ordered list. As usual, we'll start by listing the possibilities for $A$, then for $B$, then for $C$ and finally for $D$. For $A$, we have the following.
+\[
+ABC, ABD, ACD
+\]
+This is really all of our choices for if $A$ gets a prize! We are sure we didn't miss any because we started out with $A$ then $B$ (so $C$ and $D$ are options) and then we went to $A$ and $C$. We didn't want to write down $ACB$ because this was already written down as $ABC$, so the only one we were left with was $ACD$. Writing the letters in alphabetical order means that we won't accidentally write down the same option twice. Then $A$ with $D$ is already taken care of, because we've already written down $ABD$ and $ACD$. Next, what if $B$ gets a prize (and $A$ doesn't, since we've already written down all of the options with $A$)? We have the following.
+\[
+BCD
+\]
+That's it! Since we can't write down any $A$'s, this is the only thing to write down for $B$. If we tried to start with $C$ and write only in alphabetical order, we wouldn't have enough letters to make three prize winners, so we are convinced we got all of the possible options.
+
+
+So, the total number of ways to give out the prizes is $\answer[given]{4}$. Notice that we could also find this answer by calculating, but we'll need more than just a single operation to find the answer. Here's one way to do it. 
+
+We can start by writing down all of the possible options for $A$, $B$, $C$, and $D$, not paying attention to whether they are in alphabetical order or not. (So, some of these will not be solutions, and we need to get rid of the repeats in our list.) We did this in the game setup problem, so you can look back at our list of $24$ entries, which we also calculated by taking $4 \times (3 \times 2)$. 
+
+Now, we need to get rid of the repeats. When we say ``get rid of'', that sounds a lot like subtraction, but it's going to actually be easier in this case to group up the repeats. How many repeats of $ABC$ are there in the table above? If you count them carefully, you will see $\answer[given]{6}$ ways to write $ABC$: $ABC$, $ACB$, $BAC$, $BCA$, $CAB$, and $CBA$. What about the repeats of $BCD$? We still find $\answer[given]{6}$ ways of writing these three people. In fact, with any group of three people, we can imagine writing all three of them down by using a tree diagram: there are $3$ branches for the first person, there are $2$ branches off of each of those for the second person (since the first can't be chosen again), and then there's $1$ branch off of each of those for the final person chosen. This is a total of $3 \times \left ( \answer[given]{2} \times 1 \right ) = 6$ choices for each group of three people. 
+
+So: when we look at the total of $24$ entries (including the repeats), we are really asking: how many groups of $6$ can we make from these $24$ options? And when we ask ``how many groups?'' we use \wordChoice{\choice{addition} \choice{subtraction} \choice{multiplication} \choice[correct]{division}} to find our answer.
+
+\[
+24 \textrm{ total entries } \div 6 \textrm{ choices per group } = 4 \textrm{ groups of people }
+\]
+The groups are a little complicated to describe, here, so you could circle one of them on the grid of $24$ entries, or we could perhaps describe each group as a unique collection of people. In other words, the $ABC$ group would have all the entries for person $A$, person $B$, and person $C$. One object here is one ordering of three people, like $ABC$ or like $CBA$.
+\end{explanation}
+
+\end{question}
+
+\begin{question}
+Let's check whether or not the previous explanation made sense: Harold throws a different party and eight people attend. The people can still win only one game, but this time there are two identical prizes. How many ways are there to give out the two prizes amongst $8$ people?
+
+\begin{prompt}
+\begin{hint}
+Each group of people can be written in two different ways in this case. For example, $AB$ and $BA$ are the same group of people. Think about how that affects the division you need to do!
+\end{hint}
+There are $\answer{28}$ ways to give out the prizes.
+
+\end{prompt}
+\end{question}
+
+
+
+
+\section{Recognizing structure}
+
+Now that we've solved a few more problems, we are ready for the point of this section, which is to add another strategy to our list of strategies for solving counting problems. This new strategy we will call \dfn{recognizing the structure of a problem}, and what we really mean by this is recognizing when two problems are the same except for the numbers. If we have already solved a particular kind of problem, and then we find ourselves faced with the same problem again, we can refer back to the previous problem and use the same strategy to solve it. Let's see how this works with an example.
+
+\begin{question}{\bf The emojis problem.}
+
+A kindergarten teacher has five emojis on her wall that she uses to help kids describe how they are feeling each day: A grinning face, a slightly smiling face, a neutral face, a slightly frowning face, and a crying face. There are twelve kids in the classroom right now (more are coming later, but we won't worry about them), and the teacher asks each kid to pick their emoji for the day. How many combinations of emojis are possible amongst the twelve students?
+
+\begin{explanation}
+This problem is exactly like the \wordChoice{\choice[correct]{dice-rolling problem} \choice{game setup problem} \choice{party prizes problem}}, but it has different numbers. In other words, these two problems have the same {\bf structure}. Let's see why that's the case.
+
+In the dice-rolling problem, we had four different options for the dice, and in this problem we have five different emojis that are possible. So, in this case, the numbers on the dice are playing the same role is the emojis. When we rolled the dice, whichever number came up is like picking one of the emojis.
+
+The rolls of the dice in the dice-rolling problem are like the \wordChoice{\choice{teacher} \choice[correct]{students} \choice{emojis}} in the emojis problem. Each roll comes up with one number, and each student comes up with one emoji. It's important to notice that each roll could come up with the same number when we roll the dice (things like $111$ were possible), and each student could come up with the same emoji (in the rare event that everyone in the class feels the same about their day so far).
+
+We've now matched up each part of the dice-rolling problem with each part of the emojis problem, so we know that we can solve them in the same way. We solved the dice-rolling problem by multiplying the number of options for the die together the number of times that we rolled: $4$ options multiplied together $3$ times: $4 \times 4 \times 4 = 4^3$. This means we can solve the emojis problem using the same strategy. There are $\answer[given]{5}$ options for the emojis, and we need to multiply this together once for each student, so we will multiply this together $\answer[given]{12}$ times.
+
+
+
+So, the total number of emojis possible is $\answer[given]{5^{12}}$. (Notice that you should be able to write your answer using algebra or by calculating the final value! Use the method that's easiest for you.)
+
+\end{explanation}
+\end{question}
+
+You've already done this a few times as we went through the beginning of the section: after each example problem, you solved another problem that had the same structure, but different numbers. However, in the first section the problems were more obviously the same. This section should point out to you that the problems can look very different from the ones we've modeled, but still have the same structure. Also, keep in mind that these three structures aren't the only ones that are possible! These three are common, but please be on the lookout for more!
+
+\begin{question}
+Pause and think: what are the characteristics of each of the three problems we discussed at the beginning of this section? What characteristics will you use to recognize each type if you see it in a different scenario?
+\begin{freeResponse}
+Write your thoughts here!
+\end{freeResponse}
+\end{question}
+
+Recognizing the structure of a problem as something we have solved before is a very useful technique in counting problems, but it's also really useful in mathematics in general. As you talk with kids about mathematics, it can be very helpful for their development to be able to point out how problems are the same and how problems are different. I hope that practicing with these counting problems can help you see how to look for these similarities with other problems as well!
+
+
+\section{Permutations and combinations}
+
+There are two particular problem structures that have fancy names, so we will finish up this section by talking about these fancy names and how to recognize them. We don't need you to use these fancy names if you don't want to! You can keep referring to problems by the names we give them together in class (like the dice-rolling problem), but in case you have heard about these types of problems before, we wanted to give you the opportunity to connect what you might already know with what we have done here. But again, if adding extra vocabulary is just adding too much to what you are learning right now, please feel free to save this section for after you are feeling more comfortable with structure in general.
+
+The structure of the game setup problem is often called a \dfn{permutation} problem. We could also describe the structure of a permutation as follows.
+\begin{itemize}
+\item All of the items are chosen from the same set (ie the family members all came from the same family).
+\item We choose the items without replacement, or we can't chose the same item twice. (In other words, no family member could occupy two positions in the game.)
+\item We count every arrangement of the final items, or some people say ``the order matters''. (In the family situation, this meant we counted both $ABC$ and $CBA$ as different items.)
+\end{itemize}
+
+We can use the notation $nPk$ to denote the solution of permutation where the original set has $n$ items in it, and the number of items we are choosing from that set is $k$. For instance, the game setup problem has the solution $4P3$ because there are $4$ people in the family and we are choosing $3$ to play the game.
+
+We can evaluate $nPk$ by multiplying $n (n-1)(n-2) \dots (n-(k-1))$ so that there are $k$ factors all multiplied together and each factor decreases by $1$. In other words, $4P3 = 4 \cdot 3 \cdot 2 = 24$, as we found. If we want to write this using really fancy notation, we can use a factorial.
+\begin{definition}
+We calculate $n$ factorial (written $n!$) by multiplying
+\[
+n \cdot (n-1) \cdot (n-2) \cdot \dots \cdot 3 \cdot 2 \cdot 1.
+\]
+\end{definition}
+Then, we could write
+\[
+nPk = \frac{n!}{(n-k)!}.
+\]
+
+The structure of the party prizes problem is often called a \dfn{combination}. We could also describe the structure of a combination as follows.
+\begin{itemize}
+\item All of the items are chosen from the same set (ie the people to whom we gave the prizes came from the same set).
+\item We choose the items without replacement, or we can't chose the same item twice. (In other words, no person  could win two prizes.)
+\item We count  arrangements of the final items so that we don't count rearrangements of the same items. Some people say ``the order doesn't matter''. (In the party prizes situation, this meant we did not count both $ABC$ and $CBA$ as different items, but instead considered them the same outcome of giving out the prizes.)
+\end{itemize}
+
+We can use the notation $nCk$ to denote the solution of a permutation, where the original set has $n$ items in it, and the number of items we are choosing from that set is $k$. For instance, the party prizes situation has the solution $4C3$ because there are $4$ people attending the party and $3$ prizes that we are giving out. 
+
+We can evaluate $nCk$ by multiplying $n (n-1) (n-2) \dots (n-(k-1))$ and then dividing that result by $k (k-1) (k-2) \dots 1$. Using the fancy factorial notation, this could be written as follows.
+\[
+nCk = \frac{n!}{(n-k)! k!}
+\]
+This formula looks complicated, but notice that it's the same as
+\[
+nCk = \frac{nPk}{k!}
+\]
+or, in other words, we can calculate $nCk$ by dividing $nPk$ by the number of ways to rearrange the elements of each individual item. 
+
+
+For the example of the party prizes problem, $4C3$ could be calculated as follows.
+\[
+4C3 = \frac{4!}{1!3!} =\frac{4 \times 3 \times 2 \times 1}{1 \times 3 \times 2 \times 1} =  \frac{4 \times 3 \times 2}{3 \times 2 \times 1} = 4
+\]
+The first fraction represents the fancy notation. In the second fraction, we've replaced the factorial exclamation point with the meaning of that notation. The third fraction is more like what we actually calculated in order to solve the problem, and represents what's left after we cancel some things from the second fraction.
+
+
+
+
+\end{document}

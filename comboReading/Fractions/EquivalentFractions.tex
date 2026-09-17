@@ -1,0 +1,175 @@
+\documentclass{ximera}
+
+\input{../preamble.tex}
+
+
+\title{Equivalent Fractions}
+\author{Jenny Sheldon}
+
+\begin{document}
+
+\begin{abstract}
+We explain why we make equivalent fractions the way we do.
+\end{abstract}
+\maketitle
+
+
+
+
+
+\section{Equivalent fractions}
+
+In the problems we have been working on, we have already seen how changing what we identify as the whole can change the fraction we are working with even when the part stays the same. For example, we can use the same picture to show $\frac{3}{2}$ of a rectangle and $\frac{3}{4}$ of two rectangles. The fractions are different and the wholes are different. But perhaps you have also noticed that we can represent the same quantity with different-looking fractions even when the wholes are the same. For example, $\frac{3}{2}$ of a rectangle is the same quantity as $\frac{6}{4}$ of the same rectangle.
+
+\begin{definition}
+Two fractions are called \dfn{equivalent} if they represent the same {\bf part} of the same {\bf whole}. In other words, the two fractions have the same value, or would be placed in the same location on a number line.
+\end{definition}
+
+Let's take a look at a couple of different examples of this idea.
+
+\begin{example}
+Consider a cup of sugar. Let's represent the entire cup of sugar in several different ways.
+
+First, our whole in this case is the cup of sugar. Let's draw it with a rectangle.
+
+\begin{image} \begin{tikzpicture}
+\draw[thick, fill=cyan] (0,0)--(12,0)--(12,1)--(0,1)--(0,0);
+\node[below] at (6,0) {one cup of sugar (whole)};
+\end{tikzpicture}\end{image}
+
+We can already write this cup of sugar as a fraction. The denominator tells us how many equal pieces the whole is cut into, which in this case is $\answer[given]{1}$. The numerator tells us how many copies of one piece we want, and in this case that is also $\answer[given]{1}$. So we can write the full cup of sugar as $\frac{1}{1}$ of a cup of sugar.
+
+But we could also divide the cup of sugar into, say, three equal pieces without changing the whole or changing the shaded part. Let's re-draw the same picture, but with additional subdivisions.
+
+\begin{image} \begin{tikzpicture}
+\draw[thick, fill=cyan] (0,0)--(12,0)--(12,1)--(0,1)--(0,0);
+\foreach \x in {4, 8} \draw[thick] (\x, 0)--(\x,1);
+\node[below] at (6,0) {one cup of sugar (whole)};
+\end{tikzpicture}\end{image}
+
+Now how could we write the fraction? The denominator should be $\answer[given]{3}$, because that's how many equal pieces the whole is cut into, and the numerator should be $\answer[given]{3}$, because that's how many equal pieces are shaded. So we can write the full cup of sugar as $\frac{3}{3}$ of a cup of sugar.
+
+Let's do one more. What if we cut each of the pieces into two equal pieces again, so that now there are $6$ pieces total? Re-draw the same picture again, but with the additional cuts made with dashed lines.
+
+\begin{image} \begin{tikzpicture}
+\draw[thick, fill=cyan] (0,0)--(12,0)--(12,1)--(0,1)--(0,0);
+\foreach \x in {4,  8} \draw[thick] (\x, 0)--(\x,1);
+\foreach \x in {2, 6, 10} \draw[thick, dashed] (\x, 0)--(\x, 1);
+\node[below] at (6,0) {one cup of sugar (whole)};
+\end{tikzpicture}\end{image}
+
+The denominator is now $\answer[given]{6}$, and the numerator is now $\answer[given]{6}$, so we can also write this fraction as $\frac{6}{6}$ of a cup of sugar. 
+
+Each of these represents the same amount of sugar with regard to the same whole (one cup of sugar), so these fractions are equivalent. Often we write equivalent fractions with an equals sign between them, so we have that
+\[
+\frac{1}{1} \textrm{ of a cup of sugar } = \frac{3}{3} \textrm{ of a cup of sugar } = \frac{6}{6} \textrm{ of a cup of sugar. }
+\]
+
+\end{example}
+
+\begin{question}
+What is another fraction we could use to represent the entire cup of sugar above?
+
+\begin{prompt}
+	$\answer{\frac{12}{12}}$
+\end{prompt}
+\end{question}
+
+We can also consider equivalent fractions when the shaded region is not the same as the entire whole.
+
+\begin{example}
+Let's find a few fractions which are equivalent to the fraction $\frac{2}{3}$. Let's start with a whole, which will be a rectangle in this case. 
+
+\begin{image} \begin{tikzpicture}
+	\draw[thick, fill=magenta] (0,0)--(8,0)--(8,2)--(0,2)--(0,0);
+	\draw[thick] (8,0)--(12,0)--(12,2)--(8,2);
+	\node[below] at (6,0) {our whole};
+	\foreach \x in {4} \draw[thick] (\x,0)--(\x,2);
+\end{tikzpicture} \end{image}
+
+Our definition of equivalent fractions says that we need to keep the same whole and the same shaded part, but that we can change how those are cut. So, let's cut each of our pieces into two equal pieces. We'll used dashed lines to see these new cuts in our original picture.
+
+\begin{image} \begin{tikzpicture}
+	\draw[thick, fill=magenta] (0,0)--(8,0)--(8,2)--(0,2)--(0,0);
+	\draw[thick] (8,0)--(12,0)--(12,2)--(8,2);
+	\node[below] at (6,0) {our whole};
+	\draw[thick] (4,0)--(4,2);
+	\foreach \x in {2, 6, 10} \draw[thick, dashed] (\x,0)--(\x,2);
+\end{tikzpicture} \end{image}
+
+We count the number of equal pieces in the whole to find our denominator, and we find a total of $\answer[given]{6}$ pieces. We count the number of shaded pieces to find our numerator, and we count $\answer[given]{4}$ pieces. So now we know that 
+\[
+\frac{2}{3} \textrm{ of the rectangle } = \frac{\answer[given]{4}}{\answer[given]{6}} \textrm{ of the rectangle.}
+\]
+The whole and the part did not change, so these two fractions represent the same value and are equivalent.
+
+
+This isn't the only fraction we could make, however. Let's erase the dashed lines and cut the pieces again, but this time into three equal pieces each. Remember: we're still working with the same picture. We've just marked some more lines.
+
+\begin{image} \begin{tikzpicture}
+	\draw[thick, fill=magenta] (0,0)--(8,0)--(8,2)--(0,2)--(0,0);
+	\draw[thick] (8,0)--(12,0)--(12,2)--(8,2);
+	\node[below] at (6,0) {our whole};
+	\draw[thick] (4,0)--(4,2);
+	\foreach \x in {1.333, 2.666, 5.333, 6.666, 9.333, 10.666} \draw[thick, dashed] (\x,0)--(\x,2);
+\end{tikzpicture} \end{image}
+
+Using our meaning of fractions again, we now see that 
+
+\[
+\frac{2}{3} \textrm{ of the rectangle } = \frac{\answer[given]{6}}{\answer[given]{9}} \textrm{ of the rectangle.}
+\]
+
+There are many more such examples!
+\end{example}
+
+\begin{question}
+	Imagine that you draw a picture of $\frac{2}{3}$ of a rectangle, and then cut each of the $3$ equal pieces into $10$ equal pieces. What equivalent fraction would you get?
+	
+	\[
+\frac{2}{3} \textrm{ of the rectangle } = \frac{\answer[given]{20}}{\answer[given]{30}} \textrm{ of the rectangle.}
+\]
+\end{question}
+
+Notice that we can both cut our equal pieces into more smaller equal pieces, and we can fuse them back together into fewer bigger equal pieces. We are really emphasizing that these pieces must all be equally sized! For instance, start with the fraction $\frac{4}{6}$. Here is the same picture we drew earlier.
+
+\begin{image} \begin{tikzpicture}
+	\draw[thick, fill=magenta] (0,0)--(8,0)--(8,2)--(0,2)--(0,0);
+	\draw[thick] (8,0)--(12,0)--(12,2)--(8,2);
+	\node[below] at (6,0) {our whole};
+	\draw[thick] (4,0)--(4,2);
+	\foreach \x in {2, 6, 10} \draw[thick, dashed] (\x,0)--(\x,2);
+\end{tikzpicture} \end{image}
+
+We can think of erasing the dashed lines, turning every two pieces into one single piece, or fusing two pieces together.
+
+\begin{image} \begin{tikzpicture}
+	\draw[thick, fill=magenta] (0,0)--(8,0)--(8,2)--(0,2)--(0,0);
+	\draw[thick] (8,0)--(12,0)--(12,2)--(8,2);
+	\node[below] at (6,0) {our whole};
+	\foreach \x in {4} \draw[thick] (\x,0)--(\x,2);
+\end{tikzpicture} \end{image}
+
+This would leave us with the fraction $\frac{2}{3}$ of the rectangle again. But with $\frac{2}{3}$ of the rectangle, we don't have another way to fuse pieces together that would still give us equal pieces when we are finished without needing to use decimal numbers, so the fraction $\frac{2}{3}$ is in \dfn{lowest terms}. Another way to say this is that since $2$ and $3$ don't have any factors in common, we can't reduce it any farther.
+
+Kids in grades 3 and 4 begin to think about equivalent fractions with examples like the previous examples in this section, using the meaning of fractions and counting the pieces involved. In grade 5 and later, kids begin to think about more advanced ways to make equivalent fractions using multiplication.  
+
+\begin{theorem}
+	The following fractions are equivalent for any number $N$.
+	\[
+	\frac{A}{B} = \frac{A \times N}{B \times N} = \frac{A}{B} \times \frac{N}{N}.
+	\]
+\end{theorem}
+
+
+We haven't talked about multiplication yet, so we aren't ready to justify either of these formulas. For now, practice explaining your thinking based on the meaning of equivalent fractions and counting the pieces like we did in the previous examples.
+
+
+
+\end{document}
+
+
+
+
+
+

@@ -1,0 +1,337 @@
+\documentclass{ximera}
+
+\input{../preamble.tex}
+
+
+\title{Multiplication and fractions}
+\author{Jenny Sheldon}
+
+\begin{document}
+
+\begin{abstract}
+We explore how multiplication and fractions are connected.
+\end{abstract}
+\maketitle
+
+
+
+
+
+
+\section{Multiplication and equivalent fractions}
+
+When we talked about making equivalent fractions, we stated a rule for when two fractions are equivalent. Here we will work with whole numbers $A$, $B$, and $N$. In that case, we have the following.
+\[
+\frac{A}{B} = \frac{A \times N}{B \times N}
+\]
+When we first stated this rule, we hadn't talked about multiplication, and so we weren't ready to justify it. So, let's return to this idea as a warm-up for some of the ideas later in this section.
+
+\begin{example}
+Use the meaning of fractions and the meaning of multiplication to explain why $\frac{5}{7} = \frac{5 \times 3}{7 \times 3}$. 
+
+Of course, our definition of fractions starts with a whole, and we will use a rectangle in this case. We'll begin by drawing our whole. 
+
+\begin{image}
+\begin{tikzpicture}
+\draw[thick] (0,0) rectangle (7, 2);
+\node[below] at (3.5, 0) {our whole};
+\end{tikzpicture}
+\end{image}
+In our definition of fractions, the denominator tells us how many equal pieces to cut the whole into, so in this case we cut it into $\answer[given]{7}$ equal pieces, and each of these pieces is what we mean by $\frac{1}{7}$ of our whole. 
+
+\begin{image}
+\begin{tikzpicture}
+\draw[thick] (0,0) rectangle (7, 2);
+\node[below] at (3.5, 0) {our whole};
+\foreach \x in {1, 2, ..., 6} \draw[thick] (\x, 0)--(\x, 2);
+\end{tikzpicture}
+\end{image}
+Finally, the meaning of the numerator is the number of $\frac{1}{7}$-sized pieces we want to shade, so in this case we will shade $\answer[given]{5}$ of our equal pieces. 
+
+\begin{image}
+\begin{tikzpicture}
+\draw[fill=lime] (0,0) rectangle (5, 2);
+\draw[thick] (0,0) rectangle (7, 2);
+\node[below] at (3.5, 0) {our whole};
+\foreach \x in {1, 2, ..., 6} \draw[thick] (\x, 0)--(\x, 2);
+\end{tikzpicture}
+\end{image}
+This shaded region is now $\frac{5}{7}$ of our rectangle. But we want to show that this shaded region is also $\frac{5 \times 3}{7 \times 3}$ of our rectangle. Let's start with the denominator.  According to our meaning of multiplication, $7 \times 3$ means that we want to have $\answer[given]{7}$ equal groups, with $\answer[given]{3}$ objects in each full group. When we look at our picture, we could think of one group as one of the $7$ pieces we cut our whole into. We can cut each of our original $7$ pieces into $\answer[given]{3}$ mini pieces, to get $7$ groups of $3$ mini pieces, where one mini piece is one object. Now the total number of mini pieces in our whole would be given by $7 \times 3$, or in other words our new denominator would be $7 \times 3$. Let's cut the pieces in our picture using dashed lines.
+
+\begin{image}
+\begin{tikzpicture}
+\draw[fill=lime] (0,0) rectangle (5, 2);
+\draw[thick] (0,0) rectangle (7, 2);
+\node[below] at (3.5, 0) {our whole};
+\foreach \x in {1, 2, ..., 6} \draw[thick] (\x, 0)--(\x, 2);
+\foreach \x in {0.33, 0.66, 1.33, 1.66, 2.33, 2.66, 3.33, 3.66, 4.33, 4.66, 5.33, 5.66, 6.33, 6.66} \draw[thick, dashed] (\x, 0)--(\x, 2);
+\end{tikzpicture}
+\end{image}
+What will the numerator be? When we look at the shaded mini pieces, we could count them and see that there are $\answer[given]{15}$. Or, we could organize these mini pieces into groups. We have $\answer[given]{5}$ groups of mini pieces, where one group is one of the original pieces. And we have $\answer[given]{3}$ mini pieces in each of these groups, so one object is one mini piece. In other words, we can count the total number of shaded mini pieces by using $5 \times 3$. Since the numerator is the total number of shaded pieces, we now know the numerator is $5 \times 3$. This means we can express our fraction as $\frac{5 \times 3}{7 \times 3}$ of the rectangle. Since we started from a picture of $\frac{5}{7}$ of the rectangle and didn't change the whole or the shaded region, we know that these two fractions are equivalent.
+\[
+\frac{5}{7} = \frac{5 \times 3}{7 \times 3}
+\]
+
+\end{example}
+
+While we worked through the previous example with specific numbers, we hope that you can see a general pattern here. We start with a fraction $\frac{A}{B}$ and cut each of its equal pieces into $N$ smaller mini pieces. Looking at the entire rectangle, we have created $B$ groups with $N$ mini pieces in each group, so the new denominator is $B \times N$ according to our definition of multiplication. And the original $A$ shaded pieces also act as $A$ groups, with $N$ smaller mini pieces in each group. So the number of shaded pieces, or the numerator, becomes $A \times N$. The rule for making equivalent fractions comes from our meanings of fractions and multiplication.
+
+\section{Multiplying fractions}
+
+Other than our work with decimals in the previous section, all of our work with multiplication so far has been using whole numbers. Many of the meanings of multiplication that we discussed in the opening section only really make sense for whole numbers. One of the advantages of the groups-and-objects meaning of multiplication is that we can use it with any numbers that we like. So, let's take a look at an example where we multiply two fractions together. 
+
+\begin{example}
+Consider the following story problem. 
+
+\emph{Salim is baking a cake where the recipe calls for $\frac{3}{8}$ of a cup of cocoa powder. However, Salim wants to make only $\frac{2}{5}$ of this recipe for a small party of friends. How much cocoa will Salim need for the smaller batch?}
+
+Let's explain why this story can be solved with multiplication. Our meaning of multiplication says that $A \times B$ means the total number of objects when we have $A$ groups with $B$ objects in each full group. What would we like to use for our objects in this story? We have two different wholes in this problem: the recipe and the cup of cocoa. The question is asking us for how much cocoa Salim will need, and the cocoa is measured using the cup as a whole. So, if we want to find this total using multiplication, we must use the cup of cocoa for our object. In other words, one object is \wordChoice{\choice{one recipe} \choice[correct]{one cup of cocoa} \choice{all the cake} \choice{the friends}}. Then let's take one group to be \wordChoice{\choice[correct]{one recipe} \choice{one cup of cocoa} \choice{all the cake} \choice{the friends}}. Let's check to make sure this makes sense with our meaning of multiplication.
+
+\begin{image}
+\begin{tikzpicture}
+\node at (0, 3) {$A$};
+\node at (2, 3) {$\times$};
+\node at (4, 3) {$B$};
+\node at (6, 3) {$=$};
+\node at (8, 3) {$C$};
+\node at (0, 2) {\# of groups};
+\node at (4, 2) {\# of objects in one group};
+\node at (8, 2) {total \# of objects};
+\node at (0, 1) {\# of recipes};
+\node at (4, 1) {\# of cups in one recipe};
+\node at (8, 1) {total \# of cups};
+\end{tikzpicture}
+\end{image}
+This selection of one object and one group matches up with both the story situation and our meaning of multiplication, so it must be correct. Now we need to know how many groups we have and how many objects in one full group. Let's look at the objects first: we have $\answer[given]{\frac{3}{8}}$ of a cup of cocoa in one full recipe.  Next, we know that one group is one recipe, so that the number of groups is the number of recipes we are trying to make, which in this problem is $\answer[given]{\frac{2}{5}}$. So, we can fill in these numbers for $A$ and $B$.
+
+\begin{image}
+\begin{tikzpicture}
+\node at (0, 3) {$A$};
+\node at (2, 3) {$\times$};
+\node at (4, 3) {$B$};
+\node at (6, 3) {$=$};
+\node at (8, 3) {$C$};
+\node at (0, 2) {$\frac{2}{5}$};
+\node at (2, 2) {$\times$};
+\node at (4, 2) {$\frac{3}{8}$};
+\node at (6, 2) {$=$};
+\node at (8, 2) {$?$};
+\node at (0, 1) {\# of recipes};
+\node at (4, 1) {\# of cups in one recipe};
+\node at (8, 1) {total \# of cups};
+\end{tikzpicture}
+\end{image}
+\end{example}
+
+Deciding what you would like to use for the groups and objects per group in a fraction multiplication problem takes practice. Any time you work out a problem like this, be sure to write some notes for yourself to help you remember how you made your choices. 
+
+\begin{question}
+What did you notice about how we chose the groups and objects in the previous example?
+\begin{freeResponse}
+Jot down a few thoughts!
+\end{freeResponse}
+\end{question}
+
+Next, let's see how to solve this problem with a picture. This solution should feel a little familiar, since we have been solving similar problems since we started thinking about fractions. The key, as with many fraction problems, is to pay attention to what we are using as the whole at each stage of the problem.
+
+\begin{example}
+Consider the following story problem. 
+
+\emph{Salim is baking a cake where the recipe calls for $\frac{3}{8}$ of a cup of cocoa powder. However, Salim wants to make only $\frac{2}{5}$ of this recipe for a small party of friends. How much cocoa will Salim need for the smaller batch?}
+
+As we've already discussed, we have two different wholes in this problem: the recipe and the cup of cocoa. To solve this particular problem, we need to take $\frac{2}{5}$ of what we need for our recipe, so let's start by drawing the amount needed for one recipe, or $\frac{3}{8}$ of a cup of cocoa. To draw $\frac{3}{8}$ of a cup of cocoa, we start with our whole, which is \wordChoice{\choice{8} \choice{3} \choice{one recipe} \choice[correct]{one cup}}. We will use the meaning of the denominator to cut our whole into $\answer[given]{8}$ equal pieces, and then use the meaning of the numerator to shade $\answer[given]{3}$ pieces. Let's draw this.
+
+\begin{image}
+\begin{tikzpicture}
+\draw[fill={rgb,255:red,137; green,206; blue,0}] (0,0) rectangle (1.5, 2.5);
+\draw[thick] (0,0) rectangle (4, 2.5);
+\foreach \x in {0.5, 1, ..., 3.5} \draw[thick] (\x, 0)--(\x, 2.5);
+\node[below] at (2,0) {one cup};
+\node[above] at (0.75, 2.5) {$\frac{3}{8}$ cup or 1 recipe}; 
+\end{tikzpicture}
+\end{image}
+
+Now, we need to change our whole to look just at the recipe. Let's draw that whole, changing the lines to dotted lines. 
+
+\begin{image}
+\begin{tikzpicture}
+\draw[thick, fill={rgb,255:red,137; green,206; blue,0}] (0,0) rectangle (1.5, 2.5);
+\foreach \x in {0.5, 1} \draw[thick, dotted] (\x, 0)--(\x, 2.5);
+\node[above] at (0.75, 2.5) {$\frac{3}{8}$ cup or 1 recipe}; 
+\end{tikzpicture}
+\end{image}
+
+We need to shade $\frac{2}{5}$ of this recipe. In this case our whole is \wordChoice{\choice{5} \choice{2} \choice{one cup} \choice[correct]{one recipe}}, and the meaning of the denominator tells us to cut this whole into $\answer[given]{5}$ equal pieces while the meaning of the numerator tells us to shade $\answer[given]{2}$ of those pieces. Since the dotted lines are already cutting this into three equal pieces vertically, we'll make our new cuts horizontally. (Keep in mind, however, that you could also cut the existing three pieces using vertical cuts and shade two of the smaller pieces in each of the three original pieces to shade $6$ pieces total. In this case we are thinking of $\frac{2}{5}$ as the equivalent fraction $\frac{6}{15}$.) In this picture, we will shade the bottom two rows cut horizontally, representing $\frac{2}{5}$ or $\frac{6}{15}$ of the whole.
+
+\begin{image}
+\begin{tikzpicture}
+\draw[thick, fill={rgb,255:red,137; green,206; blue,0}] (0,0) rectangle (1.5, 2.5);
+\draw[thick, fill={rgb,255:red,91; green,163; blue,0}] (0,0) rectangle (1.5, 1);
+\foreach \y in {0.5, 1, 1.5, 2} \draw[thick] (0, \y)--(1.5, \y);
+\foreach \x in {0.5, 1} \draw[thick, dotted] (\x, 0)--(\x, 2.5);
+\node[above] at (0.75, 2.5) {$\frac{3}{8}$ cup or 1 recipe}; 
+\node[left] at (0, 0.5) {$\frac{2}{5}$ of the recipe};
+\end{tikzpicture}
+\end{image}
+
+However, the problem is not asking us how much of a recipe we need, it's asking how much of a cup we need. So we need to change the whole back to one cup, meaning that we need to place this picture that we had of our full cup.
+
+\begin{image}
+\begin{tikzpicture}
+\draw[thick, fill={rgb,255:red,137; green,206; blue,0}] (0,0) rectangle (1.5, 2.5);
+\draw[thick, fill={rgb,255:red,91; green,163; blue,0}] (0,0) rectangle (1.5, 1);
+\draw[thick] (0,0) rectangle (4, 2.5);
+\foreach \y in {0.5, 1, 1.5, 2} \draw[thick] (0, \y)--(1.5, \y);
+\foreach \x in {0.5, 1, 1.5, ..., 3.5} \draw[thick, dotted] (\x, 0)--(\x, 2.5);
+\node[above] at (0.75, 2.5) {$\frac{3}{8}$ cup or 1 recipe}; 
+\node[left] at (0, 0.5) {$\frac{2}{5}$ of the recipe};
+\node[below] at (2,0) {one cup};
+\end{tikzpicture}
+\end{image}
+
+We notice that the pieces in our cup are now not all the same size. Let's extend the horizontal lines we cut so that the rest of the original pieces of the cup are also each cut into five equal pieces. 
+\begin{image}
+\begin{tikzpicture}
+\draw[thick, fill={rgb,255:red,137; green,206; blue,0}] (0,0) rectangle (1.5, 2.5);
+\draw[thick, fill={rgb,255:red,91; green,163; blue,0}] (0,0) rectangle (1.5, 1);
+\draw[thick] (0,0) rectangle (4, 2.5);
+\foreach \y in {0.5, 1, 1.5, 2} \draw[thick] (0, \y)--(4, \y);
+\foreach \x in {0.5, 1, 1.5, ..., 3.5} \draw[thick, dotted] (\x, 0)--(\x, 2.5);
+\node[above] at (0.75, 2.5) {$\frac{3}{8}$ cup or 1 recipe}; 
+\node[left] at (0, 0.5) {$\frac{2}{5}$ of the recipe};
+\node[below] at (2,0) {one cup};
+\end{tikzpicture}
+\end{image}
+Now, the question is asking us to find how many cups Salim needs for this partial recipe, so our whole for our answer should be \wordChoice{\choice{one recipe} \choice[correct]{one cup} \choice{$\frac{2}{5}$ of a recipe} \choice{$\frac{3}{8}$ of a cup}}. Looking at the diagram, this whole is cut into $\answer[given]{40}$ equal pieces, so this must be the denominator of our answer. The portion we need for the partial recipe is the darker shaded region (the bottom two horizontal rows of the recipe only) and so we can count that this part is cut into $\answer[given]{6}$ equal pieces. All together, Salim needs
+\[
+\frac{6}{40} \textrm{ of a cup of cocoa.}
+\]
+
+\end{example}
+
+We will use this picture in a moment to justify why we multiply fractions the way that we do. If you've forgotten the usual rule for multiplying fractions, watch the following video for a quick refresher.
+
+\youtube{y-JlxtIamdc}
+
+The rule says that we multiply fractions by multiplying the numerators and multiplying the denominators. Let's use the picture we drew in our previous example to explain why this rule makes sense.
+
+\begin{example}
+Consider the following story problem. 
+
+\emph{Salim is baking a cake where the recipe calls for $\frac{3}{8}$ of a cup of cocoa powder. However, Salim wants to make only $\frac{2}{5}$ of this recipe for a small party of friends. How much cocoa will Salim need for the smaller batch?}
+
+In a previous example we showed that we can solve this problem by multiplying
+\[
+\frac{2}{5} \times \frac{3}{8}.
+\]
+Using the rule for multiplying fractions, this multiplication is also equal to 
+\[
+\frac{2\times 3}{5 \times 8} = \frac{6}{40},
+\]
+which is what we found with our picture in the previous example. Let's take a look at our final picture again.
+\begin{image}
+\begin{tikzpicture}
+\draw[thick, fill={rgb,255:red,137; green,206; blue,0}] (0,0) rectangle (1.5, 2.5);
+\draw[thick, fill={rgb,255:red,91; green,163; blue,0}] (0,0) rectangle (1.5, 1);
+\draw[thick] (0,0) rectangle (4, 2.5);
+\foreach \y in {0.5, 1, 1.5, 2} \draw[thick] (0, \y)--(4, \y);
+\foreach \x in {0.5, 1, 1.5, ..., 3.5} \draw[thick, dotted] (\x, 0)--(\x, 2.5);
+\node[above] at (0.75, 2.5) {$\frac{3}{8}$ cup or 1 recipe}; 
+\node[left] at (0, 0.5) {$\frac{2}{5}$ of the recipe};
+\node[below] at (2,0) {one cup};
+\end{tikzpicture}
+\end{image}
+Our whole for the answer is one cup, so let's take a look at the way our cup got divided while we solved this problem. We'll remove the shading so that we can see only the cup. 
+\begin{image}
+\begin{tikzpicture}
+\draw[thick] (0,0) rectangle (4, 2.5);
+\foreach \y in {0.5, 1, 1.5, 2} \draw[thick] (0, \y)--(4, \y);
+\foreach \x in {0.5, 1, 1.5, ..., 3.5} \draw[thick, dotted] (\x, 0)--(\x, 2.5);
+\node[below] at (2,0) {one cup};
+\end{tikzpicture}
+\end{image}
+The rule says that this denominator should be $5 \times 8$, which we would interpret with our meaning of multiplication as $\answer[given]{5}$ groups with $\answer{8}$ objects in each group. If we look at the picture, we see $5$ groups if we use one group as one \wordChoice{\choice[correct]{row} \choice{column} \choice{box} \choice{array}}. Let's circle these five groups in the picture.
+
+\begin{image}
+\begin{tikzpicture}
+\draw[thick] (0,0) rectangle (4, 2.5);
+\foreach \y in {0.5, 1, 1.5, 2} \draw[thick] (0, \y)--(4, \y);
+\foreach \x in {0.5, 1, 1.5, ..., 3.5} \draw[thick, dotted] (\x, 0)--(\x, 2.5);
+\foreach \a in {0.25, 0.75, 1.25, 1.75, 2.25} \draw[thick, orange] (2, \a) ellipse (2.5cm and 0.25cm);
+\node[below] at (2,0) {one cup};
+\end{tikzpicture}
+\end{image}
+
+Looking at one group, we need to find $8$ objects inside that group. If we take one object as one of the small boxes in the picture, we see that each of the five groups has $8$ small boxes in it. Then the total number of small boxes in the entire cup can be calculated by 
+\[
+\answer[given]{5} \times \answer[given]{8}.
+\]
+This has to be the denominator of our answer, because it's the total number of pieces in the whole. 
+
+Notice that we started by cutting the whole into $8$ equal pieces, and then cut each of those pieces into $5$ more pieces. As when we made equivalent fractions at the beginning of this section, when we cut our pieces into more pieces, we should be thinking about multiplication. Thinking about first cutting $8$ pieces and then further cutting $5$ pieces inside each of the $8$ pieces naturally gives us $8 \times 5$ using our meaning of multiplication, but we know that multiplication is commutative, so $8 \times 5 = 5 \times 8$. 
+
+What about the numerator? We found the numerator by counting the number of darker shaded pieces in the lower left section. Let's take a look at just that part of the array.
+\begin{image}
+\begin{tikzpicture}
+\draw[thick, fill={rgb,255:red,91; green,163; blue,0}] (0,0) rectangle (1.5, 1);
+\foreach \y in {0.5} \draw[thick] (0, \y)--(1.5, \y);
+\foreach \x in {0.5, 1, 1.5} \draw[thick, dotted] (\x, 0)--(\x, 1);
+\end{tikzpicture}
+\end{image}
+
+The rule says that the numerator should be $2 \times 3$ total pieces, so we want to find two groups with three pieces in each group. If we again use one group as one \wordChoice{\choice[correct]{row} \choice{column} \choice{box} \choice{array}} and one object as one \wordChoice{\choice{column} \choice[correct]{small box} \choice{array} \choice{cup}}, we see that there are $2$ groups with $3$ pieces or small boxes in each group. Let's remove the shading from the picture and circle the groups so that we can see them and verify this count.
+\begin{image}
+\begin{tikzpicture}
+\draw[thick] (0,0) rectangle (1.5, 1);
+\foreach \y in {0.5} \draw[thick] (0, \y)--(1.5, \y);
+\foreach \x in {0.5, 1, 1.5} \draw[thick, dotted] (\x, 0)--(\x, 1);
+\foreach \y in {0.25, 0.75} \draw[thick, orange] (0.75, \y) ellipse (1.25cm and 0.25cm);
+\end{tikzpicture}
+\end{image}
+The multiplication that we get using these groups and objects is 
+\[
+\answer[given]{2} \times \answer[given]{3}
+\]
+and this must be the numerator of our answer because this multiplication counts the total number of shaded pieces. Again, thinking back on our picture solution, we started with $3$ shaded pieces, cut those pieces into $5$ more equal pieces but only took $2$ of the $5$ equal pieces in each of the original shaded pieces. This thinking lends itself more to $3 \times 2$, but again the commutative property tells us it's okay to justify the multiplication in either order. 
+
+Putting everything together, we see that Salim used
+\[
+\frac{2 \times 3}{5 \times 8} \textrm{ of a cup of cocoa.}
+\]
+
+\end{example}
+
+As usual, we have explained why this rule works using a single example instead of in general. We will work through more examples together so that you can see a pattern with other examples as well, and then we encourage you to come back to this example and think through it either thinking very generally about the fractions or using variables instead of specific numbers. 
+
+
+
+\section{Returning to equivalent fractions}
+
+We will finish up this section by returning to our starting example of making equivalent fractions. We said that 
+\[
+\frac{A}{B} = \frac{A \times N}{B \times N}
+\]
+and we explained why this made sense using the meaning of multiplication. However, we can now explain why this rule is true using fraction multiplication. Let's start with the following statement.
+\[
+\frac{A}{B} = \frac{A}{B} \times \frac{N}{N}
+\]
+Here, the fraction $\frac{N}{N}$ is equal to one, since we have cut the whole into $N$ equal pieces and shaded all of them. So if we multiply any fraction $\frac{A}{B}$ by $1$, we will get the same fraction back. This is often called the \dfn{identity property of multiplication}.  So, the equation above is a true statement for any numbers $A$, $B$, and $N$. We also explained why we multiply fractions by multiplying the numerators and multiplying the denominators, so we can simplify the right hand side of the equation.
+\begin{align*}
+\frac{A}{B} &= \frac{A}{B} \times 1 \\
+&= \frac{A}{B} \times \frac{N}{N} \\
+&= \frac{A \times N}{B \times N}
+\end{align*}
+We again see the rule for making equivalent fractions.
+\[
+\frac{A}{B} = \frac{A \times N}{B \times N}
+\]
+Remember that kids start working with equivalent fractions well before they would be comfortable with this kind of algebra, and as teachers it's important to be able to recognize and encourage making sense of equivalent fractions in many ways. Having deeper understanding and stronger sense-making helps children work with the rules once they learn them.
+
+
+\end{document}
+
+
+
+
+
+
